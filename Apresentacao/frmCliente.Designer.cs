@@ -29,17 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgwFornecedor = new System.Windows.Forms.DataGridView();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RazaoSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Uf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ativo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgwCliente = new System.Windows.Forms.DataGridView();
             this.cpoNome = new System.Windows.Forms.TextBox();
             this.CaixaPesquisa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -67,83 +57,47 @@
             this.cpoRazaoSocial = new System.Windows.Forms.TextBox();
             this.lbl_data_hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dgwFornecedor)).BeginInit();
+            this.midasDataSet = new Apresentacao.midasDataSet();
+            this.tblClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblClienteTableAdapter = new Apresentacao.midasDataSetTableAdapters.tblClienteTableAdapter();
+            this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razaoSocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgwFornecedor
+            // dgwCliente
             // 
-            this.dgwFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwFornecedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nome,
-            this.CNPJ,
-            this.RazaoSocial,
-            this.Endereco,
-            this.Cidade,
-            this.Uf,
-            this.Cpf,
-            this.Email,
-            this.Telefone,
-            this.Ativo});
-            this.dgwFornecedor.Location = new System.Drawing.Point(44, 70);
-            this.dgwFornecedor.Name = "dgwFornecedor";
-            this.dgwFornecedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwFornecedor.Size = new System.Drawing.Size(782, 211);
-            this.dgwFornecedor.TabIndex = 53;
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "Nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // CNPJ
-            // 
-            this.CNPJ.DataPropertyName = "CNPJ";
-            this.CNPJ.HeaderText = "CNPJ";
-            this.CNPJ.Name = "CNPJ";
-            // 
-            // RazaoSocial
-            // 
-            this.RazaoSocial.HeaderText = " Razao Social";
-            this.RazaoSocial.Name = "RazaoSocial";
-            // 
-            // Endereco
-            // 
-            this.Endereco.HeaderText = "Endereco";
-            this.Endereco.Name = "Endereco";
-            // 
-            // Cidade
-            // 
-            this.Cidade.HeaderText = "Cidade";
-            this.Cidade.Name = "Cidade";
-            // 
-            // Uf
-            // 
-            this.Uf.HeaderText = "UF";
-            this.Uf.Name = "Uf";
-            // 
-            // Cpf
-            // 
-            this.Cpf.HeaderText = "CPF";
-            this.Cpf.Name = "Cpf";
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            // 
-            // Telefone
-            // 
-            this.Telefone.DataPropertyName = "Telefone";
-            this.Telefone.HeaderText = "Telefone";
-            this.Telefone.Name = "Telefone";
-            // 
-            // Ativo
-            // 
-            this.Ativo.DataPropertyName = "Ativo";
-            this.Ativo.HeaderText = "Ativo";
-            this.Ativo.Name = "Ativo";
+            this.dgwCliente.AutoGenerateColumns = false;
+            this.dgwCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDClienteDataGridViewTextBoxColumn,
+            this.nomeDataGridViewTextBoxColumn,
+            this.razaoSocialDataGridViewTextBoxColumn,
+            this.telefoneDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.cidadeDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn,
+            this.enderecoDataGridViewTextBoxColumn,
+            this.cpfDataGridViewTextBoxColumn,
+            this.cnpjDataGridViewTextBoxColumn,
+            this.ufDataGridViewTextBoxColumn});
+            this.dgwCliente.DataSource = this.tblClienteBindingSource;
+            this.dgwCliente.Location = new System.Drawing.Point(44, 73);
+            this.dgwCliente.Name = "dgwCliente";
+            this.dgwCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgwCliente.Size = new System.Drawing.Size(782, 211);
+            this.dgwCliente.TabIndex = 53;
             // 
             // cpoNome
             // 
@@ -190,6 +144,7 @@
             this.btnPesquisa.TabIndex = 45;
             this.btnPesquisa.Text = "Pesquisar";
             this.btnPesquisa.UseVisualStyleBackColor = true;
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
             // 
             // button5
             // 
@@ -297,7 +252,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(723, 358);
+            this.radioButton1.Location = new System.Drawing.Point(723, 348);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(92, 17);
             this.radioButton1.TabIndex = 67;
@@ -391,7 +346,87 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
-            //this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // midasDataSet
+            // 
+            this.midasDataSet.DataSetName = "midasDataSet";
+            this.midasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblClienteBindingSource
+            // 
+            this.tblClienteBindingSource.DataMember = "tblCliente";
+            this.tblClienteBindingSource.DataSource = this.midasDataSet;
+            // 
+            // tblClienteTableAdapter
+            // 
+            this.tblClienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDClienteDataGridViewTextBoxColumn
+            // 
+            this.iDClienteDataGridViewTextBoxColumn.DataPropertyName = "IDCliente";
+            this.iDClienteDataGridViewTextBoxColumn.HeaderText = "Cod Cliente";
+            this.iDClienteDataGridViewTextBoxColumn.Name = "iDClienteDataGridViewTextBoxColumn";
+            this.iDClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            // 
+            // razaoSocialDataGridViewTextBoxColumn
+            // 
+            this.razaoSocialDataGridViewTextBoxColumn.DataPropertyName = "RazaoSocial";
+            this.razaoSocialDataGridViewTextBoxColumn.HeaderText = "Razão Social";
+            this.razaoSocialDataGridViewTextBoxColumn.Name = "razaoSocialDataGridViewTextBoxColumn";
+            // 
+            // telefoneDataGridViewTextBoxColumn
+            // 
+            this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "Telefone";
+            this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
+            this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // cidadeDataGridViewTextBoxColumn
+            // 
+            this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "Cidade";
+            this.cidadeDataGridViewTextBoxColumn.HeaderText = "Cidade";
+            this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            // 
+            // enderecoDataGridViewTextBoxColumn
+            // 
+            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereço";
+            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
+            // 
+            // cpfDataGridViewTextBoxColumn
+            // 
+            this.cpfDataGridViewTextBoxColumn.DataPropertyName = "Cpf";
+            this.cpfDataGridViewTextBoxColumn.HeaderText = "CPF";
+            this.cpfDataGridViewTextBoxColumn.Name = "cpfDataGridViewTextBoxColumn";
+            // 
+            // cnpjDataGridViewTextBoxColumn
+            // 
+            this.cnpjDataGridViewTextBoxColumn.DataPropertyName = "Cnpj";
+            this.cnpjDataGridViewTextBoxColumn.HeaderText = "CNPJ";
+            this.cnpjDataGridViewTextBoxColumn.Name = "cnpjDataGridViewTextBoxColumn";
+            // 
+            // ufDataGridViewTextBoxColumn
+            // 
+            this.ufDataGridViewTextBoxColumn.DataPropertyName = "Uf";
+            this.ufDataGridViewTextBoxColumn.HeaderText = "UF";
+            this.ufDataGridViewTextBoxColumn.Name = "ufDataGridViewTextBoxColumn";
             // 
             // frmCliente
             // 
@@ -419,7 +454,7 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dgwFornecedor);
+            this.Controls.Add(this.dgwCliente);
             this.Controls.Add(this.cpoNome);
             this.Controls.Add(this.CaixaPesquisa);
             this.Controls.Add(this.label3);
@@ -429,14 +464,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CLIENTE";
             this.Load += new System.EventHandler(this.frmCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgwFornecedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgwFornecedor;
+        private System.Windows.Forms.DataGridView dgwCliente;
         private System.Windows.Forms.TextBox cpoNome;
         private System.Windows.Forms.TextBox CaixaPesquisa;
         private System.Windows.Forms.Label label3;
@@ -462,17 +499,21 @@
         private System.Windows.Forms.TextBox cpoCidade;
         private System.Windows.Forms.TextBox cpoUf;
         private System.Windows.Forms.TextBox cpoRazaoSocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CNPJ;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RazaoSocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Endereco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Uf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cpf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Ativo;
         private System.Windows.Forms.Label lbl_data_hora;
         private System.Windows.Forms.Timer timer1;
+        private midasDataSet midasDataSet;
+        private System.Windows.Forms.BindingSource tblClienteBindingSource;
+        private midasDataSetTableAdapters.tblClienteTableAdapter tblClienteTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn razaoSocialDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpfDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cnpjDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ufDataGridViewTextBoxColumn;
     }
 }

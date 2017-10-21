@@ -32,7 +32,9 @@ namespace Apresentacao
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
-          
+            // TODO: This line of code loads data into the 'midasDataSet.tblCliente' table. You can move, or remove it, as needed.
+            this.tblClienteTableAdapter.Fill(this.midasDataSet.tblCliente);
+
         }
 
 
@@ -86,38 +88,43 @@ namespace Apresentacao
 
                 strRetorno = this.negCliente.Cadastrar(this.cliente);
 
-                if (strRetorno != null)
-                {
-                    MessageBox.Show(strRetorno);
-                }
-                else
-                {
-                    MessageBox.Show("Está nulo");
-                }
-                   
-
-
-               // strRetorno = negCliente.Cadastrar(this.objCliente);
-
-
-                //int intCodigo;
-                //if (int.TryParse(strRetorno, out intCodigo) == true)
+                //if (strRetorno != null)
                 //{
-                //    MessageBox.Show("Registro salvo com sucesso!", "Informação",
-                //        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //    //  this.DialogResult = DialogResult.OK;
-                //    dgwCliente.DataSource = null;
-                //    dgwCliente.Update();
-                //    dgwCliente.Refresh();
-                //    CaixaPesquisa.Text = "%%";
-                //    AtualizarGrid();
-
+                //    MessageBox.Show(strRetorno);
                 //}
+                //else
+                //{
+                //    MessageBox.Show("Está nulo");
+                //}
+
+
+
+                // strRetorno = negCliente.Cadastrar(this.objCliente);
+
+
+                int intCodigo;
+                if (int.TryParse(strRetorno, out intCodigo) == true)
+                {
+                    MessageBox.Show("Registro salvo com sucesso!", "Informação",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //  this.DialogResult = DialogResult.OK;
+                    dgwCliente.DataSource = null;
+                    dgwCliente.Update();
+                    dgwCliente.Refresh();
+                    CaixaPesquisa.Text = "%%";
+                    //AtualizarGrid();
+
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Falha ao salvar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnPesquisa_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
