@@ -22,5 +22,7 @@ namespace ObjTransferencia
         public string UnidMedida { get; set; }
         public char Status { get; set; }
 
+
+
     }
 }
