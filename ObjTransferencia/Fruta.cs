@@ -4,7 +4,6 @@ namespace ObjTransferencia
 {
     class Fruta
     {
-        public int testeversaoluquinha { get; set; }
         public int IDFruta { get; set; }
         public string Nome { get; set; }
         public string UnidMedida { get; set; }
