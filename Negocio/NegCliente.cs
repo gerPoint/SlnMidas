@@ -18,7 +18,7 @@ namespace Negocio
 
 
         [DataObjectMethodAttribute(DataObjectMethodType.Insert)]
-        public string Cadastrar(objCliente cliente)
+        public string Cadastrar(Cliente cliente)
         {
             try
             {
