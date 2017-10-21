@@ -46,7 +46,7 @@
     <Compile Include="Filial.cs" />
     <Compile Include="Fornecedor.cs" />
     <Compile Include="objFruta.cs" />
-    <Compile Include="obFuncionario.cs" />
+    <Compile Include="objFuncionario.cs" />
     <Compile Include="objLogs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="objRomaneio.cs" />

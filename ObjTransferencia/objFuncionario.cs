@@ -2,7 +2,7 @@
 
 namespace ObjTransferencia
 {
-    class obFuncionario
+    class objFuncionario
     {
         public int IDFuncionario { get; set; }
         public string Nome { get; set; }
