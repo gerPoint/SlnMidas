@@ -1,0 +1,12 @@
+D:\PrjMidas\SlnMidas\AcessoDados\obj\Debug\AcessoDados.csprojResolveAssemblyReference.cache
+D:\PrjMidas\SlnMidas\AcessoDados\bin\Debug\AcessoDados.dll.config
+D:\PrjMidas\SlnMidas\AcessoDados\bin\Debug\AcessoDados.dll
+D:\PrjMidas\SlnMidas\AcessoDados\bin\Debug\AcessoDados.pdb
+D:\PrjMidas\SlnMidas\AcessoDados\obj\Debug\AcessoDados.dll
+D:\PrjMidas\SlnMidas\AcessoDados\obj\Debug\AcessoDados.pdb
+C:\PrjMidas\SlnMidas\AcessoDados\bin\Debug\AcessoDados.dll.config
+C:\PrjMidas\SlnMidas\AcessoDados\bin\Debug\AcessoDados.dll
+C:\PrjMidas\SlnMidas\AcessoDados\bin\Debug\AcessoDados.pdb
+C:\PrjMidas\SlnMidas\AcessoDados\obj\Debug\AcessoDados.csprojResolveAssemblyReference.cache
+C:\PrjMidas\SlnMidas\AcessoDados\obj\Debug\AcessoDados.dll
+C:\PrjMidas\SlnMidas\AcessoDados\obj\Debug\AcessoDados.pdb

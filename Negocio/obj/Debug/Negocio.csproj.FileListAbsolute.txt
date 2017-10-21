@@ -1,0 +1,7 @@
+D:\PrjMidas\SlnMidas\Negocio\bin\Debug\Negocio.dll
+D:\PrjMidas\SlnMidas\Negocio\bin\Debug\Negocio.pdb
+D:\PrjMidas\SlnMidas\Negocio\obj\Debug\Negocio.dll
+D:\PrjMidas\SlnMidas\Negocio\obj\Debug\Negocio.pdb
+C:\PrjMidas\SlnMidas\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\PrjMidas\SlnMidas\Negocio\obj\Debug\Negocio.dll
+C:\PrjMidas\SlnMidas\Negocio\obj\Debug\Negocio.pdb
