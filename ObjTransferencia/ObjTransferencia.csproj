@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Carregamento.cs" />
+    <Compile Include="CarregamentoBloco.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Filial.cs" />
     <Compile Include="Fornecedor.cs" />
