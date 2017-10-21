@@ -43,6 +43,16 @@
     <Compile Include="NegCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AcessoDados\AcessoDados.csproj">
+      <Project>{f01bdfec-90e2-4b24-9cd0-c7667bcf83d1}</Project>
+      <Name>AcessoDados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObjTransferencia\ObjTransferencia.csproj">
+      <Project>{0ffa750e-ef73-4664-acdd-361a86b54d1f}</Project>
+      <Name>ObjTransferencia</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -40,11 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Carregamento.cs" />
-    <Compile Include="CarregamentoBloco.cs" />
-    <Compile Include="Cliente.cs" />
-    <Compile Include="Filial.cs" />
-    <Compile Include="Fornecedor.cs" />
+    <Compile Include="objCarregamento.cs" />
+    <Compile Include="objCarregamentoBloco.cs" />
+    <Compile Include="objCliente.cs" />
+    <Compile Include="objFilial.cs" />
+    <Compile Include="objFornecedor.cs" />
     <Compile Include="Fruta.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="Logs.cs" />

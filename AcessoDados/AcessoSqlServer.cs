@@ -26,7 +26,7 @@ namespace AcessoDados
         }
 
 
-        public void AdicionarParamentros(string nomeParametro, object valorParametro)
+        public void AdicionarParametros(string nomeParametro, object valorParametro)
         {
             sqlParameterCollection.Add(new SqlParameter(nomeParametro, valorParametro));
         }

@@ -18,7 +18,7 @@ namespace Apresentacao
         private Cliente cliente;
         string mensagem = "";
         NegCliente negCliente = new NegCliente();
-        Cliente objCliente = new Cliente();
+        Cliente Cliente = new Cliente();
         DateTime data_hora;
 
         public frmCliente()
@@ -49,20 +49,22 @@ namespace Apresentacao
             lbl_data_hora.Text = data_hora.ToString();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+       
+
+        private void btnSalvar_Click_1(object sender, EventArgs e)
         {
             try
             {
 
-                this.objCliente.Nome = cpoNome.Text.TrimStart();
-                this.objCliente.RazaoSocial = cpoRazaoSocial.Text;
-                this.objCliente.Cnpj = cpoCnpj.Text.TrimStart();
-                this.objCliente.Endereco = cpoEndereco.Text.TrimStart();
-                this.objCliente.Cidade = cpoCidade.Text.TrimStart();
-                this.objCliente.Uf= cpoUf.Text.TrimStart();
-                this.objCliente.Telefone = cpoTelefone.Text.TrimStart();
-                this.objCliente.Email = cpoEmail.Text.TrimStart();
-                this.objCliente.Cpf = cpoCpf.Text.TrimStart();
+                this.Cliente.Nome = cpoNome.Text.TrimStart();
+                this.Cliente.RazaoSocial = cpoRazaoSocial.Text;
+                this.Cliente.Cnpj = cpoCnpj.Text.TrimStart();
+                this.Cliente.Endereco = cpoEndereco.Text.TrimStart();
+                this.Cliente.Cidade = cpoCidade.Text.TrimStart();
+                this.Cliente.Uf = cpoUf.Text.TrimStart();
+                this.Cliente.Telefone = cpoTelefone.Text.TrimStart();
+                this.Cliente.Email = cpoEmail.Text.TrimStart();
+                this.Cliente.Cpf = cpoCpf.Text.TrimStart();
 
 
                 //   if (cpoAtivo.Checked == true) { objCliente.Ativo = "1"; } else { objCliente.Ativo = "0"; }
@@ -82,26 +84,25 @@ namespace Apresentacao
                     MessageBox.Show("Campo Obrigatório não informado.");
                     return;
                 }
+                strRetorno = this.negCliente.Cadastrar(this.Cliente);
 
 
+               // strRetorno = negCliente.Cadastrar(this.objCliente);
 
 
-                strRetorno = negCliente.Cadastrar(this.objCliente);
+                //int intCodigo;
+                //if (int.TryParse(strRetorno, out intCodigo) == true)
+                //{
+                //    MessageBox.Show("Registro salvo com sucesso!", "Informação",
+                //        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    //  this.DialogResult = DialogResult.OK;
+                //    dgwCliente.DataSource = null;
+                //    dgwCliente.Update();
+                //    dgwCliente.Refresh();
+                //    CaixaPesquisa.Text = "%%";
+                //    AtualizarGrid();
 
-
-                int intCodigo;
-                if (int.TryParse(strRetorno, out intCodigo) == true)
-                {
-                    MessageBox.Show("Registro salvo com sucesso!", "Informação",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //  this.DialogResult = DialogResult.OK;
-                    dgwCliente.DataSource = null;
-                    dgwCliente.Update();
-                    dgwCliente.Refresh();
-                    CaixaPesquisa.Text = "%%";
-                    AtualizarGrid();
-
-                }
+                //}
             }
             catch (Exception ex)
             {

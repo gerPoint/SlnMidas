@@ -1,7 +1,7 @@
 ﻿using System;
 namespace ObjTransferencia
 {
-    public class Fornecedor
+    public class objFornecedor
     {
         public int IDFornecedor { get; set; }
         public string Nome { get; set; }

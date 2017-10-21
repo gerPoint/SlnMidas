@@ -152,7 +152,6 @@
             this.cpoNome.Name = "cpoNome";
             this.cpoNome.Size = new System.Drawing.Size(247, 20);
             this.cpoNome.TabIndex = 36;
-            this.cpoNome.TextChanged += new System.EventHandler(this.cpoNome_TextChanged);
             // 
             // CaixaPesquisa
             // 
@@ -215,7 +214,7 @@
             this.btnSalvar.Text = "   Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.button4_Click);
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click_1);
             // 
             // button3
             // 
@@ -305,7 +304,6 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Pessoa Física";
             this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // label5
             // 
