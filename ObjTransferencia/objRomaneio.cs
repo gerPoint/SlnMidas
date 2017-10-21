@@ -2,7 +2,7 @@
 
 namespace ObjTransferencia
 {
-    class Romaneio
+    class objRomaneio
     {
         public int IDRomaneio { get; set; }
         public int IDCliente { get; set; }

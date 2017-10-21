@@ -2,7 +2,7 @@
 
 namespace ObjTransferencia
 {
-    class Fruta
+    class objFruta
     {
         public int IDFruta { get; set; }
         public string Nome { get; set; }

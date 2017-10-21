@@ -2,7 +2,7 @@
 
 namespace ObjTransferencia
 {
-    class Logs
+    class objLogs
     {
         public int IDLog { get; set; }
         public int IDUsuario { get; set; }
