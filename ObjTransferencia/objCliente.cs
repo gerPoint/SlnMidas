@@ -2,7 +2,7 @@
 
 namespace ObjTransferencia
 {
-    public class Cliente
+    public class objCliente
     {
         public int IDCliente { get; set; }
         public string RazaoSocial { get; set; }

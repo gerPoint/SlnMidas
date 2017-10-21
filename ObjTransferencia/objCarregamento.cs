@@ -1,6 +1,6 @@
 ﻿namespace ObjTransferencia
 {
-    class Carregamento
+    class objCarregamento
     {
         public int IDCarregamento { get; set; }
         public int IDRomaneio { get; set; }

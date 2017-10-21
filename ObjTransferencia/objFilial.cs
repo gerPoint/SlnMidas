@@ -2,7 +2,7 @@
 
 namespace ObjTransferencia
 {
-    class Filial
+    class objFilial
     {
         public int IDFilial { get; set; }
         public string RazaoSocial { get; set; }
