@@ -5,3 +5,6 @@ D:\PrjMidas\SlnMidas\Negocio\obj\Debug\Negocio.pdb
 C:\PrjMidas\SlnMidas\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\PrjMidas\SlnMidas\Negocio\obj\Debug\Negocio.dll
 C:\PrjMidas\SlnMidas\Negocio\obj\Debug\Negocio.pdb
+C:\Users\diego\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\diego\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.dll
+C:\Users\diego\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.pdb

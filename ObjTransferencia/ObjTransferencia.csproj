@@ -45,13 +45,13 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Filial.cs" />
     <Compile Include="Fornecedor.cs" />
-    <Compile Include="Fruta.cs" />
-    <Compile Include="Funcionario.cs" />
-    <Compile Include="Logs.cs" />
+    <Compile Include="objFruta.cs" />
+    <Compile Include="obFuncionario.cs" />
+    <Compile Include="objLogs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Romaneio.cs" />
-    <Compile Include="Transportador.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="objRomaneio.cs" />
+    <Compile Include="objTransportador.cs" />
+    <Compile Include="objUsuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
