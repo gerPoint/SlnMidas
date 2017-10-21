@@ -2,6 +2,8 @@
 {
     class Carregamento
     {
-        public int lembrasim { get; set; }
+        public int IDCarregamento { get; set; }
+        public int IDRomaneio { get; set; }
+        public char Status { get; set; }
     }
 }
