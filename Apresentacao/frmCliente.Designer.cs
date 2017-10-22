@@ -30,11 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgwCliente = new System.Windows.Forms.DataGridView();
+            this.tblClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSet = new Apresentacao.midasDataSet();
             this.cpoNome = new System.Windows.Forms.TextBox();
-            this.CaixaPesquisa = new System.Windows.Forms.TextBox();
+            this.cpoCaixaPesquisa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnPesquisa = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -57,8 +59,6 @@
             this.cpoRazaoSocial = new System.Windows.Forms.TextBox();
             this.lbl_data_hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.midasDataSet = new Apresentacao.midasDataSet();
-            this.tblClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblClienteTableAdapter = new Apresentacao.midasDataSetTableAdapters.tblClienteTableAdapter();
             this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,8 +72,8 @@
             this.cnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.midasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dgwCliente
@@ -99,6 +99,16 @@
             this.dgwCliente.Size = new System.Drawing.Size(782, 211);
             this.dgwCliente.TabIndex = 53;
             // 
+            // tblClienteBindingSource
+            // 
+            this.tblClienteBindingSource.DataMember = "tblCliente";
+            this.tblClienteBindingSource.DataSource = this.midasDataSet;
+            // 
+            // midasDataSet
+            // 
+            this.midasDataSet.DataSetName = "midasDataSet";
+            this.midasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cpoNome
             // 
             this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -107,14 +117,14 @@
             this.cpoNome.Size = new System.Drawing.Size(247, 20);
             this.cpoNome.TabIndex = 36;
             // 
-            // CaixaPesquisa
+            // cpoCaixaPesquisa
             // 
-            this.CaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CaixaPesquisa.Location = new System.Drawing.Point(183, 27);
-            this.CaixaPesquisa.Multiline = true;
-            this.CaixaPesquisa.Name = "CaixaPesquisa";
-            this.CaixaPesquisa.Size = new System.Drawing.Size(643, 23);
-            this.CaixaPesquisa.TabIndex = 46;
+            this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCaixaPesquisa.Location = new System.Drawing.Point(183, 27);
+            this.cpoCaixaPesquisa.Multiline = true;
+            this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
+            this.cpoCaixaPesquisa.Size = new System.Drawing.Size(643, 23);
+            this.cpoCaixaPesquisa.TabIndex = 46;
             // 
             // label3
             // 
@@ -134,17 +144,17 @@
             this.label1.TabIndex = 47;
             this.label1.Text = "Nome";
             // 
-            // btnPesquisa
+            // btnPesquisar
             // 
-            this.btnPesquisa.Image = global::Apresentacao.Properties.Resources.pesquisar1;
-            this.btnPesquisa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisa.Location = new System.Drawing.Point(44, 13);
-            this.btnPesquisa.Name = "btnPesquisa";
-            this.btnPesquisa.Size = new System.Drawing.Size(124, 45);
-            this.btnPesquisa.TabIndex = 45;
-            this.btnPesquisa.Text = "Pesquisar";
-            this.btnPesquisa.UseVisualStyleBackColor = true;
-            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
+            this.btnPesquisar.Image = global::Apresentacao.Properties.Resources.pesquisar1;
+            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisar.Location = new System.Drawing.Point(44, 13);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(124, 45);
+            this.btnPesquisar.TabIndex = 45;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // button5
             // 
@@ -347,16 +357,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             // 
-            // midasDataSet
-            // 
-            this.midasDataSet.DataSetName = "midasDataSet";
-            this.midasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblClienteBindingSource
-            // 
-            this.tblClienteBindingSource.DataMember = "tblCliente";
-            this.tblClienteBindingSource.DataSource = this.midasDataSet;
-            // 
             // tblClienteTableAdapter
             // 
             this.tblClienteTableAdapter.ClearBeforeFill = true;
@@ -367,18 +367,21 @@
             this.iDClienteDataGridViewTextBoxColumn.HeaderText = "Cod Cliente";
             this.iDClienteDataGridViewTextBoxColumn.Name = "iDClienteDataGridViewTextBoxColumn";
             this.iDClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDClienteDataGridViewTextBoxColumn.Width = 50;
             // 
             // nomeDataGridViewTextBoxColumn
             // 
             this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
             this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.Width = 200;
             // 
             // razaoSocialDataGridViewTextBoxColumn
             // 
             this.razaoSocialDataGridViewTextBoxColumn.DataPropertyName = "RazaoSocial";
             this.razaoSocialDataGridViewTextBoxColumn.HeaderText = "Razão Social";
             this.razaoSocialDataGridViewTextBoxColumn.Name = "razaoSocialDataGridViewTextBoxColumn";
+            this.razaoSocialDataGridViewTextBoxColumn.Width = 200;
             // 
             // telefoneDataGridViewTextBoxColumn
             // 
@@ -391,24 +394,28 @@
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.Width = 200;
             // 
             // cidadeDataGridViewTextBoxColumn
             // 
             this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "Cidade";
             this.cidadeDataGridViewTextBoxColumn.HeaderText = "Cidade";
             this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
+            this.cidadeDataGridViewTextBoxColumn.Width = 200;
             // 
             // statusDataGridViewTextBoxColumn
             // 
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.Width = 50;
             // 
             // enderecoDataGridViewTextBoxColumn
             // 
             this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
             this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereço";
             this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
+            this.enderecoDataGridViewTextBoxColumn.Width = 200;
             // 
             // cpfDataGridViewTextBoxColumn
             // 
@@ -427,6 +434,7 @@
             this.ufDataGridViewTextBoxColumn.DataPropertyName = "Uf";
             this.ufDataGridViewTextBoxColumn.HeaderText = "UF";
             this.ufDataGridViewTextBoxColumn.Name = "ufDataGridViewTextBoxColumn";
+            this.ufDataGridViewTextBoxColumn.Width = 50;
             // 
             // frmCliente
             // 
@@ -456,17 +464,17 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgwCliente);
             this.Controls.Add(this.cpoNome);
-            this.Controls.Add(this.CaixaPesquisa);
+            this.Controls.Add(this.cpoCaixaPesquisa);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnPesquisa);
+            this.Controls.Add(this.btnPesquisar);
             this.Name = "frmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CLIENTE";
             this.Load += new System.EventHandler(this.frmCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.midasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,10 +483,10 @@
         #endregion
         private System.Windows.Forms.DataGridView dgwCliente;
         private System.Windows.Forms.TextBox cpoNome;
-        private System.Windows.Forms.TextBox CaixaPesquisa;
+        private System.Windows.Forms.TextBox cpoCaixaPesquisa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnPesquisa;
+        private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button button3;

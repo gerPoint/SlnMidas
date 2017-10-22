@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace ObjTransferencia
 {
-    public class objCliente
+    public class Cliente
     {
         public int IDCliente { get; set; }
         public string RazaoSocial { get; set; }
@@ -17,5 +20,8 @@ namespace ObjTransferencia
         public string Endereco { get; set; }
         public DateTime DataCadastro { get; set; }
 
+        public string objCliente { get; set; }
     }
+
+    public class ClienteLista : List<Cliente> { }
 }

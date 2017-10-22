@@ -45,5 +45,10 @@ namespace Apresentacao
             frmFornecedor OutroForm = new frmFornecedor();
             OutroForm.ShowDialog();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

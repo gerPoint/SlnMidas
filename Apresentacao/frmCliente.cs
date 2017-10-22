@@ -15,7 +15,7 @@ namespace Apresentacao
 {
     public partial class frmCliente : Form
     {
-        private objCliente cliente = new objCliente();
+        private Cliente cliente = new Cliente();
         string mensagem = "";
         NegCliente negCliente = new NegCliente();
         DateTime data_hora;
@@ -33,7 +33,7 @@ namespace Apresentacao
         private void frmCliente_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'midasDataSet.tblCliente' table. You can move, or remove it, as needed.
-            this.tblClienteTableAdapter.Fill(this.midasDataSet.tblCliente);
+           // this.tblClienteTableAdapter.Fill(this.midasDataSet.tblCliente);
 
         }
 
@@ -44,11 +44,6 @@ namespace Apresentacao
             this.Close();
         }
 
-        //private void timer1_Tick(object sender, EventArgs e)
-        //{
-        //    data_hora = DateTime.Now;
-        //    lbl_data_hora.Text = data_hora.ToString();
-        //}
 
        
 
@@ -111,8 +106,8 @@ namespace Apresentacao
                     dgwCliente.DataSource = null;
                     dgwCliente.Update();
                     dgwCliente.Refresh();
-                    CaixaPesquisa.Text = "%%";
-                    //AtualizarGrid();
+                    cpoCaixaPesquisa.Text = "%%";
+                    AtualizarGrid();
 
                 }
             }
@@ -122,9 +117,63 @@ namespace Apresentacao
             }
         }
 
-        private void btnPesquisa_Click(object sender, EventArgs e)
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        
         {
+            AtualizarGrid();
+        }
+
+
+        private void AtualizarGrid()
+        {
+            try
+            {
+                if (cpoCaixaPesquisa.Text == string.Empty)
+                {
+                    MessageBox.Show("Por favor, informe o nome do Cliente para pesquisar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cpoCaixaPesquisa.Text = string.Empty;
+                    cpoCaixaPesquisa.Focus();
+                    //CaixaPesquisa.DataSource = "";
+                    return;
+                }
+
+                NegCliente objNegCliente = new NegCliente();
+                ClienteLista objLista;
+                try
+                {
+                    //int cod = int.Parse(CaixaPesquisa.Text);
+                    objLista = objNegCliente.Consultar(cpoCaixaPesquisa.Text);
+                }
+                catch
+                {
+
+                    objLista = objNegCliente.Consultar(cpoCaixaPesquisa.Text);
+                }
+
+
+                if (objLista.Count == 0)
+                {
+                    MessageBox.Show("Nenhum registro encontrado.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cpoCaixaPesquisa.Text = string.Empty;
+                    cpoCaixaPesquisa.Focus();
+                    return;
+                }
+
+                dgwCliente.DataSource = null;
+                dgwCliente.DataSource = objLista;
+                dgwCliente.Update();
+                dgwCliente.Refresh();
+                cpoCaixaPesquisa.Text = string.Empty;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao consultar Cliente. Falha: " +
+                    ex.Message, "Falha", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+
 
         }
     }
-}
+    }
+

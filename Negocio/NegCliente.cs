@@ -1,14 +1,13 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using AcessoDados;
 using System.Data.SqlClient;
+using ObjTransferencia;
 using System.Data;
 using System.ComponentModel;
-using AcessoDados;
-using ObjTransferencia;
+using System.Text.RegularExpressions;
 using System;
-
 
 namespace Negocio
 {
@@ -18,7 +17,7 @@ namespace Negocio
 
 
         [DataObjectMethodAttribute(DataObjectMethodType.Insert)]
-        public string Cadastrar(objCliente cliente)
+        public string Cadastrar(Cliente cliente)
         {
             try
             {
@@ -46,8 +45,51 @@ namespace Negocio
             }
 
 
+
         }
 
-    }
 
-}
+
+
+        [DataObjectMethodAttribute(DataObjectMethodType.Select)]
+        public ClienteLista Consultar(string strNome)
+        {
+            try
+            {
+                ClienteLista clienteLista = new ClienteLista();
+                acessoDados.LimparParametros();
+                acessoDados.AdicionarParametro = new SqlParameter(strNome, "@INNome"));
+            
+                using (DataTable dataTable = acessoDados.GetDataTable("uspConsultarCliente", CommandType.StoredProcedure))
+                {
+                    foreach (DataRow linha in dataTable.Rows)
+                    {
+                        Cliente cliente = new Cliente();
+
+                        cliente.IDCliente = Convert.ToInt32(linha["IDCliente"]);
+                        cliente.Nome = linha["Nome"].ToString();
+                        cliente.RazaoSocial = Convert.ToString(linha["RazaoSocial"]);
+                        cliente.Telefone = linha["Telefone"].ToString();
+                        cliente.Email = linha["Email"].ToString();
+                        cliente.Cpf = Convert.ToString(linha["CPF"]);
+                        cliente.Ie = linha["IE"].ToString();
+                        cliente.Sexo = linha["Sexo"].ToString();
+                        if (cliente.Sexo == "1") { cliente.Sexo = "M"; } else { cliente.Sexo = "F"; }
+                        cliente.Endereco = Convert.ToString(linha["Endereco"]);
+
+
+
+                        clienteLista.Add(cliente);
+                    }
+                }
+                return clienteLista;
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("Falha ao Consultar Cliente. Motivo: " + ex.Message);
+            }
+
+        }
+
+
