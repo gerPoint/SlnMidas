@@ -58,32 +58,30 @@ namespace Negocio
             {
                 ClienteLista clienteLista = new ClienteLista();
                 acessoDados.LimparParametros();
-                acessoDados.AdicionarParametro = new SqlParameter(strNome, "@INNome"));
-            
-                using (DataTable dataTable = acessoDados.GetDataTable("uspConsultarCliente", CommandType.StoredProcedure))
+                acessoDados.AdicionarParametros("@INNome", strNome);
+
+                using (DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.StoredProcedure, "uspConsultarCliente"));
                 {
-                    foreach (DataRow linha in dataTable.Rows)
-                    {
-                        Cliente cliente = new Cliente();
+                    
+                        foreach (DataRow linha in dataTable.Rows)
+                        {
+                            Cliente cliente = new Cliente();
 
-                        cliente.IDCliente = Convert.ToInt32(linha["IDCliente"]);
-                        cliente.Nome = linha["Nome"].ToString();
-                        cliente.RazaoSocial = Convert.ToString(linha["RazaoSocial"]);
-                        cliente.Telefone = linha["Telefone"].ToString();
-                        cliente.Email = linha["Email"].ToString();
-                        cliente.Cpf = Convert.ToString(linha["CPF"]);
-                        cliente.Ie = linha["IE"].ToString();
-                        cliente.Sexo = linha["Sexo"].ToString();
-                        if (cliente.Sexo == "1") { cliente.Sexo = "M"; } else { cliente.Sexo = "F"; }
-                        cliente.Endereco = Convert.ToString(linha["Endereco"]);
+                            cliente.IDCliente = Convert.ToInt32(linha["IDCliente"]);
+                            cliente.Nome = linha["Nome"].ToString();
+                            cliente.RazaoSocial = Convert.ToString(linha["RazaoSocial"]);
+                            cliente.Telefone = linha["Telefone"].ToString();
+                            cliente.Email = linha["Email"].ToString();
+                            cliente.Cpf = Convert.ToString(linha["CPF"]);
+                            cliente.Endereco = Convert.ToString(linha["Endereco"]);
 
 
 
-                        clienteLista.Add(cliente);
+                            clienteLista.Add(cliente);
+                        }
                     }
+                    return clienteLista;
                 }
-                return clienteLista;
-            }
 
             catch (Exception ex)
             {
@@ -91,5 +89,11 @@ namespace Negocio
             }
 
         }
+    }
+}
+
+
+
+
 
 
