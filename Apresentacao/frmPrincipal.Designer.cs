@@ -93,6 +93,7 @@
             this.filialToolStripMenuItem1.Name = "filialToolStripMenuItem1";
             this.filialToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.filialToolStripMenuItem1.Text = "Filial";
+            this.filialToolStripMenuItem1.Click += new System.EventHandler(this.filialToolStripMenuItem1_Click);
             // 
             // fornecedorToolStripMenuItem
             // 
@@ -106,6 +107,7 @@
             this.frutaToolStripMenuItem.Name = "frutaToolStripMenuItem";
             this.frutaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.frutaToolStripMenuItem.Text = "Fruta";
+            this.frutaToolStripMenuItem.Click += new System.EventHandler(this.frutaToolStripMenuItem_Click);
             // 
             // funcionarioToolStripMenuItem
             // 

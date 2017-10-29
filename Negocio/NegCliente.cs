@@ -13,7 +13,7 @@ namespace Negocio
 {
     public class NegCliente
     {
-        AcessoSqlServer acessoDados = new AcessoSqlServer();
+        AcessoDadosSqlServer acessoDadosSqlServer = new AcessoDadosSqlServer();
 
 
         [DataObjectMethodAttribute(DataObjectMethodType.Insert)]
@@ -21,27 +21,29 @@ namespace Negocio
         {
             try
             {
-                acessoDados.LimparParametros();
+                acessoDadosSqlServer.LimparParametros();
                 //acessoDados.AdicionarParametro(new SqlParameter("@INIDCliente", cliente.IDCliente));
-                acessoDados.AdicionarParametros("@INNome", cliente.Nome);
-                acessoDados.AdicionarParametros("@INRazaoSocial", cliente.RazaoSocial);
-                acessoDados.AdicionarParametros("@INTelefone", cliente.Telefone);
-                acessoDados.AdicionarParametros("@INEmail", cliente.Email);
-                acessoDados.AdicionarParametros("@INCidade", cliente.Cidade);
-                acessoDados.AdicionarParametros("@INEndereco", cliente.Endereco);
-                acessoDados.AdicionarParametros("@INCpf", cliente.Cpf);
-                acessoDados.AdicionarParametros("@INCnpj", cliente.Cnpj);
-                acessoDados.AdicionarParametros("@INUf", cliente.Uf);
-                acessoDados.AdicionarParametros("@INStatus", cliente.Status);
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INNome", cliente.Nome));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INRazaoSocial", cliente.RazaoSocial));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTelefone", cliente.Telefone));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INEmail", cliente.Email));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCidade", cliente.Cidade));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INStatus", cliente.Status));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INEndereco", cliente.Endereco));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCpf", cliente.Cpf));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCnpj", cliente.Cnpj));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INUf", cliente.Uf));
 
+               //(DIEGO)string IDCliente = acessoDadosSqlServer.ExecutarScalar(CommandType.StoredProcedure, "uspCadastrarCliente").ToString();
+                //return IDCliente;
 
-
-                string IDCliente = acessoDados.ExecutarManipulacao(CommandType.StoredProcedure, "uspCadastrarCliente").ToString();
+                string IDCliente = acessoDadosSqlServer.ExecutarScalar("uspCadastrarCliente", CommandType.StoredProcedure).ToString();
                 return IDCliente;
             }
             catch (Exception ex)
             {
                 throw new Exception("Falha ao Cadastrar Cliente. Motivo: " + ex.Message);
+
             }
 
 
@@ -57,10 +59,12 @@ namespace Negocio
             try
             {
                 ClienteLista clienteLista = new ClienteLista();
-                acessoDados.LimparParametros();
-                acessoDados.AdicionarParametros("@INNome", strNome);
+                acessoDadosSqlServer.LimparParametros();
+               //(DIEGO) acessoDadosSqlServer.AdicionarParametro("@INNome", strNome);
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INNome", strNome));
 
-                using (DataTable dataTable = acessoDados.ExecutarConsulta(CommandType.StoredProcedure, "uspConsultarCliente"));
+                // using (DataTable dataTable = acessoDadosSqlServer.ExecutarScalar(CommandType.StoredProcedure, "uspConsultarCliente")) 
+                using (DataTable dataTable = acessoDadosSqlServer.GetDataTable("uspConsultarCliente", CommandType.StoredProcedure))
                 {
                     
                         foreach (DataRow linha in dataTable.Rows)
@@ -69,15 +73,19 @@ namespace Negocio
 
                             cliente.IDCliente = Convert.ToInt32(linha["IDCliente"]);
                             cliente.Nome = linha["Nome"].ToString();
-                            cliente.RazaoSocial = Convert.ToString(linha["RazaoSocial"]);
+                            cliente.RazaoSocial = linha["RazaoSocial"].ToString();
                             cliente.Telefone = linha["Telefone"].ToString();
                             cliente.Email = linha["Email"].ToString();
-                            cliente.Cpf = Convert.ToString(linha["CPF"]);
+                            cliente.Cidade = linha["Cidade"].ToString();
+                            cliente.Status = Convert.ToChar(linha["Status"]);
                             cliente.Endereco = Convert.ToString(linha["Endereco"]);
+                            cliente.Cpf = Convert.ToString(linha["Cpf"]);
+                            cliente.Cnpj = Convert.ToString(linha["Cnpj"]);
+                            cliente.Uf = Convert.ToString(linha["Uf"]);
 
 
 
-                            clienteLista.Add(cliente);
+                        clienteLista.Add(cliente);
                         }
                     }
                     return clienteLista;

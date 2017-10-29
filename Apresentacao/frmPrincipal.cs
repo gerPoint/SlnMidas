@@ -50,5 +50,17 @@ namespace Apresentacao
         {
 
         }
+
+        private void filialToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void frutaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFruta OutroForm = new frmFruta();
+            OutroForm.ShowDialog();
+
+        }
     }
 }

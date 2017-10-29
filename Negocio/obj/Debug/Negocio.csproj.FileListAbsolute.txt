@@ -23,3 +23,4 @@ C:\Users\diego\Source\Repos\SlnMidas\Negocio\bin\Debug\ObjTransferencia.pdb
 C:\Users\diego\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\Users\diego\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.dll
 C:\Users\diego\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Lucas\Source\Repos\SlnMidas\Negocio\bin\Debug\Negocio.dll.config

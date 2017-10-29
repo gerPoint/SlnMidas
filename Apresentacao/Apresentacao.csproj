@@ -58,6 +58,12 @@
     <Compile Include="frmFornecedor.Designer.cs">
       <DependentUpon>frmFornecedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFruta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFruta.Designer.cs">
+      <DependentUpon>frmFruta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>midasDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="midasDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCliente.resx">
@@ -82,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmFornecedor.resx">
       <DependentUpon>frmFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFruta.resx">
+      <DependentUpon>frmFruta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
@@ -109,6 +123,17 @@
     </None>
     <None Include="midasDataSet.xss">
       <DependentUpon>midasDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSet1.xsc">
+      <DependentUpon>midasDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSet1.xss">
+      <DependentUpon>midasDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
