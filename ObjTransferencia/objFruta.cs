@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ObjTransferencia
 {
-    class Fruta
+    public class Fruta
     {
         public int IDFruta { get; set; }
         public string Nome { get; set; }
@@ -15,5 +15,5 @@ namespace ObjTransferencia
 
         public string objFruta { get; set; }
     }
-   // public class FrutaLista : List<Fruta> { }
+    public class FrutaLista : List<Fruta> { }
 }

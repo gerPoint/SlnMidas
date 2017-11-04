@@ -193,7 +193,9 @@ namespace Apresentacao
 
         private void dgwCliente_DoubleClick(object sender, EventArgs e)
         {
-          //  cpoIDCliente.Text = dgwCliente.SelectedRows[0].Cells[0].Value.ToString();
+            //  cpoIDCliente.Text = dgwCliente.SelectedRows[0].Cells[0].Value.ToString();
+            //teste
+            lblIDCliente.Text = dgwCliente.SelectedRows[0].Cells[0].Value.ToString();
             cpoNome.Text = dgwCliente.SelectedRows[0].Cells[1].Value.ToString();
             cpoRazaoSocial.Text = dgwCliente.SelectedRows[0].Cells[2].Value.ToString();
             cpoTelefone.Text = dgwCliente.SelectedRows[0].Cells[3].Value.ToString();
@@ -205,6 +207,73 @@ namespace Apresentacao
             cpoCnpj.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
             //cpoStatus.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
             btnSalvar.Enabled = false;
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (cpoNome.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            {
+                MessageBox.Show("Nenhum registro selecionado.");
+                return;
+            }
+
+            try
+            {
+                //this.objCliente.IDCliente = lblIDCliente.();
+                this.objCliente.Nome = cpoNome.Text.TrimStart();
+                this.objCliente.RazaoSocial = cpoRazaoSocial.Text;
+                this.objCliente.Cnpj = cpoCnpj.Text.TrimStart();
+                this.objCliente.Endereco = cpoEndereco.Text.TrimStart();
+                this.objCliente.Cidade = cpoCidade.Text.TrimStart();
+                this.objCliente.Uf = cpoUf.Text.TrimStart();
+                this.objCliente.Telefone = cpoTelefone.Text.TrimStart();
+                this.objCliente.Email = cpoEmail.Text.TrimStart();
+                this.objCliente.Cpf = cpoCpf.Text.TrimStart();
+
+                string strRetorno = string.Empty;
+
+                if (cpoNome.Text == "")
+                {
+                    MessageBox.Show("Campo Obrigatório não informado.");
+                    return;
+                }
+
+                if (cpoRazaoSocial.Text == "")
+                {
+                    MessageBox.Show("Campo Obrigatório não informado.");
+                    return;
+                }
+
+                if (cpoTelefone.Text == "")
+                {
+                    MessageBox.Show("Campo Obrigatório não informado.");
+                    return;
+                }
+
+
+                strRetorno = negCliente.Alterar(this.objCliente);
+
+
+                int intCodigo;
+                if (int.TryParse(strRetorno, out intCodigo) == true)
+                {
+                    MessageBox.Show("Registro alterado com sucesso!", "Informação",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgwCliente.DataSource = null;
+                    dgwCliente.Update();
+                    dgwCliente.Refresh();
+                   // CaixaPesquisa.Text = "%%";
+                   // AtualizarGrid();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao salvar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+
         }
     }
     }
