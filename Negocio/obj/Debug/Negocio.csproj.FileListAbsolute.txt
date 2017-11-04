@@ -24,3 +24,4 @@ C:\Users\diego\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.csprojResolveAsse
 C:\Users\diego\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.dll
 C:\Users\diego\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.pdb
 C:\Users\Lucas\Source\Repos\SlnMidas\Negocio\bin\Debug\Negocio.dll.config
+C:\Users\diego\Source\Repos\SlnMidas\Negocio\bin\Debug\Negocio.dll.config

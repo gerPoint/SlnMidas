@@ -48,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.tblFrutaTableAdapter = new Apresentacao.midasDataSet1TableAdapters.tblFrutaTableAdapter();
+            this.cpoIDFruta = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFruta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSet1)).BeginInit();
@@ -230,11 +231,20 @@
             // 
             this.tblFrutaTableAdapter.ClearBeforeFill = true;
             // 
+            // cpoIDFruta
+            // 
+            this.cpoIDFruta.Location = new System.Drawing.Point(173, 0);
+            this.cpoIDFruta.Name = "cpoIDFruta";
+            this.cpoIDFruta.Size = new System.Drawing.Size(42, 20);
+            this.cpoIDFruta.TabIndex = 94;
+            this.cpoIDFruta.Visible = false;
+            // 
             // frmFruta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 401);
+            this.Controls.Add(this.cpoIDFruta);
             this.Controls.Add(this.cpoUnidMedida);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnExcluir);
@@ -281,5 +291,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn unidMedidaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox cpoIDFruta;
     }
 }

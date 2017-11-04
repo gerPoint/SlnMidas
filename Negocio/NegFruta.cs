@@ -89,12 +89,13 @@ namespace Negocio
              try
             {
                 acessoDadosSqlServer.LimparParametros();
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFruta", fruta.IDFruta));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INNome", fruta.Nome));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INUnidMedida", fruta.UnidMedida));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INStatus", fruta.Status));
 
 
-                string codProduto = acessoDadosSqlServer.ExecutarScalar("uspAlterarCliente", CommandType.StoredProcedure).ToString();
+                string codProduto = acessoDadosSqlServer.ExecutarScalar("uspAlterarFruta", CommandType.StoredProcedure).ToString();
 
                 return codProduto;
             }

@@ -29,7 +29,7 @@ namespace Apresentacao
         private void frmFruta_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'midasDataSet1.tblFruta' table. You can move, or remove it, as needed.
-            this.tblFrutaTableAdapter.Fill(this.midasDataSet1.tblFruta);
+            /*this.tblFrutaTableAdapter.Fill(this.midasDataSet1.tblFruta);*/
 
         }
 
@@ -156,8 +156,9 @@ namespace Apresentacao
 
         }
 
-        private void dgwFruta_DoubleClick(object sender, EventArgs e)
+        public void dgwFruta_DoubleClick(object sender, EventArgs e)
         {
+            cpoIDFruta.Text = dgwFruta.SelectedRows[0].Cells[0].Value.ToString();
             cpoNome.Text = dgwFruta.SelectedRows[0].Cells[1].Value.ToString();
             cpoUnidMedida.Text = dgwFruta.SelectedRows[0].Cells[2].Value.ToString();
             //cpoStatus.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
@@ -176,6 +177,7 @@ namespace Apresentacao
             try
             {
                 //this.objCliente.IDCliente = lblIDCliente.();
+                this.objFruta.IDFruta = Convert.ToInt32(cpoIDFruta.Text);
                 this.objFruta.Nome = cpoNome.Text.TrimStart();
                 this.objFruta.UnidMedida = cpoUnidMedida.Text.TrimStart();
       

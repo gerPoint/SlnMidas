@@ -55,3 +55,4 @@ C:\Users\diego\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmRoma
 C:\Users\diego\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.Properties.Resources.resources
 C:\Users\diego\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.Cache
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFruta.resources
+C:\Users\diego\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFruta.resources
