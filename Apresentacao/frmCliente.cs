@@ -111,6 +111,12 @@ namespace Apresentacao
                     dgwCliente.DataSource = null;
                     dgwCliente.Update();
                     dgwCliente.Refresh();
+                    
+
+
+                    //teste
+
+                    //strRetorno = negCliente.Consultar(); 
 
                     //cpoCaixaPesquisa.Text = "%%";
                     // AtualizarGrid();
@@ -195,16 +201,16 @@ namespace Apresentacao
         {
             //  cpoIDCliente.Text = dgwCliente.SelectedRows[0].Cells[0].Value.ToString();
             //teste
-            lblIDCliente.Text = dgwCliente.SelectedRows[0].Cells[0].Value.ToString();
+            cpoIDCliente.Text = dgwCliente.SelectedRows[0].Cells[0].Value.ToString();
             cpoNome.Text = dgwCliente.SelectedRows[0].Cells[1].Value.ToString();
             cpoRazaoSocial.Text = dgwCliente.SelectedRows[0].Cells[2].Value.ToString();
-            cpoTelefone.Text = dgwCliente.SelectedRows[0].Cells[3].Value.ToString();
-            cpoEmail.Text = dgwCliente.SelectedRows[0].Cells[4].Value.ToString();
-            cpoCidade.Text = dgwCliente.SelectedRows[0].Cells[5].Value.ToString();
-            cpoUf.Text = dgwCliente.SelectedRows[0].Cells[6].Value.ToString();
+            cpoTelefone.Text = dgwCliente.SelectedRows[0].Cells[5].Value.ToString();
+            cpoEmail.Text = dgwCliente.SelectedRows[0].Cells[6].Value.ToString();
+            cpoCidade.Text = dgwCliente.SelectedRows[0].Cells[8].Value.ToString();
+            cpoUf.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
             cpoEndereco.Text = dgwCliente.SelectedRows[0].Cells[7].Value.ToString();
-            cpoCpf.Text = dgwCliente.SelectedRows[0].Cells[8].Value.ToString();
-            cpoCnpj.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
+            cpoCpf.Text = dgwCliente.SelectedRows[0].Cells[4].Value.ToString();
+            cpoCnpj.Text = dgwCliente.SelectedRows[0].Cells[3].Value.ToString();
             //cpoStatus.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
             btnSalvar.Enabled = false;
         }
@@ -219,7 +225,10 @@ namespace Apresentacao
 
             try
             {
-                //this.objCliente.IDCliente = lblIDCliente.();
+
+               
+                this.objCliente.IDCliente = Convert.ToInt32 (cpoIDCliente.Text);
+                    //cliente.IDCliente = Convert.ToInt32(linha["IDCliente"]);
                 this.objCliente.Nome = cpoNome.Text.TrimStart();
                 this.objCliente.RazaoSocial = cpoRazaoSocial.Text;
                 this.objCliente.Cnpj = cpoCnpj.Text.TrimStart();
@@ -262,7 +271,9 @@ namespace Apresentacao
                     dgwCliente.DataSource = null;
                     dgwCliente.Update();
                     dgwCliente.Refresh();
-                   // CaixaPesquisa.Text = "%%";
+
+                   
+                   // CaixaPesquisa.Text = "";
                    // AtualizarGrid();
                 }
 
@@ -276,5 +287,6 @@ namespace Apresentacao
 
         }
     }
-    }
+
+  }
 

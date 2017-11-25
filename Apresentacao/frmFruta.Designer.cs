@@ -42,7 +42,7 @@
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataCadastroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblFrutaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.midasDataSet1 = new Apresentacao.midasDataSet1();
+            this.midasDataSet1 = new Apresentacao.midasDataSetFruta();
             this.cpoNome = new System.Windows.Forms.TextBox();
             this.cpoCaixaPesquisa = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -144,7 +144,7 @@
             // iDFrutaDataGridViewTextBoxColumn
             // 
             this.iDFrutaDataGridViewTextBoxColumn.DataPropertyName = "IDFruta";
-            this.iDFrutaDataGridViewTextBoxColumn.HeaderText = "IDFruta";
+            this.iDFrutaDataGridViewTextBoxColumn.HeaderText = "Código";
             this.iDFrutaDataGridViewTextBoxColumn.Name = "iDFrutaDataGridViewTextBoxColumn";
             this.iDFrutaDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDFrutaDataGridViewTextBoxColumn.Width = 50;
@@ -283,14 +283,14 @@
         private System.Windows.Forms.TextBox cpoCaixaPesquisa;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPesquisar;
-        private midasDataSet1 midasDataSet1;
+        private midasDataSetFruta midasDataSet1;
         private System.Windows.Forms.BindingSource tblFrutaBindingSource;
         private midasDataSet1TableAdapters.tblFrutaTableAdapter tblFrutaTableAdapter;
+        private System.Windows.Forms.TextBox cpoIDFruta;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDFrutaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn unidMedidaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox cpoIDFruta;
     }
 }

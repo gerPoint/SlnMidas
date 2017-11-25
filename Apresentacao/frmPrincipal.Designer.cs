@@ -114,6 +114,7 @@
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
             this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.funcionarioToolStripMenuItem.Text = "Funcionario";
+            this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
             // 
             // romaneioToolStripMenuItem1
             // 
@@ -127,12 +128,14 @@
             this.transportadorToolStripMenuItem.Name = "transportadorToolStripMenuItem";
             this.transportadorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.transportadorToolStripMenuItem.Text = "Transportador";
+            this.transportadorToolStripMenuItem.Click += new System.EventHandler(this.transportadorToolStripMenuItem_Click);
             // 
             // usuarioToolStripMenuItem1
             // 
             this.usuarioToolStripMenuItem1.Name = "usuarioToolStripMenuItem1";
             this.usuarioToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.usuarioToolStripMenuItem1.Text = "Usuario";
+            this.usuarioToolStripMenuItem1.Click += new System.EventHandler(this.usuarioToolStripMenuItem1_Click);
             // 
             // usuarioToolStripMenuItem
             // 

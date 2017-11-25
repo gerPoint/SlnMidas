@@ -56,3 +56,7 @@ C:\Users\diego\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.Propert
 C:\Users\diego\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.Cache
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFruta.resources
 C:\Users\diego\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFruta.resources
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFilial.resources
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFuncionario.resources
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmTransportador.resources
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmUsuario.resources

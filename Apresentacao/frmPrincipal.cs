@@ -53,7 +53,8 @@ namespace Apresentacao
 
         private void filialToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            
+            frmFilial OutroForm = new frmFilial();
+            OutroForm.ShowDialog();
         }
 
         private void frutaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,6 +62,23 @@ namespace Apresentacao
             frmFruta OutroForm = new frmFruta();
             OutroForm.ShowDialog();
 
+        }
+
+        private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFuncionario OutroForm = new frmFuncionario();
+            OutroForm.ShowDialog();
+        }
+
+        private void transportadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTransportador OutroFrm = new frmTransportador();
+            OutroFrm.ShowDialog();        }
+
+        private void usuarioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmUsuario OutroFrm = new frmUsuario();
+            OutroFrm.ShowDialog();
         }
     }
 }

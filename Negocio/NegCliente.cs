@@ -105,6 +105,7 @@ namespace Negocio
             try
             {
                 acessoDadosSqlServer.LimparParametros();
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDCliente", cliente.IDCliente));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INNome", cliente.Nome));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INRazaoSocial", cliente.RazaoSocial));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTelefone", cliente.Telefone));
@@ -125,6 +126,8 @@ namespace Negocio
             {
                 throw new Exception("Falha ao alterar Produto. Motivo: " + ex.Message);
             }
+
+
 
 
 

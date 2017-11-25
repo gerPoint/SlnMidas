@@ -52,6 +52,12 @@
     <Compile Include="frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFilial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFilial.Designer.cs">
+      <DependentUpon>frmFilial.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="frmFruta.Designer.cs">
       <DependentUpon>frmFruta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFuncionario.Designer.cs">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -76,20 +88,65 @@
     <Compile Include="frmRomaneio.Designer.cs">
       <DependentUpon>frmRomaneio.cs</DependentUpon>
     </Compile>
-    <Compile Include="midasDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>midasDataSet.xsd</DependentUpon>
+    <Compile Include="frmTransportador.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="midasDataSet1.Designer.cs">
+    <Compile Include="frmTransportador.Designer.cs">
+      <DependentUpon>frmTransportador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="midasDataSetCliente.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>midasDataSet1.xsd</DependentUpon>
+      <DependentUpon>midasDataSetCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="midasDataSetFilial2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetFilial2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="midasDataSetFornecedor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetFornecedor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="midasDataSetFruta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetFruta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="midasDataSetTransportador.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetTransportador.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="midasDataSetFilial.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetFilial.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="midasDataSetFuncionario1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetFuncionario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="midasDataSetUsuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetUsuario.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFilial.resx">
+      <DependentUpon>frmFilial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFornecedor.resx">
       <DependentUpon>frmFornecedor.cs</DependentUpon>
@@ -97,11 +154,20 @@
     <EmbeddedResource Include="frmFruta.resx">
       <DependentUpon>frmFruta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmFuncionario.resx">
+      <DependentUpon>frmFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRomaneio.resx">
       <DependentUpon>frmRomaneio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransportador.resx">
+      <DependentUpon>frmTransportador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -113,27 +179,93 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="midasDataSet.xsc">
-      <DependentUpon>midasDataSet.xsd</DependentUpon>
+    <None Include="midasDataSetCliente.xsc">
+      <DependentUpon>midasDataSetCliente.xsd</DependentUpon>
     </None>
-    <None Include="midasDataSet.xsd">
+    <None Include="midasDataSetCliente.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>midasDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>midasDataSetCliente.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="midasDataSet.xss">
-      <DependentUpon>midasDataSet.xsd</DependentUpon>
+    <None Include="midasDataSetCliente.xss">
+      <DependentUpon>midasDataSetCliente.xsd</DependentUpon>
     </None>
-    <None Include="midasDataSet1.xsc">
-      <DependentUpon>midasDataSet1.xsd</DependentUpon>
+    <None Include="midasDataSetFilial2.xsc">
+      <DependentUpon>midasDataSetFilial2.xsd</DependentUpon>
     </None>
-    <None Include="midasDataSet1.xsd">
+    <None Include="midasDataSetFilial2.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>midasDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>midasDataSetFilial2.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="midasDataSet1.xss">
-      <DependentUpon>midasDataSet1.xsd</DependentUpon>
+    <None Include="midasDataSetFilial2.xss">
+      <DependentUpon>midasDataSetFilial2.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetFornecedor.xsc">
+      <DependentUpon>midasDataSetFornecedor.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetFornecedor.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSetFornecedor.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSetFornecedor.xss">
+      <DependentUpon>midasDataSetFornecedor.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetFruta.xsc">
+      <DependentUpon>midasDataSetFruta.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetFruta.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSetFruta.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSetFruta.xss">
+      <DependentUpon>midasDataSetFruta.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetTransportador.xsc">
+      <DependentUpon>midasDataSetTransportador.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetTransportador.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSetTransportador.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSetTransportador.xss">
+      <DependentUpon>midasDataSetTransportador.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetFilial.xsc">
+      <DependentUpon>midasDataSetFilial.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetFilial.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSetFilial.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSetFilial.xss">
+      <DependentUpon>midasDataSetFilial.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetFuncionario.xsc">
+      <DependentUpon>midasDataSetFuncionario.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetFuncionario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSetFuncionario1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSetFuncionario.xss">
+      <DependentUpon>midasDataSetFuncionario.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetUsuario.xsc">
+      <DependentUpon>midasDataSetUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetUsuario.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSetUsuario.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSetUsuario.xss">
+      <DependentUpon>midasDataSetUsuario.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

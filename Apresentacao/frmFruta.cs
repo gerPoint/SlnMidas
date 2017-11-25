@@ -148,7 +148,7 @@ namespace Apresentacao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Falha ao consultar Cliente. Falha: " +
+                MessageBox.Show("Falha ao consultar Fruta. Falha: " +
                     ex.Message, "Falha", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }

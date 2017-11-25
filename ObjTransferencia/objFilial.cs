@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace ObjTransferencia
 {
-    class Filial
+    public class Filial
     {
         public int IDFilial { get; set; }
+        public string Nome { get; set; }
         public string RazaoSocial { get; set; }
         public string Cnpj { get; set; }
         public string Telefone { get; set; }
@@ -16,4 +20,5 @@ namespace ObjTransferencia
         public char Status { get; set; }
         public DateTime DataCadastro { get; set; }
     }
+    public class FilialLista : List<Filial> { }
 }

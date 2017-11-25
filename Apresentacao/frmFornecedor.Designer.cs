@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.cpoRazaoSocial = new System.Windows.Forms.TextBox();
+            this.cpoUf = new System.Windows.Forms.TextBox();
+            this.cpoCidade = new System.Windows.Forms.TextBox();
+            this.cpoEndereco = new System.Windows.Forms.TextBox();
+            this.cpoEmail = new System.Windows.Forms.TextBox();
+            this.cpoTelefone = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cpoCnpj = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
@@ -43,99 +44,106 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cpoCpf = new System.Windows.Forms.TextBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.dgwFornecedor = new System.Windows.Forms.DataGridView();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNPJ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RazaoSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Uf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ativo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.iDFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataCadastroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblFornecedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetFornecedor = new Apresentacao.midasDataSetFornecedor();
             this.cpoNome = new System.Windows.Forms.TextBox();
-            this.CaixaPesquisa = new System.Windows.Forms.TextBox();
+            this.cpoCaixaPesquisa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPesquisa = new System.Windows.Forms.Button();
+            this.tblFornecedorTableAdapter = new Apresentacao.midasDataSetFornecedorTableAdapters.tblFornecedorTableAdapter();
+            this.cpoIDFornecedor = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFornecedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFornecedorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetFornecedor)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox10
+            // cpoRazaoSocial
             // 
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Location = new System.Drawing.Point(419, 311);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(246, 20);
-            this.textBox10.TabIndex = 103;
+            this.cpoRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoRazaoSocial.Location = new System.Drawing.Point(418, 320);
+            this.cpoRazaoSocial.Name = "cpoRazaoSocial";
+            this.cpoRazaoSocial.Size = new System.Drawing.Size(246, 20);
+            this.cpoRazaoSocial.TabIndex = 5;
             // 
-            // textBox9
+            // cpoUf
             // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Location = new System.Drawing.Point(622, 347);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(42, 20);
-            this.textBox9.TabIndex = 102;
+            this.cpoUf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoUf.Location = new System.Drawing.Point(621, 356);
+            this.cpoUf.Name = "cpoUf";
+            this.cpoUf.Size = new System.Drawing.Size(42, 20);
+            this.cpoUf.TabIndex = 9;
             // 
-            // textBox8
+            // cpoCidade
             // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Location = new System.Drawing.Point(419, 347);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(170, 20);
-            this.textBox8.TabIndex = 101;
+            this.cpoCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCidade.Location = new System.Drawing.Point(418, 356);
+            this.cpoCidade.Name = "cpoCidade";
+            this.cpoCidade.Size = new System.Drawing.Size(170, 20);
+            this.cpoCidade.TabIndex = 8;
             // 
-            // textBox7
+            // cpoEndereco
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Location = new System.Drawing.Point(86, 347);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(247, 20);
-            this.textBox7.TabIndex = 100;
+            this.cpoEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoEndereco.Location = new System.Drawing.Point(85, 356);
+            this.cpoEndereco.Name = "cpoEndereco";
+            this.cpoEndereco.Size = new System.Drawing.Size(247, 20);
+            this.cpoEndereco.TabIndex = 7;
             // 
-            // textBox6
+            // cpoEmail
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(419, 380);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(245, 20);
-            this.textBox6.TabIndex = 99;
+            this.cpoEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoEmail.Location = new System.Drawing.Point(418, 389);
+            this.cpoEmail.Name = "cpoEmail";
+            this.cpoEmail.Size = new System.Drawing.Size(245, 20);
+            this.cpoEmail.TabIndex = 11;
             // 
-            // textBox5
+            // cpoTelefone
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(86, 380);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(247, 20);
-            this.textBox5.TabIndex = 98;
+            this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoTelefone.Location = new System.Drawing.Point(85, 389);
+            this.cpoTelefone.Name = "cpoTelefone";
+            this.cpoTelefone.Size = new System.Drawing.Size(247, 20);
+            this.cpoTelefone.TabIndex = 10;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(669, 313);
+            this.label9.Location = new System.Drawing.Point(668, 322);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(34, 13);
             this.label9.TabIndex = 97;
             this.label9.Text = "CNPJ";
             // 
-            // textBox3
+            // cpoCnpj
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(709, 311);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(103, 20);
-            this.textBox3.TabIndex = 96;
+            this.cpoCnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCnpj.Location = new System.Drawing.Point(708, 320);
+            this.cpoCnpj.Name = "cpoCnpj";
+            this.cpoCnpj.Size = new System.Drawing.Size(103, 20);
+            this.cpoCnpj.TabIndex = 6;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(676, 379);
+            this.label5.Location = new System.Drawing.Point(675, 388);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 95;
@@ -144,7 +152,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(709, 357);
+            this.radioButton1.Location = new System.Drawing.Point(708, 366);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(92, 17);
             this.radioButton1.TabIndex = 94;
@@ -155,7 +163,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(27, 349);
+            this.label8.Location = new System.Drawing.Point(26, 358);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 13);
             this.label8.TabIndex = 93;
@@ -164,7 +172,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(595, 349);
+            this.label7.Location = new System.Drawing.Point(594, 358);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(21, 13);
             this.label7.TabIndex = 92;
@@ -173,7 +181,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 382);
+            this.label6.Location = new System.Drawing.Point(26, 391);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 91;
@@ -182,7 +190,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(343, 349);
+            this.label4.Location = new System.Drawing.Point(342, 358);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 90;
@@ -191,165 +199,198 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(343, 313);
+            this.label2.Location = new System.Drawing.Point(342, 322);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 89;
             this.label2.Text = "Razão Social";
             // 
-            // textBox2
+            // cpoCpf
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(709, 380);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(103, 20);
-            this.textBox2.TabIndex = 88;
+            this.cpoCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCpf.Location = new System.Drawing.Point(708, 389);
+            this.cpoCpf.Name = "cpoCpf";
+            this.cpoCpf.Size = new System.Drawing.Size(103, 20);
+            this.cpoCpf.TabIndex = 12;
             // 
-            // button5
+            // btnExcluir
             // 
-            this.button5.Image = global::Apresentacao.Properties.Resources.delete_4219;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(504, 446);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(87, 44);
-            this.button5.TabIndex = 87;
-            this.button5.Text = "Excluir";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnExcluir.Image = global::Apresentacao.Properties.Resources.delete_4219;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluir.Location = new System.Drawing.Point(503, 455);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(87, 44);
+            this.btnExcluir.TabIndex = 14;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnSalvar
             // 
-            this.button4.Image = global::Apresentacao.Properties.Resources.saveall_1204;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(721, 446);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 44);
-            this.button4.TabIndex = 86;
-            this.button4.Text = "   Salvar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSalvar.Image = global::Apresentacao.Properties.Resources.saveall_1204;
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvar.Location = new System.Drawing.Point(720, 455);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(91, 44);
+            this.btnSalvar.TabIndex = 16;
+            this.btnSalvar.Text = "   Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // button3
+            // btnCancelar
             // 
-            this.button3.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(612, 446);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 44);
-            this.button3.TabIndex = 85;
-            this.button3.Text = "Cancelar";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(611, 455);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(89, 44);
+            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button1
+            // btnAlterar
             // 
-            this.button1.Image = global::Apresentacao.Properties.Resources.document_write_22637;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(393, 446);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 44);
-            this.button1.TabIndex = 84;
-            this.button1.Text = "Alterar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAlterar.Image = global::Apresentacao.Properties.Resources.document_write_22637;
+            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAlterar.Location = new System.Drawing.Point(392, 455);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(87, 44);
+            this.btnAlterar.TabIndex = 13;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterar.UseVisualStyleBackColor = true;
             // 
             // dgwFornecedor
             // 
+            this.dgwFornecedor.AutoGenerateColumns = false;
             this.dgwFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwFornecedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nome,
-            this.CNPJ,
-            this.RazaoSocial,
-            this.Endereco,
-            this.Cidade,
-            this.Uf,
-            this.Cpf,
-            this.Email,
-            this.Telefone,
-            this.Ativo});
-            this.dgwFornecedor.Location = new System.Drawing.Point(30, 69);
+            this.iDFornecedorDataGridViewTextBoxColumn,
+            this.nomeDataGridViewTextBoxColumn,
+            this.enderecoDataGridViewTextBoxColumn,
+            this.cidadeDataGridViewTextBoxColumn,
+            this.ufDataGridViewTextBoxColumn,
+            this.telefoneDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.cnpjDataGridViewTextBoxColumn,
+            this.cpfDataGridViewTextBoxColumn,
+            this.dataCadastroDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn});
+            this.dgwFornecedor.DataSource = this.tblFornecedorBindingSource;
+            this.dgwFornecedor.Location = new System.Drawing.Point(29, 78);
             this.dgwFornecedor.Name = "dgwFornecedor";
             this.dgwFornecedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFornecedor.Size = new System.Drawing.Size(782, 211);
             this.dgwFornecedor.TabIndex = 83;
+            this.dgwFornecedor.DoubleClick += new System.EventHandler(this.dgwFornecedor_DoubleClick);
             // 
-            // Nome
+            // iDFornecedorDataGridViewTextBoxColumn
             // 
-            this.Nome.DataPropertyName = "Nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
+            this.iDFornecedorDataGridViewTextBoxColumn.DataPropertyName = "IDFornecedor";
+            this.iDFornecedorDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.iDFornecedorDataGridViewTextBoxColumn.Name = "iDFornecedorDataGridViewTextBoxColumn";
+            this.iDFornecedorDataGridViewTextBoxColumn.Width = 50;
             // 
-            // CNPJ
+            // nomeDataGridViewTextBoxColumn
             // 
-            this.CNPJ.DataPropertyName = "CNPJ";
-            this.CNPJ.HeaderText = "CNPJ";
-            this.CNPJ.Name = "CNPJ";
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.Width = 200;
             // 
-            // RazaoSocial
+            // enderecoDataGridViewTextBoxColumn
             // 
-            this.RazaoSocial.HeaderText = " Razao Social";
-            this.RazaoSocial.Name = "RazaoSocial";
+            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
+            this.enderecoDataGridViewTextBoxColumn.Width = 200;
             // 
-            // Endereco
+            // cidadeDataGridViewTextBoxColumn
             // 
-            this.Endereco.HeaderText = "Endereco";
-            this.Endereco.Name = "Endereco";
+            this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "Cidade";
+            this.cidadeDataGridViewTextBoxColumn.HeaderText = "Cidade";
+            this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
+            this.cidadeDataGridViewTextBoxColumn.Width = 200;
             // 
-            // Cidade
+            // ufDataGridViewTextBoxColumn
             // 
-            this.Cidade.HeaderText = "Cidade";
-            this.Cidade.Name = "Cidade";
+            this.ufDataGridViewTextBoxColumn.DataPropertyName = "Uf";
+            this.ufDataGridViewTextBoxColumn.HeaderText = "Uf";
+            this.ufDataGridViewTextBoxColumn.Name = "ufDataGridViewTextBoxColumn";
+            this.ufDataGridViewTextBoxColumn.Width = 50;
             // 
-            // Uf
+            // telefoneDataGridViewTextBoxColumn
             // 
-            this.Uf.HeaderText = "UF";
-            this.Uf.Name = "Uf";
+            this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "Telefone";
+            this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
+            this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
             // 
-            // Cpf
+            // emailDataGridViewTextBoxColumn
             // 
-            this.Cpf.HeaderText = "CPF";
-            this.Cpf.Name = "Cpf";
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.Width = 200;
             // 
-            // Email
+            // cnpjDataGridViewTextBoxColumn
             // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
+            this.cnpjDataGridViewTextBoxColumn.DataPropertyName = "Cnpj";
+            this.cnpjDataGridViewTextBoxColumn.HeaderText = "Cnpj";
+            this.cnpjDataGridViewTextBoxColumn.Name = "cnpjDataGridViewTextBoxColumn";
             // 
-            // Telefone
+            // cpfDataGridViewTextBoxColumn
             // 
-            this.Telefone.DataPropertyName = "Telefone";
-            this.Telefone.HeaderText = "Telefone";
-            this.Telefone.Name = "Telefone";
+            this.cpfDataGridViewTextBoxColumn.DataPropertyName = "Cpf";
+            this.cpfDataGridViewTextBoxColumn.HeaderText = "Cpf";
+            this.cpfDataGridViewTextBoxColumn.Name = "cpfDataGridViewTextBoxColumn";
             // 
-            // Ativo
+            // dataCadastroDataGridViewTextBoxColumn
             // 
-            this.Ativo.DataPropertyName = "Ativo";
-            this.Ativo.HeaderText = "Ativo";
-            this.Ativo.Name = "Ativo";
+            this.dataCadastroDataGridViewTextBoxColumn.DataPropertyName = "DataCadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.HeaderText = "DataCadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.Name = "dataCadastroDataGridViewTextBoxColumn";
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // tblFornecedorBindingSource
+            // 
+            this.tblFornecedorBindingSource.DataMember = "tblFornecedor";
+            this.tblFornecedorBindingSource.DataSource = this.midasDataSetFornecedor;
+            // 
+            // midasDataSetFornecedor
+            // 
+            this.midasDataSetFornecedor.DataSetName = "midasDataSetFornecedor";
+            this.midasDataSetFornecedor.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cpoNome
             // 
             this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoNome.Location = new System.Drawing.Point(86, 311);
+            this.cpoNome.Location = new System.Drawing.Point(85, 320);
             this.cpoNome.Name = "cpoNome";
             this.cpoNome.Size = new System.Drawing.Size(247, 20);
-            this.cpoNome.TabIndex = 78;
+            this.cpoNome.TabIndex = 4;
             // 
-            // CaixaPesquisa
+            // cpoCaixaPesquisa
             // 
-            this.CaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CaixaPesquisa.Location = new System.Drawing.Point(169, 26);
-            this.CaixaPesquisa.Multiline = true;
-            this.CaixaPesquisa.Name = "CaixaPesquisa";
-            this.CaixaPesquisa.Size = new System.Drawing.Size(643, 23);
-            this.CaixaPesquisa.TabIndex = 80;
+            this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCaixaPesquisa.Location = new System.Drawing.Point(168, 35);
+            this.cpoCaixaPesquisa.Multiline = true;
+            this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
+            this.cpoCaixaPesquisa.Size = new System.Drawing.Size(643, 23);
+            this.cpoCaixaPesquisa.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(343, 382);
+            this.label3.Location = new System.Drawing.Point(342, 391);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 82;
@@ -358,7 +399,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 313);
+            this.label1.Location = new System.Drawing.Point(26, 322);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 81;
@@ -368,26 +409,41 @@
             // 
             this.btnPesquisa.Image = global::Apresentacao.Properties.Resources.pesquisar1;
             this.btnPesquisa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisa.Location = new System.Drawing.Point(30, 12);
+            this.btnPesquisa.Location = new System.Drawing.Point(29, 21);
             this.btnPesquisa.Name = "btnPesquisa";
             this.btnPesquisa.Size = new System.Drawing.Size(124, 45);
-            this.btnPesquisa.TabIndex = 79;
+            this.btnPesquisa.TabIndex = 2;
             this.btnPesquisa.Text = "Pesquisar";
             this.btnPesquisa.UseVisualStyleBackColor = true;
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
+            // 
+            // tblFornecedorTableAdapter
+            // 
+            this.tblFornecedorTableAdapter.ClearBeforeFill = true;
+            // 
+            // cpoIDFornecedor
+            // 
+            this.cpoIDFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoIDFornecedor.Location = new System.Drawing.Point(168, -2);
+            this.cpoIDFornecedor.Name = "cpoIDFornecedor";
+            this.cpoIDFornecedor.Size = new System.Drawing.Size(42, 20);
+            this.cpoIDFornecedor.TabIndex = 98;
+            this.cpoIDFornecedor.Visible = false;
             // 
             // frmFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 517);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.ClientSize = new System.Drawing.Size(845, 524);
+            this.Controls.Add(this.cpoIDFornecedor);
+            this.Controls.Add(this.cpoRazaoSocial);
+            this.Controls.Add(this.cpoUf);
+            this.Controls.Add(this.cpoCidade);
+            this.Controls.Add(this.cpoEndereco);
+            this.Controls.Add(this.cpoEmail);
+            this.Controls.Add(this.cpoTelefone);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.cpoCnpj);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label8);
@@ -395,21 +451,24 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cpoCpf);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.dgwFornecedor);
             this.Controls.Add(this.cpoNome);
-            this.Controls.Add(this.CaixaPesquisa);
+            this.Controls.Add(this.cpoCaixaPesquisa);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPesquisa);
             this.Name = "frmFornecedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FORNECEDOR";
+            this.Load += new System.EventHandler(this.frmFornecedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwFornecedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFornecedorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetFornecedor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,14 +476,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox cpoRazaoSocial;
+        private System.Windows.Forms.TextBox cpoUf;
+        private System.Windows.Forms.TextBox cpoCidade;
+        private System.Windows.Forms.TextBox cpoEndereco;
+        private System.Windows.Forms.TextBox cpoEmail;
+        private System.Windows.Forms.TextBox cpoTelefone;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox cpoCnpj;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label8;
@@ -432,26 +491,31 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox cpoCpf;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.DataGridView dgwFornecedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CNPJ;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RazaoSocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Endereco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Uf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cpf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Ativo;
         private System.Windows.Forms.TextBox cpoNome;
-        private System.Windows.Forms.TextBox CaixaPesquisa;
+        private System.Windows.Forms.TextBox cpoCaixaPesquisa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPesquisa;
+        private midasDataSetFornecedor midasDataSetFornecedor;
+        private System.Windows.Forms.BindingSource tblFornecedorBindingSource;
+        private midasDataSetFornecedorTableAdapters.tblFornecedorTableAdapter tblFornecedorTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDFornecedorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ufDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cnpjDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpfDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox cpoIDFornecedor;
     }
 }
