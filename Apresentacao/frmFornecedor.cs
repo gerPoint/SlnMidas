@@ -164,13 +164,115 @@ namespace Apresentacao
                     ex.Message, "Falha", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
-
         }
+
+
 
         private void dgwFornecedor_DoubleClick(object sender, EventArgs e)
         {
 
         }
-    }
-}
 
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (cpoNome.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            {
+                MessageBox.Show("Nenhum registro selecionado.");
+                return;
+            }
+
+            try
+            {
+
+
+                this.objFornecedor.IDFornecedor = Convert.ToInt32(cpoIDFornecedor.Text);
+                //cliente.IDCliente = Convert.ToInt32(linha["IDCliente"]);
+                this.objFornecedor.Nome = cpoNome.Text.TrimStart();
+                this.objFornecedor.RazaoSocial = cpoRazaoSocial.Text;
+                this.objFornecedor.Cnpj = cpoCnpj.Text.TrimStart();
+                this.objFornecedor.Cpf = cpoCpf.Text.TrimStart();
+                this.objFornecedor.Endereco = cpoEndereco.Text.TrimStart();
+                this.objFornecedor.Cidade = cpoCidade.Text.TrimStart();
+                this.objFornecedor.Uf = cpoUf.Text.TrimStart();
+                this.objFornecedor.Telefone = cpoTelefone.Text.TrimStart();
+                this.objFornecedor.Email = cpoEmail.Text.TrimStart();
+
+
+                string strRetorno = string.Empty;
+
+                if (cpoNome.Text == "")
+                {
+                    MessageBox.Show("Campo Obrigatório não informado.");
+                    return;
+                }
+
+                if (cpoRazaoSocial.Text == "")
+                {
+                    MessageBox.Show("Campo Obrigatório não informado.");
+                    return;
+                }
+
+                if (cpoTelefone.Text == "")
+                {
+                    MessageBox.Show("Campo Obrigatório não informado.");
+                    return;
+                }
+
+
+                strRetorno = negFornecedor.Alterar(this.objFornecedor);
+
+
+                int intCodigo;
+                if (int.TryParse(strRetorno, out intCodigo) == true)
+                {
+                    MessageBox.Show("Registro alterado com sucesso!", "Informação",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgwFornecedor.DataSource = null;
+                    dgwFornecedor.Update();
+                    dgwFornecedor.Refresh();
+
+
+
+                    cpoNome.Clear();
+                    cpoRazaoSocial.Clear();
+                    cpoCnpj.Clear();
+                    cpoCidade.Clear();
+                    cpoEmail.Clear();
+                    cpoTelefone.Clear();
+                    cpoEndereco.Clear();
+                    cpoUf.Clear();
+
+                    btnSalvar.Enabled = true;
+
+
+                    // CaixaPesquisa.Text = "";
+                    // AtualizarGrid();
+
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao salvar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
+        private void dgwFornecedor_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            cpoIDFornecedor.Text = dgwFornecedor.SelectedRows[0].Cells[0].Value.ToString();
+            cpoNome.Text = dgwFornecedor.SelectedRows[0].Cells[1].Value.ToString();
+            cpoRazaoSocial.Text = dgwFornecedor.SelectedRows[0].Cells[2].Value.ToString();
+            cpoCidade.Text = dgwFornecedor.SelectedRows[0].Cells[3].Value.ToString();
+            cpoUf.Text = dgwFornecedor.SelectedRows[0].Cells[4].Value.ToString();
+            cpoEndereco.Text = dgwFornecedor.SelectedRows[0].Cells[2].Value.ToString();
+            cpoTelefone.Text = dgwFornecedor.SelectedRows[0].Cells[5].Value.ToString();
+            cpoEmail.Text = dgwFornecedor.SelectedRows[0].Cells[6].Value.ToString();
+            cpoCnpj.Text = dgwFornecedor.SelectedRows[0].Cells[7].Value.ToString();
+            cpoCpf.Text = dgwFornecedor.SelectedRows[0].Cells[8].Value.ToString();
+        }
+    }
+
+
+}

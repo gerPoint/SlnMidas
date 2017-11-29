@@ -102,7 +102,7 @@ namespace Negocio
 
             catch (Exception ex)
             {
-                throw new Exception("Falha ao alterar Produto. Motivo: " + ex.Message);
+                throw new Exception("Falha ao alterar Fruta. Motivo: " + ex.Message);
 
              }
 

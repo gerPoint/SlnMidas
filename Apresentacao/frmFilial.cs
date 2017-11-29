@@ -257,6 +257,17 @@ namespace Apresentacao
 
 
 
+                    cpoFilial.Clear();
+                    cpoRazaoSocial.Clear();
+                    cpoCnpj.Clear();
+                    cpoCidade.Clear();
+                    cpoEmail.Clear();
+                    cpoTelefone.Clear();
+                    cpoEndereco.Clear();
+                    cpoUf.Clear();
+
+                    btnSalvar.Enabled = true;
+
 
                     // CaixaPesquisa.Text = "";
                     // AtualizarGrid();

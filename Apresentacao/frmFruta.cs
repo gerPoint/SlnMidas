@@ -176,7 +176,7 @@ namespace Apresentacao
 
             try
             {
-                //this.objCliente.IDCliente = lblIDCliente.();
+               
                 this.objFruta.IDFruta = Convert.ToInt32(cpoIDFruta.Text);
                 this.objFruta.Nome = cpoNome.Text.TrimStart();
                 this.objFruta.UnidMedida = cpoUnidMedida.Text.TrimStart();
@@ -212,6 +212,16 @@ namespace Apresentacao
                     dgwFruta.Refresh();
                     // CaixaPesquisa.Text = "%%";
                     // AtualizarGrid();
+                    cpoIDFruta.Clear();
+                    cpoNome.Clear();
+                    cpoUnidMedida.Clear();
+
+
+
+
+
+                    btnSalvar.Enabled = true;
+
                 }
 
             }

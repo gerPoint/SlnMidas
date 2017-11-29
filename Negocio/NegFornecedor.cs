@@ -100,6 +100,39 @@ namespace Negocio
         }
 
 
+        public string Alterar(Fornecedor fornecedor)
+
+        {
+            try
+            {
+                acessoDadosSqlServer.LimparParametros();
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFornecedor", fornecedor.IDFornecedor));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INNome", fornecedor.Nome));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTelefone", fornecedor.Telefone));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INStatus", fornecedor.Status));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INEmail", fornecedor.Email));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCidade", fornecedor.Cidade));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INUf", fornecedor.Uf));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INRazaoSocial", fornecedor.RazaoSocial));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INEndereco", fornecedor.Endereco));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCpf", fornecedor.Cpf));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCnpj", fornecedor.Cnpj));
+
+
+                string codProduto = acessoDadosSqlServer.ExecutarScalar("uspAlterarFornecedor", CommandType.StoredProcedure).ToString();
+
+                return codProduto;
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("Falha ao alterar Fornecedor. Motivo: " + ex.Message);
+
+            }
+
+
+        }
+
 
 
 

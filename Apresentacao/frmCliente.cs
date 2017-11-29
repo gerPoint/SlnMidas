@@ -95,6 +95,14 @@ namespace Apresentacao
                     // this.DialogResult = DialogResult.OK;
 
                     //limpa os campos depois de salvar 
+
+                   
+
+
+                    dgwCliente.DataSource = null;
+                    dgwCliente.Update();
+                    dgwCliente.Refresh();
+
                     cpoNome.Clear();
                     cpoRazaoSocial.Clear();
                     cpoEndereco.Clear();
@@ -105,13 +113,6 @@ namespace Apresentacao
                     cpoCaixaPesquisa.Clear();
                     cpoTelefone.Clear();
                     cpoUf.Clear();
-                   
-
-
-                    dgwCliente.DataSource = null;
-                    dgwCliente.Update();
-                    dgwCliente.Refresh();
-                    
 
 
                     //teste
@@ -272,9 +273,23 @@ namespace Apresentacao
                     dgwCliente.Update();
                     dgwCliente.Refresh();
 
-                   
-                   // CaixaPesquisa.Text = "";
-                   // AtualizarGrid();
+
+                    cpoNome.Clear();
+                    cpoRazaoSocial.Clear();
+                    cpoEndereco.Clear();
+                    cpoEmail.Clear();
+                    cpoCpf.Clear();
+                    cpoCnpj.Clear();
+                    cpoCidade.Clear();
+                    cpoCaixaPesquisa.Clear();
+                    cpoTelefone.Clear();
+                    cpoUf.Clear();
+
+
+                    btnSalvar.Enabled = true;
+
+                    // CaixaPesquisa.Text = "";
+                    // AtualizarGrid();
                 }
 
             }

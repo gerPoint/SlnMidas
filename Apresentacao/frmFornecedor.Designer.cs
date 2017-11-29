@@ -262,6 +262,7 @@
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // dgwFornecedor
             // 
@@ -286,6 +287,7 @@
             this.dgwFornecedor.Size = new System.Drawing.Size(782, 211);
             this.dgwFornecedor.TabIndex = 83;
             this.dgwFornecedor.DoubleClick += new System.EventHandler(this.dgwFornecedor_DoubleClick);
+            this.dgwFornecedor.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgwFornecedor_MouseDoubleClick);
             // 
             // iDFornecedorDataGridViewTextBoxColumn
             // 
