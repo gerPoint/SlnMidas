@@ -74,6 +74,7 @@ namespace Negocio
                         transportador.Placa = linha["Placa"].ToString();
                         transportador.Telefone = linha["Telefone"].ToString();
                         transportador.Status = Convert.ToChar(linha["Status"]);
+                        transportador.DataCadastro = Convert.ToDateTime(linha["DataCadastro"]);
 
 
 

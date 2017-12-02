@@ -77,8 +77,10 @@ namespace Negocio
                         funcionario.Cpf = Convert.ToString(linha["Cpf"]);
                         funcionario.Rg = Convert.ToString(linha["Rg"]);
                         funcionario.Uf = Convert.ToString(linha["Uf"]);
+                        funcionario.DataCadastro = Convert.ToDateTime(linha["DataCadastro"]);
 
-                    
+
+
 
 
 
@@ -96,6 +98,45 @@ namespace Negocio
 
 
         }
+
+
+             public string Alterar(Funcionario funcionario)
+        {
+            try
+            {
+                acessoDadosSqlServer.LimparParametros();
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFuncionario", funcionario.IDFuncionario));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INNome", funcionario.Nome));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INRg", funcionario.Rg));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTelefone", funcionario.Telefone));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INEmail", funcionario.Email));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCidade", funcionario.Cidade));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INStatus", funcionario.Status));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INEndereco", funcionario.Endereco));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCpf", funcionario.Cpf));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INUf", funcionario.Uf));
+
+                string codProduto = acessoDadosSqlServer.ExecutarScalar("uspAlterarFuncionario", CommandType.StoredProcedure).ToString();
+
+                return codProduto;
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("Falha ao alterar Funcionario. Motivo: " + ex.Message);
+            }
+
+
+
+
+
+
+        }
+
+
+
+
+
 
 
     }

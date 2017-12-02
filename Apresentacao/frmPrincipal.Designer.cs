@@ -37,7 +37,6 @@
             this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.romaneioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.transportadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.romaneioToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +45,7 @@
             this.usuarioToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,8 +74,7 @@
             this.frutaToolStripMenuItem,
             this.funcionarioToolStripMenuItem,
             this.romaneioToolStripMenuItem1,
-            this.transportadorToolStripMenuItem,
-            this.usuarioToolStripMenuItem1});
+            this.transportadorToolStripMenuItem});
             this.romaneioToolStripMenuItem.Name = "romaneioToolStripMenuItem";
             this.romaneioToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.romaneioToolStripMenuItem.Text = "Cadastro";
@@ -130,13 +129,6 @@
             this.transportadorToolStripMenuItem.Text = "Transportador";
             this.transportadorToolStripMenuItem.Click += new System.EventHandler(this.transportadorToolStripMenuItem_Click);
             // 
-            // usuarioToolStripMenuItem1
-            // 
-            this.usuarioToolStripMenuItem1.Name = "usuarioToolStripMenuItem1";
-            this.usuarioToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.usuarioToolStripMenuItem1.Text = "Usuario";
-            this.usuarioToolStripMenuItem1.Click += new System.EventHandler(this.usuarioToolStripMenuItem1_Click);
-            // 
             // usuarioToolStripMenuItem
             // 
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
@@ -172,9 +164,11 @@
             // 
             // usuarioToolStripMenuItem2
             // 
+            this.usuarioToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuárioToolStripMenuItem});
             this.usuarioToolStripMenuItem2.Name = "usuarioToolStripMenuItem2";
             this.usuarioToolStripMenuItem2.Size = new System.Drawing.Size(59, 20);
-            this.usuarioToolStripMenuItem2.Text = "Usuario";
+            this.usuarioToolStripMenuItem2.Text = "Usuário";
             // 
             // sairToolStripMenuItem
             // 
@@ -190,6 +184,13 @@
             this.sairToolStripMenuItem1.Size = new System.Drawing.Size(93, 22);
             this.sairToolStripMenuItem1.Text = "Sair";
             this.sairToolStripMenuItem1.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
+            // 
+            // usuárioToolStripMenuItem
+            // 
+            this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuárioToolStripMenuItem.Text = "Usuário";
+            this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -219,7 +220,6 @@
         private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem romaneioToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem transportadorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filialToolStripMenuItem;
@@ -228,6 +228,7 @@
         private System.Windows.Forms.ToolStripMenuItem carregamentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem;
     }
 }
 

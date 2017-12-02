@@ -35,19 +35,17 @@ namespace Apresentacao
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'midasDataSet.tblCliente' table. You can move, or remove it, as needed.
-           // this.tblClienteTableAdapter.Fill(this.midasDataSet.tblCliente);
-            // TODO: This line of code loads data into the 'midasDataSet.tblCliente' table. You can move, or remove it, as needed.
-            // this.tblClienteTableAdapter.Fill(this.midasDataSet.tblCliente);
-
+            // TODO: This line of code loads data into the 'midasDataSet9.tblCliente' table. You can move, or remove it, as needed.
+            //this.tblClienteTableAdapter1.Fill(this.midasDataSet9.tblCliente);
+ 
         }
 
 
 
 
-       
 
- private void btnSalvar_Click(object sender, EventArgs e)
+
+        private void btnSalvar_Click(object sender, EventArgs e)
 
         {
 
@@ -90,13 +88,14 @@ namespace Apresentacao
                 int idCliente = Convert.ToInt32(strRetorno);
                 //  if (int.TryParse(strRetorno, out intCodigo) == true)
                 {
-                    MessageBox.Show("Registro salvo com sucesso! Código: " + idCliente.ToString());
+                    //MessageBox.Show("Registro salvo com sucesso! Código: "  + idCliente.ToString() );
+                    MessageBox.Show("Registro salvo com sucesso!", "Código: " + idCliente.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // this.DialogResult = DialogResult.OK;
 
                     //limpa os campos depois de salvar 
 
-                   
+
 
 
                     dgwCliente.DataSource = null;

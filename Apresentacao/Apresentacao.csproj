@@ -100,10 +100,25 @@
     <Compile Include="frmUsuario.Designer.cs">
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="midasDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="midasDataSetCliente.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>midasDataSetCliente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="midasDatasetCliente1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDatasetCliente1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="midasDataSetcliente2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetcliente2.xsd</DependentUpon>
     </Compile>
     <Compile Include="midasDataSetFilial2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -179,6 +194,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="midasDataSet9.xsc">
+      <DependentUpon>midasDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSet9.xss">
+      <DependentUpon>midasDataSet9.xsd</DependentUpon>
+    </None>
     <None Include="midasDataSetCliente.xsc">
       <DependentUpon>midasDataSetCliente.xsd</DependentUpon>
     </None>
@@ -189,6 +215,28 @@
     </None>
     <None Include="midasDataSetCliente.xss">
       <DependentUpon>midasDataSetCliente.xsd</DependentUpon>
+    </None>
+    <None Include="midasDatasetCliente1.xsc">
+      <DependentUpon>midasDatasetCliente1.xsd</DependentUpon>
+    </None>
+    <None Include="midasDatasetCliente1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDatasetCliente1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDatasetCliente1.xss">
+      <DependentUpon>midasDatasetCliente1.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetcliente2.xsc">
+      <DependentUpon>midasDataSetcliente2.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetcliente2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSetcliente2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSetcliente2.xss">
+      <DependentUpon>midasDataSetcliente2.xsd</DependentUpon>
     </None>
     <None Include="midasDataSetFilial2.xsc">
       <DependentUpon>midasDataSetFilial2.xsd</DependentUpon>

@@ -80,5 +80,11 @@ namespace Apresentacao
             frmUsuario OutroFrm = new frmUsuario();
             OutroFrm.ShowDialog();
         }
+
+        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuario OutroForm = new frmUsuario();
+            OutroForm.ShowDialog();
+        }
     }
 }

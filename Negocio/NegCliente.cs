@@ -82,6 +82,7 @@ namespace Negocio
                         cliente.Cpf = Convert.ToString(linha["Cpf"]);
                         cliente.Cnpj = Convert.ToString(linha["Cnpj"]);
                         cliente.Uf = Convert.ToString(linha["Uf"]);
+                        cliente.DataCadastro = Convert.ToDateTime(linha["DataCadastro"]);
 
 
 

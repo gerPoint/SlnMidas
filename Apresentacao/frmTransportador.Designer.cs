@@ -42,7 +42,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cpoPlaca = new System.Windows.Forms.TextBox();
             this.dgwTransportador = new System.Windows.Forms.DataGridView();
             this.iDTransportadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +66,7 @@
             this.midasDataSet1 = new Apresentacao.midasDataSetFruta();
             this.midasDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblTransportadorTableAdapter = new Apresentacao.midasDataSet2TableAdapters.tblTransportadorTableAdapter();
+            this.cpoPlaca = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwTransportador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblTransportadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSet2)).BeginInit();
@@ -184,14 +184,6 @@
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 100;
             this.label2.Text = "Veículo";
-            // 
-            // cpoPlaca
-            // 
-            this.cpoPlaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoPlaca.Location = new System.Drawing.Point(458, 384);
-            this.cpoPlaca.Name = "cpoPlaca";
-            this.cpoPlaca.Size = new System.Drawing.Size(116, 20);
-            this.cpoPlaca.TabIndex = 10;
             // 
             // dgwTransportador
             // 
@@ -390,6 +382,7 @@
             this.btnPesquisar.TabIndex = 2;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // midasDataSet1
             // 
@@ -405,11 +398,20 @@
             // 
             this.tblTransportadorTableAdapter.ClearBeforeFill = true;
             // 
+            // cpoPlaca
+            // 
+            this.cpoPlaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoPlaca.Location = new System.Drawing.Point(458, 384);
+            this.cpoPlaca.Name = "cpoPlaca";
+            this.cpoPlaca.Size = new System.Drawing.Size(109, 20);
+            this.cpoPlaca.TabIndex = 109;
+            // 
             // frmTransportador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(863, 497);
+            this.Controls.Add(this.cpoPlaca);
             this.Controls.Add(this.cpoIDTransportador);
             this.Controls.Add(this.lblIDCliente);
             this.Controls.Add(this.btnSalvar);
@@ -424,7 +426,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cpoPlaca);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAlterar);
@@ -465,7 +466,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox cpoPlaca;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAlterar;
@@ -489,5 +489,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox cpoPlaca;
     }
 }

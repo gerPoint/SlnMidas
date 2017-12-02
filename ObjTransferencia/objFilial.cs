@@ -19,6 +19,8 @@ namespace ObjTransferencia
         public string ChaveSistema { get; set; }
         public char Status { get; set; }
         public DateTime DataCadastro { get; set; }
+
+        public string objFilial { get; set; }
     }
     public class FilialLista : List<Filial> { }
 }

@@ -64,7 +64,7 @@ namespace Negocio
                         fruta.Nome = linha["Nome"].ToString();
                         fruta.UnidMedida = linha["UnidMedida"].ToString();
                         fruta.Status = Convert.ToChar(linha["Status"]);
-
+                        fruta.DataCadastro = Convert.ToDateTime(linha["DataCadastro"]);
 
 
 

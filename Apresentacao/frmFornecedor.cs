@@ -76,7 +76,8 @@ namespace Apresentacao
                 int idFornecedor = Convert.ToInt32(strRetorno);
                 //  if (int.TryParse(strRetorno, out intCodigo) == true)
                 {
-                    MessageBox.Show("Registro salvo com sucesso! Código: " + idFornecedor.ToString());
+                    //MessageBox.Show("Registro salvo com sucesso! Código: " + idFornecedor.ToString()); - tambem funciona esse
+                    MessageBox.Show("Registro salvo com sucesso!", "Código: " + idFornecedor.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // this.DialogResult = DialogResult.OK;
 

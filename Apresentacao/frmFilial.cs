@@ -139,7 +139,8 @@ namespace Apresentacao
                 int idFilial = Convert.ToInt32(strRetorno);
                 //  if (int.TryParse(strRetorno, out intCodigo) == true)
                 {
-                    MessageBox.Show("Registro salvo com sucesso! Código: " + idFilial.ToString());
+                   // MessageBox.Show("Registro salvo com sucesso! Código: " + idFilial.ToString()); - tambem funciona esse
+                    MessageBox.Show("Registro salvo com sucesso!", "Código: " + idFilial.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // this.DialogResult = DialogResult.OK;
 

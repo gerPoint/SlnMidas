@@ -62,20 +62,30 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.lblIDCliente = new System.Windows.Forms.Label();
             this.cpoIDCliente = new System.Windows.Forms.TextBox();
+            this.tblClienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblClienteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSet9 = new Apresentacao.midasDataSet9();
+            this.tblClienteBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.tblClienteTableAdapter1 = new Apresentacao.midasDataSet9TableAdapters.tblClienteTableAdapter();
             this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razaoSocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataCadastroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSet9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_data_hora
@@ -150,12 +160,13 @@
             this.cnpjDataGridViewTextBoxColumn,
             this.cpfDataGridViewTextBoxColumn,
             this.telefoneDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
             this.enderecoDataGridViewTextBoxColumn,
             this.cidadeDataGridViewTextBoxColumn,
             this.ufDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.dataCadastroDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
-            this.dgwCliente.DataSource = this.tblClienteBindingSource;
+            this.dgwCliente.DataSource = this.tblClienteBindingSource3;
             this.dgwCliente.Location = new System.Drawing.Point(44, 73);
             this.dgwCliente.Name = "dgwCliente";
             this.dgwCliente.ReadOnly = true;
@@ -384,6 +395,30 @@
             this.cpoIDCliente.TabIndex = 80;
             this.cpoIDCliente.Visible = false;
             // 
+            // tblClienteBindingSource1
+            // 
+            this.tblClienteBindingSource1.DataMember = "tblCliente";
+            this.tblClienteBindingSource1.DataSource = this.midasDataSet;
+            // 
+            // tblClienteBindingSource2
+            // 
+            this.tblClienteBindingSource2.DataMember = "tblCliente";
+            this.tblClienteBindingSource2.DataSource = this.midasDataSet;
+            // 
+            // midasDataSet9
+            // 
+            this.midasDataSet9.DataSetName = "midasDataSet9";
+            this.midasDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblClienteBindingSource3
+            // 
+            this.tblClienteBindingSource3.DataMember = "tblCliente";
+            this.tblClienteBindingSource3.DataSource = this.midasDataSet9;
+            // 
+            // tblClienteTableAdapter1
+            // 
+            this.tblClienteTableAdapter1.ClearBeforeFill = true;
+            // 
             // iDClienteDataGridViewTextBoxColumn
             // 
             this.iDClienteDataGridViewTextBoxColumn.DataPropertyName = "IDCliente";
@@ -398,27 +433,27 @@
             this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
             this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeDataGridViewTextBoxColumn.Width = 250;
+            this.nomeDataGridViewTextBoxColumn.Width = 200;
             // 
             // razaoSocialDataGridViewTextBoxColumn
             // 
             this.razaoSocialDataGridViewTextBoxColumn.DataPropertyName = "RazaoSocial";
-            this.razaoSocialDataGridViewTextBoxColumn.HeaderText = "RazaoSocial";
+            this.razaoSocialDataGridViewTextBoxColumn.HeaderText = "Razao Social";
             this.razaoSocialDataGridViewTextBoxColumn.Name = "razaoSocialDataGridViewTextBoxColumn";
             this.razaoSocialDataGridViewTextBoxColumn.ReadOnly = true;
-            this.razaoSocialDataGridViewTextBoxColumn.Width = 250;
+            this.razaoSocialDataGridViewTextBoxColumn.Width = 200;
             // 
             // cnpjDataGridViewTextBoxColumn
             // 
             this.cnpjDataGridViewTextBoxColumn.DataPropertyName = "Cnpj";
-            this.cnpjDataGridViewTextBoxColumn.HeaderText = "Cnpj";
+            this.cnpjDataGridViewTextBoxColumn.HeaderText = "CNPJ";
             this.cnpjDataGridViewTextBoxColumn.Name = "cnpjDataGridViewTextBoxColumn";
             this.cnpjDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cpfDataGridViewTextBoxColumn
             // 
             this.cpfDataGridViewTextBoxColumn.DataPropertyName = "Cpf";
-            this.cpfDataGridViewTextBoxColumn.HeaderText = "Cpf";
+            this.cpfDataGridViewTextBoxColumn.HeaderText = "CPF";
             this.cpfDataGridViewTextBoxColumn.Name = "cpfDataGridViewTextBoxColumn";
             this.cpfDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -429,21 +464,13 @@
             this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
             this.telefoneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Width = 200;
-            // 
             // enderecoDataGridViewTextBoxColumn
             // 
             this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
             this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
             this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
             this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.enderecoDataGridViewTextBoxColumn.Width = 250;
+            this.enderecoDataGridViewTextBoxColumn.Width = 200;
             // 
             // cidadeDataGridViewTextBoxColumn
             // 
@@ -456,10 +483,25 @@
             // ufDataGridViewTextBoxColumn
             // 
             this.ufDataGridViewTextBoxColumn.DataPropertyName = "Uf";
-            this.ufDataGridViewTextBoxColumn.HeaderText = "Uf";
+            this.ufDataGridViewTextBoxColumn.HeaderText = "UF";
             this.ufDataGridViewTextBoxColumn.Name = "ufDataGridViewTextBoxColumn";
             this.ufDataGridViewTextBoxColumn.ReadOnly = true;
             this.ufDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // dataCadastroDataGridViewTextBoxColumn
+            // 
+            this.dataCadastroDataGridViewTextBoxColumn.DataPropertyName = "DataCadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.HeaderText = "Data Cadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.Name = "dataCadastroDataGridViewTextBoxColumn";
+            this.dataCadastroDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // statusDataGridViewTextBoxColumn
             // 
@@ -512,6 +554,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSet9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -551,16 +597,22 @@
         private midasDataSetTableAdapters.tblClienteTableAdapter tblClienteTableAdapter;
         private System.Windows.Forms.Label lblIDCliente;
         private System.Windows.Forms.TextBox cpoIDCliente;
+        private System.Windows.Forms.BindingSource tblClienteBindingSource2;
+        private System.Windows.Forms.BindingSource tblClienteBindingSource1;
+        private midasDataSet9 midasDataSet9;
+        private System.Windows.Forms.BindingSource tblClienteBindingSource3;
+        private midasDataSet9TableAdapters.tblClienteTableAdapter tblClienteTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn razaoSocialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cnpjDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpfDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ufDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
     }
 }

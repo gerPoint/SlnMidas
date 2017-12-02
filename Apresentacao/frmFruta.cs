@@ -65,11 +65,12 @@ namespace Apresentacao
 
 
                 int idFruta = Convert.ToInt32(strRetorno);
-                //  if (int.TryParse(strRetorno, out intCodigo) == true)
+               
                 {
-                    MessageBox.Show("Registro salvo com sucesso! Código: " + idFruta.ToString());
+                    //MessageBox.Show("Registro salvo com sucesso! Código: " + idFruta.ToString()); - tbm funciona esse 
+                    MessageBox.Show("Registro salvo com sucesso!", "Código: " + idFruta.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // this.DialogResult = DialogResult.OK;
+
 
                     //limpa os campos depois de salvar 
                     cpoNome.Clear();

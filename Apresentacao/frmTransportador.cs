@@ -72,11 +72,12 @@ namespace Apresentacao
 
 
                 int idTransportador = Convert.ToInt32(strRetorno);
-                //  if (int.TryParse(strRetorno, out intCodigo) == true)
+         
                 {
-                    MessageBox.Show("Registro salvo com sucesso! Código: " + idTransportador.ToString());
+                    //MessageBox.Show("Registro salvo com sucesso! Código: " + idTransportador.ToString()); esse tbm funciona
+                    MessageBox.Show("Registro salvo com sucesso!", "Código: " + idTransportador.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // this.DialogResult = DialogResult.OK;
+                   
 
                     //limpa os campos depois de salvar 
                     cpoNome.Clear();
@@ -108,5 +109,65 @@ namespace Apresentacao
                 this.DialogResult = DialogResult.No;
             }
         }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            AtualizarGrid();
+        }
+
+        private void AtualizarGrid()
+        {
+            try
+            {
+                if (cpoCaixaPesquisa.Text == string.Empty)
+                {
+                    MessageBox.Show("Por favor, informe o nome do Transportador para pesquisar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cpoCaixaPesquisa.Text = string.Empty;
+                    cpoCaixaPesquisa.Focus();
+                    //CaixaPesquisa.DataSource = "";
+                    return;
+                }
+
+                NegTransportador objNegTransportador = new NegTransportador();
+                TransportadorLista objLista;
+                try
+                {
+                    //int cod = int.Parse(CaixaPesquisa.Text);
+                    objLista = objNegTransportador.Consultar(cpoCaixaPesquisa.Text);
+                }
+                catch
+                {
+
+                    objLista = objNegTransportador.Consultar(cpoCaixaPesquisa.Text);
+                }
+
+
+                if (objLista.Count == 0)
+                {
+                    MessageBox.Show("Nenhum registro encontrado.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cpoCaixaPesquisa.Text = string.Empty;
+                    cpoCaixaPesquisa.Focus();
+                    return;
+                }
+
+                dgwTransportador.DataSource = null;
+                dgwTransportador.DataSource = objLista;
+                dgwTransportador.Update();
+                dgwTransportador.Refresh();
+                cpoCaixaPesquisa.Text = string.Empty;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao consultar Fruta. Falha: " +
+                    ex.Message, "Falha", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+
+
+        }
+
+
+
+
     }
 }

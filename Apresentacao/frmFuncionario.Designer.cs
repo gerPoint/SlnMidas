@@ -68,6 +68,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.cpoIDFuncionario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFuncionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetFuncionario)).BeginInit();
@@ -216,6 +217,7 @@
             this.dgwFuncionario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFuncionario.Size = new System.Drawing.Size(728, 211);
             this.dgwFuncionario.TabIndex = 96;
+            this.dgwFuncionario.DoubleClick += new System.EventHandler(this.dgwFuncionario_DoubleClick);
             // 
             // iDFuncionarioDataGridViewTextBoxColumn
             // 
@@ -407,6 +409,7 @@
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnPesquisar
             // 
@@ -420,11 +423,21 @@
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
+            // cpoIDFuncionario
+            // 
+            this.cpoIDFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoIDFuncionario.Location = new System.Drawing.Point(179, 0);
+            this.cpoIDFuncionario.Name = "cpoIDFuncionario";
+            this.cpoIDFuncionario.Size = new System.Drawing.Size(42, 20);
+            this.cpoIDFuncionario.TabIndex = 109;
+            this.cpoIDFuncionario.Visible = false;
+            // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 504);
+            this.Controls.Add(this.cpoIDFuncionario);
             this.Controls.Add(this.cpoIDCliente);
             this.Controls.Add(this.lblIDCliente);
             this.Controls.Add(this.btnSalvar);
@@ -505,5 +518,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn rgDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox cpoIDFuncionario;
     }
 }
