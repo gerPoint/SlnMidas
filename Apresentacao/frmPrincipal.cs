@@ -75,11 +75,11 @@ namespace Apresentacao
             frmTransportador OutroFrm = new frmTransportador();
             OutroFrm.ShowDialog();        }
 
-        private void usuarioToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            frmUsuario OutroFrm = new frmUsuario();
-            OutroFrm.ShowDialog();
-        }
+      //  private void usuarioToolStripMenuItem1_Click(object sender, EventArgs e)
+       // {
+       //    frmUsuario OutroFrm = new frmUsuario();
+        //   OutroFrm.ShowDialog();
+       // }
 
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {

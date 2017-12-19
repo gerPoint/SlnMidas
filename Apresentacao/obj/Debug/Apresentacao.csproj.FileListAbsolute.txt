@@ -60,3 +60,26 @@ C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFili
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFuncionario.resources
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmTransportador.resources
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmUsuario.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Apresentacao.exe.config
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Apresentacao.exe
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Apresentacao.pdb
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\AcessoDados.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Negocio.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\ObjTransferencia.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\AcessoDados.pdb
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Negocio.pdb
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\ObjTransferencia.pdb
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.csprojResolveAssemblyReference.cache
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmCliente.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFilial.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFornecedor.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFruta.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFuncionario.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmPrincipal.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmRomaneio.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmTransportador.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmUsuario.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.Properties.Resources.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.Cache
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.exe
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.pdb
