@@ -48,14 +48,6 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.dgwUsuario = new System.Windows.Forms.DataGridView();
-            this.cpoNome = new System.Windows.Forms.TextBox();
-            this.cpoCaixaPesquisa = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.midasDataSetUsuario = new Apresentacao.midasDataSetUsuario();
-            this.tblUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblUsuarioTableAdapter = new Apresentacao.midasDataSetUsuarioTableAdapters.tblUsuarioTableAdapter();
             this.iDUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,9 +58,17 @@
             this.senhaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataCadastroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetUsuario = new Apresentacao.midasDataSetUsuario();
+            this.cpoNome = new System.Windows.Forms.TextBox();
+            this.cpoCaixaPesquisa = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.tblUsuarioTableAdapter = new Apresentacao.midasDataSetUsuarioTableAdapters.tblUsuarioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // cpoIDCliente
@@ -226,6 +226,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAlterar
             // 
@@ -238,6 +239,7 @@
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // dgwUsuario
             // 
@@ -262,66 +264,6 @@
             this.dgwUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwUsuario.Size = new System.Drawing.Size(728, 211);
             this.dgwUsuario.TabIndex = 122;
-            // 
-            // cpoNome
-            // 
-            this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoNome.Location = new System.Drawing.Point(88, 311);
-            this.cpoNome.Name = "cpoNome";
-            this.cpoNome.Size = new System.Drawing.Size(269, 20);
-            this.cpoNome.TabIndex = 111;
-            // 
-            // cpoCaixaPesquisa
-            // 
-            this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCaixaPesquisa.Location = new System.Drawing.Point(171, 26);
-            this.cpoCaixaPesquisa.Multiline = true;
-            this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
-            this.cpoCaixaPesquisa.Size = new System.Drawing.Size(589, 23);
-            this.cpoCaixaPesquisa.TabIndex = 110;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(408, 351);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 125;
-            this.label3.Text = "Email";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 313);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 124;
-            this.label1.Text = "Nome";
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Image = global::Apresentacao.Properties.Resources.pesquisar1;
-            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(32, 12);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(124, 45);
-            this.btnPesquisar.TabIndex = 109;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            // 
-            // midasDataSetUsuario
-            // 
-            this.midasDataSetUsuario.DataSetName = "midasDataSetUsuario";
-            this.midasDataSetUsuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblUsuarioBindingSource
-            // 
-            this.tblUsuarioBindingSource.DataMember = "tblUsuario";
-            this.tblUsuarioBindingSource.DataSource = this.midasDataSetUsuario;
-            // 
-            // tblUsuarioTableAdapter
-            // 
-            this.tblUsuarioTableAdapter.ClearBeforeFill = true;
             // 
             // iDUsuarioDataGridViewTextBoxColumn
             // 
@@ -398,6 +340,66 @@
             this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             this.statusDataGridViewTextBoxColumn.Width = 50;
             // 
+            // tblUsuarioBindingSource
+            // 
+            this.tblUsuarioBindingSource.DataMember = "tblUsuario";
+            this.tblUsuarioBindingSource.DataSource = this.midasDataSetUsuario;
+            // 
+            // midasDataSetUsuario
+            // 
+            this.midasDataSetUsuario.DataSetName = "midasDataSetUsuario";
+            this.midasDataSetUsuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cpoNome
+            // 
+            this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoNome.Location = new System.Drawing.Point(88, 311);
+            this.cpoNome.Name = "cpoNome";
+            this.cpoNome.Size = new System.Drawing.Size(269, 20);
+            this.cpoNome.TabIndex = 111;
+            // 
+            // cpoCaixaPesquisa
+            // 
+            this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCaixaPesquisa.Location = new System.Drawing.Point(171, 26);
+            this.cpoCaixaPesquisa.Multiline = true;
+            this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
+            this.cpoCaixaPesquisa.Size = new System.Drawing.Size(589, 23);
+            this.cpoCaixaPesquisa.TabIndex = 110;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(408, 351);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 125;
+            this.label3.Text = "Email";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 313);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 124;
+            this.label1.Text = "Nome";
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Image = global::Apresentacao.Properties.Resources.pesquisar1;
+            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisar.Location = new System.Drawing.Point(32, 12);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(124, 45);
+            this.btnPesquisar.TabIndex = 109;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            // 
+            // tblUsuarioTableAdapter
+            // 
+            this.tblUsuarioTableAdapter.ClearBeforeFill = true;
+            // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,8 +436,8 @@
             this.Text = "USUÁRIO";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

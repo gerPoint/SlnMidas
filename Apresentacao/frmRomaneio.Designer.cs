@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRomaneio));
             this.tabPage = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cpoIDRomaneio = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -77,11 +79,22 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.cpoIDRomaneio = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.cpoEndereco = new System.Windows.Forms.TextBox();
+            this.cpoEmail = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cpoBloco = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.btnInserir = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.dgwCarregamento = new System.Windows.Forms.DataGridView();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCarregamento)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage
@@ -144,10 +157,31 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Romaneio";
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(133, 200);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(162, 16);
+            this.label18.TabIndex = 95;
+            this.label18.Text = "ROMANEIO NÚMERO:";
+            // 
+            // cpoIDRomaneio
+            // 
+            this.cpoIDRomaneio.Enabled = false;
+            this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoIDRomaneio.Location = new System.Drawing.Point(302, 191);
+            this.cpoIDRomaneio.Multiline = true;
+            this.cpoIDRomaneio.Name = "cpoIDRomaneio";
+            this.cpoIDRomaneio.Size = new System.Drawing.Size(166, 39);
+            this.cpoIDRomaneio.TabIndex = 94;
+            this.cpoIDRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(494, 368);
+            this.label17.Location = new System.Drawing.Point(493, 362);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(103, 13);
             this.label17.TabIndex = 93;
@@ -156,15 +190,15 @@
             // textBox12
             // 
             this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox12.Location = new System.Drawing.Point(612, 365);
+            this.textBox12.Location = new System.Drawing.Point(612, 360);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(106, 20);
+            this.textBox12.Size = new System.Drawing.Size(105, 20);
             this.textBox12.TabIndex = 92;
             // 
             // textBox11
             // 
             this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Location = new System.Drawing.Point(840, 281);
+            this.textBox11.Location = new System.Drawing.Point(840, 320);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(104, 20);
             this.textBox11.TabIndex = 91;
@@ -172,7 +206,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(786, 284);
+            this.label16.Location = new System.Drawing.Point(775, 325);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(48, 13);
             this.label16.TabIndex = 90;
@@ -181,15 +215,15 @@
             // textBox10
             // 
             this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Location = new System.Drawing.Point(612, 320);
+            this.textBox10.Location = new System.Drawing.Point(840, 360);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(106, 20);
+            this.textBox10.Size = new System.Drawing.Size(105, 20);
             this.textBox10.TabIndex = 89;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(545, 323);
+            this.label15.Location = new System.Drawing.Point(777, 362);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(52, 13);
             this.label15.TabIndex = 88;
@@ -215,7 +249,7 @@
             // textBox9
             // 
             this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Location = new System.Drawing.Point(612, 281);
+            this.textBox9.Location = new System.Drawing.Point(612, 322);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(106, 20);
             this.textBox9.TabIndex = 85;
@@ -223,7 +257,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(556, 284);
+            this.label13.Location = new System.Drawing.Point(556, 325);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(41, 13);
             this.label13.TabIndex = 84;
@@ -232,7 +266,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(734, 242);
+            this.radioButton1.Location = new System.Drawing.Point(734, 282);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(100, 17);
             this.radioButton1.TabIndex = 83;
@@ -243,15 +277,15 @@
             // textBox8
             // 
             this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Location = new System.Drawing.Point(840, 241);
+            this.textBox8.Location = new System.Drawing.Point(840, 281);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(104, 20);
+            this.textBox8.Size = new System.Drawing.Size(105, 20);
             this.textBox8.TabIndex = 82;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(566, 244);
+            this.label12.Location = new System.Drawing.Point(566, 284);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(31, 13);
             this.label12.TabIndex = 81;
@@ -277,7 +311,7 @@
             // textBox6
             // 
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(612, 240);
+            this.textBox6.Location = new System.Drawing.Point(612, 280);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(106, 20);
             this.textBox6.TabIndex = 78;
@@ -327,7 +361,7 @@
             // button10
             // 
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.Location = new System.Drawing.Point(100, 365);
+            this.button10.Location = new System.Drawing.Point(100, 360);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(25, 20);
             this.button10.TabIndex = 72;
@@ -346,7 +380,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 369);
+            this.label7.Location = new System.Drawing.Point(22, 364);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 13);
             this.label7.TabIndex = 70;
@@ -374,7 +408,7 @@
             // button8
             // 
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.Location = new System.Drawing.Point(100, 319);
+            this.button8.Location = new System.Drawing.Point(100, 320);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(25, 20);
             this.button8.TabIndex = 67;
@@ -384,7 +418,7 @@
             // textBox3
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(136, 365);
+            this.textBox3.Location = new System.Drawing.Point(136, 360);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(332, 20);
             this.textBox3.TabIndex = 66;
@@ -392,7 +426,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 323);
+            this.label5.Location = new System.Drawing.Point(32, 324);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 57;
@@ -410,7 +444,7 @@
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(136, 320);
+            this.textBox2.Location = new System.Drawing.Point(136, 321);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(332, 20);
             this.textBox2.TabIndex = 58;
@@ -551,7 +585,6 @@
             this.button3.Text = "Cancelar";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -568,6 +601,17 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.btnCancelar);
+            this.tabPage2.Controls.Add(this.cpoEndereco);
+            this.tabPage2.Controls.Add(this.cpoEmail);
+            this.tabPage2.Controls.Add(this.label21);
+            this.tabPage2.Controls.Add(this.cpoBloco);
+            this.tabPage2.Controls.Add(this.label25);
+            this.tabPage2.Controls.Add(this.label26);
+            this.tabPage2.Controls.Add(this.btnRemover);
+            this.tabPage2.Controls.Add(this.btnInserir);
+            this.tabPage2.Controls.Add(this.btnSalvar);
+            this.tabPage2.Controls.Add(this.dgwCarregamento);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -575,34 +619,124 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Carregamento";
             // 
-            // cpoIDRomaneio
+            // btnCancelar
             // 
-            this.cpoIDRomaneio.Enabled = false;
-            this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoIDRomaneio.Location = new System.Drawing.Point(302, 191);
-            this.cpoIDRomaneio.Multiline = true;
-            this.cpoIDRomaneio.Name = "cpoIDRomaneio";
-            this.cpoIDRomaneio.Size = new System.Drawing.Size(166, 39);
-            this.cpoIDRomaneio.TabIndex = 94;
-            this.cpoIDRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(501, 455);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(89, 44);
+            this.btnCancelar.TabIndex = 173;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label18
+            // cpoEndereco
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(133, 200);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(162, 16);
-            this.label18.TabIndex = 95;
-            this.label18.Text = "ROMANEIO NÚMERO:";
+            this.cpoEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoEndereco.Location = new System.Drawing.Point(605, 69);
+            this.cpoEndereco.Name = "cpoEndereco";
+            this.cpoEndereco.Size = new System.Drawing.Size(114, 20);
+            this.cpoEndereco.TabIndex = 161;
+            // 
+            // cpoEmail
+            // 
+            this.cpoEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoEmail.Location = new System.Drawing.Point(166, 69);
+            this.cpoEmail.Name = "cpoEmail";
+            this.cpoEmail.Size = new System.Drawing.Size(314, 20);
+            this.cpoEmail.TabIndex = 165;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(528, 71);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(62, 13);
+            this.label21.TabIndex = 172;
+            this.label21.Text = "Quantidade";
+            // 
+            // cpoBloco
+            // 
+            this.cpoBloco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoBloco.Location = new System.Drawing.Point(166, 20);
+            this.cpoBloco.Name = "cpoBloco";
+            this.cpoBloco.Size = new System.Drawing.Size(314, 20);
+            this.cpoBloco.TabIndex = 159;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(93, 71);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(55, 13);
+            this.label25.TabIndex = 168;
+            this.label25.Text = "Descrição";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(93, 22);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(34, 13);
+            this.label26.TabIndex = 167;
+            this.label26.Text = "Bloco";
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemover.Location = new System.Drawing.Point(166, 108);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(42, 44);
+            this.btnRemover.TabIndex = 158;
+            this.btnRemover.Text = "-";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            // 
+            // btnInserir
+            // 
+            this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInserir.Location = new System.Drawing.Point(89, 109);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(42, 44);
+            this.btnInserir.TabIndex = 157;
+            this.btnInserir.Text = "+";
+            this.btnInserir.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Image = global::Apresentacao.Properties.Resources.saveall_1204;
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvar.Location = new System.Drawing.Point(628, 455);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(91, 44);
+            this.btnSalvar.TabIndex = 147;
+            this.btnSalvar.Text = "   Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            // 
+            // dgwCarregamento
+            // 
+            this.dgwCarregamento.AllowUserToDeleteRows = false;
+            this.dgwCarregamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwCarregamento.Location = new System.Drawing.Point(89, 171);
+            this.dgwCarregamento.Name = "dgwCarregamento";
+            this.dgwCarregamento.ReadOnly = true;
+            this.dgwCarregamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgwCarregamento.Size = new System.Drawing.Size(630, 259);
+            this.dgwCarregamento.TabIndex = 146;
             // 
             // frmRomaneio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 563);
+            this.ClientSize = new System.Drawing.Size(976, 563);
             this.Controls.Add(this.tabPage);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmRomaneio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Romaneio";
@@ -612,6 +746,9 @@
             this.tabPage1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCarregamento)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -668,5 +805,16 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox cpoIDRomaneio;
+        private System.Windows.Forms.TextBox cpoEndereco;
+        private System.Windows.Forms.TextBox cpoEmail;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox cpoBloco;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Button btnRemover;
+        private System.Windows.Forms.Button btnInserir;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.DataGridView dgwCarregamento;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

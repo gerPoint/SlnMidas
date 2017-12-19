@@ -19,12 +19,21 @@ namespace Apresentacao
 
         private void frmUsuario_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'midasDataSetUsuario.tblUsuario' table. You can move, or remove it, as needed.
-            this.tblUsuarioTableAdapter.Fill(this.midasDataSetUsuario.tblUsuario);
+
 
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
         {
 
         }
