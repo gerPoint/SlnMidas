@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRomaneio));
             this.tabPage = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -90,11 +91,22 @@
             this.btnInserir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.dgwCarregamento = new System.Windows.Forms.DataGridView();
+            this.midasDataSetCarregbloco = new Apresentacao.midasDataSetCarregbloco();
+            this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblCarregamentoBlocoTableAdapter = new Apresentacao.midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter();
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDCarregamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnFinalizar = new System.Windows.Forms.Button();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCarregamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregbloco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage
@@ -169,6 +181,7 @@
             // 
             // cpoIDRomaneio
             // 
+            this.cpoIDRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoIDRomaneio.Enabled = false;
             this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoIDRomaneio.Location = new System.Drawing.Point(302, 191);
@@ -601,6 +614,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.btnFinalizar);
             this.tabPage2.Controls.Add(this.btnCancelar);
             this.tabPage2.Controls.Add(this.cpoEndereco);
             this.tabPage2.Controls.Add(this.cpoEmail);
@@ -623,7 +637,7 @@
             // 
             this.btnCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(501, 455);
+            this.btnCancelar.Location = new System.Drawing.Point(781, 267);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 44);
             this.btnCancelar.TabIndex = 173;
@@ -635,7 +649,7 @@
             // cpoEndereco
             // 
             this.cpoEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoEndereco.Location = new System.Drawing.Point(605, 69);
+            this.cpoEndereco.Location = new System.Drawing.Point(170, 114);
             this.cpoEndereco.Name = "cpoEndereco";
             this.cpoEndereco.Size = new System.Drawing.Size(114, 20);
             this.cpoEndereco.TabIndex = 161;
@@ -643,7 +657,7 @@
             // cpoEmail
             // 
             this.cpoEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoEmail.Location = new System.Drawing.Point(166, 69);
+            this.cpoEmail.Location = new System.Drawing.Point(170, 69);
             this.cpoEmail.Name = "cpoEmail";
             this.cpoEmail.Size = new System.Drawing.Size(314, 20);
             this.cpoEmail.TabIndex = 165;
@@ -651,7 +665,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(528, 71);
+            this.label21.Location = new System.Drawing.Point(93, 116);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(62, 13);
             this.label21.TabIndex = 172;
@@ -660,7 +674,7 @@
             // cpoBloco
             // 
             this.cpoBloco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoBloco.Location = new System.Drawing.Point(166, 20);
+            this.cpoBloco.Location = new System.Drawing.Point(170, 20);
             this.cpoBloco.Name = "cpoBloco";
             this.cpoBloco.Size = new System.Drawing.Size(314, 20);
             this.cpoBloco.TabIndex = 159;
@@ -687,7 +701,7 @@
             // 
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRemover.Location = new System.Drawing.Point(166, 108);
+            this.btnRemover.Location = new System.Drawing.Point(682, 116);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(42, 44);
             this.btnRemover.TabIndex = 158;
@@ -698,7 +712,7 @@
             // 
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInserir.Location = new System.Drawing.Point(89, 109);
+            this.btnInserir.Location = new System.Drawing.Point(597, 116);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(42, 44);
             this.btnInserir.TabIndex = 157;
@@ -709,7 +723,7 @@
             // 
             this.btnSalvar.Image = global::Apresentacao.Properties.Resources.saveall_1204;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvar.Location = new System.Drawing.Point(628, 455);
+            this.btnSalvar.Location = new System.Drawing.Point(779, 193);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(91, 44);
             this.btnSalvar.TabIndex = 147;
@@ -720,13 +734,83 @@
             // dgwCarregamento
             // 
             this.dgwCarregamento.AllowUserToDeleteRows = false;
+            this.dgwCarregamento.AutoGenerateColumns = false;
             this.dgwCarregamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwCarregamento.Location = new System.Drawing.Point(89, 171);
+            this.dgwCarregamento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn,
+            this.iDCarregamentoDataGridViewTextBoxColumn,
+            this.blocoDataGridViewTextBoxColumn,
+            this.descricaoDataGridViewTextBoxColumn,
+            this.quantidadeDataGridViewTextBoxColumn});
+            this.dgwCarregamento.DataSource = this.tblCarregamentoBlocoBindingSource;
+            this.dgwCarregamento.Location = new System.Drawing.Point(91, 166);
             this.dgwCarregamento.Name = "dgwCarregamento";
             this.dgwCarregamento.ReadOnly = true;
             this.dgwCarregamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwCarregamento.Size = new System.Drawing.Size(630, 259);
+            this.dgwCarregamento.Size = new System.Drawing.Size(633, 336);
             this.dgwCarregamento.TabIndex = 146;
+            // 
+            // midasDataSetCarregbloco
+            // 
+            this.midasDataSetCarregbloco.DataSetName = "midasDataSetCarregbloco";
+            this.midasDataSetCarregbloco.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblCarregamentoBlocoBindingSource
+            // 
+            this.tblCarregamentoBlocoBindingSource.DataMember = "tblCarregamentoBloco";
+            this.tblCarregamentoBlocoBindingSource.DataSource = this.midasDataSetCarregbloco;
+            // 
+            // tblCarregamentoBlocoTableAdapter
+            // 
+            this.tblCarregamentoBlocoTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDCarregamentoBlocoDataGridViewTextBoxColumn
+            // 
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.DataPropertyName = "IDCarregamentoBloco";
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.HeaderText = "ID Carreg. Bloco";
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Name = "iDCarregamentoBlocoDataGridViewTextBoxColumn";
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iDCarregamentoDataGridViewTextBoxColumn
+            // 
+            this.iDCarregamentoDataGridViewTextBoxColumn.DataPropertyName = "IDCarregamento";
+            this.iDCarregamentoDataGridViewTextBoxColumn.HeaderText = "ID Carreg.";
+            this.iDCarregamentoDataGridViewTextBoxColumn.Name = "iDCarregamentoDataGridViewTextBoxColumn";
+            this.iDCarregamentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // blocoDataGridViewTextBoxColumn
+            // 
+            this.blocoDataGridViewTextBoxColumn.DataPropertyName = "Bloco";
+            this.blocoDataGridViewTextBoxColumn.HeaderText = "Bloco";
+            this.blocoDataGridViewTextBoxColumn.Name = "blocoDataGridViewTextBoxColumn";
+            this.blocoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.blocoDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descricaoDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // quantidadeDataGridViewTextBoxColumn
+            // 
+            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
+            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantidadeDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFinalizar.Location = new System.Drawing.Point(781, 458);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(91, 44);
+            this.btnFinalizar.TabIndex = 174;
+            this.btnFinalizar.Text = "Concluir";
+            this.btnFinalizar.UseVisualStyleBackColor = true;
             // 
             // frmRomaneio
             // 
@@ -749,6 +833,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCarregamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregbloco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -816,5 +902,14 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.DataGridView dgwCarregamento;
         private System.Windows.Forms.Button btnCancelar;
+        private midasDataSetCarregbloco midasDataSetCarregbloco;
+        private System.Windows.Forms.BindingSource tblCarregamentoBlocoBindingSource;
+        private midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter tblCarregamentoBlocoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCarregamentoBlocoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCarregamentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn blocoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnFinalizar;
     }
 }

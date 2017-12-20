@@ -105,6 +105,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>midasDataSet9.xsd</DependentUpon>
     </Compile>
+    <Compile Include="midasDataSetCarregbloco.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetCarregbloco.xsd</DependentUpon>
+    </Compile>
     <Compile Include="midasDataSetCliente.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -204,6 +209,17 @@
     </None>
     <None Include="midasDataSet9.xss">
       <DependentUpon>midasDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetCarregbloco.xsc">
+      <DependentUpon>midasDataSetCarregbloco.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetCarregbloco.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSetCarregbloco.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSetCarregbloco.xss">
+      <DependentUpon>midasDataSetCarregbloco.xsd</DependentUpon>
     </None>
     <None Include="midasDataSetCliente.xsc">
       <DependentUpon>midasDataSetCliente.xsd</DependentUpon>

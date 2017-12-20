@@ -24,10 +24,12 @@ namespace Apresentacao
 
         private void frmRomaneio_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'midasDataSetCarregbloco.tblCarregamentoBloco' table. You can move, or remove it, as needed.
+            this.tblCarregamentoBlocoTableAdapter.Fill(this.midasDataSetCarregbloco.tblCarregamentoBloco);
 
         }
 
-     
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
