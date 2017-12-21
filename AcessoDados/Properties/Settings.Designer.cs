@@ -26,8 +26,8 @@ namespace AcessoDados.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-3O5EHK7\\SQLEXPRESS;Initial Catalog=midas;Integrated Security=" +
-            "True;User Instance=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LUCAS-PC\\SQLEXPRESS;Initial Catalog=midas;Integrated Security=True;Us" +
+            "er Instance=False")]
         public string strConexao {
             get {
                 return ((string)(this["strConexao"]));

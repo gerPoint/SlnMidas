@@ -63,6 +63,36 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap belas_paisagens_no_campo {
+            get {
+                object obj = ResourceManager.GetObject("belas-paisagens-no-campo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bigstock_closeup_of_a_young_farmer_obse_121893422 {
+            get {
+                object obj = ResourceManager.GetObject("bigstock-closeup-of-a-young-farmer-obse-121893422", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Caipira_400x400_e1476553294916 {
+            get {
+                object obj = ResourceManager.GetObject("Caipira_400x400-e1476553294916", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel_stop_exit_1583 {
             get {
                 object obj = ResourceManager.GetObject("cancel_stop_exit_1583", resourceCulture);
@@ -96,6 +126,16 @@ namespace Apresentacao.Properties {
         internal static System.Drawing.Bitmap favicon__1_ {
             get {
                 object obj = ResourceManager.GetObject("favicon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap midasCarregamento {
+            get {
+                object obj = ResourceManager.GetObject("midasCarregamento", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +186,16 @@ namespace Apresentacao.Properties {
         internal static System.Drawing.Bitmap saveall_1204 {
             get {
                 object obj = ResourceManager.GetObject("saveall_1204", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stake_truck_18543 {
+            get {
+                object obj = ResourceManager.GetObject("stake_truck_18543", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

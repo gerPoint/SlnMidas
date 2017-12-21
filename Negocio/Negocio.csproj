@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NegBlocos.cs" />
     <Compile Include="NegCliente.cs" />
     <Compile Include="NegFilial.cs" />
     <Compile Include="NegFornecedor.cs" />

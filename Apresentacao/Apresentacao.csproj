@@ -385,6 +385,21 @@
       <Name>ObjTransferencia</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bigstock-closeup-of-a-young-farmer-obse-121893422.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\midasCarregamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Caipira_400x400-e1476553294916.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stake_truck_18543.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\belas-paisagens-no-campo.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
