@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ObjTransferencia
 {
-    class objCarregamentoBloco
+    public class objCarregamentoBloco
     {
         public int IDCarregamentoBloco { get; set; }
         public int IDCarregamento { get; set; }
@@ -14,4 +14,6 @@ namespace ObjTransferencia
         public string Descricao { get; set; }
         public int Quantidade { get; set; }
     }
+    public class ListaCarregamentoBloco: List<objCarregamentoBloco> { }
 }
+

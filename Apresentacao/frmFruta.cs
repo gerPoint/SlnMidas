@@ -159,6 +159,7 @@ namespace Apresentacao
 
         public void dgwFruta_DoubleClick(object sender, EventArgs e)
         {
+            Fruta fruta  = (dgwFruta.SelectedRows[0].DataBoundItem as Fruta);
             cpoIDFruta.Text = dgwFruta.SelectedRows[0].Cells[0].Value.ToString();
             cpoNome.Text = dgwFruta.SelectedRows[0].Cells[1].Value.ToString();
             cpoUnidMedida.Text = dgwFruta.SelectedRows[0].Cells[2].Value.ToString();

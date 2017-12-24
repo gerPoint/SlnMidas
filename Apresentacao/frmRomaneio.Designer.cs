@@ -91,14 +91,14 @@
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
             this.dgwCarregamento = new System.Windows.Forms.DataGridView();
+            this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetCarregbloco = new Apresentacao.midasDataSetCarregbloco();
+            this.tblCarregamentoBlocoTableAdapter = new Apresentacao.midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter();
             this.iDCarregamentoBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDCarregamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.midasDataSetCarregbloco = new Apresentacao.midasDataSetCarregbloco();
-            this.tblCarregamentoBlocoTableAdapter = new Apresentacao.midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -480,7 +480,6 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(363, 21);
             this.comboBox2.TabIndex = 59;
-          
             // 
             // groupBox1
             // 
@@ -723,6 +722,7 @@
             this.btnRemover.TabIndex = 158;
             this.btnRemover.Text = "-";
             this.btnRemover.UseVisualStyleBackColor = false;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // btnInserir
             // 
@@ -739,7 +739,11 @@
             // 
             // dgwCarregamento
             // 
+            this.dgwCarregamento.AllowUserToAddRows = false;
             this.dgwCarregamento.AllowUserToDeleteRows = false;
+            this.dgwCarregamento.AllowUserToOrderColumns = true;
+            this.dgwCarregamento.AllowUserToResizeColumns = false;
+            this.dgwCarregamento.AllowUserToResizeRows = false;
             this.dgwCarregamento.AutoGenerateColumns = false;
             this.dgwCarregamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwCarregamento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -755,6 +759,21 @@
             this.dgwCarregamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwCarregamento.Size = new System.Drawing.Size(747, 336);
             this.dgwCarregamento.TabIndex = 146;
+            this.dgwCarregamento.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCarregamento_CellMouseDoubleClick);
+            // 
+            // tblCarregamentoBlocoBindingSource
+            // 
+            this.tblCarregamentoBlocoBindingSource.DataMember = "tblCarregamentoBloco";
+            this.tblCarregamentoBlocoBindingSource.DataSource = this.midasDataSetCarregbloco;
+            // 
+            // midasDataSetCarregbloco
+            // 
+            this.midasDataSetCarregbloco.DataSetName = "midasDataSetCarregbloco";
+            this.midasDataSetCarregbloco.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblCarregamentoBlocoTableAdapter
+            // 
+            this.tblCarregamentoBlocoTableAdapter.ClearBeforeFill = true;
             // 
             // iDCarregamentoBlocoDataGridViewTextBoxColumn
             // 
@@ -762,6 +781,7 @@
             this.iDCarregamentoBlocoDataGridViewTextBoxColumn.HeaderText = "ID Carreg. Bloco";
             this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Name = "iDCarregamentoBlocoDataGridViewTextBoxColumn";
             this.iDCarregamentoBlocoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Visible = false;
             // 
             // iDCarregamentoDataGridViewTextBoxColumn
             // 
@@ -769,6 +789,7 @@
             this.iDCarregamentoDataGridViewTextBoxColumn.HeaderText = "ID Carreg.";
             this.iDCarregamentoDataGridViewTextBoxColumn.Name = "iDCarregamentoDataGridViewTextBoxColumn";
             this.iDCarregamentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDCarregamentoDataGridViewTextBoxColumn.Visible = false;
             // 
             // blocoDataGridViewTextBoxColumn
             // 
@@ -793,20 +814,6 @@
             this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
             this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
             this.quantidadeDataGridViewTextBoxColumn.Width = 90;
-            // 
-            // tblCarregamentoBlocoBindingSource
-            // 
-            this.tblCarregamentoBlocoBindingSource.DataMember = "tblCarregamentoBloco";
-            this.tblCarregamentoBlocoBindingSource.DataSource = this.midasDataSetCarregbloco;
-            // 
-            // midasDataSetCarregbloco
-            // 
-            this.midasDataSetCarregbloco.DataSetName = "midasDataSetCarregbloco";
-            this.midasDataSetCarregbloco.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblCarregamentoBlocoTableAdapter
-            // 
-            this.tblCarregamentoBlocoTableAdapter.ClearBeforeFill = true;
             // 
             // frmRomaneio
             // 

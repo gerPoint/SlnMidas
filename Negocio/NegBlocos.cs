@@ -60,24 +60,8 @@ namespace Negocio
             {
                 throw new Exception("Falha ao alterar Bloco. Motivo: " + ex.Message);
             }
-        }
-
-        [DataObjectMethodAttribute(DataObjectMethodType.Delete)]
-        public string Excluir(Blocos blocos)
-        {
-            try
-            {
-                acessoDados.LimparParametros();
-                acessoDados.AdicionarParametro(new SqlParameter("@INIDCarregamentoBloco", blocos.IDCarregamentoBloco));
-
-                string IDVenda = acessoDados.ExecutarScalar("uspExcluirVendaItem", CommandType.StoredProcedure).ToString();
-
-                return IDVenda;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Falha ao excluir VendaItem. Motivo: " + ex.Message);
-            }
+        
+       
         }
     }
 }
