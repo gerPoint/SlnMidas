@@ -75,10 +75,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCCancelar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnConcluir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -157,10 +157,10 @@
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.comboBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.button4);
+            this.tabPage1.Controls.Add(this.btnExcluir);
+            this.tabPage1.Controls.Add(this.btnSalvar);
             this.tabPage1.Controls.Add(this.btnCCancelar);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.btnAlterar);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -566,29 +566,30 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Código ";
             // 
-            // button5
+            // btnExcluir
             // 
-            this.button5.Image = global::Apresentacao.Properties.Resources.delete_4219;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(612, 476);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(87, 44);
-            this.button5.TabIndex = 62;
-            this.button5.Text = "Excluir";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnExcluir.Image = global::Apresentacao.Properties.Resources.delete_4219;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluir.Location = new System.Drawing.Point(612, 476);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(87, 44);
+            this.btnExcluir.TabIndex = 62;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnSalvar
             // 
-            this.button4.Image = global::Apresentacao.Properties.Resources.saveall_1204;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(854, 476);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(91, 44);
-            this.button4.TabIndex = 61;
-            this.button4.Text = "   Salvar";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSalvar.Image = global::Apresentacao.Properties.Resources.saveall_1204;
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvar.Location = new System.Drawing.Point(854, 476);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(91, 44);
+            this.btnSalvar.TabIndex = 61;
+            this.btnSalvar.Text = "   Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCCancelar
             // 
@@ -603,17 +604,17 @@
             this.btnCCancelar.UseVisualStyleBackColor = true;
             this.btnCCancelar.Click += new System.EventHandler(this.btnCCancelar_Click);
             // 
-            // button1
+            // btnAlterar
             // 
-            this.button1.Image = global::Apresentacao.Properties.Resources.document_write_22637;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(488, 476);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 44);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "Alterar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAlterar.Image = global::Apresentacao.Properties.Resources.document_write_22637;
+            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAlterar.Location = new System.Drawing.Point(488, 476);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(87, 44);
+            this.btnAlterar.TabIndex = 56;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterar.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -886,10 +887,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCCancelar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox cpoIDRomaneio;

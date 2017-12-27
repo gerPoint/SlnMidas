@@ -208,6 +208,7 @@
             this.dgwTransportador.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwTransportador.Size = new System.Drawing.Size(782, 211);
             this.dgwTransportador.TabIndex = 96;
+            this.dgwTransportador.DoubleClick += new System.EventHandler(this.dgwTransportador_DoubleClick);
             // 
             // iDTransportadorDataGridViewTextBoxColumn
             // 
@@ -371,6 +372,7 @@
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnPesquisar
             // 

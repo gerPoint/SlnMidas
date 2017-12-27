@@ -36,6 +36,11 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.dgwFruta = new System.Windows.Forms.DataGridView();
+            this.iDFrutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidMedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataCadastroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblFrutaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSet1 = new Apresentacao.midasDataSetFruta();
             this.cpoNome = new System.Windows.Forms.TextBox();
@@ -44,11 +49,6 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.tblFrutaTableAdapter = new Apresentacao.midasDataSet1TableAdapters.tblFrutaTableAdapter();
             this.cpoIDFruta = new System.Windows.Forms.TextBox();
-            this.iDFrutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidMedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataCadastroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFruta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSet1)).BeginInit();
@@ -139,7 +139,46 @@
             this.dgwFruta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFruta.Size = new System.Drawing.Size(418, 211);
             this.dgwFruta.TabIndex = 83;
+          //  this.dgwFruta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwFruta_CellContentClick);
             this.dgwFruta.DoubleClick += new System.EventHandler(this.dgwFruta_DoubleClick);
+            // 
+            // iDFrutaDataGridViewTextBoxColumn
+            // 
+            this.iDFrutaDataGridViewTextBoxColumn.DataPropertyName = "IDFruta";
+            this.iDFrutaDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.iDFrutaDataGridViewTextBoxColumn.Name = "iDFrutaDataGridViewTextBoxColumn";
+            this.iDFrutaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDFrutaDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // unidMedidaDataGridViewTextBoxColumn
+            // 
+            this.unidMedidaDataGridViewTextBoxColumn.DataPropertyName = "UnidMedida";
+            this.unidMedidaDataGridViewTextBoxColumn.HeaderText = "UnidMedida";
+            this.unidMedidaDataGridViewTextBoxColumn.Name = "unidMedidaDataGridViewTextBoxColumn";
+            this.unidMedidaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataCadastroDataGridViewTextBoxColumn
+            // 
+            this.dataCadastroDataGridViewTextBoxColumn.DataPropertyName = "DataCadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.HeaderText = "DataCadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.Name = "dataCadastroDataGridViewTextBoxColumn";
+            this.dataCadastroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusDataGridViewTextBoxColumn.Width = 50;
             // 
             // tblFrutaBindingSource
             // 
@@ -200,44 +239,6 @@
             this.cpoIDFruta.Size = new System.Drawing.Size(42, 20);
             this.cpoIDFruta.TabIndex = 94;
             this.cpoIDFruta.Visible = false;
-            // 
-            // iDFrutaDataGridViewTextBoxColumn
-            // 
-            this.iDFrutaDataGridViewTextBoxColumn.DataPropertyName = "IDFruta";
-            this.iDFrutaDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.iDFrutaDataGridViewTextBoxColumn.Name = "iDFrutaDataGridViewTextBoxColumn";
-            this.iDFrutaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDFrutaDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // unidMedidaDataGridViewTextBoxColumn
-            // 
-            this.unidMedidaDataGridViewTextBoxColumn.DataPropertyName = "UnidMedida";
-            this.unidMedidaDataGridViewTextBoxColumn.HeaderText = "UnidMedida";
-            this.unidMedidaDataGridViewTextBoxColumn.Name = "unidMedidaDataGridViewTextBoxColumn";
-            this.unidMedidaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataCadastroDataGridViewTextBoxColumn
-            // 
-            this.dataCadastroDataGridViewTextBoxColumn.DataPropertyName = "DataCadastro";
-            this.dataCadastroDataGridViewTextBoxColumn.HeaderText = "DataCadastro";
-            this.dataCadastroDataGridViewTextBoxColumn.Name = "dataCadastroDataGridViewTextBoxColumn";
-            this.dataCadastroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusDataGridViewTextBoxColumn.Width = 50;
             // 
             // frmFruta
             // 

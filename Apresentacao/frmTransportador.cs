@@ -166,8 +166,94 @@ namespace Apresentacao
 
         }
 
+        private void dgwTransportador_DoubleClick(object sender, EventArgs e)
+        {
+            Transportador transportador = (dgwTransportador.SelectedRows[0].DataBoundItem as Transportador);
+            cpoIDTransportador.Text = dgwTransportador.SelectedRows[0].Cells[0].Value.ToString();
+            cpoNome.Text = dgwTransportador.SelectedRows[0].Cells[1].Value.ToString();
+            cpoVeiculo.Text = dgwTransportador.SelectedRows[0].Cells[2].Value.ToString();
+            cpoPlaca.Text = dgwTransportador.SelectedRows[0].Cells[3].Value.ToString();
+            cpoCidade.Text = dgwTransportador.SelectedRows[0].Cells[4].Value.ToString();
+            cpoUf.Text = dgwTransportador.SelectedRows[0].Cells[5].Value.ToString();
+            cpoEndereco.Text = dgwTransportador.SelectedRows[0].Cells[6].Value.ToString();
+            cpoTelefone.Text = dgwTransportador.SelectedRows[0].Cells[7].Value.ToString();
+            //cpoStatus.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
+            btnSalvar.Enabled = false;
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+
+            Transportador objTransportador = new Transportador();
+
+            if (cpoNome.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            {
+                MessageBox.Show("Nenhum registro selecionado.");
+                return;
+            }
+
+            try
+            {
+
+                this.objTransportador.IDTransportador = Convert.ToInt32(cpoIDTransportador.Text);
+                this.objTransportador.Nome = cpoNome.Text.TrimStart();
+                this.objTransportador.Veiculo = cpoVeiculo.Text.TrimStart();
+                this.objTransportador.Placa = cpoPlaca.Text.TrimStart();
+                this.objTransportador.Cidade = cpoCidade.Text.TrimStart();
+
+                // TEM MAIS COISAS PARA ADICIONAR!!!!!!!!!!!
+
+
+                string strRetorno = string.Empty;
+
+                if (cpoNome.Text == "")
+                {
+                    MessageBox.Show("Campo Obrigatório não informado.");
+                    return;
+                }
+
+                if (cpoVeiculo.Text == "")
+                {
+                    MessageBox.Show("Campo Obrigatório não informado.");
+                    return;
+                }
+
+                NegTransportador negTransportador = new NegTransportador();
+                strRetorno = negTransportador.Alterar(this.objTransportador);
 
 
 
+                int intCodigo;
+                if (int.TryParse(strRetorno, out intCodigo) == true)
+                {
+                    MessageBox.Show("Registro alterado com sucesso!", "Informação",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgwTransportador.DataSource = null;
+                    dgwTransportador.Update();
+                    dgwTransportador.Refresh();
+                    // CaixaPesquisa.Text = "%%";
+                    // AtualizarGrid();
+                    cpoIDTransportador.Clear();
+                    cpoNome.Clear();
+               
+
+
+
+
+
+                    btnSalvar.Enabled = true;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao salvar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+
+        
+        }
     }
 }
