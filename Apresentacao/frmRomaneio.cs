@@ -89,7 +89,7 @@ namespace Apresentacao
 
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -118,18 +118,7 @@ namespace Apresentacao
             OutroForm.ShowDialog();
         }
 
-        private void btnRemover_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                
-               
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
+     
 
         private void dgwCarregamento_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -149,5 +138,24 @@ namespace Apresentacao
                         
             }
         }
+
+        private void checkBoxAdiantFretMot_CheckedChanged(object sender, EventArgs e)
+        {
+            Verificado();
+        }
+
+        private void Verificado()
+        {
+            cpoAdiantFretMot.Enabled = checkBoxAdiantFretMot.Checked;
+
+        }
+
+
     }
-}
+
+
+ }
+            
+            
+
+

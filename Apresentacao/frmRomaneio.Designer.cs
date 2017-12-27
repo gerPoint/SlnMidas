@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRomaneio));
             this.tabPage = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBoxAdiantFretMot = new System.Windows.Forms.CheckBox();
             this.label18 = new System.Windows.Forms.Label();
             this.cpoIDRomaneio = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -44,8 +45,7 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.cpoAdiantFretMot = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -91,14 +91,14 @@
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
             this.dgwCarregamento = new System.Windows.Forms.DataGridView();
-            this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.midasDataSetCarregbloco = new Apresentacao.midasDataSetCarregbloco();
-            this.tblCarregamentoBlocoTableAdapter = new Apresentacao.midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter();
             this.iDCarregamentoBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDCarregamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetCarregbloco = new Apresentacao.midasDataSetCarregbloco();
+            this.tblCarregamentoBlocoTableAdapter = new Apresentacao.midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -121,6 +121,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.checkBoxAdiantFretMot);
             this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.cpoIDRomaneio);
             this.tabPage1.Controls.Add(this.label17);
@@ -133,8 +134,7 @@
             this.tabPage1.Controls.Add(this.comboBox5);
             this.tabPage1.Controls.Add(this.textBox9);
             this.tabPage1.Controls.Add(this.label13);
-            this.tabPage1.Controls.Add(this.radioButton1);
-            this.tabPage1.Controls.Add(this.textBox8);
+            this.tabPage1.Controls.Add(this.cpoAdiantFretMot);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.textBox7);
@@ -167,6 +167,17 @@
             this.tabPage1.Size = new System.Drawing.Size(966, 537);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Romaneio";
+            // 
+            // checkBoxAdiantFretMot
+            // 
+            this.checkBoxAdiantFretMot.AutoSize = true;
+            this.checkBoxAdiantFretMot.Location = new System.Drawing.Point(733, 283);
+            this.checkBoxAdiantFretMot.Name = "checkBoxAdiantFretMot";
+            this.checkBoxAdiantFretMot.Size = new System.Drawing.Size(101, 17);
+            this.checkBoxAdiantFretMot.TabIndex = 96;
+            this.checkBoxAdiantFretMot.Text = "Adiant. de Frete";
+            this.checkBoxAdiantFretMot.UseVisualStyleBackColor = true;
+            this.checkBoxAdiantFretMot.CheckedChanged += new System.EventHandler(this.checkBoxAdiantFretMot_CheckedChanged);
             // 
             // label18
             // 
@@ -275,24 +286,14 @@
             this.label13.TabIndex = 84;
             this.label13.Text = "Seguro";
             // 
-            // radioButton1
+            // cpoAdiantFretMot
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(734, 282);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(100, 17);
-            this.radioButton1.TabIndex = 83;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Adiant. de Frete";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Location = new System.Drawing.Point(840, 281);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(105, 20);
-            this.textBox8.TabIndex = 82;
+            this.cpoAdiantFretMot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoAdiantFretMot.Enabled = false;
+            this.cpoAdiantFretMot.Location = new System.Drawing.Point(840, 281);
+            this.cpoAdiantFretMot.Name = "cpoAdiantFretMot";
+            this.cpoAdiantFretMot.Size = new System.Drawing.Size(105, 20);
+            this.cpoAdiantFretMot.TabIndex = 82;
             // 
             // label12
             // 
@@ -722,7 +723,6 @@
             this.btnRemover.TabIndex = 158;
             this.btnRemover.Text = "-";
             this.btnRemover.UseVisualStyleBackColor = false;
-            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // btnInserir
             // 
@@ -760,20 +760,6 @@
             this.dgwCarregamento.Size = new System.Drawing.Size(747, 336);
             this.dgwCarregamento.TabIndex = 146;
             this.dgwCarregamento.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCarregamento_CellMouseDoubleClick);
-            // 
-            // tblCarregamentoBlocoBindingSource
-            // 
-            this.tblCarregamentoBlocoBindingSource.DataMember = "tblCarregamentoBloco";
-            this.tblCarregamentoBlocoBindingSource.DataSource = this.midasDataSetCarregbloco;
-            // 
-            // midasDataSetCarregbloco
-            // 
-            this.midasDataSetCarregbloco.DataSetName = "midasDataSetCarregbloco";
-            this.midasDataSetCarregbloco.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblCarregamentoBlocoTableAdapter
-            // 
-            this.tblCarregamentoBlocoTableAdapter.ClearBeforeFill = true;
             // 
             // iDCarregamentoBlocoDataGridViewTextBoxColumn
             // 
@@ -814,6 +800,20 @@
             this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
             this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
             this.quantidadeDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // tblCarregamentoBlocoBindingSource
+            // 
+            this.tblCarregamentoBlocoBindingSource.DataMember = "tblCarregamentoBloco";
+            this.tblCarregamentoBlocoBindingSource.DataSource = this.midasDataSetCarregbloco;
+            // 
+            // midasDataSetCarregbloco
+            // 
+            this.midasDataSetCarregbloco.DataSetName = "midasDataSetCarregbloco";
+            this.midasDataSetCarregbloco.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblCarregamentoBlocoTableAdapter
+            // 
+            this.tblCarregamentoBlocoTableAdapter.ClearBeforeFill = true;
             // 
             // frmRomaneio
             // 
@@ -856,8 +856,7 @@
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox cpoAdiantFretMot;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox7;
@@ -913,5 +912,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn blocoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.CheckBox checkBoxAdiantFretMot;
     }
 }

@@ -300,6 +300,22 @@ namespace Apresentacao
 
 
         }
+
+
+
+
+        private void checkBoxCpf_CheckedChanged(object sender, EventArgs e)
+        {
+            Verificado();
+        }
+
+
+        private void Verificado()
+        {
+            cpoCpf.Enabled = checkBoxCpf.Checked;
+
+        }
+
     }
 
   }

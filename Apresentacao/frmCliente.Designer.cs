@@ -37,6 +37,20 @@
             this.cpoCaixaPesquisa = new System.Windows.Forms.TextBox();
             this.cpoNome = new System.Windows.Forms.TextBox();
             this.dgwCliente = new System.Windows.Forms.DataGridView();
+            this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razaoSocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataCadastroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblClienteBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSet9 = new Apresentacao.midasDataSet9();
             this.tblClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSet = new Apresentacao.midasDataSetCliente();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -48,7 +62,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.cpoCnpj = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -64,28 +77,15 @@
             this.cpoIDCliente = new System.Windows.Forms.TextBox();
             this.tblClienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblClienteBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.midasDataSet9 = new Apresentacao.midasDataSet9();
-            this.tblClienteBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.tblClienteTableAdapter1 = new Apresentacao.midasDataSet9TableAdapters.tblClienteTableAdapter();
-            this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.razaoSocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataCadastroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.checkBoxCpf = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSet9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.midasDataSet9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_data_hora
@@ -175,6 +175,108 @@
             this.dgwCliente.TabIndex = 15;
             this.dgwCliente.DoubleClick += new System.EventHandler(this.dgwCliente_DoubleClick);
             // 
+            // iDClienteDataGridViewTextBoxColumn
+            // 
+            this.iDClienteDataGridViewTextBoxColumn.DataPropertyName = "IDCliente";
+            this.iDClienteDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.iDClienteDataGridViewTextBoxColumn.Name = "iDClienteDataGridViewTextBoxColumn";
+            this.iDClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDClienteDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // razaoSocialDataGridViewTextBoxColumn
+            // 
+            this.razaoSocialDataGridViewTextBoxColumn.DataPropertyName = "RazaoSocial";
+            this.razaoSocialDataGridViewTextBoxColumn.HeaderText = "Razao Social";
+            this.razaoSocialDataGridViewTextBoxColumn.Name = "razaoSocialDataGridViewTextBoxColumn";
+            this.razaoSocialDataGridViewTextBoxColumn.ReadOnly = true;
+            this.razaoSocialDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // cnpjDataGridViewTextBoxColumn
+            // 
+            this.cnpjDataGridViewTextBoxColumn.DataPropertyName = "Cnpj";
+            this.cnpjDataGridViewTextBoxColumn.HeaderText = "CNPJ";
+            this.cnpjDataGridViewTextBoxColumn.Name = "cnpjDataGridViewTextBoxColumn";
+            this.cnpjDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cpfDataGridViewTextBoxColumn
+            // 
+            this.cpfDataGridViewTextBoxColumn.DataPropertyName = "Cpf";
+            this.cpfDataGridViewTextBoxColumn.HeaderText = "CPF";
+            this.cpfDataGridViewTextBoxColumn.Name = "cpfDataGridViewTextBoxColumn";
+            this.cpfDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefoneDataGridViewTextBoxColumn
+            // 
+            this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "Telefone";
+            this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
+            this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
+            this.telefoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // enderecoDataGridViewTextBoxColumn
+            // 
+            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
+            this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.enderecoDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // cidadeDataGridViewTextBoxColumn
+            // 
+            this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "Cidade";
+            this.cidadeDataGridViewTextBoxColumn.HeaderText = "Cidade";
+            this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
+            this.cidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cidadeDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // ufDataGridViewTextBoxColumn
+            // 
+            this.ufDataGridViewTextBoxColumn.DataPropertyName = "Uf";
+            this.ufDataGridViewTextBoxColumn.HeaderText = "UF";
+            this.ufDataGridViewTextBoxColumn.Name = "ufDataGridViewTextBoxColumn";
+            this.ufDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ufDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // dataCadastroDataGridViewTextBoxColumn
+            // 
+            this.dataCadastroDataGridViewTextBoxColumn.DataPropertyName = "DataCadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.HeaderText = "Data Cadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.Name = "dataCadastroDataGridViewTextBoxColumn";
+            this.dataCadastroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // tblClienteBindingSource3
+            // 
+            this.tblClienteBindingSource3.DataMember = "tblCliente";
+            this.tblClienteBindingSource3.DataSource = this.midasDataSet9;
+            // 
+            // midasDataSet9
+            // 
+            this.midasDataSet9.DataSetName = "midasDataSet9";
+            this.midasDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tblClienteBindingSource
             // 
             this.tblClienteBindingSource.DataMember = "tblCliente";
@@ -226,6 +328,7 @@
             // cpoCpf
             // 
             this.cpoCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCpf.Enabled = false;
             this.cpoCpf.Location = new System.Drawing.Point(723, 381);
             this.cpoCpf.Name = "cpoCpf";
             this.cpoCpf.Size = new System.Drawing.Size(103, 20);
@@ -275,17 +378,6 @@
             this.label8.Size = new System.Drawing.Size(53, 13);
             this.label8.TabIndex = 66;
             this.label8.Text = "Endereço";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(723, 348);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(92, 17);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Pessoa Física";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -405,117 +497,27 @@
             this.tblClienteBindingSource2.DataMember = "tblCliente";
             this.tblClienteBindingSource2.DataSource = this.midasDataSet;
             // 
-            // midasDataSet9
-            // 
-            this.midasDataSet9.DataSetName = "midasDataSet9";
-            this.midasDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblClienteBindingSource3
-            // 
-            this.tblClienteBindingSource3.DataMember = "tblCliente";
-            this.tblClienteBindingSource3.DataSource = this.midasDataSet9;
-            // 
             // tblClienteTableAdapter1
             // 
             this.tblClienteTableAdapter1.ClearBeforeFill = true;
             // 
-            // iDClienteDataGridViewTextBoxColumn
+            // checkBoxCpf
             // 
-            this.iDClienteDataGridViewTextBoxColumn.DataPropertyName = "IDCliente";
-            this.iDClienteDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.iDClienteDataGridViewTextBoxColumn.Name = "iDClienteDataGridViewTextBoxColumn";
-            this.iDClienteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDClienteDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // razaoSocialDataGridViewTextBoxColumn
-            // 
-            this.razaoSocialDataGridViewTextBoxColumn.DataPropertyName = "RazaoSocial";
-            this.razaoSocialDataGridViewTextBoxColumn.HeaderText = "Razao Social";
-            this.razaoSocialDataGridViewTextBoxColumn.Name = "razaoSocialDataGridViewTextBoxColumn";
-            this.razaoSocialDataGridViewTextBoxColumn.ReadOnly = true;
-            this.razaoSocialDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // cnpjDataGridViewTextBoxColumn
-            // 
-            this.cnpjDataGridViewTextBoxColumn.DataPropertyName = "Cnpj";
-            this.cnpjDataGridViewTextBoxColumn.HeaderText = "CNPJ";
-            this.cnpjDataGridViewTextBoxColumn.Name = "cnpjDataGridViewTextBoxColumn";
-            this.cnpjDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cpfDataGridViewTextBoxColumn
-            // 
-            this.cpfDataGridViewTextBoxColumn.DataPropertyName = "Cpf";
-            this.cpfDataGridViewTextBoxColumn.HeaderText = "CPF";
-            this.cpfDataGridViewTextBoxColumn.Name = "cpfDataGridViewTextBoxColumn";
-            this.cpfDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefoneDataGridViewTextBoxColumn
-            // 
-            this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "Telefone";
-            this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
-            this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
-            this.telefoneDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // enderecoDataGridViewTextBoxColumn
-            // 
-            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
-            this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.enderecoDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // cidadeDataGridViewTextBoxColumn
-            // 
-            this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "Cidade";
-            this.cidadeDataGridViewTextBoxColumn.HeaderText = "Cidade";
-            this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
-            this.cidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cidadeDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // ufDataGridViewTextBoxColumn
-            // 
-            this.ufDataGridViewTextBoxColumn.DataPropertyName = "Uf";
-            this.ufDataGridViewTextBoxColumn.HeaderText = "UF";
-            this.ufDataGridViewTextBoxColumn.Name = "ufDataGridViewTextBoxColumn";
-            this.ufDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ufDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            this.emailDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // dataCadastroDataGridViewTextBoxColumn
-            // 
-            this.dataCadastroDataGridViewTextBoxColumn.DataPropertyName = "DataCadastro";
-            this.dataCadastroDataGridViewTextBoxColumn.HeaderText = "Data Cadastro";
-            this.dataCadastroDataGridViewTextBoxColumn.Name = "dataCadastroDataGridViewTextBoxColumn";
-            this.dataCadastroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusDataGridViewTextBoxColumn.Width = 50;
+            this.checkBoxCpf.AutoSize = true;
+            this.checkBoxCpf.Location = new System.Drawing.Point(723, 351);
+            this.checkBoxCpf.Name = "checkBoxCpf";
+            this.checkBoxCpf.Size = new System.Drawing.Size(93, 17);
+            this.checkBoxCpf.TabIndex = 81;
+            this.checkBoxCpf.Text = "Pessoa Física";
+            this.checkBoxCpf.UseVisualStyleBackColor = true;
+            this.checkBoxCpf.CheckedChanged += new System.EventHandler(this.checkBoxCpf_CheckedChanged);
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 509);
+            this.Controls.Add(this.checkBoxCpf);
             this.Controls.Add(this.cpoIDCliente);
             this.Controls.Add(this.lblIDCliente);
             this.Controls.Add(this.btnSalvar);
@@ -529,7 +531,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cpoCnpj);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -552,12 +553,12 @@
             this.Text = "CLIENTE";
             this.Load += new System.EventHandler(this.frmCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSet9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.midasDataSet9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -582,7 +583,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox cpoCnpj;
         private System.Windows.Forms.Label label9;
@@ -614,5 +614,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.CheckBox checkBoxCpf;
     }
 }
