@@ -16,12 +16,12 @@ namespace Apresentacao
     public partial class frmCliente : Form
     {
 
-        //private Cliente cliente = new Cliente();
+        
         NegCliente negCliente = new NegCliente();
        
        private Cliente objCliente = new Cliente();
        
-      //  DateTime data_hora;
+    
 
         public frmCliente()
         {

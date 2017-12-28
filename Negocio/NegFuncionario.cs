@@ -127,12 +127,40 @@ namespace Negocio
             }
 
 
+        }
+
+        public string Excluir(Funcionario funcionario)
+        {
+            try
+            {
+                acessoDadosSqlServer.LimparParametros();
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFuncionario", funcionario.IDFuncionario));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INNome", funcionario.Nome));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INRg", funcionario.Rg));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTelefone", funcionario.Telefone));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INEmail", funcionario.Email));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCidade", funcionario.Cidade));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INStatus", funcionario.Status));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INEndereco", funcionario.Endereco));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCpf", funcionario.Cpf));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INUf", funcionario.Uf));
+
+                string codProduto = acessoDadosSqlServer.ExecutarScalar("uspInativarFuncionario", CommandType.StoredProcedure).ToString();
+
+                return codProduto;
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("Falha ao excluir Funcionario. Motivo: " + ex.Message);
+            }
+
+
 
 
 
 
         }
-
 
 
 

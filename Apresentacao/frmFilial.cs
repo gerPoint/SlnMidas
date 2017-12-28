@@ -180,9 +180,74 @@ namespace Apresentacao
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+            if (cpoFilial.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            {
+                MessageBox.Show("Nenhum registro selecionado.");
+                return;
+            }
+
+            try
+            {
+
+
+                this.objFilial.IDFilial = Convert.ToInt32(cpoIDFilial.Text);
+                this.objFilial.Nome = cpoFilial.Text.TrimStart();
+                this.objFilial.RazaoSocial = cpoRazaoSocial.Text;
+                this.objFilial.Cnpj = cpoCnpj.Text.TrimStart();
+                this.objFilial.Endereco = cpoEndereco.Text.TrimStart();
+                this.objFilial.Cidade = cpoCidade.Text.TrimStart();
+                this.objFilial.Uf = cpoUf.Text.TrimStart();
+                this.objFilial.Telefone = cpoTelefone.Text.TrimStart();
+                this.objFilial.Email = cpoEmail.Text.TrimStart();
+                this.objFilial.ChaveSistema = cpoChaveSistema.Text.TrimStart();
+
+                string strRetorno = string.Empty;
+
+                if (cpoFilial.Text == "")
+                {
+                    MessageBox.Show("Campo Obrigatório não informado.");
+                    return;
+                }
+
+
+
+                strRetorno = negFilial.Excluir(this.objFilial);
+
+
+                int intCodigo;
+                if (int.TryParse(strRetorno, out intCodigo) == true)
+                {
+                    MessageBox.Show("Registro Excluído com sucesso!", "Informação",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgwFilial.DataSource = null;
+
+                    dgwFilial.Refresh();
+
+                    cpoFilial.Clear();
+                    cpoRazaoSocial.Clear();
+                    cpoCnpj.Clear();
+                    cpoCidade.Clear();
+                    cpoEmail.Clear();
+                    cpoTelefone.Clear();
+                    cpoEndereco.Clear();
+                    cpoUf.Clear();
+
+                    btnSalvar.Enabled = true;
+
+
+                    // CaixaPesquisa.Text = "";
+                    // AtualizarGrid();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao excluir registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
 
+  
         private void dgwFilial_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             cpoIDFilial.Text = dgwFilial.SelectedRows[0].Cells[0].Value.ToString();

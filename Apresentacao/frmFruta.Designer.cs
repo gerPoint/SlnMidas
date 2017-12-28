@@ -82,6 +82,7 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSalvar
             // 
@@ -139,7 +140,6 @@
             this.dgwFruta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFruta.Size = new System.Drawing.Size(418, 211);
             this.dgwFruta.TabIndex = 83;
-          //  this.dgwFruta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwFruta_CellContentClick);
             this.dgwFruta.DoubleClick += new System.EventHandler(this.dgwFruta_DoubleClick);
             // 
             // iDFrutaDataGridViewTextBoxColumn

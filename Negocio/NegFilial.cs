@@ -133,6 +133,41 @@ namespace Negocio
         }
 
 
+        public string Excluir(Filial filial)
+        {
+            try
+            {
+                acessoDadosSqlServer.LimparParametros();
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFilial", filial.IDFilial));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INNome", filial.Nome));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INRazaoSocial", filial.RazaoSocial));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTelefone", filial.Telefone));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INEmail", filial.Email));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCidade", filial.Cidade));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INStatus", filial.Status));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INEndereco", filial.Endereco));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INChaveSistema", filial.ChaveSistema));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCnpj", filial.Cnpj));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INUf", filial.Uf));
+
+                string codProduto = acessoDadosSqlServer.ExecutarScalar("uspInativarFilial", CommandType.StoredProcedure).ToString();
+
+                return codProduto;
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("Falha ao excluir Filial. Motivo: " + ex.Message);
+            }
+
+
+
+
+
+
+        }
+
+
 
 
     }

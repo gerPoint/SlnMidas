@@ -205,9 +205,6 @@ namespace Apresentacao
                 this.objTransportador.Telefone = cpoTelefone.Text.TrimStart();
 
 
-
-
-
                 string strRetorno = string.Empty;
 
                 if (cpoNome.Text == "")
@@ -246,8 +243,78 @@ namespace Apresentacao
                     cpoUf.Clear();
 
 
+                    btnSalvar.Enabled = true;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao alterar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
 
+
+        
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
+
+            if (cpoNome.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            {
+                MessageBox.Show("Nenhum registro selecionado.");
+                return;
+            }
+
+            try
+            {
+
+                this.objTransportador.IDTransportador = Convert.ToInt32(cpoIDTransportador.Text);
+                this.objTransportador.Nome = cpoNome.Text.TrimStart();
+                this.objTransportador.Veiculo = cpoVeiculo.Text.TrimStart();
+                this.objTransportador.Placa = cpoPlaca.Text.TrimStart();
+                this.objTransportador.Cidade = cpoCidade.Text.TrimStart();
+                this.objTransportador.Uf = cpoUf.Text.TrimStart();
+                this.objTransportador.Endereco = cpoEndereco.Text.TrimStart();
+                this.objTransportador.Telefone = cpoTelefone.Text.TrimStart();
+
+
+
+
+
+                string strRetorno = string.Empty;
+
+                if (cpoNome.Text == "")
+                {
+                    MessageBox.Show("Nenhum registro selecionado.");
+                    return;
+                }
+
+
+
+                NegTransportador negTransportador = new NegTransportador();
+                strRetorno = negTransportador.Excluir(this.objTransportador);
+
+
+
+                int intCodigo;
+                if (int.TryParse(strRetorno, out intCodigo) == true)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!", "Informação",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgwTransportador.DataSource = null;
+
+
+                    cpoIDTransportador.Clear();
+                    cpoNome.Clear();
+                    cpoVeiculo.Clear();
+                    cpoPlaca.Clear();
+                    cpoCidade.Clear();
+                    cpoTelefone.Clear();
+                    cpoEndereco.Clear();
+                    cpoUf.Clear();
 
                     btnSalvar.Enabled = true;
 
@@ -256,12 +323,13 @@ namespace Apresentacao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Falha ao salvar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Falha ao excluir registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
 
 
-        
-        }
-    }
+
+           }
+      }
+    
 }

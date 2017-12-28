@@ -126,6 +126,38 @@ namespace Negocio
         }
 
 
+        public string Excluir(Transportador transportador)
+
+        {
+            try
+            {
+                acessoDadosSqlServer.LimparParametros();
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDTransportador", transportador.IDTransportador));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INNome", transportador.Nome));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INEndereco", transportador.Endereco));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCidade", transportador.Cidade));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INUf", transportador.Uf));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INVeiculo", transportador.Veiculo));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INPlaca", transportador.Placa));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTelefone", transportador.Cidade));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INStatus", transportador.Status));
+
+
+                string codProduto = acessoDadosSqlServer.ExecutarScalar("uspInativarTransportador", CommandType.StoredProcedure).ToString();
+
+                return codProduto;
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("Falha ao excluir Transportador. Motivo: " + ex.Message);
+
+            }
+
+
+        }
+
+
 
     }
 

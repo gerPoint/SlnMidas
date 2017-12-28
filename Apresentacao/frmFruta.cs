@@ -234,8 +234,69 @@ namespace Apresentacao
 
         }
 
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (cpoNome.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            {
+                MessageBox.Show("Nenhum registro selecionado.");
+                return;
+            }
 
-    }
-}
+            try
+            {
+
+                this.objFruta.IDFruta = Convert.ToInt32(cpoIDFruta.Text);
+                this.objFruta.Nome = cpoNome.Text.TrimStart();
+                this.objFruta.UnidMedida = cpoUnidMedida.Text.TrimStart();
+
+
+
+                string strRetorno = string.Empty;
+
+                if (cpoNome.Text == "")
+                {
+                    MessageBox.Show("Nenhum registro selecionado.");
+                    return;
+                }
+
+
+                NegFruta negFruta = new NegFruta();
+                strRetorno = negFruta.Excluir(this.objFruta);
+
+
+
+                int intCodigo;
+                if (int.TryParse(strRetorno, out intCodigo) == true)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!", "Informação",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgwFruta.DataSource = null;
+                    dgwFruta.Update();
+                    dgwFruta.Refresh();
+                    cpoIDFruta.Clear();
+                    cpoNome.Clear();
+                    cpoUnidMedida.Clear();
+
+
+
+
+
+                    btnSalvar.Enabled = true;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao salvar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+            }
+
+       }
+
+ }
+
     
 

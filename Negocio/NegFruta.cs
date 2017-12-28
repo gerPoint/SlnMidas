@@ -108,7 +108,35 @@ namespace Negocio
 
 
          }
-        
+
+
+        public string Excluir(Fruta fruta)
+
+        {
+            try
+            {
+                acessoDadosSqlServer.LimparParametros();
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFruta", fruta.IDFruta));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INNome", fruta.Nome));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INUnidMedida", fruta.UnidMedida));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INStatus", fruta.Status));
+
+
+                string codProduto = acessoDadosSqlServer.ExecutarScalar("uspInativarFruta", CommandType.StoredProcedure).ToString();
+
+                return codProduto;
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("Falha ao excluir Fruta. Motivo: " + ex.Message);
+
+            }
+
+
+        }
+
+
 
 
     }
