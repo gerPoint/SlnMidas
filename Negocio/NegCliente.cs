@@ -101,7 +101,7 @@ namespace Negocio
 
         }
 
-               public string Alterar(Cliente cliente)
+        public string Alterar(Cliente cliente)
         {
             try
             {
@@ -127,7 +127,33 @@ namespace Negocio
             {
                 throw new Exception("Falha ao alterar Produto. Motivo: " + ex.Message);
             }
+        }
+              public string Excluir(Cliente cliente)
+        {
+            try
+            {
+                acessoDadosSqlServer.LimparParametros();
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDCliente", cliente.IDCliente));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INNome", cliente.Nome));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INRazaoSocial", cliente.RazaoSocial));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTelefone", cliente.Telefone));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INEmail", cliente.Email));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCidade", cliente.Cidade));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INStatus", cliente.Status));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INEndereco", cliente.Endereco));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCpf", cliente.Cpf));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCnpj", cliente.Cnpj));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INUf", cliente.Uf));
 
+                string codProduto = acessoDadosSqlServer.ExecutarScalar("uspInativarCliente", CommandType.StoredProcedure).ToString();
+
+                return codProduto;
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("Falha ao excluir Cliente. Motivo: " + ex.Message);
+            }
 
 
 

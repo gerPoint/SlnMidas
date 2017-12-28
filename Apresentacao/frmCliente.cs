@@ -316,6 +316,78 @@ namespace Apresentacao
 
         }
 
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (cpoNome.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            {
+                MessageBox.Show("Nenhum registro selecionado.");
+                return;
+            }
+
+            try
+            {
+
+
+                this.objCliente.IDCliente = Convert.ToInt32(cpoIDCliente.Text);
+                //cliente.IDCliente = Convert.ToInt32(linha["IDCliente"]);
+                this.objCliente.Nome = cpoNome.Text.TrimStart();
+                this.objCliente.RazaoSocial = cpoRazaoSocial.Text;
+                this.objCliente.Cnpj = cpoCnpj.Text.TrimStart();
+                this.objCliente.Endereco = cpoEndereco.Text.TrimStart();
+                this.objCliente.Cidade = cpoCidade.Text.TrimStart();
+                this.objCliente.Uf = cpoUf.Text.TrimStart();
+                this.objCliente.Telefone = cpoTelefone.Text.TrimStart();
+                this.objCliente.Email = cpoEmail.Text.TrimStart();
+                this.objCliente.Cpf = cpoCpf.Text.TrimStart();
+
+                string strRetorno = string.Empty;
+
+                if (cpoNome.Text == "")
+                {
+                    MessageBox.Show("Por favor selecione um registro.");
+                    return;
+                }
+
+              
+
+
+                strRetorno = negCliente.Excluir(this.objCliente);
+
+
+                int intCodigo;
+                if (int.TryParse(strRetorno, out intCodigo) == true)
+                {
+                    MessageBox.Show("Registro excluído com sucesso!", "Informação",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgwCliente.DataSource = null;
+                    dgwCliente.Update();
+                    dgwCliente.Refresh();
+
+
+                    cpoNome.Clear();
+                    cpoRazaoSocial.Clear();
+                    cpoEndereco.Clear();
+                    cpoEmail.Clear();
+                    cpoCpf.Clear();
+                    cpoCnpj.Clear();
+                    cpoCidade.Clear();
+                    cpoCaixaPesquisa.Clear();
+                    cpoTelefone.Clear();
+                    cpoUf.Clear();
+
+
+                    btnSalvar.Enabled = true;
+                  
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao excluir registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
     }
 
   }

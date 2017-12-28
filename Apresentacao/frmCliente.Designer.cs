@@ -55,7 +55,7 @@
             this.midasDataSet = new Apresentacao.midasDataSetCliente();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.cpoCpf = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -313,17 +313,18 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
-            // button5
+            // btnExcluir
             // 
-            this.button5.Image = global::Apresentacao.Properties.Resources.delete_4219;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(518, 447);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(87, 44);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "Excluir";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnExcluir.Image = global::Apresentacao.Properties.Resources.delete_4219;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluir.Location = new System.Drawing.Point(518, 447);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(87, 44);
+            this.btnExcluir.TabIndex = 14;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // cpoCpf
             // 
@@ -537,7 +538,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cpoCpf);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.dgwCliente);
@@ -576,7 +577,7 @@
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.TextBox cpoCpf;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;

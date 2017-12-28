@@ -158,7 +158,7 @@ namespace Apresentacao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Falha ao consultar Fruta. Falha: " +
+                MessageBox.Show("Falha ao consultar Transportador. Falha: " +
                     ex.Message, "Falha", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
@@ -184,7 +184,7 @@ namespace Apresentacao
         private void btnAlterar_Click(object sender, EventArgs e)
         {
 
-            Transportador objTransportador = new Transportador();
+           
 
             if (cpoNome.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
             {
@@ -200,8 +200,12 @@ namespace Apresentacao
                 this.objTransportador.Veiculo = cpoVeiculo.Text.TrimStart();
                 this.objTransportador.Placa = cpoPlaca.Text.TrimStart();
                 this.objTransportador.Cidade = cpoCidade.Text.TrimStart();
+                this.objTransportador.Uf = cpoUf.Text.TrimStart();
+                this.objTransportador.Endereco = cpoEndereco.Text.TrimStart();
+                this.objTransportador.Telefone = cpoTelefone.Text.TrimStart();
 
-                // TEM MAIS COISAS PARA ADICIONAR!!!!!!!!!!!
+
+
 
 
                 string strRetorno = string.Empty;
@@ -218,6 +222,7 @@ namespace Apresentacao
                     return;
                 }
 
+             
                 NegTransportador negTransportador = new NegTransportador();
                 strRetorno = negTransportador.Alterar(this.objTransportador);
 
@@ -229,13 +234,16 @@ namespace Apresentacao
                     MessageBox.Show("Registro alterado com sucesso!", "Informação",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     dgwTransportador.DataSource = null;
-                    dgwTransportador.Update();
-                    dgwTransportador.Refresh();
-                    // CaixaPesquisa.Text = "%%";
-                    // AtualizarGrid();
+
+
                     cpoIDTransportador.Clear();
                     cpoNome.Clear();
-               
+                    cpoVeiculo.Clear();
+                    cpoPlaca.Clear();
+                    cpoCidade.Clear();
+                    cpoTelefone.Clear();
+                    cpoEndereco.Clear();
+                    cpoUf.Clear();
 
 
 

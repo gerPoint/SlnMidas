@@ -87,33 +87,38 @@ namespace Negocio
 
             catch (Exception ex)
             {
-                throw new Exception("Falha ao Consultar Fruta. Motivo: " + ex.Message);
+                throw new Exception("Falha ao Consultar Transportador. Motivo: " + ex.Message);
             }
 
 
 
         }
 
-        public string Alterar(Fruta fruta)
+        public string Alterar(Transportador transportador)
 
         {
             try
             {
                 acessoDadosSqlServer.LimparParametros();
-                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFruta", fruta.IDFruta));
-                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INNome", fruta.Nome));
-                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INUnidMedida", fruta.UnidMedida));
-                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INStatus", fruta.Status));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDTransportador", transportador.IDTransportador));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INNome", transportador.Nome));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INEndereco", transportador.Endereco));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCidade", transportador.Cidade));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INUf", transportador.Uf));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INVeiculo", transportador.Veiculo));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INPlaca", transportador.Placa));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTelefone", transportador.Cidade));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INStatus", transportador.Status));
+               
 
-
-                string codProduto = acessoDadosSqlServer.ExecutarScalar("uspAlterarFruta", CommandType.StoredProcedure).ToString();
+                string codProduto = acessoDadosSqlServer.ExecutarScalar("uspAlterarTransportador", CommandType.StoredProcedure).ToString();
 
                 return codProduto;
             }
 
             catch (Exception ex)
             {
-                throw new Exception("Falha ao alterar Produto. Motivo: " + ex.Message);
+                throw new Exception("Falha ao alterar Transportador. Motivo: " + ex.Message);
 
             }
 

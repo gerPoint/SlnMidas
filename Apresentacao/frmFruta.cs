@@ -212,8 +212,6 @@ namespace Apresentacao
                     dgwFruta.DataSource = null;
                     dgwFruta.Update();
                     dgwFruta.Refresh();
-                    // CaixaPesquisa.Text = "%%";
-                    // AtualizarGrid();
                     cpoIDFruta.Clear();
                     cpoNome.Clear();
                     cpoUnidMedida.Clear();
