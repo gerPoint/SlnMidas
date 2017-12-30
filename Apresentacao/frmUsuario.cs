@@ -133,6 +133,8 @@ namespace Apresentacao
                 this.objUsuario.Endereco = cpoEndereco.Text.TrimStart();
                 this.objUsuario.Cpf = cpoCpf.Text.TrimStart();
                 this.objUsuario.Rg = cpoUf.Text.TrimStart();
+                this.objUsuario.Cidade = cpoCidade.Text.TrimStart();
+                this.objUsuario.Uf = cpoUf.Text.TrimStart();
 
                 string strRetorno = string.Empty;
 
@@ -221,6 +223,9 @@ namespace Apresentacao
                 this.objUsuario.Endereco = cpoEndereco.Text.TrimStart();
                 this.objUsuario.Cpf = cpoCpf.Text.TrimStart();
                 this.objUsuario.Rg = cpoUf.Text.TrimStart();
+                this.objUsuario.Cidade = cpoCidade.Text.TrimStart();
+                this.objUsuario.Uf = cpoUf.Text.TrimStart();
+
 
                 string strRetorno = string.Empty;
 
@@ -238,7 +243,7 @@ namespace Apresentacao
 
 
 
-                strRetorno = negUsuario.Alterar(this.objUsuario);
+                strRetorno = negUsuario.Excluir(this.objUsuario);
 
 
                 int intCodigo;
