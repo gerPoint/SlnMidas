@@ -16,32 +16,26 @@ namespace Apresentacao
     public partial class frmCliente : Form
     {
 
-        
+
         NegCliente negCliente = new NegCliente();
-       
-       private Cliente objCliente = new Cliente();
-       
-    
+
+        private Cliente objCliente = new Cliente();
+
+
 
         public frmCliente()
         {
             InitializeComponent();
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'midasDataSet9.tblCliente' table. You can move, or remove it, as needed.
             //this.tblClienteTableAdapter1.Fill(this.midasDataSet9.tblCliente);
- 
+
         }
-
-
-
 
 
 
@@ -114,18 +108,12 @@ namespace Apresentacao
                     cpoUf.Clear();
 
 
-                    //teste
-
-                    //strRetorno = negCliente.Consultar(); 
-
-                    //cpoCaixaPesquisa.Text = "%%";
-                    // AtualizarGrid();
 
 
                 }
             }
 
-          
+
             catch (Exception ex)
             {
                 MessageBox.Show("Falha ao salvar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -205,19 +193,21 @@ namespace Apresentacao
             cpoNome.Text = dgwCliente.SelectedRows[0].Cells[1].Value.ToString();
             cpoRazaoSocial.Text = dgwCliente.SelectedRows[0].Cells[2].Value.ToString();
             cpoTelefone.Text = dgwCliente.SelectedRows[0].Cells[5].Value.ToString();
-            cpoEmail.Text = dgwCliente.SelectedRows[0].Cells[6].Value.ToString();
-            cpoCidade.Text = dgwCliente.SelectedRows[0].Cells[8].Value.ToString();
-            cpoUf.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
-            cpoEndereco.Text = dgwCliente.SelectedRows[0].Cells[7].Value.ToString();
+            cpoEmail.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
+            cpoCidade.Text = dgwCliente.SelectedRows[0].Cells[7].Value.ToString();
+            cpoUf.Text = dgwCliente.SelectedRows[0].Cells[8].Value.ToString();
+            cpoEndereco.Text = dgwCliente.SelectedRows[0].Cells[6].Value.ToString();
             cpoCpf.Text = dgwCliente.SelectedRows[0].Cells[4].Value.ToString();
             cpoCnpj.Text = dgwCliente.SelectedRows[0].Cells[3].Value.ToString();
             //cpoStatus.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
             btnSalvar.Enabled = false;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            if (cpoNome.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            if (cpoIDCliente.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
             {
                 MessageBox.Show("Nenhum registro selecionado.");
                 return;
@@ -226,9 +216,9 @@ namespace Apresentacao
             try
             {
 
-               
-                this.objCliente.IDCliente = Convert.ToInt32 (cpoIDCliente.Text);
-                    //cliente.IDCliente = Convert.ToInt32(linha["IDCliente"]);
+
+                this.objCliente.IDCliente = Convert.ToInt32(cpoIDCliente.Text);
+                //cliente.IDCliente = Convert.ToInt32(linha["IDCliente"]);
                 this.objCliente.Nome = cpoNome.Text.TrimStart();
                 this.objCliente.RazaoSocial = cpoRazaoSocial.Text;
                 this.objCliente.Cnpj = cpoCnpj.Text.TrimStart();
@@ -284,11 +274,9 @@ namespace Apresentacao
                     cpoTelefone.Clear();
                     cpoUf.Clear();
 
-
                     btnSalvar.Enabled = true;
-
-                    // CaixaPesquisa.Text = "";
-                    // AtualizarGrid();
+                    btnAlterar.Enabled = false;
+                    btnExcluir.Enabled = false;
                 }
 
             }
@@ -318,7 +306,7 @@ namespace Apresentacao
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (cpoNome.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            if (cpoIDCliente.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
             {
                 MessageBox.Show("Nenhum registro selecionado.");
                 return;
@@ -348,7 +336,7 @@ namespace Apresentacao
                     return;
                 }
 
-              
+
 
 
                 strRetorno = negCliente.Excluir(this.objCliente);
@@ -363,7 +351,7 @@ namespace Apresentacao
                     dgwCliente.Update();
                     dgwCliente.Refresh();
 
-
+                    cpoIDCliente.Clear();
                     cpoNome.Clear();
                     cpoRazaoSocial.Clear();
                     cpoEndereco.Clear();
@@ -377,7 +365,9 @@ namespace Apresentacao
 
 
                     btnSalvar.Enabled = true;
-                  
+                    btnAlterar.Enabled = false;
+                    btnExcluir.Enabled = false;
+
 
                 }
 
@@ -388,7 +378,58 @@ namespace Apresentacao
             }
 
         }
+
+        private void btnRetornar_Click(object sender, EventArgs e)
+        {
+            dgwCliente.Update();
+            dgwCliente.Refresh();
+
+            cpoIDCliente.Clear();
+            cpoNome.Clear();
+            cpoRazaoSocial.Clear();
+            cpoEndereco.Clear();
+            cpoEmail.Clear();
+            cpoCpf.Clear();
+            cpoCnpj.Clear();
+            cpoCidade.Clear();
+            cpoCaixaPesquisa.Clear();
+            cpoTelefone.Clear();
+            cpoUf.Clear();
+
+
+            btnSalvar.Enabled = true;
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
+        }
+
+        private void cpoCnpj_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+
+
+        }
+
+        private void cpoTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoCpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
     }
 
-  }
+}
+
 

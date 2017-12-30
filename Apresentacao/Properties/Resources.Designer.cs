@@ -183,6 +183,16 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap restart_back_left_arrow_6022 {
+            get {
+                object obj = ResourceManager.GetObject("restart_back_left_arrow_6022", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap saveall_1204 {
             get {
                 object obj = ResourceManager.GetObject("saveall_1204", resourceCulture);

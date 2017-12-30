@@ -31,8 +31,7 @@ namespace Apresentacao
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            //Usuario objUsuario = new Usuario();
-
+           
             this.objUsuario.Nome = cpoNome.Text.TrimStart();
             this.objUsuario.Senha = cpoSenha.Text;
             this.objUsuario.Telefone = cpoTelefone.Text.TrimStart();
@@ -94,12 +93,9 @@ namespace Apresentacao
                     cpoUf.Clear();
 
 
-                    //teste
-
-                    //strRetorno = negCliente.Consultar(); 
-
-                    //cpoCaixaPesquisa.Text = "%%";
-                    // AtualizarGrid();
+                    btnSalvar.Enabled = true;
+                    btnExcluir.Enabled = false;
+                    btnAlterar.Enabled = false;
 
 
                 }
@@ -183,9 +179,9 @@ namespace Apresentacao
 
 
                     btnSalvar.Enabled = true;
+                    btnExcluir.Enabled = false;
+                    btnAlterar.Enabled = false;
 
-                    // CaixaPesquisa.Text = "";
-                    // AtualizarGrid();
                 }
 
             }
@@ -270,9 +266,8 @@ namespace Apresentacao
 
 
                     btnSalvar.Enabled = true;
-
-                    // CaixaPesquisa.Text = "";
-                    // AtualizarGrid();
+                    btnExcluir.Enabled = false;
+                    btnAlterar.Enabled = false;
                 }
 
             }
@@ -299,6 +294,9 @@ namespace Apresentacao
             cpoRg.Text = dgwUsuario.SelectedRows[0].Cells[3].Value.ToString();
           
             btnSalvar.Enabled = false;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
+
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
@@ -357,6 +355,53 @@ namespace Apresentacao
 
 
 
+        }
+
+        private void btnRetornar_Click(object sender, EventArgs e)
+        {
+            dgwUsuario.Update();
+            dgwUsuario.Refresh();
+
+            cpoIDUsuario.Clear();
+            cpoNome.Clear();
+            cpoSenha.Clear();
+            cpoEndereco.Clear();
+            cpoEmail.Clear();
+            cpoCpf.Clear();
+            cpoRg.Clear();
+            cpoCaixaPesquisa.Clear();
+            cpoTelefone.Clear();
+            cpoCidade.Clear();
+            cpoUf.Clear();
+
+
+            btnSalvar.Enabled = true;
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
+        }
+
+        private void cpoRg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoCpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
         }
     }
 

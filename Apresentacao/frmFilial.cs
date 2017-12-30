@@ -142,7 +142,6 @@ namespace Apresentacao
                    // MessageBox.Show("Registro salvo com sucesso! Código: " + idFilial.ToString()); - tambem funciona esse
                     MessageBox.Show("Registro salvo com sucesso!", "Código: " + idFilial.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // this.DialogResult = DialogResult.OK;
 
                     //limpa os campos depois de salvar 
                     cpoFilial.Clear();
@@ -154,12 +153,11 @@ namespace Apresentacao
                     cpoEndereco.Clear();
                     cpoUf.Clear();
 
+                   dgwFilial.DataSource = null;
 
-                    dgwFilial.DataSource = null;
-   
-
-                    //cpoCaixaPesquisa.Text = "%%";
-                    // AtualizarGrid();
+                    btnSalvar.Enabled = true;
+                    btnAlterar.Enabled = false;
+                    btnExcluir.Enabled = false;
 
 
                 }
@@ -180,7 +178,7 @@ namespace Apresentacao
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (cpoFilial.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            if (cpoIDFilial.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
             {
                 MessageBox.Show("Nenhum registro selecionado.");
                 return;
@@ -233,6 +231,8 @@ namespace Apresentacao
                     cpoUf.Clear();
 
                     btnSalvar.Enabled = true;
+                    btnAlterar.Enabled = false;
+                    btnExcluir.Enabled = false;
 
 
                     // CaixaPesquisa.Text = "";
@@ -262,11 +262,13 @@ namespace Apresentacao
             cpoCnpj.Text = dgwFilial.SelectedRows[0].Cells[3].Value.ToString();
 
             btnSalvar.Enabled = false;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            if (cpoFilial.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            if (cpoIDFilial.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
             {
                 MessageBox.Show("Nenhum registro selecionado.");
                 return;
@@ -277,7 +279,6 @@ namespace Apresentacao
 
 
                 this.objFilial.IDFilial = Convert.ToInt32(cpoIDFilial.Text);
-                //cliente.IDCliente = Convert.ToInt32(linha["IDCliente"]);
                 this.objFilial.Nome = cpoFilial.Text.TrimStart();
                 this.objFilial.RazaoSocial = cpoRazaoSocial.Text;
                 this.objFilial.Cnpj = cpoCnpj.Text.TrimStart();
@@ -322,7 +323,7 @@ namespace Apresentacao
                     dgwFilial.Refresh();
 
 
-
+                    cpoIDFilial.Clear();
                     cpoFilial.Clear();
                     cpoRazaoSocial.Clear();
                     cpoCnpj.Clear();
@@ -333,10 +334,8 @@ namespace Apresentacao
                     cpoUf.Clear();
 
                     btnSalvar.Enabled = true;
-
-
-                    // CaixaPesquisa.Text = "";
-                    // AtualizarGrid();
+                    btnAlterar.Enabled = false;
+                    btnExcluir.Enabled = false;
                 }
 
             }
@@ -347,6 +346,43 @@ namespace Apresentacao
 
 
 
+        }
+
+        private void btnRetornar_Click(object sender, EventArgs e)
+        {
+            dgwFilial.Update();
+            dgwFilial.Refresh();
+
+
+            cpoIDFilial.Clear();
+            cpoFilial.Clear();
+            cpoRazaoSocial.Clear();
+            cpoCnpj.Clear();
+            cpoCidade.Clear();
+            cpoEmail.Clear();
+            cpoTelefone.Clear();
+            cpoEndereco.Clear();
+            cpoUf.Clear();
+
+            btnSalvar.Enabled = true;
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
+        }
+
+        private void cpoCnpj_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
         }
     }
 

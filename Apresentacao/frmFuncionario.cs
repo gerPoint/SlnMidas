@@ -108,10 +108,14 @@ namespace Apresentacao
                     cpoCidade.Clear();
                     cpoCpf.Clear();
                     cpoEmail.Clear();
-                    cpoIDCliente.Clear();
+                    cpoIDFuncionario.Clear();
                     cpoTelefone.Clear();
                     cpoRg.Clear();
 
+
+                    btnSalvar.Enabled = true;
+                    btnExcluir.Enabled = false;
+                    btnAlterar.Enabled = false;
                 }
             }
 
@@ -245,13 +249,12 @@ namespace Apresentacao
                     cpoCaixaPesquisa.Clear();
                     cpoTelefone.Clear();
                     cpoUf.Clear();
-                    cpoIDCliente.Clear();
+                    cpoIDFuncionario.Clear();
 
 
                     btnSalvar.Enabled = true;
-
-                    // CaixaPesquisa.Text = "";
-                    // AtualizarGrid();
+                    btnExcluir.Enabled = false;
+                    btnAlterar.Enabled = false;
                 }
 
             }
@@ -279,6 +282,8 @@ namespace Apresentacao
             cpoCpf.Text = dgwFuncionario.SelectedRows[0].Cells[7].Value.ToString();
             //cpoStatus.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
             btnSalvar.Enabled = false;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -327,6 +332,7 @@ namespace Apresentacao
                     dgwFuncionario.Refresh();
 
 
+                    cpoIDFuncionario.Clear();
                     cpoNome.Clear();
                     cpoRg.Clear();
                     cpoEndereco.Clear();
@@ -336,10 +342,12 @@ namespace Apresentacao
                     cpoCaixaPesquisa.Clear();
                     cpoTelefone.Clear();
                     cpoUf.Clear();
-                    cpoIDCliente.Clear();
+                    cpoIDFuncionario.Clear();
 
 
                     btnSalvar.Enabled = true;
+                    btnExcluir.Enabled = false;
+                    btnAlterar.Enabled = false;
 
                     // CaixaPesquisa.Text = "";
                     // AtualizarGrid();
@@ -355,6 +363,54 @@ namespace Apresentacao
 
 
 
+        }
+
+        private void btnRetornar_Click(object sender, EventArgs e)
+        {
+            dgwFuncionario.Update();
+            dgwFuncionario.Refresh();
+
+
+            cpoIDFuncionario.Clear();
+            cpoNome.Clear();
+            cpoRg.Clear();
+            cpoEndereco.Clear();
+            cpoEmail.Clear();
+            cpoCpf.Clear();
+            cpoCidade.Clear();
+            cpoCaixaPesquisa.Clear();
+            cpoTelefone.Clear();
+            cpoUf.Clear();
+            cpoIDFuncionario.Clear();
+
+
+            btnSalvar.Enabled = true;
+            btnExcluir.Enabled = false;
+            btnAlterar.Enabled = false;
+        }
+
+        private void cpoCpf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoRg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
         }
     }
     

@@ -99,6 +99,7 @@
             this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetCarregbloco = new Apresentacao.midasDataSetCarregbloco();
             this.tblCarregamentoBlocoTableAdapter = new Apresentacao.midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter();
+            this.btnRetornar = new System.Windows.Forms.Button();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -121,6 +122,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.btnRetornar);
             this.tabPage1.Controls.Add(this.checkBoxAdiantFretMot);
             this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.cpoIDRomaneio);
@@ -255,7 +257,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(609, 181);
+            this.label14.Location = new System.Drawing.Point(502, 181);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(108, 13);
             this.label14.TabIndex = 87;
@@ -264,9 +266,9 @@
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(752, 178);
+            this.comboBox5.Location = new System.Drawing.Point(612, 178);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(192, 21);
+            this.comboBox5.Size = new System.Drawing.Size(332, 21);
             this.comboBox5.TabIndex = 86;
             // 
             // textBox9
@@ -387,9 +389,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(566, 91);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.Size = new System.Drawing.Size(44, 13);
             this.label8.TabIndex = 71;
-            this.label8.Text = "Fruta";
+            this.label8.Text = "Produto";
             // 
             // label7
             // 
@@ -816,6 +818,18 @@
             // 
             this.tblCarregamentoBlocoTableAdapter.ClearBeforeFill = true;
             // 
+            // btnRetornar
+            // 
+            this.btnRetornar.Image = global::Apresentacao.Properties.Resources.restart_back_left_arrow_6022;
+            this.btnRetornar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRetornar.Location = new System.Drawing.Point(42, 476);
+            this.btnRetornar.Name = "btnRetornar";
+            this.btnRetornar.Size = new System.Drawing.Size(89, 44);
+            this.btnRetornar.TabIndex = 97;
+            this.btnRetornar.Text = "Retornar";
+            this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRetornar.UseVisualStyleBackColor = true;
+            // 
             // frmRomaneio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -914,5 +928,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.CheckBox checkBoxAdiantFretMot;
+        private System.Windows.Forms.Button btnRetornar;
     }
 }

@@ -81,8 +81,9 @@ namespace Apresentacao
                     dgwFruta.Update();
                     dgwFruta.Refresh();
 
-                    //cpoCaixaPesquisa.Text = "%%";
-                    // AtualizarGrid();
+                    btnSalvar.Enabled = true;
+                    btnExcluir.Enabled = false;
+                    btnAlterar.Enabled = false;
 
 
                 }
@@ -165,6 +166,8 @@ namespace Apresentacao
             cpoUnidMedida.Text = dgwFruta.SelectedRows[0].Cells[2].Value.ToString();
             //cpoStatus.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
             btnSalvar.Enabled = false;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -219,8 +222,9 @@ namespace Apresentacao
 
 
 
-
                     btnSalvar.Enabled = true;
+                    btnExcluir.Enabled = false;
+                    btnAlterar.Enabled = false;
 
                 }
 
@@ -282,6 +286,8 @@ namespace Apresentacao
 
 
                     btnSalvar.Enabled = true;
+                    btnExcluir.Enabled = false;
+                    btnAlterar.Enabled = false;
 
                 }
 
@@ -294,7 +300,19 @@ namespace Apresentacao
 
             }
 
-       }
+        private void btnRetornar_Click(object sender, EventArgs e)
+        {
+            dgwFruta.Update();
+            dgwFruta.Refresh();
+            cpoIDFruta.Clear();
+            cpoNome.Clear();
+            cpoUnidMedida.Clear();
+
+            btnSalvar.Enabled = true;
+            btnExcluir.Enabled = false;
+            btnAlterar.Enabled = false;
+        }
+    }
 
  }
 

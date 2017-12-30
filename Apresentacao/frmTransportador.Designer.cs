@@ -67,6 +67,7 @@
             this.midasDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblTransportadorTableAdapter = new Apresentacao.midasDataSet2TableAdapters.tblTransportadorTableAdapter();
             this.cpoPlaca = new System.Windows.Forms.TextBox();
+            this.btnRetornar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwTransportador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblTransportadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSet2)).BeginInit();
@@ -77,7 +78,7 @@
             // cpoIDTransportador
             // 
             this.cpoIDTransportador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoIDTransportador.Location = new System.Drawing.Point(95, 439);
+            this.cpoIDTransportador.Location = new System.Drawing.Point(178, 0);
             this.cpoIDTransportador.Name = "cpoIDTransportador";
             this.cpoIDTransportador.Size = new System.Drawing.Size(100, 20);
             this.cpoIDTransportador.TabIndex = 108;
@@ -122,6 +123,7 @@
             this.cpoTelefone.Name = "cpoTelefone";
             this.cpoTelefone.Size = new System.Drawing.Size(247, 20);
             this.cpoTelefone.TabIndex = 6;
+            this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress);
             // 
             // cpoVeiculo
             // 
@@ -338,6 +340,7 @@
             // 
             // btnExcluir
             // 
+            this.btnExcluir.Enabled = false;
             this.btnExcluir.Image = global::Apresentacao.Properties.Resources.delete_4219;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.Location = new System.Drawing.Point(513, 431);
@@ -364,6 +367,7 @@
             // 
             // btnAlterar
             // 
+            this.btnAlterar.Enabled = false;
             this.btnAlterar.Image = global::Apresentacao.Properties.Resources.document_write_22637;
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.Location = new System.Drawing.Point(402, 431);
@@ -409,11 +413,25 @@
             this.cpoPlaca.Size = new System.Drawing.Size(109, 20);
             this.cpoPlaca.TabIndex = 109;
             // 
+            // btnRetornar
+            // 
+            this.btnRetornar.Image = global::Apresentacao.Properties.Resources.restart_back_left_arrow_6022;
+            this.btnRetornar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRetornar.Location = new System.Drawing.Point(39, 431);
+            this.btnRetornar.Name = "btnRetornar";
+            this.btnRetornar.Size = new System.Drawing.Size(89, 44);
+            this.btnRetornar.TabIndex = 110;
+            this.btnRetornar.Text = "Retornar";
+            this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRetornar.UseVisualStyleBackColor = true;
+            this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
+            // 
             // frmTransportador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(863, 497);
+            this.Controls.Add(this.btnRetornar);
             this.Controls.Add(this.cpoPlaca);
             this.Controls.Add(this.cpoIDTransportador);
             this.Controls.Add(this.lblIDCliente);
@@ -493,5 +511,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox cpoPlaca;
+        private System.Windows.Forms.Button btnRetornar;
     }
 }

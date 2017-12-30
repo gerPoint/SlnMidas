@@ -25,8 +25,7 @@ namespace Apresentacao
 
         private void frmTransportador_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'midasDataSet2.tblTransportador' table. You can move, or remove it, as needed.
-            //this.tblTransportadorTableAdapter.Fill(this.midasDataSet2.tblTransportador);
+
 
         }
 
@@ -95,10 +94,9 @@ namespace Apresentacao
                     dgwTransportador.Update();
                     dgwTransportador.Refresh();
 
-                    //cpoCaixaPesquisa.Text = "%%";
-                    // AtualizarGrid();
-
-
+                    btnSalvar.Enabled = true;
+                    btnExcluir.Enabled = false;
+                    btnAlterar.Enabled = false;
                 }
             }
 
@@ -124,7 +122,7 @@ namespace Apresentacao
                     MessageBox.Show("Por favor, informe o nome do Transportador para pesquisar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     cpoCaixaPesquisa.Text = string.Empty;
                     cpoCaixaPesquisa.Focus();
-                    //CaixaPesquisa.DataSource = "";
+
                     return;
                 }
 
@@ -178,7 +176,10 @@ namespace Apresentacao
             cpoEndereco.Text = dgwTransportador.SelectedRows[0].Cells[6].Value.ToString();
             cpoTelefone.Text = dgwTransportador.SelectedRows[0].Cells[7].Value.ToString();
             //cpoStatus.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
+
             btnSalvar.Enabled = false;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -230,6 +231,7 @@ namespace Apresentacao
                 {
                     MessageBox.Show("Registro alterado com sucesso!", "Informação",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     dgwTransportador.DataSource = null;
 
 
@@ -244,7 +246,8 @@ namespace Apresentacao
 
 
                     btnSalvar.Enabled = true;
-
+                    btnExcluir.Enabled = false;
+                    btnAlterar.Enabled = false;
                 }
 
             }
@@ -304,8 +307,10 @@ namespace Apresentacao
                 {
                     MessageBox.Show("Registro excluído com sucesso!", "Informação",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    dgwTransportador.DataSource = null;
 
+                    dgwTransportador.DataSource = null;
+                    dgwTransportador.Update();
+                    dgwTransportador.Refresh();
 
                     cpoIDTransportador.Clear();
                     cpoNome.Clear();
@@ -317,7 +322,8 @@ namespace Apresentacao
                     cpoUf.Clear();
 
                     btnSalvar.Enabled = true;
-
+                    btnExcluir.Enabled = false;
+                    btnAlterar.Enabled = false;
                 }
 
             }
@@ -327,9 +333,34 @@ namespace Apresentacao
             }
 
 
+         }
 
+        private void btnRetornar_Click(object sender, EventArgs e)
+        {
+            dgwTransportador.Update();
+            dgwTransportador.Refresh();
 
-           }
-      }
+            cpoIDTransportador.Clear();
+            cpoNome.Clear();
+            cpoVeiculo.Clear();
+            cpoPlaca.Clear();
+            cpoCidade.Clear();
+            cpoTelefone.Clear();
+            cpoEndereco.Clear();
+            cpoUf.Clear();
+
+            btnSalvar.Enabled = true;
+            btnExcluir.Enabled = false;
+            btnAlterar.Enabled = true;
+        }
+
+        private void cpoTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+    }
     
 }

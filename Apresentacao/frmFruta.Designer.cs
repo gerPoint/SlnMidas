@@ -49,6 +49,7 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.tblFrutaTableAdapter = new Apresentacao.midasDataSet1TableAdapters.tblFrutaTableAdapter();
             this.cpoIDFruta = new System.Windows.Forms.TextBox();
+            this.btnRetornar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFruta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSet1)).BeginInit();
@@ -57,7 +58,7 @@
             // cpoUnidMedida
             // 
             this.cpoUnidMedida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoUnidMedida.Location = new System.Drawing.Point(389, 301);
+            this.cpoUnidMedida.Location = new System.Drawing.Point(387, 304);
             this.cpoUnidMedida.Name = "cpoUnidMedida";
             this.cpoUnidMedida.Size = new System.Drawing.Size(63, 20);
             this.cpoUnidMedida.TabIndex = 5;
@@ -65,7 +66,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(313, 303);
+            this.label8.Location = new System.Drawing.Point(311, 306);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 13);
             this.label8.TabIndex = 93;
@@ -73,9 +74,10 @@
             // 
             // btnExcluir
             // 
+            this.btnExcluir.Enabled = false;
             this.btnExcluir.Image = global::Apresentacao.Properties.Resources.delete_4219;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcluir.Location = new System.Drawing.Point(145, 339);
+            this.btnExcluir.Location = new System.Drawing.Point(268, 357);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(87, 44);
             this.btnExcluir.TabIndex = 7;
@@ -88,7 +90,7 @@
             // 
             this.btnSalvar.Image = global::Apresentacao.Properties.Resources.saveall_1204;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvar.Location = new System.Drawing.Point(362, 339);
+            this.btnSalvar.Location = new System.Drawing.Point(485, 357);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(91, 44);
             this.btnSalvar.TabIndex = 9;
@@ -101,7 +103,7 @@
             // 
             this.btnCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(253, 339);
+            this.btnCancelar.Location = new System.Drawing.Point(376, 357);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 44);
             this.btnCancelar.TabIndex = 8;
@@ -112,9 +114,10 @@
             // 
             // btnAlterar
             // 
+            this.btnAlterar.Enabled = false;
             this.btnAlterar.Image = global::Apresentacao.Properties.Resources.document_write_22637;
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAlterar.Location = new System.Drawing.Point(34, 339);
+            this.btnAlterar.Location = new System.Drawing.Point(158, 357);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(87, 44);
             this.btnAlterar.TabIndex = 6;
@@ -138,7 +141,7 @@
             this.dgwFruta.Name = "dgwFruta";
             this.dgwFruta.ReadOnly = true;
             this.dgwFruta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwFruta.Size = new System.Drawing.Size(418, 211);
+            this.dgwFruta.Size = new System.Drawing.Size(542, 211);
             this.dgwFruta.TabIndex = 83;
             this.dgwFruta.DoubleClick += new System.EventHandler(this.dgwFruta_DoubleClick);
             // 
@@ -193,7 +196,7 @@
             // cpoNome
             // 
             this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoNome.Location = new System.Drawing.Point(74, 301);
+            this.cpoNome.Location = new System.Drawing.Point(72, 304);
             this.cpoNome.Name = "cpoNome";
             this.cpoNome.Size = new System.Drawing.Size(233, 20);
             this.cpoNome.TabIndex = 4;
@@ -204,13 +207,13 @@
             this.cpoCaixaPesquisa.Location = new System.Drawing.Point(173, 26);
             this.cpoCaixaPesquisa.Multiline = true;
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
-            this.cpoCaixaPesquisa.Size = new System.Drawing.Size(279, 23);
+            this.cpoCaixaPesquisa.Size = new System.Drawing.Size(403, 23);
             this.cpoCaixaPesquisa.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 303);
+            this.label1.Location = new System.Drawing.Point(31, 306);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 81;
@@ -240,11 +243,25 @@
             this.cpoIDFruta.TabIndex = 94;
             this.cpoIDFruta.Visible = false;
             // 
+            // btnRetornar
+            // 
+            this.btnRetornar.Image = global::Apresentacao.Properties.Resources.restart_back_left_arrow_6022;
+            this.btnRetornar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRetornar.Location = new System.Drawing.Point(34, 357);
+            this.btnRetornar.Name = "btnRetornar";
+            this.btnRetornar.Size = new System.Drawing.Size(89, 44);
+            this.btnRetornar.TabIndex = 95;
+            this.btnRetornar.Text = "Retornar";
+            this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRetornar.UseVisualStyleBackColor = true;
+            this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
+            // 
             // frmFruta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(489, 401);
+            this.ClientSize = new System.Drawing.Size(606, 418);
+            this.Controls.Add(this.btnRetornar);
             this.Controls.Add(this.cpoIDFruta);
             this.Controls.Add(this.cpoUnidMedida);
             this.Controls.Add(this.label8);
@@ -293,5 +310,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn unidMedidaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnRetornar;
     }
 }

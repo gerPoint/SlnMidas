@@ -30,8 +30,7 @@ namespace Apresentacao
 
         private void frmFornecedor_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'midasDataSetFornecedor.tblFornecedor' table. You can move, or remove it, as needed.
-            //this.tblFornecedorTableAdapter.Fill(this.midasDataSetFornecedor.tblFornecedor);
+
 
         }
 
@@ -94,7 +93,9 @@ namespace Apresentacao
 
 
                     dgwFornecedor.DataSource = null;
-
+                    btnSalvar.Enabled = true;
+                    btnAlterar.Enabled = false;
+                    btnExcluir.Enabled = false;
 
                     //cpoCaixaPesquisa.Text = "%%";
                     // AtualizarGrid();
@@ -169,14 +170,10 @@ namespace Apresentacao
 
 
 
-        private void dgwFornecedor_DoubleClick(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            if (cpoNome.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            if (cpoIDFornecedor.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
             {
                 MessageBox.Show("Nenhum registro selecionado.");
                 return;
@@ -187,7 +184,6 @@ namespace Apresentacao
 
 
                 this.objFornecedor.IDFornecedor = Convert.ToInt32(cpoIDFornecedor.Text);
-                //cliente.IDCliente = Convert.ToInt32(linha["IDCliente"]);
                 this.objFornecedor.Nome = cpoNome.Text.TrimStart();
                 this.objFornecedor.RazaoSocial = cpoRazaoSocial.Text;
                 this.objFornecedor.Cnpj = cpoCnpj.Text.TrimStart();
@@ -228,12 +224,13 @@ namespace Apresentacao
                 {
                     MessageBox.Show("Registro alterado com sucesso!", "Informação",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     dgwFornecedor.DataSource = null;
                     dgwFornecedor.Update();
                     dgwFornecedor.Refresh();
 
 
-
+                    cpoIDFornecedor.Clear();
                     cpoNome.Clear();
                     cpoRazaoSocial.Clear();
                     cpoCnpj.Clear();
@@ -244,10 +241,8 @@ namespace Apresentacao
                     cpoUf.Clear();
 
                     btnSalvar.Enabled = true;
-
-
-                    // CaixaPesquisa.Text = "";
-                    // AtualizarGrid();
+                    btnAlterar.Enabled = false;
+                    btnExcluir.Enabled = false;
 
                 }
 
@@ -255,7 +250,7 @@ namespace Apresentacao
 
             catch (Exception ex)
             {
-                MessageBox.Show("Falha ao salvar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Falha ao alterar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -272,6 +267,133 @@ namespace Apresentacao
             cpoEmail.Text = dgwFornecedor.SelectedRows[0].Cells[6].Value.ToString();
             cpoCnpj.Text = dgwFornecedor.SelectedRows[0].Cells[7].Value.ToString();
             cpoCpf.Text = dgwFornecedor.SelectedRows[0].Cells[8].Value.ToString();
+
+            btnSalvar.Enabled = false;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
+        }
+
+        private void btnRetornar_Click(object sender, EventArgs e)
+        {
+            dgwFornecedor.Update();
+            dgwFornecedor.Refresh();
+
+
+            cpoIDFornecedor.Clear();
+            cpoNome.Clear();
+            cpoRazaoSocial.Clear();
+            cpoCnpj.Clear();
+            cpoCidade.Clear();
+            cpoEmail.Clear();
+            cpoTelefone.Clear();
+            cpoEndereco.Clear();
+            cpoUf.Clear();
+
+            btnSalvar.Enabled = true;
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
+
+        }
+
+
+
+        private void cpoTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoCnpj_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void checkBoxCpf_CheckedChanged(object sender, EventArgs e)
+        {
+            Verificado();
+        }
+
+
+        private void Verificado()
+        {
+          
+            cpoCpf.Enabled = checkBoxCpf.Checked;
+            
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            if (cpoIDFornecedor.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            {
+                MessageBox.Show("Nenhum registro selecionado.");
+                return;
+            }
+
+            try
+            {
+
+
+                this.objFornecedor.IDFornecedor = Convert.ToInt32(cpoIDFornecedor.Text);
+                this.objFornecedor.Nome = cpoNome.Text.TrimStart();
+                this.objFornecedor.RazaoSocial = cpoRazaoSocial.Text;
+                this.objFornecedor.Cnpj = cpoCnpj.Text.TrimStart();
+                this.objFornecedor.Cpf = cpoCpf.Text.TrimStart();
+                this.objFornecedor.Endereco = cpoEndereco.Text.TrimStart();
+                this.objFornecedor.Cidade = cpoCidade.Text.TrimStart();
+                this.objFornecedor.Uf = cpoUf.Text.TrimStart();
+                this.objFornecedor.Telefone = cpoTelefone.Text.TrimStart();
+                this.objFornecedor.Email = cpoEmail.Text.TrimStart();
+
+
+                string strRetorno = string.Empty;
+
+                if (cpoNome.Text == "")
+                {
+                    MessageBox.Show("Campo Obrigatório não informado.");
+                    return;
+                }
+
+
+
+                strRetorno = negFornecedor.Excluir(this.objFornecedor);
+
+
+                int intCodigo;
+                if (int.TryParse(strRetorno, out intCodigo) == true)
+                {
+                    MessageBox.Show("Registro excluido com sucesso!", "Informação",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgwFornecedor.DataSource = null;
+                    dgwFornecedor.Update();
+                    dgwFornecedor.Refresh();
+
+
+                    cpoIDFornecedor.Clear();
+                    cpoNome.Clear();
+                    cpoRazaoSocial.Clear();
+                    cpoCnpj.Clear();
+                    cpoCidade.Clear();
+                    cpoEmail.Clear();
+                    cpoTelefone.Clear();
+                    cpoEndereco.Clear();
+                    cpoUf.Clear();
+
+                    btnSalvar.Enabled = true;
+                    btnAlterar.Enabled = false;
+                    btnExcluir.Enabled = false;
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao excluir registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 

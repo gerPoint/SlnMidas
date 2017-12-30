@@ -88,6 +88,30 @@
     <Compile Include="frmRomaneio.Designer.cs">
       <DependentUpon>frmRomaneio.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSelecionarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelecionarCliente.Designer.cs">
+      <DependentUpon>FrmSelecionarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelecionarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelecionarFornecedor.Designer.cs">
+      <DependentUpon>FrmSelecionarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelecionarRomaneio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelecionarRomaneio.Designer.cs">
+      <DependentUpon>FrmSelecionarRomaneio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelecionarTransportador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelecionarTransportador.Designer.cs">
+      <DependentUpon>FrmSelecionarTransportador.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTransportador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -399,6 +423,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\belas-paisagens-no-campo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restart_back_left_arrow_6022.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

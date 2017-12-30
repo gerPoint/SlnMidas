@@ -70,6 +70,7 @@
             this.tblUsuarioTableAdapter = new Apresentacao.midasDataSetUsuarioTableAdapters.tblUsuarioTableAdapter();
             this.cpoSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnRetornar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetUsuario)).BeginInit();
@@ -78,7 +79,7 @@
             // cpoIDUsuario
             // 
             this.cpoIDUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoIDUsuario.Location = new System.Drawing.Point(88, 498);
+            this.cpoIDUsuario.Location = new System.Drawing.Point(171, 0);
             this.cpoIDUsuario.Name = "cpoIDUsuario";
             this.cpoIDUsuario.Size = new System.Drawing.Size(100, 20);
             this.cpoIDUsuario.TabIndex = 132;
@@ -100,7 +101,7 @@
             // cpoUf
             // 
             this.cpoUf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoUf.Location = new System.Drawing.Point(314, 393);
+            this.cpoUf.Location = new System.Drawing.Point(314, 391);
             this.cpoUf.Name = "cpoUf";
             this.cpoUf.Size = new System.Drawing.Size(42, 20);
             this.cpoUf.TabIndex = 9;
@@ -108,7 +109,7 @@
             // cpoCidade
             // 
             this.cpoCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCidade.Location = new System.Drawing.Point(88, 393);
+            this.cpoCidade.Location = new System.Drawing.Point(88, 391);
             this.cpoCidade.Name = "cpoCidade";
             this.cpoCidade.Size = new System.Drawing.Size(193, 20);
             this.cpoCidade.TabIndex = 8;
@@ -136,6 +137,7 @@
             this.cpoTelefone.Name = "cpoTelefone";
             this.cpoTelefone.Size = new System.Drawing.Size(129, 20);
             this.cpoTelefone.TabIndex = 12;
+            this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress);
             // 
             // label9
             // 
@@ -153,6 +155,7 @@
             this.cpoRg.Name = "cpoRg";
             this.cpoRg.Size = new System.Drawing.Size(122, 20);
             this.cpoRg.TabIndex = 10;
+            this.cpoRg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoRg_KeyPress);
             // 
             // label5
             // 
@@ -175,7 +178,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(287, 395);
+            this.label7.Location = new System.Drawing.Point(287, 393);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(21, 13);
             this.label7.TabIndex = 128;
@@ -184,7 +187,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 434);
+            this.label6.Location = new System.Drawing.Point(33, 434);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 127;
@@ -193,7 +196,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 395);
+            this.label4.Location = new System.Drawing.Point(33, 395);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 126;
@@ -206,9 +209,11 @@
             this.cpoCpf.Name = "cpoCpf";
             this.cpoCpf.Size = new System.Drawing.Size(124, 20);
             this.cpoCpf.TabIndex = 11;
+            this.cpoCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCpf_KeyPress);
             // 
             // btnExcluir
             // 
+            this.btnExcluir.Enabled = false;
             this.btnExcluir.Image = global::Apresentacao.Properties.Resources.delete_4219;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.Location = new System.Drawing.Point(455, 474);
@@ -235,6 +240,7 @@
             // 
             // btnAlterar
             // 
+            this.btnAlterar.Enabled = false;
             this.btnAlterar.Image = global::Apresentacao.Properties.Resources.document_write_22637;
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.Location = new System.Drawing.Point(344, 474);
@@ -265,11 +271,11 @@
             this.dataCadastroDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.dgwUsuario.DataSource = this.tblUsuarioBindingSource;
-            this.dgwUsuario.Location = new System.Drawing.Point(32, 72);
+            this.dgwUsuario.Location = new System.Drawing.Point(36, 72);
             this.dgwUsuario.Name = "dgwUsuario";
             this.dgwUsuario.ReadOnly = true;
             this.dgwUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwUsuario.Size = new System.Drawing.Size(728, 211);
+            this.dgwUsuario.Size = new System.Drawing.Size(724, 211);
             this.dgwUsuario.TabIndex = 122;
             this.dgwUsuario.DoubleClick += new System.EventHandler(this.dgwUsuario_DoubleClick);
             // 
@@ -437,17 +443,31 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 353);
+            this.label2.Location = new System.Drawing.Point(33, 353);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 134;
             this.label2.Text = "Senha";
+            // 
+            // btnRetornar
+            // 
+            this.btnRetornar.Image = global::Apresentacao.Properties.Resources.restart_back_left_arrow_6022;
+            this.btnRetornar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRetornar.Location = new System.Drawing.Point(36, 474);
+            this.btnRetornar.Name = "btnRetornar";
+            this.btnRetornar.Size = new System.Drawing.Size(89, 44);
+            this.btnRetornar.TabIndex = 135;
+            this.btnRetornar.Text = "Retornar";
+            this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRetornar.UseVisualStyleBackColor = true;
+            this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
             // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 543);
+            this.Controls.Add(this.btnRetornar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cpoSenha);
             this.Controls.Add(this.cpoIDUsuario);
@@ -531,5 +551,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn senhaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnRetornar;
     }
 }
