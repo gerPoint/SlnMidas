@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Apresentacao
 {
-    public partial class FrmSelecionarCliente : Form
+    public partial class frmSelecionarCliente : Form
     {
-        public FrmSelecionarCliente()
+        public frmSelecionarCliente()
         {
             InitializeComponent();
+        }
+
+        private void FrmSelecionarCliente_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'midasDataSetcliente.tblCliente' table. You can move, or remove it, as needed.
+            this.tblClienteTableAdapter.Fill(this.midasDataSetcliente.tblCliente);
+
         }
     }
 }

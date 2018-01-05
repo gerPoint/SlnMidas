@@ -88,29 +88,29 @@
     <Compile Include="frmRomaneio.Designer.cs">
       <DependentUpon>frmRomaneio.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSelecionarCliente.cs">
+    <Compile Include="frmSelecionarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSelecionarCliente.Designer.cs">
-      <DependentUpon>FrmSelecionarCliente.cs</DependentUpon>
+    <Compile Include="frmSelecionarCliente.Designer.cs">
+      <DependentUpon>frmSelecionarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSelecionarFornecedor.cs">
+    <Compile Include="frmSelecionarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSelecionarFornecedor.Designer.cs">
-      <DependentUpon>FrmSelecionarFornecedor.cs</DependentUpon>
+    <Compile Include="frmSelecionarFornecedor.Designer.cs">
+      <DependentUpon>frmSelecionarFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSelecionarRomaneio.cs">
+    <Compile Include="frmSelecionarRomaneio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSelecionarRomaneio.Designer.cs">
-      <DependentUpon>FrmSelecionarRomaneio.cs</DependentUpon>
+    <Compile Include="frmSelecionarRomaneio.Designer.cs">
+      <DependentUpon>frmSelecionarRomaneio.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSelecionarTransportador.cs">
+    <Compile Include="frmSelecionarTransportador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSelecionarTransportador.Designer.cs">
-      <DependentUpon>FrmSelecionarTransportador.cs</DependentUpon>
+    <Compile Include="frmSelecionarTransportador.Designer.cs">
+      <DependentUpon>frmSelecionarTransportador.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTransportador.cs">
       <SubType>Form</SubType>
@@ -206,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRomaneio.resx">
       <DependentUpon>frmRomaneio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelecionarCliente.resx">
+      <DependentUpon>frmSelecionarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTransportador.resx">
       <DependentUpon>frmTransportador.cs</DependentUpon>

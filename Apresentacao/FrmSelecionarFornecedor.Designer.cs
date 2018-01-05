@@ -1,6 +1,6 @@
 ﻿namespace Apresentacao
 {
-    partial class FrmSelecionarFornecedor
+    partial class frmSelecionarFornecedor
     {
         /// <summary>
         /// Required designer variable.

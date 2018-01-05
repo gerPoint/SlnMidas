@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Apresentacao
 {
-    public partial class FrmSelecionarTransportador : Form
+    public partial class frmSelecionarTransportador : Form
     {
-        public FrmSelecionarTransportador()
+        public frmSelecionarTransportador()
         {
             InitializeComponent();
         }

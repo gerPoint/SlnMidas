@@ -102,19 +102,19 @@ namespace Apresentacao
 
         private void btnChamacli_Click(object sender, EventArgs e)
         {
-            frmCliente OutroForm = new frmCliente();
+            frmSelecionarCliente OutroForm = new frmSelecionarCliente();
             OutroForm.ShowDialog();
         }
 
         private void btnChamafor_Click(object sender, EventArgs e)
         {
-            frmFornecedor OutroForm = new frmFornecedor();
+            frmSelecionarFornecedor OutroForm = new frmSelecionarFornecedor();
             OutroForm.ShowDialog();
         }
 
         private void btnChamaTransp_Click(object sender, EventArgs e)
         {
-            frmTransportador OutroForm = new frmTransportador();
+            frmSelecionarTransportador OutroForm = new frmSelecionarTransportador();
             OutroForm.ShowDialog();
         }
 

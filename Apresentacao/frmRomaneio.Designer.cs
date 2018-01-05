@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRomaneio));
             this.tabPage = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnRetornar = new System.Windows.Forms.Button();
             this.checkBoxAdiantFretMot = new System.Windows.Forms.CheckBox();
             this.label18 = new System.Windows.Forms.Label();
             this.cpoIDRomaneio = new System.Windows.Forms.TextBox();
@@ -99,7 +100,9 @@
             this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetCarregbloco = new Apresentacao.midasDataSetCarregbloco();
             this.tblCarregamentoBlocoTableAdapter = new Apresentacao.midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter();
-            this.btnRetornar = new System.Windows.Forms.Button();
+            this.cpoIDCliente = new System.Windows.Forms.TextBox();
+            this.cpoIDTransportador = new System.Windows.Forms.TextBox();
+            this.cpoIDFornecedor = new System.Windows.Forms.TextBox();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -122,6 +125,9 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.cpoIDFornecedor);
+            this.tabPage1.Controls.Add(this.cpoIDTransportador);
+            this.tabPage1.Controls.Add(this.cpoIDCliente);
             this.tabPage1.Controls.Add(this.btnRetornar);
             this.tabPage1.Controls.Add(this.checkBoxAdiantFretMot);
             this.tabPage1.Controls.Add(this.label18);
@@ -169,6 +175,18 @@
             this.tabPage1.Size = new System.Drawing.Size(966, 537);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Romaneio";
+            // 
+            // btnRetornar
+            // 
+            this.btnRetornar.Image = global::Apresentacao.Properties.Resources.restart_back_left_arrow_6022;
+            this.btnRetornar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRetornar.Location = new System.Drawing.Point(42, 476);
+            this.btnRetornar.Name = "btnRetornar";
+            this.btnRetornar.Size = new System.Drawing.Size(89, 44);
+            this.btnRetornar.TabIndex = 97;
+            this.btnRetornar.Text = "Retornar";
+            this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRetornar.UseVisualStyleBackColor = true;
             // 
             // checkBoxAdiantFretMot
             // 
@@ -818,23 +836,35 @@
             // 
             this.tblCarregamentoBlocoTableAdapter.ClearBeforeFill = true;
             // 
-            // btnRetornar
+            // cpoIDCliente
             // 
-            this.btnRetornar.Image = global::Apresentacao.Properties.Resources.restart_back_left_arrow_6022;
-            this.btnRetornar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRetornar.Location = new System.Drawing.Point(42, 476);
-            this.btnRetornar.Name = "btnRetornar";
-            this.btnRetornar.Size = new System.Drawing.Size(89, 44);
-            this.btnRetornar.TabIndex = 97;
-            this.btnRetornar.Text = "Retornar";
-            this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRetornar.UseVisualStyleBackColor = true;
+            this.cpoIDCliente.Location = new System.Drawing.Point(474, 281);
+            this.cpoIDCliente.Name = "cpoIDCliente";
+            this.cpoIDCliente.Size = new System.Drawing.Size(21, 20);
+            this.cpoIDCliente.TabIndex = 98;
+            this.cpoIDCliente.Visible = false;
+            // 
+            // cpoIDTransportador
+            // 
+            this.cpoIDTransportador.Location = new System.Drawing.Point(474, 361);
+            this.cpoIDTransportador.Name = "cpoIDTransportador";
+            this.cpoIDTransportador.Size = new System.Drawing.Size(21, 20);
+            this.cpoIDTransportador.TabIndex = 99;
+            this.cpoIDTransportador.Visible = false;
+            // 
+            // cpoIDFornecedor
+            // 
+            this.cpoIDFornecedor.Location = new System.Drawing.Point(474, 322);
+            this.cpoIDFornecedor.Name = "cpoIDFornecedor";
+            this.cpoIDFornecedor.Size = new System.Drawing.Size(21, 20);
+            this.cpoIDFornecedor.TabIndex = 100;
+            this.cpoIDFornecedor.Visible = false;
             // 
             // frmRomaneio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 563);
+            this.ClientSize = new System.Drawing.Size(985, 563);
             this.Controls.Add(this.tabPage);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -929,5 +959,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.CheckBox checkBoxAdiantFretMot;
         private System.Windows.Forms.Button btnRetornar;
+        private System.Windows.Forms.TextBox cpoIDFornecedor;
+        private System.Windows.Forms.TextBox cpoIDTransportador;
+        private System.Windows.Forms.TextBox cpoIDCliente;
     }
 }

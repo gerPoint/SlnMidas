@@ -1,6 +1,6 @@
 ﻿namespace Apresentacao
 {
-    partial class FrmSelecionarRomaneio
+    partial class frmSelecionarRomaneio
     {
         /// <summary>
         /// Required designer variable.
