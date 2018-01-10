@@ -430,6 +430,9 @@
   <ItemGroup>
     <None Include="Resources\restart_back_left_arrow_6022.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advice_accept_ok_theaction_10829.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

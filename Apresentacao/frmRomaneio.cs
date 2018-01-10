@@ -12,6 +12,7 @@ namespace Apresentacao
     public partial class frmRomaneio : Form
     {
         BindingList<objCarregamentoBloco> listCarregamento = new BindingList<objCarregamentoBloco>();
+        private int idcliente;
 
         public frmRomaneio()
         {
@@ -102,8 +103,9 @@ namespace Apresentacao
 
         private void btnChamacli_Click(object sender, EventArgs e)
         {
-            frmSelecionarCliente OutroForm = new frmSelecionarCliente();
-            OutroForm.ShowDialog();
+
+
+            
         }
 
         private void btnChamafor_Click(object sender, EventArgs e)
@@ -153,6 +155,15 @@ namespace Apresentacao
         private void btnSalvar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cpoQtd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
         }
     }
 

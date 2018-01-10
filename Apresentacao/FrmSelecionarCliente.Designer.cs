@@ -29,16 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgwCliente = new System.Windows.Forms.DataGridView();
-            this.cpoCaixaPesquisa = new System.Windows.Forms.TextBox();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.midasDataSetcliente = new Apresentacao.midasDataSetcliente();
-            this.midasDataSetclienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.midasDataSetCliente1 = new Apresentacao.midasDataSetCliente();
-            this.midasDataSetCliente1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tblClienteTableAdapter = new Apresentacao.midasDataSetclienteTableAdapters.tblClienteTableAdapter();
-            this.tblClienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dgwSelCliente = new System.Windows.Forms.DataGridView();
             this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razaoSocialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,21 +42,31 @@
             this.cnpjDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataCadastroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetcliente)).BeginInit();
+            this.tblClienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetclienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetcliente = new Apresentacao.midasDataSetcliente();
+            this.cpoCaixaPesquisa = new System.Windows.Forms.TextBox();
+            this.midasDataSetCliente1 = new Apresentacao.midasDataSetCliente();
+            this.midasDataSetCliente1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblClienteTableAdapter = new Apresentacao.midasDataSetclienteTableAdapters.tblClienteTableAdapter();
+            this.btnSelecionar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwSelCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetclienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetcliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCliente1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCliente1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgwCliente
+            // dgwSelCliente
             // 
-            this.dgwCliente.AllowUserToDeleteRows = false;
-            this.dgwCliente.AutoGenerateColumns = false;
-            this.dgwCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgwSelCliente.AllowUserToDeleteRows = false;
+            this.dgwSelCliente.AutoGenerateColumns = false;
+            this.dgwSelCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwSelCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDClienteDataGridViewTextBoxColumn,
             this.nomeDataGridViewTextBoxColumn,
             this.razaoSocialDataGridViewTextBoxColumn,
@@ -78,67 +79,14 @@
             this.cnpjDataGridViewTextBoxColumn,
             this.ufDataGridViewTextBoxColumn,
             this.dataCadastroDataGridViewTextBoxColumn});
-            this.dgwCliente.DataSource = this.tblClienteBindingSource1;
-            this.dgwCliente.Location = new System.Drawing.Point(38, 82);
-            this.dgwCliente.Name = "dgwCliente";
-            this.dgwCliente.ReadOnly = true;
-            this.dgwCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwCliente.Size = new System.Drawing.Size(782, 211);
-            this.dgwCliente.TabIndex = 18;
-            // 
-            // cpoCaixaPesquisa
-            // 
-            this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCaixaPesquisa.Location = new System.Drawing.Point(177, 36);
-            this.cpoCaixaPesquisa.Multiline = true;
-            this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
-            this.cpoCaixaPesquisa.Size = new System.Drawing.Size(643, 23);
-            this.cpoCaixaPesquisa.TabIndex = 17;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Image = global::Apresentacao.Properties.Resources.pesquisar1;
-            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(38, 22);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(124, 45);
-            this.btnPesquisar.TabIndex = 16;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            // 
-            // midasDataSetcliente
-            // 
-            this.midasDataSetcliente.DataSetName = "midasDataSetcliente";
-            this.midasDataSetcliente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // midasDataSetclienteBindingSource
-            // 
-            this.midasDataSetclienteBindingSource.DataSource = this.midasDataSetcliente;
-            this.midasDataSetclienteBindingSource.Position = 0;
-            // 
-            // midasDataSetCliente1
-            // 
-            this.midasDataSetCliente1.DataSetName = "midasDataSet";
-            this.midasDataSetCliente1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // midasDataSetCliente1BindingSource
-            // 
-            this.midasDataSetCliente1BindingSource.DataSource = this.midasDataSetCliente1;
-            this.midasDataSetCliente1BindingSource.Position = 0;
-            // 
-            // tblClienteBindingSource
-            // 
-            this.tblClienteBindingSource.DataMember = "tblCliente";
-            this.tblClienteBindingSource.DataSource = this.midasDataSetclienteBindingSource;
-            // 
-            // tblClienteTableAdapter
-            // 
-            this.tblClienteTableAdapter.ClearBeforeFill = true;
-            // 
-            // tblClienteBindingSource1
-            // 
-            this.tblClienteBindingSource1.DataMember = "tblCliente";
-            this.tblClienteBindingSource1.DataSource = this.midasDataSetclienteBindingSource;
+            this.dgwSelCliente.DataSource = this.tblClienteBindingSource1;
+            this.dgwSelCliente.Location = new System.Drawing.Point(38, 82);
+            this.dgwSelCliente.Name = "dgwSelCliente";
+            this.dgwSelCliente.ReadOnly = true;
+            this.dgwSelCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgwSelCliente.Size = new System.Drawing.Size(782, 211);
+            this.dgwSelCliente.TabIndex = 18;
+            this.dgwSelCliente.DoubleClick += new System.EventHandler(this.dgwSelCliente_DoubleClick);
             // 
             // iDClienteDataGridViewTextBoxColumn
             // 
@@ -236,24 +184,93 @@
             this.dataCadastroDataGridViewTextBoxColumn.ReadOnly = true;
             this.dataCadastroDataGridViewTextBoxColumn.Visible = false;
             // 
-            // FrmSelecionarCliente
+            // tblClienteBindingSource1
+            // 
+            this.tblClienteBindingSource1.DataMember = "tblCliente";
+            this.tblClienteBindingSource1.DataSource = this.midasDataSetclienteBindingSource;
+            // 
+            // midasDataSetclienteBindingSource
+            // 
+            this.midasDataSetclienteBindingSource.DataSource = this.midasDataSetcliente;
+            this.midasDataSetclienteBindingSource.Position = 0;
+            // 
+            // midasDataSetcliente
+            // 
+            this.midasDataSetcliente.DataSetName = "midasDataSetcliente";
+            this.midasDataSetcliente.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cpoCaixaPesquisa
+            // 
+            this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCaixaPesquisa.Location = new System.Drawing.Point(177, 36);
+            this.cpoCaixaPesquisa.Multiline = true;
+            this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
+            this.cpoCaixaPesquisa.Size = new System.Drawing.Size(643, 23);
+            this.cpoCaixaPesquisa.TabIndex = 17;
+            // 
+            // midasDataSetCliente1
+            // 
+            this.midasDataSetCliente1.DataSetName = "midasDataSet";
+            this.midasDataSetCliente1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // midasDataSetCliente1BindingSource
+            // 
+            this.midasDataSetCliente1BindingSource.DataSource = this.midasDataSetCliente1;
+            this.midasDataSetCliente1BindingSource.Position = 0;
+            // 
+            // tblClienteBindingSource
+            // 
+            this.tblClienteBindingSource.DataMember = "tblCliente";
+            this.tblClienteBindingSource.DataSource = this.midasDataSetclienteBindingSource;
+            // 
+            // tblClienteTableAdapter
+            // 
+            this.tblClienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnSelecionar
+            // 
+            this.btnSelecionar.Image = global::Apresentacao.Properties.Resources.advice_accept_ok_theaction_10829;
+            this.btnSelecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSelecionar.Location = new System.Drawing.Point(726, 313);
+            this.btnSelecionar.Name = "btnSelecionar";
+            this.btnSelecionar.Size = new System.Drawing.Size(94, 45);
+            this.btnSelecionar.TabIndex = 19;
+            this.btnSelecionar.Text = "Selecionar";
+            this.btnSelecionar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSelecionar.UseVisualStyleBackColor = true;
+            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Image = global::Apresentacao.Properties.Resources.pesquisar1;
+            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisar.Location = new System.Drawing.Point(38, 22);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(124, 45);
+            this.btnPesquisar.TabIndex = 16;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // frmSelecionarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 370);
-            this.Controls.Add(this.dgwCliente);
+            this.ClientSize = new System.Drawing.Size(854, 372);
+            this.Controls.Add(this.btnSelecionar);
+            this.Controls.Add(this.dgwSelCliente);
             this.Controls.Add(this.cpoCaixaPesquisa);
             this.Controls.Add(this.btnPesquisar);
-            this.Name = "FrmSelecionarCliente";
+            this.Name = "frmSelecionarCliente";
             this.Text = "Selecionar Cliente";
             this.Load += new System.EventHandler(this.FrmSelecionarCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetcliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwSelCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetclienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetcliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCliente1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCliente1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,7 +278,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgwCliente;
+        private System.Windows.Forms.DataGridView dgwSelCliente;
         private midasDataSetCliente midasDataSetCliente1;
         private System.Windows.Forms.TextBox cpoCaixaPesquisa;
         private System.Windows.Forms.Button btnPesquisar;
@@ -283,5 +300,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cnpjDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ufDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnSelecionar;
     }
 }

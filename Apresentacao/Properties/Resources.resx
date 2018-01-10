@@ -136,6 +136,9 @@
   <data name="delete_4219" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_4219.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="restart_back_left_arrow_6022" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restart_back_left_arrow_6022.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="saveall_1204" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saveall_1204.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,7 +163,7 @@
   <data name="favicon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\favicon (1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="restart_back_left_arrow_6022" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\restart_back_left_arrow_6022.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="advice_accept_ok_theaction_10829" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\advice_accept_ok_theaction_10829.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

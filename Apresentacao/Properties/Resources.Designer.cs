@@ -63,6 +63,16 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap advice_accept_ok_theaction_10829 {
+            get {
+                object obj = ResourceManager.GetObject("advice_accept_ok_theaction_10829", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap belas_paisagens_no_campo {
             get {
                 object obj = ResourceManager.GetObject("belas-paisagens-no-campo", resourceCulture);
