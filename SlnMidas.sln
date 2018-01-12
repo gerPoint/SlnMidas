@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcessoDados", "AcessoDados\AcessoDados.csproj", "{F01BDFEC-90E2-4B24-9CD0-C7667BCF83D1}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apresentacao", "Apresentacao\Apresentacao.csproj", "{BD42A668-39B5-425B-98DC-CA58EC1D67E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjTransferencia", "ObjTransferencia\ObjTransferencia.csproj", "{0FFA750E-EF73-4664-ACDD-361A86B54D1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidacaoCpf_Cnpj", "ValidacaoCpf_Cnpj\ValidacaoCpf_Cnpj.csproj", "{9B646E2A-95C0-402A-826B-730AA7EAB3E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0FFA750E-EF73-4664-ACDD-361A86B54D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FFA750E-EF73-4664-ACDD-361A86B54D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FFA750E-EF73-4664-ACDD-361A86B54D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B646E2A-95C0-402A-826B-730AA7EAB3E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B646E2A-95C0-402A-826B-730AA7EAB3E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B646E2A-95C0-402A-826B-730AA7EAB3E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B646E2A-95C0-402A-826B-730AA7EAB3E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

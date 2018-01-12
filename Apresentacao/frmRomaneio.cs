@@ -155,8 +155,6 @@ namespace Apresentacao
             OutroForm.ShowDialog();
         }
 
-     
-
         private void dgwCarregamento_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
