@@ -35,6 +35,7 @@
             this.cpoIDFornecedor = new System.Windows.Forms.TextBox();
             this.cpoIDTransportador = new System.Windows.Forms.TextBox();
             this.cpoIDCliente = new System.Windows.Forms.TextBox();
+            this.btnRetornar = new System.Windows.Forms.Button();
             this.checkBoxAdiantFretMot = new System.Windows.Forms.CheckBox();
             this.label18 = new System.Windows.Forms.Label();
             this.cpoIDRomaneio = new System.Windows.Forms.TextBox();
@@ -67,17 +68,24 @@
             this.cpoTransportador = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cpoNomeCliente = new System.Windows.Forms.TextBox();
-            this.cpoFornecedor = new System.Windows.Forms.TextBox();
+            this.cpoNomeFornecedor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCCancelar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnConcluir = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.cpoQtd = new System.Windows.Forms.TextBox();
             this.cpoDescricao = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -95,14 +103,6 @@
             this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetCarregbloco = new Apresentacao.midasDataSetCarregbloco();
             this.tblCarregamentoBlocoTableAdapter = new Apresentacao.midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter();
-            this.btnRetornar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnCCancelar = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnConcluir = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -161,7 +161,7 @@
             this.tabPage1.Controls.Add(this.cpoTransportador);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.cpoNomeCliente);
-            this.tabPage1.Controls.Add(this.cpoFornecedor);
+            this.tabPage1.Controls.Add(this.cpoNomeFornecedor);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.comboBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
@@ -199,6 +199,18 @@
             this.cpoIDCliente.Size = new System.Drawing.Size(21, 20);
             this.cpoIDCliente.TabIndex = 98;
             this.cpoIDCliente.Visible = false;
+            // 
+            // btnRetornar
+            // 
+            this.btnRetornar.Image = global::Apresentacao.Properties.Resources.restart_back_left_arrow_6022;
+            this.btnRetornar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRetornar.Location = new System.Drawing.Point(42, 476);
+            this.btnRetornar.Name = "btnRetornar";
+            this.btnRetornar.Size = new System.Drawing.Size(89, 44);
+            this.btnRetornar.TabIndex = 97;
+            this.btnRetornar.Text = "Retornar";
+            this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRetornar.UseVisualStyleBackColor = true;
             // 
             // checkBoxAdiantFretMot
             // 
@@ -491,14 +503,14 @@
             this.cpoNomeCliente.Size = new System.Drawing.Size(332, 20);
             this.cpoNomeCliente.TabIndex = 65;
             // 
-            // cpoFornecedor
+            // cpoNomeFornecedor
             // 
-            this.cpoFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoFornecedor.Location = new System.Drawing.Point(136, 321);
-            this.cpoFornecedor.Name = "cpoFornecedor";
-            this.cpoFornecedor.ReadOnly = true;
-            this.cpoFornecedor.Size = new System.Drawing.Size(332, 20);
-            this.cpoFornecedor.TabIndex = 58;
+            this.cpoNomeFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoNomeFornecedor.Location = new System.Drawing.Point(136, 321);
+            this.cpoNomeFornecedor.Name = "cpoNomeFornecedor";
+            this.cpoNomeFornecedor.ReadOnly = true;
+            this.cpoNomeFornecedor.Size = new System.Drawing.Size(332, 20);
+            this.cpoNomeFornecedor.TabIndex = 58;
             // 
             // label4
             // 
@@ -532,6 +544,18 @@
             this.groupBox1.TabIndex = 63;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "  Consulta";
+            // 
+            // button2
+            // 
+            this.button2.Image = global::Apresentacao.Properties.Resources.pesquisar;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.Location = new System.Drawing.Point(349, 24);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 37);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Pesquisar";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -589,6 +613,56 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Código ";
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Image = global::Apresentacao.Properties.Resources.delete_4219;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluir.Location = new System.Drawing.Point(612, 476);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(87, 44);
+            this.btnExcluir.TabIndex = 62;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Image = global::Apresentacao.Properties.Resources.saveall_1204;
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvar.Location = new System.Drawing.Point(854, 476);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(91, 44);
+            this.btnSalvar.TabIndex = 61;
+            this.btnSalvar.Text = "   Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnCCancelar
+            // 
+            this.btnCCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
+            this.btnCCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCCancelar.Location = new System.Drawing.Point(734, 476);
+            this.btnCCancelar.Name = "btnCCancelar";
+            this.btnCCancelar.Size = new System.Drawing.Size(89, 44);
+            this.btnCCancelar.TabIndex = 60;
+            this.btnCCancelar.Text = "Cancelar";
+            this.btnCCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCCancelar.UseVisualStyleBackColor = true;
+            this.btnCCancelar.Click += new System.EventHandler(this.btnCCancelar_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Image = global::Apresentacao.Properties.Resources.document_write_22637;
+            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAlterar.Location = new System.Drawing.Point(488, 476);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(87, 44);
+            this.btnAlterar.TabIndex = 56;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -609,6 +683,31 @@
             this.tabPage2.Size = new System.Drawing.Size(966, 537);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Carregamento";
+            // 
+            // btnConcluir
+            // 
+            this.btnConcluir.Image = global::Apresentacao.Properties.Resources.stake_truck_18543;
+            this.btnConcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConcluir.Location = new System.Drawing.Point(821, 454);
+            this.btnConcluir.Name = "btnConcluir";
+            this.btnConcluir.Size = new System.Drawing.Size(103, 48);
+            this.btnConcluir.TabIndex = 174;
+            this.btnConcluir.Text = "Concluir";
+            this.btnConcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(821, 166);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(103, 44);
+            this.btnCancelar.TabIndex = 173;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // cpoQtd
             // 
@@ -765,105 +864,6 @@
             // 
             this.tblCarregamentoBlocoTableAdapter.ClearBeforeFill = true;
             // 
-            // btnRetornar
-            // 
-            this.btnRetornar.Image = global::Apresentacao.Properties.Resources.restart_back_left_arrow_6022;
-            this.btnRetornar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRetornar.Location = new System.Drawing.Point(42, 476);
-            this.btnRetornar.Name = "btnRetornar";
-            this.btnRetornar.Size = new System.Drawing.Size(89, 44);
-            this.btnRetornar.TabIndex = 97;
-            this.btnRetornar.Text = "Retornar";
-            this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRetornar.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = global::Apresentacao.Properties.Resources.pesquisar;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(349, 24);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 37);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Pesquisar";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Image = global::Apresentacao.Properties.Resources.delete_4219;
-            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcluir.Location = new System.Drawing.Point(612, 476);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(87, 44);
-            this.btnExcluir.TabIndex = 62;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Image = global::Apresentacao.Properties.Resources.saveall_1204;
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvar.Location = new System.Drawing.Point(854, 476);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(91, 44);
-            this.btnSalvar.TabIndex = 61;
-            this.btnSalvar.Text = "   Salvar";
-            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // btnCCancelar
-            // 
-            this.btnCCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
-            this.btnCCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCCancelar.Location = new System.Drawing.Point(734, 476);
-            this.btnCCancelar.Name = "btnCCancelar";
-            this.btnCCancelar.Size = new System.Drawing.Size(89, 44);
-            this.btnCCancelar.TabIndex = 60;
-            this.btnCCancelar.Text = "Cancelar";
-            this.btnCCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCCancelar.UseVisualStyleBackColor = true;
-            this.btnCCancelar.Click += new System.EventHandler(this.btnCCancelar_Click);
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Image = global::Apresentacao.Properties.Resources.document_write_22637;
-            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAlterar.Location = new System.Drawing.Point(488, 476);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(87, 44);
-            this.btnAlterar.TabIndex = 56;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            // 
-            // btnConcluir
-            // 
-            this.btnConcluir.Image = global::Apresentacao.Properties.Resources.stake_truck_18543;
-            this.btnConcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConcluir.Location = new System.Drawing.Point(821, 454);
-            this.btnConcluir.Name = "btnConcluir";
-            this.btnConcluir.Size = new System.Drawing.Size(103, 48);
-            this.btnConcluir.TabIndex = 174;
-            this.btnConcluir.Text = "Concluir";
-            this.btnConcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(821, 166);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(103, 44);
-            this.btnCancelar.TabIndex = 173;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // frmRomaneio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -924,7 +924,7 @@
         private System.Windows.Forms.TextBox cpoTransportador;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox cpoNomeCliente;
-        private System.Windows.Forms.TextBox cpoFornecedor;
+        private System.Windows.Forms.TextBox cpoNomeFornecedor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.GroupBox groupBox1;

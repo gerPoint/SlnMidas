@@ -22,9 +22,22 @@ namespace Apresentacao
         private void frmSelecionarFornecedor_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'midasDataSetFornecedor.tblFornecedor' table. You can move, or remove it, as needed.
-
-
         }
+
+        //--------------------------------------------SERVE PARA PEGAR DADOS DE UM FORM E PASSAR PARA OUTRO---------------------------
+
+        public String NomeFornecedor
+        {
+            get { return cpoNomeFornecedor.Text; }
+            set { cpoNomeFornecedor.Text = value; }
+        }
+
+        public String IDFornecedor
+        {
+            get { return cpoIDFornecedor.Text; }
+            set { cpoIDFornecedor.Text = value; }
+        }
+        //--------------------------------------------SERVE PARA PEGAR DADOS DE UM FORM E PASSAR PARA OUTRO---------------------------
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
@@ -84,5 +97,28 @@ namespace Apresentacao
         {
             this.Close();
         }
-    }
+
+        private void btnSelecionar_Click(object sender, EventArgs e)
+        {
+            if (cpoIDFornecedor.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            {
+                MessageBox.Show("Pesquise o fornecedor desejado e selecione-o dando um clique duplo sobre ele.");
+                return;
+            }
+            Fornecedor fornecedor = (dgwSelFornecedor.SelectedRows[0].DataBoundItem as Fornecedor);
+            cpoIDFornecedor.Text = fornecedor.Nome;
+            cpoIDFornecedor.Text = fornecedor.IDFornecedor.ToString();
+            this.Close();
+        }
+
+        private void dgwSelFornecedor_DoubleClick(object sender, EventArgs e)
+        {
+            Fornecedor fornecedor = (dgwSelFornecedor.SelectedRows[0].DataBoundItem as Fornecedor);
+            cpoIDFornecedor.Text = dgwSelFornecedor.SelectedRows[0].Cells[0].Value.ToString();
+            cpoNomeFornecedor.Text = dgwSelFornecedor.SelectedRows[0].Cells[1].Value.ToString();
+        }
+
+
+      }
+    
 }

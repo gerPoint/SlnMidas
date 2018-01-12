@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.cpoIDCliente = new System.Windows.Forms.TextBox();
-            this.cpoNomeCliente = new System.Windows.Forms.TextBox();
+            this.cpoIDFornecedor = new System.Windows.Forms.TextBox();
+            this.cpoNomeFornecedor = new System.Windows.Forms.TextBox();
             this.btnSelecionar = new System.Windows.Forms.Button();
             this.dgwSelFornecedor = new System.Windows.Forms.DataGridView();
             this.iDFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,23 +81,23 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Fornecedor Selecionado:";
             // 
-            // cpoIDCliente
+            // cpoIDFornecedor
             // 
-            this.cpoIDCliente.Enabled = false;
-            this.cpoIDCliente.Location = new System.Drawing.Point(227, 334);
-            this.cpoIDCliente.Name = "cpoIDCliente";
-            this.cpoIDCliente.ReadOnly = true;
-            this.cpoIDCliente.Size = new System.Drawing.Size(28, 20);
-            this.cpoIDCliente.TabIndex = 29;
+            this.cpoIDFornecedor.Enabled = false;
+            this.cpoIDFornecedor.Location = new System.Drawing.Point(227, 334);
+            this.cpoIDFornecedor.Name = "cpoIDFornecedor";
+            this.cpoIDFornecedor.ReadOnly = true;
+            this.cpoIDFornecedor.Size = new System.Drawing.Size(28, 20);
+            this.cpoIDFornecedor.TabIndex = 29;
             // 
-            // cpoNomeCliente
+            // cpoNomeFornecedor
             // 
-            this.cpoNomeCliente.Enabled = false;
-            this.cpoNomeCliente.Location = new System.Drawing.Point(272, 334);
-            this.cpoNomeCliente.Name = "cpoNomeCliente";
-            this.cpoNomeCliente.ReadOnly = true;
-            this.cpoNomeCliente.Size = new System.Drawing.Size(243, 20);
-            this.cpoNomeCliente.TabIndex = 28;
+            this.cpoNomeFornecedor.Enabled = false;
+            this.cpoNomeFornecedor.Location = new System.Drawing.Point(272, 334);
+            this.cpoNomeFornecedor.Name = "cpoNomeFornecedor";
+            this.cpoNomeFornecedor.ReadOnly = true;
+            this.cpoNomeFornecedor.Size = new System.Drawing.Size(243, 20);
+            this.cpoNomeFornecedor.TabIndex = 28;
             // 
             // btnSelecionar
             // 
@@ -110,6 +110,7 @@
             this.btnSelecionar.Text = "Selecionar";
             this.btnSelecionar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSelecionar.UseVisualStyleBackColor = true;
+            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
             // 
             // dgwSelFornecedor
             // 
@@ -135,6 +136,7 @@
             this.dgwSelFornecedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwSelFornecedor.Size = new System.Drawing.Size(709, 211);
             this.dgwSelFornecedor.TabIndex = 26;
+            this.dgwSelFornecedor.DoubleClick += new System.EventHandler(this.dgwSelFornecedor_DoubleClick);
             // 
             // iDFornecedorDataGridViewTextBoxColumn
             // 
@@ -271,8 +273,8 @@
             this.ClientSize = new System.Drawing.Size(780, 381);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cpoIDCliente);
-            this.Controls.Add(this.cpoNomeCliente);
+            this.Controls.Add(this.cpoIDFornecedor);
+            this.Controls.Add(this.cpoNomeFornecedor);
             this.Controls.Add(this.btnSelecionar);
             this.Controls.Add(this.dgwSelFornecedor);
             this.Controls.Add(this.cpoCaixaPesquisa);
@@ -296,8 +298,8 @@
 
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox cpoIDCliente;
-        private System.Windows.Forms.TextBox cpoNomeCliente;
+        private System.Windows.Forms.TextBox cpoIDFornecedor;
+        private System.Windows.Forms.TextBox cpoNomeFornecedor;
         private System.Windows.Forms.Button btnSelecionar;
         private System.Windows.Forms.DataGridView dgwSelFornecedor;
         private System.Windows.Forms.TextBox cpoCaixaPesquisa;

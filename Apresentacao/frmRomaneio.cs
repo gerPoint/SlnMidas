@@ -20,7 +20,7 @@ namespace Apresentacao
         {
             InitializeComponent();
         }
-
+//-------------------------------------------------- SERVE PARA PEGAR DADOS DE UM FORM E PASSAR PARA OUTRO FORM-----------------------------
         public String NomeCliente
         {
             get { return cpoNomeCliente.Text; }
@@ -33,10 +33,21 @@ namespace Apresentacao
             set { cpoIDCliente.Text = value; }
         }
 
+        public String NomeFornecedor
+        {
+            get { return cpoNomeFornecedor.Text; }
+            set { cpoNomeFornecedor.Text = value; }
+        }
+
+        public String IDFornecedor
+        {
+            get { return cpoIDFornecedor.Text; }
+            set { cpoIDFornecedor.Text = value; }
+        }
 
 
-
-
+        //---------------------------------------- SERVE PARA PEGAR DADOS DE UM FORM E PASSAR PARA OUTRO FORM-----------------------------------
+        //-----------------------------TEM QUE TER ESSAS STRINGS NO FORM QUE MANDA OS DADOS E NO FORM QUE RECEBE ------------------------------
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -134,6 +145,8 @@ namespace Apresentacao
         {
             frmSelecionarFornecedor OutroForm = new frmSelecionarFornecedor();
             OutroForm.ShowDialog();
+            cpoNomeFornecedor.Text = OutroForm.NomeFornecedor;
+            cpoIDFornecedor.Text = OutroForm.IDFornecedor;
         }
 
         private void btnChamaTransp_Click(object sender, EventArgs e)

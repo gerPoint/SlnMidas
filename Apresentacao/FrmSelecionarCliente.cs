@@ -24,9 +24,9 @@ namespace Apresentacao
         {
             // TODO: This line of code loads data into the 'midasDataSetcliente.tblCliente' table. You can move, or remove it, as needed.
             // this.tblClienteTableAdapter.Fill(this.midasDataSetcliente.tblCliente);
-
-      
         }
+
+        // -------------------------------------------------USADO PARA PEGAR DADOS DE UM FORM E PASSAR PARA OUTRO--------------------------------------------------------------------------
         public String NomeCliente
         {
             get { return cpoNomeCliente.Text; }
@@ -39,8 +39,7 @@ namespace Apresentacao
             set { cpoIDCliente.Text = value; }
         }
 
-
-
+        // -------------------------------------------------USADO PARA PEGAR DADOS DE UM FORM E PASSAR PARA OUTRO-----------------------------------------
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
