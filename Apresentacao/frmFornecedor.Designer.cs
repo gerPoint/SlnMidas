@@ -83,6 +83,7 @@
             this.cpoRazaoSocial.Name = "cpoRazaoSocial";
             this.cpoRazaoSocial.Size = new System.Drawing.Size(246, 20);
             this.cpoRazaoSocial.TabIndex = 5;
+            this.cpoRazaoSocial.TextChanged += new System.EventHandler(this.cpoRazaoSocial_TextChanged);
             // 
             // cpoUf
             // 
@@ -91,6 +92,7 @@
             this.cpoUf.Name = "cpoUf";
             this.cpoUf.Size = new System.Drawing.Size(42, 20);
             this.cpoUf.TabIndex = 9;
+            this.cpoUf.TextChanged += new System.EventHandler(this.cpoUf_TextChanged);
             // 
             // cpoCidade
             // 
@@ -99,6 +101,7 @@
             this.cpoCidade.Name = "cpoCidade";
             this.cpoCidade.Size = new System.Drawing.Size(170, 20);
             this.cpoCidade.TabIndex = 8;
+            this.cpoCidade.TextChanged += new System.EventHandler(this.cpoCidade_TextChanged);
             // 
             // cpoEndereco
             // 
@@ -107,6 +110,7 @@
             this.cpoEndereco.Name = "cpoEndereco";
             this.cpoEndereco.Size = new System.Drawing.Size(247, 20);
             this.cpoEndereco.TabIndex = 7;
+            this.cpoEndereco.TextChanged += new System.EventHandler(this.cpoEndereco_TextChanged);
             // 
             // cpoEmail
             // 
@@ -386,6 +390,7 @@
             this.cpoNome.Name = "cpoNome";
             this.cpoNome.Size = new System.Drawing.Size(247, 20);
             this.cpoNome.TabIndex = 4;
+            this.cpoNome.TextChanged += new System.EventHandler(this.cpoNome_TextChanged);
             // 
             // cpoCaixaPesquisa
             // 
@@ -395,6 +400,7 @@
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(643, 23);
             this.cpoCaixaPesquisa.TabIndex = 3;
+            this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
             // 
             // label3
             // 

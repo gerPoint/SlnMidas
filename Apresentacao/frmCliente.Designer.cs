@@ -140,6 +140,7 @@
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(643, 23);
             this.cpoCaixaPesquisa.TabIndex = 2;
+            this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
             // 
             // cpoNome
             // 
@@ -148,6 +149,7 @@
             this.cpoNome.Name = "cpoNome";
             this.cpoNome.Size = new System.Drawing.Size(247, 20);
             this.cpoNome.TabIndex = 3;
+            this.cpoNome.TextChanged += new System.EventHandler(this.cpoNome_TextChanged);
             // 
             // dgwCliente
             // 
@@ -427,6 +429,7 @@
             this.cpoEmail.Name = "cpoEmail";
             this.cpoEmail.Size = new System.Drawing.Size(245, 20);
             this.cpoEmail.TabIndex = 11;
+            this.cpoEmail.TextChanged += new System.EventHandler(this.cpoEmail_TextChanged);
             // 
             // cpoEndereco
             // 
@@ -435,6 +438,7 @@
             this.cpoEndereco.Name = "cpoEndereco";
             this.cpoEndereco.Size = new System.Drawing.Size(247, 20);
             this.cpoEndereco.TabIndex = 6;
+            this.cpoEndereco.TextChanged += new System.EventHandler(this.cpoEndereco_TextChanged);
             // 
             // cpoCidade
             // 
@@ -443,6 +447,7 @@
             this.cpoCidade.Name = "cpoCidade";
             this.cpoCidade.Size = new System.Drawing.Size(170, 20);
             this.cpoCidade.TabIndex = 7;
+            this.cpoCidade.TextChanged += new System.EventHandler(this.cpoCidade_TextChanged);
             // 
             // cpoUf
             // 
@@ -451,6 +456,7 @@
             this.cpoUf.Name = "cpoUf";
             this.cpoUf.Size = new System.Drawing.Size(42, 20);
             this.cpoUf.TabIndex = 8;
+            this.cpoUf.TextChanged += new System.EventHandler(this.cpoUf_TextChanged);
             // 
             // cpoRazaoSocial
             // 
@@ -459,6 +465,7 @@
             this.cpoRazaoSocial.Name = "cpoRazaoSocial";
             this.cpoRazaoSocial.Size = new System.Drawing.Size(246, 20);
             this.cpoRazaoSocial.TabIndex = 4;
+            this.cpoRazaoSocial.TextChanged += new System.EventHandler(this.cpoRazaoSocial_TextChanged);
             // 
             // tblClienteTableAdapter
             // 

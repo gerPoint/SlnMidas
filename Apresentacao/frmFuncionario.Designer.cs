@@ -89,6 +89,7 @@
             this.cpoUf.Name = "cpoUf";
             this.cpoUf.Size = new System.Drawing.Size(42, 20);
             this.cpoUf.TabIndex = 7;
+            this.cpoUf.TextChanged += new System.EventHandler(this.cpoUf_TextChanged);
             // 
             // cpoCidade
             // 
@@ -97,6 +98,7 @@
             this.cpoCidade.Name = "cpoCidade";
             this.cpoCidade.Size = new System.Drawing.Size(193, 20);
             this.cpoCidade.TabIndex = 6;
+            this.cpoCidade.TextChanged += new System.EventHandler(this.cpoCidade_TextChanged);
             // 
             // cpoEndereco
             // 
@@ -105,6 +107,7 @@
             this.cpoEndereco.Name = "cpoEndereco";
             this.cpoEndereco.Size = new System.Drawing.Size(293, 20);
             this.cpoEndereco.TabIndex = 5;
+            this.cpoEndereco.TextChanged += new System.EventHandler(this.cpoEndereco_TextChanged);
             // 
             // cpoEmail
             // 
@@ -313,6 +316,7 @@
             this.cpoNome.Name = "cpoNome";
             this.cpoNome.Size = new System.Drawing.Size(269, 20);
             this.cpoNome.TabIndex = 4;
+            this.cpoNome.TextChanged += new System.EventHandler(this.cpoNome_TextChanged);
             // 
             // cpoCaixaPesquisa
             // 
@@ -322,6 +326,7 @@
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(589, 23);
             this.cpoCaixaPesquisa.TabIndex = 3;
+            this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
             // 
             // label3
             // 

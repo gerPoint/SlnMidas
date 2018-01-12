@@ -58,15 +58,17 @@
             // cpoUnidMedida
             // 
             this.cpoUnidMedida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoUnidMedida.Location = new System.Drawing.Point(387, 304);
+            this.cpoUnidMedida.Location = new System.Drawing.Point(547, 304);
+            this.cpoUnidMedida.MaxLength = 2;
             this.cpoUnidMedida.Name = "cpoUnidMedida";
-            this.cpoUnidMedida.Size = new System.Drawing.Size(63, 20);
+            this.cpoUnidMedida.Size = new System.Drawing.Size(29, 20);
             this.cpoUnidMedida.TabIndex = 5;
+            this.cpoUnidMedida.TextChanged += new System.EventHandler(this.cpoUnidMedida_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(311, 306);
+            this.label8.Location = new System.Drawing.Point(457, 306);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 13);
             this.label8.TabIndex = 93;
@@ -198,8 +200,9 @@
             this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNome.Location = new System.Drawing.Point(72, 304);
             this.cpoNome.Name = "cpoNome";
-            this.cpoNome.Size = new System.Drawing.Size(233, 20);
+            this.cpoNome.Size = new System.Drawing.Size(369, 20);
             this.cpoNome.TabIndex = 4;
+            this.cpoNome.TextChanged += new System.EventHandler(this.cpoNome_TextChanged);
             // 
             // cpoCaixaPesquisa
             // 
@@ -209,6 +212,7 @@
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(403, 23);
             this.cpoCaixaPesquisa.TabIndex = 3;
+            this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
             // 
             // label1
             // 

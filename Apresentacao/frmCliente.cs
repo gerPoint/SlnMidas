@@ -428,6 +428,62 @@ namespace Apresentacao
                 e.Handled = true;
             }
         }
+
+//----------------------------------------------DEIXAR PRIMEIRA LETRA DIGITADA MAIÚSCULA------------------------------------
+        public string ConvMaiuscula(string Input)
+        {
+            System.Globalization.CultureInfo cultureInfo = System.Threading.Thread.CurrentThread.CurrentCulture;
+            System.Globalization.TextInfo textInfo = cultureInfo.TextInfo;
+            return textInfo.ToTitleCase(Input.ToLower());
+        }
+
+        private void cpoCaixaPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            cpoCaixaPesquisa.Text = ConvMaiuscula(cpoCaixaPesquisa.Text).ToString();
+            cpoCaixaPesquisa.SelectionStart = cpoCaixaPesquisa.Text.Length;
+
+        }
+
+        private void cpoNome_TextChanged(object sender, EventArgs e)
+        {
+            cpoNome.Text = ConvMaiuscula(cpoNome.Text).ToString();
+            cpoNome.SelectionStart = cpoNome.Text.Length;
+        }
+
+        private void cpoRazaoSocial_TextChanged(object sender, EventArgs e)
+        {
+            cpoRazaoSocial.Text = ConvMaiuscula(cpoRazaoSocial.Text).ToString();
+            cpoRazaoSocial.SelectionStart = cpoRazaoSocial.Text.Length;
+        }
+
+        private void cpoEndereco_TextChanged(object sender, EventArgs e)
+        {
+            cpoEndereco.Text = ConvMaiuscula(cpoEndereco.Text).ToString();
+            cpoEndereco.SelectionStart = cpoEndereco.Text.Length;
+        }
+
+        private void cpoCidade_TextChanged(object sender, EventArgs e)
+        {
+            cpoCidade.Text = ConvMaiuscula(cpoCidade.Text).ToString();
+            cpoCidade.SelectionStart = cpoCidade.Text.Length;
+        }
+
+        private void cpoEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cpoUf_TextChanged(object sender, EventArgs e)
+        {
+            cpoUf.Text = ConvMaiuscula(cpoUf.Text).ToString();
+            cpoUf.SelectionStart = cpoUf.Text.Length;
+        }
+
+
+
+
+        //----------------------------------------------DEIXAR PRIMEIRA LETRA DIGITADA MAIÚSCULA------------------------------------
+
     }
 
 }

@@ -119,6 +119,23 @@ namespace Apresentacao
         }
 
 
-      }
-    
+//--------------------------------Somente a primeira letra maiuscula de cada palavra---------------------------------------------
+
+        public string ConvMaiuscula(string Input)
+        {
+            System.Globalization.CultureInfo cultureInfo = System.Threading.Thread.CurrentThread.CurrentCulture;
+            System.Globalization.TextInfo textInfo = cultureInfo.TextInfo;
+            return textInfo.ToTitleCase(Input.ToLower());
+        }
+
+        private void cpoCaixaPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            cpoCaixaPesquisa.Text = ConvMaiuscula(cpoCaixaPesquisa.Text).ToString();
+            cpoCaixaPesquisa.SelectionStart = cpoCaixaPesquisa.Text.Length;
+
+        }
+
+        //--------------------------------Somente a primeira letra maiuscula de cada palavra---------------------------------------------
+    }
+
 }

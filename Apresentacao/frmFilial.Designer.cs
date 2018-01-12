@@ -87,6 +87,7 @@
             this.cpoRazaoSocial.Name = "cpoRazaoSocial";
             this.cpoRazaoSocial.Size = new System.Drawing.Size(246, 20);
             this.cpoRazaoSocial.TabIndex = 5;
+            this.cpoRazaoSocial.TextChanged += new System.EventHandler(this.cpoRazaoSocial_TextChanged);
             // 
             // cpoUf
             // 
@@ -103,6 +104,7 @@
             this.cpoCidade.Name = "cpoCidade";
             this.cpoCidade.Size = new System.Drawing.Size(170, 20);
             this.cpoCidade.TabIndex = 8;
+            this.cpoCidade.TextChanged += new System.EventHandler(this.cpoCidade_TextChanged);
             // 
             // cpoEndereco
             // 
@@ -111,6 +113,7 @@
             this.cpoEndereco.Name = "cpoEndereco";
             this.cpoEndereco.Size = new System.Drawing.Size(247, 20);
             this.cpoEndereco.TabIndex = 7;
+            this.cpoEndereco.TextChanged += new System.EventHandler(this.cpoEndereco_TextChanged);
             // 
             // cpoEmail
             // 
@@ -145,6 +148,7 @@
             this.cpoCnpj.Name = "cpoCnpj";
             this.cpoCnpj.Size = new System.Drawing.Size(103, 20);
             this.cpoCnpj.TabIndex = 6;
+            this.cpoCnpj.TextChanged += new System.EventHandler(this.cpoCnpj_TextChanged);
             this.cpoCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCnpj_KeyPress);
             // 
             // label8
@@ -333,6 +337,7 @@
             this.cpoFilial.Name = "cpoFilial";
             this.cpoFilial.Size = new System.Drawing.Size(247, 20);
             this.cpoFilial.TabIndex = 4;
+            this.cpoFilial.TextChanged += new System.EventHandler(this.cpoFilial_TextChanged);
             // 
             // cpoCaixaPesquisa
             // 
@@ -342,6 +347,7 @@
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(643, 23);
             this.cpoCaixaPesquisa.TabIndex = 3;
+            this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
             // 
             // label3
             // 

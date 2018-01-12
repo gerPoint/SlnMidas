@@ -312,9 +312,42 @@ namespace Apresentacao
             btnExcluir.Enabled = false;
             btnAlterar.Enabled = false;
         }
+
+
+
+//----------------------------------------------------Somente a primeira letra maiuscula de cada palavra-------------------------------------
+
+        public string ConvMaiuscula(string Input)
+        {
+            System.Globalization.CultureInfo cultureInfo = System.Threading.Thread.CurrentThread.CurrentCulture;
+            System.Globalization.TextInfo textInfo = cultureInfo.TextInfo;
+            return textInfo.ToTitleCase(Input.ToLower());
+        }
+
+        private void cpoCaixaPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            cpoCaixaPesquisa.Text = ConvMaiuscula(cpoCaixaPesquisa.Text).ToString();
+            cpoCaixaPesquisa.SelectionStart = cpoCaixaPesquisa.Text.Length;
+
+        }
+
+        private void cpoNome_TextChanged(object sender, EventArgs e)
+        {
+            cpoNome.Text = ConvMaiuscula(cpoNome.Text).ToString();
+            cpoNome.SelectionStart = cpoNome.Text.Length;
+        }
+
+        private void cpoUnidMedida_TextChanged(object sender, EventArgs e)
+        {
+            cpoUnidMedida.Text = ConvMaiuscula(cpoUnidMedida.Text).ToString();
+            cpoUnidMedida.SelectionStart = cpoUnidMedida.Text.Length;
+        }
+
+        //---------------------------------------------------Somente a primeira letra maiuscula de cada palavra-------------------------------------
+
     }
 
- }
+}
 
     
 

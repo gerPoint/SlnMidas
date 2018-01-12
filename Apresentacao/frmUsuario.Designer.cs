@@ -92,7 +92,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(672, 474);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(91, 44);
-            this.btnSalvar.TabIndex = 16;
+            this.btnSalvar.TabIndex = 17;
             this.btnSalvar.Text = "   Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -105,6 +105,7 @@
             this.cpoUf.Name = "cpoUf";
             this.cpoUf.Size = new System.Drawing.Size(42, 20);
             this.cpoUf.TabIndex = 9;
+            this.cpoUf.TextChanged += new System.EventHandler(this.cpoUf_TextChanged);
             // 
             // cpoCidade
             // 
@@ -113,6 +114,7 @@
             this.cpoCidade.Name = "cpoCidade";
             this.cpoCidade.Size = new System.Drawing.Size(193, 20);
             this.cpoCidade.TabIndex = 8;
+            this.cpoCidade.TextChanged += new System.EventHandler(this.cpoCidade_TextChanged);
             // 
             // cpoEndereco
             // 
@@ -121,6 +123,7 @@
             this.cpoEndereco.Name = "cpoEndereco";
             this.cpoEndereco.Size = new System.Drawing.Size(293, 20);
             this.cpoEndereco.TabIndex = 5;
+            this.cpoEndereco.TextChanged += new System.EventHandler(this.cpoEndereco_TextChanged);
             // 
             // cpoEmail
             // 
@@ -135,7 +138,7 @@
             this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoTelefone.Location = new System.Drawing.Point(88, 432);
             this.cpoTelefone.Name = "cpoTelefone";
-            this.cpoTelefone.Size = new System.Drawing.Size(129, 20);
+            this.cpoTelefone.Size = new System.Drawing.Size(193, 20);
             this.cpoTelefone.TabIndex = 12;
             this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress);
             // 
@@ -219,7 +222,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(455, 474);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(87, 44);
-            this.btnExcluir.TabIndex = 14;
+            this.btnExcluir.TabIndex = 15;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -232,7 +235,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(563, 474);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 44);
-            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -246,7 +249,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(344, 474);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(87, 44);
-            this.btnAlterar.TabIndex = 13;
+            this.btnAlterar.TabIndex = 14;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -388,6 +391,7 @@
             this.cpoNome.Name = "cpoNome";
             this.cpoNome.Size = new System.Drawing.Size(269, 20);
             this.cpoNome.TabIndex = 4;
+            this.cpoNome.TextChanged += new System.EventHandler(this.cpoNome_TextChanged);
             // 
             // cpoCaixaPesquisa
             // 
@@ -397,6 +401,7 @@
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(589, 23);
             this.cpoCaixaPesquisa.TabIndex = 3;
+            this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
             // 
             // label3
             // 
@@ -439,6 +444,7 @@
             this.cpoSenha.Name = "cpoSenha";
             this.cpoSenha.Size = new System.Drawing.Size(268, 20);
             this.cpoSenha.TabIndex = 6;
+            this.cpoSenha.TextChanged += new System.EventHandler(this.cpoSenha_TextChanged);
             // 
             // label2
             // 
@@ -456,7 +462,7 @@
             this.btnRetornar.Location = new System.Drawing.Point(36, 474);
             this.btnRetornar.Name = "btnRetornar";
             this.btnRetornar.Size = new System.Drawing.Size(89, 44);
-            this.btnRetornar.TabIndex = 135;
+            this.btnRetornar.TabIndex = 13;
             this.btnRetornar.Text = "Retornar";
             this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRetornar.UseVisualStyleBackColor = true;
