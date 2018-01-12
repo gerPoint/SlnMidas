@@ -23,10 +23,7 @@ namespace Apresentacao
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
 
         private void frmFornecedor_Load(object sender, EventArgs e)
         {
@@ -394,6 +391,11 @@ namespace Apresentacao
             {
                 MessageBox.Show("Falha ao excluir registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

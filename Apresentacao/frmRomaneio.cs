@@ -9,15 +9,33 @@ using System.ComponentModel;
 namespace Apresentacao
 {
     
-    public partial class frmRomaneio : Form
+     partial class frmRomaneio : Form
     {
         BindingList<objCarregamentoBloco> listCarregamento = new BindingList<objCarregamentoBloco>();
-        private int idcliente;
+ 
+
+    
 
         public frmRomaneio()
         {
             InitializeComponent();
         }
+
+        public String NomeCliente
+        {
+            get { return cpoNomeCliente.Text; }
+            set { cpoNomeCliente.Text = value; }
+        }
+
+        public String IDCliente
+        {
+            get { return cpoIDCliente.Text; }
+            set { cpoIDCliente.Text = value; }
+        }
+
+
+
+
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -30,6 +48,8 @@ namespace Apresentacao
             //this.tblCarregamentoBlocoTableAdapter.Fill(this.midasDataSetCarregbloco.tblCarregamentoBloco);
             AcessoDadosSqlServer acessoDados = new AcessoDadosSqlServer();
             acessoDados.GetDataTable("select IDFilial, Nome from tblFilial", CommandType.Text);
+
+
 
         }
 
@@ -103,9 +123,11 @@ namespace Apresentacao
 
         private void btnChamacli_Click(object sender, EventArgs e)
         {
+            frmSelecionarCliente OutroForm = new frmSelecionarCliente();
+            OutroForm.ShowDialog();
+            cpoNomeCliente.Text = OutroForm.NomeCliente;
+            cpoIDCliente.Text = OutroForm.IDCliente;
 
-
-            
         }
 
         private void btnChamafor_Click(object sender, EventArgs e)

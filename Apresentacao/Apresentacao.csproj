@@ -210,6 +210,9 @@
     <EmbeddedResource Include="frmSelecionarCliente.resx">
       <DependentUpon>frmSelecionarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSelecionarFornecedor.resx">
+      <DependentUpon>frmSelecionarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTransportador.resx">
       <DependentUpon>frmTransportador.cs</DependentUpon>
     </EmbeddedResource>
