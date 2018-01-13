@@ -123,7 +123,7 @@ namespace Apresentacao
         {
             if (cpoIDCliente.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
             {
-                MessageBox.Show("Pesquise o cliente desejado e selecione-o dando um clique duplo sobre ele.");
+                MessageBox.Show("Pesquise o Cliente desejado e selecione-o dando um clique duplo sobre o mesmo.");
                 return;
             }
             Cliente cliente = (dgwSelCliente.SelectedRows[0].DataBoundItem as Cliente);

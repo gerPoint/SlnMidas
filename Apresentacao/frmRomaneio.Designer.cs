@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRomaneio));
             this.tabPage = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.cpoIDFornecedor = new System.Windows.Forms.TextBox();
             this.cpoIDTransportador = new System.Windows.Forms.TextBox();
             this.cpoIDCliente = new System.Windows.Forms.TextBox();
@@ -40,32 +42,31 @@
             this.label18 = new System.Windows.Forms.Label();
             this.cpoIDRomaneio = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.cpoCustoCarreg = new System.Windows.Forms.TextBox();
+            this.cpoTaxaNf = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.cpoComissao = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.cpoSeguro = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.cpoAdiantFretMot = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.cpoValorTotal = new System.Windows.Forms.TextBox();
+            this.cpoFrete = new System.Windows.Forms.TextBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cpoQtdGeral = new System.Windows.Forms.TextBox();
             this.btnChamaTransp = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnChamacli = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnChamafor = new System.Windows.Forms.Button();
-            this.cpoTransportador = new System.Windows.Forms.TextBox();
+            this.cpoNomeTransportador = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cpoNomeCliente = new System.Windows.Forms.TextBox();
             this.cpoNomeFornecedor = new System.Windows.Forms.TextBox();
@@ -119,12 +120,14 @@
             this.tabPage.Location = new System.Drawing.Point(0, 3);
             this.tabPage.Name = "tabPage";
             this.tabPage.SelectedIndex = 0;
-            this.tabPage.Size = new System.Drawing.Size(974, 563);
+            this.tabPage.Size = new System.Drawing.Size(983, 563);
             this.tabPage.TabIndex = 56;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.cpoIDFornecedor);
             this.tabPage1.Controls.Add(this.cpoIDTransportador);
             this.tabPage1.Controls.Add(this.cpoIDCliente);
@@ -133,32 +136,31 @@
             this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.cpoIDRomaneio);
             this.tabPage1.Controls.Add(this.label17);
-            this.tabPage1.Controls.Add(this.textBox12);
-            this.tabPage1.Controls.Add(this.textBox11);
+            this.tabPage1.Controls.Add(this.cpoCustoCarreg);
+            this.tabPage1.Controls.Add(this.cpoTaxaNf);
             this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.textBox10);
+            this.tabPage1.Controls.Add(this.cpoComissao);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.comboBox5);
-            this.tabPage1.Controls.Add(this.textBox9);
+            this.tabPage1.Controls.Add(this.cpoSeguro);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.cpoAdiantFretMot);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.textBox7);
-            this.tabPage1.Controls.Add(this.textBox6);
+            this.tabPage1.Controls.Add(this.cpoValorTotal);
+            this.tabPage1.Controls.Add(this.cpoFrete);
             this.tabPage1.Controls.Add(this.comboBox4);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.comboBox3);
+            this.tabPage1.Controls.Add(this.cpoQtdGeral);
             this.tabPage1.Controls.Add(this.btnChamaTransp);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.btnChamacli);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.btnChamafor);
-            this.tabPage1.Controls.Add(this.cpoTransportador);
+            this.tabPage1.Controls.Add(this.cpoNomeTransportador);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.cpoNomeCliente);
             this.tabPage1.Controls.Add(this.cpoNomeFornecedor);
@@ -172,13 +174,33 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(966, 537);
+            this.tabPage1.Size = new System.Drawing.Size(975, 537);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Romaneio";
             // 
+            // button1
+            // 
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(612, 88);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 20);
+            this.button1.TabIndex = 102;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(649, 88);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(296, 20);
+            this.textBox2.TabIndex = 101;
+            // 
             // cpoIDFornecedor
             // 
-            this.cpoIDFornecedor.Location = new System.Drawing.Point(474, 322);
+            this.cpoIDFornecedor.Location = new System.Drawing.Point(472, 321);
             this.cpoIDFornecedor.Name = "cpoIDFornecedor";
             this.cpoIDFornecedor.Size = new System.Drawing.Size(21, 20);
             this.cpoIDFornecedor.TabIndex = 100;
@@ -186,7 +208,7 @@
             // 
             // cpoIDTransportador
             // 
-            this.cpoIDTransportador.Location = new System.Drawing.Point(474, 360);
+            this.cpoIDTransportador.Location = new System.Drawing.Point(472, 360);
             this.cpoIDTransportador.Name = "cpoIDTransportador";
             this.cpoIDTransportador.Size = new System.Drawing.Size(21, 20);
             this.cpoIDTransportador.TabIndex = 99;
@@ -194,11 +216,12 @@
             // 
             // cpoIDCliente
             // 
-            this.cpoIDCliente.Location = new System.Drawing.Point(474, 281);
+            this.cpoIDCliente.Location = new System.Drawing.Point(472, 281);
             this.cpoIDCliente.Name = "cpoIDCliente";
             this.cpoIDCliente.Size = new System.Drawing.Size(21, 20);
             this.cpoIDCliente.TabIndex = 98;
             this.cpoIDCliente.Visible = false;
+            this.cpoIDCliente.TextChanged += new System.EventHandler(this.cpoIDCliente_TextChanged);
             // 
             // btnRetornar
             // 
@@ -248,49 +271,54 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(493, 362);
+            this.label17.Location = new System.Drawing.Point(501, 364);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(103, 13);
             this.label17.TabIndex = 93;
             this.label17.Text = "Custo Carregamento";
             // 
-            // textBox12
+            // cpoCustoCarreg
             // 
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox12.Location = new System.Drawing.Point(612, 360);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(105, 20);
-            this.textBox12.TabIndex = 92;
+            this.cpoCustoCarreg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCustoCarreg.Location = new System.Drawing.Point(613, 362);
+            this.cpoCustoCarreg.Name = "cpoCustoCarreg";
+            this.cpoCustoCarreg.Size = new System.Drawing.Size(106, 20);
+            this.cpoCustoCarreg.TabIndex = 92;
+            this.cpoCustoCarreg.TextChanged += new System.EventHandler(this.cpoCustoCarreg_TextChanged);
+            this.cpoCustoCarreg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCustoCarreg_KeyPress);
             // 
-            // textBox11
+            // cpoTaxaNf
             // 
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Location = new System.Drawing.Point(840, 320);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(104, 20);
-            this.textBox11.TabIndex = 91;
+            this.cpoTaxaNf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoTaxaNf.Location = new System.Drawing.Point(840, 326);
+            this.cpoTaxaNf.Name = "cpoTaxaNf";
+            this.cpoTaxaNf.Size = new System.Drawing.Size(104, 20);
+            this.cpoTaxaNf.TabIndex = 91;
+            this.cpoTaxaNf.TextChanged += new System.EventHandler(this.cpoTaxaNf_TextChanged);
+            this.cpoTaxaNf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTaxaNf_KeyPress);
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(775, 325);
+            this.label16.Location = new System.Drawing.Point(771, 328);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(48, 13);
             this.label16.TabIndex = 90;
             this.label16.Text = "Taxa NF";
             // 
-            // textBox10
+            // cpoComissao
             // 
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Location = new System.Drawing.Point(840, 360);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(105, 20);
-            this.textBox10.TabIndex = 89;
+            this.cpoComissao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoComissao.Location = new System.Drawing.Point(840, 364);
+            this.cpoComissao.Name = "cpoComissao";
+            this.cpoComissao.Size = new System.Drawing.Size(105, 20);
+            this.cpoComissao.TabIndex = 89;
+            this.cpoComissao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoComissao_KeyPress);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(777, 362);
+            this.label15.Location = new System.Drawing.Point(771, 369);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(52, 13);
             this.label15.TabIndex = 88;
@@ -308,23 +336,24 @@
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(612, 178);
+            this.comboBox5.Location = new System.Drawing.Point(613, 178);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(332, 21);
             this.comboBox5.TabIndex = 86;
             // 
-            // textBox9
+            // cpoSeguro
             // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Location = new System.Drawing.Point(612, 322);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(106, 20);
-            this.textBox9.TabIndex = 85;
+            this.cpoSeguro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoSeguro.Location = new System.Drawing.Point(613, 324);
+            this.cpoSeguro.Name = "cpoSeguro";
+            this.cpoSeguro.Size = new System.Drawing.Size(106, 20);
+            this.cpoSeguro.TabIndex = 85;
+            this.cpoSeguro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoSeguro_KeyPress);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(556, 325);
+            this.label13.Location = new System.Drawing.Point(565, 324);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(41, 13);
             this.label13.TabIndex = 84;
@@ -334,15 +363,16 @@
             // 
             this.cpoAdiantFretMot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoAdiantFretMot.Enabled = false;
-            this.cpoAdiantFretMot.Location = new System.Drawing.Point(840, 281);
+            this.cpoAdiantFretMot.Location = new System.Drawing.Point(840, 282);
             this.cpoAdiantFretMot.Name = "cpoAdiantFretMot";
             this.cpoAdiantFretMot.Size = new System.Drawing.Size(105, 20);
             this.cpoAdiantFretMot.TabIndex = 82;
+            this.cpoAdiantFretMot.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoAdiantFretMot_KeyPress);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(566, 284);
+            this.label12.Location = new System.Drawing.Point(573, 284);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(31, 13);
             this.label12.TabIndex = 81;
@@ -357,34 +387,37 @@
             this.label11.TabIndex = 80;
             this.label11.Text = "TOTAL";
             // 
-            // textBox7
+            // cpoValorTotal
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Location = new System.Drawing.Point(734, 423);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(211, 20);
-            this.textBox7.TabIndex = 79;
+            this.cpoValorTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoValorTotal.Location = new System.Drawing.Point(734, 423);
+            this.cpoValorTotal.Multiline = true;
+            this.cpoValorTotal.Name = "cpoValorTotal";
+            this.cpoValorTotal.Size = new System.Drawing.Size(211, 33);
+            this.cpoValorTotal.TabIndex = 79;
+            this.cpoValorTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoValorTotal_KeyPress);
             // 
-            // textBox6
+            // cpoFrete
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(612, 280);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(106, 20);
-            this.textBox6.TabIndex = 78;
+            this.cpoFrete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoFrete.Location = new System.Drawing.Point(613, 282);
+            this.cpoFrete.Name = "cpoFrete";
+            this.cpoFrete.Size = new System.Drawing.Size(106, 20);
+            this.cpoFrete.TabIndex = 78;
+            this.cpoFrete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoFrete_KeyPress);
             // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(840, 125);
+            this.comboBox4.Location = new System.Drawing.Point(840, 133);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(104, 21);
+            this.comboBox4.Size = new System.Drawing.Size(105, 21);
             this.comboBox4.TabIndex = 77;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(749, 128);
+            this.label10.Location = new System.Drawing.Point(749, 136);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 13);
             this.label10.TabIndex = 76;
@@ -393,32 +426,25 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(535, 128);
+            this.label9.Location = new System.Drawing.Point(534, 136);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 13);
             this.label9.TabIndex = 75;
             this.label9.Text = "Quantidade";
             // 
-            // textBox5
+            // cpoQtdGeral
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(612, 125);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(106, 20);
-            this.textBox5.TabIndex = 74;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(612, 87);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(332, 21);
-            this.comboBox3.TabIndex = 73;
+            this.cpoQtdGeral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoQtdGeral.Location = new System.Drawing.Point(612, 134);
+            this.cpoQtdGeral.Name = "cpoQtdGeral";
+            this.cpoQtdGeral.Size = new System.Drawing.Size(106, 20);
+            this.cpoQtdGeral.TabIndex = 74;
+            this.cpoQtdGeral.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoQtdGeral_KeyPress);
             // 
             // btnChamaTransp
             // 
             this.btnChamaTransp.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChamaTransp.Location = new System.Drawing.Point(100, 360);
+            this.btnChamaTransp.Location = new System.Drawing.Point(98, 360);
             this.btnChamaTransp.Name = "btnChamaTransp";
             this.btnChamaTransp.Size = new System.Drawing.Size(25, 20);
             this.btnChamaTransp.TabIndex = 72;
@@ -438,7 +464,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 364);
+            this.label7.Location = new System.Drawing.Point(20, 364);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 13);
             this.label7.TabIndex = 70;
@@ -447,7 +473,7 @@
             // btnChamacli
             // 
             this.btnChamacli.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChamacli.Location = new System.Drawing.Point(100, 280);
+            this.btnChamacli.Location = new System.Drawing.Point(98, 280);
             this.btnChamacli.Name = "btnChamacli";
             this.btnChamacli.Size = new System.Drawing.Size(25, 20);
             this.btnChamacli.TabIndex = 69;
@@ -458,16 +484,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(56, 284);
+            this.label6.Location = new System.Drawing.Point(54, 284);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 68;
             this.label6.Text = "Cliente";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // btnChamafor
             // 
             this.btnChamafor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChamafor.Location = new System.Drawing.Point(100, 320);
+            this.btnChamafor.Location = new System.Drawing.Point(98, 319);
             this.btnChamafor.Name = "btnChamafor";
             this.btnChamafor.Size = new System.Drawing.Size(25, 20);
             this.btnChamafor.TabIndex = 67;
@@ -475,19 +502,19 @@
             this.btnChamafor.UseVisualStyleBackColor = true;
             this.btnChamafor.Click += new System.EventHandler(this.btnChamafor_Click);
             // 
-            // cpoTransportador
+            // cpoNomeTransportador
             // 
-            this.cpoTransportador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoTransportador.Location = new System.Drawing.Point(136, 360);
-            this.cpoTransportador.Name = "cpoTransportador";
-            this.cpoTransportador.ReadOnly = true;
-            this.cpoTransportador.Size = new System.Drawing.Size(332, 20);
-            this.cpoTransportador.TabIndex = 66;
+            this.cpoNomeTransportador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoNomeTransportador.Enabled = false;
+            this.cpoNomeTransportador.Location = new System.Drawing.Point(134, 360);
+            this.cpoNomeTransportador.Name = "cpoNomeTransportador";
+            this.cpoNomeTransportador.Size = new System.Drawing.Size(332, 20);
+            this.cpoNomeTransportador.TabIndex = 66;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 324);
+            this.label5.Location = new System.Drawing.Point(30, 323);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 57;
@@ -496,19 +523,20 @@
             // cpoNomeCliente
             // 
             this.cpoNomeCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoNomeCliente.Location = new System.Drawing.Point(136, 281);
+            this.cpoNomeCliente.Enabled = false;
+            this.cpoNomeCliente.Location = new System.Drawing.Point(134, 281);
             this.cpoNomeCliente.Multiline = true;
             this.cpoNomeCliente.Name = "cpoNomeCliente";
-            this.cpoNomeCliente.ReadOnly = true;
             this.cpoNomeCliente.Size = new System.Drawing.Size(332, 20);
             this.cpoNomeCliente.TabIndex = 65;
+            this.cpoNomeCliente.TextChanged += new System.EventHandler(this.cpoNomeCliente_TextChanged);
             // 
             // cpoNomeFornecedor
             // 
             this.cpoNomeFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoNomeFornecedor.Location = new System.Drawing.Point(136, 321);
+            this.cpoNomeFornecedor.Enabled = false;
+            this.cpoNomeFornecedor.Location = new System.Drawing.Point(134, 320);
             this.cpoNomeFornecedor.Name = "cpoNomeFornecedor";
-            this.cpoNomeFornecedor.ReadOnly = true;
             this.cpoNomeFornecedor.Size = new System.Drawing.Size(332, 20);
             this.cpoNomeFornecedor.TabIndex = 58;
             // 
@@ -680,7 +708,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(966, 537);
+            this.tabPage2.Size = new System.Drawing.Size(975, 537);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Carregamento";
             // 
@@ -896,32 +924,31 @@
         private System.Windows.Forms.TabControl tabPage;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox cpoCustoCarreg;
+        private System.Windows.Forms.TextBox cpoTaxaNf;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox cpoComissao;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox cpoSeguro;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox cpoAdiantFretMot;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox cpoValorTotal;
+        private System.Windows.Forms.TextBox cpoFrete;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox cpoQtdGeral;
         private System.Windows.Forms.Button btnChamaTransp;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnChamacli;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnChamafor;
-        private System.Windows.Forms.TextBox cpoTransportador;
+        private System.Windows.Forms.TextBox cpoNomeTransportador;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox cpoNomeCliente;
         private System.Windows.Forms.TextBox cpoNomeFornecedor;
@@ -966,5 +993,7 @@
         private System.Windows.Forms.TextBox cpoIDFornecedor;
         private System.Windows.Forms.TextBox cpoIDTransportador;
         private System.Windows.Forms.TextBox cpoIDCliente;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -33,6 +33,8 @@ namespace Apresentacao
             set { cpoIDCliente.Text = value; }
         }
 
+        //------
+
         public String NomeFornecedor
         {
             get { return cpoNomeFornecedor.Text; }
@@ -44,6 +46,23 @@ namespace Apresentacao
             get { return cpoIDFornecedor.Text; }
             set { cpoIDFornecedor.Text = value; }
         }
+
+        //------
+
+        public String NomeTransportador
+        {
+            get { return cpoNomeTransportador.Text; }
+            set { cpoNomeTransportador.Text = value; }
+        }
+
+        public String IDTransportador
+        {
+            get { return cpoIDTransportador.Text; }
+            set { cpoIDTransportador.Text = value; }
+        }
+
+
+
 
 
         //---------------------------------------- SERVE PARA PEGAR DADOS DE UM FORM E PASSAR PARA OUTRO FORM-----------------------------------
@@ -153,6 +172,8 @@ namespace Apresentacao
         {
             frmSelecionarTransportador OutroForm = new frmSelecionarTransportador();
             OutroForm.ShowDialog();
+            cpoNomeTransportador.Text = OutroForm.NomeTransportador;
+            cpoIDTransportador.Text = OutroForm.IDTransportador;
         }
 
         private void dgwCarregamento_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -197,6 +218,95 @@ namespace Apresentacao
             {
                 e.Handled = true;
             }
+        }
+
+        private void cpoQtdGeral_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoAdiantFretMot_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoFrete_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoSeguro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoTaxaNf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoCustoCarreg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoComissao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoValorTotal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoNomeCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cpoIDCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cpoCustoCarreg_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cpoTaxaNf_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -102,7 +102,7 @@ namespace Apresentacao
         {
             if (cpoIDFornecedor.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
             {
-                MessageBox.Show("Pesquise o fornecedor desejado e selecione-o dando um clique duplo sobre ele.");
+                MessageBox.Show("Pesquise o Fornecedor desejado e selecione-o dando um clique duplo sobre o mesmo.");
                 return;
             }
             Fornecedor fornecedor = (dgwSelFornecedor.SelectedRows[0].DataBoundItem as Fornecedor);

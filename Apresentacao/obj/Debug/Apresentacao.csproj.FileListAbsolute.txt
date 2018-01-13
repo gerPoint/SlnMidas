@@ -85,3 +85,4 @@ C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentaca
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.pdb
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarCliente.resources
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarFornecedor.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarTransportador.resources
