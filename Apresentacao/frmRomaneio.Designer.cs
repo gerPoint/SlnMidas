@@ -390,6 +390,7 @@
             // cpoValorTotal
             // 
             this.cpoValorTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoValorTotal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoValorTotal.Location = new System.Drawing.Point(734, 423);
             this.cpoValorTotal.Multiline = true;
             this.cpoValorTotal.Name = "cpoValorTotal";
