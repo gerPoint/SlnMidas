@@ -86,5 +86,13 @@ namespace Apresentacao
             frmUsuario OutroForm = new frmUsuario();
             OutroForm.ShowDialog();
         }
+
+ 
+
+        private void formaDePagamentoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmFormaPagamento OutroForm = new frmFormaPagamento();
+            OutroForm.ShowDialog();
+        }
     }
 }

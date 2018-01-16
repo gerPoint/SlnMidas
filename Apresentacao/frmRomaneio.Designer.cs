@@ -104,6 +104,7 @@
             this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetCarregbloco = new Apresentacao.midasDataSetCarregbloco();
             this.tblCarregamentoBlocoTableAdapter = new Apresentacao.midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter();
+            this.label19 = new System.Windows.Forms.Label();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -126,6 +127,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.label19);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.cpoIDFornecedor);
@@ -261,9 +263,10 @@
             this.cpoIDRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoIDRomaneio.Enabled = false;
             this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoIDRomaneio.Location = new System.Drawing.Point(302, 191);
+            this.cpoIDRomaneio.Location = new System.Drawing.Point(300, 192);
             this.cpoIDRomaneio.Multiline = true;
             this.cpoIDRomaneio.Name = "cpoIDRomaneio";
+            this.cpoIDRomaneio.ReadOnly = true;
             this.cpoIDRomaneio.Size = new System.Drawing.Size(166, 39);
             this.cpoIDRomaneio.TabIndex = 94;
             this.cpoIDRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -458,9 +461,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(566, 91);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 13);
+            this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 71;
-            this.label8.Text = "Produto";
+            this.label8.Text = "Fruta";
             // 
             // label7
             // 
@@ -893,6 +896,16 @@
             // 
             this.tblCarregamentoBlocoTableAdapter.ClearBeforeFill = true;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(168, 216);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(85, 16);
+            this.label19.TabIndex = 103;
+            this.label19.Text = "Selecionado";
+            // 
             // frmRomaneio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -996,5 +1009,6 @@
         private System.Windows.Forms.TextBox cpoIDCliente;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label19;
     }
 }

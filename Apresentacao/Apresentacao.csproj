@@ -58,6 +58,12 @@
     <Compile Include="frmFilial.Designer.cs">
       <DependentUpon>frmFilial.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFormaPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFormaPagamento.Designer.cs">
+      <DependentUpon>frmFormaPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>midasDataSetFilial2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="midasDataSetFormaPgto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetFormaPgto.xsd</DependentUpon>
+    </Compile>
     <Compile Include="midasDataSetFornecedor.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -191,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmFilial.resx">
       <DependentUpon>frmFilial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFormaPagamento.resx">
+      <DependentUpon>frmFormaPagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFornecedor.resx">
       <DependentUpon>frmFornecedor.cs</DependentUpon>
@@ -297,6 +311,17 @@
     </None>
     <None Include="midasDataSetFilial2.xss">
       <DependentUpon>midasDataSetFilial2.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetFormaPgto.xsc">
+      <DependentUpon>midasDataSetFormaPgto.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetFormaPgto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSetFormaPgto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSetFormaPgto.xss">
+      <DependentUpon>midasDataSetFormaPgto.xsd</DependentUpon>
     </None>
     <None Include="midasDataSetFornecedor.xsc">
       <DependentUpon>midasDataSetFornecedor.xsd</DependentUpon>

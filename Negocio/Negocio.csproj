@@ -43,6 +43,7 @@
     <Compile Include="NegBlocos.cs" />
     <Compile Include="NegCliente.cs" />
     <Compile Include="NegFilial.cs" />
+    <Compile Include="NegFormaPagamento.cs" />
     <Compile Include="NegFornecedor.cs" />
     <Compile Include="NegFruta.cs" />
     <Compile Include="NegFuncionario.cs" />

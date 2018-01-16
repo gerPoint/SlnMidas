@@ -45,6 +45,7 @@
     <Compile Include="objCarregamentoBloco.cs" />
     <Compile Include="objCliente.cs" />
     <Compile Include="objFilial.cs" />
+    <Compile Include="objFormaPagamento.cs" />
     <Compile Include="objFornecedor.cs" />
     <Compile Include="objFruta.cs" />
     <Compile Include="objFuncionario.cs" />
