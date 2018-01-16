@@ -32,8 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRomaneio));
             this.tabPage = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.cpoIDFruta = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.btnChamaFruta = new System.Windows.Forms.Button();
+            this.cpoNomeFruta = new System.Windows.Forms.TextBox();
             this.cpoIDFornecedor = new System.Windows.Forms.TextBox();
             this.cpoIDTransportador = new System.Windows.Forms.TextBox();
             this.cpoIDCliente = new System.Windows.Forms.TextBox();
@@ -49,6 +51,8 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.tblFormaPagamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetDescFormPgto = new Apresentacao.midasDataSetDescFormPgto();
             this.cpoSeguro = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.cpoAdiantFretMot = new System.Windows.Forms.TextBox();
@@ -56,7 +60,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.cpoValorTotal = new System.Windows.Forms.TextBox();
             this.cpoFrete = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.comboBoxUnidMedida = new System.Windows.Forms.ComboBox();
+            this.tblFrutaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetFruta = new Apresentacao.midasDataSetFruta();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cpoQtdGeral = new System.Windows.Forms.TextBox();
@@ -103,15 +109,24 @@
             this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetCarregbloco = new Apresentacao.midasDataSetCarregbloco();
+            this.tblFrutaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetUnidMedida = new Apresentacao.midasDataSetUnidMedida();
             this.tblCarregamentoBlocoTableAdapter = new Apresentacao.midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter();
-            this.label19 = new System.Windows.Forms.Label();
+            this.tblFrutaTableAdapter = new Apresentacao.midasDataSetUnidMedidaTableAdapters.tblFrutaTableAdapter();
+            this.tblFormaPagamentoTableAdapter = new Apresentacao.midasDataSetDescFormPgtoTableAdapters.tblFormaPagamentoTableAdapter();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFormaPagamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetDescFormPgto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetFruta)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCarregamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregbloco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetUnidMedida)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage
@@ -127,9 +142,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.cpoIDFruta);
             this.tabPage1.Controls.Add(this.label19);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.btnChamaFruta);
+            this.tabPage1.Controls.Add(this.cpoNomeFruta);
             this.tabPage1.Controls.Add(this.cpoIDFornecedor);
             this.tabPage1.Controls.Add(this.cpoIDTransportador);
             this.tabPage1.Controls.Add(this.cpoIDCliente);
@@ -152,7 +168,7 @@
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.cpoValorTotal);
             this.tabPage1.Controls.Add(this.cpoFrete);
-            this.tabPage1.Controls.Add(this.comboBox4);
+            this.tabPage1.Controls.Add(this.comboBoxUnidMedida);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.cpoQtdGeral);
@@ -180,25 +196,44 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Romaneio";
             // 
-            // button1
+            // cpoIDFruta
             // 
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(612, 88);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 20);
-            this.button1.TabIndex = 102;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cpoIDFruta.Location = new System.Drawing.Point(948, 88);
+            this.cpoIDFruta.Name = "cpoIDFruta";
+            this.cpoIDFruta.Size = new System.Drawing.Size(21, 20);
+            this.cpoIDFruta.TabIndex = 104;
+            this.cpoIDFruta.Visible = false;
             // 
-            // textBox2
+            // label19
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(649, 88);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(296, 20);
-            this.textBox2.TabIndex = 101;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(170, 211);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(67, 20);
+            this.label19.TabIndex = 103;
+            this.label19.Text = "Código :";
+            // 
+            // btnChamaFruta
+            // 
+            this.btnChamaFruta.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChamaFruta.Location = new System.Drawing.Point(612, 88);
+            this.btnChamaFruta.Name = "btnChamaFruta";
+            this.btnChamaFruta.Size = new System.Drawing.Size(25, 20);
+            this.btnChamaFruta.TabIndex = 102;
+            this.btnChamaFruta.Text = "...";
+            this.btnChamaFruta.UseVisualStyleBackColor = true;
+            this.btnChamaFruta.Click += new System.EventHandler(this.btnChamaFruta_Click);
+            // 
+            // cpoNomeFruta
+            // 
+            this.cpoNomeFruta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoNomeFruta.Enabled = false;
+            this.cpoNomeFruta.Location = new System.Drawing.Point(649, 88);
+            this.cpoNomeFruta.Multiline = true;
+            this.cpoNomeFruta.Name = "cpoNomeFruta";
+            this.cpoNomeFruta.Size = new System.Drawing.Size(296, 20);
+            this.cpoNomeFruta.TabIndex = 101;
             // 
             // cpoIDFornecedor
             // 
@@ -252,11 +287,11 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(133, 200);
+            this.label18.Location = new System.Drawing.Point(102, 192);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(156, 16);
+            this.label18.Size = new System.Drawing.Size(193, 16);
             this.label18.TabIndex = 95;
-            this.label18.Text = "ROMANEIO NÚMERO:";
+            this.label18.Text = "ROMANEIO SELECIONADO";
             // 
             // cpoIDRomaneio
             // 
@@ -338,11 +373,25 @@
             // 
             // comboBox5
             // 
+            this.comboBox5.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblFormaPagamentoBindingSource, "Descricao", true));
+            this.comboBox5.DataSource = this.midasDataSetDescFormPgto;
+            this.comboBox5.DisplayMember = "tblFormaPagamento.Descricao";
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(613, 178);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(332, 21);
             this.comboBox5.TabIndex = 86;
+            this.comboBox5.ValueMember = "tblFormaPagamento.Descricao";
+            // 
+            // tblFormaPagamentoBindingSource
+            // 
+            this.tblFormaPagamentoBindingSource.DataMember = "tblFormaPagamento";
+            this.tblFormaPagamentoBindingSource.DataSource = this.midasDataSetDescFormPgto;
+            // 
+            // midasDataSetDescFormPgto
+            // 
+            this.midasDataSetDescFormPgto.DataSetName = "midasDataSetDescFormPgto";
+            this.midasDataSetDescFormPgto.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cpoSeguro
             // 
@@ -410,13 +459,33 @@
             this.cpoFrete.TabIndex = 78;
             this.cpoFrete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoFrete_KeyPress);
             // 
-            // comboBox4
+            // comboBoxUnidMedida
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(840, 133);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(105, 21);
-            this.comboBox4.TabIndex = 77;
+            this.comboBoxUnidMedida.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblFrutaBindingSource, "UnidMedida", true));
+            this.comboBoxUnidMedida.FormattingEnabled = true;
+            this.comboBoxUnidMedida.Items.AddRange(new object[] {
+            "Cx",
+            "Bd",
+            "To",
+            "Un",
+            "Mt",
+            "Pt",
+            "Mm",
+            "Cm"});
+            this.comboBoxUnidMedida.Location = new System.Drawing.Point(840, 133);
+            this.comboBoxUnidMedida.Name = "comboBoxUnidMedida";
+            this.comboBoxUnidMedida.Size = new System.Drawing.Size(105, 21);
+            this.comboBoxUnidMedida.TabIndex = 77;
+            // 
+            // tblFrutaBindingSource
+            // 
+            this.tblFrutaBindingSource.DataMember = "tblFruta";
+            this.tblFrutaBindingSource.DataSource = this.midasDataSetFruta;
+            // 
+            // midasDataSetFruta
+            // 
+            this.midasDataSetFruta.DataSetName = "midasDataSet1";
+            this.midasDataSetFruta.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label10
             // 
@@ -892,19 +961,27 @@
             this.midasDataSetCarregbloco.DataSetName = "midasDataSetCarregbloco";
             this.midasDataSetCarregbloco.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // tblFrutaBindingSource1
+            // 
+            this.tblFrutaBindingSource1.DataMember = "tblFruta";
+            this.tblFrutaBindingSource1.DataSource = this.midasDataSetUnidMedida;
+            // 
+            // midasDataSetUnidMedida
+            // 
+            this.midasDataSetUnidMedida.DataSetName = "midasDataSetUnidMedida";
+            this.midasDataSetUnidMedida.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // tblCarregamentoBlocoTableAdapter
             // 
             this.tblCarregamentoBlocoTableAdapter.ClearBeforeFill = true;
             // 
-            // label19
+            // tblFrutaTableAdapter
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(168, 216);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(85, 16);
-            this.label19.TabIndex = 103;
-            this.label19.Text = "Selecionado";
+            this.tblFrutaTableAdapter.ClearBeforeFill = true;
+            // 
+            // tblFormaPagamentoTableAdapter
+            // 
+            this.tblFormaPagamentoTableAdapter.ClearBeforeFill = true;
             // 
             // frmRomaneio
             // 
@@ -922,6 +999,10 @@
             this.tabPage.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFormaPagamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetDescFormPgto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetFruta)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -929,6 +1010,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgwCarregamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregbloco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetUnidMedida)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -952,7 +1035,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox cpoValorTotal;
         private System.Windows.Forms.TextBox cpoFrete;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBoxUnidMedida;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox cpoQtdGeral;
@@ -1007,8 +1090,17 @@
         private System.Windows.Forms.TextBox cpoIDFornecedor;
         private System.Windows.Forms.TextBox cpoIDTransportador;
         private System.Windows.Forms.TextBox cpoIDCliente;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox cpoNomeFruta;
+        private System.Windows.Forms.Button btnChamaFruta;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox cpoIDFruta;
+        private System.Windows.Forms.BindingSource tblFrutaBindingSource;
+        private midasDataSetFruta midasDataSetFruta;
+        private midasDataSetUnidMedida midasDataSetUnidMedida;
+        private System.Windows.Forms.BindingSource tblFrutaBindingSource1;
+        private midasDataSetUnidMedidaTableAdapters.tblFrutaTableAdapter tblFrutaTableAdapter;
+        private midasDataSetDescFormPgto midasDataSetDescFormPgto;
+        private System.Windows.Forms.BindingSource tblFormaPagamentoBindingSource;
+        private midasDataSetDescFormPgtoTableAdapters.tblFormaPagamentoTableAdapter tblFormaPagamentoTableAdapter;
     }
 }

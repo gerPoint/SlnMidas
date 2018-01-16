@@ -39,7 +39,7 @@ namespace Apresentacao
             {
                 if (cpoCaixaPesquisa.Text == string.Empty)
                 {
-                    MessageBox.Show("Por favor, informe o nome do Cliente para pesquisar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Por favor, informe o nome da Filial para pesquisar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     cpoCaixaPesquisa.Text = string.Empty;
                     cpoCaixaPesquisa.Focus();
                     //CaixaPesquisa.DataSource = "";

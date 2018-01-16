@@ -32,7 +32,7 @@ namespace Apresentacao
         private void frmFormaPagamento_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'midasDataSetFormaPgto.tblFormaPagamento' table. You can move, or remove it, as needed.
-           
+
 
         }
 
@@ -134,7 +134,7 @@ namespace Apresentacao
 
                 NegFormaPagamento negFormaPagamento = new NegFormaPagamento();
                 strRetorno = negFormaPagamento.Alterar(this.objFormaPagamento);
-                
+
 
 
                 int intCodigo;
@@ -230,7 +230,7 @@ namespace Apresentacao
 
 
 
-//------------------------------------------------Somente a primeira letra maiuscula de cada palavra--------------------------------------
+        //------------------------------------------------Somente a primeira letra maiuscula de cada palavra--------------------------------------
         public string ConvMaiuscula(string Input)
         {
             System.Globalization.CultureInfo cultureInfo = System.Threading.Thread.CurrentThread.CurrentCulture;
@@ -254,6 +254,88 @@ namespace Apresentacao
         {
             cpoCaixaPesquisa.Text = ConvMaiuscula(cpoCaixaPesquisa.Text).ToString();
             cpoCaixaPesquisa.SelectionStart = cpoCaixaPesquisa.Text.Length;
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            AtualizarGrid();
+        }
+
+
+        private void AtualizarGrid()
+        {
+            try
+            {
+                if (cpoCaixaPesquisa.Text == string.Empty)
+                {
+                    MessageBox.Show("Por favor, informe o nome da Forma de Pagamento para pesquisar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cpoCaixaPesquisa.Text = string.Empty;
+                    cpoCaixaPesquisa.Focus();
+                    return;
+                }
+
+                NegFormaPagamento objNegFormaPagamento = new NegFormaPagamento();
+                FormaPagamentoLista objLista;
+                try
+                {
+                    //int cod = int.Parse(CaixaPesquisa.Text);
+                    objLista = objNegFormaPagamento.Consultar(cpoCaixaPesquisa.Text);
+                }
+                catch
+                {
+
+                    objLista = objNegFormaPagamento.Consultar(cpoCaixaPesquisa.Text);
+                }
+
+
+                if (objLista.Count == 0)
+                {
+                    MessageBox.Show("Nenhum registro encontrado.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cpoCaixaPesquisa.Text = string.Empty;
+                    cpoCaixaPesquisa.Focus();
+                    return;
+                }
+
+                dgwFormaPagamento.DataSource = null;
+                dgwFormaPagamento.DataSource = objLista;
+                dgwFormaPagamento.Update();
+                dgwFormaPagamento.Refresh();
+                cpoCaixaPesquisa.Text = string.Empty;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao consultar Forma de Pagamento. Falha: " +
+                    ex.Message, "Falha", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+
+
+        }
+
+        private void dgwFormaPagamento_DoubleClick(object sender, EventArgs e)
+        {
+            cpoIDFormaPagamento.Text = dgwFormaPagamento.SelectedRows[0].Cells[0].Value.ToString();
+            cpoDescricao.Text = dgwFormaPagamento.SelectedRows[0].Cells[1].Value.ToString();
+            cpoParcelamento.Text = dgwFormaPagamento.SelectedRows[0].Cells[2].Value.ToString();
+
+            btnSalvar.Enabled = false;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
+        }
+
+        private void btnRetornar_Click(object sender, EventArgs e)
+        {
+            dgwFormaPagamento.Update();
+            dgwFormaPagamento.Refresh();
+
+
+            cpoIDFormaPagamento.Clear();
+            cpoDescricao.Clear();
+            cpoParcelamento.Clear();
+ 
+            btnSalvar.Enabled = true;
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
         }
     }
 }

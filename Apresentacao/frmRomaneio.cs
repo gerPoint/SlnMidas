@@ -60,8 +60,19 @@ namespace Apresentacao
             get { return cpoIDTransportador.Text; }
             set { cpoIDTransportador.Text = value; }
         }
+        //-------
 
+        public String NomeFruta
+        {
+            get { return cpoNomeFruta.Text; }
+            set { cpoNomeFruta.Text = value; }
+        }
 
+        public String IDFruta
+        {
+            get { return cpoIDFruta.Text; }
+            set { cpoIDFruta.Text = value; }
+        }
 
 
 
@@ -74,6 +85,10 @@ namespace Apresentacao
 
         private void frmRomaneio_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'midasDataSetDescFormPgto.tblFormaPagamento' table. You can move, or remove it, as needed.
+            this.tblFormaPagamentoTableAdapter.Fill(this.midasDataSetDescFormPgto.tblFormaPagamento);
+            // TODO: This line of code loads data into the 'midasDataSetUnidMedida.tblFruta' table. You can move, or remove it, as needed.
+            this.tblFrutaTableAdapter.Fill(this.midasDataSetUnidMedida.tblFruta);
             // TODO: This line of code loads data into the 'midasDataSetCarregbloco.tblCarregamentoBloco' table. You can move, or remove it, as needed.
             //this.tblCarregamentoBlocoTableAdapter.Fill(this.midasDataSetCarregbloco.tblCarregamentoBloco);
             AcessoDadosSqlServer acessoDados = new AcessoDadosSqlServer();
@@ -307,6 +322,17 @@ namespace Apresentacao
         private void cpoTaxaNf_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnChamaFruta_Click(object sender, EventArgs e)
+        {
+
+            //alterarrrr
+
+            frmSelecionarFruta OutroForm = new frmSelecionarFruta();
+            OutroForm.ShowDialog();
+            cpoNomeFruta.Text = OutroForm.NomeFruta;
+            cpoIDFruta.Text = OutroForm.IDFruta;
         }
 
 

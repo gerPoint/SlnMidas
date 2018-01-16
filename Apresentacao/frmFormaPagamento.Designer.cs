@@ -68,6 +68,7 @@
             this.btnRetornar.Text = "Retornar";
             this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRetornar.UseVisualStyleBackColor = true;
+            this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
             // 
             // cpoIDFormaPagamento
             // 
@@ -169,6 +170,7 @@
             this.dgwFormaPagamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFormaPagamento.Size = new System.Drawing.Size(542, 211);
             this.dgwFormaPagamento.TabIndex = 105;
+            this.dgwFormaPagamento.DoubleClick += new System.EventHandler(this.dgwFormaPagamento_DoubleClick);
             // 
             // iDFormaPagamentoDataGridViewTextBoxColumn
             // 
@@ -273,6 +275,7 @@
             this.btnPesquisar.TabIndex = 96;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // tblFormaPagamentoTableAdapter
             // 
