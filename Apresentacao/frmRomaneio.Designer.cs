@@ -114,6 +114,7 @@
             this.tblCarregamentoBlocoTableAdapter = new Apresentacao.midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter();
             this.tblFrutaTableAdapter = new Apresentacao.midasDataSetUnidMedidaTableAdapters.tblFrutaTableAdapter();
             this.tblFormaPagamentoTableAdapter = new Apresentacao.midasDataSetDescFormPgtoTableAdapters.tblFormaPagamentoTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblFormaPagamentoBindingSource)).BeginInit();
@@ -127,6 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregbloco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetUnidMedida)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage
@@ -208,11 +210,12 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(170, 211);
+            this.label19.Location = new System.Drawing.Point(170, 411);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(67, 20);
             this.label19.TabIndex = 103;
             this.label19.Text = "Código :";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // btnChamaFruta
             // 
@@ -237,7 +240,7 @@
             // 
             // cpoIDFornecedor
             // 
-            this.cpoIDFornecedor.Location = new System.Drawing.Point(472, 321);
+            this.cpoIDFornecedor.Location = new System.Drawing.Point(472, 285);
             this.cpoIDFornecedor.Name = "cpoIDFornecedor";
             this.cpoIDFornecedor.Size = new System.Drawing.Size(21, 20);
             this.cpoIDFornecedor.TabIndex = 100;
@@ -245,7 +248,7 @@
             // 
             // cpoIDTransportador
             // 
-            this.cpoIDTransportador.Location = new System.Drawing.Point(472, 360);
+            this.cpoIDTransportador.Location = new System.Drawing.Point(472, 324);
             this.cpoIDTransportador.Name = "cpoIDTransportador";
             this.cpoIDTransportador.Size = new System.Drawing.Size(21, 20);
             this.cpoIDTransportador.TabIndex = 99;
@@ -253,7 +256,7 @@
             // 
             // cpoIDCliente
             // 
-            this.cpoIDCliente.Location = new System.Drawing.Point(472, 281);
+            this.cpoIDCliente.Location = new System.Drawing.Point(472, 245);
             this.cpoIDCliente.Name = "cpoIDCliente";
             this.cpoIDCliente.Size = new System.Drawing.Size(21, 20);
             this.cpoIDCliente.TabIndex = 98;
@@ -275,7 +278,7 @@
             // checkBoxAdiantFretMot
             // 
             this.checkBoxAdiantFretMot.AutoSize = true;
-            this.checkBoxAdiantFretMot.Location = new System.Drawing.Point(733, 283);
+            this.checkBoxAdiantFretMot.Location = new System.Drawing.Point(731, 247);
             this.checkBoxAdiantFretMot.Name = "checkBoxAdiantFretMot";
             this.checkBoxAdiantFretMot.Size = new System.Drawing.Size(101, 17);
             this.checkBoxAdiantFretMot.TabIndex = 96;
@@ -287,18 +290,19 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(102, 192);
+            this.label18.Location = new System.Drawing.Point(102, 392);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(193, 16);
             this.label18.TabIndex = 95;
             this.label18.Text = "ROMANEIO SELECIONADO";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // cpoIDRomaneio
             // 
             this.cpoIDRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoIDRomaneio.Enabled = false;
             this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoIDRomaneio.Location = new System.Drawing.Point(300, 192);
+            this.cpoIDRomaneio.Location = new System.Drawing.Point(300, 392);
             this.cpoIDRomaneio.Multiline = true;
             this.cpoIDRomaneio.Name = "cpoIDRomaneio";
             this.cpoIDRomaneio.ReadOnly = true;
@@ -309,7 +313,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(501, 364);
+            this.label17.Location = new System.Drawing.Point(499, 328);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(103, 13);
             this.label17.TabIndex = 93;
@@ -318,7 +322,7 @@
             // cpoCustoCarreg
             // 
             this.cpoCustoCarreg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCustoCarreg.Location = new System.Drawing.Point(613, 362);
+            this.cpoCustoCarreg.Location = new System.Drawing.Point(611, 325);
             this.cpoCustoCarreg.Name = "cpoCustoCarreg";
             this.cpoCustoCarreg.Size = new System.Drawing.Size(106, 20);
             this.cpoCustoCarreg.TabIndex = 92;
@@ -328,7 +332,7 @@
             // cpoTaxaNf
             // 
             this.cpoTaxaNf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoTaxaNf.Location = new System.Drawing.Point(840, 326);
+            this.cpoTaxaNf.Location = new System.Drawing.Point(838, 285);
             this.cpoTaxaNf.Name = "cpoTaxaNf";
             this.cpoTaxaNf.Size = new System.Drawing.Size(104, 20);
             this.cpoTaxaNf.TabIndex = 91;
@@ -338,7 +342,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(771, 328);
+            this.label16.Location = new System.Drawing.Point(768, 288);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(48, 13);
             this.label16.TabIndex = 90;
@@ -347,7 +351,7 @@
             // cpoComissao
             // 
             this.cpoComissao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoComissao.Location = new System.Drawing.Point(840, 364);
+            this.cpoComissao.Location = new System.Drawing.Point(838, 327);
             this.cpoComissao.Name = "cpoComissao";
             this.cpoComissao.Size = new System.Drawing.Size(105, 20);
             this.cpoComissao.TabIndex = 89;
@@ -356,7 +360,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(771, 369);
+            this.label15.Location = new System.Drawing.Point(769, 332);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(52, 13);
             this.label15.TabIndex = 88;
@@ -365,11 +369,12 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(502, 181);
+            this.label14.Location = new System.Drawing.Point(489, 181);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(108, 13);
             this.label14.TabIndex = 87;
             this.label14.Text = "Forma de Pagamento";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // comboBox5
             // 
@@ -396,7 +401,7 @@
             // cpoSeguro
             // 
             this.cpoSeguro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoSeguro.Location = new System.Drawing.Point(613, 324);
+            this.cpoSeguro.Location = new System.Drawing.Point(610, 284);
             this.cpoSeguro.Name = "cpoSeguro";
             this.cpoSeguro.Size = new System.Drawing.Size(106, 20);
             this.cpoSeguro.TabIndex = 85;
@@ -405,7 +410,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(565, 324);
+            this.label13.Location = new System.Drawing.Point(562, 284);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(41, 13);
             this.label13.TabIndex = 84;
@@ -415,7 +420,7 @@
             // 
             this.cpoAdiantFretMot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoAdiantFretMot.Enabled = false;
-            this.cpoAdiantFretMot.Location = new System.Drawing.Point(840, 282);
+            this.cpoAdiantFretMot.Location = new System.Drawing.Point(838, 246);
             this.cpoAdiantFretMot.Name = "cpoAdiantFretMot";
             this.cpoAdiantFretMot.Size = new System.Drawing.Size(105, 20);
             this.cpoAdiantFretMot.TabIndex = 82;
@@ -424,7 +429,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(573, 284);
+            this.label12.Location = new System.Drawing.Point(571, 248);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(31, 13);
             this.label12.TabIndex = 81;
@@ -433,7 +438,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(676, 430);
+            this.label11.Location = new System.Drawing.Point(675, 405);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(42, 13);
             this.label11.TabIndex = 80;
@@ -443,7 +448,7 @@
             // 
             this.cpoValorTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoValorTotal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoValorTotal.Location = new System.Drawing.Point(734, 423);
+            this.cpoValorTotal.Location = new System.Drawing.Point(733, 398);
             this.cpoValorTotal.Multiline = true;
             this.cpoValorTotal.Name = "cpoValorTotal";
             this.cpoValorTotal.Size = new System.Drawing.Size(211, 33);
@@ -453,7 +458,7 @@
             // cpoFrete
             // 
             this.cpoFrete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoFrete.Location = new System.Drawing.Point(613, 282);
+            this.cpoFrete.Location = new System.Drawing.Point(611, 246);
             this.cpoFrete.Name = "cpoFrete";
             this.cpoFrete.Size = new System.Drawing.Size(106, 20);
             this.cpoFrete.TabIndex = 78;
@@ -499,7 +504,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(534, 136);
+            this.label9.Location = new System.Drawing.Point(535, 136);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 13);
             this.label9.TabIndex = 75;
@@ -517,7 +522,7 @@
             // btnChamaTransp
             // 
             this.btnChamaTransp.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChamaTransp.Location = new System.Drawing.Point(98, 360);
+            this.btnChamaTransp.Location = new System.Drawing.Point(98, 324);
             this.btnChamaTransp.Name = "btnChamaTransp";
             this.btnChamaTransp.Size = new System.Drawing.Size(25, 20);
             this.btnChamaTransp.TabIndex = 72;
@@ -537,7 +542,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 364);
+            this.label7.Location = new System.Drawing.Point(20, 328);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 13);
             this.label7.TabIndex = 70;
@@ -546,7 +551,7 @@
             // btnChamacli
             // 
             this.btnChamacli.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChamacli.Location = new System.Drawing.Point(98, 280);
+            this.btnChamacli.Location = new System.Drawing.Point(98, 244);
             this.btnChamacli.Name = "btnChamacli";
             this.btnChamacli.Size = new System.Drawing.Size(25, 20);
             this.btnChamacli.TabIndex = 69;
@@ -557,7 +562,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 284);
+            this.label6.Location = new System.Drawing.Point(54, 248);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 68;
@@ -567,7 +572,7 @@
             // btnChamafor
             // 
             this.btnChamafor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChamafor.Location = new System.Drawing.Point(98, 319);
+            this.btnChamafor.Location = new System.Drawing.Point(98, 283);
             this.btnChamafor.Name = "btnChamafor";
             this.btnChamafor.Size = new System.Drawing.Size(25, 20);
             this.btnChamafor.TabIndex = 67;
@@ -579,7 +584,7 @@
             // 
             this.cpoNomeTransportador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNomeTransportador.Enabled = false;
-            this.cpoNomeTransportador.Location = new System.Drawing.Point(134, 360);
+            this.cpoNomeTransportador.Location = new System.Drawing.Point(134, 324);
             this.cpoNomeTransportador.Name = "cpoNomeTransportador";
             this.cpoNomeTransportador.Size = new System.Drawing.Size(332, 20);
             this.cpoNomeTransportador.TabIndex = 66;
@@ -587,7 +592,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 323);
+            this.label5.Location = new System.Drawing.Point(30, 287);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 57;
@@ -597,7 +602,7 @@
             // 
             this.cpoNomeCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNomeCliente.Enabled = false;
-            this.cpoNomeCliente.Location = new System.Drawing.Point(134, 281);
+            this.cpoNomeCliente.Location = new System.Drawing.Point(134, 245);
             this.cpoNomeCliente.Multiline = true;
             this.cpoNomeCliente.Name = "cpoNomeCliente";
             this.cpoNomeCliente.Size = new System.Drawing.Size(332, 20);
@@ -608,7 +613,7 @@
             // 
             this.cpoNomeFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNomeFornecedor.Enabled = false;
-            this.cpoNomeFornecedor.Location = new System.Drawing.Point(134, 320);
+            this.cpoNomeFornecedor.Location = new System.Drawing.Point(134, 284);
             this.cpoNomeFornecedor.Name = "cpoNomeFornecedor";
             this.cpoNomeFornecedor.Size = new System.Drawing.Size(332, 20);
             this.cpoNomeFornecedor.TabIndex = 58;
@@ -632,6 +637,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.maskedTextBox1);
@@ -639,12 +645,12 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(22, 55);
+            this.groupBox1.Location = new System.Drawing.Point(22, 44);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(446, 71);
+            this.groupBox1.Size = new System.Drawing.Size(461, 186);
             this.groupBox1.TabIndex = 63;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "  Consulta";
+            this.groupBox1.Text = "  Consulta Romaneio";
             // 
             // button2
             // 
@@ -716,6 +722,7 @@
             // 
             // btnExcluir
             // 
+            this.btnExcluir.Enabled = false;
             this.btnExcluir.Image = global::Apresentacao.Properties.Resources.delete_4219;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluir.Location = new System.Drawing.Point(612, 476);
@@ -754,6 +761,7 @@
             // 
             // btnAlterar
             // 
+            this.btnAlterar.Enabled = false;
             this.btnAlterar.Image = global::Apresentacao.Properties.Resources.document_write_22637;
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAlterar.Location = new System.Drawing.Point(488, 476);
@@ -983,6 +991,14 @@
             // 
             this.tblFormaPagamentoTableAdapter.ClearBeforeFill = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(20, 67);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(426, 113);
+            this.dataGridView1.TabIndex = 11;
+            // 
             // frmRomaneio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1012,6 +1028,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregbloco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetUnidMedida)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1102,5 +1119,6 @@
         private midasDataSetDescFormPgto midasDataSetDescFormPgto;
         private System.Windows.Forms.BindingSource tblFormaPagamentoBindingSource;
         private midasDataSetDescFormPgtoTableAdapters.tblFormaPagamentoTableAdapter tblFormaPagamentoTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
