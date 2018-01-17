@@ -121,8 +121,14 @@
   <data name="Caipira_400x400-e1476553294916" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Caipira_400x400-e1476553294916.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="advice_accept_ok_theaction_10829" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\advice_accept_ok_theaction_10829.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="document_write_22637" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\document_write_22637.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Plus_36851" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Plus_36851.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="stake_truck_18543" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stake_truck_18543.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,7 +169,7 @@
   <data name="favicon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\favicon (1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="advice_accept_ok_theaction_10829" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\advice_accept_ok_theaction_10829.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Minus_36877 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minus_36877 (1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -47,6 +47,7 @@
     <Compile Include="NegFornecedor.cs" />
     <Compile Include="NegFruta.cs" />
     <Compile Include="NegFuncionario.cs" />
+    <Compile Include="NegRomaneio.cs" />
     <Compile Include="NegTransportador.cs" />
     <Compile Include="NegUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,20 +1,31 @@
 ﻿using System;
-using System.Data;
-using System.Windows.Forms;
-using AcessoDados;
-using ObjTransferencia;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using AcessoDados;
+using Negocio;
+using ObjTransferencia;
+
 
 namespace Apresentacao
 {
     
-     partial class frmRomaneio : Form
+   public partial class frmRomaneio : Form
     {
-        BindingList<objCarregamentoBloco> listCarregamento = new BindingList<objCarregamentoBloco>();
- 
+//------------------usado para adicionar blocos --------------------
 
-    
+        BindingList<objCarregamentoBloco> listCarregamento = new BindingList<objCarregamentoBloco>();
+
+//------------------usado para adicionar blocos --------------------
+
+        NegRomaneio negRomaneio = new NegRomaneio();
+
+        private Romaneio objRomaneio = new Romaneio();
+
 
         public frmRomaneio()
         {
@@ -221,11 +232,6 @@ namespace Apresentacao
 
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cpoQtd_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -299,30 +305,7 @@ namespace Apresentacao
             }
         }
 
-        private void cpoNomeCliente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cpoIDCliente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cpoCustoCarreg_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cpoTaxaNf_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void btnChamaFruta_Click(object sender, EventArgs e)
         {
@@ -337,24 +320,103 @@ namespace Apresentacao
 
 
 
-        private void label18_Click(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
+            Romaneio objRomaneio = new Romaneio();
 
-        }
+            this.objRomaneio.IDCliente = Convert.ToInt32(cpoIDCliente.Text);
+            this.objRomaneio.IDTransportador = Convert.ToInt32(cpoIDTransportador.Text);
+            this.objRomaneio.IDFornecedor = Convert.ToInt32(cpoIDFornecedor.Text);
+            this.objRomaneio.IDFruta = Convert.ToInt32(cpoIDFruta.Text);
+            this.objRomaneio.QtdFrutas = Convert.ToInt32(cpoQtdFrutas.Text);
+            this.objRomaneio.IDCarregamento = Convert.ToInt32(cpoIDCarregamento.Text);
+            this.objRomaneio.ValorFrete = Convert.ToDecimal(cpoValorFrete.Text);
+            this.objRomaneio.AdiantFretMot = Convert.ToDecimal(cpoAdiantFretMot.Text);
+            this.objRomaneio.FormaPagamento = comboBoxFormaPagamento.Text.TrimStart();
+            this.objRomaneio.CustoCarregamento = Convert.ToDecimal(cpoCustoCarregamento.Text);
+            this.objRomaneio.ValorComissao = Convert.ToDecimal(cpoValorComissao.Text);
+            this.objRomaneio.ValorTotalRomaneio = Convert.ToDecimal(cpoValorTotalRomaneio.Text);
+            this.objRomaneio.TaxaNf = Convert.ToDecimal(cpoTaxaNf.Text);
+            this.objRomaneio.UnidMedida = comboBoxUnidMedida.Text.TrimStart();
+            
 
-        private void label19_Click(object sender, EventArgs e)
-        {
+            string strRetorno = string.Empty;
 
-        }
+            if (cpoIDCliente.Text == "")
+            {
+                MessageBox.Show("Campo Obrigatório não informado.");
+                return;
+            }
 
-        private void label14_Click(object sender, EventArgs e)
-        {
+            if (cpoIDTransportador.Text == "")
+            {
+                MessageBox.Show("Campo Obrigatório não informado.");
+                return;
+            }
 
-        }
+            // strRetorno = this.negCliente.Cadastrar(this.objCliente);
+
+            NegRomaneio negRomaneio = new NegRomaneio();
+            strRetorno = negRomaneio.Cadastrar(this.objRomaneio);
+
+            try
+            {
+
+
+                int idRomaneio = Convert.ToInt32(strRetorno);
+                //  if (int.TryParse(strRetorno, out intCodigo) == true)
+                {
+                    //MessageBox.Show("Registro salvo com sucesso! Código: "  + idCliente.ToString() );
+                    MessageBox.Show("Registro salvo com sucesso!", "Código: " + idRomaneio.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // this.DialogResult = DialogResult.OK;
+
+                    //limpa os campos depois de salvar 
+
+
+
+
+                    dgwRomaneio.DataSource = null;
+                    dgwRomaneio.Update();
+                    dgwRomaneio.Refresh();
+
+                    cpoNomeCliente.Clear();
+                    cpoIDCliente.Clear();
+                    cpoNomeFornecedor.Clear();
+                    cpoIDFornecedor.Clear();
+                    cpoNomeFruta.Clear();
+                    cpoIDFruta.Clear();
+                    cpoQtdFrutas.Clear();
+                    cpoValorFrete.Clear();
+                    cpoAdiantFretMot.Clear();
+                    cpoSeguro.Clear();
+                    cpoTaxaNf.Clear();
+                    cpoCustoCarregamento.Clear();
+                    cpoValorComissao.Clear();
+                    cpoValorTotalRomaneio.Clear();
+
+
+
+                }
+            }
+
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao salvar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.DialogResult = DialogResult.No;
+            }
+
+
+          }
+
+ 
+    }
+
     }
 
 
- }
+ 
             
             
 

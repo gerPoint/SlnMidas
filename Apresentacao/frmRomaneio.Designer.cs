@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRomaneio));
             this.tabPage = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cpoIDCarregamento = new System.Windows.Forms.TextBox();
             this.cpoIDFruta = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.btnChamaFruta = new System.Windows.Forms.Button();
@@ -44,13 +45,13 @@
             this.label18 = new System.Windows.Forms.Label();
             this.cpoIDRomaneio = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.cpoCustoCarreg = new System.Windows.Forms.TextBox();
+            this.cpoCustoCarregamento = new System.Windows.Forms.TextBox();
             this.cpoTaxaNf = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.cpoComissao = new System.Windows.Forms.TextBox();
+            this.cpoValorComissao = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBoxFormaPagamento = new System.Windows.Forms.ComboBox();
             this.tblFormaPagamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetDescFormPgto = new Apresentacao.midasDataSetDescFormPgto();
             this.cpoSeguro = new System.Windows.Forms.TextBox();
@@ -58,14 +59,14 @@
             this.cpoAdiantFretMot = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.cpoValorTotal = new System.Windows.Forms.TextBox();
-            this.cpoFrete = new System.Windows.Forms.TextBox();
+            this.cpoValorTotalRomaneio = new System.Windows.Forms.TextBox();
+            this.cpoValorFrete = new System.Windows.Forms.TextBox();
             this.comboBoxUnidMedida = new System.Windows.Forms.ComboBox();
             this.tblFrutaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetFruta = new Apresentacao.midasDataSetFruta();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.cpoQtdGeral = new System.Windows.Forms.TextBox();
+            this.cpoQtdFrutas = new System.Windows.Forms.TextBox();
             this.btnChamaTransp = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -79,6 +80,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgwRomaneio = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -114,7 +116,6 @@
             this.tblCarregamentoBlocoTableAdapter = new Apresentacao.midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter();
             this.tblFrutaTableAdapter = new Apresentacao.midasDataSetUnidMedidaTableAdapters.tblFrutaTableAdapter();
             this.tblFormaPagamentoTableAdapter = new Apresentacao.midasDataSetDescFormPgtoTableAdapters.tblFormaPagamentoTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblFormaPagamentoBindingSource)).BeginInit();
@@ -122,13 +123,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetFruta)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwRomaneio)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCarregamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregbloco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetUnidMedida)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage
@@ -144,6 +145,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.cpoIDCarregamento);
             this.tabPage1.Controls.Add(this.cpoIDFruta);
             this.tabPage1.Controls.Add(this.label19);
             this.tabPage1.Controls.Add(this.btnChamaFruta);
@@ -156,24 +158,24 @@
             this.tabPage1.Controls.Add(this.label18);
             this.tabPage1.Controls.Add(this.cpoIDRomaneio);
             this.tabPage1.Controls.Add(this.label17);
-            this.tabPage1.Controls.Add(this.cpoCustoCarreg);
+            this.tabPage1.Controls.Add(this.cpoCustoCarregamento);
             this.tabPage1.Controls.Add(this.cpoTaxaNf);
             this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.cpoComissao);
+            this.tabPage1.Controls.Add(this.cpoValorComissao);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.label14);
-            this.tabPage1.Controls.Add(this.comboBox5);
+            this.tabPage1.Controls.Add(this.comboBoxFormaPagamento);
             this.tabPage1.Controls.Add(this.cpoSeguro);
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.cpoAdiantFretMot);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.label11);
-            this.tabPage1.Controls.Add(this.cpoValorTotal);
-            this.tabPage1.Controls.Add(this.cpoFrete);
+            this.tabPage1.Controls.Add(this.cpoValorTotalRomaneio);
+            this.tabPage1.Controls.Add(this.cpoValorFrete);
             this.tabPage1.Controls.Add(this.comboBoxUnidMedida);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.cpoQtdGeral);
+            this.tabPage1.Controls.Add(this.cpoQtdFrutas);
             this.tabPage1.Controls.Add(this.btnChamaTransp);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
@@ -198,9 +200,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Romaneio";
             // 
+            // cpoIDCarregamento
+            // 
+            this.cpoIDCarregamento.Location = new System.Drawing.Point(736, 29);
+            this.cpoIDCarregamento.Name = "cpoIDCarregamento";
+            this.cpoIDCarregamento.Size = new System.Drawing.Size(100, 20);
+            this.cpoIDCarregamento.TabIndex = 105;
+            // 
             // cpoIDFruta
             // 
-            this.cpoIDFruta.Location = new System.Drawing.Point(948, 88);
+            this.cpoIDFruta.Location = new System.Drawing.Point(950, 135);
             this.cpoIDFruta.Name = "cpoIDFruta";
             this.cpoIDFruta.Size = new System.Drawing.Size(21, 20);
             this.cpoIDFruta.TabIndex = 104;
@@ -215,12 +224,11 @@
             this.label19.Size = new System.Drawing.Size(67, 20);
             this.label19.TabIndex = 103;
             this.label19.Text = "Código :";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // btnChamaFruta
             // 
             this.btnChamaFruta.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChamaFruta.Location = new System.Drawing.Point(612, 88);
+            this.btnChamaFruta.Location = new System.Drawing.Point(610, 134);
             this.btnChamaFruta.Name = "btnChamaFruta";
             this.btnChamaFruta.Size = new System.Drawing.Size(25, 20);
             this.btnChamaFruta.TabIndex = 102;
@@ -232,15 +240,15 @@
             // 
             this.cpoNomeFruta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNomeFruta.Enabled = false;
-            this.cpoNomeFruta.Location = new System.Drawing.Point(649, 88);
+            this.cpoNomeFruta.Location = new System.Drawing.Point(647, 134);
             this.cpoNomeFruta.Multiline = true;
             this.cpoNomeFruta.Name = "cpoNomeFruta";
-            this.cpoNomeFruta.Size = new System.Drawing.Size(296, 20);
+            this.cpoNomeFruta.Size = new System.Drawing.Size(297, 20);
             this.cpoNomeFruta.TabIndex = 101;
             // 
             // cpoIDFornecedor
             // 
-            this.cpoIDFornecedor.Location = new System.Drawing.Point(472, 285);
+            this.cpoIDFornecedor.Location = new System.Drawing.Point(472, 326);
             this.cpoIDFornecedor.Name = "cpoIDFornecedor";
             this.cpoIDFornecedor.Size = new System.Drawing.Size(21, 20);
             this.cpoIDFornecedor.TabIndex = 100;
@@ -248,7 +256,7 @@
             // 
             // cpoIDTransportador
             // 
-            this.cpoIDTransportador.Location = new System.Drawing.Point(472, 324);
+            this.cpoIDTransportador.Location = new System.Drawing.Point(950, 94);
             this.cpoIDTransportador.Name = "cpoIDTransportador";
             this.cpoIDTransportador.Size = new System.Drawing.Size(21, 20);
             this.cpoIDTransportador.TabIndex = 99;
@@ -256,20 +264,20 @@
             // 
             // cpoIDCliente
             // 
-            this.cpoIDCliente.Location = new System.Drawing.Point(472, 245);
+            this.cpoIDCliente.Location = new System.Drawing.Point(472, 284);
             this.cpoIDCliente.Name = "cpoIDCliente";
             this.cpoIDCliente.Size = new System.Drawing.Size(21, 20);
             this.cpoIDCliente.TabIndex = 98;
             this.cpoIDCliente.Visible = false;
-            this.cpoIDCliente.TextChanged += new System.EventHandler(this.cpoIDCliente_TextChanged);
             // 
             // btnRetornar
             // 
+            this.btnRetornar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetornar.Image = global::Apresentacao.Properties.Resources.restart_back_left_arrow_6022;
             this.btnRetornar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnRetornar.Location = new System.Drawing.Point(42, 476);
             this.btnRetornar.Name = "btnRetornar";
-            this.btnRetornar.Size = new System.Drawing.Size(89, 44);
+            this.btnRetornar.Size = new System.Drawing.Size(104, 44);
             this.btnRetornar.TabIndex = 97;
             this.btnRetornar.Text = "Retornar";
             this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -278,7 +286,7 @@
             // checkBoxAdiantFretMot
             // 
             this.checkBoxAdiantFretMot.AutoSize = true;
-            this.checkBoxAdiantFretMot.Location = new System.Drawing.Point(731, 247);
+            this.checkBoxAdiantFretMot.Location = new System.Drawing.Point(732, 249);
             this.checkBoxAdiantFretMot.Name = "checkBoxAdiantFretMot";
             this.checkBoxAdiantFretMot.Size = new System.Drawing.Size(101, 17);
             this.checkBoxAdiantFretMot.TabIndex = 96;
@@ -295,7 +303,6 @@
             this.label18.Size = new System.Drawing.Size(193, 16);
             this.label18.TabIndex = 95;
             this.label18.Text = "ROMANEIO SELECIONADO";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // cpoIDRomaneio
             // 
@@ -319,24 +326,22 @@
             this.label17.TabIndex = 93;
             this.label17.Text = "Custo Carregamento";
             // 
-            // cpoCustoCarreg
+            // cpoCustoCarregamento
             // 
-            this.cpoCustoCarreg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCustoCarreg.Location = new System.Drawing.Point(611, 325);
-            this.cpoCustoCarreg.Name = "cpoCustoCarreg";
-            this.cpoCustoCarreg.Size = new System.Drawing.Size(106, 20);
-            this.cpoCustoCarreg.TabIndex = 92;
-            this.cpoCustoCarreg.TextChanged += new System.EventHandler(this.cpoCustoCarreg_TextChanged);
-            this.cpoCustoCarreg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCustoCarreg_KeyPress);
+            this.cpoCustoCarregamento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCustoCarregamento.Location = new System.Drawing.Point(612, 325);
+            this.cpoCustoCarregamento.Name = "cpoCustoCarregamento";
+            this.cpoCustoCarregamento.Size = new System.Drawing.Size(106, 20);
+            this.cpoCustoCarregamento.TabIndex = 92;
+            this.cpoCustoCarregamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCustoCarreg_KeyPress);
             // 
             // cpoTaxaNf
             // 
             this.cpoTaxaNf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoTaxaNf.Location = new System.Drawing.Point(838, 285);
+            this.cpoTaxaNf.Location = new System.Drawing.Point(837, 287);
             this.cpoTaxaNf.Name = "cpoTaxaNf";
-            this.cpoTaxaNf.Size = new System.Drawing.Size(104, 20);
+            this.cpoTaxaNf.Size = new System.Drawing.Size(107, 20);
             this.cpoTaxaNf.TabIndex = 91;
-            this.cpoTaxaNf.TextChanged += new System.EventHandler(this.cpoTaxaNf_TextChanged);
             this.cpoTaxaNf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTaxaNf_KeyPress);
             // 
             // label16
@@ -348,19 +353,19 @@
             this.label16.TabIndex = 90;
             this.label16.Text = "Taxa NF";
             // 
-            // cpoComissao
+            // cpoValorComissao
             // 
-            this.cpoComissao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoComissao.Location = new System.Drawing.Point(838, 327);
-            this.cpoComissao.Name = "cpoComissao";
-            this.cpoComissao.Size = new System.Drawing.Size(105, 20);
-            this.cpoComissao.TabIndex = 89;
-            this.cpoComissao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoComissao_KeyPress);
+            this.cpoValorComissao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoValorComissao.Location = new System.Drawing.Point(837, 325);
+            this.cpoValorComissao.Name = "cpoValorComissao";
+            this.cpoValorComissao.Size = new System.Drawing.Size(107, 20);
+            this.cpoValorComissao.TabIndex = 89;
+            this.cpoValorComissao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoComissao_KeyPress);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(769, 332);
+            this.label15.Location = new System.Drawing.Point(768, 329);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(52, 13);
             this.label15.TabIndex = 88;
@@ -369,24 +374,23 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(489, 181);
+            this.label14.Location = new System.Drawing.Point(488, 212);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(108, 13);
             this.label14.TabIndex = 87;
             this.label14.Text = "Forma de Pagamento";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
-            // comboBox5
+            // comboBoxFormaPagamento
             // 
-            this.comboBox5.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblFormaPagamentoBindingSource, "Descricao", true));
-            this.comboBox5.DataSource = this.midasDataSetDescFormPgto;
-            this.comboBox5.DisplayMember = "tblFormaPagamento.Descricao";
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(613, 178);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(332, 21);
-            this.comboBox5.TabIndex = 86;
-            this.comboBox5.ValueMember = "tblFormaPagamento.Descricao";
+            this.comboBoxFormaPagamento.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblFormaPagamentoBindingSource, "Descricao", true));
+            this.comboBoxFormaPagamento.DataSource = this.midasDataSetDescFormPgto;
+            this.comboBoxFormaPagamento.DisplayMember = "tblFormaPagamento.Descricao";
+            this.comboBoxFormaPagamento.FormattingEnabled = true;
+            this.comboBoxFormaPagamento.Location = new System.Drawing.Point(612, 209);
+            this.comboBoxFormaPagamento.Name = "comboBoxFormaPagamento";
+            this.comboBoxFormaPagamento.Size = new System.Drawing.Size(333, 21);
+            this.comboBoxFormaPagamento.TabIndex = 86;
+            this.comboBoxFormaPagamento.ValueMember = "tblFormaPagamento.Descricao";
             // 
             // tblFormaPagamentoBindingSource
             // 
@@ -401,7 +405,7 @@
             // cpoSeguro
             // 
             this.cpoSeguro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoSeguro.Location = new System.Drawing.Point(610, 284);
+            this.cpoSeguro.Location = new System.Drawing.Point(612, 286);
             this.cpoSeguro.Name = "cpoSeguro";
             this.cpoSeguro.Size = new System.Drawing.Size(106, 20);
             this.cpoSeguro.TabIndex = 85;
@@ -420,16 +424,16 @@
             // 
             this.cpoAdiantFretMot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoAdiantFretMot.Enabled = false;
-            this.cpoAdiantFretMot.Location = new System.Drawing.Point(838, 246);
+            this.cpoAdiantFretMot.Location = new System.Drawing.Point(837, 250);
             this.cpoAdiantFretMot.Name = "cpoAdiantFretMot";
-            this.cpoAdiantFretMot.Size = new System.Drawing.Size(105, 20);
+            this.cpoAdiantFretMot.Size = new System.Drawing.Size(107, 20);
             this.cpoAdiantFretMot.TabIndex = 82;
             this.cpoAdiantFretMot.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoAdiantFretMot_KeyPress);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(571, 248);
+            this.label12.Location = new System.Drawing.Point(572, 250);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(31, 13);
             this.label12.TabIndex = 81;
@@ -444,25 +448,25 @@
             this.label11.TabIndex = 80;
             this.label11.Text = "TOTAL";
             // 
-            // cpoValorTotal
+            // cpoValorTotalRomaneio
             // 
-            this.cpoValorTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoValorTotal.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoValorTotal.Location = new System.Drawing.Point(733, 398);
-            this.cpoValorTotal.Multiline = true;
-            this.cpoValorTotal.Name = "cpoValorTotal";
-            this.cpoValorTotal.Size = new System.Drawing.Size(211, 33);
-            this.cpoValorTotal.TabIndex = 79;
-            this.cpoValorTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoValorTotal_KeyPress);
+            this.cpoValorTotalRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoValorTotalRomaneio.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(733, 398);
+            this.cpoValorTotalRomaneio.Multiline = true;
+            this.cpoValorTotalRomaneio.Name = "cpoValorTotalRomaneio";
+            this.cpoValorTotalRomaneio.Size = new System.Drawing.Size(211, 33);
+            this.cpoValorTotalRomaneio.TabIndex = 79;
+            this.cpoValorTotalRomaneio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoValorTotal_KeyPress);
             // 
-            // cpoFrete
+            // cpoValorFrete
             // 
-            this.cpoFrete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoFrete.Location = new System.Drawing.Point(611, 246);
-            this.cpoFrete.Name = "cpoFrete";
-            this.cpoFrete.Size = new System.Drawing.Size(106, 20);
-            this.cpoFrete.TabIndex = 78;
-            this.cpoFrete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoFrete_KeyPress);
+            this.cpoValorFrete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoValorFrete.Location = new System.Drawing.Point(612, 248);
+            this.cpoValorFrete.Name = "cpoValorFrete";
+            this.cpoValorFrete.Size = new System.Drawing.Size(106, 20);
+            this.cpoValorFrete.TabIndex = 78;
+            this.cpoValorFrete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoFrete_KeyPress);
             // 
             // comboBoxUnidMedida
             // 
@@ -477,7 +481,7 @@
             "Pt",
             "Mm",
             "Cm"});
-            this.comboBoxUnidMedida.Location = new System.Drawing.Point(840, 133);
+            this.comboBoxUnidMedida.Location = new System.Drawing.Point(840, 172);
             this.comboBoxUnidMedida.Name = "comboBoxUnidMedida";
             this.comboBoxUnidMedida.Size = new System.Drawing.Size(105, 21);
             this.comboBoxUnidMedida.TabIndex = 77;
@@ -495,7 +499,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(749, 136);
+            this.label10.Location = new System.Drawing.Point(749, 175);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 13);
             this.label10.TabIndex = 76;
@@ -504,25 +508,25 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(535, 136);
+            this.label9.Location = new System.Drawing.Point(535, 175);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 13);
             this.label9.TabIndex = 75;
             this.label9.Text = "Quantidade";
             // 
-            // cpoQtdGeral
+            // cpoQtdFrutas
             // 
-            this.cpoQtdGeral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoQtdGeral.Location = new System.Drawing.Point(612, 134);
-            this.cpoQtdGeral.Name = "cpoQtdGeral";
-            this.cpoQtdGeral.Size = new System.Drawing.Size(106, 20);
-            this.cpoQtdGeral.TabIndex = 74;
-            this.cpoQtdGeral.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoQtdGeral_KeyPress);
+            this.cpoQtdFrutas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoQtdFrutas.Location = new System.Drawing.Point(612, 173);
+            this.cpoQtdFrutas.Name = "cpoQtdFrutas";
+            this.cpoQtdFrutas.Size = new System.Drawing.Size(106, 20);
+            this.cpoQtdFrutas.TabIndex = 74;
+            this.cpoQtdFrutas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoQtdGeral_KeyPress);
             // 
             // btnChamaTransp
             // 
             this.btnChamaTransp.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChamaTransp.Location = new System.Drawing.Point(98, 324);
+            this.btnChamaTransp.Location = new System.Drawing.Point(611, 98);
             this.btnChamaTransp.Name = "btnChamaTransp";
             this.btnChamaTransp.Size = new System.Drawing.Size(25, 20);
             this.btnChamaTransp.TabIndex = 72;
@@ -533,7 +537,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(566, 91);
+            this.label8.Location = new System.Drawing.Point(564, 137);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 71;
@@ -542,7 +546,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 328);
+            this.label7.Location = new System.Drawing.Point(535, 102);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 13);
             this.label7.TabIndex = 70;
@@ -551,7 +555,7 @@
             // btnChamacli
             // 
             this.btnChamacli.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChamacli.Location = new System.Drawing.Point(98, 244);
+            this.btnChamacli.Location = new System.Drawing.Point(98, 283);
             this.btnChamacli.Name = "btnChamacli";
             this.btnChamacli.Size = new System.Drawing.Size(25, 20);
             this.btnChamacli.TabIndex = 69;
@@ -562,17 +566,16 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 248);
+            this.label6.Location = new System.Drawing.Point(54, 287);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 68;
             this.label6.Text = "Cliente";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // btnChamafor
             // 
             this.btnChamafor.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnChamafor.Location = new System.Drawing.Point(98, 283);
+            this.btnChamafor.Location = new System.Drawing.Point(98, 324);
             this.btnChamafor.Name = "btnChamafor";
             this.btnChamafor.Size = new System.Drawing.Size(25, 20);
             this.btnChamafor.TabIndex = 67;
@@ -584,15 +587,15 @@
             // 
             this.cpoNomeTransportador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNomeTransportador.Enabled = false;
-            this.cpoNomeTransportador.Location = new System.Drawing.Point(134, 324);
+            this.cpoNomeTransportador.Location = new System.Drawing.Point(648, 95);
             this.cpoNomeTransportador.Name = "cpoNomeTransportador";
-            this.cpoNomeTransportador.Size = new System.Drawing.Size(332, 20);
+            this.cpoNomeTransportador.Size = new System.Drawing.Size(297, 20);
             this.cpoNomeTransportador.TabIndex = 66;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 287);
+            this.label5.Location = new System.Drawing.Point(30, 328);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 57;
@@ -602,18 +605,17 @@
             // 
             this.cpoNomeCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNomeCliente.Enabled = false;
-            this.cpoNomeCliente.Location = new System.Drawing.Point(134, 245);
+            this.cpoNomeCliente.Location = new System.Drawing.Point(134, 284);
             this.cpoNomeCliente.Multiline = true;
             this.cpoNomeCliente.Name = "cpoNomeCliente";
             this.cpoNomeCliente.Size = new System.Drawing.Size(332, 20);
             this.cpoNomeCliente.TabIndex = 65;
-            this.cpoNomeCliente.TextChanged += new System.EventHandler(this.cpoNomeCliente_TextChanged);
             // 
             // cpoNomeFornecedor
             // 
             this.cpoNomeFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNomeFornecedor.Enabled = false;
-            this.cpoNomeFornecedor.Location = new System.Drawing.Point(134, 284);
+            this.cpoNomeFornecedor.Location = new System.Drawing.Point(134, 325);
             this.cpoNomeFornecedor.Name = "cpoNomeFornecedor";
             this.cpoNomeFornecedor.Size = new System.Drawing.Size(332, 20);
             this.cpoNomeFornecedor.TabIndex = 58;
@@ -637,7 +639,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgwRomaneio);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.maskedTextBox1);
@@ -647,10 +649,18 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(22, 44);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(461, 186);
+            this.groupBox1.Size = new System.Drawing.Size(461, 234);
             this.groupBox1.TabIndex = 63;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "  Consulta Romaneio";
+            // 
+            // dgwRomaneio
+            // 
+            this.dgwRomaneio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwRomaneio.Location = new System.Drawing.Point(20, 67);
+            this.dgwRomaneio.Name = "dgwRomaneio";
+            this.dgwRomaneio.Size = new System.Drawing.Size(426, 161);
+            this.dgwRomaneio.TabIndex = 11;
             // 
             // button2
             // 
@@ -723,9 +733,10 @@
             // btnExcluir
             // 
             this.btnExcluir.Enabled = false;
+            this.btnExcluir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Image = global::Apresentacao.Properties.Resources.delete_4219;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcluir.Location = new System.Drawing.Point(612, 476);
+            this.btnExcluir.Location = new System.Drawing.Point(610, 476);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(87, 44);
             this.btnExcluir.TabIndex = 62;
@@ -735,11 +746,12 @@
             // 
             // btnSalvar
             // 
+            this.btnSalvar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.Image = global::Apresentacao.Properties.Resources.saveall_1204;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvar.Location = new System.Drawing.Point(854, 476);
+            this.btnSalvar.Location = new System.Drawing.Point(844, 476);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(91, 44);
+            this.btnSalvar.Size = new System.Drawing.Size(102, 44);
             this.btnSalvar.TabIndex = 61;
             this.btnSalvar.Text = "   Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -748,11 +760,12 @@
             // 
             // btnCCancelar
             // 
+            this.btnCCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
             this.btnCCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCCancelar.Location = new System.Drawing.Point(734, 476);
+            this.btnCCancelar.Location = new System.Drawing.Point(720, 476);
             this.btnCCancelar.Name = "btnCCancelar";
-            this.btnCCancelar.Size = new System.Drawing.Size(89, 44);
+            this.btnCCancelar.Size = new System.Drawing.Size(102, 44);
             this.btnCCancelar.TabIndex = 60;
             this.btnCCancelar.Text = "Cancelar";
             this.btnCCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -762,11 +775,12 @@
             // btnAlterar
             // 
             this.btnAlterar.Enabled = false;
+            this.btnAlterar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Image = global::Apresentacao.Properties.Resources.document_write_22637;
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAlterar.Location = new System.Drawing.Point(488, 476);
+            this.btnAlterar.Location = new System.Drawing.Point(495, 476);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(87, 44);
+            this.btnAlterar.Size = new System.Drawing.Size(92, 44);
             this.btnAlterar.TabIndex = 56;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -795,11 +809,12 @@
             // 
             // btnConcluir
             // 
+            this.btnConcluir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConcluir.Image = global::Apresentacao.Properties.Resources.stake_truck_18543;
             this.btnConcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConcluir.Location = new System.Drawing.Point(821, 454);
+            this.btnConcluir.Location = new System.Drawing.Point(821, 465);
             this.btnConcluir.Name = "btnConcluir";
-            this.btnConcluir.Size = new System.Drawing.Size(103, 48);
+            this.btnConcluir.Size = new System.Drawing.Size(117, 48);
             this.btnConcluir.TabIndex = 174;
             this.btnConcluir.Text = "Concluir";
             this.btnConcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -807,9 +822,10 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(821, 166);
+            this.btnCancelar.Location = new System.Drawing.Point(631, 467);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 44);
             this.btnCancelar.TabIndex = 173;
@@ -821,24 +837,24 @@
             // cpoQtd
             // 
             this.cpoQtd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoQtd.Location = new System.Drawing.Point(121, 114);
+            this.cpoQtd.Location = new System.Drawing.Point(111, 134);
             this.cpoQtd.Name = "cpoQtd";
-            this.cpoQtd.Size = new System.Drawing.Size(114, 20);
+            this.cpoQtd.Size = new System.Drawing.Size(80, 20);
             this.cpoQtd.TabIndex = 161;
             this.cpoQtd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoQtd_KeyPress);
             // 
             // cpoDescricao
             // 
             this.cpoDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoDescricao.Location = new System.Drawing.Point(121, 69);
+            this.cpoDescricao.Location = new System.Drawing.Point(111, 78);
             this.cpoDescricao.Name = "cpoDescricao";
-            this.cpoDescricao.Size = new System.Drawing.Size(314, 20);
+            this.cpoDescricao.Size = new System.Drawing.Size(252, 20);
             this.cpoDescricao.TabIndex = 165;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(44, 116);
+            this.label21.Location = new System.Drawing.Point(43, 136);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(62, 13);
             this.label21.TabIndex = 172;
@@ -847,15 +863,15 @@
             // cpoBloco
             // 
             this.cpoBloco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoBloco.Location = new System.Drawing.Point(121, 20);
+            this.cpoBloco.Location = new System.Drawing.Point(111, 21);
             this.cpoBloco.Name = "cpoBloco";
-            this.cpoBloco.Size = new System.Drawing.Size(314, 20);
+            this.cpoBloco.Size = new System.Drawing.Size(252, 20);
             this.cpoBloco.TabIndex = 159;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(44, 71);
+            this.label25.Location = new System.Drawing.Point(43, 80);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(55, 13);
             this.label25.TabIndex = 168;
@@ -864,7 +880,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(44, 22);
+            this.label26.Location = new System.Drawing.Point(54, 23);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(34, 13);
             this.label26.TabIndex = 167;
@@ -873,25 +889,29 @@
             // btnRemover
             // 
             this.btnRemover.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemover.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemover.Image = global::Apresentacao.Properties.Resources.Minus_36877__1_;
             this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRemover.Location = new System.Drawing.Point(752, 112);
+            this.btnRemover.Location = new System.Drawing.Point(111, 197);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(42, 44);
+            this.btnRemover.Size = new System.Drawing.Size(116, 53);
             this.btnRemover.TabIndex = 158;
-            this.btnRemover.Text = "-";
+            this.btnRemover.Text = "REMOVER";
+            this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemover.UseVisualStyleBackColor = false;
             // 
             // btnInserir
             // 
             this.btnInserir.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserir.Image = global::Apresentacao.Properties.Resources.Plus_36851;
             this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInserir.Location = new System.Drawing.Point(665, 112);
+            this.btnInserir.Location = new System.Drawing.Point(245, 197);
             this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(42, 44);
+            this.btnInserir.Size = new System.Drawing.Size(118, 53);
             this.btnInserir.TabIndex = 157;
-            this.btnInserir.Text = "+";
+            this.btnInserir.Text = "ADICIONAR \r\n";
+            this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInserir.UseVisualStyleBackColor = false;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
@@ -911,11 +931,11 @@
             this.descricaoDataGridViewTextBoxColumn,
             this.quantidadeDataGridViewTextBoxColumn});
             this.dgwCarregamento.DataSource = this.tblCarregamentoBlocoBindingSource;
-            this.dgwCarregamento.Location = new System.Drawing.Point(47, 166);
+            this.dgwCarregamento.Location = new System.Drawing.Point(387, 21);
             this.dgwCarregamento.Name = "dgwCarregamento";
             this.dgwCarregamento.ReadOnly = true;
             this.dgwCarregamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwCarregamento.Size = new System.Drawing.Size(747, 336);
+            this.dgwCarregamento.Size = new System.Drawing.Size(551, 420);
             this.dgwCarregamento.TabIndex = 146;
             this.dgwCarregamento.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCarregamento_CellMouseDoubleClick);
             // 
@@ -991,14 +1011,6 @@
             // 
             this.tblFormaPagamentoTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 67);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(426, 113);
-            this.dataGridView1.TabIndex = 11;
-            // 
             // frmRomaneio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1021,6 +1033,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetFruta)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwRomaneio)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCarregamento)).EndInit();
@@ -1028,7 +1041,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregbloco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetUnidMedida)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1038,24 +1050,24 @@
         private System.Windows.Forms.TabControl tabPage;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox cpoCustoCarreg;
+        private System.Windows.Forms.TextBox cpoCustoCarregamento;
         private System.Windows.Forms.TextBox cpoTaxaNf;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox cpoComissao;
+        private System.Windows.Forms.TextBox cpoValorComissao;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox comboBoxFormaPagamento;
         private System.Windows.Forms.TextBox cpoSeguro;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox cpoAdiantFretMot;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox cpoValorTotal;
-        private System.Windows.Forms.TextBox cpoFrete;
+        private System.Windows.Forms.TextBox cpoValorTotalRomaneio;
+        private System.Windows.Forms.TextBox cpoValorFrete;
         private System.Windows.Forms.ComboBox comboBoxUnidMedida;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox cpoQtdGeral;
+        private System.Windows.Forms.TextBox cpoQtdFrutas;
         private System.Windows.Forms.Button btnChamaTransp;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -1119,6 +1131,7 @@
         private midasDataSetDescFormPgto midasDataSetDescFormPgto;
         private System.Windows.Forms.BindingSource tblFormaPagamentoBindingSource;
         private midasDataSetDescFormPgtoTableAdapters.tblFormaPagamentoTableAdapter tblFormaPagamentoTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgwRomaneio;
+        private System.Windows.Forms.TextBox cpoIDCarregamento;
     }
 }

@@ -153,6 +153,16 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Minus_36877__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Minus_36877 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Status_mail_task {
             get {
                 object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Status-mail-task", resourceCulture);
@@ -186,6 +196,16 @@ namespace Apresentacao.Properties {
         internal static System.Drawing.Bitmap pineapple_icon {
             get {
                 object obj = ResourceManager.GetObject("pineapple-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Plus_36851 {
+            get {
+                object obj = ResourceManager.GetObject("Plus_36851", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
