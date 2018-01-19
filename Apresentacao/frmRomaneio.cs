@@ -101,9 +101,7 @@ namespace Apresentacao
             // TODO: This line of code loads data into the 'midasDataSetUnidMedida.tblFruta' table. You can move, or remove it, as needed.
             this.tblFrutaTableAdapter.Fill(this.midasDataSetUnidMedida.tblFruta);
             // TODO: This line of code loads data into the 'midasDataSetCarregbloco.tblCarregamentoBloco' table. You can move, or remove it, as needed.
-            //this.tblCarregamentoBlocoTableAdapter.Fill(this.midasDataSetCarregbloco.tblCarregamentoBloco);
-            AcessoDadosSqlServer acessoDados = new AcessoDadosSqlServer();
-            acessoDados.GetDataTable("select IDFilial, Nome from tblFilial", CommandType.Text);
+
 
 
 
@@ -238,71 +236,67 @@ namespace Apresentacao
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
             {
                 e.Handled = true;
+                MessageBox.Show("Este Campo aceita apenas Números inteiros");
+                return;
             }
         }
 
-        private void cpoQtdGeral_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                e.Handled = true;
-            }
-        }
+
 
         private void cpoAdiantFretMot_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                e.Handled = true;
-            }
+            //if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            //{
+            //    e.Handled = true;
+            //}
         }
 
         private void cpoFrete_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                e.Handled = true;
-            }
+            //if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            //{
+            //    e.Handled = true;
+            //}
         }
 
         private void cpoSeguro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                e.Handled = true;
-            }
+            //if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            //{
+            //    e.Handled = true;
+            //}
         }
 
         private void cpoTaxaNf_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                e.Handled = true;
-            }
+            //if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            //{
+            //    e.Handled = true;
+            //}
         }
 
         private void cpoCustoCarreg_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                e.Handled = true;
-            }
+            //if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            //{
+            //    e.Handled = true;
+            //}
         }
 
         private void cpoComissao_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                e.Handled = true;
-            }
+            //if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            //{
+            //    e.Handled = true;
+            //}
         }
 
         private void cpoValorTotal_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                e.Handled = true;
-            }
+            //if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            //{
+            //    e.Handled = true;
+            //}
         }
 
   
@@ -323,13 +317,13 @@ namespace Apresentacao
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Romaneio objRomaneio = new Romaneio();
+            
 
             this.objRomaneio.IDCliente = Convert.ToInt32(cpoIDCliente.Text);
             this.objRomaneio.IDTransportador = Convert.ToInt32(cpoIDTransportador.Text);
             this.objRomaneio.IDFornecedor = Convert.ToInt32(cpoIDFornecedor.Text);
             this.objRomaneio.IDFruta = Convert.ToInt32(cpoIDFruta.Text);
-            this.objRomaneio.QtdFrutas = Convert.ToInt32(cpoQtdFrutas.Text);
-            this.objRomaneio.IDCarregamento = Convert.ToInt32(cpoIDCarregamento.Text);
+            //this.objRomaneio.IDCarregamento = Convert.ToInt32(cpoIDCarregamento.Text);
             this.objRomaneio.ValorFrete = Convert.ToDecimal(cpoValorFrete.Text);
             this.objRomaneio.AdiantFretMot = Convert.ToDecimal(cpoAdiantFretMot.Text);
             this.objRomaneio.FormaPagamento = comboBoxFormaPagamento.Text.TrimStart();
@@ -337,7 +331,11 @@ namespace Apresentacao
             this.objRomaneio.ValorComissao = Convert.ToDecimal(cpoValorComissao.Text);
             this.objRomaneio.ValorTotalRomaneio = Convert.ToDecimal(cpoValorTotalRomaneio.Text);
             this.objRomaneio.TaxaNf = Convert.ToDecimal(cpoTaxaNf.Text);
+            this.objRomaneio.Seguro = Convert.ToDecimal(cpoSeguro.Text);
             this.objRomaneio.UnidMedida = comboBoxUnidMedida.Text.TrimStart();
+            this.objRomaneio.QtdFrutas = Convert.ToInt32(cpoQtdGeral.Text);
+            this.objRomaneio.ValorTotalRomaneio = Convert.ToDecimal(cpoValorTotalRomaneio.Text);
+
             
 
             string strRetorno = string.Empty;
@@ -373,9 +371,6 @@ namespace Apresentacao
 
                     //limpa os campos depois de salvar 
 
-
-
-
                     dgwRomaneio.DataSource = null;
                     dgwRomaneio.Update();
                     dgwRomaneio.Refresh();
@@ -386,7 +381,7 @@ namespace Apresentacao
                     cpoIDFornecedor.Clear();
                     cpoNomeFruta.Clear();
                     cpoIDFruta.Clear();
-                    cpoQtdFrutas.Clear();
+                    cpoQtdGeral.Clear();
                     cpoValorFrete.Clear();
                     cpoAdiantFretMot.Clear();
                     cpoSeguro.Clear();
@@ -410,7 +405,15 @@ namespace Apresentacao
 
           }
 
- 
+        private void cpoQtdGeral_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Este Campo aceita apenas Números inteiros");
+                return;
+            }
+        }
     }
 
     }

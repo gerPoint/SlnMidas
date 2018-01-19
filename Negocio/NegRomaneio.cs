@@ -23,7 +23,6 @@ namespace Negocio
             try
             {
                 acessoDadosSqlServer.LimparParametros();
-                //acessoDados.AdicionarParametro(new SqlParameter("@INIDCliente", cliente.IDCliente));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDCliente", romaneio.IDCliente));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDTransportador", romaneio.IDTransportador));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFornecedor", romaneio.IDFornecedor));
@@ -37,6 +36,7 @@ namespace Negocio
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INValorComissao", romaneio.ValorComissao));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INValorTotalRomaneio", romaneio.ValorTotalRomaneio));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTaxaNf", romaneio.TaxaNf));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INSeguro", romaneio.Seguro));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INUnidMedida", romaneio.UnidMedida));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INStatus", romaneio.Status));
                 
@@ -49,7 +49,7 @@ namespace Negocio
             }
             catch (Exception ex)
             {
-                throw new Exception("Falha ao Cadastrar Romaneio. Motivo: " + ex.Message);
+               throw new Exception("Falha ao Cadastrar Romaneio. Motivo: " + ex.Message);
 
             }
 

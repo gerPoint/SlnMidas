@@ -66,7 +66,7 @@
             this.midasDataSetFruta = new Apresentacao.midasDataSetFruta();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.cpoQtdFrutas = new System.Windows.Forms.TextBox();
+            this.cpoQtdGeral = new System.Windows.Forms.TextBox();
             this.btnChamaTransp = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -175,7 +175,7 @@
             this.tabPage1.Controls.Add(this.comboBoxUnidMedida);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
-            this.tabPage1.Controls.Add(this.cpoQtdFrutas);
+            this.tabPage1.Controls.Add(this.cpoQtdGeral);
             this.tabPage1.Controls.Add(this.btnChamaTransp);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
@@ -383,14 +383,11 @@
             // comboBoxFormaPagamento
             // 
             this.comboBoxFormaPagamento.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblFormaPagamentoBindingSource, "Descricao", true));
-            this.comboBoxFormaPagamento.DataSource = this.midasDataSetDescFormPgto;
-            this.comboBoxFormaPagamento.DisplayMember = "tblFormaPagamento.Descricao";
             this.comboBoxFormaPagamento.FormattingEnabled = true;
             this.comboBoxFormaPagamento.Location = new System.Drawing.Point(612, 209);
             this.comboBoxFormaPagamento.Name = "comboBoxFormaPagamento";
             this.comboBoxFormaPagamento.Size = new System.Drawing.Size(333, 21);
             this.comboBoxFormaPagamento.TabIndex = 86;
-            this.comboBoxFormaPagamento.ValueMember = "tblFormaPagamento.Descricao";
             // 
             // tblFormaPagamentoBindingSource
             // 
@@ -514,14 +511,14 @@
             this.label9.TabIndex = 75;
             this.label9.Text = "Quantidade";
             // 
-            // cpoQtdFrutas
+            // cpoQtdGeral
             // 
-            this.cpoQtdFrutas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoQtdFrutas.Location = new System.Drawing.Point(612, 173);
-            this.cpoQtdFrutas.Name = "cpoQtdFrutas";
-            this.cpoQtdFrutas.Size = new System.Drawing.Size(106, 20);
-            this.cpoQtdFrutas.TabIndex = 74;
-            this.cpoQtdFrutas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoQtdGeral_KeyPress);
+            this.cpoQtdGeral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoQtdGeral.Location = new System.Drawing.Point(612, 173);
+            this.cpoQtdGeral.Name = "cpoQtdGeral";
+            this.cpoQtdGeral.Size = new System.Drawing.Size(106, 20);
+            this.cpoQtdGeral.TabIndex = 74;
+            this.cpoQtdGeral.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoQtdGeral_KeyPress);
             // 
             // btnChamaTransp
             // 
@@ -1067,7 +1064,7 @@
         private System.Windows.Forms.ComboBox comboBoxUnidMedida;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox cpoQtdFrutas;
+        private System.Windows.Forms.TextBox cpoQtdGeral;
         private System.Windows.Forms.Button btnChamaTransp;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
