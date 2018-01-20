@@ -110,8 +110,18 @@ namespace Apresentacao
              Cliente cliente = (dgwSelCliente.SelectedRows[0].DataBoundItem as Cliente);
              cpoIDCliente.Text = dgwSelCliente.SelectedRows[0].Cells[0].Value.ToString();
              cpoNomeCliente.Text = dgwSelCliente.SelectedRows[0].Cells[1].Value.ToString();
-             
 
+
+
+            if (cpoIDCliente.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            {
+                MessageBox.Show("Pesquise o Cliente desejado e selecione-o dando um clique duplo sobre o mesmo.");
+                return;
+            }
+
+            cpoIDCliente.Text = cliente.Nome;
+            cpoIDCliente.Text = cliente.IDCliente.ToString();
+            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -146,6 +156,11 @@ namespace Apresentacao
         {
             cpoCaixaPesquisa.Text = ConvMaiuscula(cpoCaixaPesquisa.Text).ToString();
             cpoCaixaPesquisa.SelectionStart = cpoCaixaPesquisa.Text.Length;
+
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
 
         }
 

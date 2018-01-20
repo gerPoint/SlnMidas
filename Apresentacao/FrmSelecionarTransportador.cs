@@ -44,9 +44,35 @@ namespace Apresentacao
 
         private void dgwSelTransportador_DoubleClick(object sender, EventArgs e)
         {
-            Transportador transportador = (dgwSelTransportador.SelectedRows[0].DataBoundItem as Transportador);
-            cpoIDTransportador.Text = dgwSelTransportador.SelectedRows[0].Cells[0].Value.ToString();
-            cpoNomeTransportador.Text = dgwSelTransportador.SelectedRows[0].Cells[1].Value.ToString();
+            try
+            {
+                Transportador transportador = (dgwSelTransportador.SelectedRows[0].DataBoundItem as Transportador);
+                cpoIDTransportador.Text = dgwSelTransportador.SelectedRows[0].Cells[0].Value.ToString();
+                cpoNomeTransportador.Text = dgwSelTransportador.SelectedRows[0].Cells[1].Value.ToString();
+
+
+                if (cpoIDTransportador.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+                {
+                    MessageBox.Show("Pesquise o Transportador desejado e selecione-o dando um clique duplo sobre o mesmo.");
+                    return;
+                }
+
+                cpoIDTransportador.Text = transportador.Nome;
+                cpoIDTransportador.Text = transportador.IDTransportador.ToString();
+                this.Close();
+
+            }
+
+            catch(Exception ex)
+
+            {
+                MessageBox.Show(ex.Message); 
+
+
+            }
+
+
+
         }
 
 
@@ -125,15 +151,7 @@ namespace Apresentacao
 
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
-            if (cpoIDTransportador.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
-            {
-                MessageBox.Show("Pesquise o Transportador desejado e selecione-o dando um clique duplo sobre o mesmo.");
-                return;
-            }
-            Transportador transportador = (dgwSelTransportador.SelectedRows[0].DataBoundItem as Transportador);
-            cpoIDTransportador.Text = transportador.Nome;
-            cpoIDTransportador.Text = transportador.IDTransportador.ToString();
-            this.Close();
+
         }
     }
 

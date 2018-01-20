@@ -79,6 +79,7 @@ namespace Apresentacao
                     return;
                 }
 
+
                 dgwSelFornecedor.DataSource = null;
                 dgwSelFornecedor.DataSource = objLista;
                 dgwSelFornecedor.Update();
@@ -87,9 +88,13 @@ namespace Apresentacao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Falha ao consultar Fornecedor. Falha: " +
-                    ex.Message, "Falha", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                //MessageBox.Show(string.Format("Falha ao consultar Fornecedor. Falha: {0}", 
+                //    ex.Message), "Falha", MessageBoxButtons.OK,
+                //    MessageBoxIcon.Warning);
+
+
+                MessageBox.Show($"Falha ao consultar Fornecedor. Falha: {ex.Message}", "Falha", MessageBoxButtons.OK,
+    MessageBoxIcon.Warning);
             }
         }
 
@@ -100,22 +105,39 @@ namespace Apresentacao
 
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
-            if (cpoIDFornecedor.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
-            {
-                MessageBox.Show("Pesquise o Fornecedor desejado e selecione-o dando um clique duplo sobre o mesmo.");
-                return;
-            }
-            Fornecedor fornecedor = (dgwSelFornecedor.SelectedRows[0].DataBoundItem as Fornecedor);
-            cpoIDFornecedor.Text = fornecedor.Nome;
-            cpoIDFornecedor.Text = fornecedor.IDFornecedor.ToString();
-            this.Close();
+
         }
 
         private void dgwSelFornecedor_DoubleClick(object sender, EventArgs e)
         {
-            Fornecedor fornecedor = (dgwSelFornecedor.SelectedRows[0].DataBoundItem as Fornecedor);
-            cpoIDFornecedor.Text = dgwSelFornecedor.SelectedRows[0].Cells[0].Value.ToString();
-            cpoNomeFornecedor.Text = dgwSelFornecedor.SelectedRows[0].Cells[1].Value.ToString();
+
+            try
+            {
+                
+
+                Fornecedor fornecedor = (dgwSelFornecedor.SelectedRows[0].DataBoundItem as Fornecedor);
+                cpoIDFornecedor.Text = dgwSelFornecedor.SelectedRows[0].Cells[0].Value.ToString();
+                cpoNomeFornecedor.Text = dgwSelFornecedor.SelectedRows[0].Cells[1].Value.ToString();
+
+
+                if (cpoIDFornecedor.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+                {
+                    MessageBox.Show("Pesquise o Fornecedor desejado e selecione-o dando um clique duplo sobre o mesmo.");
+                    return;
+                }
+
+                cpoIDFornecedor.Text = fornecedor.Nome;
+                cpoIDFornecedor.Text = fornecedor.IDFornecedor.ToString();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+
+ 
         }
 
 

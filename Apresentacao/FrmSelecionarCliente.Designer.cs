@@ -50,12 +50,12 @@
             this.midasDataSetCliente1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblClienteTableAdapter = new Apresentacao.midasDataSetclienteTableAdapters.tblClienteTableAdapter();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.cpoNomeCliente = new System.Windows.Forms.TextBox();
             this.cpoIDCliente = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnSelecionar = new System.Windows.Forms.Button();
-            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.lblAjuda = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgwSelCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetclienteBindingSource)).BeginInit();
@@ -67,6 +67,7 @@
             // 
             // dgwSelCliente
             // 
+            this.dgwSelCliente.AllowUserToAddRows = false;
             this.dgwSelCliente.AllowUserToDeleteRows = false;
             this.dgwSelCliente.AutoGenerateColumns = false;
             this.dgwSelCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -85,6 +86,7 @@
             this.dataCadastroDataGridViewTextBoxColumn});
             this.dgwSelCliente.DataSource = this.tblClienteBindingSource1;
             this.dgwSelCliente.Location = new System.Drawing.Point(35, 82);
+            this.dgwSelCliente.MultiSelect = false;
             this.dgwSelCliente.Name = "dgwSelCliente";
             this.dgwSelCliente.ReadOnly = true;
             this.dgwSelCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -232,60 +234,6 @@
             // 
             this.tblClienteTableAdapter.ClearBeforeFill = true;
             // 
-            // cpoNomeCliente
-            // 
-            this.cpoNomeCliente.Enabled = false;
-            this.cpoNomeCliente.Location = new System.Drawing.Point(236, 340);
-            this.cpoNomeCliente.Name = "cpoNomeCliente";
-            this.cpoNomeCliente.ReadOnly = true;
-            this.cpoNomeCliente.Size = new System.Drawing.Size(242, 20);
-            this.cpoNomeCliente.TabIndex = 20;
-            // 
-            // cpoIDCliente
-            // 
-            this.cpoIDCliente.Enabled = false;
-            this.cpoIDCliente.Location = new System.Drawing.Point(195, 340);
-            this.cpoIDCliente.Name = "cpoIDCliente";
-            this.cpoIDCliente.ReadOnly = true;
-            this.cpoIDCliente.Size = new System.Drawing.Size(35, 20);
-            this.cpoIDCliente.TabIndex = 21;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(32, 341);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 16);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Cliente Selecionado:";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(497, 325);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(89, 44);
-            this.btnCancelar.TabIndex = 23;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnSelecionar
-            // 
-            this.btnSelecionar.Image = global::Apresentacao.Properties.Resources.advice_accept_ok_theaction_10829;
-            this.btnSelecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSelecionar.Location = new System.Drawing.Point(604, 325);
-            this.btnSelecionar.Name = "btnSelecionar";
-            this.btnSelecionar.Size = new System.Drawing.Size(94, 45);
-            this.btnSelecionar.TabIndex = 19;
-            this.btnSelecionar.Text = "Selecionar";
-            this.btnSelecionar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelecionar.UseVisualStyleBackColor = true;
-            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
-            // 
             // btnPesquisar
             // 
             this.btnPesquisar.Image = global::Apresentacao.Properties.Resources.pesquisar1;
@@ -298,16 +246,66 @@
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(609, 299);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(89, 44);
+            this.btnCancelar.TabIndex = 23;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // cpoNomeCliente
+            // 
+            this.cpoNomeCliente.Enabled = false;
+            this.cpoNomeCliente.Location = new System.Drawing.Point(96, 299);
+            this.cpoNomeCliente.Name = "cpoNomeCliente";
+            this.cpoNomeCliente.ReadOnly = true;
+            this.cpoNomeCliente.Size = new System.Drawing.Size(242, 20);
+            this.cpoNomeCliente.TabIndex = 20;
+            this.cpoNomeCliente.Visible = false;
+            // 
+            // cpoIDCliente
+            // 
+            this.cpoIDCliente.Enabled = false;
+            this.cpoIDCliente.Location = new System.Drawing.Point(35, 299);
+            this.cpoIDCliente.Name = "cpoIDCliente";
+            this.cpoIDCliente.ReadOnly = true;
+            this.cpoIDCliente.Size = new System.Drawing.Size(35, 20);
+            this.cpoIDCliente.TabIndex = 21;
+            this.cpoIDCliente.Visible = false;
+            // 
+            // lblAjuda
+            // 
+            this.lblAjuda.AutoSize = true;
+            this.lblAjuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAjuda.Location = new System.Drawing.Point(32, 322);
+            this.lblAjuda.Name = "lblAjuda";
+            this.lblAjuda.Size = new System.Drawing.Size(58, 13);
+            this.lblAjuda.TabIndex = 24;
+            this.lblAjuda.Text = "Ajuda (?)";
+            this.lblAjuda.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip1.SetToolTip(this.lblAjuda, "Selecione o registro desejado clicando duas vezes sobre o mesmo no Grid.");
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.toolTip1.Tag = "";
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
             // frmSelecionarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 381);
+            this.ClientSize = new System.Drawing.Size(734, 352);
+            this.Controls.Add(this.lblAjuda);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.cpoIDCliente);
             this.Controls.Add(this.cpoNomeCliente);
-            this.Controls.Add(this.btnSelecionar);
             this.Controls.Add(this.dgwSelCliente);
             this.Controls.Add(this.cpoCaixaPesquisa);
             this.Controls.Add(this.btnPesquisar);
@@ -341,11 +339,6 @@
         private System.Windows.Forms.BindingSource tblClienteBindingSource;
         private midasDataSetclienteTableAdapters.tblClienteTableAdapter tblClienteTableAdapter;
         private System.Windows.Forms.BindingSource tblClienteBindingSource1;
-        private System.Windows.Forms.Button btnSelecionar;
-        private System.Windows.Forms.TextBox cpoNomeCliente;
-        private System.Windows.Forms.TextBox cpoIDCliente;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn razaoSocialDataGridViewTextBoxColumn;
@@ -358,5 +351,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cnpjDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ufDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.TextBox cpoNomeCliente;
+        private System.Windows.Forms.TextBox cpoIDCliente;
+        private System.Windows.Forms.Label lblAjuda;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

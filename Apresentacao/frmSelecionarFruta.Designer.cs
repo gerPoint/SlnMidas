@@ -30,10 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.cpoIDFruta = new System.Windows.Forms.TextBox();
             this.cpoNomeFruta = new System.Windows.Forms.TextBox();
-            this.btnSelecionar = new System.Windows.Forms.Button();
             this.dgwSelecionarFruta = new System.Windows.Forms.DataGridView();
             this.iDFrutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +43,8 @@
             this.midasDataSetFruta = new Apresentacao.midasDataSetFruta();
             this.cpoCaixaPesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.lblAjuda = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgwSelecionarFruta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetFrutaBindingSource)).BeginInit();
@@ -55,7 +55,7 @@
             // 
             this.btnCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(371, 307);
+            this.btnCancelar.Location = new System.Drawing.Point(483, 291);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(96, 44);
             this.btnCancelar.TabIndex = 31;
@@ -64,49 +64,29 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 301);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 16);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Fruta Selecionada:";
-            // 
             // cpoIDFruta
             // 
             this.cpoIDFruta.Enabled = false;
-            this.cpoIDFruta.Location = new System.Drawing.Point(29, 320);
+            this.cpoIDFruta.Location = new System.Drawing.Point(27, 291);
             this.cpoIDFruta.Name = "cpoIDFruta";
             this.cpoIDFruta.ReadOnly = true;
             this.cpoIDFruta.Size = new System.Drawing.Size(32, 20);
             this.cpoIDFruta.TabIndex = 29;
+            this.cpoIDFruta.Visible = false;
             // 
             // cpoNomeFruta
             // 
             this.cpoNomeFruta.Enabled = false;
-            this.cpoNomeFruta.Location = new System.Drawing.Point(69, 320);
+            this.cpoNomeFruta.Location = new System.Drawing.Point(67, 291);
             this.cpoNomeFruta.Name = "cpoNomeFruta";
             this.cpoNomeFruta.ReadOnly = true;
             this.cpoNomeFruta.Size = new System.Drawing.Size(276, 20);
             this.cpoNomeFruta.TabIndex = 28;
-            // 
-            // btnSelecionar
-            // 
-            this.btnSelecionar.Image = global::Apresentacao.Properties.Resources.advice_accept_ok_theaction_10829;
-            this.btnSelecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSelecionar.Location = new System.Drawing.Point(478, 307);
-            this.btnSelecionar.Name = "btnSelecionar";
-            this.btnSelecionar.Size = new System.Drawing.Size(101, 45);
-            this.btnSelecionar.TabIndex = 27;
-            this.btnSelecionar.Text = "Selecionar";
-            this.btnSelecionar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSelecionar.UseVisualStyleBackColor = true;
-            this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
+            this.cpoNomeFruta.Visible = false;
             // 
             // dgwSelecionarFruta
             // 
+            this.dgwSelecionarFruta.AllowUserToAddRows = false;
             this.dgwSelecionarFruta.AllowUserToDeleteRows = false;
             this.dgwSelecionarFruta.AutoGenerateColumns = false;
             this.dgwSelecionarFruta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -118,6 +98,7 @@
             this.statusDataGridViewTextBoxColumn});
             this.dgwSelecionarFruta.DataSource = this.tblFrutaBindingSource;
             this.dgwSelecionarFruta.Location = new System.Drawing.Point(28, 74);
+            this.dgwSelecionarFruta.MultiSelect = false;
             this.dgwSelecionarFruta.Name = "dgwSelecionarFruta";
             this.dgwSelecionarFruta.ReadOnly = true;
             this.dgwSelecionarFruta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -201,16 +182,33 @@
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
+            // lblAjuda
+            // 
+            this.lblAjuda.AutoSize = true;
+            this.lblAjuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAjuda.Location = new System.Drawing.Point(25, 314);
+            this.lblAjuda.Name = "lblAjuda";
+            this.lblAjuda.Size = new System.Drawing.Size(58, 13);
+            this.lblAjuda.TabIndex = 32;
+            this.lblAjuda.Text = "Ajuda (?)";
+            this.lblAjuda.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip1.SetToolTip(this.lblAjuda, "Selecione o registro desejado clicando duas vezes sobre o mesmo no Grid.");
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 600;
+            this.toolTip1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            // 
             // frmSelecionarFruta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(610, 369);
+            this.ClientSize = new System.Drawing.Size(609, 342);
+            this.Controls.Add(this.lblAjuda);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.cpoIDFruta);
             this.Controls.Add(this.cpoNomeFruta);
-            this.Controls.Add(this.btnSelecionar);
             this.Controls.Add(this.dgwSelecionarFruta);
             this.Controls.Add(this.cpoCaixaPesquisa);
             this.Controls.Add(this.btnPesquisar);
@@ -232,10 +230,8 @@
         #endregion
 
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox cpoIDFruta;
         private System.Windows.Forms.TextBox cpoNomeFruta;
-        private System.Windows.Forms.Button btnSelecionar;
         private System.Windows.Forms.DataGridView dgwSelecionarFruta;
         private System.Windows.Forms.TextBox cpoCaixaPesquisa;
         private System.Windows.Forms.Button btnPesquisar;
@@ -247,5 +243,7 @@
         private System.Windows.Forms.BindingSource tblFrutaBindingSource;
         private System.Windows.Forms.BindingSource midasDataSetFrutaBindingSource;
         private midasDataSetFruta midasDataSetFruta;
+        private System.Windows.Forms.Label lblAjuda;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

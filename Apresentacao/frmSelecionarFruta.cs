@@ -105,15 +105,7 @@ namespace Apresentacao
 
         private void btnSelecionar_Click(object sender, EventArgs e)
         {
-            if (cpoIDFruta.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
-            {
-                MessageBox.Show("Pesquise a Fruta desejada e selecione-a dando um clique duplo sobre a mesma.");
-                return;
-            }
-            Fruta fruta = (dgwSelecionarFruta.SelectedRows[0].DataBoundItem as Fruta);
-            cpoIDFruta.Text = fruta.Nome;
-            cpoIDFruta.Text = fruta.IDFruta.ToString();
-            this.Close();
+          
         }
 
 
@@ -135,10 +127,26 @@ namespace Apresentacao
 
         private void dgwSelecionarFruta_DoubleClick(object sender, EventArgs e)
         {
+            try
+            {
+                Fruta fruta = (dgwSelecionarFruta.SelectedRows[0].DataBoundItem as Fruta);
+                cpoIDFruta.Text = dgwSelecionarFruta.SelectedRows[0].Cells[0].Value.ToString();
+                cpoNomeFruta.Text = dgwSelecionarFruta.SelectedRows[0].Cells[1].Value.ToString();
 
-            Fruta fruta = (dgwSelecionarFruta.SelectedRows[0].DataBoundItem as Fruta);
-            cpoIDFruta.Text = dgwSelecionarFruta.SelectedRows[0].Cells[0].Value.ToString();
-            cpoNomeFruta.Text = dgwSelecionarFruta.SelectedRows[0].Cells[1].Value.ToString();
+                if (cpoIDFruta.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+                {
+                    MessageBox.Show("Pesquise a Fruta desejada e selecione-a dando um clique duplo sobre a mesma.");
+                    return;
+                }
+                cpoIDFruta.Text = fruta.Nome;
+                cpoIDFruta.Text = fruta.IDFruta.ToString();
+                this.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         //--------------------------------Somente a primeira letra maiuscula de cada palavra---------------------------------------------
 

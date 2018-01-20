@@ -333,6 +333,7 @@
             this.cpoCustoCarregamento.Name = "cpoCustoCarregamento";
             this.cpoCustoCarregamento.Size = new System.Drawing.Size(106, 20);
             this.cpoCustoCarregamento.TabIndex = 92;
+            this.cpoCustoCarregamento.TextChanged += new System.EventHandler(this.cpoCustoCarregamento_TextChanged);
             this.cpoCustoCarregamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCustoCarreg_KeyPress);
             // 
             // cpoTaxaNf
@@ -342,6 +343,7 @@
             this.cpoTaxaNf.Name = "cpoTaxaNf";
             this.cpoTaxaNf.Size = new System.Drawing.Size(107, 20);
             this.cpoTaxaNf.TabIndex = 91;
+            this.cpoTaxaNf.TextChanged += new System.EventHandler(this.cpoTaxaNf_TextChanged);
             this.cpoTaxaNf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTaxaNf_KeyPress);
             // 
             // label16
@@ -360,6 +362,7 @@
             this.cpoValorComissao.Name = "cpoValorComissao";
             this.cpoValorComissao.Size = new System.Drawing.Size(107, 20);
             this.cpoValorComissao.TabIndex = 89;
+            this.cpoValorComissao.TextChanged += new System.EventHandler(this.cpoValorComissao_TextChanged);
             this.cpoValorComissao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoComissao_KeyPress);
             // 
             // label15
@@ -406,6 +409,7 @@
             this.cpoSeguro.Name = "cpoSeguro";
             this.cpoSeguro.Size = new System.Drawing.Size(106, 20);
             this.cpoSeguro.TabIndex = 85;
+            this.cpoSeguro.TextChanged += new System.EventHandler(this.cpoSeguro_TextChanged);
             this.cpoSeguro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoSeguro_KeyPress);
             // 
             // label13
@@ -425,6 +429,7 @@
             this.cpoAdiantFretMot.Name = "cpoAdiantFretMot";
             this.cpoAdiantFretMot.Size = new System.Drawing.Size(107, 20);
             this.cpoAdiantFretMot.TabIndex = 82;
+            this.cpoAdiantFretMot.TextChanged += new System.EventHandler(this.cpoAdiantFretMot_TextChanged);
             this.cpoAdiantFretMot.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoAdiantFretMot_KeyPress);
             // 
             // label12
@@ -452,8 +457,10 @@
             this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(733, 398);
             this.cpoValorTotalRomaneio.Multiline = true;
             this.cpoValorTotalRomaneio.Name = "cpoValorTotalRomaneio";
+            this.cpoValorTotalRomaneio.ReadOnly = true;
             this.cpoValorTotalRomaneio.Size = new System.Drawing.Size(211, 33);
             this.cpoValorTotalRomaneio.TabIndex = 79;
+            this.cpoValorTotalRomaneio.TextChanged += new System.EventHandler(this.cpoValorTotalRomaneio_TextChanged);
             this.cpoValorTotalRomaneio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoValorTotal_KeyPress);
             // 
             // cpoValorFrete
@@ -463,6 +470,7 @@
             this.cpoValorFrete.Name = "cpoValorFrete";
             this.cpoValorFrete.Size = new System.Drawing.Size(106, 20);
             this.cpoValorFrete.TabIndex = 78;
+            this.cpoValorFrete.TextChanged += new System.EventHandler(this.cpoValorFrete_TextChanged);
             this.cpoValorFrete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoFrete_KeyPress);
             // 
             // comboBoxUnidMedida
