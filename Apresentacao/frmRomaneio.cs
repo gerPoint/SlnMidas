@@ -103,12 +103,9 @@ namespace Apresentacao
             // TODO: This line of code loads data into the 'midasDataSetCarregbloco.tblCarregamentoBloco' table. You can move, or remove it, as needed.
 
 
-
-
         }
 
-
-
+    
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -243,107 +240,6 @@ namespace Apresentacao
 
 
 
-        private void cpoAdiantFretMot_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente números e virgula");
-            }
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente uma virgula");
-            }
-        }
-
-        private void cpoFrete_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente números e virgula");
-            }
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente uma virgula");
-            }
-
-        }
-
-        private void cpoSeguro_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente números e virgula");
-            }
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente uma virgula");
-            }
-        }
-
-        private void cpoTaxaNf_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente números e virgula");
-            }
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente uma virgula");
-            }
-        }
-
-        private void cpoCustoCarreg_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente números e virgula");
-            }
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente uma virgula");
-            }
-        }
-
-        private void cpoComissao_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente números e virgula");
-            }
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente uma virgula");
-            }
-        }
-
-        private void cpoValorTotal_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente números e virgula");
-            }
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente uma virgula");
-            }
-        }
-
-  
-
         private void btnChamaFruta_Click(object sender, EventArgs e)
         {
 
@@ -357,8 +253,17 @@ namespace Apresentacao
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+
+
+
+
             Romaneio objRomaneio = new Romaneio();
-            
+
+            if (cpoAdiantFretMot.Text == "") 
+
+            {
+                cpoAdiantFretMot.Text = "0";
+            }
 
             this.objRomaneio.IDCliente = Convert.ToInt32(cpoIDCliente.Text);
             this.objRomaneio.IDTransportador = Convert.ToInt32(cpoIDTransportador.Text);
@@ -367,7 +272,7 @@ namespace Apresentacao
             this.objRomaneio.ValorFrete = Convert.ToDecimal(cpoValorFrete.Text);
             this.objRomaneio.AdiantFretMot = Convert.ToDecimal(cpoAdiantFretMot.Text);
             this.objRomaneio.FormaPagamento = comboBoxFormaPagamento.Text.TrimStart();
-            this.objRomaneio.CustoCarregamento = Convert.ToDecimal(cpoCustoCarregamento.Text);
+            this.objRomaneio.CustoCarregamento = Convert.ToDecimal(cpoCustoCarreg.Text);
             this.objRomaneio.ValorComissao = Convert.ToDecimal(cpoValorComissao.Text);
             this.objRomaneio.ValorTotalRomaneio = Convert.ToDecimal(cpoValorTotalRomaneio.Text);
             this.objRomaneio.TaxaNf = Convert.ToDecimal(cpoTaxaNf.Text);
@@ -425,11 +330,11 @@ namespace Apresentacao
                     cpoAdiantFretMot.Clear();
                     cpoSeguro.Clear();
                     cpoTaxaNf.Clear();
-                    cpoCustoCarregamento.Clear();
+                    cpoCustoCarreg.Clear();
                     cpoValorComissao.Clear();
                     cpoValorTotalRomaneio.Clear();
 
-
+                    btnSalvar.Enabled = false;
 
                 }
             }
@@ -454,53 +359,206 @@ namespace Apresentacao
             }
         }
 
-        private void cpoValorTotalRomaneio_TextChanged(object sender, EventArgs e)
+
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
+                this.tblFormaPagamentoTableAdapter.FillBy(this.midasDataSetDescFormPgto.tblFormaPagamento);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
 
-        private void cpoValorComissao_TextChanged(object sender, EventArgs e)
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
         {
-            if (
+            try
+            {
+                this.tblFormaPagamentoTableAdapter.FillBy1(this.midasDataSetDescFormPgto.tblFormaPagamento);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
-             !string.IsNullOrEmpty(cpoValorComissao.Text)
-
-             )
-
-                cpoValorTotalRomaneio.Text = (Convert.ToDecimal(cpoValorFrete.Text) + Convert.ToDecimal(cpoSeguro.Text) + Convert.ToDecimal(cpoValorComissao.Text) + Convert.ToDecimal(cpoCustoCarregamento.Text) + Convert.ToDecimal(cpoTaxaNf.Text).ToString());
         }
 
         private void cpoValorFrete_TextChanged(object sender, EventArgs e)
         {
-          
+
         }
 
         private void cpoTaxaNf_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
-        private void cpoCustoCarregamento_TextChanged(object sender, EventArgs e)
+        private void cpoAdiantFretMot_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-           
-        }
-
-        private void cpoSeguro_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void cpoAdiantFretMot_TextChanged(object sender, EventArgs e)
-        {
-            decimal desconto = 0;
-            decimal resultado = 0;
-            desconto = Convert.ToDecimal(cpoAdiantFretMot.Text);
-            //foreach (DataGridViewRow col in dataGridView1.Rows)
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
             {
-                resultado = Convert.ToDecimal(cpoValorTotalRomaneio.Text) - desconto;
+                e.Handled = true;
+                MessageBox.Show("Este campo aceita somente números e virgula");
             }
-            cpoValorTotalRomaneio.Text = Convert.ToString(resultado);
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este campo aceita somente uma virgula");
+            }
+        }
+
+
+        private void cpoValorTotalRomaneio_KeyDown(object sender, KeyEventArgs e)
+        {
+
+         }
+
+        private void cpoValorFrete_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este campo aceita somente números e virgula");
+            }
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este campo aceita somente uma virgula");
+            }
+        }
+
+        private void cpoSeguro_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este campo aceita somente números e virgula");
+            }
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este campo aceita somente uma virgula");
+            }
+        }
+
+        private void cpoTaxaNf_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este campo aceita somente números e virgula");
+            }
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este campo aceita somente uma virgula");
+            }
+        }
+
+        private void cpoCustoCarreg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este campo aceita somente números e virgula");
+            }
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este campo aceita somente uma virgula");
+            }
+        }
+
+        private void cpoValorComissao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este campo aceita somente números e virgula");
+            }
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+                MessageBox.Show("Este campo aceita somente uma virgula");
+            }
+        }
+
+        private void btnTotalizar_Click(object sender, EventArgs e)
+        {
+
+
+            try
+
+            {
+
+                if (cpoCustoCarreg.Text == "")
+                {
+                    MessageBox.Show("Custo Carregamento não informado.");
+                    return;
+                }
+
+                if (cpoValorFrete.Text == "")
+                {
+                    MessageBox.Show("Valor do Frete não informado.");
+                    return;
+                }
+
+                if (cpoTaxaNf.Text == "")
+                {
+                    MessageBox.Show("Taxa da Nota Fiscal não informada.");
+                    return;
+                }
+
+                if (cpoSeguro.Text == "")
+                {
+                    MessageBox.Show("Valor do Seguro não informado.");
+                    return;
+                }
+
+                if (cpoValorComissao.Text == "")
+                {
+                    MessageBox.Show("Valor da Comissão não informado.");
+                    return;
+                }
+
+
+                cpoValorTotalRomaneio.Clear();
+
+
+                Double valor1, valor2, valor3, valor4, valor5, resultado;
+                valor1 = Convert.ToInt32(cpoTaxaNf.Text);
+                valor2 = Convert.ToInt32(cpoValorComissao.Text);
+                valor3 = Convert.ToInt32(cpoValorFrete.Text);
+                valor4 = Convert.ToInt32(cpoSeguro.Text);
+                valor5 = Convert.ToInt32(cpoCustoCarreg.Text);
+                resultado = valor1 + valor2 + valor3 + valor4 + valor5;
+                cpoValorTotalRomaneio.Text = resultado.ToString();
+
+
+                btnSalvar.Enabled = true;
+            }
+            catch (Exception )
+            {
+
+                //MessageBox.Show();
+                //return;
+
+                
+            }
+
+   
+        }
+
+
+
+
+        private void cpoValorTotalRomaneio_TextChanged(object sender, EventArgs e)
+        {
+ 
 
 
         }
@@ -509,8 +567,9 @@ namespace Apresentacao
     }
 
 
- 
-            
-            
+
+
+
+
 
 

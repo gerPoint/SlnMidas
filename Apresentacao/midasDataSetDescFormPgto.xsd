@@ -21,7 +21,24 @@
             <Mappings>
               <Mapping SourceColumn="Descricao" DataSetColumn="Descricao" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="strConexao (Settings)" DbObjectName="midas.dbo.tblFormaPagamento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Descricao FROM dbo.tblFormaPagamento</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="strConexao (Settings)" DbObjectName="midas.dbo.tblFormaPagamento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Descricao FROM dbo.tblFormaPagamento</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -31,7 +48,7 @@
   <xs:element name="midasDataSetDescFormPgto" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="midasDataSetDescFormPgto" msprop:Generator_UserDSName="midasDataSetDescFormPgto">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tblFormaPagamento" msprop:Generator_TableClassName="tblFormaPagamentoDataTable" msprop:Generator_TableVarName="tabletblFormaPagamento" msprop:Generator_TablePropName="tblFormaPagamento" msprop:Generator_RowDeletingName="tblFormaPagamentoRowDeleting" msprop:Generator_RowChangingName="tblFormaPagamentoRowChanging" msprop:Generator_RowEvHandlerName="tblFormaPagamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="tblFormaPagamentoRowDeleted" msprop:Generator_UserTableName="tblFormaPagamento" msprop:Generator_RowChangedName="tblFormaPagamentoRowChanged" msprop:Generator_RowEvArgName="tblFormaPagamentoRowChangeEvent" msprop:Generator_RowClassName="tblFormaPagamentoRow">
+        <xs:element name="tblFormaPagamento" msprop:Generator_TableClassName="tblFormaPagamentoDataTable" msprop:Generator_TableVarName="tabletblFormaPagamento" msprop:Generator_RowChangedName="tblFormaPagamentoRowChanged" msprop:Generator_TablePropName="tblFormaPagamento" msprop:Generator_RowDeletingName="tblFormaPagamentoRowDeleting" msprop:Generator_RowChangingName="tblFormaPagamentoRowChanging" msprop:Generator_RowEvHandlerName="tblFormaPagamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="tblFormaPagamentoRowDeleted" msprop:Generator_RowClassName="tblFormaPagamentoRow" msprop:Generator_UserTableName="tblFormaPagamento" msprop:Generator_RowEvArgName="tblFormaPagamentoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Descricao" msprop:Generator_ColumnVarNameInTable="columnDescricao" msprop:Generator_ColumnPropNameInRow="Descricao" msprop:Generator_ColumnPropNameInTable="DescricaoColumn" msprop:Generator_UserColumnName="Descricao">
