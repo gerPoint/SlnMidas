@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using AcessoDados;
 using Negocio;
 using ObjTransferencia;
+using System.Data.SqlClient;
+using Apresentacao.Properties;
 
 
 namespace Apresentacao
@@ -99,18 +101,49 @@ namespace Apresentacao
 
     
 
+        
+
 
 
     private void frmRomaneio_Load(object sender, EventArgs e)
         {
 
-        // TODO: This line of code loads data into the 'midasDataSetRomaneio.tblRomaneio' table. You can move, or remove it, as needed.
-      //  this.tblRomaneioTableAdapter.Fill(this.midasDataSetRomaneio.tblRomaneio);
-        // TODO: This line of code loads data into the 'midasDataSetDescFormPgto.tblFormaPagamento' table. You can move, or remove it, as needed.
-        //this.tblFormaPagamentoTableAdapter.Fill(this.midasDataSetDescFormPgto.tblFormaPagamento);
-        // TODO: This line of code loads data into the 'midasDataSetUnidMedida.tblFruta' table. You can move, or remove it, as needed.
-       // this.tblFrutaTableAdapter.Fill(this.midasDataSetUnidMedida.tblFruta);
-        // TODO: This line of code loads data into the 'midasDataSetCarregbloco.tblCarregamentoBloco' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'midasDataSetRomaneio.tblRomaneio' table. You can move, or remove it, as needed.
+            //  this.tblRomaneioTableAdapter.Fill(this.midasDataSetRomaneio.tblRomaneio);
+            // TODO: This line of code loads data into the 'midasDataSetDescFormPgto.tblFormaPagamento' table. You can move, or remove it, as needed.
+            //this.tblFormaPagamentoTableAdapter.Fill(this.midasDataSetDescFormPgto.tblFormaPagamento);
+            // TODO: This line of code loads data into the 'midasDataSetUnidMedida.tblFruta' table. You can move, or remove it, as needed.
+            // this.tblFrutaTableAdapter.Fill(this.midasDataSetUnidMedida.tblFruta);
+            // TODO: This line of code loads data into the 'midasDataSetCarregbloco.tblCarregamentoBloco' table. You can move, or remove it, as needed.
+
+            string comandoSql = "Select IDFormaPagamento, Descricao from tblFormaPagamento";
+            string conexao = Settings.Default.strConexao;
+
+            SqlDataAdapter sqlDataAdapterFormaPagamento = new SqlDataAdapter(comandoSql, conexao);
+            DataTable dataTableFormaPagamento = new DataTable();
+            dataTableFormaPagamento.Clear();
+            sqlDataAdapterFormaPagamento.Fill(dataTableFormaPagamento);
+            comboBoxFormaPagamento.DataSource = dataTableFormaPagamento;
+            comboBoxFormaPagamento.ValueMember = "IDFormaPagamento";
+            comboBoxFormaPagamento.DisplayMember = "Descricao";
+            comboBoxFormaPagamento.SelectedItem = "";
+            comboBoxFormaPagamento.Refresh();
+
+            comandoSql = "select IDFilial, RazaoSocial from tblFilial";
+            SqlDataAdapter sqlDataAdapterFilial = new SqlDataAdapter(comandoSql, conexao);
+            DataTable dataTableFilial = new DataTable();
+            dataTableFilial.Clear();
+            sqlDataAdapterFilial.Fill(dataTableFilial);
+            comboBoxFilial.DataSource = dataTableFilial;
+            comboBoxFilial.ValueMember = "IDFilial";
+            comboBoxFilial.DisplayMember = "RazaoSocial";
+            comboBoxFilial.SelectedItem = "";
+            comboBoxFilial.Refresh();
+           
+
+
+
+                
 
     }
 
@@ -366,6 +399,16 @@ namespace Apresentacao
                     cpoValorTotalRomaneio.Clear();
 
                     btnSalvar.Enabled = false;
+
+
+                    cpoSeguro.Enabled = true;
+                    cpoTaxaNf.Enabled = true;
+                    cpoValorComissao.Enabled = true;
+                    cpoValorFrete.Enabled = true;
+                    cpoCustoCarreg.Enabled = true;
+                    //cpoAdiantFretMot.Enabled = true;
+                    checkBoxAdiantFretMot.Enabled = false;
+
 
                 }
             }
