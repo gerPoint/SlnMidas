@@ -94,26 +94,6 @@ namespace Negocio
                         romaneio.UnidMedida = Convert.ToString(linha["UnidMedida"]);
                         romaneio.Status = Convert.ToChar(linha["Status"]);
 
-
-
-
-                        /*funcionario.IDFuncionario = Convert.ToInt32(linha["IDFuncionario"]);
-                        funcionario.Nome = linha["Nome"].ToString();
-                        funcionario.Telefone = linha["Telefone"].ToString();
-                        funcionario.Email = linha["Email"].ToString();
-                        funcionario.Cidade = linha["Cidade"].ToString();
-                        funcionario.Status = Convert.ToChar(linha["Status"]);
-                        funcionario.Endereco = Convert.ToString(linha["Endereco"]);
-                        funcionario.Cpf = Convert.ToString(linha["Cpf"]);
-                        funcionario.Rg = Convert.ToString(linha["Rg"]);
-                        funcionario.Uf = Convert.ToString(linha["Uf"]);
-                        funcionario.DataCadastro = Convert.ToDateTime(linha["DataCadastro"]);*/
-
-
-
-
-
-
                         romaneioLista.Add(romaneio);
                     }
                 }
