@@ -96,6 +96,8 @@ namespace Apresentacao
 
         private void frmRomaneio_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'midasDataSetRomaneio.tblRomaneio' table. You can move, or remove it, as needed.
+            this.tblRomaneioTableAdapter.Fill(this.midasDataSetRomaneio.tblRomaneio);
             // TODO: This line of code loads data into the 'midasDataSetDescFormPgto.tblFormaPagamento' table. You can move, or remove it, as needed.
             this.tblFormaPagamentoTableAdapter.Fill(this.midasDataSetDescFormPgto.tblFormaPagamento);
             // TODO: This line of code loads data into the 'midasDataSetUnidMedida.tblFruta' table. You can move, or remove it, as needed.
@@ -253,11 +255,43 @@ namespace Apresentacao
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-
-
-
-
             Romaneio objRomaneio = new Romaneio();
+
+
+            string strRetorno = string.Empty;
+
+            if (cpoIDCliente.Text == "")
+            {
+                MessageBox.Show("Campo Obrigatório não informado.");
+                return;
+            }
+
+            if (cpoIDTransportador.Text == "")
+            {
+                MessageBox.Show("Campo Obrigatório não informado.");
+                return;
+            }
+
+            if (cpoIDFruta.Text == "")
+            {
+                MessageBox.Show("Campo Obrigatório não informado.");
+                return;
+            }
+
+            if (cpoIDFornecedor.Text == "")
+            {
+                MessageBox.Show("Campo Obrigatório não informado.");
+                return;
+            }
+
+            if (cpoQtdGeral.Text == "")
+            {
+                MessageBox.Show("Campo Obrigatório não informado.");
+                return;
+            }
+
+
+            //--------------------------------------------coloca o zero onde esta vazio------------------------------------------------------
 
             if (cpoAdiantFretMot.Text == "") 
 
@@ -283,19 +317,7 @@ namespace Apresentacao
 
             
 
-            string strRetorno = string.Empty;
-
-            if (cpoIDCliente.Text == "")
-            {
-                MessageBox.Show("Campo Obrigatório não informado.");
-                return;
-            }
-
-            if (cpoIDTransportador.Text == "")
-            {
-                MessageBox.Show("Campo Obrigatório não informado.");
-                return;
-            }
+   
 
 
             NegRomaneio negRomaneio = new NegRomaneio();
@@ -325,6 +347,8 @@ namespace Apresentacao
                     cpoIDFornecedor.Clear();
                     cpoNomeFruta.Clear();
                     cpoIDFruta.Clear();
+                    cpoIDTransportador.Clear();
+                    cpoNomeTransportador.Clear();
                     cpoQtdGeral.Clear();
                     cpoValorFrete.Clear();
                     cpoAdiantFretMot.Clear();
@@ -367,9 +391,9 @@ namespace Apresentacao
             {
                 this.tblFormaPagamentoTableAdapter.FillBy(this.midasDataSetDescFormPgto.tblFormaPagamento);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -380,9 +404,9 @@ namespace Apresentacao
             {
                 this.tblFormaPagamentoTableAdapter.FillBy1(this.midasDataSetDescFormPgto.tblFormaPagamento);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+               MessageBox.Show(ex.Message);
             }
 
         }
@@ -529,25 +553,37 @@ namespace Apresentacao
                 cpoValorTotalRomaneio.Clear();
 
 
-                Double valor1, valor2, valor3, valor4, valor5, resultado;
-                valor1 = Convert.ToInt32(cpoTaxaNf.Text);
-                valor2 = Convert.ToInt32(cpoValorComissao.Text);
-                valor3 = Convert.ToInt32(cpoValorFrete.Text);
-                valor4 = Convert.ToInt32(cpoSeguro.Text);
-                valor5 = Convert.ToInt32(cpoCustoCarreg.Text);
+                Decimal valor1, valor2, valor3, valor4, valor5, resultado;
+                valor1 = Convert.ToDecimal(cpoTaxaNf.Text);
+                valor2 = Convert.ToDecimal(cpoValorComissao.Text);
+                valor3 = Convert.ToDecimal(cpoValorFrete.Text);
+                valor4 = Convert.ToDecimal(cpoSeguro.Text);
+                valor5 = Convert.ToDecimal(cpoCustoCarreg.Text);
                 resultado = valor1 + valor2 + valor3 + valor4 + valor5;
                 cpoValorTotalRomaneio.Text = resultado.ToString();
 
 
+                cpoSeguro.Enabled = false;
+                cpoTaxaNf.Enabled = false;
+                cpoValorComissao.Enabled = false;
+                cpoValorFrete.Enabled = false;
+                cpoCustoCarreg.Enabled = false;
+                cpoAdiantFretMot.Enabled = false;
+                checkBoxAdiantFretMot.Enabled = false;
+
+
                 btnSalvar.Enabled = true;
+
+
+
+
+
+
             }
-            catch (Exception )
+            catch (Exception ex)
             {
-
-                //MessageBox.Show();
-                //return;
-
-                
+                MessageBox.Show(ex.Message);
+              
             }
 
    
@@ -560,6 +596,28 @@ namespace Apresentacao
         {
  
 
+
+        }
+
+        private void btnRevisarValores_Click(object sender, EventArgs e)
+        {
+
+            cpoValorTotalRomaneio.Clear();
+
+
+            cpoSeguro.Enabled = true;
+            cpoTaxaNf.Enabled = true;
+            cpoValorComissao.Enabled = true;
+            cpoValorFrete.Enabled = true;
+            cpoCustoCarreg.Enabled = true;
+            //cpoAdiantFretMot.Enabled = true;
+            checkBoxAdiantFretMot.Enabled = true;
+
+            btnSalvar.Enabled = false;
+        }
+
+        private void cpoAdiantFretMot_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
