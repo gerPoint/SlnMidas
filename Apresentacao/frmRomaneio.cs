@@ -156,6 +156,9 @@ namespace Apresentacao
 
         private void frmRomaneio_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'midasDataSetRomaneioCorreto.tblRomaneio' table. You can move, or remove it, as needed.
+           //esse funfa porra(No caso o de baixo)
+            //this.tblRomaneioTableAdapter1.Fill(this.midasDataSetRomaneioCorreto.tblRomaneio);
 
             // TODO: This line of code loads data into the 'midasDataSetRomaneio.tblRomaneio' table. You can move, or remove it, as needed.
             //  this.tblRomaneioTableAdapter.Fill(this.midasDataSetRomaneio.tblRomaneio);

@@ -191,6 +191,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>midasDataSetRomaneio.xsd</DependentUpon>
     </Compile>
+    <Compile Include="midasDataSetRomaneioCorreto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetRomaneioCorreto.xsd</DependentUpon>
+    </Compile>
     <Compile Include="midasDataSetTransportador.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -390,6 +395,17 @@
     </None>
     <None Include="midasDataSetRomaneio.xss">
       <DependentUpon>midasDataSetRomaneio.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetRomaneioCorreto.xsc">
+      <DependentUpon>midasDataSetRomaneioCorreto.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetRomaneioCorreto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSetRomaneioCorreto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSetRomaneioCorreto.xss">
+      <DependentUpon>midasDataSetRomaneioCorreto.xsd</DependentUpon>
     </None>
     <None Include="midasDataSetTransportador.xsc">
       <DependentUpon>midasDataSetTransportador.xsd</DependentUpon>
