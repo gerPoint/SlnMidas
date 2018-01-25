@@ -57,15 +57,11 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.comboBoxFormaPagamento = new System.Windows.Forms.ComboBox();
-            this.tblFormaPagamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.midasDataSetDescFormPgto = new Apresentacao.midasDataSetDescFormPgto();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.cpoValorTotalRomaneio = new System.Windows.Forms.TextBox();
             this.comboBoxUnidMedida = new System.Windows.Forms.ComboBox();
-            this.tblFrutaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.midasDataSetFruta = new Apresentacao.midasDataSetFruta();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.cpoQtdGeral = new System.Windows.Forms.TextBox();
@@ -85,8 +81,6 @@
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.dgwRomaneio = new System.Windows.Forms.DataGridView();
-            this.midasDataSetRomaneioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.midasDataSetRomaneio = new Apresentacao.midasDataSetRomaneio();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -110,6 +104,12 @@
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
             this.dgwCarregamento = new System.Windows.Forms.DataGridView();
+            this.tblFormaPagamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetDescFormPgto = new Apresentacao.midasDataSetDescFormPgto();
+            this.tblFrutaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetFruta = new Apresentacao.midasDataSetFruta();
+            this.midasDataSetRomaneioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetRomaneio = new Apresentacao.midasDataSetRomaneio();
             this.iDCarregamentoBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDCarregamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,16 +127,16 @@
             this.midasDataSetRomaneioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwRomaneio)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCarregamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFormaPagamentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetDescFormPgto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetFruta)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwRomaneio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneio)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwCarregamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregbloco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRomaneioBindingSource)).BeginInit();
@@ -445,6 +445,7 @@
             // comboBoxFormaPagamento
             // 
             this.comboBoxFormaPagamento.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblFormaPagamentoBindingSource, "Descricao", true));
+            this.comboBoxFormaPagamento.DisplayMember = "tblFormaPagamento.Descricao";
             this.comboBoxFormaPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFormaPagamento.FormattingEnabled = true;
             this.comboBoxFormaPagamento.Location = new System.Drawing.Point(591, 209);
@@ -453,16 +454,6 @@
             this.comboBoxFormaPagamento.TabIndex = 86;
             this.comboBoxFormaPagamento.ValueMember = "tblFormaPagamento.Descricao";
             this.comboBoxFormaPagamento.SelectedIndexChanged += new System.EventHandler(this.comboBoxFormaPagamento_SelectedIndexChanged);
-            // 
-            // tblFormaPagamentoBindingSource
-            // 
-            this.tblFormaPagamentoBindingSource.DataMember = "tblFormaPagamento";
-            this.tblFormaPagamentoBindingSource.DataSource = this.midasDataSetDescFormPgto;
-            // 
-            // midasDataSetDescFormPgto
-            // 
-            this.midasDataSetDescFormPgto.DataSetName = "midasDataSetDescFormPgto";
-            this.midasDataSetDescFormPgto.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label13
             // 
@@ -522,16 +513,6 @@
             this.comboBoxUnidMedida.Name = "comboBoxUnidMedida";
             this.comboBoxUnidMedida.Size = new System.Drawing.Size(105, 21);
             this.comboBoxUnidMedida.TabIndex = 77;
-            // 
-            // tblFrutaBindingSource
-            // 
-            this.tblFrutaBindingSource.DataMember = "tblFruta";
-            this.tblFrutaBindingSource.DataSource = this.midasDataSetFruta;
-            // 
-            // midasDataSetFruta
-            // 
-            this.midasDataSetFruta.DataSetName = "midasDataSet1";
-            this.midasDataSetFruta.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label10
             // 
@@ -668,6 +649,7 @@
             // 
             // comboBoxFilial
             // 
+            this.comboBoxFilial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFilial.FormattingEnabled = true;
             this.comboBoxFilial.Location = new System.Drawing.Point(60, 18);
             this.comboBoxFilial.Name = "comboBoxFilial";
@@ -724,16 +706,6 @@
             this.dgwRomaneio.ReadOnly = true;
             this.dgwRomaneio.Size = new System.Drawing.Size(440, 192);
             this.dgwRomaneio.TabIndex = 11;
-            // 
-            // midasDataSetRomaneioBindingSource1
-            // 
-            this.midasDataSetRomaneioBindingSource1.DataSource = this.midasDataSetRomaneio;
-            this.midasDataSetRomaneioBindingSource1.Position = 0;
-            // 
-            // midasDataSetRomaneio
-            // 
-            this.midasDataSetRomaneio.DataSetName = "midasDataSetRomaneio";
-            this.midasDataSetRomaneio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button2
             // 
@@ -974,6 +946,7 @@
             this.btnRemover.Text = "REMOVER";
             this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemover.UseVisualStyleBackColor = false;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // btnInserir
             // 
@@ -1013,6 +986,36 @@
             this.dgwCarregamento.Size = new System.Drawing.Size(551, 420);
             this.dgwCarregamento.TabIndex = 146;
             this.dgwCarregamento.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCarregamento_CellMouseDoubleClick);
+            // 
+            // tblFormaPagamentoBindingSource
+            // 
+            this.tblFormaPagamentoBindingSource.DataMember = "tblFormaPagamento";
+            this.tblFormaPagamentoBindingSource.DataSource = this.midasDataSetDescFormPgto;
+            // 
+            // midasDataSetDescFormPgto
+            // 
+            this.midasDataSetDescFormPgto.DataSetName = "midasDataSetDescFormPgto";
+            this.midasDataSetDescFormPgto.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblFrutaBindingSource
+            // 
+            this.tblFrutaBindingSource.DataMember = "tblFruta";
+            this.tblFrutaBindingSource.DataSource = this.midasDataSetFruta;
+            // 
+            // midasDataSetFruta
+            // 
+            this.midasDataSetFruta.DataSetName = "midasDataSet1";
+            this.midasDataSetFruta.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // midasDataSetRomaneioBindingSource1
+            // 
+            this.midasDataSetRomaneioBindingSource1.DataSource = this.midasDataSetRomaneio;
+            this.midasDataSetRomaneioBindingSource1.Position = 0;
+            // 
+            // midasDataSetRomaneio
+            // 
+            this.midasDataSetRomaneio.DataSetName = "midasDataSetRomaneio";
+            this.midasDataSetRomaneio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // iDCarregamentoBlocoDataGridViewTextBoxColumn
             // 
@@ -1116,18 +1119,18 @@
             this.tabPage.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwRomaneio)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwCarregamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFormaPagamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetDescFormPgto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetFruta)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwRomaneio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneio)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwCarregamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregbloco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRomaneioBindingSource)).EndInit();

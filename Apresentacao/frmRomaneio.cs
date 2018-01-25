@@ -676,6 +676,11 @@ namespace Apresentacao
 
         }
 
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            this.dgwCarregamento.Rows.Remove(this.dgwCarregamento.CurrentRow);
+            this.dgwCarregamento.Refresh();
+        }
     }
 
     }
