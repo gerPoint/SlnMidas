@@ -92,23 +92,30 @@ namespace Apresentacao
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
-        }
 
-        private void frmRomaneio_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'midasDataSetRomaneio.tblRomaneio' table. You can move, or remove it, as needed.
-            this.tblRomaneioTableAdapter.Fill(this.midasDataSetRomaneio.tblRomaneio);
-            // TODO: This line of code loads data into the 'midasDataSetDescFormPgto.tblFormaPagamento' table. You can move, or remove it, as needed.
-            this.tblFormaPagamentoTableAdapter.Fill(this.midasDataSetDescFormPgto.tblFormaPagamento);
-            // TODO: This line of code loads data into the 'midasDataSetUnidMedida.tblFruta' table. You can move, or remove it, as needed.
-            this.tblFrutaTableAdapter.Fill(this.midasDataSetUnidMedida.tblFruta);
-            // TODO: This line of code loads data into the 'midasDataSetCarregbloco.tblCarregamentoBloco' table. You can move, or remove it, as needed.
 
 
         }
 
     
-        private void btnCancelar_Click(object sender, EventArgs e)
+
+
+
+    private void frmRomaneio_Load(object sender, EventArgs e)
+        {
+
+        // TODO: This line of code loads data into the 'midasDataSetRomaneio.tblRomaneio' table. You can move, or remove it, as needed.
+      //  this.tblRomaneioTableAdapter.Fill(this.midasDataSetRomaneio.tblRomaneio);
+        // TODO: This line of code loads data into the 'midasDataSetDescFormPgto.tblFormaPagamento' table. You can move, or remove it, as needed.
+        //this.tblFormaPagamentoTableAdapter.Fill(this.midasDataSetDescFormPgto.tblFormaPagamento);
+        // TODO: This line of code loads data into the 'midasDataSetUnidMedida.tblFruta' table. You can move, or remove it, as needed.
+       // this.tblFrutaTableAdapter.Fill(this.midasDataSetUnidMedida.tblFruta);
+        // TODO: This line of code loads data into the 'midasDataSetCarregbloco.tblCarregamentoBloco' table. You can move, or remove it, as needed.
+
+    }
+
+
+    private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -620,6 +627,12 @@ namespace Apresentacao
         {
 
         }
+
+        private void comboBoxFormaPagamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 
     }

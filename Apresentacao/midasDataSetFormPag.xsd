@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="midasDataSetFormPag" targetNamespace="http://tempuri.org/midasDataSetFormPag.xsd" xmlns:mstns="http://tempuri.org/midasDataSetFormPag.xsd" xmlns="http://tempuri.org/midasDataSetFormPag.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="strConexao" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="strConexao (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Apresentacao.Properties.Settings.GlobalReference.Default.strConexao" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblFormaPagamentoTableAdapter" GeneratorDataComponentClassName="tblFormaPagamentoTableAdapter" Name="tblFormaPagamento" UserDataComponentName="tblFormaPagamentoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="strConexao (Settings)" DbObjectName="midas.dbo.tblFormaPagamento" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT IDFormaPagamento, Descricao FROM dbo.tblFormaPagamento</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDFormaPagamento" DataSetColumn="IDFormaPagamento" />
+              <Mapping SourceColumn="Descricao" DataSetColumn="Descricao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="midasDataSetFormPag" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="midasDataSetFormPag" msprop:Generator_UserDSName="midasDataSetFormPag">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblFormaPagamento" msprop:Generator_TableClassName="tblFormaPagamentoDataTable" msprop:Generator_TableVarName="tabletblFormaPagamento" msprop:Generator_TablePropName="tblFormaPagamento" msprop:Generator_RowDeletingName="tblFormaPagamentoRowDeleting" msprop:Generator_RowChangingName="tblFormaPagamentoRowChanging" msprop:Generator_RowEvHandlerName="tblFormaPagamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="tblFormaPagamentoRowDeleted" msprop:Generator_UserTableName="tblFormaPagamento" msprop:Generator_RowChangedName="tblFormaPagamentoRowChanged" msprop:Generator_RowEvArgName="tblFormaPagamentoRowChangeEvent" msprop:Generator_RowClassName="tblFormaPagamentoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFormaPagamento" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIDFormaPagamento" msprop:Generator_ColumnPropNameInRow="IDFormaPagamento" msprop:Generator_ColumnPropNameInTable="IDFormaPagamentoColumn" msprop:Generator_UserColumnName="IDFormaPagamento" type="xs:int" />
+              <xs:element name="Descricao" msprop:Generator_ColumnVarNameInTable="columnDescricao" msprop:Generator_ColumnPropNameInRow="Descricao" msprop:Generator_ColumnPropNameInTable="DescricaoColumn" msprop:Generator_UserColumnName="Descricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -446,6 +446,7 @@
     <None Include="midasDataSetUsuario.xss">
       <DependentUpon>midasDataSetUsuario.xsd</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\AcessoDados.AcessoDadosSqlServer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -526,6 +527,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Minus_36877 %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
