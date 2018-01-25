@@ -26,7 +26,7 @@ namespace Negocio.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-3O5EHK7\\SQLEXPRESS;Initial Catalog=midas;Integrated Security=" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-8I3R05F\\SQLEXPRESS;Initial Catalog=midas;Integrated Security=" +
             "True")]
         public string strConexao {
             get {

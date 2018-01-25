@@ -55,6 +55,79 @@ namespace Negocio
 
 
         }
+
+        public RomaneioLista ConsultarCodigo(int Codigo)
+        {
+            try
+            {
+                RomaneioLista romaneioLista = new RomaneioLista();
+                acessoDadosSqlServer.LimparParametros();
+                //(DIEGO) acessoDadosSqlServer.AdicionarParametro("@INNome", strNome);
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDRomaneio", Codigo));
+
+                // using (DataTable dataTable = acessoDadosSqlServer.ExecutarScalar(CommandType.StoredProcedure, "uspConsultarCliente")) 
+                using (DataTable dataTable = acessoDadosSqlServer.GetDataTable("uspConsultarRomaneioCodigo", CommandType.StoredProcedure))
+                {
+
+                    foreach (DataRow linha in dataTable.Rows)
+                    {
+                        Romaneio romaneio = new Romaneio();
+
+                        romaneio.IDRomaneio = Convert.ToInt32(linha["IDRomaneio"]);
+                        romaneio.IDCliente = Convert.ToInt32(linha["IDCliente"]);
+                        romaneio.IDTransportador = Convert.ToInt32(linha["IDTransportador"]);
+                        romaneio.IDFornecedor = Convert.ToInt32(linha["IDFornecedor"]);
+                        romaneio.IDFruta = Convert.ToInt32(linha["IDFruta"]);
+                        romaneio.QtdFrutas= Convert.ToInt32(linha["QtdFrutas"]);
+                        romaneio.IDCarregamento = Convert.ToInt32(linha["IDCarregamento"]);
+                        romaneio.ValorFrete = Convert.ToDecimal(linha["ValorFrete"]);
+                        romaneio.Seguro = Convert.ToDecimal(linha["Seguro"]);
+                        romaneio.AdiantFretMot = Convert.ToDecimal(linha["AdiantFretMot"]);
+                        romaneio.DataRomaneio = Convert.ToDateTime(linha["DataRomaneio"]);
+                        romaneio.DataAlteracao = Convert.ToDateTime(linha["DataAlteracao"]);
+                        romaneio.DataExclusao = Convert.ToDateTime(linha["DataExclusao"]);
+                        romaneio.FormaPagamento = Convert.ToString(linha["FormaPagamento"]);
+                        romaneio.CustoCarregamento = Convert.ToDecimal(linha["CustoCarregamento"]);
+                        romaneio.ValorComissao = Convert.ToDecimal(linha["ValorComissao"]);
+                        romaneio.ValorTotalRomaneio = Convert.ToDecimal(linha["ValorTotalRomaneio"]);
+                        romaneio.TaxaNf = Convert.ToDecimal(linha["TaxaNf"]);
+                        romaneio.UnidMedida = Convert.ToString(linha["UnidMedida"]);
+                        romaneio.Status = Convert.ToChar(linha["Status"]);
+
+
+
+
+                        /*funcionario.IDFuncionario = Convert.ToInt32(linha["IDFuncionario"]);
+                        funcionario.Nome = linha["Nome"].ToString();
+                        funcionario.Telefone = linha["Telefone"].ToString();
+                        funcionario.Email = linha["Email"].ToString();
+                        funcionario.Cidade = linha["Cidade"].ToString();
+                        funcionario.Status = Convert.ToChar(linha["Status"]);
+                        funcionario.Endereco = Convert.ToString(linha["Endereco"]);
+                        funcionario.Cpf = Convert.ToString(linha["Cpf"]);
+                        funcionario.Rg = Convert.ToString(linha["Rg"]);
+                        funcionario.Uf = Convert.ToString(linha["Uf"]);
+                        funcionario.DataCadastro = Convert.ToDateTime(linha["DataCadastro"]);*/
+
+
+
+
+
+
+                        romaneioLista.Add(romaneio);
+                    }
+                }
+                return romaneioLista;
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("Falha ao Consultar Romaneio. Motivo: " + ex.Message);
+            }
+
+        }
+
+
      }
 
 }

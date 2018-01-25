@@ -99,13 +99,62 @@ namespace Apresentacao
 
         }
 
-    
 
-        
+        private void AtualizarGrid()
+        {
+            try
+            {
+                if (cpoCodigo.Text == "")
+                {
+                    MessageBox.Show("Por favor, informe o Codigo do Romaneio para pesquisar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cpoCodigo.Text = string.Empty;
+                    cpoCodigo.Focus();
+                    //CaixaPesquisa.DataSource = "";
+                    return;
+                }
+
+                NegRomaneio objNegRomaneio = new NegRomaneio();
+                RomaneioLista objLista;
+                try
+                {
+                    //int cod = int.Parse(CaixaPesquisa.Text);
+                    objLista = objNegRomaneio.ConsultarCodigo(Convert.ToInt32(cpoCodigo.Text));
+                }
+                catch
+                {
+
+                    objLista = objNegRomaneio.ConsultarCodigo(Convert.ToInt32(cpoCodigo.Text));
+                }
+
+
+                if (objLista.Count == 0)
+                {
+                    MessageBox.Show("Nenhum registro encontrado.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cpoCodigo.Text = string.Empty;
+                    cpoCodigo.Focus();
+                    return;
+                }
+
+                dgwRomaneio.DataSource = null;
+                dgwRomaneio.DataSource = objLista;
+                dgwRomaneio.Update();
+                dgwRomaneio.Refresh();
+                cpoCodigo.Text = string.Empty;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao consultar Cliente. Falha: " +
+                    ex.Message, "Falha", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+
+
+        }
 
 
 
-    private void frmRomaneio_Load(object sender, EventArgs e)
+
+        private void frmRomaneio_Load(object sender, EventArgs e)
         {
 
             // TODO: This line of code loads data into the 'midasDataSetRomaneio.tblRomaneio' table. You can move, or remove it, as needed.
@@ -115,6 +164,11 @@ namespace Apresentacao
             // TODO: This line of code loads data into the 'midasDataSetUnidMedida.tblFruta' table. You can move, or remove it, as needed.
             // this.tblFrutaTableAdapter.Fill(this.midasDataSetUnidMedida.tblFruta);
             // TODO: This line of code loads data into the 'midasDataSetCarregbloco.tblCarregamentoBloco' table. You can move, or remove it, as needed.
+
+            comboBoxTpoPesquisa.Text = "Código";
+            mskTxtBoxDtFinal.Enabled = false;
+            mskTxtBoxDtInicial.Enabled = false;
+        
 
             string comandoSql = "Select IDFormaPagamento, Descricao from tblFormaPagamento";
             string conexao = Settings.Default.strConexao;
@@ -680,6 +734,34 @@ namespace Apresentacao
         {
             this.dgwCarregamento.Rows.Remove(this.dgwCarregamento.CurrentRow);
             this.dgwCarregamento.Refresh();
+        }
+
+        private void comboBoxTpoPesquisa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxTpoPesquisa.Text == "Código")
+            {
+                cpoCodigo.Enabled = true;
+                mskTxtBoxDtFinal.Enabled = false;
+                mskTxtBoxDtInicial.Enabled = false;
+            }
+            else
+            {
+                cpoCodigo.Enabled = false;
+                mskTxtBoxDtFinal.Enabled = true;
+                mskTxtBoxDtInicial.Enabled = true;
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            if (comboBoxTpoPesquisa.Text == "Código")
+            {
+                AtualizarGrid();
+            }
+            else
+            {
+               
+            }
         }
     }
 
