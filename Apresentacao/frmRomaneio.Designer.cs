@@ -445,6 +445,7 @@
             // comboBoxFormaPagamento
             // 
             this.comboBoxFormaPagamento.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblFormaPagamentoBindingSource, "Descricao", true));
+            this.comboBoxFormaPagamento.DisplayMember = "tblFormaPagamento.Descricao";
             this.comboBoxFormaPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxFormaPagamento.FormattingEnabled = true;
             this.comboBoxFormaPagamento.Location = new System.Drawing.Point(591, 209);
@@ -974,6 +975,7 @@
             this.btnRemover.Text = "REMOVER";
             this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemover.UseVisualStyleBackColor = false;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // btnInserir
             // 

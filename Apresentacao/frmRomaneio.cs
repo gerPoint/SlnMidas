@@ -676,6 +676,10 @@ namespace Apresentacao
 
         }
 
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     }
