@@ -88,3 +88,31 @@ C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentaca
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarTransportador.resources
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFormaPagamento.resources
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarFruta.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\bin\Debug\Apresentacao.exe.config
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.exe
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.pdb
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.csprojResolveAssemblyReference.cache
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmCliente.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFilial.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFormaPagamento.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFornecedor.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFruta.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFuncionario.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmPrincipal.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmRomaneio.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarCliente.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarFornecedor.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarFruta.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarTransportador.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmTransportador.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmUsuario.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.Properties.Resources.resources
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\obj\Debug\Apresentacao.csproj.GenerateResource.Cache
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\bin\Debug\Apresentacao.exe
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\bin\Debug\Apresentacao.pdb
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\bin\Debug\AcessoDados.dll
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\bin\Debug\Negocio.dll
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\bin\Debug\ObjTransferencia.dll
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\bin\Debug\AcessoDados.pdb
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\bin\Debug\Negocio.pdb
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Apresentacao\bin\Debug\ObjTransferencia.pdb

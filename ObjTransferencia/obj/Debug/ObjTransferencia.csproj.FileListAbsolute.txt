@@ -23,3 +23,9 @@ C:\Users\Celso Zambotti\Source\Repos\SlnMidas\ObjTransferencia\bin\Debug\ObjTran
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\ObjTransferencia\obj\Debug\ObjTransferencia.dll
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\ObjTransferencia\obj\Debug\ObjTransferencia.pdb
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\ObjTransferencia\obj\Debug\ObjTransferencia.csprojResolveAssemblyReference.cache
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\ObjTransferencia\bin\Debug\ObjTransferencia.dll.config
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\ObjTransferencia\bin\Debug\ObjTransferencia.dll
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\ObjTransferencia\bin\Debug\ObjTransferencia.pdb
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\ObjTransferencia\obj\Debug\ObjTransferencia.csprojResolveAssemblyReference.cache
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\ObjTransferencia\obj\Debug\ObjTransferencia.dll
+C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\ObjTransferencia\obj\Debug\ObjTransferencia.pdb
