@@ -56,14 +56,12 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.cpoCpf = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cpoCnpj = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cpoTelefone = new System.Windows.Forms.TextBox();
             this.cpoEmail = new System.Windows.Forms.TextBox();
@@ -80,6 +78,8 @@
             this.tblClienteTableAdapter1 = new Apresentacao.midasDataSet9TableAdapters.tblClienteTableAdapter();
             this.checkBoxCpf = new System.Windows.Forms.CheckBox();
             this.btnRetornar = new System.Windows.Forms.Button();
+            this.cpoCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.cpoCpf = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSet9)).BeginInit();
@@ -176,6 +176,7 @@
             this.statusDataGridViewTextBoxColumn});
             this.dgwCliente.DataSource = this.tblClienteBindingSource3;
             this.dgwCliente.Location = new System.Drawing.Point(44, 73);
+            this.dgwCliente.MultiSelect = false;
             this.dgwCliente.Name = "dgwCliente";
             this.dgwCliente.ReadOnly = true;
             this.dgwCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -186,6 +187,7 @@
             // iDClienteDataGridViewTextBoxColumn
             // 
             this.iDClienteDataGridViewTextBoxColumn.DataPropertyName = "IDCliente";
+            this.iDClienteDataGridViewTextBoxColumn.Frozen = true;
             this.iDClienteDataGridViewTextBoxColumn.HeaderText = "Código";
             this.iDClienteDataGridViewTextBoxColumn.Name = "iDClienteDataGridViewTextBoxColumn";
             this.iDClienteDataGridViewTextBoxColumn.ReadOnly = true;
@@ -194,6 +196,7 @@
             // nomeDataGridViewTextBoxColumn
             // 
             this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.Frozen = true;
             this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
             this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
             this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
@@ -202,6 +205,7 @@
             // razaoSocialDataGridViewTextBoxColumn
             // 
             this.razaoSocialDataGridViewTextBoxColumn.DataPropertyName = "RazaoSocial";
+            this.razaoSocialDataGridViewTextBoxColumn.Frozen = true;
             this.razaoSocialDataGridViewTextBoxColumn.HeaderText = "Razao Social";
             this.razaoSocialDataGridViewTextBoxColumn.Name = "razaoSocialDataGridViewTextBoxColumn";
             this.razaoSocialDataGridViewTextBoxColumn.ReadOnly = true;
@@ -210,6 +214,7 @@
             // cnpjDataGridViewTextBoxColumn
             // 
             this.cnpjDataGridViewTextBoxColumn.DataPropertyName = "Cnpj";
+            this.cnpjDataGridViewTextBoxColumn.Frozen = true;
             this.cnpjDataGridViewTextBoxColumn.HeaderText = "CNPJ";
             this.cnpjDataGridViewTextBoxColumn.Name = "cnpjDataGridViewTextBoxColumn";
             this.cnpjDataGridViewTextBoxColumn.ReadOnly = true;
@@ -217,6 +222,7 @@
             // cpfDataGridViewTextBoxColumn
             // 
             this.cpfDataGridViewTextBoxColumn.DataPropertyName = "Cpf";
+            this.cpfDataGridViewTextBoxColumn.Frozen = true;
             this.cpfDataGridViewTextBoxColumn.HeaderText = "CPF";
             this.cpfDataGridViewTextBoxColumn.Name = "cpfDataGridViewTextBoxColumn";
             this.cpfDataGridViewTextBoxColumn.ReadOnly = true;
@@ -224,13 +230,16 @@
             // telefoneDataGridViewTextBoxColumn
             // 
             this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "Telefone";
+            this.telefoneDataGridViewTextBoxColumn.Frozen = true;
             this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
             this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
             this.telefoneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.telefoneDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // enderecoDataGridViewTextBoxColumn
             // 
             this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.Frozen = true;
             this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
             this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
             this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
@@ -239,6 +248,7 @@
             // cidadeDataGridViewTextBoxColumn
             // 
             this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "Cidade";
+            this.cidadeDataGridViewTextBoxColumn.Frozen = true;
             this.cidadeDataGridViewTextBoxColumn.HeaderText = "Cidade";
             this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
             this.cidadeDataGridViewTextBoxColumn.ReadOnly = true;
@@ -247,6 +257,7 @@
             // ufDataGridViewTextBoxColumn
             // 
             this.ufDataGridViewTextBoxColumn.DataPropertyName = "Uf";
+            this.ufDataGridViewTextBoxColumn.Frozen = true;
             this.ufDataGridViewTextBoxColumn.HeaderText = "UF";
             this.ufDataGridViewTextBoxColumn.Name = "ufDataGridViewTextBoxColumn";
             this.ufDataGridViewTextBoxColumn.ReadOnly = true;
@@ -255,6 +266,7 @@
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.Frozen = true;
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
@@ -263,6 +275,7 @@
             // dataCadastroDataGridViewTextBoxColumn
             // 
             this.dataCadastroDataGridViewTextBoxColumn.DataPropertyName = "DataCadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.Frozen = true;
             this.dataCadastroDataGridViewTextBoxColumn.HeaderText = "Data Cadastro";
             this.dataCadastroDataGridViewTextBoxColumn.Name = "dataCadastroDataGridViewTextBoxColumn";
             this.dataCadastroDataGridViewTextBoxColumn.ReadOnly = true;
@@ -270,6 +283,7 @@
             // statusDataGridViewTextBoxColumn
             // 
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.Frozen = true;
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             this.statusDataGridViewTextBoxColumn.ReadOnly = true;
@@ -336,17 +350,6 @@
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // cpoCpf
-            // 
-            this.cpoCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCpf.Enabled = false;
-            this.cpoCpf.Location = new System.Drawing.Point(723, 381);
-            this.cpoCpf.MaxLength = 11;
-            this.cpoCpf.Name = "cpoCpf";
-            this.cpoCpf.Size = new System.Drawing.Size(103, 20);
-            this.cpoCpf.TabIndex = 12;
-            this.cpoCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCpf_KeyPress);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -400,16 +403,6 @@
             this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 68;
             this.label5.Text = "CPF";
-            // 
-            // cpoCnpj
-            // 
-            this.cpoCnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCnpj.Location = new System.Drawing.Point(723, 312);
-            this.cpoCnpj.MaxLength = 14;
-            this.cpoCnpj.Name = "cpoCnpj";
-            this.cpoCnpj.Size = new System.Drawing.Size(103, 20);
-            this.cpoCnpj.TabIndex = 5;
-            this.cpoCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCnpj_KeyPress);
             // 
             // label9
             // 
@@ -551,11 +544,31 @@
             this.btnRetornar.UseVisualStyleBackColor = true;
             this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
             // 
+            // cpoCnpj
+            // 
+            this.cpoCnpj.Location = new System.Drawing.Point(723, 312);
+            this.cpoCnpj.Mask = "00.000.000.0000-00";
+            this.cpoCnpj.Name = "cpoCnpj";
+            this.cpoCnpj.Size = new System.Drawing.Size(103, 20);
+            this.cpoCnpj.TabIndex = 5;
+            this.cpoCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCnpj_KeyPress_1);
+            // 
+            // cpoCpf
+            // 
+            this.cpoCpf.Enabled = false;
+            this.cpoCpf.Location = new System.Drawing.Point(723, 380);
+            this.cpoCpf.Mask = "000.000.000-00";
+            this.cpoCpf.Name = "cpoCpf";
+            this.cpoCpf.Size = new System.Drawing.Size(103, 20);
+            this.cpoCpf.TabIndex = 12;
+            // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 509);
+            this.Controls.Add(this.cpoCpf);
+            this.Controls.Add(this.cpoCnpj);
             this.Controls.Add(this.btnRetornar);
             this.Controls.Add(this.checkBoxCpf);
             this.Controls.Add(this.cpoIDCliente);
@@ -569,14 +582,12 @@
             this.Controls.Add(this.cpoEmail);
             this.Controls.Add(this.cpoTelefone);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.cpoCnpj);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cpoCpf);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAlterar);
@@ -617,14 +628,12 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.TextBox cpoCpf;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox cpoCnpj;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox cpoTelefone;
         private System.Windows.Forms.TextBox cpoEmail;
@@ -642,6 +651,8 @@
         private midasDataSet9 midasDataSet9;
         private System.Windows.Forms.BindingSource tblClienteBindingSource3;
         private midasDataSet9TableAdapters.tblClienteTableAdapter tblClienteTableAdapter1;
+        private System.Windows.Forms.CheckBox checkBoxCpf;
+        private System.Windows.Forms.Button btnRetornar;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn razaoSocialDataGridViewTextBoxColumn;
@@ -654,7 +665,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.CheckBox checkBoxCpf;
-        private System.Windows.Forms.Button btnRetornar;
+        private System.Windows.Forms.MaskedTextBox cpoCnpj;
+        private System.Windows.Forms.MaskedTextBox cpoCpf;
     }
 }

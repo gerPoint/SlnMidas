@@ -593,15 +593,20 @@ namespace Apresentacao
         private void cpoCustoCarreg_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+
             {
                 e.Handled = true;
                 MessageBox.Show("Este campo aceita somente números e virgula");
             }
+
+
             if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
                 MessageBox.Show("Este campo aceita somente uma virgula");
             }
+
+
         }
 
         private void cpoValorComissao_KeyPress(object sender, KeyPressEventArgs e)
@@ -660,15 +665,16 @@ namespace Apresentacao
                 cpoValorTotalRomaneio.Clear();
 
 
-                Decimal valor1, valor2, valor3, valor4, valor5, resultado;
+                Decimal valor1, valor2, valor3, valor4, valor5, valor6, resultado;
                 valor1 = Convert.ToDecimal(cpoTaxaNf.Text);
                 valor2 = Convert.ToDecimal(cpoValorComissao.Text);
                 valor3 = Convert.ToDecimal(cpoValorFrete.Text);
                 valor4 = Convert.ToDecimal(cpoSeguro.Text);
                 valor5 = Convert.ToDecimal(cpoCustoCarreg.Text);
-                resultado = valor1 + valor2 + valor3 + valor4 + valor5;
+                valor6 = Convert.ToDecimal(cpoAdiantFretMot.Text);
+                resultado = valor1 + valor2 + valor3 + valor4 + valor5 - valor6;
                 cpoValorTotalRomaneio.Text = resultado.ToString();
-
+           //     cpoValorTotalRomaneio.Text - cpoAdiantFretMot.Text = resultado.ToString()
 
                 cpoSeguro.Enabled = false;
                 cpoTaxaNf.Enabled = false;

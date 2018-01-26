@@ -187,22 +187,23 @@ namespace Apresentacao
 
         private void dgwCliente_DoubleClick(object sender, EventArgs e)
         {
-            //  cpoIDCliente.Text = dgwCliente.SelectedRows[0].Cells[0].Value.ToString();
-            //teste
-            cpoIDCliente.Text = dgwCliente.SelectedRows[0].Cells[0].Value.ToString();
-            cpoNome.Text = dgwCliente.SelectedRows[0].Cells[1].Value.ToString();
-            cpoRazaoSocial.Text = dgwCliente.SelectedRows[0].Cells[2].Value.ToString();
-            cpoTelefone.Text = dgwCliente.SelectedRows[0].Cells[5].Value.ToString();
-            cpoEmail.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
-            cpoCidade.Text = dgwCliente.SelectedRows[0].Cells[7].Value.ToString();
-            cpoUf.Text = dgwCliente.SelectedRows[0].Cells[8].Value.ToString();
-            cpoEndereco.Text = dgwCliente.SelectedRows[0].Cells[6].Value.ToString();
-            cpoCpf.Text = dgwCliente.SelectedRows[0].Cells[4].Value.ToString();
-            cpoCnpj.Text = dgwCliente.SelectedRows[0].Cells[3].Value.ToString();
-            //cpoStatus.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
-            btnSalvar.Enabled = false;
-            btnAlterar.Enabled = true;
-            btnExcluir.Enabled = true;
+
+                cpoIDCliente.Text = dgwCliente.SelectedRows[0].Cells[0].Value.ToString();
+                cpoNome.Text = dgwCliente.SelectedRows[0].Cells[1].Value.ToString();
+                cpoRazaoSocial.Text = dgwCliente.SelectedRows[0].Cells[2].Value.ToString();
+                cpoTelefone.Text = dgwCliente.SelectedRows[0].Cells[5].Value.ToString();
+                cpoEmail.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
+                cpoCidade.Text = dgwCliente.SelectedRows[0].Cells[7].Value.ToString();
+                cpoUf.Text = dgwCliente.SelectedRows[0].Cells[8].Value.ToString();
+                cpoEndereco.Text = dgwCliente.SelectedRows[0].Cells[6].Value.ToString();
+                cpoCpf.Text = dgwCliente.SelectedRows[0].Cells[4].Value.ToString();
+                cpoCnpj.Text = dgwCliente.SelectedRows[0].Cells[3].Value.ToString();
+                //cpoStatus.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
+                btnSalvar.Enabled = false;
+                btnAlterar.Enabled = true;
+                btnExcluir.Enabled = true;
+ 
+
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -485,6 +486,26 @@ namespace Apresentacao
 
                 this.AtualizarGrid();
         }
+
+        private void cpoCnpj_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //private void cpoCnpj_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        //{
+
+        //}
+
+        private void cpoCnpj_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+
 
 
 
