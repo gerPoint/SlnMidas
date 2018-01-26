@@ -343,6 +343,13 @@ namespace Apresentacao
             cpoUnidMedida.SelectionStart = cpoUnidMedida.Text.Length;
         }
 
+        private void cpoCaixaPesquisa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+
+                this.AtualizarGrid();
+        }
+
         //---------------------------------------------------Somente a primeira letra maiuscula de cada palavra-------------------------------------
 
     }

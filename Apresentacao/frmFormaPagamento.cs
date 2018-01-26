@@ -337,5 +337,12 @@ namespace Apresentacao
             btnAlterar.Enabled = false;
             btnExcluir.Enabled = false;
         }
+
+        private void cpoCaixaPesquisa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+
+                this.AtualizarGrid();
+        }
     }
 }

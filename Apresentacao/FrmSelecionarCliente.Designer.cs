@@ -214,6 +214,7 @@
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(524, 23);
             this.cpoCaixaPesquisa.TabIndex = 17;
             this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
+            this.cpoCaixaPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCaixaPesquisa_KeyPress);
             // 
             // midasDataSetCliente1
             // 

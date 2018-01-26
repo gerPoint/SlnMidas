@@ -153,6 +153,13 @@ namespace Apresentacao
         {
 
         }
+
+        private void cpoCaixaPesquisa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+
+                this.AtualizarGrid();
+        }
     }
 
 

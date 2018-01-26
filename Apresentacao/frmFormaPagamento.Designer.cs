@@ -255,6 +255,7 @@
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(403, 23);
             this.cpoCaixaPesquisa.TabIndex = 97;
             this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
+            this.cpoCaixaPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCaixaPesquisa_KeyPress);
             // 
             // label1
             // 

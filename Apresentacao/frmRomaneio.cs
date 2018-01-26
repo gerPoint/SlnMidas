@@ -766,6 +766,13 @@ namespace Apresentacao
                
             }
         }
+
+        private void cpoCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+
+                this.AtualizarGrid();
+        }
     }
 
     }
