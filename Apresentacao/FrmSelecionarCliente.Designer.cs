@@ -91,7 +91,7 @@
             this.dgwSelCliente.ReadOnly = true;
             this.dgwSelCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwSelCliente.Size = new System.Drawing.Size(663, 211);
-            this.dgwSelCliente.TabIndex = 18;
+            this.dgwSelCliente.TabIndex = 99999;
             this.dgwSelCliente.DoubleClick += new System.EventHandler(this.dgwSelCliente_DoubleClick);
             // 
             // iDClienteDataGridViewTextBoxColumn
@@ -212,7 +212,7 @@
             this.cpoCaixaPesquisa.Multiline = true;
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(524, 23);
-            this.cpoCaixaPesquisa.TabIndex = 17;
+            this.cpoCaixaPesquisa.TabIndex = 3;
             this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
             this.cpoCaixaPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCaixaPesquisa_KeyPress);
             // 
@@ -242,7 +242,7 @@
             this.btnPesquisar.Location = new System.Drawing.Point(35, 22);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(124, 45);
-            this.btnPesquisar.TabIndex = 16;
+            this.btnPesquisar.TabIndex = 2;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
@@ -254,7 +254,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(609, 299);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 44);
-            this.btnCancelar.TabIndex = 23;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -287,7 +287,7 @@
             this.lblAjuda.Location = new System.Drawing.Point(32, 322);
             this.lblAjuda.Name = "lblAjuda";
             this.lblAjuda.Size = new System.Drawing.Size(58, 13);
-            this.lblAjuda.TabIndex = 24;
+            this.lblAjuda.TabIndex = 4;
             this.lblAjuda.Text = "Ajuda (?)";
             this.lblAjuda.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.toolTip1.SetToolTip(this.lblAjuda, "Selecione o registro desejado clicando duas vezes sobre o mesmo no Grid.");

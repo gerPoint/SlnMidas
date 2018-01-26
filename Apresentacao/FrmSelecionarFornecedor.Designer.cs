@@ -65,7 +65,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(656, 294);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 44);
-            this.btnCancelar.TabIndex = 31;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@
             this.dgwSelFornecedor.ReadOnly = true;
             this.dgwSelFornecedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwSelFornecedor.Size = new System.Drawing.Size(709, 211);
-            this.dgwSelFornecedor.TabIndex = 26;
+            this.dgwSelFornecedor.TabIndex = 99999;
             this.dgwSelFornecedor.DoubleClick += new System.EventHandler(this.dgwSelFornecedor_DoubleClick);
             // 
             // iDFornecedorDataGridViewTextBoxColumn
@@ -229,7 +229,7 @@
             this.cpoCaixaPesquisa.Multiline = true;
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(570, 23);
-            this.cpoCaixaPesquisa.TabIndex = 25;
+            this.cpoCaixaPesquisa.TabIndex = 3;
             this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
             this.cpoCaixaPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCaixaPesquisa_KeyPress);
             // 
@@ -240,7 +240,7 @@
             this.btnPesquisar.Location = new System.Drawing.Point(36, 17);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(124, 45);
-            this.btnPesquisar.TabIndex = 24;
+            this.btnPesquisar.TabIndex = 2;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
@@ -256,7 +256,7 @@
             this.lblAjuda.Location = new System.Drawing.Point(33, 310);
             this.lblAjuda.Name = "lblAjuda";
             this.lblAjuda.Size = new System.Drawing.Size(58, 13);
-            this.lblAjuda.TabIndex = 32;
+            this.lblAjuda.TabIndex = 4;
             this.lblAjuda.Text = "Ajuda (?)";
             this.lblAjuda.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.toolTip1.SetToolTip(this.lblAjuda, "Selecione o registro desejado clicando duas vezes sobre o mesmo no Grid.");

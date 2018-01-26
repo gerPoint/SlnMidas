@@ -84,6 +84,7 @@
             // 
             this.cpoRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoRazaoSocial.Location = new System.Drawing.Point(419, 322);
+            this.cpoRazaoSocial.MaxLength = 50;
             this.cpoRazaoSocial.Name = "cpoRazaoSocial";
             this.cpoRazaoSocial.Size = new System.Drawing.Size(246, 20);
             this.cpoRazaoSocial.TabIndex = 5;
@@ -93,14 +94,17 @@
             // 
             this.cpoUf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoUf.Location = new System.Drawing.Point(622, 358);
+            this.cpoUf.MaxLength = 2;
             this.cpoUf.Name = "cpoUf";
             this.cpoUf.Size = new System.Drawing.Size(42, 20);
             this.cpoUf.TabIndex = 9;
+            this.cpoUf.TextChanged += new System.EventHandler(this.cpoUf_TextChanged);
             // 
             // cpoCidade
             // 
             this.cpoCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCidade.Location = new System.Drawing.Point(419, 358);
+            this.cpoCidade.MaxLength = 50;
             this.cpoCidade.Name = "cpoCidade";
             this.cpoCidade.Size = new System.Drawing.Size(170, 20);
             this.cpoCidade.TabIndex = 8;
@@ -110,6 +114,7 @@
             // 
             this.cpoEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoEndereco.Location = new System.Drawing.Point(86, 358);
+            this.cpoEndereco.MaxLength = 50;
             this.cpoEndereco.Name = "cpoEndereco";
             this.cpoEndereco.Size = new System.Drawing.Size(247, 20);
             this.cpoEndereco.TabIndex = 7;
@@ -119,6 +124,7 @@
             // 
             this.cpoEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoEmail.Location = new System.Drawing.Point(419, 391);
+            this.cpoEmail.MaxLength = 50;
             this.cpoEmail.Name = "cpoEmail";
             this.cpoEmail.Size = new System.Drawing.Size(245, 20);
             this.cpoEmail.TabIndex = 11;
@@ -127,6 +133,7 @@
             // 
             this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoTelefone.Location = new System.Drawing.Point(86, 391);
+            this.cpoTelefone.MaxLength = 14;
             this.cpoTelefone.Name = "cpoTelefone";
             this.cpoTelefone.Size = new System.Drawing.Size(247, 20);
             this.cpoTelefone.TabIndex = 10;
@@ -145,6 +152,7 @@
             // 
             this.cpoCnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCnpj.Location = new System.Drawing.Point(709, 322);
+            this.cpoCnpj.MaxLength = 14;
             this.cpoCnpj.Name = "cpoCnpj";
             this.cpoCnpj.Size = new System.Drawing.Size(103, 20);
             this.cpoCnpj.TabIndex = 6;
@@ -198,6 +206,10 @@
             // 
             // dgwFilial
             // 
+            this.dgwFilial.AllowUserToAddRows = false;
+            this.dgwFilial.AllowUserToDeleteRows = false;
+            this.dgwFilial.AllowUserToResizeColumns = false;
+            this.dgwFilial.AllowUserToResizeRows = false;
             this.dgwFilial.AutoGenerateColumns = false;
             this.dgwFilial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwFilial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -215,11 +227,12 @@
             this.statusDataGridViewTextBoxColumn});
             this.dgwFilial.DataSource = this.tblFilialBindingSource1;
             this.dgwFilial.Location = new System.Drawing.Point(30, 80);
+            this.dgwFilial.MultiSelect = false;
             this.dgwFilial.Name = "dgwFilial";
             this.dgwFilial.ReadOnly = true;
             this.dgwFilial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFilial.Size = new System.Drawing.Size(782, 211);
-            this.dgwFilial.TabIndex = 109;
+            this.dgwFilial.TabIndex = 99999;
             this.dgwFilial.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgwFilial_MouseDoubleClick);
             // 
             // iDFilialDataGridViewTextBoxColumn
@@ -334,6 +347,7 @@
             // 
             this.cpoFilial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoFilial.Location = new System.Drawing.Point(86, 322);
+            this.cpoFilial.MaxLength = 50;
             this.cpoFilial.Name = "cpoFilial";
             this.cpoFilial.Size = new System.Drawing.Size(247, 20);
             this.cpoFilial.TabIndex = 4;
@@ -394,7 +408,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(504, 457);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(87, 44);
-            this.btnExcluir.TabIndex = 13;
+            this.btnExcluir.TabIndex = 14;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -407,7 +421,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(721, 457);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(91, 44);
-            this.btnSalvar.TabIndex = 15;
+            this.btnSalvar.TabIndex = 16;
             this.btnSalvar.Text = "   Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -420,7 +434,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(612, 457);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 44);
-            this.btnCancelar.TabIndex = 14;
+            this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -434,7 +448,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(393, 457);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(87, 44);
-            this.btnAlterar.TabIndex = 12;
+            this.btnAlterar.TabIndex = 13;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -471,7 +485,7 @@
             this.btnRetornar.Location = new System.Drawing.Point(30, 457);
             this.btnRetornar.Name = "btnRetornar";
             this.btnRetornar.Size = new System.Drawing.Size(89, 44);
-            this.btnRetornar.TabIndex = 132;
+            this.btnRetornar.TabIndex = 12;
             this.btnRetornar.Text = "Retornar";
             this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRetornar.UseVisualStyleBackColor = true;

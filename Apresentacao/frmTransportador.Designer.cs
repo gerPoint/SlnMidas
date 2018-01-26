@@ -96,6 +96,7 @@
             // 
             this.cpoEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoEndereco.Location = new System.Drawing.Point(458, 313);
+            this.cpoEndereco.MaxLength = 50;
             this.cpoEndereco.Name = "cpoEndereco";
             this.cpoEndereco.Size = new System.Drawing.Size(301, 20);
             this.cpoEndereco.TabIndex = 5;
@@ -104,6 +105,7 @@
             // 
             this.cpoUf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoUf.Location = new System.Drawing.Point(722, 349);
+            this.cpoUf.MaxLength = 2;
             this.cpoUf.Name = "cpoUf";
             this.cpoUf.Size = new System.Drawing.Size(37, 20);
             this.cpoUf.TabIndex = 8;
@@ -112,6 +114,7 @@
             // 
             this.cpoCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCidade.Location = new System.Drawing.Point(458, 349);
+            this.cpoCidade.MaxLength = 50;
             this.cpoCidade.Name = "cpoCidade";
             this.cpoCidade.Size = new System.Drawing.Size(202, 20);
             this.cpoCidade.TabIndex = 7;
@@ -120,6 +123,7 @@
             // 
             this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoTelefone.Location = new System.Drawing.Point(95, 347);
+            this.cpoTelefone.MaxLength = 14;
             this.cpoTelefone.Name = "cpoTelefone";
             this.cpoTelefone.Size = new System.Drawing.Size(247, 20);
             this.cpoTelefone.TabIndex = 6;
@@ -129,6 +133,7 @@
             // 
             this.cpoVeiculo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoVeiculo.Location = new System.Drawing.Point(95, 382);
+            this.cpoVeiculo.MaxLength = 50;
             this.cpoVeiculo.Name = "cpoVeiculo";
             this.cpoVeiculo.Size = new System.Drawing.Size(245, 20);
             this.cpoVeiculo.TabIndex = 9;
@@ -205,11 +210,12 @@
             this.statusDataGridViewTextBoxColumn});
             this.dgwTransportador.DataSource = this.tblTransportadorBindingSource;
             this.dgwTransportador.Location = new System.Drawing.Point(39, 72);
+            this.dgwTransportador.MultiSelect = false;
             this.dgwTransportador.Name = "dgwTransportador";
             this.dgwTransportador.ReadOnly = true;
             this.dgwTransportador.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwTransportador.Size = new System.Drawing.Size(782, 211);
-            this.dgwTransportador.TabIndex = 96;
+            this.dgwTransportador.TabIndex = 99999;
             this.dgwTransportador.DoubleClick += new System.EventHandler(this.dgwTransportador_DoubleClick);
             // 
             // iDTransportadorDataGridViewTextBoxColumn
@@ -303,6 +309,7 @@
             // 
             this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNome.Location = new System.Drawing.Point(95, 311);
+            this.cpoNome.MaxLength = 50;
             this.cpoNome.Name = "cpoNome";
             this.cpoNome.Size = new System.Drawing.Size(247, 20);
             this.cpoNome.TabIndex = 4;
@@ -333,7 +340,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(730, 431);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(91, 44);
-            this.btnSalvar.TabIndex = 14;
+            this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "   Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -347,7 +354,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(513, 431);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(87, 44);
-            this.btnExcluir.TabIndex = 12;
+            this.btnExcluir.TabIndex = 13;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -360,7 +367,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(621, 431);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 44);
-            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.TabIndex = 14;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -374,7 +381,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(402, 431);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(87, 44);
-            this.btnAlterar.TabIndex = 11;
+            this.btnAlterar.TabIndex = 12;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -410,9 +417,10 @@
             // 
             this.cpoPlaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoPlaca.Location = new System.Drawing.Point(458, 384);
+            this.cpoPlaca.MaxLength = 7;
             this.cpoPlaca.Name = "cpoPlaca";
             this.cpoPlaca.Size = new System.Drawing.Size(109, 20);
-            this.cpoPlaca.TabIndex = 109;
+            this.cpoPlaca.TabIndex = 10;
             // 
             // btnRetornar
             // 
@@ -421,7 +429,7 @@
             this.btnRetornar.Location = new System.Drawing.Point(39, 431);
             this.btnRetornar.Name = "btnRetornar";
             this.btnRetornar.Size = new System.Drawing.Size(89, 44);
-            this.btnRetornar.TabIndex = 110;
+            this.btnRetornar.TabIndex = 11;
             this.btnRetornar.Text = "Retornar";
             this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRetornar.UseVisualStyleBackColor = true;

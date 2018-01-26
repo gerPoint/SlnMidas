@@ -64,7 +64,7 @@
             this.btnRetornar.Location = new System.Drawing.Point(29, 362);
             this.btnRetornar.Name = "btnRetornar";
             this.btnRetornar.Size = new System.Drawing.Size(89, 44);
-            this.btnRetornar.TabIndex = 108;
+            this.btnRetornar.TabIndex = 6;
             this.btnRetornar.Text = "Retornar";
             this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRetornar.UseVisualStyleBackColor = true;
@@ -85,7 +85,7 @@
             this.cpoParcelamento.MaxLength = 50;
             this.cpoParcelamento.Name = "cpoParcelamento";
             this.cpoParcelamento.Size = new System.Drawing.Size(91, 20);
-            this.cpoParcelamento.TabIndex = 99;
+            this.cpoParcelamento.TabIndex = 5;
             this.cpoParcelamento.TextChanged += new System.EventHandler(this.cpoParcelamento_TextChanged);
             // 
             // label8
@@ -105,7 +105,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(263, 362);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(87, 44);
-            this.btnExcluir.TabIndex = 101;
+            this.btnExcluir.TabIndex = 7;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(480, 362);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(91, 44);
-            this.btnSalvar.TabIndex = 103;
+            this.btnSalvar.TabIndex = 9;
             this.btnSalvar.Text = "   Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -131,7 +131,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(371, 362);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 44);
-            this.btnCancelar.TabIndex = 102;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -145,7 +145,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(153, 362);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(87, 44);
-            this.btnAlterar.TabIndex = 100;
+            this.btnAlterar.TabIndex = 7;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -153,6 +153,10 @@
             // 
             // dgwFormaPagamento
             // 
+            this.dgwFormaPagamento.AllowUserToAddRows = false;
+            this.dgwFormaPagamento.AllowUserToDeleteRows = false;
+            this.dgwFormaPagamento.AllowUserToResizeColumns = false;
+            this.dgwFormaPagamento.AllowUserToResizeRows = false;
             this.dgwFormaPagamento.AutoGenerateColumns = false;
             this.dgwFormaPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwFormaPagamento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -165,11 +169,12 @@
             this.statusDataGridViewTextBoxColumn});
             this.dgwFormaPagamento.DataSource = this.tblFormaPagamentoBindingSource;
             this.dgwFormaPagamento.Location = new System.Drawing.Point(29, 77);
+            this.dgwFormaPagamento.MultiSelect = false;
             this.dgwFormaPagamento.Name = "dgwFormaPagamento";
             this.dgwFormaPagamento.ReadOnly = true;
             this.dgwFormaPagamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFormaPagamento.Size = new System.Drawing.Size(542, 211);
-            this.dgwFormaPagamento.TabIndex = 105;
+            this.dgwFormaPagamento.TabIndex = 99999;
             this.dgwFormaPagamento.DoubleClick += new System.EventHandler(this.dgwFormaPagamento_DoubleClick);
             // 
             // iDFormaPagamentoDataGridViewTextBoxColumn
@@ -243,7 +248,7 @@
             this.cpoDescricao.MaxLength = 50;
             this.cpoDescricao.Name = "cpoDescricao";
             this.cpoDescricao.Size = new System.Drawing.Size(281, 20);
-            this.cpoDescricao.TabIndex = 98;
+            this.cpoDescricao.TabIndex = 4;
             this.cpoDescricao.TextChanged += new System.EventHandler(this.cpoDescricao_TextChanged);
             // 
             // cpoCaixaPesquisa
@@ -253,7 +258,7 @@
             this.cpoCaixaPesquisa.Multiline = true;
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(403, 23);
-            this.cpoCaixaPesquisa.TabIndex = 97;
+            this.cpoCaixaPesquisa.TabIndex = 3;
             this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
             this.cpoCaixaPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCaixaPesquisa_KeyPress);
             // 
@@ -273,7 +278,7 @@
             this.btnPesquisar.Location = new System.Drawing.Point(29, 17);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(124, 45);
-            this.btnPesquisar.TabIndex = 96;
+            this.btnPesquisar.TabIndex = 2;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);

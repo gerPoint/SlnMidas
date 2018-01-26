@@ -86,6 +86,7 @@
             // 
             this.cpoUf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoUf.Location = new System.Drawing.Point(323, 347);
+            this.cpoUf.MaxLength = 2;
             this.cpoUf.Name = "cpoUf";
             this.cpoUf.Size = new System.Drawing.Size(42, 20);
             this.cpoUf.TabIndex = 7;
@@ -95,6 +96,7 @@
             // 
             this.cpoCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCidade.Location = new System.Drawing.Point(97, 347);
+            this.cpoCidade.MaxLength = 50;
             this.cpoCidade.Name = "cpoCidade";
             this.cpoCidade.Size = new System.Drawing.Size(193, 20);
             this.cpoCidade.TabIndex = 6;
@@ -104,6 +106,7 @@
             // 
             this.cpoEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoEndereco.Location = new System.Drawing.Point(475, 313);
+            this.cpoEndereco.MaxLength = 50;
             this.cpoEndereco.Name = "cpoEndereco";
             this.cpoEndereco.Size = new System.Drawing.Size(293, 20);
             this.cpoEndereco.TabIndex = 5;
@@ -113,6 +116,7 @@
             // 
             this.cpoEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoEmail.Location = new System.Drawing.Point(475, 349);
+            this.cpoEmail.MaxLength = 50;
             this.cpoEmail.Name = "cpoEmail";
             this.cpoEmail.Size = new System.Drawing.Size(293, 20);
             this.cpoEmail.TabIndex = 8;
@@ -121,6 +125,7 @@
             // 
             this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoTelefone.Location = new System.Drawing.Point(96, 380);
+            this.cpoTelefone.MaxLength = 14;
             this.cpoTelefone.Name = "cpoTelefone";
             this.cpoTelefone.Size = new System.Drawing.Size(129, 20);
             this.cpoTelefone.TabIndex = 9;
@@ -184,6 +189,7 @@
             // 
             this.cpoCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCpf.Location = new System.Drawing.Point(644, 382);
+            this.cpoCpf.MaxLength = 11;
             this.cpoCpf.Name = "cpoCpf";
             this.cpoCpf.Size = new System.Drawing.Size(124, 20);
             this.cpoCpf.TabIndex = 11;
@@ -191,7 +197,10 @@
             // 
             // dgwFuncionario
             // 
+            this.dgwFuncionario.AllowUserToAddRows = false;
             this.dgwFuncionario.AllowUserToDeleteRows = false;
+            this.dgwFuncionario.AllowUserToResizeColumns = false;
+            this.dgwFuncionario.AllowUserToResizeRows = false;
             this.dgwFuncionario.AutoGenerateColumns = false;
             this.dgwFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwFuncionario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -208,11 +217,12 @@
             this.statusDataGridViewTextBoxColumn});
             this.dgwFuncionario.DataSource = this.tblFuncionarioBindingSource;
             this.dgwFuncionario.Location = new System.Drawing.Point(40, 72);
+            this.dgwFuncionario.MultiSelect = false;
             this.dgwFuncionario.Name = "dgwFuncionario";
             this.dgwFuncionario.ReadOnly = true;
             this.dgwFuncionario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFuncionario.Size = new System.Drawing.Size(728, 211);
-            this.dgwFuncionario.TabIndex = 96;
+            this.dgwFuncionario.TabIndex = 99999;
             this.dgwFuncionario.DoubleClick += new System.EventHandler(this.dgwFuncionario_DoubleClick);
             // 
             // iDFuncionarioDataGridViewTextBoxColumn
@@ -313,6 +323,7 @@
             // 
             this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNome.Location = new System.Drawing.Point(96, 311);
+            this.cpoNome.MaxLength = 50;
             this.cpoNome.Name = "cpoNome";
             this.cpoNome.Size = new System.Drawing.Size(269, 20);
             this.cpoNome.TabIndex = 4;
@@ -355,6 +366,7 @@
             // 
             this.cpoRg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoRg.Location = new System.Drawing.Point(475, 382);
+            this.cpoRg.MaxLength = 9;
             this.cpoRg.Name = "cpoRg";
             this.cpoRg.Size = new System.Drawing.Size(122, 20);
             this.cpoRg.TabIndex = 10;
@@ -367,7 +379,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(680, 432);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(91, 44);
-            this.btnSalvar.TabIndex = 15;
+            this.btnSalvar.TabIndex = 16;
             this.btnSalvar.Text = "   Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -381,7 +393,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(463, 432);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(87, 44);
-            this.btnExcluir.TabIndex = 13;
+            this.btnExcluir.TabIndex = 14;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -394,7 +406,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(571, 432);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 44);
-            this.btnCancelar.TabIndex = 14;
+            this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -408,7 +420,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(352, 432);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(87, 44);
-            this.btnAlterar.TabIndex = 12;
+            this.btnAlterar.TabIndex = 13;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -442,7 +454,7 @@
             this.btnRetornar.Location = new System.Drawing.Point(40, 432);
             this.btnRetornar.Name = "btnRetornar";
             this.btnRetornar.Size = new System.Drawing.Size(89, 44);
-            this.btnRetornar.TabIndex = 110;
+            this.btnRetornar.TabIndex = 12;
             this.btnRetornar.Text = "Retornar";
             this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRetornar.UseVisualStyleBackColor = true;

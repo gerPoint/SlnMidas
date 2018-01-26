@@ -102,6 +102,7 @@
             // 
             this.cpoUf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoUf.Location = new System.Drawing.Point(314, 391);
+            this.cpoUf.MaxLength = 2;
             this.cpoUf.Name = "cpoUf";
             this.cpoUf.Size = new System.Drawing.Size(42, 20);
             this.cpoUf.TabIndex = 9;
@@ -111,6 +112,7 @@
             // 
             this.cpoCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCidade.Location = new System.Drawing.Point(88, 391);
+            this.cpoCidade.MaxLength = 50;
             this.cpoCidade.Name = "cpoCidade";
             this.cpoCidade.Size = new System.Drawing.Size(193, 20);
             this.cpoCidade.TabIndex = 8;
@@ -120,6 +122,7 @@
             // 
             this.cpoEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoEndereco.Location = new System.Drawing.Point(467, 313);
+            this.cpoEndereco.MaxLength = 50;
             this.cpoEndereco.Name = "cpoEndereco";
             this.cpoEndereco.Size = new System.Drawing.Size(293, 20);
             this.cpoEndereco.TabIndex = 5;
@@ -129,6 +132,7 @@
             // 
             this.cpoEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoEmail.Location = new System.Drawing.Point(467, 351);
+            this.cpoEmail.MaxLength = 50;
             this.cpoEmail.Name = "cpoEmail";
             this.cpoEmail.Size = new System.Drawing.Size(293, 20);
             this.cpoEmail.TabIndex = 7;
@@ -137,6 +141,7 @@
             // 
             this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoTelefone.Location = new System.Drawing.Point(88, 432);
+            this.cpoTelefone.MaxLength = 14;
             this.cpoTelefone.Name = "cpoTelefone";
             this.cpoTelefone.Size = new System.Drawing.Size(193, 20);
             this.cpoTelefone.TabIndex = 12;
@@ -155,6 +160,7 @@
             // 
             this.cpoRg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoRg.Location = new System.Drawing.Point(467, 391);
+            this.cpoRg.MaxLength = 9;
             this.cpoRg.Name = "cpoRg";
             this.cpoRg.Size = new System.Drawing.Size(122, 20);
             this.cpoRg.TabIndex = 10;
@@ -209,6 +215,7 @@
             // 
             this.cpoCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCpf.Location = new System.Drawing.Point(636, 391);
+            this.cpoCpf.MaxLength = 11;
             this.cpoCpf.Name = "cpoCpf";
             this.cpoCpf.Size = new System.Drawing.Size(124, 20);
             this.cpoCpf.TabIndex = 11;
@@ -275,11 +282,12 @@
             this.statusDataGridViewTextBoxColumn});
             this.dgwUsuario.DataSource = this.tblUsuarioBindingSource;
             this.dgwUsuario.Location = new System.Drawing.Point(36, 72);
+            this.dgwUsuario.MultiSelect = false;
             this.dgwUsuario.Name = "dgwUsuario";
             this.dgwUsuario.ReadOnly = true;
             this.dgwUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwUsuario.Size = new System.Drawing.Size(724, 211);
-            this.dgwUsuario.TabIndex = 122;
+            this.dgwUsuario.TabIndex = 99999;
             this.dgwUsuario.DoubleClick += new System.EventHandler(this.dgwUsuario_DoubleClick);
             // 
             // iDUsuarioDataGridViewTextBoxColumn
@@ -388,6 +396,7 @@
             // 
             this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNome.Location = new System.Drawing.Point(88, 313);
+            this.cpoNome.MaxLength = 50;
             this.cpoNome.Name = "cpoNome";
             this.cpoNome.Size = new System.Drawing.Size(269, 20);
             this.cpoNome.TabIndex = 4;
@@ -442,6 +451,7 @@
             // 
             this.cpoSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoSenha.Location = new System.Drawing.Point(88, 351);
+            this.cpoSenha.MaxLength = 50;
             this.cpoSenha.Name = "cpoSenha";
             this.cpoSenha.Size = new System.Drawing.Size(268, 20);
             this.cpoSenha.TabIndex = 6;

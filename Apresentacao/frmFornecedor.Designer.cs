@@ -80,6 +80,7 @@
             // 
             this.cpoRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoRazaoSocial.Location = new System.Drawing.Point(418, 320);
+            this.cpoRazaoSocial.MaxLength = 50;
             this.cpoRazaoSocial.Name = "cpoRazaoSocial";
             this.cpoRazaoSocial.Size = new System.Drawing.Size(246, 20);
             this.cpoRazaoSocial.TabIndex = 5;
@@ -89,6 +90,7 @@
             // 
             this.cpoUf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoUf.Location = new System.Drawing.Point(621, 356);
+            this.cpoUf.MaxLength = 2;
             this.cpoUf.Name = "cpoUf";
             this.cpoUf.Size = new System.Drawing.Size(42, 20);
             this.cpoUf.TabIndex = 9;
@@ -98,6 +100,7 @@
             // 
             this.cpoCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCidade.Location = new System.Drawing.Point(418, 356);
+            this.cpoCidade.MaxLength = 50;
             this.cpoCidade.Name = "cpoCidade";
             this.cpoCidade.Size = new System.Drawing.Size(170, 20);
             this.cpoCidade.TabIndex = 8;
@@ -107,6 +110,7 @@
             // 
             this.cpoEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoEndereco.Location = new System.Drawing.Point(85, 356);
+            this.cpoEndereco.MaxLength = 50;
             this.cpoEndereco.Name = "cpoEndereco";
             this.cpoEndereco.Size = new System.Drawing.Size(247, 20);
             this.cpoEndereco.TabIndex = 7;
@@ -116,17 +120,19 @@
             // 
             this.cpoEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoEmail.Location = new System.Drawing.Point(418, 389);
+            this.cpoEmail.MaxLength = 50;
             this.cpoEmail.Name = "cpoEmail";
             this.cpoEmail.Size = new System.Drawing.Size(245, 20);
-            this.cpoEmail.TabIndex = 11;
+            this.cpoEmail.TabIndex = 12;
             // 
             // cpoTelefone
             // 
             this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoTelefone.Location = new System.Drawing.Point(85, 389);
+            this.cpoTelefone.MaxLength = 14;
             this.cpoTelefone.Name = "cpoTelefone";
             this.cpoTelefone.Size = new System.Drawing.Size(247, 20);
-            this.cpoTelefone.TabIndex = 10;
+            this.cpoTelefone.TabIndex = 11;
             this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress);
             // 
             // label9
@@ -142,6 +148,7 @@
             // 
             this.cpoCnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCnpj.Location = new System.Drawing.Point(708, 320);
+            this.cpoCnpj.MaxLength = 14;
             this.cpoCnpj.Name = "cpoCnpj";
             this.cpoCnpj.Size = new System.Drawing.Size(103, 20);
             this.cpoCnpj.TabIndex = 6;
@@ -206,9 +213,10 @@
             this.cpoCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCpf.Enabled = false;
             this.cpoCpf.Location = new System.Drawing.Point(708, 389);
+            this.cpoCpf.MaxLength = 11;
             this.cpoCpf.Name = "cpoCpf";
             this.cpoCpf.Size = new System.Drawing.Size(103, 20);
-            this.cpoCpf.TabIndex = 12;
+            this.cpoCpf.TabIndex = 13;
             // 
             // btnExcluir
             // 
@@ -218,7 +226,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(503, 455);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(87, 44);
-            this.btnExcluir.TabIndex = 14;
+            this.btnExcluir.TabIndex = 16;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -231,7 +239,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(720, 455);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(91, 44);
-            this.btnSalvar.TabIndex = 16;
+            this.btnSalvar.TabIndex = 18;
             this.btnSalvar.Text = "   Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -244,7 +252,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(611, 455);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 44);
-            this.btnCancelar.TabIndex = 15;
+            this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -258,7 +266,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(392, 455);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(87, 44);
-            this.btnAlterar.TabIndex = 13;
+            this.btnAlterar.TabIndex = 15;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -266,6 +274,10 @@
             // 
             // dgwFornecedor
             // 
+            this.dgwFornecedor.AllowUserToAddRows = false;
+            this.dgwFornecedor.AllowUserToDeleteRows = false;
+            this.dgwFornecedor.AllowUserToResizeColumns = false;
+            this.dgwFornecedor.AllowUserToResizeRows = false;
             this.dgwFornecedor.AutoGenerateColumns = false;
             this.dgwFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwFornecedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -282,11 +294,12 @@
             this.statusDataGridViewTextBoxColumn});
             this.dgwFornecedor.DataSource = this.tblFornecedorBindingSource;
             this.dgwFornecedor.Location = new System.Drawing.Point(29, 78);
+            this.dgwFornecedor.MultiSelect = false;
             this.dgwFornecedor.Name = "dgwFornecedor";
             this.dgwFornecedor.ReadOnly = true;
             this.dgwFornecedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFornecedor.Size = new System.Drawing.Size(782, 211);
-            this.dgwFornecedor.TabIndex = 83;
+            this.dgwFornecedor.TabIndex = 99999;
             this.dgwFornecedor.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgwFornecedor_MouseDoubleClick);
             // 
             // iDFornecedorDataGridViewTextBoxColumn
@@ -387,6 +400,7 @@
             // 
             this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNome.Location = new System.Drawing.Point(85, 320);
+            this.cpoNome.MaxLength = 50;
             this.cpoNome.Name = "cpoNome";
             this.cpoNome.Size = new System.Drawing.Size(247, 20);
             this.cpoNome.TabIndex = 4;
@@ -453,7 +467,7 @@
             this.btnRetornar.Location = new System.Drawing.Point(29, 455);
             this.btnRetornar.Name = "btnRetornar";
             this.btnRetornar.Size = new System.Drawing.Size(89, 44);
-            this.btnRetornar.TabIndex = 99;
+            this.btnRetornar.TabIndex = 14;
             this.btnRetornar.Text = "Retornar";
             this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRetornar.UseVisualStyleBackColor = true;
@@ -465,7 +479,7 @@
             this.checkBoxCpf.Location = new System.Drawing.Point(708, 357);
             this.checkBoxCpf.Name = "checkBoxCpf";
             this.checkBoxCpf.Size = new System.Drawing.Size(93, 17);
-            this.checkBoxCpf.TabIndex = 100;
+            this.checkBoxCpf.TabIndex = 10;
             this.checkBoxCpf.Text = "Pessoa Física";
             this.checkBoxCpf.UseVisualStyleBackColor = true;
             this.checkBoxCpf.CheckedChanged += new System.EventHandler(this.checkBoxCpf_CheckedChanged);

@@ -175,7 +175,7 @@
             this.tabPage.Name = "tabPage";
             this.tabPage.SelectedIndex = 0;
             this.tabPage.Size = new System.Drawing.Size(983, 563);
-            this.tabPage.TabIndex = 56;
+            this.tabPage.TabIndex = 1;
             // 
             // tabPage1
             // 
@@ -244,7 +244,7 @@
             this.btnRevisarValores.Location = new System.Drawing.Point(495, 394);
             this.btnRevisarValores.Name = "btnRevisarValores";
             this.btnRevisarValores.Size = new System.Drawing.Size(92, 43);
-            this.btnRevisarValores.TabIndex = 113;
+            this.btnRevisarValores.TabIndex = 22;
             this.btnRevisarValores.Text = "Revisar Valores";
             this.btnRevisarValores.UseVisualStyleBackColor = true;
             this.btnRevisarValores.Click += new System.EventHandler(this.btnRevisarValores_Click);
@@ -255,7 +255,7 @@
             this.btnTotalizar.Location = new System.Drawing.Point(610, 392);
             this.btnTotalizar.Name = "btnTotalizar";
             this.btnTotalizar.Size = new System.Drawing.Size(87, 44);
-            this.btnTotalizar.TabIndex = 112;
+            this.btnTotalizar.TabIndex = 23;
             this.btnTotalizar.Text = "Totalizar";
             this.btnTotalizar.UseVisualStyleBackColor = true;
             this.btnTotalizar.Click += new System.EventHandler(this.btnTotalizar_Click);
@@ -265,7 +265,7 @@
             this.cpoValorComissao.Location = new System.Drawing.Point(838, 331);
             this.cpoValorComissao.Name = "cpoValorComissao";
             this.cpoValorComissao.Size = new System.Drawing.Size(106, 20);
-            this.cpoValorComissao.TabIndex = 111;
+            this.cpoValorComissao.TabIndex = 21;
             this.cpoValorComissao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoValorComissao_KeyPress);
             // 
             // cpoCustoCarreg
@@ -273,7 +273,7 @@
             this.cpoCustoCarreg.Location = new System.Drawing.Point(591, 249);
             this.cpoCustoCarreg.Name = "cpoCustoCarreg";
             this.cpoCustoCarreg.Size = new System.Drawing.Size(106, 20);
-            this.cpoCustoCarreg.TabIndex = 110;
+            this.cpoCustoCarreg.TabIndex = 15;
             this.cpoCustoCarreg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCustoCarreg_KeyPress);
             // 
             // cpoTaxaNf
@@ -281,7 +281,7 @@
             this.cpoTaxaNf.Location = new System.Drawing.Point(838, 290);
             this.cpoTaxaNf.Name = "cpoTaxaNf";
             this.cpoTaxaNf.Size = new System.Drawing.Size(106, 20);
-            this.cpoTaxaNf.TabIndex = 109;
+            this.cpoTaxaNf.TabIndex = 19;
             this.cpoTaxaNf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTaxaNf_KeyPress);
             // 
             // cpoSeguro
@@ -289,7 +289,7 @@
             this.cpoSeguro.Location = new System.Drawing.Point(591, 332);
             this.cpoSeguro.Name = "cpoSeguro";
             this.cpoSeguro.Size = new System.Drawing.Size(105, 20);
-            this.cpoSeguro.TabIndex = 108;
+            this.cpoSeguro.TabIndex = 20;
             this.cpoSeguro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoSeguro_KeyPress_1);
             // 
             // cpoAdiantFretMot
@@ -298,7 +298,7 @@
             this.cpoAdiantFretMot.Location = new System.Drawing.Point(838, 249);
             this.cpoAdiantFretMot.Name = "cpoAdiantFretMot";
             this.cpoAdiantFretMot.Size = new System.Drawing.Size(106, 20);
-            this.cpoAdiantFretMot.TabIndex = 107;
+            this.cpoAdiantFretMot.TabIndex = 17;
             this.cpoAdiantFretMot.TextChanged += new System.EventHandler(this.cpoAdiantFretMot_TextChanged);
             this.cpoAdiantFretMot.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoAdiantFretMot_KeyPress_1);
             // 
@@ -307,7 +307,7 @@
             this.cpoValorFrete.Location = new System.Drawing.Point(591, 290);
             this.cpoValorFrete.Name = "cpoValorFrete";
             this.cpoValorFrete.Size = new System.Drawing.Size(105, 20);
-            this.cpoValorFrete.TabIndex = 106;
+            this.cpoValorFrete.TabIndex = 18;
             this.cpoValorFrete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoValorFrete_KeyPress);
             // 
             // cpoIDCarregamento
@@ -342,7 +342,7 @@
             this.btnChamaFruta.Location = new System.Drawing.Point(556, 136);
             this.btnChamaFruta.Name = "btnChamaFruta";
             this.btnChamaFruta.Size = new System.Drawing.Size(25, 20);
-            this.btnChamaFruta.TabIndex = 102;
+            this.btnChamaFruta.TabIndex = 11;
             this.btnChamaFruta.Text = "...";
             this.btnChamaFruta.UseVisualStyleBackColor = true;
             this.btnChamaFruta.Click += new System.EventHandler(this.btnChamaFruta_Click);
@@ -355,7 +355,7 @@
             this.cpoNomeFruta.Multiline = true;
             this.cpoNomeFruta.Name = "cpoNomeFruta";
             this.cpoNomeFruta.Size = new System.Drawing.Size(353, 20);
-            this.cpoNomeFruta.TabIndex = 101;
+            this.cpoNomeFruta.TabIndex = 0;
             // 
             // cpoIDFornecedor
             // 
@@ -389,7 +389,7 @@
             this.btnRetornar.Location = new System.Drawing.Point(28, 476);
             this.btnRetornar.Name = "btnRetornar";
             this.btnRetornar.Size = new System.Drawing.Size(104, 44);
-            this.btnRetornar.TabIndex = 97;
+            this.btnRetornar.TabIndex = 24;
             this.btnRetornar.Text = "Retornar";
             this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRetornar.UseVisualStyleBackColor = true;
@@ -400,7 +400,7 @@
             this.checkBoxAdiantFretMot.Location = new System.Drawing.Point(731, 251);
             this.checkBoxAdiantFretMot.Name = "checkBoxAdiantFretMot";
             this.checkBoxAdiantFretMot.Size = new System.Drawing.Size(101, 17);
-            this.checkBoxAdiantFretMot.TabIndex = 96;
+            this.checkBoxAdiantFretMot.TabIndex = 16;
             this.checkBoxAdiantFretMot.Text = "Adiant. de Frete";
             this.checkBoxAdiantFretMot.UseVisualStyleBackColor = true;
             this.checkBoxAdiantFretMot.CheckedChanged += new System.EventHandler(this.checkBoxAdiantFretMot_CheckedChanged);
@@ -425,7 +425,7 @@
             this.cpoIDRomaneio.Name = "cpoIDRomaneio";
             this.cpoIDRomaneio.ReadOnly = true;
             this.cpoIDRomaneio.Size = new System.Drawing.Size(166, 33);
-            this.cpoIDRomaneio.TabIndex = 94;
+            this.cpoIDRomaneio.TabIndex = 0;
             this.cpoIDRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label17
@@ -473,7 +473,7 @@
             this.comboBoxFormaPagamento.Location = new System.Drawing.Point(591, 209);
             this.comboBoxFormaPagamento.Name = "comboBoxFormaPagamento";
             this.comboBoxFormaPagamento.Size = new System.Drawing.Size(354, 21);
-            this.comboBoxFormaPagamento.TabIndex = 86;
+            this.comboBoxFormaPagamento.TabIndex = 14;
             this.comboBoxFormaPagamento.ValueMember = "tblFormaPagamento.Descricao";
             this.comboBoxFormaPagamento.SelectedIndexChanged += new System.EventHandler(this.comboBoxFormaPagamento_SelectedIndexChanged);
             // 
@@ -523,7 +523,7 @@
             this.cpoValorTotalRomaneio.Name = "cpoValorTotalRomaneio";
             this.cpoValorTotalRomaneio.ReadOnly = true;
             this.cpoValorTotalRomaneio.Size = new System.Drawing.Size(192, 33);
-            this.cpoValorTotalRomaneio.TabIndex = 79;
+            this.cpoValorTotalRomaneio.TabIndex = 0;
             this.cpoValorTotalRomaneio.TextChanged += new System.EventHandler(this.cpoValorTotalRomaneio_TextChanged);
             this.cpoValorTotalRomaneio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cpoValorTotalRomaneio_KeyDown);
             // 
@@ -533,18 +533,18 @@
             this.comboBoxUnidMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxUnidMedida.FormattingEnabled = true;
             this.comboBoxUnidMedida.Items.AddRange(new object[] {
-            "Un",
-            "Cx",
-            "Bd",
-            "To",
-            "Mt",
-            "Pt",
-            "Mm",
-            "Cm"});
+            "UN",
+            "CX",
+            "BD",
+            "KG",
+            "TN",
+            "MT",
+            "PC",
+            "CM"});
             this.comboBoxUnidMedida.Location = new System.Drawing.Point(840, 172);
             this.comboBoxUnidMedida.Name = "comboBoxUnidMedida";
             this.comboBoxUnidMedida.Size = new System.Drawing.Size(105, 21);
-            this.comboBoxUnidMedida.TabIndex = 77;
+            this.comboBoxUnidMedida.TabIndex = 13;
             // 
             // tblFrutaBindingSource
             // 
@@ -580,7 +580,7 @@
             this.cpoQtdGeral.Location = new System.Drawing.Point(590, 173);
             this.cpoQtdGeral.Name = "cpoQtdGeral";
             this.cpoQtdGeral.Size = new System.Drawing.Size(106, 20);
-            this.cpoQtdGeral.TabIndex = 74;
+            this.cpoQtdGeral.TabIndex = 12;
             this.cpoQtdGeral.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoQtdGeral_KeyPress);
             // 
             // btnChamaTransp
@@ -589,7 +589,7 @@
             this.btnChamaTransp.Location = new System.Drawing.Point(556, 97);
             this.btnChamaTransp.Name = "btnChamaTransp";
             this.btnChamaTransp.Size = new System.Drawing.Size(25, 20);
-            this.btnChamaTransp.TabIndex = 72;
+            this.btnChamaTransp.TabIndex = 10;
             this.btnChamaTransp.Text = "...";
             this.btnChamaTransp.UseVisualStyleBackColor = true;
             this.btnChamaTransp.Click += new System.EventHandler(this.btnChamaTransp_Click);
@@ -618,7 +618,7 @@
             this.btnChamacli.Location = new System.Drawing.Point(555, 20);
             this.btnChamacli.Name = "btnChamacli";
             this.btnChamacli.Size = new System.Drawing.Size(25, 20);
-            this.btnChamacli.TabIndex = 69;
+            this.btnChamacli.TabIndex = 8;
             this.btnChamacli.Text = "...";
             this.btnChamacli.UseVisualStyleBackColor = true;
             this.btnChamacli.Click += new System.EventHandler(this.btnChamacli_Click);
@@ -638,7 +638,7 @@
             this.btnChamafor.Location = new System.Drawing.Point(555, 57);
             this.btnChamafor.Name = "btnChamafor";
             this.btnChamafor.Size = new System.Drawing.Size(25, 20);
-            this.btnChamafor.TabIndex = 67;
+            this.btnChamafor.TabIndex = 9;
             this.btnChamafor.Text = "...";
             this.btnChamafor.UseVisualStyleBackColor = true;
             this.btnChamafor.Click += new System.EventHandler(this.btnChamafor_Click);
@@ -650,7 +650,7 @@
             this.cpoNomeTransportador.Location = new System.Drawing.Point(592, 97);
             this.cpoNomeTransportador.Name = "cpoNomeTransportador";
             this.cpoNomeTransportador.Size = new System.Drawing.Size(352, 20);
-            this.cpoNomeTransportador.TabIndex = 66;
+            this.cpoNomeTransportador.TabIndex = 0;
             // 
             // label5
             // 
@@ -669,7 +669,7 @@
             this.cpoNomeCliente.Multiline = true;
             this.cpoNomeCliente.Name = "cpoNomeCliente";
             this.cpoNomeCliente.Size = new System.Drawing.Size(353, 20);
-            this.cpoNomeCliente.TabIndex = 65;
+            this.cpoNomeCliente.TabIndex = 0;
             // 
             // cpoNomeFornecedor
             // 
@@ -678,7 +678,7 @@
             this.cpoNomeFornecedor.Location = new System.Drawing.Point(591, 58);
             this.cpoNomeFornecedor.Name = "cpoNomeFornecedor";
             this.cpoNomeFornecedor.Size = new System.Drawing.Size(353, 20);
-            this.cpoNomeFornecedor.TabIndex = 58;
+            this.cpoNomeFornecedor.TabIndex = 0;
             // 
             // label4
             // 
@@ -696,7 +696,7 @@
             this.comboBoxFilial.Location = new System.Drawing.Point(60, 18);
             this.comboBoxFilial.Name = "comboBoxFilial";
             this.comboBoxFilial.Size = new System.Drawing.Size(413, 21);
-            this.comboBoxFilial.TabIndex = 59;
+            this.comboBoxFilial.TabIndex = 2;
             // 
             // groupBox1
             // 
@@ -724,7 +724,7 @@
             this.mskTxtBoxDtFinal.Mask = "00/00/0000";
             this.mskTxtBoxDtFinal.Name = "mskTxtBoxDtFinal";
             this.mskTxtBoxDtFinal.Size = new System.Drawing.Size(75, 20);
-            this.mskTxtBoxDtFinal.TabIndex = 13;
+            this.mskTxtBoxDtFinal.TabIndex = 15;
             this.mskTxtBoxDtFinal.ValidatingType = typeof(System.DateTime);
             // 
             // label20
@@ -765,10 +765,11 @@
             this.dataExclusaoDataGridViewTextBoxColumn});
             this.dgwRomaneio.DataSource = this.tblRomaneioBindingSource1;
             this.dgwRomaneio.Location = new System.Drawing.Point(11, 122);
+            this.dgwRomaneio.MultiSelect = false;
             this.dgwRomaneio.Name = "dgwRomaneio";
             this.dgwRomaneio.ReadOnly = true;
             this.dgwRomaneio.Size = new System.Drawing.Size(440, 192);
-            this.dgwRomaneio.TabIndex = 11;
+            this.dgwRomaneio.TabIndex = 99999;
             // 
             // iDRomaneioDataGridViewTextBoxColumn
             // 
@@ -927,7 +928,7 @@
             this.btnPesquisar.Location = new System.Drawing.Point(349, 26);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(95, 59);
-            this.btnPesquisar.TabIndex = 3;
+            this.btnPesquisar.TabIndex = 7;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPesquisar.UseVisualStyleBackColor = true;
@@ -939,7 +940,7 @@
             this.cpoCodigo.Location = new System.Drawing.Point(121, 93);
             this.cpoCodigo.Name = "cpoCodigo";
             this.cpoCodigo.Size = new System.Drawing.Size(75, 20);
-            this.cpoCodigo.TabIndex = 1;
+            this.cpoCodigo.TabIndex = 6;
             this.cpoCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCodigo_KeyPress);
             // 
             // mskTxtBoxDtInicial
@@ -949,7 +950,7 @@
             this.mskTxtBoxDtInicial.Mask = "00/00/0000";
             this.mskTxtBoxDtInicial.Name = "mskTxtBoxDtInicial";
             this.mskTxtBoxDtInicial.Size = new System.Drawing.Size(75, 20);
-            this.mskTxtBoxDtInicial.TabIndex = 6;
+            this.mskTxtBoxDtInicial.TabIndex = 4;
             this.mskTxtBoxDtInicial.ValidatingType = typeof(System.DateTime);
             // 
             // comboBoxTpoPesquisa
@@ -962,7 +963,7 @@
             this.comboBoxTpoPesquisa.Location = new System.Drawing.Point(121, 26);
             this.comboBoxTpoPesquisa.Name = "comboBoxTpoPesquisa";
             this.comboBoxTpoPesquisa.Size = new System.Drawing.Size(181, 21);
-            this.comboBoxTpoPesquisa.TabIndex = 7;
+            this.comboBoxTpoPesquisa.TabIndex = 3;
             this.comboBoxTpoPesquisa.SelectedIndexChanged += new System.EventHandler(this.comboBoxTpoPesquisa_SelectedIndexChanged);
             // 
             // label1
@@ -1001,7 +1002,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(610, 476);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(87, 44);
-            this.btnExcluir.TabIndex = 62;
+            this.btnExcluir.TabIndex = 26;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -1015,7 +1016,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(844, 476);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(102, 44);
-            this.btnSalvar.TabIndex = 61;
+            this.btnSalvar.TabIndex = 28;
             this.btnSalvar.Text = "   Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -1029,7 +1030,7 @@
             this.btnCCancelar.Location = new System.Drawing.Point(720, 476);
             this.btnCCancelar.Name = "btnCCancelar";
             this.btnCCancelar.Size = new System.Drawing.Size(102, 44);
-            this.btnCCancelar.TabIndex = 60;
+            this.btnCCancelar.TabIndex = 27;
             this.btnCCancelar.Text = "Cancelar";
             this.btnCCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCCancelar.UseVisualStyleBackColor = true;
@@ -1044,7 +1045,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(495, 476);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(92, 44);
-            this.btnAlterar.TabIndex = 56;
+            this.btnAlterar.TabIndex = 25;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.UseVisualStyleBackColor = true;

@@ -58,10 +58,10 @@
             // cpoUnidMedida
             // 
             this.cpoUnidMedida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoUnidMedida.Location = new System.Drawing.Point(547, 304);
+            this.cpoUnidMedida.Location = new System.Drawing.Point(533, 304);
             this.cpoUnidMedida.MaxLength = 2;
             this.cpoUnidMedida.Name = "cpoUnidMedida";
-            this.cpoUnidMedida.Size = new System.Drawing.Size(29, 20);
+            this.cpoUnidMedida.Size = new System.Drawing.Size(43, 20);
             this.cpoUnidMedida.TabIndex = 5;
             this.cpoUnidMedida.TextChanged += new System.EventHandler(this.cpoUnidMedida_TextChanged);
             // 
@@ -82,7 +82,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(268, 357);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(87, 44);
-            this.btnExcluir.TabIndex = 7;
+            this.btnExcluir.TabIndex = 8;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(485, 357);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(91, 44);
-            this.btnSalvar.TabIndex = 9;
+            this.btnSalvar.TabIndex = 10;
             this.btnSalvar.Text = "   Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(376, 357);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 44);
-            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -122,7 +122,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(158, 357);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(87, 44);
-            this.btnAlterar.TabIndex = 6;
+            this.btnAlterar.TabIndex = 7;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -130,6 +130,10 @@
             // 
             // dgwFruta
             // 
+            this.dgwFruta.AllowUserToAddRows = false;
+            this.dgwFruta.AllowUserToDeleteRows = false;
+            this.dgwFruta.AllowUserToResizeColumns = false;
+            this.dgwFruta.AllowUserToResizeRows = false;
             this.dgwFruta.AutoGenerateColumns = false;
             this.dgwFruta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwFruta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -140,11 +144,12 @@
             this.statusDataGridViewTextBoxColumn});
             this.dgwFruta.DataSource = this.tblFrutaBindingSource;
             this.dgwFruta.Location = new System.Drawing.Point(34, 72);
+            this.dgwFruta.MultiSelect = false;
             this.dgwFruta.Name = "dgwFruta";
             this.dgwFruta.ReadOnly = true;
             this.dgwFruta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFruta.Size = new System.Drawing.Size(542, 211);
-            this.dgwFruta.TabIndex = 83;
+            this.dgwFruta.TabIndex = 99999;
             this.dgwFruta.DoubleClick += new System.EventHandler(this.dgwFruta_DoubleClick);
             // 
             // iDFrutaDataGridViewTextBoxColumn
@@ -199,6 +204,7 @@
             // 
             this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNome.Location = new System.Drawing.Point(72, 304);
+            this.cpoNome.MaxLength = 50;
             this.cpoNome.Name = "cpoNome";
             this.cpoNome.Size = new System.Drawing.Size(369, 20);
             this.cpoNome.TabIndex = 4;
@@ -255,7 +261,7 @@
             this.btnRetornar.Location = new System.Drawing.Point(34, 357);
             this.btnRetornar.Name = "btnRetornar";
             this.btnRetornar.Size = new System.Drawing.Size(89, 44);
-            this.btnRetornar.TabIndex = 95;
+            this.btnRetornar.TabIndex = 6;
             this.btnRetornar.Text = "Retornar";
             this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRetornar.UseVisualStyleBackColor = true;

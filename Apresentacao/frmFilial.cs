@@ -437,6 +437,12 @@ namespace Apresentacao
                 this.AtualizarGrid();
         }
 
+        private void cpoUf_TextChanged(object sender, EventArgs e)
+        {
+            cpoUf.Text = ConvMaiuscula(cpoUf.Text).ToString();
+            cpoUf.SelectionStart = cpoUf.Text.Length;
+        }
+
         //------------------------------------------------Somente a primeira letra maiuscula de cada palavra--------------------------------------
 
     }
