@@ -63,7 +63,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.cpoTelefone = new System.Windows.Forms.TextBox();
             this.cpoEmail = new System.Windows.Forms.TextBox();
             this.cpoEndereco = new System.Windows.Forms.TextBox();
             this.cpoCidade = new System.Windows.Forms.TextBox();
@@ -80,6 +79,7 @@
             this.btnRetornar = new System.Windows.Forms.Button();
             this.cpoCnpj = new System.Windows.Forms.MaskedTextBox();
             this.cpoCpf = new System.Windows.Forms.MaskedTextBox();
+            this.cpoTelefone = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblClienteBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSet9)).BeginInit();
@@ -413,16 +413,6 @@
             this.label9.TabIndex = 70;
             this.label9.Text = "CNPJ";
             // 
-            // cpoTelefone
-            // 
-            this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoTelefone.Location = new System.Drawing.Point(100, 381);
-            this.cpoTelefone.MaxLength = 14;
-            this.cpoTelefone.Name = "cpoTelefone";
-            this.cpoTelefone.Size = new System.Drawing.Size(247, 20);
-            this.cpoTelefone.TabIndex = 10;
-            this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress);
-            // 
             // cpoEmail
             // 
             this.cpoEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -561,12 +551,23 @@
             this.cpoCpf.Name = "cpoCpf";
             this.cpoCpf.Size = new System.Drawing.Size(103, 20);
             this.cpoCpf.TabIndex = 12;
+            this.cpoCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCpf_KeyPress_1);
+            // 
+            // cpoTelefone
+            // 
+            this.cpoTelefone.Location = new System.Drawing.Point(100, 380);
+            this.cpoTelefone.Mask = "(99) 0000-0000";
+            this.cpoTelefone.Name = "cpoTelefone";
+            this.cpoTelefone.Size = new System.Drawing.Size(116, 20);
+            this.cpoTelefone.TabIndex = 10;
+            this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress_1);
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 509);
+            this.Controls.Add(this.cpoTelefone);
             this.Controls.Add(this.cpoCpf);
             this.Controls.Add(this.cpoCnpj);
             this.Controls.Add(this.btnRetornar);
@@ -580,7 +581,6 @@
             this.Controls.Add(this.cpoCidade);
             this.Controls.Add(this.cpoEndereco);
             this.Controls.Add(this.cpoEmail);
-            this.Controls.Add(this.cpoTelefone);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
@@ -635,7 +635,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox cpoTelefone;
         private System.Windows.Forms.TextBox cpoEmail;
         private System.Windows.Forms.TextBox cpoEndereco;
         private System.Windows.Forms.TextBox cpoCidade;
@@ -667,5 +666,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.MaskedTextBox cpoCnpj;
         private System.Windows.Forms.MaskedTextBox cpoCpf;
+        private System.Windows.Forms.MaskedTextBox cpoTelefone;
     }
 }

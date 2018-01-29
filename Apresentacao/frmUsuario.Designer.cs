@@ -35,15 +35,12 @@
             this.cpoCidade = new System.Windows.Forms.TextBox();
             this.cpoEndereco = new System.Windows.Forms.TextBox();
             this.cpoEmail = new System.Windows.Forms.TextBox();
-            this.cpoTelefone = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cpoRg = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cpoCpf = new System.Windows.Forms.TextBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -71,6 +68,9 @@
             this.cpoSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnRetornar = new System.Windows.Forms.Button();
+            this.cpoCpf = new System.Windows.Forms.MaskedTextBox();
+            this.cpoTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.cpoRg = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblUsuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetUsuario)).BeginInit();
@@ -137,16 +137,6 @@
             this.cpoEmail.Size = new System.Drawing.Size(293, 20);
             this.cpoEmail.TabIndex = 7;
             // 
-            // cpoTelefone
-            // 
-            this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoTelefone.Location = new System.Drawing.Point(88, 432);
-            this.cpoTelefone.MaxLength = 14;
-            this.cpoTelefone.Name = "cpoTelefone";
-            this.cpoTelefone.Size = new System.Drawing.Size(193, 20);
-            this.cpoTelefone.TabIndex = 12;
-            this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -155,16 +145,6 @@
             this.label9.Size = new System.Drawing.Size(23, 13);
             this.label9.TabIndex = 131;
             this.label9.Text = "RG";
-            // 
-            // cpoRg
-            // 
-            this.cpoRg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoRg.Location = new System.Drawing.Point(467, 391);
-            this.cpoRg.MaxLength = 9;
-            this.cpoRg.Name = "cpoRg";
-            this.cpoRg.Size = new System.Drawing.Size(122, 20);
-            this.cpoRg.TabIndex = 10;
-            this.cpoRg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoRg_KeyPress);
             // 
             // label5
             // 
@@ -196,7 +176,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(33, 434);
+            this.label6.Location = new System.Drawing.Point(29, 430);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 127;
@@ -210,16 +190,6 @@
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 126;
             this.label4.Text = "Cidade";
-            // 
-            // cpoCpf
-            // 
-            this.cpoCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCpf.Location = new System.Drawing.Point(636, 391);
-            this.cpoCpf.MaxLength = 11;
-            this.cpoCpf.Name = "cpoCpf";
-            this.cpoCpf.Size = new System.Drawing.Size(124, 20);
-            this.cpoCpf.TabIndex = 11;
-            this.cpoCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCpf_KeyPress);
             // 
             // btnExcluir
             // 
@@ -479,11 +449,43 @@
             this.btnRetornar.UseVisualStyleBackColor = true;
             this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
             // 
+            // cpoCpf
+            // 
+            this.cpoCpf.Enabled = false;
+            this.cpoCpf.Location = new System.Drawing.Point(650, 391);
+            this.cpoCpf.Mask = "000.000.000-00";
+            this.cpoCpf.Name = "cpoCpf";
+            this.cpoCpf.Size = new System.Drawing.Size(110, 20);
+            this.cpoCpf.TabIndex = 11;
+            this.cpoCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCpf_KeyPress_1);
+            // 
+            // cpoTelefone
+            // 
+            this.cpoTelefone.Location = new System.Drawing.Point(88, 427);
+            this.cpoTelefone.Mask = "(99) 0000-0000";
+            this.cpoTelefone.Name = "cpoTelefone";
+            this.cpoTelefone.Size = new System.Drawing.Size(116, 20);
+            this.cpoTelefone.TabIndex = 100000;
+            this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress_1);
+            // 
+            // cpoRg
+            // 
+            this.cpoRg.Enabled = false;
+            this.cpoRg.Location = new System.Drawing.Point(467, 391);
+            this.cpoRg.Mask = "00.000.000-0";
+            this.cpoRg.Name = "cpoRg";
+            this.cpoRg.Size = new System.Drawing.Size(110, 20);
+            this.cpoRg.TabIndex = 100001;
+            this.cpoRg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoRg_KeyPress_1);
+            // 
             // frmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 543);
+            this.Controls.Add(this.cpoRg);
+            this.Controls.Add(this.cpoTelefone);
+            this.Controls.Add(this.cpoCpf);
             this.Controls.Add(this.btnRetornar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cpoSenha);
@@ -493,15 +495,12 @@
             this.Controls.Add(this.cpoCidade);
             this.Controls.Add(this.cpoEndereco);
             this.Controls.Add(this.cpoEmail);
-            this.Controls.Add(this.cpoTelefone);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.cpoRg);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cpoCpf);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAlterar);
@@ -533,15 +532,12 @@
         private System.Windows.Forms.TextBox cpoCidade;
         private System.Windows.Forms.TextBox cpoEndereco;
         private System.Windows.Forms.TextBox cpoEmail;
-        private System.Windows.Forms.TextBox cpoTelefone;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox cpoRg;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox cpoCpf;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAlterar;
@@ -569,5 +565,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnRetornar;
+        private System.Windows.Forms.MaskedTextBox cpoCpf;
+        private System.Windows.Forms.MaskedTextBox cpoTelefone;
+        private System.Windows.Forms.MaskedTextBox cpoRg;
     }
 }

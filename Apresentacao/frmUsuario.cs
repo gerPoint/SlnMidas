@@ -457,6 +457,30 @@ namespace Apresentacao
                 this.AtualizarGrid();
         }
 
+        private void cpoCpf_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoTelefone_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoRg_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
 
         //------------------------------------------Somente a primeira letra em Maiusculo no texbox----------------
 

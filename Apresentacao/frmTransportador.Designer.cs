@@ -66,8 +66,8 @@
             this.midasDataSet1 = new Apresentacao.midasDataSetFruta();
             this.midasDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblTransportadorTableAdapter = new Apresentacao.midasDataSet2TableAdapters.tblTransportadorTableAdapter();
-            this.cpoPlaca = new System.Windows.Forms.TextBox();
             this.btnRetornar = new System.Windows.Forms.Button();
+            this.cpoPlaca = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwTransportador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblTransportadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSet2)).BeginInit();
@@ -413,15 +413,6 @@
             // 
             this.tblTransportadorTableAdapter.ClearBeforeFill = true;
             // 
-            // cpoPlaca
-            // 
-            this.cpoPlaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoPlaca.Location = new System.Drawing.Point(458, 384);
-            this.cpoPlaca.MaxLength = 7;
-            this.cpoPlaca.Name = "cpoPlaca";
-            this.cpoPlaca.Size = new System.Drawing.Size(109, 20);
-            this.cpoPlaca.TabIndex = 10;
-            // 
             // btnRetornar
             // 
             this.btnRetornar.Image = global::Apresentacao.Properties.Resources.restart_back_left_arrow_6022;
@@ -435,13 +426,22 @@
             this.btnRetornar.UseVisualStyleBackColor = true;
             this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
             // 
+            // cpoPlaca
+            // 
+            this.cpoPlaca.Location = new System.Drawing.Point(458, 382);
+            this.cpoPlaca.Mask = "000-0000";
+            this.cpoPlaca.Name = "cpoPlaca";
+            this.cpoPlaca.Size = new System.Drawing.Size(85, 20);
+            this.cpoPlaca.TabIndex = 100001;
+            this.cpoPlaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoPlaca_KeyPress);
+            // 
             // frmTransportador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(863, 497);
-            this.Controls.Add(this.btnRetornar);
             this.Controls.Add(this.cpoPlaca);
+            this.Controls.Add(this.btnRetornar);
             this.Controls.Add(this.cpoIDTransportador);
             this.Controls.Add(this.lblIDCliente);
             this.Controls.Add(this.btnSalvar);
@@ -519,7 +519,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox cpoPlaca;
         private System.Windows.Forms.Button btnRetornar;
+        private System.Windows.Forms.MaskedTextBox cpoPlaca;
     }
 }

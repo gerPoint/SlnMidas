@@ -34,14 +34,12 @@
             this.cpoCidade = new System.Windows.Forms.TextBox();
             this.cpoEndereco = new System.Windows.Forms.TextBox();
             this.cpoEmail = new System.Windows.Forms.TextBox();
-            this.cpoTelefone = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cpoCpf = new System.Windows.Forms.TextBox();
             this.dgwFuncionario = new System.Windows.Forms.DataGridView();
             this.iDFuncionarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +59,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tblFuncionarioTableAdapter = new Apresentacao.MidasDataSetFuncionarioTableAdapters.tblFuncionarioTableAdapter();
-            this.cpoRg = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -69,6 +66,9 @@
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.cpoIDFuncionario = new System.Windows.Forms.TextBox();
             this.btnRetornar = new System.Windows.Forms.Button();
+            this.cpoTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.cpoCpf = new System.Windows.Forms.MaskedTextBox();
+            this.cpoRg = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFuncionario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFuncionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetFuncionario)).BeginInit();
@@ -120,16 +120,6 @@
             this.cpoEmail.Name = "cpoEmail";
             this.cpoEmail.Size = new System.Drawing.Size(293, 20);
             this.cpoEmail.TabIndex = 8;
-            // 
-            // cpoTelefone
-            // 
-            this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoTelefone.Location = new System.Drawing.Point(96, 380);
-            this.cpoTelefone.MaxLength = 14;
-            this.cpoTelefone.Name = "cpoTelefone";
-            this.cpoTelefone.Size = new System.Drawing.Size(129, 20);
-            this.cpoTelefone.TabIndex = 9;
-            this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress);
             // 
             // label9
             // 
@@ -184,16 +174,6 @@
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 101;
             this.label4.Text = "Cidade";
-            // 
-            // cpoCpf
-            // 
-            this.cpoCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCpf.Location = new System.Drawing.Point(644, 382);
-            this.cpoCpf.MaxLength = 11;
-            this.cpoCpf.Name = "cpoCpf";
-            this.cpoCpf.Size = new System.Drawing.Size(124, 20);
-            this.cpoCpf.TabIndex = 11;
-            this.cpoCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCpf_KeyPress);
             // 
             // dgwFuncionario
             // 
@@ -362,16 +342,6 @@
             // 
             this.tblFuncionarioTableAdapter.ClearBeforeFill = true;
             // 
-            // cpoRg
-            // 
-            this.cpoRg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoRg.Location = new System.Drawing.Point(475, 382);
-            this.cpoRg.MaxLength = 9;
-            this.cpoRg.Name = "cpoRg";
-            this.cpoRg.Size = new System.Drawing.Size(122, 20);
-            this.cpoRg.TabIndex = 10;
-            this.cpoRg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoRg_KeyPress);
-            // 
             // btnSalvar
             // 
             this.btnSalvar.Image = global::Apresentacao.Properties.Resources.saveall_1204;
@@ -460,11 +430,43 @@
             this.btnRetornar.UseVisualStyleBackColor = true;
             this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
             // 
+            // cpoTelefone
+            // 
+            this.cpoTelefone.Location = new System.Drawing.Point(97, 382);
+            this.cpoTelefone.Mask = "(99) 0000-0000";
+            this.cpoTelefone.Name = "cpoTelefone";
+            this.cpoTelefone.Size = new System.Drawing.Size(116, 20);
+            this.cpoTelefone.TabIndex = 9;
+            this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress_1);
+            // 
+            // cpoCpf
+            // 
+            this.cpoCpf.Enabled = false;
+            this.cpoCpf.Location = new System.Drawing.Point(665, 382);
+            this.cpoCpf.Mask = "000.000.000-00";
+            this.cpoCpf.Name = "cpoCpf";
+            this.cpoCpf.Size = new System.Drawing.Size(103, 20);
+            this.cpoCpf.TabIndex = 11;
+            this.cpoCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCpf_KeyPress_1);
+            // 
+            // cpoRg
+            // 
+            this.cpoRg.Enabled = false;
+            this.cpoRg.Location = new System.Drawing.Point(475, 382);
+            this.cpoRg.Mask = "00.000.000-0";
+            this.cpoRg.Name = "cpoRg";
+            this.cpoRg.Size = new System.Drawing.Size(103, 20);
+            this.cpoRg.TabIndex = 10;
+            this.cpoRg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoRg_KeyPress_1);
+            // 
             // frmFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 504);
+            this.Controls.Add(this.cpoRg);
+            this.Controls.Add(this.cpoCpf);
+            this.Controls.Add(this.cpoTelefone);
             this.Controls.Add(this.btnRetornar);
             this.Controls.Add(this.cpoIDFuncionario);
             this.Controls.Add(this.lblIDCliente);
@@ -473,15 +475,12 @@
             this.Controls.Add(this.cpoCidade);
             this.Controls.Add(this.cpoEndereco);
             this.Controls.Add(this.cpoEmail);
-            this.Controls.Add(this.cpoTelefone);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.cpoRg);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cpoCpf);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAlterar);
@@ -512,14 +511,12 @@
         private System.Windows.Forms.TextBox cpoCidade;
         private System.Windows.Forms.TextBox cpoEndereco;
         private System.Windows.Forms.TextBox cpoEmail;
-        private System.Windows.Forms.TextBox cpoTelefone;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox cpoCpf;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAlterar;
@@ -532,7 +529,6 @@
         private midasDataSetFuncionario1 midasDataSetFuncionario;
         private System.Windows.Forms.BindingSource tblFuncionarioBindingSource;
         private MidasDataSetFuncionarioTableAdapters.tblFuncionarioTableAdapter tblFuncionarioTableAdapter;
-        private System.Windows.Forms.TextBox cpoRg;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDFuncionarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
@@ -546,5 +542,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.TextBox cpoIDFuncionario;
         private System.Windows.Forms.Button btnRetornar;
+        private System.Windows.Forms.MaskedTextBox cpoTelefone;
+        private System.Windows.Forms.MaskedTextBox cpoCpf;
+        private System.Windows.Forms.MaskedTextBox cpoRg;
     }
 }

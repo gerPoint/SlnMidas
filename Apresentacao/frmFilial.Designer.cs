@@ -34,9 +34,7 @@
             this.cpoCidade = new System.Windows.Forms.TextBox();
             this.cpoEndereco = new System.Windows.Forms.TextBox();
             this.cpoEmail = new System.Windows.Forms.TextBox();
-            this.cpoTelefone = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cpoCnpj = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -73,6 +71,8 @@
             this.tblFilialTableAdapter1 = new Apresentacao.midasDataSetFilial2TableAdapters.tblFilialTableAdapter();
             this.cpoIDFilial = new System.Windows.Forms.TextBox();
             this.btnRetornar = new System.Windows.Forms.Button();
+            this.cpoTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.cpoCnpj = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFilial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFilialBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetFilial2)).BeginInit();
@@ -129,16 +129,6 @@
             this.cpoEmail.Size = new System.Drawing.Size(245, 20);
             this.cpoEmail.TabIndex = 11;
             // 
-            // cpoTelefone
-            // 
-            this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoTelefone.Location = new System.Drawing.Point(86, 391);
-            this.cpoTelefone.MaxLength = 14;
-            this.cpoTelefone.Name = "cpoTelefone";
-            this.cpoTelefone.Size = new System.Drawing.Size(247, 20);
-            this.cpoTelefone.TabIndex = 10;
-            this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -147,17 +137,6 @@
             this.label9.Size = new System.Drawing.Size(34, 13);
             this.label9.TabIndex = 123;
             this.label9.Text = "CNPJ";
-            // 
-            // cpoCnpj
-            // 
-            this.cpoCnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCnpj.Location = new System.Drawing.Point(709, 322);
-            this.cpoCnpj.MaxLength = 14;
-            this.cpoCnpj.Name = "cpoCnpj";
-            this.cpoCnpj.Size = new System.Drawing.Size(103, 20);
-            this.cpoCnpj.TabIndex = 6;
-            this.cpoCnpj.TextChanged += new System.EventHandler(this.cpoCnpj_TextChanged);
-            this.cpoCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCnpj_KeyPress);
             // 
             // label8
             // 
@@ -385,7 +364,7 @@
             // cpoChaveSistema
             // 
             this.cpoChaveSistema.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoChaveSistema.Location = new System.Drawing.Point(393, 431);
+            this.cpoChaveSistema.Location = new System.Drawing.Point(362, 431);
             this.cpoChaveSistema.Name = "cpoChaveSistema";
             this.cpoChaveSistema.Size = new System.Drawing.Size(303, 20);
             this.cpoChaveSistema.TabIndex = 130;
@@ -491,11 +470,31 @@
             this.btnRetornar.UseVisualStyleBackColor = true;
             this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
             // 
+            // cpoTelefone
+            // 
+            this.cpoTelefone.Location = new System.Drawing.Point(86, 390);
+            this.cpoTelefone.Mask = "(99) 0000-0000";
+            this.cpoTelefone.Name = "cpoTelefone";
+            this.cpoTelefone.Size = new System.Drawing.Size(116, 20);
+            this.cpoTelefone.TabIndex = 100000;
+            this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress_1);
+            // 
+            // cpoCnpj
+            // 
+            this.cpoCnpj.Location = new System.Drawing.Point(709, 322);
+            this.cpoCnpj.Mask = "00.000.000.0000-00";
+            this.cpoCnpj.Name = "cpoCnpj";
+            this.cpoCnpj.Size = new System.Drawing.Size(103, 20);
+            this.cpoCnpj.TabIndex = 100001;
+            this.cpoCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCnpj_KeyPress_1);
+            // 
             // frmFilial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 529);
+            this.Controls.Add(this.cpoCnpj);
+            this.Controls.Add(this.cpoTelefone);
             this.Controls.Add(this.btnRetornar);
             this.Controls.Add(this.cpoIDFilial);
             this.Controls.Add(this.cpoChaveSistema);
@@ -504,9 +503,7 @@
             this.Controls.Add(this.cpoCidade);
             this.Controls.Add(this.cpoEndereco);
             this.Controls.Add(this.cpoEmail);
-            this.Controls.Add(this.cpoTelefone);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.cpoCnpj);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -545,9 +542,7 @@
         private System.Windows.Forms.TextBox cpoCidade;
         private System.Windows.Forms.TextBox cpoEndereco;
         private System.Windows.Forms.TextBox cpoEmail;
-        private System.Windows.Forms.TextBox cpoTelefone;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox cpoCnpj;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -584,5 +579,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnRetornar;
+        private System.Windows.Forms.MaskedTextBox cpoTelefone;
+        private System.Windows.Forms.MaskedTextBox cpoCnpj;
     }
 }

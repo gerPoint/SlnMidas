@@ -34,16 +34,13 @@
             this.cpoCidade = new System.Windows.Forms.TextBox();
             this.cpoEndereco = new System.Windows.Forms.TextBox();
             this.cpoEmail = new System.Windows.Forms.TextBox();
-            this.cpoTelefone = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cpoCnpj = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cpoCpf = new System.Windows.Forms.TextBox();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -71,6 +68,9 @@
             this.cpoIDFornecedor = new System.Windows.Forms.TextBox();
             this.btnRetornar = new System.Windows.Forms.Button();
             this.checkBoxCpf = new System.Windows.Forms.CheckBox();
+            this.cpoCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.cpoTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.cpoCpf = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFornecedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFornecedorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetFornecedor)).BeginInit();
@@ -125,16 +125,6 @@
             this.cpoEmail.Size = new System.Drawing.Size(245, 20);
             this.cpoEmail.TabIndex = 12;
             // 
-            // cpoTelefone
-            // 
-            this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoTelefone.Location = new System.Drawing.Point(85, 389);
-            this.cpoTelefone.MaxLength = 14;
-            this.cpoTelefone.Name = "cpoTelefone";
-            this.cpoTelefone.Size = new System.Drawing.Size(247, 20);
-            this.cpoTelefone.TabIndex = 11;
-            this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -143,16 +133,6 @@
             this.label9.Size = new System.Drawing.Size(34, 13);
             this.label9.TabIndex = 97;
             this.label9.Text = "CNPJ";
-            // 
-            // cpoCnpj
-            // 
-            this.cpoCnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCnpj.Location = new System.Drawing.Point(708, 320);
-            this.cpoCnpj.MaxLength = 14;
-            this.cpoCnpj.Name = "cpoCnpj";
-            this.cpoCnpj.Size = new System.Drawing.Size(103, 20);
-            this.cpoCnpj.TabIndex = 6;
-            this.cpoCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCnpj_KeyPress);
             // 
             // label5
             // 
@@ -207,16 +187,6 @@
             this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 89;
             this.label2.Text = "Razão Social";
-            // 
-            // cpoCpf
-            // 
-            this.cpoCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCpf.Enabled = false;
-            this.cpoCpf.Location = new System.Drawing.Point(708, 389);
-            this.cpoCpf.MaxLength = 11;
-            this.cpoCpf.Name = "cpoCpf";
-            this.cpoCpf.Size = new System.Drawing.Size(103, 20);
-            this.cpoCpf.TabIndex = 13;
             // 
             // btnExcluir
             // 
@@ -484,11 +454,42 @@
             this.checkBoxCpf.UseVisualStyleBackColor = true;
             this.checkBoxCpf.CheckedChanged += new System.EventHandler(this.checkBoxCpf_CheckedChanged);
             // 
+            // cpoCnpj
+            // 
+            this.cpoCnpj.Location = new System.Drawing.Point(708, 320);
+            this.cpoCnpj.Mask = "00.000.000.0000-00";
+            this.cpoCnpj.Name = "cpoCnpj";
+            this.cpoCnpj.Size = new System.Drawing.Size(103, 20);
+            this.cpoCnpj.TabIndex = 100000;
+            this.cpoCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCnpj_KeyPress_1);
+            // 
+            // cpoTelefone
+            // 
+            this.cpoTelefone.Location = new System.Drawing.Point(85, 388);
+            this.cpoTelefone.Mask = "(99) 0000-0000";
+            this.cpoTelefone.Name = "cpoTelefone";
+            this.cpoTelefone.Size = new System.Drawing.Size(110, 20);
+            this.cpoTelefone.TabIndex = 100001;
+            this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress_1);
+            // 
+            // cpoCpf
+            // 
+            this.cpoCpf.Enabled = false;
+            this.cpoCpf.Location = new System.Drawing.Point(708, 389);
+            this.cpoCpf.Mask = "000.000.000-00";
+            this.cpoCpf.Name = "cpoCpf";
+            this.cpoCpf.Size = new System.Drawing.Size(103, 20);
+            this.cpoCpf.TabIndex = 100002;
+            this.cpoCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCpf_KeyPress);
+            // 
             // frmFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(845, 524);
+            this.Controls.Add(this.cpoCpf);
+            this.Controls.Add(this.cpoTelefone);
+            this.Controls.Add(this.cpoCnpj);
             this.Controls.Add(this.checkBoxCpf);
             this.Controls.Add(this.btnRetornar);
             this.Controls.Add(this.cpoIDFornecedor);
@@ -497,16 +498,13 @@
             this.Controls.Add(this.cpoCidade);
             this.Controls.Add(this.cpoEndereco);
             this.Controls.Add(this.cpoEmail);
-            this.Controls.Add(this.cpoTelefone);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.cpoCnpj);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cpoCpf);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
@@ -536,16 +534,13 @@
         private System.Windows.Forms.TextBox cpoCidade;
         private System.Windows.Forms.TextBox cpoEndereco;
         private System.Windows.Forms.TextBox cpoEmail;
-        private System.Windows.Forms.TextBox cpoTelefone;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox cpoCnpj;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox cpoCpf;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
@@ -573,5 +568,8 @@
         private System.Windows.Forms.TextBox cpoIDFornecedor;
         private System.Windows.Forms.Button btnRetornar;
         private System.Windows.Forms.CheckBox checkBoxCpf;
+        private System.Windows.Forms.MaskedTextBox cpoCnpj;
+        private System.Windows.Forms.MaskedTextBox cpoTelefone;
+        private System.Windows.Forms.MaskedTextBox cpoCpf;
     }
 }
