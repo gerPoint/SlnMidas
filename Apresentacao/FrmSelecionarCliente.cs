@@ -106,10 +106,18 @@ namespace Apresentacao
     private void dgwSelCliente_DoubleClick(object sender, EventArgs e)
         {
 
+            try
+            {
+               // Cliente cliente = (dgwSelCliente.SelectedRows[0].DataBoundItem as Cliente);
+                cpoIDCliente.Text = dgwSelCliente.SelectedRows[0].Cells[0].Value.ToString();
+                cpoNomeCliente.Text = dgwSelCliente.SelectedRows[0].Cells[1].Value.ToString();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
 
-             Cliente cliente = (dgwSelCliente.SelectedRows[0].DataBoundItem as Cliente);
-             cpoIDCliente.Text = dgwSelCliente.SelectedRows[0].Cells[0].Value.ToString();
-             cpoNomeCliente.Text = dgwSelCliente.SelectedRows[0].Cells[1].Value.ToString();
+            }
+
 
 
 
@@ -119,6 +127,7 @@ namespace Apresentacao
                 return;
             }
 
+            Cliente cliente = (dgwSelCliente.SelectedRows[0].DataBoundItem as Cliente);
             cpoIDCliente.Text = cliente.Nome;
             cpoIDCliente.Text = cliente.IDCliente.ToString();
             this.Close();

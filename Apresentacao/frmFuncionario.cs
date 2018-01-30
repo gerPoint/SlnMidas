@@ -271,19 +271,29 @@ namespace Apresentacao
 
         private void dgwFuncionario_DoubleClick(object sender, EventArgs e)
         {
-            cpoIDFuncionario.Text = dgwFuncionario.SelectedRows[0].Cells[0].Value.ToString();
-            cpoNome.Text = dgwFuncionario.SelectedRows[0].Cells[1].Value.ToString();
-            cpoEndereco.Text = dgwFuncionario.SelectedRows[0].Cells[2].Value.ToString();
-            cpoCidade.Text = dgwFuncionario.SelectedRows[0].Cells[3].Value.ToString();
-            cpoUf.Text = dgwFuncionario.SelectedRows[0].Cells[4].Value.ToString();
-            cpoEmail.Text = dgwFuncionario.SelectedRows[0].Cells[6].Value.ToString();
-            cpoTelefone.Text = dgwFuncionario.SelectedRows[0].Cells[5].Value.ToString();
-            cpoRg.Text = dgwFuncionario.SelectedRows[0].Cells[8].Value.ToString();
-            cpoCpf.Text = dgwFuncionario.SelectedRows[0].Cells[7].Value.ToString();
-            //cpoStatus.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
-            btnSalvar.Enabled = false;
-            btnAlterar.Enabled = true;
-            btnExcluir.Enabled = true;
+
+            try
+            {
+                cpoIDFuncionario.Text = dgwFuncionario.SelectedRows[0].Cells[0].Value.ToString();
+                cpoNome.Text = dgwFuncionario.SelectedRows[0].Cells[1].Value.ToString();
+                cpoEndereco.Text = dgwFuncionario.SelectedRows[0].Cells[2].Value.ToString();
+                cpoCidade.Text = dgwFuncionario.SelectedRows[0].Cells[3].Value.ToString();
+                cpoUf.Text = dgwFuncionario.SelectedRows[0].Cells[4].Value.ToString();
+                cpoEmail.Text = dgwFuncionario.SelectedRows[0].Cells[6].Value.ToString();
+                cpoTelefone.Text = dgwFuncionario.SelectedRows[0].Cells[5].Value.ToString();
+                cpoRg.Text = dgwFuncionario.SelectedRows[0].Cells[8].Value.ToString();
+                cpoCpf.Text = dgwFuncionario.SelectedRows[0].Cells[7].Value.ToString();
+                //cpoStatus.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
+                btnSalvar.Enabled = false;
+                btnAlterar.Enabled = true;
+                btnExcluir.Enabled = true;
+            }
+            catch (Exception)
+            {
+
+              MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
+            }
+
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

@@ -252,23 +252,6 @@ namespace Apresentacao
         }
 
 
-        private void dgwFornecedor_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            cpoIDFornecedor.Text = dgwFornecedor.SelectedRows[0].Cells[0].Value.ToString();
-            cpoNome.Text = dgwFornecedor.SelectedRows[0].Cells[1].Value.ToString();
-            cpoRazaoSocial.Text = dgwFornecedor.SelectedRows[0].Cells[2].Value.ToString();
-            cpoCidade.Text = dgwFornecedor.SelectedRows[0].Cells[3].Value.ToString();
-            cpoUf.Text = dgwFornecedor.SelectedRows[0].Cells[4].Value.ToString();
-            cpoEndereco.Text = dgwFornecedor.SelectedRows[0].Cells[2].Value.ToString();
-            cpoTelefone.Text = dgwFornecedor.SelectedRows[0].Cells[5].Value.ToString();
-            cpoEmail.Text = dgwFornecedor.SelectedRows[0].Cells[6].Value.ToString();
-            cpoCnpj.Text = dgwFornecedor.SelectedRows[0].Cells[7].Value.ToString();
-            cpoCpf.Text = dgwFornecedor.SelectedRows[0].Cells[8].Value.ToString();
-
-            btnSalvar.Enabled = false;
-            btnAlterar.Enabled = true;
-            btnExcluir.Enabled = true;
-        }
 
         private void btnRetornar_Click(object sender, EventArgs e)
         {
@@ -474,6 +457,36 @@ namespace Apresentacao
             {
                 e.Handled = true;
             }
+
+        }
+
+        private void dgwFornecedor_DoubleClick(object sender, EventArgs e)
+        {
+
+            try
+            {
+                cpoIDFornecedor.Text = dgwFornecedor.SelectedRows[0].Cells[0].Value.ToString();
+                cpoNome.Text = dgwFornecedor.SelectedRows[0].Cells[1].Value.ToString();
+                cpoRazaoSocial.Text = dgwFornecedor.SelectedRows[0].Cells[2].Value.ToString();
+                cpoCidade.Text = dgwFornecedor.SelectedRows[0].Cells[3].Value.ToString();
+                cpoUf.Text = dgwFornecedor.SelectedRows[0].Cells[4].Value.ToString();
+                cpoEndereco.Text = dgwFornecedor.SelectedRows[0].Cells[2].Value.ToString();
+                cpoTelefone.Text = dgwFornecedor.SelectedRows[0].Cells[5].Value.ToString();
+                cpoEmail.Text = dgwFornecedor.SelectedRows[0].Cells[6].Value.ToString();
+                cpoCnpj.Text = dgwFornecedor.SelectedRows[0].Cells[7].Value.ToString();
+                cpoCpf.Text = dgwFornecedor.SelectedRows[0].Cells[8].Value.ToString();
+
+                btnSalvar.Enabled = false;
+                btnAlterar.Enabled = true;
+                btnExcluir.Enabled = true;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
+            }
+
+
 
         }
 

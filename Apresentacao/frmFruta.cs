@@ -160,14 +160,25 @@ namespace Apresentacao
 
         public void dgwFruta_DoubleClick(object sender, EventArgs e)
         {
-            Fruta fruta  = (dgwFruta.SelectedRows[0].DataBoundItem as Fruta);
-            cpoIDFruta.Text = dgwFruta.SelectedRows[0].Cells[0].Value.ToString();
-            cpoNome.Text = dgwFruta.SelectedRows[0].Cells[1].Value.ToString();
-            cpoUnidMedida.Text = dgwFruta.SelectedRows[0].Cells[2].Value.ToString();
-            //cpoStatus.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
-            btnSalvar.Enabled = false;
-            btnAlterar.Enabled = true;
-            btnExcluir.Enabled = true;
+            try
+            {
+                Fruta fruta = (dgwFruta.SelectedRows[0].DataBoundItem as Fruta);
+                cpoIDFruta.Text = dgwFruta.SelectedRows[0].Cells[0].Value.ToString();
+                cpoNome.Text = dgwFruta.SelectedRows[0].Cells[1].Value.ToString();
+                cpoUnidMedida.Text = dgwFruta.SelectedRows[0].Cells[2].Value.ToString();
+                //cpoStatus.Text = dgwCliente.SelectedRows[0].Cells[9].Value.ToString();
+                btnSalvar.Enabled = false;
+                btnAlterar.Enabled = true;
+                btnExcluir.Enabled = true;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
+            }
+
+
+
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)

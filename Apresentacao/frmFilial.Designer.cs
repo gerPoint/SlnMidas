@@ -212,7 +212,7 @@
             this.dgwFilial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFilial.Size = new System.Drawing.Size(782, 211);
             this.dgwFilial.TabIndex = 99999;
-            this.dgwFilial.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgwFilial_MouseDoubleClick);
+            this.dgwFilial.DoubleClick += new System.EventHandler(this.dgwFilial_DoubleClick);
             // 
             // iDFilialDataGridViewTextBoxColumn
             // 

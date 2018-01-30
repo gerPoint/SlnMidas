@@ -247,24 +247,6 @@ namespace Apresentacao
 
         }
 
-  
-        private void dgwFilial_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            cpoIDFilial.Text = dgwFilial.SelectedRows[0].Cells[0].Value.ToString();
-            cpoFilial.Text = dgwFilial.SelectedRows[0].Cells[1].Value.ToString();
-            cpoRazaoSocial.Text = dgwFilial.SelectedRows[0].Cells[2].Value.ToString();
-            cpoChaveSistema.Text = dgwFilial.SelectedRows[0].Cells[9].Value.ToString();
-            cpoCidade.Text = dgwFilial.SelectedRows[0].Cells[5].Value.ToString();
-            cpoUf.Text = dgwFilial.SelectedRows[0].Cells[6].Value.ToString();
-            cpoEndereco.Text = dgwFilial.SelectedRows[0].Cells[4].Value.ToString();
-            cpoTelefone.Text = dgwFilial.SelectedRows[0].Cells[7].Value.ToString();
-            cpoEmail.Text = dgwFilial.SelectedRows[0].Cells[8].Value.ToString();
-            cpoCnpj.Text = dgwFilial.SelectedRows[0].Cells[3].Value.ToString();
-
-            btnSalvar.Enabled = false;
-            btnAlterar.Enabled = true;
-            btnExcluir.Enabled = true;
-        }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
@@ -457,6 +439,36 @@ namespace Apresentacao
             {
                 e.Handled = true;
             }
+        }
+
+        private void dgwFilial_DoubleClick(object sender, EventArgs e)
+        {
+
+            try
+            {
+                cpoIDFilial.Text = dgwFilial.SelectedRows[0].Cells[0].Value.ToString();
+                cpoFilial.Text = dgwFilial.SelectedRows[0].Cells[1].Value.ToString();
+                cpoRazaoSocial.Text = dgwFilial.SelectedRows[0].Cells[2].Value.ToString();
+                cpoChaveSistema.Text = dgwFilial.SelectedRows[0].Cells[9].Value.ToString();
+                cpoCidade.Text = dgwFilial.SelectedRows[0].Cells[5].Value.ToString();
+                cpoUf.Text = dgwFilial.SelectedRows[0].Cells[6].Value.ToString();
+                cpoEndereco.Text = dgwFilial.SelectedRows[0].Cells[4].Value.ToString();
+                cpoTelefone.Text = dgwFilial.SelectedRows[0].Cells[7].Value.ToString();
+                cpoEmail.Text = dgwFilial.SelectedRows[0].Cells[8].Value.ToString();
+                cpoCnpj.Text = dgwFilial.SelectedRows[0].Cells[3].Value.ToString();
+
+                btnSalvar.Enabled = false;
+                btnAlterar.Enabled = true;
+                btnExcluir.Enabled = true;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
+
+            }
+
+
+
         }
 
         //------------------------------------------------Somente a primeira letra maiuscula de cada palavra--------------------------------------

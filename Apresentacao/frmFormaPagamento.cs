@@ -314,13 +314,23 @@ namespace Apresentacao
 
         private void dgwFormaPagamento_DoubleClick(object sender, EventArgs e)
         {
-            cpoIDFormaPagamento.Text = dgwFormaPagamento.SelectedRows[0].Cells[0].Value.ToString();
-            cpoDescricao.Text = dgwFormaPagamento.SelectedRows[0].Cells[1].Value.ToString();
-            cpoParcelamento.Text = dgwFormaPagamento.SelectedRows[0].Cells[2].Value.ToString();
+            try
+            {
+                cpoIDFormaPagamento.Text = dgwFormaPagamento.SelectedRows[0].Cells[0].Value.ToString();
+                cpoDescricao.Text = dgwFormaPagamento.SelectedRows[0].Cells[1].Value.ToString();
+                cpoParcelamento.Text = dgwFormaPagamento.SelectedRows[0].Cells[2].Value.ToString();
 
-            btnSalvar.Enabled = false;
-            btnAlterar.Enabled = true;
-            btnExcluir.Enabled = true;
+                btnSalvar.Enabled = false;
+                btnAlterar.Enabled = true;
+                btnExcluir.Enabled = true;
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
+            }
+
         }
 
         private void btnRetornar_Click(object sender, EventArgs e)

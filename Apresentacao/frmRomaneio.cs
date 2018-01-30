@@ -779,6 +779,19 @@ namespace Apresentacao
 
                 this.AtualizarGrid();
         }
+
+        private void dgwRomaneio_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
+            }
+        }
     }
 
     }

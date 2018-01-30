@@ -37,7 +37,6 @@
             this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.romaneioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.transportadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formaDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formaDePagamentoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.rToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +54,6 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.romaneioToolStripMenuItem,
-            this.usuarioToolStripMenuItem,
             this.formaDePagamentoToolStripMenuItem,
             this.rToolStripMenuItem,
             this.filialToolStripMenuItem,
@@ -131,12 +129,6 @@
             this.transportadorToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.transportadorToolStripMenuItem.Text = "Transportador";
             this.transportadorToolStripMenuItem.Click += new System.EventHandler(this.transportadorToolStripMenuItem_Click);
-            // 
-            // usuarioToolStripMenuItem
-            // 
-            this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.usuarioToolStripMenuItem.Text = "Consultas";
             // 
             // formaDePagamentoToolStripMenuItem
             // 
@@ -243,7 +235,6 @@
         private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem romaneioToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem transportadorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem filialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;

@@ -441,7 +441,6 @@
             // 
             // cpoCpf
             // 
-            this.cpoCpf.Enabled = false;
             this.cpoCpf.Location = new System.Drawing.Point(665, 382);
             this.cpoCpf.Mask = "000.000.000-00";
             this.cpoCpf.Name = "cpoCpf";
@@ -451,7 +450,6 @@
             // 
             // cpoRg
             // 
-            this.cpoRg.Enabled = false;
             this.cpoRg.Location = new System.Drawing.Point(475, 382);
             this.cpoRg.Mask = "00.000.000-0";
             this.cpoRg.Name = "cpoRg";

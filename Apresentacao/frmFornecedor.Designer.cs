@@ -270,7 +270,7 @@
             this.dgwFornecedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwFornecedor.Size = new System.Drawing.Size(782, 211);
             this.dgwFornecedor.TabIndex = 99999;
-            this.dgwFornecedor.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgwFornecedor_MouseDoubleClick);
+            this.dgwFornecedor.DoubleClick += new System.EventHandler(this.dgwFornecedor_DoubleClick);
             // 
             // iDFornecedorDataGridViewTextBoxColumn
             // 

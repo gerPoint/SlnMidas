@@ -187,7 +187,8 @@ namespace Apresentacao
 
         private void dgwCliente_DoubleClick(object sender, EventArgs e)
         {
-
+            try
+            {
                 cpoIDCliente.Text = dgwCliente.SelectedRows[0].Cells[0].Value.ToString();
                 cpoNome.Text = dgwCliente.SelectedRows[0].Cells[1].Value.ToString();
                 cpoRazaoSocial.Text = dgwCliente.SelectedRows[0].Cells[2].Value.ToString();
@@ -202,7 +203,14 @@ namespace Apresentacao
                 btnSalvar.Enabled = false;
                 btnAlterar.Enabled = true;
                 btnExcluir.Enabled = true;
- 
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
+            }
+
 
         }
 

@@ -770,6 +770,7 @@
             this.dgwRomaneio.ReadOnly = true;
             this.dgwRomaneio.Size = new System.Drawing.Size(440, 192);
             this.dgwRomaneio.TabIndex = 99999;
+            this.dgwRomaneio.DoubleClick += new System.EventHandler(this.dgwRomaneio_DoubleClick);
             // 
             // iDRomaneioDataGridViewTextBoxColumn
             // 
