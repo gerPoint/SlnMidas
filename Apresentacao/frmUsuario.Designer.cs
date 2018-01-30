@@ -234,7 +234,10 @@
             // 
             // dgwUsuario
             // 
+            this.dgwUsuario.AllowUserToAddRows = false;
             this.dgwUsuario.AllowUserToDeleteRows = false;
+            this.dgwUsuario.AllowUserToResizeColumns = false;
+            this.dgwUsuario.AllowUserToResizeRows = false;
             this.dgwUsuario.AutoGenerateColumns = false;
             this.dgwUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

@@ -88,6 +88,8 @@
             // 
             this.dgwSelecionarFruta.AllowUserToAddRows = false;
             this.dgwSelecionarFruta.AllowUserToDeleteRows = false;
+            this.dgwSelecionarFruta.AllowUserToResizeColumns = false;
+            this.dgwSelecionarFruta.AllowUserToResizeRows = false;
             this.dgwSelecionarFruta.AutoGenerateColumns = false;
             this.dgwSelecionarFruta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwSelecionarFruta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

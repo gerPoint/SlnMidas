@@ -61,7 +61,8 @@
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(809, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1214, 26);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -76,8 +77,9 @@
             this.funcionarioToolStripMenuItem,
             this.romaneioToolStripMenuItem1,
             this.transportadorToolStripMenuItem});
+            this.romaneioToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.romaneioToolStripMenuItem.Name = "romaneioToolStripMenuItem";
-            this.romaneioToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.romaneioToolStripMenuItem.Size = new System.Drawing.Size(78, 22);
             this.romaneioToolStripMenuItem.Text = "Cadastro";
             this.romaneioToolStripMenuItem.Click += new System.EventHandler(this.romaneioToolStripMenuItem_Click);
             // 
@@ -134,8 +136,9 @@
             // 
             this.formaDePagamentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.formaDePagamentoToolStripMenuItem1});
+            this.formaDePagamentoToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.formaDePagamentoToolStripMenuItem.Name = "formaDePagamentoToolStripMenuItem";
-            this.formaDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.formaDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(88, 22);
             this.formaDePagamentoToolStripMenuItem.Text = "Financeiro";
             // 
             // formaDePagamentoToolStripMenuItem1
@@ -150,8 +153,9 @@
             this.rToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.romaneioToolStripMenuItem2,
             this.carregamentosToolStripMenuItem});
+            this.rToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rToolStripMenuItem.Name = "rToolStripMenuItem";
-            this.rToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.rToolStripMenuItem.Size = new System.Drawing.Size(86, 22);
             this.rToolStripMenuItem.Text = "Relatórios";
             // 
             // romaneioToolStripMenuItem2
@@ -168,16 +172,18 @@
             // 
             // filialToolStripMenuItem
             // 
+            this.filialToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filialToolStripMenuItem.Name = "filialToolStripMenuItem";
-            this.filialToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.filialToolStripMenuItem.Size = new System.Drawing.Size(58, 22);
             this.filialToolStripMenuItem.Text = "Filiais";
             // 
             // usuarioToolStripMenuItem2
             // 
             this.usuarioToolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuárioToolStripMenuItem});
+            this.usuarioToolStripMenuItem2.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuarioToolStripMenuItem2.Name = "usuarioToolStripMenuItem2";
-            this.usuarioToolStripMenuItem2.Size = new System.Drawing.Size(59, 20);
+            this.usuarioToolStripMenuItem2.Size = new System.Drawing.Size(70, 22);
             this.usuarioToolStripMenuItem2.Text = "Usuário";
             // 
             // usuárioToolStripMenuItem
@@ -191,8 +197,9 @@
             // 
             this.sairToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sairToolStripMenuItem1});
+            this.sairToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(46, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // sairToolStripMenuItem1
@@ -204,13 +211,15 @@
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Apresentacao.Properties.Resources.belas_paisagens_no_campo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(809, 504);
+            this.ClientSize = new System.Drawing.Size(1214, 620);
             this.Controls.Add(this.menuStrip1);
+            this.Font = new System.Drawing.Font("Symbol", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrincipal";
