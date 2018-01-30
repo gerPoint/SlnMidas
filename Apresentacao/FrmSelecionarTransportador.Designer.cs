@@ -78,7 +78,6 @@
             // 
             this.dgwSelTransportador.AllowUserToAddRows = false;
             this.dgwSelTransportador.AllowUserToDeleteRows = false;
-            this.dgwSelTransportador.AllowUserToResizeColumns = false;
             this.dgwSelTransportador.AllowUserToResizeRows = false;
             this.dgwSelTransportador.AutoGenerateColumns = false;
             this.dgwSelTransportador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

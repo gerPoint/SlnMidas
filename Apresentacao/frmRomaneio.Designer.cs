@@ -740,7 +740,6 @@
             // 
             this.dgwRomaneio.AllowUserToAddRows = false;
             this.dgwRomaneio.AllowUserToDeleteRows = false;
-            this.dgwRomaneio.AllowUserToResizeColumns = false;
             this.dgwRomaneio.AllowUserToResizeRows = false;
             this.dgwRomaneio.AutoGenerateColumns = false;
             this.dgwRomaneio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

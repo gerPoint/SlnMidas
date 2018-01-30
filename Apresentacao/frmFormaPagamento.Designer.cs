@@ -155,7 +155,6 @@
             // 
             this.dgwFormaPagamento.AllowUserToAddRows = false;
             this.dgwFormaPagamento.AllowUserToDeleteRows = false;
-            this.dgwFormaPagamento.AllowUserToResizeColumns = false;
             this.dgwFormaPagamento.AllowUserToResizeRows = false;
             this.dgwFormaPagamento.AutoGenerateColumns = false;
             this.dgwFormaPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;

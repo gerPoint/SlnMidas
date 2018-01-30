@@ -132,7 +132,6 @@
             // 
             this.dgwFruta.AllowUserToAddRows = false;
             this.dgwFruta.AllowUserToDeleteRows = false;
-            this.dgwFruta.AllowUserToResizeColumns = false;
             this.dgwFruta.AllowUserToResizeRows = false;
             this.dgwFruta.AutoGenerateColumns = false;
             this.dgwFruta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
