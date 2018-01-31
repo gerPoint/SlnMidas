@@ -120,11 +120,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.dgwCarregamento = new System.Windows.Forms.DataGridView();
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDCarregamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetCarregbloco = new Apresentacao.midasDataSetCarregbloco();
             this.tblFrutaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -148,6 +143,11 @@
             this.tblRomaneioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetRomaneioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDCarregamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblFormaPagamentoBindingSource)).BeginInit();
@@ -998,7 +998,7 @@
             // cpoQtd
             // 
             this.cpoQtd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoQtd.Location = new System.Drawing.Point(74, 100);
+            this.cpoQtd.Location = new System.Drawing.Point(102, 104);
             this.cpoQtd.Name = "cpoQtd";
             this.cpoQtd.Size = new System.Drawing.Size(80, 20);
             this.cpoQtd.TabIndex = 161;
@@ -1007,7 +1007,7 @@
             // cpoDescricao
             // 
             this.cpoDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoDescricao.Location = new System.Drawing.Point(74, 62);
+            this.cpoDescricao.Location = new System.Drawing.Point(102, 60);
             this.cpoDescricao.Name = "cpoDescricao";
             this.cpoDescricao.Size = new System.Drawing.Size(289, 20);
             this.cpoDescricao.TabIndex = 165;
@@ -1015,7 +1015,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 102);
+            this.label21.Location = new System.Drawing.Point(23, 106);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(62, 13);
             this.label21.TabIndex = 172;
@@ -1024,7 +1024,7 @@
             // cpoBloco
             // 
             this.cpoBloco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoBloco.Location = new System.Drawing.Point(74, 21);
+            this.cpoBloco.Location = new System.Drawing.Point(102, 23);
             this.cpoBloco.Name = "cpoBloco";
             this.cpoBloco.Size = new System.Drawing.Size(289, 20);
             this.cpoBloco.TabIndex = 159;
@@ -1032,7 +1032,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(13, 64);
+            this.label25.Location = new System.Drawing.Point(30, 62);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(55, 13);
             this.label25.TabIndex = 168;
@@ -1041,7 +1041,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(34, 23);
+            this.label26.Location = new System.Drawing.Point(51, 25);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(34, 13);
             this.label26.TabIndex = 167;
@@ -1063,53 +1063,13 @@
             this.descricaoDataGridViewTextBoxColumn,
             this.quantidadeDataGridViewTextBoxColumn});
             this.dgwCarregamento.DataSource = this.tblCarregamentoBlocoBindingSource;
-            this.dgwCarregamento.Location = new System.Drawing.Point(387, 21);
+            this.dgwCarregamento.Location = new System.Drawing.Point(26, 149);
             this.dgwCarregamento.Name = "dgwCarregamento";
             this.dgwCarregamento.ReadOnly = true;
             this.dgwCarregamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwCarregamento.Size = new System.Drawing.Size(551, 420);
+            this.dgwCarregamento.Size = new System.Drawing.Size(473, 287);
             this.dgwCarregamento.TabIndex = 146;
             this.dgwCarregamento.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCarregamento_CellMouseDoubleClick);
-            // 
-            // iDCarregamentoBlocoDataGridViewTextBoxColumn
-            // 
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.DataPropertyName = "IDCarregamentoBloco";
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.HeaderText = "ID Carreg. Bloco";
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Name = "iDCarregamentoBlocoDataGridViewTextBoxColumn";
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // iDCarregamentoDataGridViewTextBoxColumn
-            // 
-            this.iDCarregamentoDataGridViewTextBoxColumn.DataPropertyName = "IDCarregamento";
-            this.iDCarregamentoDataGridViewTextBoxColumn.HeaderText = "ID Carreg.";
-            this.iDCarregamentoDataGridViewTextBoxColumn.Name = "iDCarregamentoDataGridViewTextBoxColumn";
-            this.iDCarregamentoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDCarregamentoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // blocoDataGridViewTextBoxColumn
-            // 
-            this.blocoDataGridViewTextBoxColumn.DataPropertyName = "Bloco";
-            this.blocoDataGridViewTextBoxColumn.HeaderText = "Bloco";
-            this.blocoDataGridViewTextBoxColumn.Name = "blocoDataGridViewTextBoxColumn";
-            this.blocoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.blocoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descricaoDataGridViewTextBoxColumn.Width = 270;
-            // 
-            // quantidadeDataGridViewTextBoxColumn
-            // 
-            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
-            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quantidadeDataGridViewTextBoxColumn.Width = 90;
             // 
             // tblCarregamentoBlocoBindingSource
             // 
@@ -1269,9 +1229,9 @@
             this.btnRemover.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemover.Image = global::Apresentacao.Properties.Resources.Minus_36877__1_;
             this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRemover.Location = new System.Drawing.Point(74, 149);
+            this.btnRemover.Location = new System.Drawing.Point(244, 102);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(117, 39);
+            this.btnRemover.Size = new System.Drawing.Size(105, 39);
             this.btnRemover.TabIndex = 158;
             this.btnRemover.Text = "REMOVER";
             this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1284,9 +1244,9 @@
             this.btnInserir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.Image = global::Apresentacao.Properties.Resources.Plus_36851;
             this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInserir.Location = new System.Drawing.Point(245, 149);
+            this.btnInserir.Location = new System.Drawing.Point(383, 104);
             this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(118, 39);
+            this.btnInserir.Size = new System.Drawing.Size(116, 39);
             this.btnInserir.TabIndex = 157;
             this.btnInserir.Text = "ADICIONAR \r\n";
             this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1300,12 +1260,52 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Apresentacao.Properties.Resources.Esse_sim2;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 248);
+            this.pictureBox1.Location = new System.Drawing.Point(505, 136);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(347, 193);
+            this.pictureBox1.Size = new System.Drawing.Size(464, 300);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 175;
             this.pictureBox1.TabStop = false;
+            // 
+            // iDCarregamentoBlocoDataGridViewTextBoxColumn
+            // 
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.DataPropertyName = "IDCarregamentoBloco";
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.HeaderText = "ID Carreg. Bloco";
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Name = "iDCarregamentoBlocoDataGridViewTextBoxColumn";
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // iDCarregamentoDataGridViewTextBoxColumn
+            // 
+            this.iDCarregamentoDataGridViewTextBoxColumn.DataPropertyName = "IDCarregamento";
+            this.iDCarregamentoDataGridViewTextBoxColumn.HeaderText = "ID Carreg.";
+            this.iDCarregamentoDataGridViewTextBoxColumn.Name = "iDCarregamentoDataGridViewTextBoxColumn";
+            this.iDCarregamentoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDCarregamentoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // blocoDataGridViewTextBoxColumn
+            // 
+            this.blocoDataGridViewTextBoxColumn.DataPropertyName = "Bloco";
+            this.blocoDataGridViewTextBoxColumn.HeaderText = "Bloco";
+            this.blocoDataGridViewTextBoxColumn.Name = "blocoDataGridViewTextBoxColumn";
+            this.blocoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.blocoDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descricaoDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // quantidadeDataGridViewTextBoxColumn
+            // 
+            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
+            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantidadeDataGridViewTextBoxColumn.Width = 70;
             // 
             // frmRomaneio
             // 
@@ -1406,11 +1406,6 @@
         private System.Windows.Forms.BindingSource tblCarregamentoBlocoBindingSource;
         private midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter tblCarregamentoBlocoTableAdapter;
         private System.Windows.Forms.Button btnConcluir;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDCarregamentoBlocoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDCarregamentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn blocoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnRetornar;
         private System.Windows.Forms.TextBox cpoIDFornecedor;
         private System.Windows.Forms.TextBox cpoIDTransportador;
@@ -1470,5 +1465,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataExclusaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCarregamentoBlocoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCarregamentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn blocoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
     }
 }
