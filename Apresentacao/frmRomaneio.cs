@@ -784,13 +784,40 @@ namespace Apresentacao
         {
             try
             {
+               Romaneio romaneio = (dgwRomaneio.SelectedRows[0].DataBoundItem as Romaneio);
+                cpoIDRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[0].Value.ToString();
+                cpoIDCliente.Text = dgwRomaneio.SelectedRows[0].Cells[1].Value.ToString();
+                cpoIDTransportador.Text = dgwRomaneio.SelectedRows[0].Cells[2].Value.ToString();
+                cpoIDFornecedor.Text = dgwRomaneio.SelectedRows[0].Cells[3].Value.ToString();
+                cpoIDFruta.Text = dgwRomaneio.SelectedRows[0].Cells[4].Value.ToString();
+                cpoQtdGeral.Text = dgwRomaneio.SelectedRows[0].Cells[5].Value.ToString();
+          //    cpoIDCarregamento.Text = dgwRomaneio.SelectedRows[0].Cells[3].Value.ToString();
+                cpoValorFrete.Text = dgwRomaneio.SelectedRows[0].Cells[7].Value.ToString();
+                cpoSeguro.Text = dgwRomaneio.SelectedRows[0].Cells[8].Value.ToString();
+                cpoAdiantFretMot.Text = dgwRomaneio.SelectedRows[0].Cells[9].Value.ToString();
+                comboBoxFormaPagamento.Text = dgwRomaneio.SelectedRows[0].Cells[10].Value.ToString();
+                cpoCustoCarreg.Text = dgwRomaneio.SelectedRows[0].Cells[11].Value.ToString();
+                cpoValorComissao.Text = dgwRomaneio.SelectedRows[0].Cells[12].Value.ToString();
+                cpoValorTotalRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[13].Value.ToString();
+                cpoTaxaNf.Text = dgwRomaneio.SelectedRows[0].Cells[14].Value.ToString();
+                comboBoxUnidMedida.Text = dgwRomaneio.SelectedRows[0].Cells[15].Value.ToString();
 
+
+
+                btnSalvar.Enabled = false;
+                btnAlterar.Enabled = true;
+                btnExcluir.Enabled = true;
             }
             catch (Exception)
             {
 
                 MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
             }
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
