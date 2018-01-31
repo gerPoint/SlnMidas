@@ -544,7 +544,7 @@
             // cpoTelefone
             // 
             this.cpoTelefone.Location = new System.Drawing.Point(100, 380);
-            this.cpoTelefone.Mask = "(99) 0000-0000";
+            this.cpoTelefone.Mask = "(99) 000000000";
             this.cpoTelefone.Name = "cpoTelefone";
             this.cpoTelefone.Size = new System.Drawing.Size(116, 20);
             this.cpoTelefone.TabIndex = 10;
