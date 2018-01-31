@@ -86,49 +86,49 @@
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // filialToolStripMenuItem1
             // 
             this.filialToolStripMenuItem1.Name = "filialToolStripMenuItem1";
-            this.filialToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.filialToolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
             this.filialToolStripMenuItem1.Text = "Filial";
             this.filialToolStripMenuItem1.Click += new System.EventHandler(this.filialToolStripMenuItem1_Click);
             // 
             // fornecedorToolStripMenuItem
             // 
             this.fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
-            this.fornecedorToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.fornecedorToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.fornecedorToolStripMenuItem.Text = "Fornecedor";
             this.fornecedorToolStripMenuItem.Click += new System.EventHandler(this.fornecedorToolStripMenuItem_Click);
             // 
             // frutaToolStripMenuItem
             // 
             this.frutaToolStripMenuItem.Name = "frutaToolStripMenuItem";
-            this.frutaToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.frutaToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.frutaToolStripMenuItem.Text = "Fruta";
             this.frutaToolStripMenuItem.Click += new System.EventHandler(this.frutaToolStripMenuItem_Click);
             // 
             // funcionarioToolStripMenuItem
             // 
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.funcionarioToolStripMenuItem.Text = "Funcionario";
             this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
             // 
             // romaneioToolStripMenuItem1
             // 
             this.romaneioToolStripMenuItem1.Name = "romaneioToolStripMenuItem1";
-            this.romaneioToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.romaneioToolStripMenuItem1.Size = new System.Drawing.Size(167, 22);
             this.romaneioToolStripMenuItem1.Text = "Romaneio";
             this.romaneioToolStripMenuItem1.Click += new System.EventHandler(this.romaneioToolStripMenuItem1_Click);
             // 
             // transportadorToolStripMenuItem
             // 
             this.transportadorToolStripMenuItem.Name = "transportadorToolStripMenuItem";
-            this.transportadorToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.transportadorToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.transportadorToolStripMenuItem.Text = "Transportador";
             this.transportadorToolStripMenuItem.Click += new System.EventHandler(this.transportadorToolStripMenuItem_Click);
             // 
@@ -144,7 +144,7 @@
             // formaDePagamentoToolStripMenuItem1
             // 
             this.formaDePagamentoToolStripMenuItem1.Name = "formaDePagamentoToolStripMenuItem1";
-            this.formaDePagamentoToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
+            this.formaDePagamentoToolStripMenuItem1.Size = new System.Drawing.Size(216, 22);
             this.formaDePagamentoToolStripMenuItem1.Text = "Forma de Pagamento";
             this.formaDePagamentoToolStripMenuItem1.Click += new System.EventHandler(this.formaDePagamentoToolStripMenuItem1_Click);
             // 
@@ -161,13 +161,13 @@
             // romaneioToolStripMenuItem2
             // 
             this.romaneioToolStripMenuItem2.Name = "romaneioToolStripMenuItem2";
-            this.romaneioToolStripMenuItem2.Size = new System.Drawing.Size(155, 22);
+            this.romaneioToolStripMenuItem2.Size = new System.Drawing.Size(176, 22);
             this.romaneioToolStripMenuItem2.Text = "Romaneios";
             // 
             // carregamentosToolStripMenuItem
             // 
             this.carregamentosToolStripMenuItem.Name = "carregamentosToolStripMenuItem";
-            this.carregamentosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.carregamentosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.carregamentosToolStripMenuItem.Text = "Carregamentos";
             // 
             // filialToolStripMenuItem
@@ -189,7 +189,7 @@
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.usuárioToolStripMenuItem.Text = "Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
@@ -205,7 +205,7 @@
             // sairToolStripMenuItem1
             // 
             this.sairToolStripMenuItem1.Name = "sairToolStripMenuItem1";
-            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(93, 22);
+            this.sairToolStripMenuItem1.Size = new System.Drawing.Size(102, 22);
             this.sairToolStripMenuItem1.Text = "Sair";
             this.sairToolStripMenuItem1.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
             // 
@@ -218,8 +218,9 @@
             this.ClientSize = new System.Drawing.Size(1214, 620);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Symbol", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrincipal";
