@@ -240,7 +240,13 @@ namespace Apresentacao
                 btnInserir.Click -= new EventHandler(btnInserir_Click);
                 string strRetorno = string.Empty;
 
-               
+                
+
+                if (cpoMostraCodRomaneio.Text == "")
+                {
+                    MessageBox.Show("Para Adição dos blocos é necessário selecionar o Romaneio.");
+                    return;
+                }
 
                 if (cpoBloco.Text == "")
                 {

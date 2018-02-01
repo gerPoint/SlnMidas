@@ -11,6 +11,7 @@ namespace ObjetoTransferencia
         public string Bloco { get; set; }
         public int Quantidade { get; set; }
         public string Descricao { get; set; }
+        public int IDRomaneio { get; set; }
     }
 
     public class BlocosLista : List<Blocos> { }

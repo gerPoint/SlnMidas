@@ -118,6 +118,9 @@
             this.btnCCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.tabPageCarregamento = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.cpoMostraCodRomaneio = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConcluir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -154,9 +157,7 @@
             this.tblCarregamentoBlocoTableAdapter1 = new Apresentacao.midasDataSetCarregamentoBlocookTableAdapters.tblCarregamentoBlocoTableAdapter();
             this.midasDataSetCarregamentoBlocookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblCarregamentoBlocoTableAdapter2 = new Apresentacao.midasDataSetCarregBloTableAdapters.tblCarregamentoBlocoTableAdapter();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.cpoMostraCodRomaneio = new System.Windows.Forms.TextBox();
+            this.lblAjuda = new System.Windows.Forms.Label();
             this.tabPagePrincipal.SuspendLayout();
             this.tabPageRomaneio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblFormaPagamentoBindingSource)).BeginInit();
@@ -438,6 +439,7 @@
             this.cpoIDRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoIDRomaneio.Enabled = false;
             this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoIDRomaneio.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cpoIDRomaneio.Location = new System.Drawing.Point(255, 394);
             this.cpoIDRomaneio.Multiline = true;
             this.cpoIDRomaneio.Name = "cpoIDRomaneio";
@@ -742,7 +744,7 @@
             this.mskTxtBoxDtFinal.Mask = "00/00/0000";
             this.mskTxtBoxDtFinal.Name = "mskTxtBoxDtFinal";
             this.mskTxtBoxDtFinal.Size = new System.Drawing.Size(75, 20);
-            this.mskTxtBoxDtFinal.TabIndex = 15;
+            this.mskTxtBoxDtFinal.TabIndex = 5;
             this.mskTxtBoxDtFinal.ValidatingType = typeof(System.DateTime);
             // 
             // label20
@@ -1066,6 +1068,7 @@
             // tabPageCarregamento
             // 
             this.tabPageCarregamento.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPageCarregamento.Controls.Add(this.lblAjuda);
             this.tabPageCarregamento.Controls.Add(this.label22);
             this.tabPageCarregamento.Controls.Add(this.label23);
             this.tabPageCarregamento.Controls.Add(this.cpoMostraCodRomaneio);
@@ -1089,6 +1092,40 @@
             this.tabPageCarregamento.Text = "Carregamento";
             this.tabPageCarregamento.Click += new System.EventHandler(this.tabPageCarregamento_Click);
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(642, 79);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(67, 20);
+            this.label22.TabIndex = 178;
+            this.label22.Text = "Código :";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(573, 64);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(193, 16);
+            this.label23.TabIndex = 177;
+            this.label23.Text = "ROMANEIO SELECIONADO";
+            // 
+            // cpoMostraCodRomaneio
+            // 
+            this.cpoMostraCodRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoMostraCodRomaneio.Enabled = false;
+            this.cpoMostraCodRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoMostraCodRomaneio.ForeColor = System.Drawing.Color.Green;
+            this.cpoMostraCodRomaneio.Location = new System.Drawing.Point(772, 62);
+            this.cpoMostraCodRomaneio.Multiline = true;
+            this.cpoMostraCodRomaneio.Name = "cpoMostraCodRomaneio";
+            this.cpoMostraCodRomaneio.ReadOnly = true;
+            this.cpoMostraCodRomaneio.Size = new System.Drawing.Size(166, 33);
+            this.cpoMostraCodRomaneio.TabIndex = 176;
+            this.cpoMostraCodRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Apresentacao.Properties.Resources.Esse_sim2;
@@ -1107,7 +1144,7 @@
             this.btnConcluir.Location = new System.Drawing.Point(821, 465);
             this.btnConcluir.Name = "btnConcluir";
             this.btnConcluir.Size = new System.Drawing.Size(117, 48);
-            this.btnConcluir.TabIndex = 174;
+            this.btnConcluir.TabIndex = 35;
             this.btnConcluir.Text = "Concluir";
             this.btnConcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConcluir.UseVisualStyleBackColor = true;
@@ -1120,7 +1157,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(631, 467);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(103, 44);
-            this.btnCancelar.TabIndex = 173;
+            this.btnCancelar.TabIndex = 34;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -1132,7 +1169,7 @@
             this.cpoQtd.Location = new System.Drawing.Point(102, 99);
             this.cpoQtd.Name = "cpoQtd";
             this.cpoQtd.Size = new System.Drawing.Size(80, 20);
-            this.cpoQtd.TabIndex = 161;
+            this.cpoQtd.TabIndex = 31;
             this.cpoQtd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoQtd_KeyPress);
             // 
             // cpoDescricao
@@ -1141,7 +1178,7 @@
             this.cpoDescricao.Location = new System.Drawing.Point(102, 60);
             this.cpoDescricao.Name = "cpoDescricao";
             this.cpoDescricao.Size = new System.Drawing.Size(289, 20);
-            this.cpoDescricao.TabIndex = 165;
+            this.cpoDescricao.TabIndex = 30;
             // 
             // label21
             // 
@@ -1158,7 +1195,7 @@
             this.cpoBloco.Location = new System.Drawing.Point(102, 23);
             this.cpoBloco.Name = "cpoBloco";
             this.cpoBloco.Size = new System.Drawing.Size(289, 20);
-            this.cpoBloco.TabIndex = 159;
+            this.cpoBloco.TabIndex = 29;
             // 
             // label25
             // 
@@ -1187,7 +1224,7 @@
             this.btnRemover.Location = new System.Drawing.Point(286, 104);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(105, 39);
-            this.btnRemover.TabIndex = 158;
+            this.btnRemover.TabIndex = 32;
             this.btnRemover.Text = "Remover";
             this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemover.UseVisualStyleBackColor = false;
@@ -1202,7 +1239,7 @@
             this.btnInserir.Location = new System.Drawing.Point(416, 104);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(106, 39);
-            this.btnInserir.TabIndex = 157;
+            this.btnInserir.TabIndex = 33;
             this.btnInserir.Text = "Adicionar";
             this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInserir.UseVisualStyleBackColor = false;
@@ -1349,38 +1386,16 @@
             // 
             this.tblCarregamentoBlocoTableAdapter2.ClearBeforeFill = true;
             // 
-            // label22
+            // lblAjuda
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(657, 60);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(67, 20);
-            this.label22.TabIndex = 178;
-            this.label22.Text = "Código :";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(588, 45);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(193, 16);
-            this.label23.TabIndex = 177;
-            this.label23.Text = "ROMANEIO SELECIONADO";
-            // 
-            // cpoMostraCodRomaneio
-            // 
-            this.cpoMostraCodRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoMostraCodRomaneio.Enabled = false;
-            this.cpoMostraCodRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoMostraCodRomaneio.Location = new System.Drawing.Point(787, 47);
-            this.cpoMostraCodRomaneio.Multiline = true;
-            this.cpoMostraCodRomaneio.Name = "cpoMostraCodRomaneio";
-            this.cpoMostraCodRomaneio.ReadOnly = true;
-            this.cpoMostraCodRomaneio.Size = new System.Drawing.Size(166, 33);
-            this.cpoMostraCodRomaneio.TabIndex = 176;
-            this.cpoMostraCodRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblAjuda.AutoSize = true;
+            this.lblAjuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAjuda.Location = new System.Drawing.Point(23, 498);
+            this.lblAjuda.Name = "lblAjuda";
+            this.lblAjuda.Size = new System.Drawing.Size(58, 13);
+            this.lblAjuda.TabIndex = 179;
+            this.lblAjuda.Text = "Ajuda (?)";
+            this.lblAjuda.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // frmRomaneio
             // 
@@ -1559,5 +1574,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox cpoMostraCodRomaneio;
+        private System.Windows.Forms.Label lblAjuda;
     }
 }
