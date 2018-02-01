@@ -868,6 +868,26 @@ namespace Apresentacao
                 tabPageCarregamento.Enabled = true;
             }
         }
+
+        private void btnConcluir_Click(object sender, EventArgs e)
+        {
+            string Conexao = Settings.Default.strConexao;
+            SqlCommand cmd = new SqlCommand('INSERT INTO tblCarregamentoBloco(Bloco, Descricao, Quantidade, IDRomaneio) Values(@Bloco, @Descricao, @Quantidade, @IDRomaneio);');
+            cmd.Parameters.Add(new SqlParameter("@Bloco", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("@Descricao", SqlDbType.VarChar));
+            cmd.Parameters.Add(new SqlParameter("@Quantidade", SqlDbType.Int));
+            cmd.Parameters.Add(new SqlParameter("@IDRomaneio", SqlDbType.Int));
+
+            foreach (DataGridView row in dgwCarregamento.Rows)
+            {
+                cmd.Parameters["@Bloco"].Value = row.Cells[2].Value;
+                cmd.Parameters["@Descricao"].Value = row.Cells[3].Value;
+                cmd.Parameters["@Quantidade"].Value = row.Cells[4].Value;
+                cmd.Parameters["@IDRomaneio"].Value = row.Cells[0].Value;
+                cmd.ExecuteNonQuery();
+            }
+
+        }
     }
 
     }
