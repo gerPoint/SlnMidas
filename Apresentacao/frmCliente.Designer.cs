@@ -106,10 +106,10 @@
             // 
             this.btnPesquisar.Image = global::Apresentacao.Properties.Resources.pesquisar1;
             this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(44, 13);
+            this.btnPesquisar.Location = new System.Drawing.Point(702, 13);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(124, 45);
-            this.btnPesquisar.TabIndex = 1;
+            this.btnPesquisar.TabIndex = 3;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
@@ -135,7 +135,7 @@
             // cpoCaixaPesquisa
             // 
             this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCaixaPesquisa.Location = new System.Drawing.Point(183, 27);
+            this.cpoCaixaPesquisa.Location = new System.Drawing.Point(44, 27);
             this.cpoCaixaPesquisa.Multiline = true;
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(643, 23);
@@ -150,7 +150,7 @@
             this.cpoNome.MaxLength = 50;
             this.cpoNome.Name = "cpoNome";
             this.cpoNome.Size = new System.Drawing.Size(247, 20);
-            this.cpoNome.TabIndex = 3;
+            this.cpoNome.TabIndex = 4;
             this.cpoNome.TextChanged += new System.EventHandler(this.cpoNome_TextChanged);
             // 
             // dgwCliente
@@ -174,12 +174,12 @@
             this.dataCadastroDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.dgwCliente.DataSource = this.tblClienteBindingSource3;
-            this.dgwCliente.Location = new System.Drawing.Point(44, 73);
+            this.dgwCliente.Location = new System.Drawing.Point(44, 64);
             this.dgwCliente.MultiSelect = false;
             this.dgwCliente.Name = "dgwCliente";
             this.dgwCliente.ReadOnly = true;
             this.dgwCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwCliente.Size = new System.Drawing.Size(782, 211);
+            this.dgwCliente.Size = new System.Drawing.Size(782, 225);
             this.dgwCliente.TabIndex = 9999;
             this.dgwCliente.DoubleClick += new System.EventHandler(this.dgwCliente_DoubleClick);
             // 
@@ -305,7 +305,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(407, 447);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(87, 44);
-            this.btnAlterar.TabIndex = 14;
+            this.btnAlterar.TabIndex = 15;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -318,7 +318,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(626, 447);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 44);
-            this.btnCancelar.TabIndex = 16;
+            this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -332,7 +332,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(518, 447);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(87, 44);
-            this.btnExcluir.TabIndex = 15;
+            this.btnExcluir.TabIndex = 16;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -408,7 +408,7 @@
             this.cpoEmail.MaxLength = 50;
             this.cpoEmail.Name = "cpoEmail";
             this.cpoEmail.Size = new System.Drawing.Size(245, 20);
-            this.cpoEmail.TabIndex = 11;
+            this.cpoEmail.TabIndex = 12;
             this.cpoEmail.TextChanged += new System.EventHandler(this.cpoEmail_TextChanged);
             // 
             // cpoEndereco
@@ -418,7 +418,7 @@
             this.cpoEndereco.MaxLength = 50;
             this.cpoEndereco.Name = "cpoEndereco";
             this.cpoEndereco.Size = new System.Drawing.Size(247, 20);
-            this.cpoEndereco.TabIndex = 6;
+            this.cpoEndereco.TabIndex = 7;
             this.cpoEndereco.TextChanged += new System.EventHandler(this.cpoEndereco_TextChanged);
             // 
             // cpoCidade
@@ -427,7 +427,7 @@
             this.cpoCidade.Location = new System.Drawing.Point(433, 348);
             this.cpoCidade.Name = "cpoCidade";
             this.cpoCidade.Size = new System.Drawing.Size(170, 20);
-            this.cpoCidade.TabIndex = 7;
+            this.cpoCidade.TabIndex = 8;
             this.cpoCidade.TextChanged += new System.EventHandler(this.cpoCidade_TextChanged);
             // 
             // cpoUf
@@ -437,7 +437,7 @@
             this.cpoUf.MaxLength = 2;
             this.cpoUf.Name = "cpoUf";
             this.cpoUf.Size = new System.Drawing.Size(42, 20);
-            this.cpoUf.TabIndex = 8;
+            this.cpoUf.TabIndex = 9;
             this.cpoUf.TextChanged += new System.EventHandler(this.cpoUf_TextChanged);
             // 
             // cpoRazaoSocial
@@ -447,7 +447,7 @@
             this.cpoRazaoSocial.MaxLength = 50;
             this.cpoRazaoSocial.Name = "cpoRazaoSocial";
             this.cpoRazaoSocial.Size = new System.Drawing.Size(246, 20);
-            this.cpoRazaoSocial.TabIndex = 4;
+            this.cpoRazaoSocial.TabIndex = 5;
             this.cpoRazaoSocial.TextChanged += new System.EventHandler(this.cpoRazaoSocial_TextChanged);
             // 
             // tblClienteTableAdapter
@@ -461,7 +461,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(735, 447);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(91, 44);
-            this.btnSalvar.TabIndex = 17;
+            this.btnSalvar.TabIndex = 18;
             this.btnSalvar.Text = "   Salvar";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -478,7 +478,7 @@
             // cpoIDCliente
             // 
             this.cpoIDCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoIDCliente.Location = new System.Drawing.Point(183, 1);
+            this.cpoIDCliente.Location = new System.Drawing.Point(587, 1);
             this.cpoIDCliente.Name = "cpoIDCliente";
             this.cpoIDCliente.Size = new System.Drawing.Size(100, 20);
             this.cpoIDCliente.TabIndex = 80;
@@ -504,7 +504,7 @@
             this.checkBoxCpf.Location = new System.Drawing.Point(723, 351);
             this.checkBoxCpf.Name = "checkBoxCpf";
             this.checkBoxCpf.Size = new System.Drawing.Size(93, 17);
-            this.checkBoxCpf.TabIndex = 9;
+            this.checkBoxCpf.TabIndex = 10;
             this.checkBoxCpf.Text = "Pessoa Física";
             this.checkBoxCpf.UseVisualStyleBackColor = true;
             this.checkBoxCpf.CheckedChanged += new System.EventHandler(this.checkBoxCpf_CheckedChanged);
@@ -516,7 +516,7 @@
             this.btnRetornar.Location = new System.Drawing.Point(44, 447);
             this.btnRetornar.Name = "btnRetornar";
             this.btnRetornar.Size = new System.Drawing.Size(89, 44);
-            this.btnRetornar.TabIndex = 13;
+            this.btnRetornar.TabIndex = 14;
             this.btnRetornar.Text = "Retornar";
             this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRetornar.UseVisualStyleBackColor = true;
@@ -528,7 +528,7 @@
             this.cpoCnpj.Mask = "00.000.000/0000-00";
             this.cpoCnpj.Name = "cpoCnpj";
             this.cpoCnpj.Size = new System.Drawing.Size(103, 20);
-            this.cpoCnpj.TabIndex = 5;
+            this.cpoCnpj.TabIndex = 6;
             this.cpoCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCnpj_KeyPress_1);
             // 
             // cpoCpf
@@ -538,7 +538,7 @@
             this.cpoCpf.Mask = "000.000.000-00";
             this.cpoCpf.Name = "cpoCpf";
             this.cpoCpf.Size = new System.Drawing.Size(103, 20);
-            this.cpoCpf.TabIndex = 12;
+            this.cpoCpf.TabIndex = 13;
             this.cpoCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCpf_KeyPress_1);
             // 
             // cpoTelefone
@@ -547,14 +547,14 @@
             this.cpoTelefone.Mask = "(99) 000000000";
             this.cpoTelefone.Name = "cpoTelefone";
             this.cpoTelefone.Size = new System.Drawing.Size(116, 20);
-            this.cpoTelefone.TabIndex = 10;
+            this.cpoTelefone.TabIndex = 11;
             this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress_1);
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 509);
+            this.ClientSize = new System.Drawing.Size(866, 509);
             this.Controls.Add(this.cpoTelefone);
             this.Controls.Add(this.cpoCpf);
             this.Controls.Add(this.cpoCnpj);

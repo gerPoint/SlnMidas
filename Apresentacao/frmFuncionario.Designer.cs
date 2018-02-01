@@ -195,12 +195,12 @@
             this.dataCadastroDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.dgwFuncionario.DataSource = this.tblFuncionarioBindingSource;
-            this.dgwFuncionario.Location = new System.Drawing.Point(40, 72);
+            this.dgwFuncionario.Location = new System.Drawing.Point(40, 63);
             this.dgwFuncionario.MultiSelect = false;
             this.dgwFuncionario.Name = "dgwFuncionario";
             this.dgwFuncionario.ReadOnly = true;
             this.dgwFuncionario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwFuncionario.Size = new System.Drawing.Size(728, 211);
+            this.dgwFuncionario.Size = new System.Drawing.Size(728, 220);
             this.dgwFuncionario.TabIndex = 99999;
             this.dgwFuncionario.DoubleClick += new System.EventHandler(this.dgwFuncionario_DoubleClick);
             // 
@@ -311,11 +311,11 @@
             // cpoCaixaPesquisa
             // 
             this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCaixaPesquisa.Location = new System.Drawing.Point(179, 26);
+            this.cpoCaixaPesquisa.Location = new System.Drawing.Point(40, 26);
             this.cpoCaixaPesquisa.Multiline = true;
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(589, 23);
-            this.cpoCaixaPesquisa.TabIndex = 3;
+            this.cpoCaixaPesquisa.TabIndex = 2;
             this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
             this.cpoCaixaPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCaixaPesquisa_KeyPress);
             // 
@@ -399,10 +399,10 @@
             // 
             this.btnPesquisar.Image = global::Apresentacao.Properties.Resources.pesquisar1;
             this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(40, 12);
+            this.btnPesquisar.Location = new System.Drawing.Point(644, 12);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(124, 45);
-            this.btnPesquisar.TabIndex = 2;
+            this.btnPesquisar.TabIndex = 3;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);

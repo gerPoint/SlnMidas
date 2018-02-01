@@ -204,11 +204,11 @@
             this.dataCadastroDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.dgwFilial.DataSource = this.tblFilialBindingSource1;
-            this.dgwFilial.Location = new System.Drawing.Point(30, 80);
+            this.dgwFilial.Location = new System.Drawing.Point(30, 74);
             this.dgwFilial.MultiSelect = false;
             this.dgwFilial.Name = "dgwFilial";
             this.dgwFilial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwFilial.Size = new System.Drawing.Size(782, 211);
+            this.dgwFilial.Size = new System.Drawing.Size(782, 217);
             this.dgwFilial.TabIndex = 99999;
             this.dgwFilial.DoubleClick += new System.EventHandler(this.dgwFilial_DoubleClick);
             // 
@@ -334,11 +334,11 @@
             // cpoCaixaPesquisa
             // 
             this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCaixaPesquisa.Location = new System.Drawing.Point(169, 37);
+            this.cpoCaixaPesquisa.Location = new System.Drawing.Point(30, 37);
             this.cpoCaixaPesquisa.Multiline = true;
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(643, 23);
-            this.cpoCaixaPesquisa.TabIndex = 3;
+            this.cpoCaixaPesquisa.TabIndex = 2;
             this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
             this.cpoCaixaPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCaixaPesquisa_KeyPress);
             // 
@@ -436,10 +436,10 @@
             // 
             this.btnPesquisa.Image = global::Apresentacao.Properties.Resources.pesquisar1;
             this.btnPesquisa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisa.Location = new System.Drawing.Point(30, 23);
+            this.btnPesquisa.Location = new System.Drawing.Point(688, 23);
             this.btnPesquisa.Name = "btnPesquisa";
             this.btnPesquisa.Size = new System.Drawing.Size(124, 45);
-            this.btnPesquisa.TabIndex = 2;
+            this.btnPesquisa.TabIndex = 3;
             this.btnPesquisa.Text = "Pesquisar";
             this.btnPesquisa.UseVisualStyleBackColor = true;
             this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
@@ -472,7 +472,7 @@
             // cpoTelefone
             // 
             this.cpoTelefone.Location = new System.Drawing.Point(86, 390);
-            this.cpoTelefone.Mask = "(99) 0000-0000";
+            this.cpoTelefone.Mask = "(99) 000000000";
             this.cpoTelefone.Name = "cpoTelefone";
             this.cpoTelefone.Size = new System.Drawing.Size(116, 20);
             this.cpoTelefone.TabIndex = 100000;

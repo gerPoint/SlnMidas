@@ -13,7 +13,11 @@ namespace ObjTransferencia
         public string Bloco { get; set; }
         public string Descricao { get; set; }
         public int Quantidade { get; set; }
+
+        public int IDRomaneio { get; set; }
     }
+
+
     public class ListaCarregamentoBloco: List<objCarregamentoBloco> { }
 }
 

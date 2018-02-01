@@ -98,12 +98,12 @@
             this.dataCadastroDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.dgwSelecionarFruta.DataSource = this.tblFrutaBindingSource;
-            this.dgwSelecionarFruta.Location = new System.Drawing.Point(28, 74);
+            this.dgwSelecionarFruta.Location = new System.Drawing.Point(28, 65);
             this.dgwSelecionarFruta.MultiSelect = false;
             this.dgwSelecionarFruta.Name = "dgwSelecionarFruta";
             this.dgwSelecionarFruta.ReadOnly = true;
             this.dgwSelecionarFruta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwSelecionarFruta.Size = new System.Drawing.Size(551, 211);
+            this.dgwSelecionarFruta.Size = new System.Drawing.Size(551, 220);
             this.dgwSelecionarFruta.TabIndex = 99999;
             this.dgwSelecionarFruta.DoubleClick += new System.EventHandler(this.dgwSelecionarFruta_DoubleClick);
             // 
@@ -164,10 +164,10 @@
             // cpoCaixaPesquisa
             // 
             this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCaixaPesquisa.Location = new System.Drawing.Point(167, 28);
+            this.cpoCaixaPesquisa.Location = new System.Drawing.Point(28, 28);
             this.cpoCaixaPesquisa.Multiline = true;
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
-            this.cpoCaixaPesquisa.Size = new System.Drawing.Size(412, 23);
+            this.cpoCaixaPesquisa.Size = new System.Drawing.Size(399, 23);
             this.cpoCaixaPesquisa.TabIndex = 3;
             this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
             this.cpoCaixaPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCaixaPesquisa_KeyPress);
@@ -176,7 +176,7 @@
             // 
             this.btnPesquisar.Image = global::Apresentacao.Properties.Resources.pesquisar1;
             this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(28, 14);
+            this.btnPesquisar.Location = new System.Drawing.Point(448, 14);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(131, 45);
             this.btnPesquisar.TabIndex = 2;

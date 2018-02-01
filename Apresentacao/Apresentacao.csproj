@@ -141,6 +141,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>midasDataSet9.xsd</DependentUpon>
     </Compile>
+    <Compile Include="midasDataSetCarregamentoBlocook.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetCarregamentoBlocook.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="midasDataSetCarregBlo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetCarregBlo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="midasDataSetCarregbloco.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -285,6 +295,28 @@
     </None>
     <None Include="midasDataSet9.xss">
       <DependentUpon>midasDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetCarregamentoBlocook.xsc">
+      <DependentUpon>midasDataSetCarregamentoBlocook.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetCarregamentoBlocook.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSetCarregamentoBlocook.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSetCarregamentoBlocook.xss">
+      <DependentUpon>midasDataSetCarregamentoBlocook.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetCarregBlo.xsc">
+      <DependentUpon>midasDataSetCarregBlo.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetCarregBlo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSetCarregBlo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSetCarregBlo.xss">
+      <DependentUpon>midasDataSetCarregBlo.xsd</DependentUpon>
     </None>
     <None Include="midasDataSetCarregbloco.xsc">
       <DependentUpon>midasDataSetCarregbloco.xsd</DependentUpon>

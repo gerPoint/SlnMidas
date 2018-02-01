@@ -156,8 +156,12 @@ namespace Apresentacao
 
         private void frmRomaneio_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'midasDataSetCarregBlo.tblCarregamentoBloco' table. You can move, or remove it, as needed.
+            this.tblCarregamentoBlocoTableAdapter2.Fill(this.midasDataSetCarregBlo.tblCarregamentoBloco);
+            // TODO: This line of code loads data into the 'midasDataSetCarregamentoBlocook.tblCarregamentoBloco' table. You can move, or remove it, as needed.
+            this.tblCarregamentoBlocoTableAdapter1.Fill(this.midasDataSetCarregamentoBlocook.tblCarregamentoBloco);
             // TODO: This line of code loads data into the 'midasDataSetRomaneioCorreto.tblRomaneio' table. You can move, or remove it, as needed.
-           //esse funfa porra(No caso o de baixo)
+            //esse funfa porra(No caso o de baixo)
             //this.tblRomaneioTableAdapter1.Fill(this.midasDataSetRomaneioCorreto.tblRomaneio);
 
             // TODO: This line of code loads data into the 'midasDataSetRomaneio.tblRomaneio' table. You can move, or remove it, as needed.
@@ -167,10 +171,23 @@ namespace Apresentacao
             // TODO: This line of code loads data into the 'midasDataSetUnidMedida.tblFruta' table. You can move, or remove it, as needed.
             // this.tblFrutaTableAdapter.Fill(this.midasDataSetUnidMedida.tblFruta);
             // TODO: This line of code loads data into the 'midasDataSetCarregbloco.tblCarregamentoBloco' table. You can move, or remove it, as needed.
+            if (cpoIDRomaneio.Text == "")
+            {
+                
+                /*tabPageCarregamento.Enabled = false;*/
+            }
+
+            tabPagePrincipal.Enabled = true;
+            tabPageRomaneio.Enabled = true;
+         //   tabPageCarregamento.Enabled = false;
+            
+
+
 
             comboBoxTpoPesquisa.Text = "Código";
             mskTxtBoxDtFinal.Enabled = false;
             mskTxtBoxDtInicial.Enabled = false;
+
         
 
             string comandoSql = "Select IDFormaPagamento, Descricao from tblFormaPagamento";
@@ -247,10 +264,11 @@ namespace Apresentacao
 
                 dgwCarregamento.DataSource = null;
 
-                ObjTransferencia.objCarregamentoBloco novoCarregamentoBloco = new objCarregamentoBloco();
+                objCarregamentoBloco novoCarregamentoBloco = new objCarregamentoBloco();
                 novoCarregamentoBloco.Bloco = cpoBloco.Text;
                 novoCarregamentoBloco.Quantidade = Convert.ToInt32(cpoQtd.Text);
                 novoCarregamentoBloco.Descricao = cpoDescricao.Text;
+                novoCarregamentoBloco.IDRomaneio = Convert.ToInt32(cpoIDRomaneio.Text);
                 listCarregamento.Add(novoCarregamentoBloco);
                 dgwCarregamento.DataSource = listCarregamento;
 
@@ -801,12 +819,15 @@ namespace Apresentacao
                 cpoValorTotalRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[13].Value.ToString();
                 cpoTaxaNf.Text = dgwRomaneio.SelectedRows[0].Cells[14].Value.ToString();
                 comboBoxUnidMedida.Text = dgwRomaneio.SelectedRows[0].Cells[15].Value.ToString();
-
+                cpoMostraCodRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[0].Value.ToString();
 
 
                 btnSalvar.Enabled = false;
                 btnAlterar.Enabled = true;
                 btnExcluir.Enabled = true;
+
+
+             //   tabPageCarregamento.Enabled = true;
             }
             catch (Exception)
             {
@@ -815,9 +836,37 @@ namespace Apresentacao
             }
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
 
+
+        private void btnRetornar_Click(object sender, EventArgs e)
+        {
+            cpoIDRomaneio.Clear();
+            cpoIDCliente.Clear();
+            cpoNomeCliente.Clear();
+            cpoIDFornecedor.Clear();
+            cpoNomeFornecedor.Clear();
+            cpoIDTransportador.Clear();
+            cpoNomeTransportador.Clear();
+            cpoIDFruta.Clear();
+            cpoNomeFruta.Clear();
+            cpoQtdGeral.Clear();
+            cpoCustoCarreg.Clear();
+            cpoAdiantFretMot.Clear();
+            cpoValorFrete.Clear();
+            cpoTaxaNf.Clear();
+            cpoSeguro.Clear();
+            cpoValorComissao.Clear();
+            cpoValorTotalRomaneio.Clear();
+
+        }
+
+        private void tabPageCarregamento_Click(object sender, EventArgs e)
+        {
+            if (cpoIDRomaneio.Text != null)
+            {
+                tabPageCarregamento.Visible = true;
+                tabPageCarregamento.Enabled = true;
+            }
         }
     }
 
