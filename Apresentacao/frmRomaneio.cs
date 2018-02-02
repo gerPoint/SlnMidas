@@ -29,6 +29,12 @@ namespace Apresentacao
         private Romaneio objRomaneio = new Romaneio();
 
 
+        NegCarregamentoBloco negCarreg = new NegCarregamentoBloco();
+
+        objCarregamentoBloco objCarreg = new objCarregamentoBloco();
+
+
+
         public frmRomaneio()
         {
             InitializeComponent();
@@ -157,9 +163,9 @@ namespace Apresentacao
         private void frmRomaneio_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'midasDataSetCarregBlo.tblCarregamentoBloco' table. You can move, or remove it, as needed.
-            this.tblCarregamentoBlocoTableAdapter2.Fill(this.midasDataSetCarregBlo.tblCarregamentoBloco);
+//            this.tblCarregamentoBlocoTableAdapter2.Fill(this.midasDataSetCarregBlo.tblCarregamentoBloco);
             // TODO: This line of code loads data into the 'midasDataSetCarregamentoBlocook.tblCarregamentoBloco' table. You can move, or remove it, as needed.
-            this.tblCarregamentoBlocoTableAdapter1.Fill(this.midasDataSetCarregamentoBlocook.tblCarregamentoBloco);
+//            this.tblCarregamentoBlocoTableAdapter1.Fill(this.midasDataSetCarregamentoBlocook.tblCarregamentoBloco);
             // TODO: This line of code loads data into the 'midasDataSetRomaneioCorreto.tblRomaneio' table. You can move, or remove it, as needed.
             //esse funfa porra(No caso o de baixo)
             //this.tblRomaneioTableAdapter1.Fill(this.midasDataSetRomaneioCorreto.tblRomaneio);
@@ -449,9 +455,9 @@ namespace Apresentacao
 
 
                 int idRomaneio = Convert.ToInt32(strRetorno);
-                //  if (int.TryParse(strRetorno, out intCodigo) == true)
+              
                 {
-                    //MessageBox.Show("Registro salvo com sucesso! Código: "  + idCliente.ToString() );
+                  
                     MessageBox.Show("Registro salvo com sucesso!", "Código: " + idRomaneio.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // this.DialogResult = DialogResult.OK;
@@ -685,7 +691,11 @@ namespace Apresentacao
                     return;
                 }
 
+                if(cpoAdiantFretMot.Text == "")
+                {
 
+                    cpoAdiantFretMot.Text = "0";
+                }
                 cpoValorTotalRomaneio.Clear();
 
 
@@ -765,8 +775,19 @@ namespace Apresentacao
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            this.dgwCarregamento.Rows.Remove(this.dgwCarregamento.CurrentRow);
-            this.dgwCarregamento.Refresh();
+            if (dgwCarregamento.Rows.Count < 1)
+            {
+
+                MessageBox.Show("Nenhum registro selecionado. Selecione um registro para efetuar a exclusão.");
+
+            }
+
+            else
+            {
+
+                this.dgwCarregamento.Rows.Remove(this.dgwCarregamento.CurrentRow);
+                this.dgwCarregamento.Refresh();
+            }
         }
 
         private void comboBoxTpoPesquisa_SelectedIndexChanged(object sender, EventArgs e)
@@ -802,6 +823,15 @@ namespace Apresentacao
             if (e.KeyChar == 13)
 
                 this.AtualizarGrid();
+
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Este Campo aceita apenas Números inteiros");
+                return;
+            }
+
+
         }
 
         private void dgwRomaneio_DoubleClick(object sender, EventArgs e)
@@ -877,24 +907,68 @@ namespace Apresentacao
 
         private void btnConcluir_Click(object sender, EventArgs e)
         {
-            string Conexao = Settings.Default.strConexao;
-            SqlCommand cmd = new SqlCommand('INSERT INTO tblCarregamentoBloco(Bloco, Descricao, Quantidade, IDRomaneio) Values(@Bloco, @Descricao, @Quantidade, @IDRomaneio);');
-            cmd.Parameters.Add(new SqlParameter("@Bloco", SqlDbType.VarChar));
-            cmd.Parameters.Add(new SqlParameter("@Descricao", SqlDbType.VarChar));
-            cmd.Parameters.Add(new SqlParameter("@Quantidade", SqlDbType.Int));
-            cmd.Parameters.Add(new SqlParameter("@IDRomaneio", SqlDbType.Int));
 
-            foreach (DataGridView row in dgwCarregamento.Rows)
+            string strRetorno = string.Empty;
+
+
+            foreach (DataGridViewRow row in dgwCarregamento.Rows)
             {
-                cmd.Parameters["@Bloco"].Value = row.Cells[2].Value;
-                cmd.Parameters["@Descricao"].Value = row.Cells[3].Value;
-                cmd.Parameters["@Quantidade"].Value = row.Cells[4].Value;
-                cmd.Parameters["@IDRomaneio"].Value = row.Cells[0].Value;
-                cmd.ExecuteNonQuery();
+                
+
+                this.objCarreg.Bloco = Convert.ToString(row.Cells[2].Value);
+                this.objCarreg.Descricao = Convert.ToString(row.Cells[3].Value);
+                this.objCarreg.Quantidade = Convert.ToInt32(row.Cells[4].Value);
+                this.objCarreg.IDRomaneio = Convert.ToInt32(row.Cells[0].Value);
+
+                NegCarregamentoBloco negCarreg = new NegCarregamentoBloco();
+                strRetorno = negCarreg.Cadastrar(this.objCarreg);
+
             }
 
+           
+            try
+            {
+
+                int idCarregamentoBloco = Convert.ToInt32(strRetorno);
+
+                //string strConexao = Settings.Default.strConexao;
+                //SqlConnection conexao = new SqlConnection(strConexao);
+                //SqlCommand cmd = new SqlCommand("INSERT INTO tblCarregamentoBloco(Bloco, Descricao, Quantidade, IDRomaneio) Values(@Bloco, @Descricao, @Quantidade, @IDRomaneio);");
+                //cmd.Connection = conexao;
+                //conexao.Open();
+                //cmd.Parameters.Add(new SqlParameter("@Bloco", SqlDbType.VarChar));
+                //cmd.Parameters.Add(new SqlParameter("@Descricao", SqlDbType.VarChar));
+                //cmd.Parameters.Add(new SqlParameter("@Quantidade", SqlDbType.Int));
+                //cmd.Parameters.Add(new SqlParameter("@IDRomaneio", SqlDbType.Int));
+
+                //foreach (DataGridViewRow row in dgwCarregamento.Rows)
+                //{
+                //    //cmd.Parameters["@Bloco"].Value = row.Cells[2].Value;
+                //    //cmd.Parameters["@Descricao"].Value = row.Cells[3].Value;
+                //    //cmd.Parameters["@Quantidade"].Value = row.Cells[4].Value;
+                //    //cmd.Parameters["@IDRomaneio"].Value = row.Cells[0].Value;
+                //    //cmd.ExecuteNonQuery();
+
+                //conexao.Close();
+                //}
+
+
+
+                MessageBox.Show("Registro salvo com sucesso!", "Código: " + idCarregamentoBloco.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                       
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Falha ao salvar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.DialogResult = DialogResult.No;
+            }
+
+          
         }
-    }
+    
+     }
 
     }
 

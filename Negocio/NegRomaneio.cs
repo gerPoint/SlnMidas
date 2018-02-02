@@ -28,7 +28,7 @@ namespace Negocio
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFornecedor", romaneio.IDFornecedor));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFruta", romaneio.IDFruta));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INQtdFrutas", romaneio.QtdFrutas));
-                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDCarregamento", romaneio.IDCarregamento));
+               // acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDCarregamento", romaneio.IDCarregamento));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INValorFrete", romaneio.ValorFrete));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INAdiantFretMot", romaneio.AdiantFretMot));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INFormaPagamento", romaneio.FormaPagamento));

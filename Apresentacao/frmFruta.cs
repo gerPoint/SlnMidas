@@ -35,7 +35,7 @@ namespace Apresentacao
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Fruta objFruta = new Fruta();
+          //  Fruta objFruta = new Fruta();
 
             this.objFruta.Nome = cpoNome.Text.TrimStart();
             this.objFruta.UnidMedida = cpoUnidMedida.Text.TrimStart();

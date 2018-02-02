@@ -264,6 +264,7 @@
             // 
             // toolTip1
             // 
+            this.toolTip1.AutomaticDelay = 800;
             this.toolTip1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 

@@ -207,7 +207,6 @@ namespace Apresentacao
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
             }
 

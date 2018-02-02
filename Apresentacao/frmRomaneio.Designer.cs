@@ -118,6 +118,7 @@
             this.btnCCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.tabPageCarregamento = new System.Windows.Forms.TabPage();
+            this.lblAjuda = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.cpoMostraCodRomaneio = new System.Windows.Forms.TextBox();
@@ -157,7 +158,7 @@
             this.tblCarregamentoBlocoTableAdapter1 = new Apresentacao.midasDataSetCarregamentoBlocookTableAdapters.tblCarregamentoBlocoTableAdapter();
             this.midasDataSetCarregamentoBlocookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblCarregamentoBlocoTableAdapter2 = new Apresentacao.midasDataSetCarregBloTableAdapters.tblCarregamentoBlocoTableAdapter();
-            this.lblAjuda = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabPagePrincipal.SuspendLayout();
             this.tabPageRomaneio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblFormaPagamentoBindingSource)).BeginInit();
@@ -1092,11 +1093,23 @@
             this.tabPageCarregamento.Text = "Carregamento";
             this.tabPageCarregamento.Click += new System.EventHandler(this.tabPageCarregamento_Click);
             // 
+            // lblAjuda
+            // 
+            this.lblAjuda.AutoSize = true;
+            this.lblAjuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAjuda.Location = new System.Drawing.Point(6, 520);
+            this.lblAjuda.Name = "lblAjuda";
+            this.lblAjuda.Size = new System.Drawing.Size(58, 13);
+            this.lblAjuda.TabIndex = 179;
+            this.lblAjuda.Text = "Ajuda (?)";
+            this.toolTip1.SetToolTip(this.lblAjuda, "Para selecionaro o Romaneio vá até a aba \"Romaneio\", pesquise o Romaneio desejado" +
+        " e selecione clicando duas vezes sobre o registro.");
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(642, 79);
+            this.label22.Location = new System.Drawing.Point(634, 40);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(67, 20);
             this.label22.TabIndex = 178;
@@ -1106,7 +1119,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(573, 64);
+            this.label23.Location = new System.Drawing.Point(565, 25);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(193, 16);
             this.label23.TabIndex = 177;
@@ -1118,7 +1131,7 @@
             this.cpoMostraCodRomaneio.Enabled = false;
             this.cpoMostraCodRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoMostraCodRomaneio.ForeColor = System.Drawing.Color.Green;
-            this.cpoMostraCodRomaneio.Location = new System.Drawing.Point(772, 62);
+            this.cpoMostraCodRomaneio.Location = new System.Drawing.Point(764, 23);
             this.cpoMostraCodRomaneio.Multiline = true;
             this.cpoMostraCodRomaneio.Name = "cpoMostraCodRomaneio";
             this.cpoMostraCodRomaneio.ReadOnly = true;
@@ -1141,22 +1154,23 @@
             this.btnConcluir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConcluir.Image = global::Apresentacao.Properties.Resources.stake_truck_18543;
             this.btnConcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConcluir.Location = new System.Drawing.Point(821, 465);
+            this.btnConcluir.Location = new System.Drawing.Point(853, 465);
             this.btnConcluir.Name = "btnConcluir";
-            this.btnConcluir.Size = new System.Drawing.Size(117, 48);
+            this.btnConcluir.Size = new System.Drawing.Size(115, 48);
             this.btnConcluir.TabIndex = 35;
             this.btnConcluir.Text = "Concluir";
             this.btnConcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConcluir.UseVisualStyleBackColor = true;
+            this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(631, 467);
+            this.btnCancelar.Location = new System.Drawing.Point(671, 463);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(103, 44);
+            this.btnCancelar.Size = new System.Drawing.Size(115, 48);
             this.btnCancelar.TabIndex = 34;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1386,16 +1400,9 @@
             // 
             this.tblCarregamentoBlocoTableAdapter2.ClearBeforeFill = true;
             // 
-            // lblAjuda
+            // toolTip1
             // 
-            this.lblAjuda.AutoSize = true;
-            this.lblAjuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAjuda.Location = new System.Drawing.Point(23, 498);
-            this.lblAjuda.Name = "lblAjuda";
-            this.lblAjuda.Size = new System.Drawing.Size(58, 13);
-            this.lblAjuda.TabIndex = 179;
-            this.lblAjuda.Text = "Ajuda (?)";
-            this.lblAjuda.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.toolTip1.AutomaticDelay = 800;
             // 
             // frmRomaneio
             // 
@@ -1575,5 +1582,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox cpoMostraCodRomaneio;
         private System.Windows.Forms.Label lblAjuda;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
