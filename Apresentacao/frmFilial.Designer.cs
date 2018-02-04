@@ -491,7 +491,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 529);
+            this.ClientSize = new System.Drawing.Size(843, 516);
             this.Controls.Add(this.cpoCnpj);
             this.Controls.Add(this.cpoTelefone);
             this.Controls.Add(this.btnRetornar);

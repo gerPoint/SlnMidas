@@ -112,11 +112,11 @@
     <Compile Include="frmSelecionarFruta.Designer.cs">
       <DependentUpon>frmSelecionarFruta.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSelecionarRomaneio.cs">
+    <Compile Include="frmVisualizarRomaneio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSelecionarRomaneio.Designer.cs">
-      <DependentUpon>frmSelecionarRomaneio.cs</DependentUpon>
+    <Compile Include="frmVisualizarRomaneio.Designer.cs">
+      <DependentUpon>frmVisualizarRomaneio.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSelecionarTransportador.cs">
       <SubType>Form</SubType>
@@ -265,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelecionarFruta.resx">
       <DependentUpon>frmSelecionarFruta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisualizarRomaneio.resx">
+      <DependentUpon>frmVisualizarRomaneio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelecionarTransportador.resx">
       <DependentUpon>frmSelecionarTransportador.cs</DependentUpon>
@@ -581,6 +584,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Esse sim2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar-symbol_icon-icons.com_70753.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editing-pencil_icon-icons.com_68219.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -34,7 +34,6 @@
             this.cpoEndereco = new System.Windows.Forms.TextBox();
             this.cpoUf = new System.Windows.Forms.TextBox();
             this.cpoCidade = new System.Windows.Forms.TextBox();
-            this.cpoTelefone = new System.Windows.Forms.TextBox();
             this.cpoVeiculo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -66,8 +65,9 @@
             this.midasDataSet1 = new Apresentacao.midasDataSetFruta();
             this.midasDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblTransportadorTableAdapter = new Apresentacao.midasDataSet2TableAdapters.tblTransportadorTableAdapter();
-            this.btnRetornar = new System.Windows.Forms.Button();
-            this.cpoPlaca = new System.Windows.Forms.MaskedTextBox();
+            this.cpoPlaca = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cpoTelefone = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwTransportador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblTransportadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSet2)).BeginInit();
@@ -95,16 +95,16 @@
             // cpoEndereco
             // 
             this.cpoEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoEndereco.Location = new System.Drawing.Point(458, 313);
+            this.cpoEndereco.Location = new System.Drawing.Point(487, 313);
             this.cpoEndereco.MaxLength = 50;
             this.cpoEndereco.Name = "cpoEndereco";
-            this.cpoEndereco.Size = new System.Drawing.Size(301, 20);
+            this.cpoEndereco.Size = new System.Drawing.Size(334, 20);
             this.cpoEndereco.TabIndex = 5;
             // 
             // cpoUf
             // 
             this.cpoUf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoUf.Location = new System.Drawing.Point(722, 349);
+            this.cpoUf.Location = new System.Drawing.Point(784, 352);
             this.cpoUf.MaxLength = 2;
             this.cpoUf.Name = "cpoUf";
             this.cpoUf.Size = new System.Drawing.Size(37, 20);
@@ -113,35 +113,25 @@
             // cpoCidade
             // 
             this.cpoCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCidade.Location = new System.Drawing.Point(458, 349);
+            this.cpoCidade.Location = new System.Drawing.Point(487, 352);
             this.cpoCidade.MaxLength = 50;
             this.cpoCidade.Name = "cpoCidade";
-            this.cpoCidade.Size = new System.Drawing.Size(202, 20);
+            this.cpoCidade.Size = new System.Drawing.Size(223, 20);
             this.cpoCidade.TabIndex = 7;
-            // 
-            // cpoTelefone
-            // 
-            this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoTelefone.Location = new System.Drawing.Point(95, 347);
-            this.cpoTelefone.MaxLength = 14;
-            this.cpoTelefone.Name = "cpoTelefone";
-            this.cpoTelefone.Size = new System.Drawing.Size(247, 20);
-            this.cpoTelefone.TabIndex = 6;
-            this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress);
             // 
             // cpoVeiculo
             // 
             this.cpoVeiculo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoVeiculo.Location = new System.Drawing.Point(95, 382);
+            this.cpoVeiculo.Location = new System.Drawing.Point(95, 389);
             this.cpoVeiculo.MaxLength = 50;
             this.cpoVeiculo.Name = "cpoVeiculo";
-            this.cpoVeiculo.Size = new System.Drawing.Size(245, 20);
+            this.cpoVeiculo.Size = new System.Drawing.Size(280, 20);
             this.cpoVeiculo.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(399, 386);
+            this.label5.Location = new System.Drawing.Point(428, 393);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(34, 13);
             this.label5.TabIndex = 105;
@@ -150,7 +140,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(399, 315);
+            this.label8.Location = new System.Drawing.Point(428, 317);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 13);
             this.label8.TabIndex = 104;
@@ -159,7 +149,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(694, 351);
+            this.label7.Location = new System.Drawing.Point(756, 356);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(21, 13);
             this.label7.TabIndex = 103;
@@ -168,7 +158,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 349);
+            this.label6.Location = new System.Drawing.Point(36, 356);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 102;
@@ -177,7 +167,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(399, 351);
+            this.label4.Location = new System.Drawing.Point(428, 356);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 101;
@@ -186,7 +176,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 384);
+            this.label2.Location = new System.Drawing.Point(36, 393);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 100;
@@ -310,10 +300,10 @@
             // cpoNome
             // 
             this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoNome.Location = new System.Drawing.Point(95, 311);
+            this.cpoNome.Location = new System.Drawing.Point(95, 313);
             this.cpoNome.MaxLength = 50;
             this.cpoNome.Name = "cpoNome";
-            this.cpoNome.Size = new System.Drawing.Size(247, 20);
+            this.cpoNome.Size = new System.Drawing.Size(280, 20);
             this.cpoNome.TabIndex = 4;
             // 
             // cpoCaixaPesquisa
@@ -329,7 +319,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 313);
+            this.label1.Location = new System.Drawing.Point(36, 317);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 98;
@@ -415,42 +405,50 @@
             // 
             this.tblTransportadorTableAdapter.ClearBeforeFill = true;
             // 
-            // btnRetornar
-            // 
-            this.btnRetornar.Image = global::Apresentacao.Properties.Resources.restart_back_left_arrow_6022;
-            this.btnRetornar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRetornar.Location = new System.Drawing.Point(39, 431);
-            this.btnRetornar.Name = "btnRetornar";
-            this.btnRetornar.Size = new System.Drawing.Size(89, 44);
-            this.btnRetornar.TabIndex = 11;
-            this.btnRetornar.Text = "Retornar";
-            this.btnRetornar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRetornar.UseVisualStyleBackColor = true;
-            this.btnRetornar.Click += new System.EventHandler(this.btnRetornar_Click);
-            // 
             // cpoPlaca
             // 
-            this.cpoPlaca.Location = new System.Drawing.Point(458, 382);
-            this.cpoPlaca.Mask = "000-0000";
+            this.cpoPlaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoPlaca.Location = new System.Drawing.Point(487, 389);
+            this.cpoPlaca.MaxLength = 8;
             this.cpoPlaca.Name = "cpoPlaca";
-            this.cpoPlaca.Size = new System.Drawing.Size(85, 20);
-            this.cpoPlaca.TabIndex = 100001;
-            this.cpoPlaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoPlaca_KeyPress);
+            this.cpoPlaca.Size = new System.Drawing.Size(87, 20);
+            this.cpoPlaca.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::Apresentacao.Properties.Resources.restart_back_left_arrow_6022;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(39, 431);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 44);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Retornar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnRetornar_Click);
+            // 
+            // cpoTelefone
+            // 
+            this.cpoTelefone.Location = new System.Drawing.Point(95, 352);
+            this.cpoTelefone.Mask = "(99) 000000000";
+            this.cpoTelefone.Name = "cpoTelefone";
+            this.cpoTelefone.Size = new System.Drawing.Size(116, 20);
+            this.cpoTelefone.TabIndex = 6;
             // 
             // frmTransportador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(863, 497);
-            this.Controls.Add(this.cpoPlaca);
-            this.Controls.Add(this.btnRetornar);
+            this.Controls.Add(this.cpoTelefone);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cpoIDTransportador);
             this.Controls.Add(this.lblIDCliente);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.cpoEndereco);
+            this.Controls.Add(this.cpoPlaca);
             this.Controls.Add(this.cpoUf);
             this.Controls.Add(this.cpoCidade);
-            this.Controls.Add(this.cpoTelefone);
             this.Controls.Add(this.cpoVeiculo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label8);
@@ -491,7 +489,6 @@
         private System.Windows.Forms.TextBox cpoEndereco;
         private System.Windows.Forms.TextBox cpoUf;
         private System.Windows.Forms.TextBox cpoCidade;
-        private System.Windows.Forms.TextBox cpoTelefone;
         private System.Windows.Forms.TextBox cpoVeiculo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
@@ -522,7 +519,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefoneDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button btnRetornar;
-        private System.Windows.Forms.MaskedTextBox cpoPlaca;
+        private System.Windows.Forms.TextBox cpoPlaca;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.MaskedTextBox cpoTelefone;
     }
 }

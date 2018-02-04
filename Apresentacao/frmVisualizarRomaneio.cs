@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Apresentacao
 {
-    public partial class frmSelecionarRomaneio : Form
+    public partial class frmVisualizarRomaneio : Form
     {
-        public frmSelecionarRomaneio()
+        public frmVisualizarRomaneio()
         {
             InitializeComponent();
         }

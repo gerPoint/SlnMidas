@@ -379,10 +379,12 @@ namespace Apresentacao
 
         private void cpoPlaca_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                e.Handled = true;
-            }
+
+        }
+
+        private void cpoPlaca_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
     

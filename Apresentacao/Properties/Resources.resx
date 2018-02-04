@@ -130,26 +130,32 @@
   <data name="Plus_36851" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Plus_36851.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dollar-symbol_icon-icons.com_70753" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dollar-symbol_icon-icons.com_70753.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="stake_truck_18543" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stake_truck_18543.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bigstock-closeup-of-a-young-farmer-obse-121893422" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bigstock-closeup-of-a-young-farmer-obse-121893422.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="saveall_1204" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saveall_1204.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Oxygen-Icons.org-Oxygen-Status-mail-task" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Oxygen-Icons.org-Oxygen-Status-mail-task.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete_4219" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_4219.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Minus_36877 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minus_36877 (1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Esse sim2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Esse sim2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="restart_back_left_arrow_6022" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\restart_back_left_arrow_6022.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="saveall_1204" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saveall_1204.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Minus_36877 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minus_36877 (1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pesquisar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pesquisar1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="midasCarregamento" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\midasCarregamento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,13 +172,13 @@
   <data name="cancel_stop_exit_1583" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel_stop_exit_1583.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pesquisar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pesquisar1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="delete_4219" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_4219.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="favicon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\favicon (1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Esse sim2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Esse sim2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="editing-pencil_icon-icons.com_68219" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editing-pencil_icon-icons.com_68219.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

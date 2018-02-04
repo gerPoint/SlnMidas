@@ -149,13 +149,67 @@ namespace Apresentacao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Falha ao consultar Cliente. Falha: " +
+                MessageBox.Show("Falha ao consultar Romaneio. Falha: " +
                     ex.Message, "Falha", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
 
 
         }
+
+        private void AtualizarGrid2()
+        {
+            try
+            {
+                if (cpoDtInicial.Text == "")
+                {
+                    MessageBox.Show("Por favor, informe o Codigo do Romaneio para pesquisar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cpoDtFinal.Text = string.Empty;
+                    cpoDtFinal.Focus();
+                    cpoDtFinal.Text = string.Empty;
+                    cpoDtFinal.Focus();
+                    return;
+                }
+
+                NegRomaneio objNegRomaneio = new NegRomaneio();
+                RomaneioLista objLista;
+                try
+                {
+                    //int cod = int.Parse(CaixaPesquisa.Text);
+                    objLista = objNegRomaneio.ConsultarData(cpoDtInicial.Value, cpoDtFinal.Value);
+                }
+                catch
+                {
+
+                    objLista = objNegRomaneio.ConsultarData(cpoDtInicial.Value, cpoDtFinal.Value);
+                }
+
+
+                if (objLista.Count == 0)
+                {
+                    MessageBox.Show("Nenhum registro encontrado.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cpoCodigo.Text = string.Empty;
+                    cpoCodigo.Focus();
+                    return;
+                }
+
+                dgwRomaneio.DataSource = null;
+                dgwRomaneio.DataSource = objLista;
+                dgwRomaneio.Update();
+                dgwRomaneio.Refresh();
+                cpoCodigo.Text = string.Empty;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao consultar Romaneio. Falha: " +
+                    ex.Message, "Falha", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+
+        }
+
+
+
 
 
 
@@ -177,11 +231,7 @@ namespace Apresentacao
             // TODO: This line of code loads data into the 'midasDataSetUnidMedida.tblFruta' table. You can move, or remove it, as needed.
             // this.tblFrutaTableAdapter.Fill(this.midasDataSetUnidMedida.tblFruta);
             // TODO: This line of code loads data into the 'midasDataSetCarregbloco.tblCarregamentoBloco' table. You can move, or remove it, as needed.
-            if (cpoIDRomaneio.Text == "")
-            {
-                
-                /*tabPageCarregamento.Enabled = false;*/
-            }
+
 
             tabPagePrincipal.Enabled = true;
             tabPageRomaneio.Enabled = true;
@@ -191,8 +241,8 @@ namespace Apresentacao
 
 
             comboBoxTpoPesquisa.Text = "Código";
-            mskTxtBoxDtFinal.Enabled = false;
-            mskTxtBoxDtInicial.Enabled = false;
+            cpoDtFinal.Enabled = false;
+            cpoDtInicial.Enabled = false;
 
         
 
@@ -795,14 +845,14 @@ namespace Apresentacao
             if (comboBoxTpoPesquisa.Text == "Código")
             {
                 cpoCodigo.Enabled = true;
-                mskTxtBoxDtFinal.Enabled = false;
-                mskTxtBoxDtInicial.Enabled = false;
+                cpoDtFinal.Enabled = false;
+                cpoDtInicial.Enabled = false;
             }
             else
             {
                 cpoCodigo.Enabled = false;
-                mskTxtBoxDtFinal.Enabled = true;
-                mskTxtBoxDtInicial.Enabled = true;
+                cpoDtFinal.Enabled = true;
+                cpoDtInicial.Enabled = true;
             }
         }
 
@@ -814,7 +864,7 @@ namespace Apresentacao
             }
             else
             {
-               
+                AtualizarGrid2();
             }
         }
 
@@ -846,15 +896,15 @@ namespace Apresentacao
                 cpoIDFruta.Text = dgwRomaneio.SelectedRows[0].Cells[4].Value.ToString();
                 cpoQtdGeral.Text = dgwRomaneio.SelectedRows[0].Cells[5].Value.ToString();
           //    cpoIDCarregamento.Text = dgwRomaneio.SelectedRows[0].Cells[3].Value.ToString();
-                cpoValorFrete.Text = dgwRomaneio.SelectedRows[0].Cells[7].Value.ToString();
-                cpoSeguro.Text = dgwRomaneio.SelectedRows[0].Cells[8].Value.ToString();
-                cpoAdiantFretMot.Text = dgwRomaneio.SelectedRows[0].Cells[9].Value.ToString();
-                comboBoxFormaPagamento.Text = dgwRomaneio.SelectedRows[0].Cells[10].Value.ToString();
-                cpoCustoCarreg.Text = dgwRomaneio.SelectedRows[0].Cells[11].Value.ToString();
-                cpoValorComissao.Text = dgwRomaneio.SelectedRows[0].Cells[12].Value.ToString();
-                cpoValorTotalRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[13].Value.ToString();
-                cpoTaxaNf.Text = dgwRomaneio.SelectedRows[0].Cells[14].Value.ToString();
-                comboBoxUnidMedida.Text = dgwRomaneio.SelectedRows[0].Cells[15].Value.ToString();
+                cpoValorFrete.Text = dgwRomaneio.SelectedRows[0].Cells[6].Value.ToString();
+                cpoSeguro.Text = dgwRomaneio.SelectedRows[0].Cells[7].Value.ToString();
+                cpoAdiantFretMot.Text = dgwRomaneio.SelectedRows[0].Cells[8].Value.ToString();
+                comboBoxFormaPagamento.Text = dgwRomaneio.SelectedRows[0].Cells[9].Value.ToString();
+                cpoCustoCarreg.Text = dgwRomaneio.SelectedRows[0].Cells[10].Value.ToString();
+                cpoValorComissao.Text = dgwRomaneio.SelectedRows[0].Cells[11].Value.ToString();
+                cpoValorTotalRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[12].Value.ToString();
+                cpoTaxaNf.Text = dgwRomaneio.SelectedRows[0].Cells[13].Value.ToString();
+                comboBoxUnidMedida.Text = dgwRomaneio.SelectedRows[0].Cells[14].Value.ToString();
                 cpoMostraCodRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[0].Value.ToString();
 
 
@@ -874,27 +924,6 @@ namespace Apresentacao
 
 
 
-        private void btnRetornar_Click(object sender, EventArgs e)
-        {
-            cpoIDRomaneio.Clear();
-            cpoIDCliente.Clear();
-            cpoNomeCliente.Clear();
-            cpoIDFornecedor.Clear();
-            cpoNomeFornecedor.Clear();
-            cpoIDTransportador.Clear();
-            cpoNomeTransportador.Clear();
-            cpoIDFruta.Clear();
-            cpoNomeFruta.Clear();
-            cpoQtdGeral.Clear();
-            cpoCustoCarreg.Clear();
-            cpoAdiantFretMot.Clear();
-            cpoValorFrete.Clear();
-            cpoTaxaNf.Clear();
-            cpoSeguro.Clear();
-            cpoValorComissao.Clear();
-            cpoValorTotalRomaneio.Clear();
-
-        }
 
         private void tabPageCarregamento_Click(object sender, EventArgs e)
         {
@@ -967,8 +996,28 @@ namespace Apresentacao
 
           
         }
-    
-     }
+
+        private void btnIgnorarEdicoes_Click(object sender, EventArgs e)
+        {
+            cpoIDRomaneio.Clear();
+            cpoIDCliente.Clear();
+            cpoNomeCliente.Clear();
+            cpoIDFornecedor.Clear();
+            cpoNomeFornecedor.Clear();
+            cpoIDTransportador.Clear();
+            cpoNomeTransportador.Clear();
+            cpoIDFruta.Clear();
+            cpoNomeFruta.Clear();
+            cpoQtdGeral.Clear();
+            cpoCustoCarreg.Clear();
+            cpoAdiantFretMot.Clear();
+            cpoValorFrete.Clear();
+            cpoTaxaNf.Clear();
+            cpoSeguro.Clear();
+            cpoValorComissao.Clear();
+            cpoValorTotalRomaneio.Clear();
+        }
+    }
 
     }
 

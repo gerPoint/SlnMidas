@@ -133,6 +133,26 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dollar_symbol_icon_icons_com_70753 {
+            get {
+                object obj = ResourceManager.GetObject("dollar-symbol_icon-icons.com_70753", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editing_pencil_icon_icons_com_68219 {
+            get {
+                object obj = ResourceManager.GetObject("editing-pencil_icon-icons.com_68219", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Esse_sim2 {
             get {
                 object obj = ResourceManager.GetObject("Esse sim2", resourceCulture);

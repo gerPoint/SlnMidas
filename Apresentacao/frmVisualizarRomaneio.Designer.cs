@@ -1,6 +1,6 @@
 ﻿namespace Apresentacao
 {
-    partial class frmSelecionarRomaneio
+    partial class frmVisualizarRomaneio
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmVisualizarRomaneio
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "FrmSelecionarRomaneio";
+            this.ClientSize = new System.Drawing.Size(1004, 633);
+            this.Name = "frmVisualizarRomaneio";
+            this.Text = "Visualizar Romaneio";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
