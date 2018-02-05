@@ -874,7 +874,7 @@ namespace Apresentacao
 
                 this.AtualizarGrid();
 
-            cpoCodigo.Clear();
+           
 
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
             {

@@ -376,7 +376,7 @@ namespace Apresentacao
 
                 this.AtualizarGrid();
 
-            cpoCaixaPesquisa.Clear();
+            
         }
 
         private void cpoPlaca_KeyPress(object sender, KeyPressEventArgs e)
@@ -387,6 +387,12 @@ namespace Apresentacao
         private void cpoPlaca_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void cpoCaixaPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            cpoCaixaPesquisa.Text = ConvMaiuscula(cpoCaixaPesquisa.Text).ToString();
+            cpoCaixaPesquisa.SelectionStart = cpoCaixaPesquisa.Text.Length;
         }
     }
     

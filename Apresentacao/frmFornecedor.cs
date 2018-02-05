@@ -434,7 +434,7 @@ namespace Apresentacao
 
                 this.AtualizarGrid();
 
-            cpoCaixaPesquisa.Clear();
+            
         }
 
         private void cpoCnpj_KeyPress_1(object sender, KeyPressEventArgs e)

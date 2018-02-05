@@ -310,7 +310,8 @@
             this.Name = "frmFormaPagamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Forma de Pagamento";
-            this.Load += new System.EventHandler(this.frmFormaPagamento_Load);
+            this.TextChanged += new System.EventHandler(this.frmFormaPagamento_TextChanged);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmFormaPagamento_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.dgwFormaPagamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFormaPagamentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetFormaPgto)).EndInit();

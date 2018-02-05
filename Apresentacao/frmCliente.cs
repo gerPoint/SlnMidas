@@ -126,6 +126,8 @@ namespace Apresentacao
 
         {
             AtualizarGrid();
+
+          
         }
 
 
@@ -136,9 +138,8 @@ namespace Apresentacao
                 if (cpoCaixaPesquisa.Text == string.Empty)
                 {
                     MessageBox.Show("Por favor, informe o nome do Cliente para pesquisar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    cpoCaixaPesquisa.Text = string.Empty;
                     cpoCaixaPesquisa.Focus();
-                    //CaixaPesquisa.DataSource = "";
+                    cpoCaixaPesquisa.Clear();
                     return;
                 }
 
@@ -158,9 +159,13 @@ namespace Apresentacao
 
                 if (objLista.Count == 0)
                 {
-                    MessageBox.Show("Nenhum registro encontrado.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    cpoCaixaPesquisa.Text = string.Empty;
+
                     cpoCaixaPesquisa.Focus();
+                    cpoCaixaPesquisa.Clear();
+
+                    MessageBox.Show("Nenhum registro encontrado.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
                     return;
                 }
 
@@ -168,7 +173,7 @@ namespace Apresentacao
                 dgwCliente.DataSource = objLista;
                 dgwCliente.Update();
                 dgwCliente.Refresh();
-                cpoCaixaPesquisa.Text = string.Empty;
+                cpoCaixaPesquisa.Clear();
             }
             catch (Exception ex)
             {
@@ -495,10 +500,10 @@ namespace Apresentacao
             if (e.KeyChar == 13)
 
                 this.AtualizarGrid();
-
-            cpoCaixaPesquisa.Clear();
+                        
         }
 
+      
         private void cpoCnpj_TextChanged(object sender, EventArgs e)
         {
 

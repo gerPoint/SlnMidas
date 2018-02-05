@@ -418,7 +418,6 @@ namespace Apresentacao
 
                 this.AtualizarGrid();
 
-            cpoCaixaPesquisa.Clear();
         }
 
         private void cpoUf_TextChanged(object sender, EventArgs e)

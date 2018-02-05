@@ -160,7 +160,6 @@ namespace Apresentacao
 
                 this.AtualizarGrid();
 
-            cpoCaixaPesquisa.Clear();
         }
     }
 

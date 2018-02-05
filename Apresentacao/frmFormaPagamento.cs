@@ -356,5 +356,18 @@ namespace Apresentacao
 
             cpoCaixaPesquisa.Clear();
         }
+
+        private void frmFormaPagamento_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+
+                this.AtualizarGrid();
+        }
+
+        private void frmFormaPagamento_TextChanged(object sender, EventArgs e)
+        {
+            cpoCaixaPesquisa.Text = ConvMaiuscula(cpoCaixaPesquisa.Text).ToString();
+            cpoCaixaPesquisa.SelectionStart = cpoCaixaPesquisa.Text.Length;
+        }
     }
 }
