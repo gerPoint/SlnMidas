@@ -166,6 +166,8 @@ namespace Apresentacao
             cpoCaixaPesquisa.Text = ConvMaiuscula(cpoCaixaPesquisa.Text).ToString();
             cpoCaixaPesquisa.SelectionStart = cpoCaixaPesquisa.Text.Length;
 
+            
+
         }
 
         private void toolTip1_Popup(object sender, PopupEventArgs e)
@@ -178,6 +180,8 @@ namespace Apresentacao
             if (e.KeyChar == 13)
 
                 this.AtualizarGrid();
+
+            cpoCaixaPesquisa.Clear();
         }
 
 

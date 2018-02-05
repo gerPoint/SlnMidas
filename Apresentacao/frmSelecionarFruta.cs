@@ -154,6 +154,8 @@ namespace Apresentacao
             if (e.KeyChar == 13)
 
                 this.AtualizarGrid();
+
+            cpoCaixaPesquisa.Clear();
         }
         //--------------------------------Somente a primeira letra maiuscula de cada palavra---------------------------------------------
 

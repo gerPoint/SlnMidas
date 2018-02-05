@@ -375,6 +375,8 @@ namespace Apresentacao
             if (e.KeyChar == 13)
 
                 this.AtualizarGrid();
+
+            cpoCaixaPesquisa.Clear();
         }
 
         private void cpoPlaca_KeyPress(object sender, KeyPressEventArgs e)

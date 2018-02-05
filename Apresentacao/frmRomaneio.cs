@@ -15,14 +15,14 @@ using Apresentacao.Properties;
 
 namespace Apresentacao
 {
-    
-   public partial class frmRomaneio : Form
+
+    public partial class frmRomaneio : Form
     {
-//------------------usado para adicionar blocos --------------------
+        //------------------usado para adicionar blocos --------------------
 
         BindingList<objCarregamentoBloco> listCarregamento = new BindingList<objCarregamentoBloco>();
 
-//------------------usado para adicionar blocos --------------------
+        //------------------usado para adicionar blocos --------------------
 
         NegRomaneio negRomaneio = new NegRomaneio();
 
@@ -39,7 +39,7 @@ namespace Apresentacao
         {
             InitializeComponent();
         }
-//-------------------------------------------------- SERVE PARA PEGAR DADOS DE UM FORM E PASSAR PARA OUTRO FORM-----------------------------
+        //-------------------------------------------------- SERVE PARA PEGAR DADOS DE UM FORM E PASSAR PARA OUTRO FORM-----------------------------
         public String NomeCliente
         {
             get { return cpoNomeCliente.Text; }
@@ -217,9 +217,9 @@ namespace Apresentacao
         private void frmRomaneio_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'midasDataSetCarregBlo.tblCarregamentoBloco' table. You can move, or remove it, as needed.
-//            this.tblCarregamentoBlocoTableAdapter2.Fill(this.midasDataSetCarregBlo.tblCarregamentoBloco);
+            //            this.tblCarregamentoBlocoTableAdapter2.Fill(this.midasDataSetCarregBlo.tblCarregamentoBloco);
             // TODO: This line of code loads data into the 'midasDataSetCarregamentoBlocook.tblCarregamentoBloco' table. You can move, or remove it, as needed.
-//            this.tblCarregamentoBlocoTableAdapter1.Fill(this.midasDataSetCarregamentoBlocook.tblCarregamentoBloco);
+            //            this.tblCarregamentoBlocoTableAdapter1.Fill(this.midasDataSetCarregamentoBlocook.tblCarregamentoBloco);
             // TODO: This line of code loads data into the 'midasDataSetRomaneioCorreto.tblRomaneio' table. You can move, or remove it, as needed.
             //esse funfa porra(No caso o de baixo)
             //this.tblRomaneioTableAdapter1.Fill(this.midasDataSetRomaneioCorreto.tblRomaneio);
@@ -235,8 +235,8 @@ namespace Apresentacao
 
             tabPagePrincipal.Enabled = true;
             tabPageRomaneio.Enabled = true;
-         //   tabPageCarregamento.Enabled = false;
-            
+            //   tabPageCarregamento.Enabled = false;
+
 
 
 
@@ -244,7 +244,7 @@ namespace Apresentacao
             cpoDtFinal.Enabled = false;
             cpoDtInicial.Enabled = false;
 
-        
+
 
             string comandoSql = "Select IDFormaPagamento, Descricao from tblFormaPagamento";
             string conexao = Settings.Default.strConexao;
@@ -269,16 +269,16 @@ namespace Apresentacao
             comboBoxFilial.DisplayMember = "RazaoSocial";
             comboBoxFilial.SelectedItem = "";
             comboBoxFilial.Refresh();
-           
 
 
 
-                
-
-    }
 
 
-    private void btnCancelar_Click(object sender, EventArgs e)
+
+        }
+
+
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -296,7 +296,7 @@ namespace Apresentacao
                 btnInserir.Click -= new EventHandler(btnInserir_Click);
                 string strRetorno = string.Empty;
 
-                
+
 
                 if (cpoMostraCodRomaneio.Text == "")
                 {
@@ -346,7 +346,7 @@ namespace Apresentacao
             }
             finally
             {
-             
+
                 btnInserir.Click += new EventHandler(btnInserir_Click);
             }
         }
@@ -382,7 +382,7 @@ namespace Apresentacao
             {
 
                 objCarregamentoBloco row = (dgwCarregamento.SelectedRows[0].DataBoundItem as objCarregamentoBloco);
-               
+
                 cpoDescricao.Text = row.Descricao;
                 cpoQtd.Text = row.Quantidade.ToString();
                 cpoBloco.Text = row.Bloco;
@@ -391,7 +391,7 @@ namespace Apresentacao
             }
             finally
             {
-                        
+
             }
         }
 
@@ -470,7 +470,7 @@ namespace Apresentacao
 
             //--------------------------------------------coloca o zero onde esta vazio------------------------------------------------------
 
-            if (cpoAdiantFretMot.Text == "") 
+            if (cpoAdiantFretMot.Text == "")
 
             {
                 cpoAdiantFretMot.Text = "0";
@@ -492,9 +492,9 @@ namespace Apresentacao
             this.objRomaneio.QtdFrutas = Convert.ToInt32(cpoQtdGeral.Text);
             this.objRomaneio.ValorTotalRomaneio = Convert.ToDecimal(cpoValorTotalRomaneio.Text);
 
-            
 
-   
+
+
 
 
             NegRomaneio negRomaneio = new NegRomaneio();
@@ -505,9 +505,9 @@ namespace Apresentacao
 
 
                 int idRomaneio = Convert.ToInt32(strRetorno);
-              
+
                 {
-                  
+
                     MessageBox.Show("Registro salvo com sucesso!", "Código: " + idRomaneio.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // this.DialogResult = DialogResult.OK;
@@ -558,7 +558,7 @@ namespace Apresentacao
             }
 
 
-          }
+        }
 
         private void cpoQtdGeral_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -593,7 +593,7 @@ namespace Apresentacao
             }
             catch (Exception ex)
             {
-               MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -626,7 +626,7 @@ namespace Apresentacao
         private void cpoValorTotalRomaneio_KeyDown(object sender, KeyEventArgs e)
         {
 
-         }
+        }
 
         private void cpoValorFrete_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -741,7 +741,7 @@ namespace Apresentacao
                     return;
                 }
 
-                if(cpoAdiantFretMot.Text == "")
+                if (cpoAdiantFretMot.Text == "")
                 {
 
                     cpoAdiantFretMot.Text = "0";
@@ -758,7 +758,7 @@ namespace Apresentacao
                 valor6 = Convert.ToDecimal(cpoAdiantFretMot.Text);
                 resultado = valor1 + valor2 + valor3 + valor4 + valor5 - valor6;
                 cpoValorTotalRomaneio.Text = resultado.ToString();
-           //     cpoValorTotalRomaneio.Text - cpoAdiantFretMot.Text = resultado.ToString()
+                //     cpoValorTotalRomaneio.Text - cpoAdiantFretMot.Text = resultado.ToString()
 
                 cpoSeguro.Enabled = false;
                 cpoTaxaNf.Enabled = false;
@@ -780,10 +780,10 @@ namespace Apresentacao
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-              
+
             }
 
-   
+
         }
 
 
@@ -791,7 +791,7 @@ namespace Apresentacao
 
         private void cpoValorTotalRomaneio_TextChanged(object sender, EventArgs e)
         {
- 
+
 
 
         }
@@ -874,11 +874,18 @@ namespace Apresentacao
 
                 this.AtualizarGrid();
 
+            cpoCodigo.Clear();
+
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
             {
                 e.Handled = true;
+
+                cpoCodigo.Clear();
+
                 MessageBox.Show("Este Campo aceita apenas Números inteiros");
                 return;
+
+             
             }
 
 
@@ -888,14 +895,14 @@ namespace Apresentacao
         {
             try
             {
-               Romaneio romaneio = (dgwRomaneio.SelectedRows[0].DataBoundItem as Romaneio);
+                Romaneio romaneio = (dgwRomaneio.SelectedRows[0].DataBoundItem as Romaneio);
                 cpoIDRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[0].Value.ToString();
                 cpoIDCliente.Text = dgwRomaneio.SelectedRows[0].Cells[1].Value.ToString();
                 cpoIDTransportador.Text = dgwRomaneio.SelectedRows[0].Cells[2].Value.ToString();
                 cpoIDFornecedor.Text = dgwRomaneio.SelectedRows[0].Cells[3].Value.ToString();
                 cpoIDFruta.Text = dgwRomaneio.SelectedRows[0].Cells[4].Value.ToString();
                 cpoQtdGeral.Text = dgwRomaneio.SelectedRows[0].Cells[5].Value.ToString();
-          //    cpoIDCarregamento.Text = dgwRomaneio.SelectedRows[0].Cells[3].Value.ToString();
+                //    cpoIDCarregamento.Text = dgwRomaneio.SelectedRows[0].Cells[3].Value.ToString();
                 cpoValorFrete.Text = dgwRomaneio.SelectedRows[0].Cells[6].Value.ToString();
                 cpoSeguro.Text = dgwRomaneio.SelectedRows[0].Cells[7].Value.ToString();
                 cpoAdiantFretMot.Text = dgwRomaneio.SelectedRows[0].Cells[8].Value.ToString();
@@ -913,7 +920,7 @@ namespace Apresentacao
                 btnExcluir.Enabled = true;
 
 
-             //   tabPageCarregamento.Enabled = true;
+                //   tabPageCarregamento.Enabled = true;
             }
             catch (Exception)
             {
@@ -942,7 +949,7 @@ namespace Apresentacao
 
             foreach (DataGridViewRow row in dgwCarregamento.Rows)
             {
-                
+
 
                 this.objCarreg.Bloco = Convert.ToString(row.Cells[2].Value);
                 this.objCarreg.Descricao = Convert.ToString(row.Cells[3].Value);
@@ -954,39 +961,28 @@ namespace Apresentacao
 
             }
 
-           
+
             try
             {
 
                 int idCarregamentoBloco = Convert.ToInt32(strRetorno);
 
-                //string strConexao = Settings.Default.strConexao;
-                //SqlConnection conexao = new SqlConnection(strConexao);
-                //SqlCommand cmd = new SqlCommand("INSERT INTO tblCarregamentoBloco(Bloco, Descricao, Quantidade, IDRomaneio) Values(@Bloco, @Descricao, @Quantidade, @IDRomaneio);");
-                //cmd.Connection = conexao;
-                //conexao.Open();
-                //cmd.Parameters.Add(new SqlParameter("@Bloco", SqlDbType.VarChar));
-                //cmd.Parameters.Add(new SqlParameter("@Descricao", SqlDbType.VarChar));
-                //cmd.Parameters.Add(new SqlParameter("@Quantidade", SqlDbType.Int));
-                //cmd.Parameters.Add(new SqlParameter("@IDRomaneio", SqlDbType.Int));
-
-                //foreach (DataGridViewRow row in dgwCarregamento.Rows)
-                //{
-                //    //cmd.Parameters["@Bloco"].Value = row.Cells[2].Value;
-                //    //cmd.Parameters["@Descricao"].Value = row.Cells[3].Value;
-                //    //cmd.Parameters["@Quantidade"].Value = row.Cells[4].Value;
-                //    //cmd.Parameters["@IDRomaneio"].Value = row.Cells[0].Value;
-                //    //cmd.ExecuteNonQuery();
-
-                //conexao.Close();
-                //}
-
-
 
                 MessageBox.Show("Registro salvo com sucesso!", "Código: " + idCarregamentoBloco.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                       
+                if (this.dgwRomaneio.DataSource != null)
+                {
+                    this.dgwRomaneio.DataSource = null;
+                }
+                else
+                {
+                    this.dgwRomaneio.Rows.Clear();
+
+                }
             }
+
+
+
             catch (Exception ex)
             {
 
@@ -994,7 +990,7 @@ namespace Apresentacao
                 this.DialogResult = DialogResult.No;
             }
 
-          
+
         }
 
         private void btnIgnorarEdicoes_Click(object sender, EventArgs e)
@@ -1016,13 +1012,52 @@ namespace Apresentacao
             cpoSeguro.Clear();
             cpoValorComissao.Clear();
             cpoValorTotalRomaneio.Clear();
+
+//-------------------------limpar registros no DATAGRID VIEW----------------------------------
+
+            if (this.dgwRomaneio.DataSource != null)
+            {
+                this.dgwRomaneio.DataSource = null;
+            }
+            else
+            {
+                this.dgwRomaneio.Rows.Clear();
+
+            }
+//-------------------------limpar registros no DATAGRID VIEW----------------------------------
+
         }
-    }
+
+        private void cpoDtInicial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = false;
+            }
+
+        }
+
+        private void cpoDtFinal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
+            {
+                e.Handled = false;
+            }
+
+        }
 
     }
 
 
-
+}
 
 
 

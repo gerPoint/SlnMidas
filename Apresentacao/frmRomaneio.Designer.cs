@@ -82,6 +82,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxFilial = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cpoDtFinal = new System.Windows.Forms.DateTimePicker();
+            this.cpoDtInicial = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.dgwRomaneio = new System.Windows.Forms.DataGridView();
             this.iDRomaneioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -157,8 +159,6 @@
             this.midasDataSetRomaneioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblRomaneioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetRomaneioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cpoDtInicial = new System.Windows.Forms.DateTimePicker();
-            this.cpoDtFinal = new System.Windows.Forms.DateTimePicker();
             this.tabPagePrincipal.SuspendLayout();
             this.tabPageRomaneio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblFormaPagamentoBindingSource)).BeginInit();
@@ -744,6 +744,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "  Consulta Romaneio";
             // 
+            // cpoDtFinal
+            // 
+            this.cpoDtFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.cpoDtFinal.Location = new System.Drawing.Point(223, 59);
+            this.cpoDtFinal.Name = "cpoDtFinal";
+            this.cpoDtFinal.Size = new System.Drawing.Size(79, 20);
+            this.cpoDtFinal.TabIndex = 100000;
+            this.cpoDtFinal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoDtFinal_KeyPress);
+            // 
+            // cpoDtInicial
+            // 
+            this.cpoDtInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.cpoDtInicial.Location = new System.Drawing.Point(121, 59);
+            this.cpoDtInicial.Name = "cpoDtInicial";
+            this.cpoDtInicial.Size = new System.Drawing.Size(79, 20);
+            this.cpoDtInicial.TabIndex = 100000;
+            this.cpoDtInicial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoDtInicial_KeyPress);
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -950,6 +968,7 @@
             // 
             this.cpoCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCodigo.Location = new System.Drawing.Point(121, 93);
+            this.cpoCodigo.MaxLength = 20;
             this.cpoCodigo.Name = "cpoCodigo";
             this.cpoCodigo.Size = new System.Drawing.Size(75, 20);
             this.cpoCodigo.TabIndex = 6;
@@ -1389,22 +1408,6 @@
             // tblRomaneioBindingSource
             // 
             this.tblRomaneioBindingSource.DataMember = "tblRomaneio";
-            // 
-            // cpoDtInicial
-            // 
-            this.cpoDtInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.cpoDtInicial.Location = new System.Drawing.Point(121, 59);
-            this.cpoDtInicial.Name = "cpoDtInicial";
-            this.cpoDtInicial.Size = new System.Drawing.Size(79, 20);
-            this.cpoDtInicial.TabIndex = 100000;
-            // 
-            // cpoDtFinal
-            // 
-            this.cpoDtFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.cpoDtFinal.Location = new System.Drawing.Point(223, 59);
-            this.cpoDtFinal.Name = "cpoDtFinal";
-            this.cpoDtFinal.Size = new System.Drawing.Size(79, 20);
-            this.cpoDtFinal.TabIndex = 100000;
             // 
             // frmRomaneio
             // 
