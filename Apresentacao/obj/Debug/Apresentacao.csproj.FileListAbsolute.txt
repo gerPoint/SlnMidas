@@ -126,3 +126,17 @@ C:\Users\diego\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSele
 C:\Users\diego\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmTransportador.resources
 C:\Users\diego\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmUsuario.resources
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmVisualizarRomaneio.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\RdlCompile.cache
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\RdlCompile.compiled

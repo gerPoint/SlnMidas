@@ -8,6 +8,7 @@ using System.Data;
 using System.ComponentModel;
 using System.Text.RegularExpressions;
 using System;
+using iTextSharp;
 
 namespace Negocio
 {

@@ -163,6 +163,7 @@
             this.romaneioToolStripMenuItem2.Name = "romaneioToolStripMenuItem2";
             this.romaneioToolStripMenuItem2.Size = new System.Drawing.Size(176, 22);
             this.romaneioToolStripMenuItem2.Text = "Romaneios";
+            this.romaneioToolStripMenuItem2.Click += new System.EventHandler(this.romaneioToolStripMenuItem2_Click);
             // 
             // carregamentosToolStripMenuItem
             // 
@@ -226,6 +227,7 @@
             this.Text = "MIDAS";
             this.TransparencyKey = System.Drawing.Color.White;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

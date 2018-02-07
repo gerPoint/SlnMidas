@@ -94,5 +94,16 @@ namespace Apresentacao
             frmFormaPagamento OutroForm = new frmFormaPagamento();
             OutroForm.ShowDialog();
         }
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void romaneioToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmVisualizarRomaneio OutroForm = new frmVisualizarRomaneio();
+            OutroForm.ShowDialog();
+        }
     }
 }

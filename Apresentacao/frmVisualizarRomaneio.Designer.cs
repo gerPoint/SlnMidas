@@ -28,19 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(25, 98);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(897, 246);
+            this.reportViewer1.TabIndex = 0;
             // 
             // frmVisualizarRomaneio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 633);
+            this.ClientSize = new System.Drawing.Size(1004, 733);
+            this.Controls.Add(this.reportViewer1);
             this.Name = "frmVisualizarRomaneio";
             this.Text = "Visualizar Romaneio";
+            this.Load += new System.EventHandler(this.frmVisualizarRomaneio_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

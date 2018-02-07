@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetRomaneioView.cs">
+      <DependentUpon>DataSetRomaneioView.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetRomaneioView.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRomaneioView.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +299,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <None Include="DataSetRomaneioView.xsc">
+      <DependentUpon>DataSetRomaneioView.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRomaneioView.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRomaneioView.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetRomaneioView.xss">
+      <DependentUpon>DataSetRomaneioView.xsd</DependentUpon>
+    </None>
     <None Include="midasDataSet9.xsc">
       <DependentUpon>midasDataSet9.xsd</DependentUpon>
     </None>

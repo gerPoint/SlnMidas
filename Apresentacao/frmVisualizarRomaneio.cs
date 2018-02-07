@@ -16,5 +16,13 @@ namespace Apresentacao
         {
             InitializeComponent();
         }
+
+        private void frmVisualizarRomaneio_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
