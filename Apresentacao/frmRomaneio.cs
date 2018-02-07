@@ -468,14 +468,14 @@ namespace Apresentacao
             }
 
 
-            //--------------------------------------------coloca o zero onde esta vazio------------------------------------------------------
+//--------------------------------------------coloca o zero onde esta vazio------------------------------------------------------
 
             if (cpoAdiantFretMot.Text == "")
 
             {
                 cpoAdiantFretMot.Text = "0";
             }
-
+//------------------------------------------------------------------------------------------------------------------
             this.objRomaneio.IDCliente = Convert.ToInt32(cpoIDCliente.Text);
             this.objRomaneio.IDTransportador = Convert.ToInt32(cpoIDTransportador.Text);
             this.objRomaneio.IDFornecedor = Convert.ToInt32(cpoIDFornecedor.Text);
@@ -510,13 +510,20 @@ namespace Apresentacao
 
                     MessageBox.Show("Registro salvo com sucesso!", "Código: " + idRomaneio.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // this.DialogResult = DialogResult.OK;
-
                     //limpa os campos depois de salvar 
 
-                    dgwRomaneio.DataSource = null;
                     dgwRomaneio.Update();
                     dgwRomaneio.Refresh();
+
+                    if (this.dgwRomaneio.DataSource != null)
+                    {
+                        this.dgwRomaneio.DataSource = null;
+                    }
+                    else
+                    {
+                        this.dgwRomaneio.Rows.Clear();
+
+                    }
 
                     cpoNomeCliente.Clear();
                     cpoIDCliente.Clear();
@@ -765,17 +772,26 @@ namespace Apresentacao
                 cpoValorComissao.Enabled = false;
                 cpoValorFrete.Enabled = false;
                 cpoCustoCarreg.Enabled = false;
-                cpoAdiantFretMot.Enabled = false;
+                cpoQtdGeral.Enabled = false;
                 checkBoxAdiantFretMot.Enabled = false;
+                comboBoxFormaPagamento.Enabled = false;
+                comboBoxUnidMedida.Enabled = false;
+                btnChamacli.Enabled = false;
+                btnChamafor.Enabled = false;
+                btnChamaTransp.Enabled = false;
+                btnChamaFruta.Enabled = false;
 
 
-                btnSalvar.Enabled = true;
+                if (cpoIDRomaneio.Text =="")
+                {
+                    btnSalvar.Enabled = true;
+                }
 
-
-
-
-
-
+                else
+                {
+                    btnSalvar.Enabled = false;
+                }
+                
             }
             catch (Exception ex)
             {
@@ -785,8 +801,6 @@ namespace Apresentacao
 
 
         }
-
-
 
 
         private void cpoValorTotalRomaneio_TextChanged(object sender, EventArgs e)
@@ -807,8 +821,14 @@ namespace Apresentacao
             cpoValorComissao.Enabled = true;
             cpoValorFrete.Enabled = true;
             cpoCustoCarreg.Enabled = true;
-            //cpoAdiantFretMot.Enabled = true;
+            cpoQtdGeral.Enabled = true;
             checkBoxAdiantFretMot.Enabled = true;
+            comboBoxFormaPagamento.Enabled = true;
+            comboBoxUnidMedida.Enabled = true;
+            btnChamacli.Enabled = true;
+            btnChamafor.Enabled = true;
+            btnChamaTransp.Enabled = true;
+            btnChamaFruta.Enabled = true;
 
             btnSalvar.Enabled = false;
         }
@@ -870,23 +890,18 @@ namespace Apresentacao
 
         private void cpoCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
+
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8 != (e.KeyChar == 13)) //PERMITE A DIGITAÇÃO DE NÚMEROS INTEIROS E DE PRESSIONAR A TECLA ENTER
+            {
+                e.Handled = true;
+                MessageBox.Show("Este Campo aceita apenas Números inteiros");
+                return;
+            }
+
+
             if (e.KeyChar == 13)
 
                 this.AtualizarGrid();
-
-           
-
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
-            {
-                e.Handled = true;
-
-                cpoCodigo.Clear();
-
-                MessageBox.Show("Este Campo aceita apenas Números inteiros");
-                return;
-
-             
-            }
 
 
         }
@@ -920,7 +935,21 @@ namespace Apresentacao
                 btnExcluir.Enabled = true;
 
 
-                //   tabPageCarregamento.Enabled = true;
+                cpoSeguro.Enabled = false;
+                cpoTaxaNf.Enabled = false;
+                cpoValorComissao.Enabled = false;
+                cpoValorFrete.Enabled = false;
+                cpoCustoCarreg.Enabled = false;
+                cpoQtdGeral.Enabled = false;
+                checkBoxAdiantFretMot.Enabled = false;
+                comboBoxFormaPagamento.Enabled = false;
+                comboBoxUnidMedida.Enabled = false;
+                btnChamacli.Enabled = false;
+                btnChamafor.Enabled = false;
+                btnChamaTransp.Enabled = false;
+                btnChamaFruta.Enabled = false;
+
+
             }
             catch (Exception)
             {
@@ -1013,7 +1042,27 @@ namespace Apresentacao
             cpoValorComissao.Clear();
             cpoValorTotalRomaneio.Clear();
 
-//-------------------------limpar registros no DATAGRID VIEW----------------------------------
+
+            cpoSeguro.Enabled = true;
+            cpoTaxaNf.Enabled = true;
+            cpoValorComissao.Enabled = true;
+            cpoValorFrete.Enabled = true;
+            cpoCustoCarreg.Enabled = true;
+            cpoQtdGeral.Enabled = true;
+            checkBoxAdiantFretMot.Enabled = true;
+            comboBoxFormaPagamento.Enabled = true;
+            comboBoxUnidMedida.Enabled = true;
+            btnChamacli.Enabled = true;
+            btnChamafor.Enabled = true;
+            btnChamaTransp.Enabled = true;
+            btnChamaFruta.Enabled = true;
+
+
+            btnAlterar.Enabled = false;
+            btnExcluir.Enabled = false;
+            btnSalvar.Enabled = true;
+
+            //-------------------------limpar registros no DATAGRID VIEW----------------------------------
 
             if (this.dgwRomaneio.DataSource != null)
             {
@@ -1054,6 +1103,25 @@ namespace Apresentacao
 
         }
 
+        //------------------------------------------------Somente a primeira letra maiuscula de cada palavra--------------------------------------
+        public string ConvMaiuscula(string Input)
+        {
+            System.Globalization.CultureInfo cultureInfo = System.Threading.Thread.CurrentThread.CurrentCulture;
+            System.Globalization.TextInfo textInfo = cultureInfo.TextInfo;
+            return textInfo.ToTitleCase(Input.ToLower());
+        }
+
+        private void cpoBloco_TextChanged(object sender, EventArgs e)
+        {
+            cpoBloco.Text = ConvMaiuscula(cpoBloco.Text).ToString();
+            cpoBloco.SelectionStart = cpoBloco.Text.Length;
+        }
+
+        private void cpoDescricao_TextChanged(object sender, EventArgs e)
+        {
+            cpoDescricao.Text = ConvMaiuscula(cpoDescricao.Text).ToString();
+            cpoDescricao.SelectionStart = cpoDescricao.Text.Length;
+        }
     }
 
 

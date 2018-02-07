@@ -76,10 +76,19 @@ namespace Apresentacao
                     cpoNome.Clear();
                     cpoUnidMedida.Clear();
 
-
-                    dgwFruta.DataSource = null;
                     dgwFruta.Update();
                     dgwFruta.Refresh();
+
+
+                    if (this.dgwFruta.DataSource != null)
+                    {
+                        this.dgwFruta.DataSource = null;
+                    }
+                    else
+                    {
+                        this.dgwFruta.Rows.Clear();
+
+                    }
 
                     btnSalvar.Enabled = true;
                     btnExcluir.Enabled = false;

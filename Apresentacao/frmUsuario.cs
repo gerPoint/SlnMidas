@@ -75,11 +75,19 @@ namespace Apresentacao
                     //limpa os campos depois de salvar 
 
 
-
-
-                    dgwUsuario.DataSource = null;
                     dgwUsuario.Update();
                     dgwUsuario.Refresh();
+
+
+                    if (this.dgwUsuario.DataSource != null)
+                    {
+                        this.dgwUsuario.DataSource = null;
+                    }
+                    else
+                    {
+                        this.dgwUsuario.Rows.Clear();
+
+                    }
 
                     cpoNome.Clear();
                     cpoSenha.Clear();

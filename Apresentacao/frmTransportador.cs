@@ -90,9 +90,19 @@ namespace Apresentacao
                     cpoIDTransportador.Clear();
 
 
-                    dgwTransportador.DataSource = null;
                     dgwTransportador.Update();
                     dgwTransportador.Refresh();
+
+
+                    if (this.dgwTransportador.DataSource != null)
+                    {
+                        this.dgwTransportador.DataSource = null;
+                    }
+                    else
+                    {
+                        this.dgwTransportador.Rows.Clear();
+
+                    }
 
                     btnSalvar.Enabled = true;
                     btnExcluir.Enabled = false;

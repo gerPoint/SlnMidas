@@ -153,7 +153,17 @@ namespace Apresentacao
                     cpoEndereco.Clear();
                     cpoUf.Clear();
 
-                   dgwFilial.DataSource = null;
+
+                    if (this.dgwFilial.DataSource != null)
+                    {
+                        this.dgwFilial.DataSource = null;
+                    }
+                    else
+                    {
+                        this.dgwFilial.Rows.Clear();
+
+                    }
+
 
                     btnSalvar.Enabled = true;
                     btnAlterar.Enabled = false;

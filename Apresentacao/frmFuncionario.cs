@@ -88,19 +88,23 @@ namespace Apresentacao
                     //MessageBox.Show("Registro salvo com sucesso! Código: " + idFuncionario.ToString()); -- tbm funciona esse
                     MessageBox.Show("Registro salvo com sucesso!", "Código: " + idFuncionario.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-
-
                     //limpa os campos depois de salvar 
 
 
-
-
-                    dgwFuncionario.DataSource = null;
                     dgwFuncionario.Update();
                     dgwFuncionario.Refresh();
 
-                    //cpoCaixaPesquisa.Text = "%%";
-                    // AtualizarGrid();
+
+                    if (this.dgwFuncionario.DataSource != null)
+                    {
+                        this.dgwFuncionario.DataSource = null;
+                    }
+                    else
+                    {
+                        this.dgwFuncionario.Rows.Clear();
+
+                    }
+
 
                     cpoNome.Clear();
                     cpoEndereco.Clear();

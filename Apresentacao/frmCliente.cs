@@ -89,10 +89,17 @@ namespace Apresentacao
 
                     //limpa os campos depois de salvar 
 
+                    if (this.dgwCliente.DataSource != null)
+                    {
+                        this.dgwCliente.DataSource = null;
+                    }
+                    else
+                    {
+                        this.dgwCliente.Rows.Clear();
+
+                    }
 
 
-
-                    dgwCliente.DataSource = null;
                     dgwCliente.Update();
                     dgwCliente.Refresh();
 
@@ -145,16 +152,10 @@ namespace Apresentacao
 
                 NegCliente objNegCliente = new NegCliente();
                 ClienteLista objLista;
-                try
-                {
-                    //int cod = int.Parse(CaixaPesquisa.Text);
-                    objLista = objNegCliente.Consultar(cpoCaixaPesquisa.Text);
-                }
-                catch
-                {
 
+              
                     objLista = objNegCliente.Consultar(cpoCaixaPesquisa.Text);
-                }
+               
 
 
                 if (objLista.Count == 0)
@@ -174,6 +175,8 @@ namespace Apresentacao
                 dgwCliente.Update();
                 dgwCliente.Refresh();
                 cpoCaixaPesquisa.Clear();
+
+
             }
             catch (Exception ex)
             {

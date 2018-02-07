@@ -227,9 +227,8 @@
             // 
             this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCaixaPesquisa.Location = new System.Drawing.Point(36, 31);
-            this.cpoCaixaPesquisa.Multiline = true;
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
-            this.cpoCaixaPesquisa.Size = new System.Drawing.Size(570, 23);
+            this.cpoCaixaPesquisa.Size = new System.Drawing.Size(570, 20);
             this.cpoCaixaPesquisa.TabIndex = 2;
             this.cpoCaixaPesquisa.TextChanged += new System.EventHandler(this.cpoCaixaPesquisa_TextChanged);
             this.cpoCaixaPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCaixaPesquisa_KeyPress);

@@ -80,9 +80,19 @@ namespace Apresentacao
                     cpoParcelamento.Clear();
 
 
-                    dgwFormaPagamento.DataSource = null;
                     dgwFormaPagamento.Update();
                     dgwFormaPagamento.Refresh();
+
+
+                    if (this.dgwFormaPagamento.DataSource != null)
+                    {
+                        this.dgwFormaPagamento.DataSource = null;
+                    }
+                    else
+                    {
+                        this.dgwFormaPagamento.Rows.Clear();
+
+                    }
 
                     btnSalvar.Enabled = true;
                     btnExcluir.Enabled = false;

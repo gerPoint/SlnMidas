@@ -933,6 +933,7 @@
             this.dataAlteracaoDataGridViewTextBoxColumn.HeaderText = "DataAlteracao";
             this.dataAlteracaoDataGridViewTextBoxColumn.Name = "dataAlteracaoDataGridViewTextBoxColumn";
             this.dataAlteracaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataAlteracaoDataGridViewTextBoxColumn.Visible = false;
             // 
             // dataExclusaoDataGridViewTextBoxColumn
             // 
@@ -940,6 +941,7 @@
             this.dataExclusaoDataGridViewTextBoxColumn.HeaderText = "DataExclusao";
             this.dataExclusaoDataGridViewTextBoxColumn.Name = "dataExclusaoDataGridViewTextBoxColumn";
             this.dataExclusaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataExclusaoDataGridViewTextBoxColumn.Visible = false;
             // 
             // tblRomaneioBindingSource1
             // 
@@ -1160,6 +1162,7 @@
             this.cpoDescricao.Name = "cpoDescricao";
             this.cpoDescricao.Size = new System.Drawing.Size(289, 20);
             this.cpoDescricao.TabIndex = 30;
+            this.cpoDescricao.TextChanged += new System.EventHandler(this.cpoDescricao_TextChanged);
             // 
             // label21
             // 
@@ -1177,6 +1180,7 @@
             this.cpoBloco.Name = "cpoBloco";
             this.cpoBloco.Size = new System.Drawing.Size(289, 20);
             this.cpoBloco.TabIndex = 29;
+            this.cpoBloco.TextChanged += new System.EventHandler(this.cpoBloco_TextChanged);
             // 
             // label25
             // 
@@ -1561,6 +1565,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn blocoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox cpoMostraCodRomaneio;
+        private System.Windows.Forms.Label lblAjuda;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnIgnorarEdicoes;
+        private System.Windows.Forms.DateTimePicker cpoDtFinal;
+        private System.Windows.Forms.DateTimePicker cpoDtInicial;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDRomaneioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDTransportadorDataGridViewTextBoxColumn;
@@ -1580,13 +1592,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataRomaneioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataAlteracaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataExclusaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox cpoMostraCodRomaneio;
-        private System.Windows.Forms.Label lblAjuda;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button btnIgnorarEdicoes;
-        private System.Windows.Forms.DateTimePicker cpoDtFinal;
-        private System.Windows.Forms.DateTimePicker cpoDtInicial;
     }
 }

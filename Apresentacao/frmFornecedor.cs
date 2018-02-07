@@ -89,7 +89,18 @@ namespace Apresentacao
                     cpoUf.Clear();
 
 
-                    dgwFornecedor.DataSource = null;
+
+                    if (this.dgwFornecedor.DataSource != null)
+                    {
+                        this.dgwFornecedor.DataSource = null;
+                    }
+                    else
+                    {
+                        this.dgwFornecedor.Rows.Clear();
+
+                    }
+
+
                     btnSalvar.Enabled = true;
                     btnAlterar.Enabled = false;
                     btnExcluir.Enabled = false;
