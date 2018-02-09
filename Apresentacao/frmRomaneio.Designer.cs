@@ -118,29 +118,47 @@
             this.btnCCancelar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.tabPageCarregamento = new System.Windows.Forms.TabPage();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.cpoPrecoG = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.cpoPrecoM = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.cpoFrutaG = new System.Windows.Forms.TextBox();
+            this.cpoQtdG = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cpoFrutaM = new System.Windows.Forms.TextBox();
+            this.cpoQtdM = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.cpoFrutaP = new System.Windows.Forms.TextBox();
+            this.cpoQtdP = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.lblAjuda = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.cpoMostraCodRomaneio = new System.Windows.Forms.TextBox();
-            this.cpoQtd = new System.Windows.Forms.TextBox();
             this.cpoDescricao = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.cpoBloco = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.dgwCarregamento = new System.Windows.Forms.DataGridView();
-            this.iDRomaneioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblCarregamentoBlocoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.midasDataSetCarregBlo = new Apresentacao.midasDataSetCarregBlo();
+            this.tblCarregamentoBlocoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetCarregamentoBlocook = new Apresentacao.midasDataSetCarregamentoBlocook();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnConcluir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
+            this.tblCarregamentoBlocoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetCarregBlo = new Apresentacao.midasDataSetCarregBlo();
             this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetCarregbloco = new Apresentacao.midasDataSetCarregbloco();
             this.tblFrutaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -150,15 +168,27 @@
             this.tblFormaPagamentoTableAdapter = new Apresentacao.midasDataSetDescFormPgtoTableAdapters.tblFormaPagamentoTableAdapter();
             this.tblRomaneioTableAdapter1 = new Apresentacao.midasDataSetRomaneioCorretoTableAdapters.tblRomaneioTableAdapter();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.midasDataSetCarregamentoBlocook = new Apresentacao.midasDataSetCarregamentoBlocook();
-            this.tblCarregamentoBlocoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.tblCarregamentoBlocoTableAdapter1 = new Apresentacao.midasDataSetCarregamentoBlocookTableAdapters.tblCarregamentoBlocoTableAdapter();
-            this.midasDataSetCarregamentoBlocookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tblCarregamentoBlocoTableAdapter2 = new Apresentacao.midasDataSetCarregBloTableAdapters.tblCarregamentoBlocoTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.midasDataSetRomaneioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblRomaneioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetRomaneioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblCarregamentoBlocoTableAdapter1 = new Apresentacao.midasDataSetCarregamentoBlocookTableAdapters.tblCarregamentoBlocoTableAdapter();
+            this.midasDataSetCarregamentoBlocookBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cpoPrecoP = new System.Windows.Forms.TextBox();
+            this.iDRomaneioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frutaPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frutaMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frutaGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPagePrincipal.SuspendLayout();
             this.tabPageRomaneio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblFormaPagamentoBindingSource)).BeginInit();
@@ -170,20 +200,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblRomaneioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioCorreto)).BeginInit();
             this.tabPageCarregamento.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCarregamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregamentoBlocook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregBlo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregbloco)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetUnidMedida)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregamentoBlocook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregamentoBlocookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRomaneioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregamentoBlocookBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPagePrincipal
@@ -1076,13 +1108,17 @@
             // tabPageCarregamento
             // 
             this.tabPageCarregamento.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPageCarregamento.Controls.Add(this.label31);
+            this.tabPageCarregamento.Controls.Add(this.textBox10);
+            this.tabPageCarregamento.Controls.Add(this.label27);
+            this.tabPageCarregamento.Controls.Add(this.textBox9);
+            this.tabPageCarregamento.Controls.Add(this.groupBox3);
+            this.tabPageCarregamento.Controls.Add(this.groupBox2);
             this.tabPageCarregamento.Controls.Add(this.lblAjuda);
             this.tabPageCarregamento.Controls.Add(this.label22);
             this.tabPageCarregamento.Controls.Add(this.label23);
             this.tabPageCarregamento.Controls.Add(this.cpoMostraCodRomaneio);
-            this.tabPageCarregamento.Controls.Add(this.cpoQtd);
             this.tabPageCarregamento.Controls.Add(this.cpoDescricao);
-            this.tabPageCarregamento.Controls.Add(this.label21);
             this.tabPageCarregamento.Controls.Add(this.cpoBloco);
             this.tabPageCarregamento.Controls.Add(this.label25);
             this.tabPageCarregamento.Controls.Add(this.label26);
@@ -1100,6 +1136,236 @@
             this.tabPageCarregamento.Text = "Carregamento";
             this.tabPageCarregamento.Click += new System.EventHandler(this.tabPageCarregamento_Click);
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(56, 419);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(173, 13);
+            this.label31.TabIndex = 191;
+            this.label31.Text = "QUANTIDADE CARREGADA";
+            // 
+            // textBox10
+            // 
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox10.Enabled = false;
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.ForeColor = System.Drawing.Color.Green;
+            this.textBox10.Location = new System.Drawing.Point(68, 435);
+            this.textBox10.Multiline = true;
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(152, 33);
+            this.textBox10.TabIndex = 190;
+            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(283, 419);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(155, 13);
+            this.label27.TabIndex = 189;
+            this.label27.Text = "TOTAL CARREGAMENTO";
+            // 
+            // textBox9
+            // 
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox9.Enabled = false;
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.ForeColor = System.Drawing.Color.Green;
+            this.textBox9.Location = new System.Drawing.Point(286, 435);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(152, 33);
+            this.textBox9.TabIndex = 188;
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.cpoPrecoP);
+            this.groupBox3.Controls.Add(this.label35);
+            this.groupBox3.Controls.Add(this.cpoPrecoG);
+            this.groupBox3.Controls.Add(this.label34);
+            this.groupBox3.Controls.Add(this.cpoPrecoM);
+            this.groupBox3.Controls.Add(this.label29);
+            this.groupBox3.Location = new System.Drawing.Point(399, 69);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(126, 112);
+            this.groupBox3.TabIndex = 187;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Valor Por Unidade";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(7, 87);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(21, 13);
+            this.label35.TabIndex = 189;
+            this.label35.Text = "R$";
+            // 
+            // cpoPrecoG
+            // 
+            this.cpoPrecoG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoPrecoG.Location = new System.Drawing.Point(34, 80);
+            this.cpoPrecoG.Name = "cpoPrecoG";
+            this.cpoPrecoG.Size = new System.Drawing.Size(83, 20);
+            this.cpoPrecoG.TabIndex = 190;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(7, 56);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(21, 13);
+            this.label34.TabIndex = 187;
+            this.label34.Text = "R$";
+            // 
+            // cpoPrecoM
+            // 
+            this.cpoPrecoM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoPrecoM.Location = new System.Drawing.Point(34, 52);
+            this.cpoPrecoM.Name = "cpoPrecoM";
+            this.cpoPrecoM.Size = new System.Drawing.Size(83, 20);
+            this.cpoPrecoM.TabIndex = 188;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(7, 27);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(21, 13);
+            this.label29.TabIndex = 186;
+            this.label29.Text = "R$";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label30);
+            this.groupBox2.Controls.Add(this.cpoFrutaG);
+            this.groupBox2.Controls.Add(this.cpoQtdG);
+            this.groupBox2.Controls.Add(this.label33);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.cpoFrutaM);
+            this.groupBox2.Controls.Add(this.cpoQtdM);
+            this.groupBox2.Controls.Add(this.label28);
+            this.groupBox2.Controls.Add(this.label36);
+            this.groupBox2.Controls.Add(this.cpoFrutaP);
+            this.groupBox2.Controls.Add(this.cpoQtdP);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Location = new System.Drawing.Point(12, 69);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(372, 112);
+            this.groupBox2.TabIndex = 186;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Classificação  Das Frutas / Quantidade :";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(222, 85);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(41, 13);
+            this.label30.TabIndex = 203;
+            this.label30.Text = "Qtd.  G";
+            // 
+            // cpoFrutaG
+            // 
+            this.cpoFrutaG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoFrutaG.Location = new System.Drawing.Point(67, 81);
+            this.cpoFrutaG.Name = "cpoFrutaG";
+            this.cpoFrutaG.Size = new System.Drawing.Size(149, 20);
+            this.cpoFrutaG.TabIndex = 201;
+            // 
+            // cpoQtdG
+            // 
+            this.cpoQtdG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoQtdG.Location = new System.Drawing.Point(274, 81);
+            this.cpoQtdG.Name = "cpoQtdG";
+            this.cpoQtdG.Size = new System.Drawing.Size(76, 20);
+            this.cpoQtdG.TabIndex = 200;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(6, 85);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(48, 13);
+            this.label33.TabIndex = 199;
+            this.label33.Text = "Grande :";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(226, 56);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(39, 13);
+            this.label21.TabIndex = 198;
+            this.label21.Text = "Qtd. M";
+            // 
+            // cpoFrutaM
+            // 
+            this.cpoFrutaM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoFrutaM.Location = new System.Drawing.Point(67, 52);
+            this.cpoFrutaM.Name = "cpoFrutaM";
+            this.cpoFrutaM.Size = new System.Drawing.Size(149, 20);
+            this.cpoFrutaM.TabIndex = 196;
+            // 
+            // cpoQtdM
+            // 
+            this.cpoQtdM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoQtdM.Location = new System.Drawing.Point(274, 52);
+            this.cpoQtdM.Name = "cpoQtdM";
+            this.cpoQtdM.Size = new System.Drawing.Size(76, 20);
+            this.cpoQtdM.TabIndex = 195;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(6, 54);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(42, 13);
+            this.label28.TabIndex = 194;
+            this.label28.Text = "Média :";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(226, 27);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(37, 13);
+            this.label36.TabIndex = 193;
+            this.label36.Text = "Qtd. P";
+            // 
+            // cpoFrutaP
+            // 
+            this.cpoFrutaP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoFrutaP.Location = new System.Drawing.Point(67, 23);
+            this.cpoFrutaP.Name = "cpoFrutaP";
+            this.cpoFrutaP.Size = new System.Drawing.Size(150, 20);
+            this.cpoFrutaP.TabIndex = 186;
+            // 
+            // cpoQtdP
+            // 
+            this.cpoQtdP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoQtdP.Location = new System.Drawing.Point(274, 23);
+            this.cpoQtdP.Name = "cpoQtdP";
+            this.cpoQtdP.Size = new System.Drawing.Size(76, 20);
+            this.cpoQtdP.TabIndex = 183;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 25);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(56, 13);
+            this.label24.TabIndex = 180;
+            this.label24.Text = "Pequena :";
+            // 
             // lblAjuda
             // 
             this.lblAjuda.AutoSize = true;
@@ -1116,7 +1382,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(634, 40);
+            this.label22.Location = new System.Drawing.Point(632, 34);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(67, 20);
             this.label22.TabIndex = 178;
@@ -1126,7 +1392,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(565, 25);
+            this.label23.Location = new System.Drawing.Point(557, 21);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(193, 16);
             this.label23.TabIndex = 177;
@@ -1138,7 +1404,7 @@
             this.cpoMostraCodRomaneio.Enabled = false;
             this.cpoMostraCodRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoMostraCodRomaneio.ForeColor = System.Drawing.Color.Green;
-            this.cpoMostraCodRomaneio.Location = new System.Drawing.Point(764, 23);
+            this.cpoMostraCodRomaneio.Location = new System.Drawing.Point(756, 21);
             this.cpoMostraCodRomaneio.Multiline = true;
             this.cpoMostraCodRomaneio.Name = "cpoMostraCodRomaneio";
             this.cpoMostraCodRomaneio.ReadOnly = true;
@@ -1146,46 +1412,28 @@
             this.cpoMostraCodRomaneio.TabIndex = 176;
             this.cpoMostraCodRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // cpoQtd
-            // 
-            this.cpoQtd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoQtd.Location = new System.Drawing.Point(102, 99);
-            this.cpoQtd.Name = "cpoQtd";
-            this.cpoQtd.Size = new System.Drawing.Size(80, 20);
-            this.cpoQtd.TabIndex = 31;
-            this.cpoQtd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoQtd_KeyPress);
-            // 
             // cpoDescricao
             // 
             this.cpoDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoDescricao.Location = new System.Drawing.Point(102, 60);
+            this.cpoDescricao.Location = new System.Drawing.Point(79, 43);
             this.cpoDescricao.Name = "cpoDescricao";
-            this.cpoDescricao.Size = new System.Drawing.Size(289, 20);
+            this.cpoDescricao.Size = new System.Drawing.Size(283, 20);
             this.cpoDescricao.TabIndex = 30;
             this.cpoDescricao.TextChanged += new System.EventHandler(this.cpoDescricao_TextChanged);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(23, 101);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(62, 13);
-            this.label21.TabIndex = 172;
-            this.label21.Text = "Quantidade";
             // 
             // cpoBloco
             // 
             this.cpoBloco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoBloco.Location = new System.Drawing.Point(102, 23);
+            this.cpoBloco.Location = new System.Drawing.Point(79, 17);
             this.cpoBloco.Name = "cpoBloco";
-            this.cpoBloco.Size = new System.Drawing.Size(289, 20);
+            this.cpoBloco.Size = new System.Drawing.Size(283, 20);
             this.cpoBloco.TabIndex = 29;
             this.cpoBloco.TextChanged += new System.EventHandler(this.cpoBloco_TextChanged);
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(30, 62);
+            this.label25.Location = new System.Drawing.Point(18, 45);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(55, 13);
             this.label25.TabIndex = 168;
@@ -1194,7 +1442,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(51, 25);
+            this.label26.Location = new System.Drawing.Point(26, 19);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(34, 13);
             this.label26.TabIndex = 167;
@@ -1214,70 +1462,40 @@
             this.iDCarregamentoBlocoDataGridViewTextBoxColumn,
             this.blocoDataGridViewTextBoxColumn,
             this.descricaoDataGridViewTextBoxColumn,
-            this.quantidadeDataGridViewTextBoxColumn});
-            this.dgwCarregamento.DataSource = this.tblCarregamentoBlocoBindingSource2;
-            this.dgwCarregamento.Location = new System.Drawing.Point(26, 149);
+            this.frutaPDataGridViewTextBoxColumn,
+            this.frutaMDataGridViewTextBoxColumn,
+            this.frutaGDataGridViewTextBoxColumn,
+            this.qtdPDataGridViewTextBoxColumn,
+            this.qtdMDataGridViewTextBoxColumn,
+            this.qtdGDataGridViewTextBoxColumn,
+            this.precoPDataGridViewTextBoxColumn,
+            this.precoMDataGridViewTextBoxColumn,
+            this.precoGDataGridViewTextBoxColumn});
+            this.dgwCarregamento.DataSource = this.tblCarregamentoBlocoBindingSource1;
+            this.dgwCarregamento.Location = new System.Drawing.Point(21, 232);
             this.dgwCarregamento.Name = "dgwCarregamento";
             this.dgwCarregamento.ReadOnly = true;
             this.dgwCarregamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgwCarregamento.Size = new System.Drawing.Size(496, 287);
+            this.dgwCarregamento.Size = new System.Drawing.Size(937, 170);
             this.dgwCarregamento.TabIndex = 146;
             this.dgwCarregamento.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCarregamento_CellMouseDoubleClick);
             // 
-            // iDRomaneioDataGridViewTextBoxColumn1
+            // tblCarregamentoBlocoBindingSource1
             // 
-            this.iDRomaneioDataGridViewTextBoxColumn1.DataPropertyName = "IDRomaneio";
-            this.iDRomaneioDataGridViewTextBoxColumn1.HeaderText = "Romaneio";
-            this.iDRomaneioDataGridViewTextBoxColumn1.Name = "iDRomaneioDataGridViewTextBoxColumn1";
-            this.iDRomaneioDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.iDRomaneioDataGridViewTextBoxColumn1.Width = 70;
+            this.tblCarregamentoBlocoBindingSource1.DataMember = "tblCarregamentoBloco";
+            this.tblCarregamentoBlocoBindingSource1.DataSource = this.midasDataSetCarregamentoBlocook;
             // 
-            // iDCarregamentoBlocoDataGridViewTextBoxColumn
+            // midasDataSetCarregamentoBlocook
             // 
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.DataPropertyName = "IDCarregamentoBloco";
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.HeaderText = "Cód. Carregamento";
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Name = "iDCarregamentoBlocoDataGridViewTextBoxColumn";
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // blocoDataGridViewTextBoxColumn
-            // 
-            this.blocoDataGridViewTextBoxColumn.DataPropertyName = "Bloco";
-            this.blocoDataGridViewTextBoxColumn.HeaderText = "Bloco";
-            this.blocoDataGridViewTextBoxColumn.Name = "blocoDataGridViewTextBoxColumn";
-            this.blocoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descricaoDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // quantidadeDataGridViewTextBoxColumn
-            // 
-            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
-            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tblCarregamentoBlocoBindingSource2
-            // 
-            this.tblCarregamentoBlocoBindingSource2.DataMember = "tblCarregamentoBloco";
-            this.tblCarregamentoBlocoBindingSource2.DataSource = this.midasDataSetCarregBlo;
-            // 
-            // midasDataSetCarregBlo
-            // 
-            this.midasDataSetCarregBlo.DataSetName = "midasDataSetCarregBlo";
-            this.midasDataSetCarregBlo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.midasDataSetCarregamentoBlocook.DataSetName = "midasDataSetCarregamentoBlocook";
+            this.midasDataSetCarregamentoBlocook.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Apresentacao.Properties.Resources.Esse_sim2;
-            this.pictureBox1.Location = new System.Drawing.Point(538, 185);
+            this.pictureBox1.Location = new System.Drawing.Point(545, 69);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(431, 251);
+            this.pictureBox1.Size = new System.Drawing.Size(413, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 175;
             this.pictureBox1.TabStop = false;
@@ -1287,7 +1505,7 @@
             this.btnConcluir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConcluir.Image = global::Apresentacao.Properties.Resources.stake_truck_18543;
             this.btnConcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConcluir.Location = new System.Drawing.Point(857, 485);
+            this.btnConcluir.Location = new System.Drawing.Point(843, 470);
             this.btnConcluir.Name = "btnConcluir";
             this.btnConcluir.Size = new System.Drawing.Size(115, 48);
             this.btnConcluir.TabIndex = 35;
@@ -1301,7 +1519,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(675, 483);
+            this.btnCancelar.Location = new System.Drawing.Point(692, 470);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(115, 48);
             this.btnCancelar.TabIndex = 34;
@@ -1316,9 +1534,9 @@
             this.btnRemover.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemover.Image = global::Apresentacao.Properties.Resources.Minus_36877__1_;
             this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRemover.Location = new System.Drawing.Point(286, 104);
+            this.btnRemover.Location = new System.Drawing.Point(189, 187);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(105, 39);
+            this.btnRemover.Size = new System.Drawing.Size(113, 39);
             this.btnRemover.TabIndex = 32;
             this.btnRemover.Text = "Remover";
             this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1331,14 +1549,24 @@
             this.btnInserir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.Image = global::Apresentacao.Properties.Resources.Plus_36851;
             this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInserir.Location = new System.Drawing.Point(416, 104);
+            this.btnInserir.Location = new System.Drawing.Point(21, 187);
             this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(106, 39);
+            this.btnInserir.Size = new System.Drawing.Size(115, 39);
             this.btnInserir.TabIndex = 33;
             this.btnInserir.Text = "Adicionar";
             this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInserir.UseVisualStyleBackColor = false;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            // 
+            // tblCarregamentoBlocoBindingSource2
+            // 
+            this.tblCarregamentoBlocoBindingSource2.DataMember = "tblCarregamentoBloco";
+            this.tblCarregamentoBlocoBindingSource2.DataSource = this.midasDataSetCarregBlo;
+            // 
+            // midasDataSetCarregBlo
+            // 
+            this.midasDataSetCarregBlo.DataSetName = "midasDataSetCarregBlo";
+            this.midasDataSetCarregBlo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tblCarregamentoBlocoBindingSource
             // 
@@ -1382,25 +1610,6 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // midasDataSetCarregamentoBlocook
-            // 
-            this.midasDataSetCarregamentoBlocook.DataSetName = "midasDataSetCarregamentoBlocook";
-            this.midasDataSetCarregamentoBlocook.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tblCarregamentoBlocoBindingSource1
-            // 
-            this.tblCarregamentoBlocoBindingSource1.DataMember = "tblCarregamentoBloco";
-            this.tblCarregamentoBlocoBindingSource1.DataSource = this.midasDataSetCarregamentoBlocook;
-            // 
-            // tblCarregamentoBlocoTableAdapter1
-            // 
-            this.tblCarregamentoBlocoTableAdapter1.ClearBeforeFill = true;
-            // 
-            // midasDataSetCarregamentoBlocookBindingSource
-            // 
-            this.midasDataSetCarregamentoBlocookBindingSource.DataSource = this.midasDataSetCarregamentoBlocook;
-            this.midasDataSetCarregamentoBlocookBindingSource.Position = 0;
-            // 
             // tblCarregamentoBlocoTableAdapter2
             // 
             this.tblCarregamentoBlocoTableAdapter2.ClearBeforeFill = true;
@@ -1412,6 +1621,124 @@
             // tblRomaneioBindingSource
             // 
             this.tblRomaneioBindingSource.DataMember = "tblRomaneio";
+            // 
+            // tblCarregamentoBlocoTableAdapter1
+            // 
+            this.tblCarregamentoBlocoTableAdapter1.ClearBeforeFill = true;
+            // 
+            // midasDataSetCarregamentoBlocookBindingSource
+            // 
+            this.midasDataSetCarregamentoBlocookBindingSource.DataSource = this.midasDataSetCarregamentoBlocook;
+            this.midasDataSetCarregamentoBlocookBindingSource.Position = 0;
+            // 
+            // cpoPrecoP
+            // 
+            this.cpoPrecoP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoPrecoP.Location = new System.Drawing.Point(34, 25);
+            this.cpoPrecoP.Name = "cpoPrecoP";
+            this.cpoPrecoP.Size = new System.Drawing.Size(83, 20);
+            this.cpoPrecoP.TabIndex = 191;
+            // 
+            // iDRomaneioDataGridViewTextBoxColumn1
+            // 
+            this.iDRomaneioDataGridViewTextBoxColumn1.DataPropertyName = "IDRomaneio";
+            this.iDRomaneioDataGridViewTextBoxColumn1.HeaderText = "Cód. Romaneio";
+            this.iDRomaneioDataGridViewTextBoxColumn1.Name = "iDRomaneioDataGridViewTextBoxColumn1";
+            this.iDRomaneioDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.iDRomaneioDataGridViewTextBoxColumn1.Width = 70;
+            // 
+            // iDCarregamentoBlocoDataGridViewTextBoxColumn
+            // 
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.DataPropertyName = "IDCarregamentoBloco";
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.HeaderText = "Cód. Carreg.";
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Name = "iDCarregamentoBlocoDataGridViewTextBoxColumn";
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Visible = false;
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // blocoDataGridViewTextBoxColumn
+            // 
+            this.blocoDataGridViewTextBoxColumn.DataPropertyName = "Bloco";
+            this.blocoDataGridViewTextBoxColumn.HeaderText = "Bloco";
+            this.blocoDataGridViewTextBoxColumn.Name = "blocoDataGridViewTextBoxColumn";
+            this.blocoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descrição";
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descricaoDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // frutaPDataGridViewTextBoxColumn
+            // 
+            this.frutaPDataGridViewTextBoxColumn.DataPropertyName = "FrutaP";
+            this.frutaPDataGridViewTextBoxColumn.HeaderText = "Fruta Pequena";
+            this.frutaPDataGridViewTextBoxColumn.Name = "frutaPDataGridViewTextBoxColumn";
+            this.frutaPDataGridViewTextBoxColumn.ReadOnly = true;
+            this.frutaPDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // frutaMDataGridViewTextBoxColumn
+            // 
+            this.frutaMDataGridViewTextBoxColumn.DataPropertyName = "FrutaM";
+            this.frutaMDataGridViewTextBoxColumn.HeaderText = "Fruta Média";
+            this.frutaMDataGridViewTextBoxColumn.Name = "frutaMDataGridViewTextBoxColumn";
+            this.frutaMDataGridViewTextBoxColumn.ReadOnly = true;
+            this.frutaMDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // frutaGDataGridViewTextBoxColumn
+            // 
+            this.frutaGDataGridViewTextBoxColumn.DataPropertyName = "FrutaG";
+            this.frutaGDataGridViewTextBoxColumn.HeaderText = "Fruta Grande";
+            this.frutaGDataGridViewTextBoxColumn.Name = "frutaGDataGridViewTextBoxColumn";
+            this.frutaGDataGridViewTextBoxColumn.ReadOnly = true;
+            this.frutaGDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // qtdPDataGridViewTextBoxColumn
+            // 
+            this.qtdPDataGridViewTextBoxColumn.DataPropertyName = "QtdP";
+            this.qtdPDataGridViewTextBoxColumn.HeaderText = "Qtd. Fruta P";
+            this.qtdPDataGridViewTextBoxColumn.Name = "qtdPDataGridViewTextBoxColumn";
+            this.qtdPDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qtdMDataGridViewTextBoxColumn
+            // 
+            this.qtdMDataGridViewTextBoxColumn.DataPropertyName = "QtdM";
+            this.qtdMDataGridViewTextBoxColumn.HeaderText = "Qtd. Fruta M";
+            this.qtdMDataGridViewTextBoxColumn.Name = "qtdMDataGridViewTextBoxColumn";
+            this.qtdMDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qtdGDataGridViewTextBoxColumn
+            // 
+            this.qtdGDataGridViewTextBoxColumn.DataPropertyName = "QtdG";
+            this.qtdGDataGridViewTextBoxColumn.HeaderText = "Qtd. Fruta G";
+            this.qtdGDataGridViewTextBoxColumn.Name = "qtdGDataGridViewTextBoxColumn";
+            this.qtdGDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precoPDataGridViewTextBoxColumn
+            // 
+            this.precoPDataGridViewTextBoxColumn.DataPropertyName = "PrecoP";
+            this.precoPDataGridViewTextBoxColumn.HeaderText = "Preço P";
+            this.precoPDataGridViewTextBoxColumn.Name = "precoPDataGridViewTextBoxColumn";
+            this.precoPDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precoPDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // precoMDataGridViewTextBoxColumn
+            // 
+            this.precoMDataGridViewTextBoxColumn.DataPropertyName = "PrecoM";
+            this.precoMDataGridViewTextBoxColumn.HeaderText = "Preço M";
+            this.precoMDataGridViewTextBoxColumn.Name = "precoMDataGridViewTextBoxColumn";
+            this.precoMDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precoMDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // precoGDataGridViewTextBoxColumn
+            // 
+            this.precoGDataGridViewTextBoxColumn.DataPropertyName = "PrecoG";
+            this.precoGDataGridViewTextBoxColumn.HeaderText = "Preço G";
+            this.precoGDataGridViewTextBoxColumn.Name = "precoGDataGridViewTextBoxColumn";
+            this.precoGDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precoGDataGridViewTextBoxColumn.Width = 80;
             // 
             // frmRomaneio
             // 
@@ -1441,20 +1768,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioCorreto)).EndInit();
             this.tabPageCarregamento.ResumeLayout(false);
             this.tabPageCarregamento.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwCarregamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregamentoBlocook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregBlo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregbloco)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblFrutaBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetUnidMedida)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregamentoBlocook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregamentoBlocookBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRomaneioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregamentoBlocookBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1502,9 +1833,7 @@
         private System.Windows.Forms.TabPage tabPageCarregamento;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox cpoIDRomaneio;
-        private System.Windows.Forms.TextBox cpoQtd;
         private System.Windows.Forms.TextBox cpoDescricao;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox cpoBloco;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
@@ -1560,11 +1889,6 @@
         private midasDataSetCarregBlo midasDataSetCarregBlo;
         private System.Windows.Forms.BindingSource tblCarregamentoBlocoBindingSource2;
         private midasDataSetCarregBloTableAdapters.tblCarregamentoBlocoTableAdapter tblCarregamentoBlocoTableAdapter2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDRomaneioDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDCarregamentoBlocoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn blocoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantidadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox cpoMostraCodRomaneio;
@@ -1592,5 +1916,42 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataRomaneioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataAlteracaoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataExclusaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox cpoQtdP;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox cpoFrutaP;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox cpoPrecoG;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox cpoPrecoM;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox cpoFrutaG;
+        private System.Windows.Forms.TextBox cpoQtdG;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox cpoFrutaM;
+        private System.Windows.Forms.TextBox cpoQtdM;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox cpoPrecoP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDRomaneioDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCarregamentoBlocoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn blocoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn frutaPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn frutaMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn frutaGDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qtdPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qtdMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn qtdGDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precoPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precoMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precoGDataGridViewTextBoxColumn;
     }
 }

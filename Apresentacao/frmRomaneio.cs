@@ -311,12 +311,12 @@ namespace Apresentacao
                     return;
                 }
 
-                if (cpoQtd.Text == "")
-                {
-                    MessageBox.Show("Por favor informe a Quantidade! ");
-                    cpoQtd.Focus();
-                    return;
-                }
+                //if (cpoPrecoP.Text == "")
+                //{
+                //    MessageBox.Show("Por favor informe a Quantidade! ");
+                //    cpoPrecoP.Focus();
+                //    return;
+                //}
                 if (cpoDescricao.Text == "")
                 {
                     MessageBox.Show("Por favor informe a descrição do Bloco! ");
@@ -326,17 +326,81 @@ namespace Apresentacao
 
                 dgwCarregamento.DataSource = null;
 
+//-------------------------------------------COLOCAR UM DÍGITO VAZIO NA STRING E ZERO ONDE FOR VAZIO----------------------
+
+                if (cpoFrutaP.Text =="")
+                {
+                    cpoFrutaP.Text = "-";
+                }
+
+                if (cpoFrutaM.Text == "")
+                {
+                    cpoFrutaM.Text = "-";
+                }
+
+                if (cpoFrutaG.Text == "")
+                {
+                    cpoFrutaG.Text = "-";
+                }
+
+                if (cpoQtdP.Text == "")
+                {
+                    cpoQtdP.Text = "0";
+                }
+
+                if (cpoQtdM.Text == "")
+                {
+                    cpoQtdM.Text = "0";
+                }
+
+                if (cpoQtdG.Text == "")
+                {
+                    cpoQtdG.Text = "0";
+                }
+
+                if (cpoPrecoP.Text == "")
+                {
+                    cpoPrecoP.Text = "0";
+                }
+
+                if (cpoPrecoM.Text == "")
+                {
+                    cpoPrecoM.Text = "0";
+                }
+
+                if (cpoPrecoG.Text == "")
+                {
+                    cpoPrecoG.Text = "0";
+                }
+
+
+
+//-------------------------------------------COLOCAR UM DÍGITO VAZIO NA STRING E ZERO ONDE FOR VAZIO----------------------
+
                 objCarregamentoBloco novoCarregamentoBloco = new objCarregamentoBloco();
                 novoCarregamentoBloco.Bloco = cpoBloco.Text;
-                novoCarregamentoBloco.Quantidade = Convert.ToInt32(cpoQtd.Text);
                 novoCarregamentoBloco.Descricao = cpoDescricao.Text;
                 novoCarregamentoBloco.IDRomaneio = Convert.ToInt32(cpoIDRomaneio.Text);
+                novoCarregamentoBloco.FrutaP = cpoFrutaP.Text;
+                novoCarregamentoBloco.FrutaM = cpoFrutaM.Text;
+                novoCarregamentoBloco.FrutaG = cpoFrutaG.Text;
+                novoCarregamentoBloco.PrecoP = Convert.ToDecimal(cpoPrecoP.Text);
+                novoCarregamentoBloco.PrecoM = Convert.ToDecimal(cpoPrecoM.Text);
+                novoCarregamentoBloco.PrecoG = Convert.ToDecimal(cpoPrecoG.Text);
+                novoCarregamentoBloco.QtdP = Convert.ToInt32(cpoQtdP.Text);
+                novoCarregamentoBloco.QtdM = Convert.ToInt32(cpoQtdM.Text);
+                novoCarregamentoBloco.QtdG = Convert.ToInt32(cpoQtdG.Text);
+
+
+
+
+
                 listCarregamento.Add(novoCarregamentoBloco);
                 dgwCarregamento.DataSource = listCarregamento;
 
                 cpoBloco.Clear();
                 cpoDescricao.Clear();
-                cpoQtd.Clear();
+                cpoPrecoP.Clear();
 
 
             }
@@ -384,7 +448,7 @@ namespace Apresentacao
                 objCarregamentoBloco row = (dgwCarregamento.SelectedRows[0].DataBoundItem as objCarregamentoBloco);
 
                 cpoDescricao.Text = row.Descricao;
-                cpoQtd.Text = row.Quantidade.ToString();
+                cpoPrecoP.Text = row.Quantidade.ToString();
                 cpoBloco.Text = row.Bloco;
 
                 this.dgwCarregamento.Rows.RemoveAt(e.RowIndex);
@@ -979,11 +1043,18 @@ namespace Apresentacao
             foreach (DataGridViewRow row in dgwCarregamento.Rows)
             {
 
-
+                this.objCarreg.IDRomaneio = Convert.ToInt32(row.Cells[0].Value);
                 this.objCarreg.Bloco = Convert.ToString(row.Cells[2].Value);
                 this.objCarreg.Descricao = Convert.ToString(row.Cells[3].Value);
-                this.objCarreg.Quantidade = Convert.ToInt32(row.Cells[4].Value);
-                this.objCarreg.IDRomaneio = Convert.ToInt32(row.Cells[0].Value);
+                this.objCarreg.FrutaP = Convert.ToString(row.Cells[4].Value);
+                this.objCarreg.FrutaM = Convert.ToString(row.Cells[5].Value);
+                this.objCarreg.FrutaG = Convert.ToString(row.Cells[6].Value);
+                this.objCarreg.QtdP = Convert.ToInt32(row.Cells[7].Value);
+                this.objCarreg.QtdM = Convert.ToInt32(row.Cells[8].Value);
+                this.objCarreg.QtdG = Convert.ToInt32(row.Cells[9].Value);
+                this.objCarreg.PrecoP = Convert.ToDecimal(row.Cells[10].Value);
+                this.objCarreg.PrecoM = Convert.ToDecimal(row.Cells[11].Value);
+                this.objCarreg.PrecoG = Convert.ToDecimal(row.Cells[12].Value);
 
                 NegCarregamentoBloco negCarreg = new NegCarregamentoBloco();
                 strRetorno = negCarreg.Cadastrar(this.objCarreg);
@@ -1121,6 +1192,11 @@ namespace Apresentacao
         {
             cpoDescricao.Text = ConvMaiuscula(cpoDescricao.Text).ToString();
             cpoDescricao.SelectionStart = cpoDescricao.Text.Length;
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 

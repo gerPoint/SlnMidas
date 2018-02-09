@@ -289,6 +289,24 @@ namespace Apresentacao {
             
             private global::System.Data.DataColumn columnIDRomaneio;
             
+            private global::System.Data.DataColumn columnFrutaP;
+            
+            private global::System.Data.DataColumn columnFrutaM;
+            
+            private global::System.Data.DataColumn columnFrutaG;
+            
+            private global::System.Data.DataColumn columnPrecoP;
+            
+            private global::System.Data.DataColumn columnPrecoM;
+            
+            private global::System.Data.DataColumn columnPrecoG;
+            
+            private global::System.Data.DataColumn columnQtdP;
+            
+            private global::System.Data.DataColumn columnQtdM;
+            
+            private global::System.Data.DataColumn columnQtdG;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblCarregamentoBlocoDataTable() {
@@ -364,6 +382,78 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FrutaPColumn {
+                get {
+                    return this.columnFrutaP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FrutaMColumn {
+                get {
+                    return this.columnFrutaM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FrutaGColumn {
+                get {
+                    return this.columnFrutaG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PrecoPColumn {
+                get {
+                    return this.columnPrecoP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PrecoMColumn {
+                get {
+                    return this.columnPrecoM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PrecoGColumn {
+                get {
+                    return this.columnPrecoG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn QtdPColumn {
+                get {
+                    return this.columnQtdP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn QtdMColumn {
+                get {
+                    return this.columnQtdM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn QtdGColumn {
+                get {
+                    return this.columnQtdG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -399,14 +489,23 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblCarregamentoBlocoRow AddtblCarregamentoBlocoRow(int IDCarregamentoBloco, string Bloco, string Descricao, int Quantidade, int IDRomaneio) {
+            public tblCarregamentoBlocoRow AddtblCarregamentoBlocoRow(int IDCarregamentoBloco, string Bloco, string Descricao, int Quantidade, int IDRomaneio, string FrutaP, string FrutaM, string FrutaG, decimal PrecoP, decimal PrecoM, decimal PrecoG, int QtdP, int QtdM, int QtdG) {
                 tblCarregamentoBlocoRow rowtblCarregamentoBlocoRow = ((tblCarregamentoBlocoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         IDCarregamentoBloco,
                         Bloco,
                         Descricao,
                         Quantidade,
-                        IDRomaneio};
+                        IDRomaneio,
+                        FrutaP,
+                        FrutaM,
+                        FrutaG,
+                        PrecoP,
+                        PrecoM,
+                        PrecoG,
+                        QtdP,
+                        QtdM,
+                        QtdG};
                 rowtblCarregamentoBlocoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblCarregamentoBlocoRow);
                 return rowtblCarregamentoBlocoRow;
@@ -441,6 +540,15 @@ namespace Apresentacao {
                 this.columnDescricao = base.Columns["Descricao"];
                 this.columnQuantidade = base.Columns["Quantidade"];
                 this.columnIDRomaneio = base.Columns["IDRomaneio"];
+                this.columnFrutaP = base.Columns["FrutaP"];
+                this.columnFrutaM = base.Columns["FrutaM"];
+                this.columnFrutaG = base.Columns["FrutaG"];
+                this.columnPrecoP = base.Columns["PrecoP"];
+                this.columnPrecoM = base.Columns["PrecoM"];
+                this.columnPrecoG = base.Columns["PrecoG"];
+                this.columnQtdP = base.Columns["QtdP"];
+                this.columnQtdM = base.Columns["QtdM"];
+                this.columnQtdG = base.Columns["QtdG"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -456,6 +564,24 @@ namespace Apresentacao {
                 base.Columns.Add(this.columnQuantidade);
                 this.columnIDRomaneio = new global::System.Data.DataColumn("IDRomaneio", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIDRomaneio);
+                this.columnFrutaP = new global::System.Data.DataColumn("FrutaP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFrutaP);
+                this.columnFrutaM = new global::System.Data.DataColumn("FrutaM", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFrutaM);
+                this.columnFrutaG = new global::System.Data.DataColumn("FrutaG", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFrutaG);
+                this.columnPrecoP = new global::System.Data.DataColumn("PrecoP", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrecoP);
+                this.columnPrecoM = new global::System.Data.DataColumn("PrecoM", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrecoM);
+                this.columnPrecoG = new global::System.Data.DataColumn("PrecoG", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrecoG);
+                this.columnQtdP = new global::System.Data.DataColumn("QtdP", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQtdP);
+                this.columnQtdM = new global::System.Data.DataColumn("QtdM", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQtdM);
+                this.columnQtdG = new global::System.Data.DataColumn("QtdG", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQtdG);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIDCarregamentoBloco}, true));
                 this.columnIDCarregamentoBloco.AllowDBNull = false;
@@ -466,6 +592,9 @@ namespace Apresentacao {
                 this.columnDescricao.MaxLength = 50;
                 this.columnQuantidade.AllowDBNull = false;
                 this.columnIDRomaneio.AllowDBNull = false;
+                this.columnFrutaP.MaxLength = 50;
+                this.columnFrutaM.MaxLength = 50;
+                this.columnFrutaG.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -660,6 +789,258 @@ namespace Apresentacao {
                     this[this.tabletblCarregamentoBloco.IDRomaneioColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FrutaP {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblCarregamentoBloco.FrutaPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FrutaP\' in table \'tblCarregamentoBloco\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblCarregamentoBloco.FrutaPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FrutaM {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblCarregamentoBloco.FrutaMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FrutaM\' in table \'tblCarregamentoBloco\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblCarregamentoBloco.FrutaMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FrutaG {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblCarregamentoBloco.FrutaGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'FrutaG\' in table \'tblCarregamentoBloco\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblCarregamentoBloco.FrutaGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal PrecoP {
+                get {
+                    try {
+                        return ((decimal)(this[this.tabletblCarregamentoBloco.PrecoPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PrecoP\' in table \'tblCarregamentoBloco\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblCarregamentoBloco.PrecoPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal PrecoM {
+                get {
+                    try {
+                        return ((decimal)(this[this.tabletblCarregamentoBloco.PrecoMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PrecoM\' in table \'tblCarregamentoBloco\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblCarregamentoBloco.PrecoMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal PrecoG {
+                get {
+                    try {
+                        return ((decimal)(this[this.tabletblCarregamentoBloco.PrecoGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PrecoG\' in table \'tblCarregamentoBloco\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblCarregamentoBloco.PrecoGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int QtdP {
+                get {
+                    try {
+                        return ((int)(this[this.tabletblCarregamentoBloco.QtdPColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QtdP\' in table \'tblCarregamentoBloco\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblCarregamentoBloco.QtdPColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int QtdM {
+                get {
+                    try {
+                        return ((int)(this[this.tabletblCarregamentoBloco.QtdMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QtdM\' in table \'tblCarregamentoBloco\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblCarregamentoBloco.QtdMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int QtdG {
+                get {
+                    try {
+                        return ((int)(this[this.tabletblCarregamentoBloco.QtdGColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QtdG\' in table \'tblCarregamentoBloco\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblCarregamentoBloco.QtdGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFrutaPNull() {
+                return this.IsNull(this.tabletblCarregamentoBloco.FrutaPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFrutaPNull() {
+                this[this.tabletblCarregamentoBloco.FrutaPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFrutaMNull() {
+                return this.IsNull(this.tabletblCarregamentoBloco.FrutaMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFrutaMNull() {
+                this[this.tabletblCarregamentoBloco.FrutaMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFrutaGNull() {
+                return this.IsNull(this.tabletblCarregamentoBloco.FrutaGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFrutaGNull() {
+                this[this.tabletblCarregamentoBloco.FrutaGColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPrecoPNull() {
+                return this.IsNull(this.tabletblCarregamentoBloco.PrecoPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPrecoPNull() {
+                this[this.tabletblCarregamentoBloco.PrecoPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPrecoMNull() {
+                return this.IsNull(this.tabletblCarregamentoBloco.PrecoMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPrecoMNull() {
+                this[this.tabletblCarregamentoBloco.PrecoMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPrecoGNull() {
+                return this.IsNull(this.tabletblCarregamentoBloco.PrecoGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPrecoGNull() {
+                this[this.tabletblCarregamentoBloco.PrecoGColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsQtdPNull() {
+                return this.IsNull(this.tabletblCarregamentoBloco.QtdPColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetQtdPNull() {
+                this[this.tabletblCarregamentoBloco.QtdPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsQtdMNull() {
+                return this.IsNull(this.tabletblCarregamentoBloco.QtdMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetQtdMNull() {
+                this[this.tabletblCarregamentoBloco.QtdMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsQtdGNull() {
+                return this.IsNull(this.tabletblCarregamentoBloco.QtdGColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetQtdGNull() {
+                this[this.tabletblCarregamentoBloco.QtdGColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -826,41 +1207,103 @@ namespace Apresentacao.midasDataSetCarregamentoBlocookTableAdapters {
             tableMapping.ColumnMappings.Add("Descricao", "Descricao");
             tableMapping.ColumnMappings.Add("Quantidade", "Quantidade");
             tableMapping.ColumnMappings.Add("IDRomaneio", "IDRomaneio");
+            tableMapping.ColumnMappings.Add("FrutaP", "FrutaP");
+            tableMapping.ColumnMappings.Add("FrutaM", "FrutaM");
+            tableMapping.ColumnMappings.Add("FrutaG", "FrutaG");
+            tableMapping.ColumnMappings.Add("PrecoP", "PrecoP");
+            tableMapping.ColumnMappings.Add("PrecoM", "PrecoM");
+            tableMapping.ColumnMappings.Add("PrecoG", "PrecoG");
+            tableMapping.ColumnMappings.Add("QtdP", "QtdP");
+            tableMapping.ColumnMappings.Add("QtdM", "QtdM");
+            tableMapping.ColumnMappings.Add("QtdG", "QtdG");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tblCarregamentoBloco] WHERE (([IDCarregamentoBloco] = @Original_IDCarregamentoBloco) AND ([Bloco] = @Original_Bloco) AND ([Descricao] = @Original_Descricao) AND ([Quantidade] = @Original_Quantidade) AND ([IDRomaneio] = @Original_IDRomaneio))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tblCarregamentoBloco] WHERE (([IDCarregamentoBloco] = @Original_IDCarregamentoBloco) AND ([Bloco] = @Original_Bloco) AND ([Descricao] = @Original_Descricao) AND ([Quantidade] = @Original_Quantidade) AND ([IDRomaneio] = @Original_IDRomaneio) AND ((@IsNull_FrutaP = 1 AND [FrutaP] IS NULL) OR ([FrutaP] = @Original_FrutaP)) AND ((@IsNull_FrutaM = 1 AND [FrutaM] IS NULL) OR ([FrutaM] = @Original_FrutaM)) AND ((@IsNull_FrutaG = 1 AND [FrutaG] IS NULL) OR ([FrutaG] = @Original_FrutaG)) AND ((@IsNull_PrecoP = 1 AND [PrecoP] IS NULL) OR ([PrecoP] = @Original_PrecoP)) AND ((@IsNull_PrecoM = 1 AND [PrecoM] IS NULL) OR ([PrecoM] = @Original_PrecoM)) AND ((@IsNull_PrecoG = 1 AND [PrecoG] IS NULL) OR ([PrecoG] = @Original_PrecoG)) AND ((@IsNull_QtdP = 1 AND [QtdP] IS NULL) OR ([QtdP] = @Original_QtdP)) AND ((@IsNull_QtdM = 1 AND [QtdM] IS NULL) OR ([QtdM] = @Original_QtdM)) AND ((@IsNull_QtdG = 1 AND [QtdG] IS NULL) OR ([QtdG] = @Original_QtdG)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDCarregamentoBloco", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCarregamentoBloco", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Bloco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bloco", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descricao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descricao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantidade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantidade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDRomaneio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDRomaneio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FrutaP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FrutaP", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FrutaM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FrutaM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FrutaG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaG", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FrutaG", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PrecoP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrecoP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PrecoP", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "PrecoP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PrecoM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrecoM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PrecoM", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "PrecoM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PrecoG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrecoG", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PrecoG", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "PrecoG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QtdP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QtdP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QtdM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QtdM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QtdG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdG", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QtdG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tblCarregamentoBloco] ([IDCarregamentoBloco], [Bloco], [Descricao], [Quantidade], [IDRomaneio]) VALUES (@IDCarregamentoBloco, @Bloco, @Descricao, @Quantidade, @IDRomaneio);
-SELECT IDCarregamentoBloco, Bloco, Descricao, Quantidade, IDRomaneio FROM tblCarregamentoBloco WHERE (IDCarregamentoBloco = @IDCarregamentoBloco)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tblCarregamentoBloco] ([Bloco], [Descricao], [Quantidade], [IDRomaneio], [FrutaP], [FrutaM], [FrutaG], [PrecoP], [PrecoM], [PrecoG], [QtdP], [QtdM], [QtdG]) VALUES (@Bloco, @Descricao, @Quantidade, @IDRomaneio, @FrutaP, @FrutaM, @FrutaG, @PrecoP, @PrecoM, @PrecoG, @QtdP, @QtdM, @QtdG);
+SELECT IDCarregamentoBloco, Bloco, Descricao, Quantidade, IDRomaneio, FrutaP, FrutaM, FrutaG, PrecoP, PrecoM, PrecoG, QtdP, QtdM, QtdG FROM tblCarregamentoBloco WHERE (IDCarregamentoBloco = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCarregamentoBloco", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCarregamentoBloco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bloco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bloco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descricao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descricao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantidade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantidade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDRomaneio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDRomaneio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FrutaP", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FrutaM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FrutaG", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrecoP", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "PrecoP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrecoM", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "PrecoM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrecoG", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "PrecoG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QtdP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QtdM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QtdG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblCarregamentoBloco] SET [IDCarregamentoBloco] = @IDCarregamentoBloco, [Bloco] = @Bloco, [Descricao] = @Descricao, [Quantidade] = @Quantidade, [IDRomaneio] = @IDRomaneio WHERE (([IDCarregamentoBloco] = @Original_IDCarregamentoBloco) AND ([Bloco] = @Original_Bloco) AND ([Descricao] = @Original_Descricao) AND ([Quantidade] = @Original_Quantidade) AND ([IDRomaneio] = @Original_IDRomaneio));
-SELECT IDCarregamentoBloco, Bloco, Descricao, Quantidade, IDRomaneio FROM tblCarregamentoBloco WHERE (IDCarregamentoBloco = @IDCarregamentoBloco)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tblCarregamentoBloco] SET [Bloco] = @Bloco, [Descricao] = @Descricao, [Quantidade] = @Quantidade, [IDRomaneio] = @IDRomaneio, [FrutaP] = @FrutaP, [FrutaM] = @FrutaM, [FrutaG] = @FrutaG, [PrecoP] = @PrecoP, [PrecoM] = @PrecoM, [PrecoG] = @PrecoG, [QtdP] = @QtdP, [QtdM] = @QtdM, [QtdG] = @QtdG WHERE (([IDCarregamentoBloco] = @Original_IDCarregamentoBloco) AND ([Bloco] = @Original_Bloco) AND ([Descricao] = @Original_Descricao) AND ([Quantidade] = @Original_Quantidade) AND ([IDRomaneio] = @Original_IDRomaneio) AND ((@IsNull_FrutaP = 1 AND [FrutaP] IS NULL) OR ([FrutaP] = @Original_FrutaP)) AND ((@IsNull_FrutaM = 1 AND [FrutaM] IS NULL) OR ([FrutaM] = @Original_FrutaM)) AND ((@IsNull_FrutaG = 1 AND [FrutaG] IS NULL) OR ([FrutaG] = @Original_FrutaG)) AND ((@IsNull_PrecoP = 1 AND [PrecoP] IS NULL) OR ([PrecoP] = @Original_PrecoP)) AND ((@IsNull_PrecoM = 1 AND [PrecoM] IS NULL) OR ([PrecoM] = @Original_PrecoM)) AND ((@IsNull_PrecoG = 1 AND [PrecoG] IS NULL) OR ([PrecoG] = @Original_PrecoG)) AND ((@IsNull_QtdP = 1 AND [QtdP] IS NULL) OR ([QtdP] = @Original_QtdP)) AND ((@IsNull_QtdM = 1 AND [QtdM] IS NULL) OR ([QtdM] = @Original_QtdM)) AND ((@IsNull_QtdG = 1 AND [QtdG] IS NULL) OR ([QtdG] = @Original_QtdG)));
+SELECT IDCarregamentoBloco, Bloco, Descricao, Quantidade, IDRomaneio, FrutaP, FrutaM, FrutaG, PrecoP, PrecoM, PrecoG, QtdP, QtdM, QtdG FROM tblCarregamentoBloco WHERE (IDCarregamentoBloco = @IDCarregamentoBloco)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCarregamentoBloco", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCarregamentoBloco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Bloco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bloco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Descricao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descricao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Quantidade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantidade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDRomaneio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDRomaneio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FrutaP", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FrutaM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FrutaG", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrecoP", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "PrecoP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrecoM", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "PrecoM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PrecoG", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "PrecoG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QtdP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QtdM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QtdG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDCarregamentoBloco", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCarregamentoBloco", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Bloco", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Bloco", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Descricao", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Descricao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Quantidade", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Quantidade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDRomaneio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDRomaneio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FrutaP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FrutaP", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FrutaM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FrutaM", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_FrutaG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaG", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FrutaG", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FrutaG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PrecoP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrecoP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PrecoP", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "PrecoP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PrecoM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrecoM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PrecoM", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "PrecoM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PrecoG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PrecoG", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PrecoG", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "PrecoG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QtdP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QtdP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QtdM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QtdM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QtdG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdG", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QtdG", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdG", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCarregamentoBloco", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDCarregamentoBloco", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -876,8 +1319,9 @@ SELECT IDCarregamentoBloco, Bloco, Descricao, Quantidade, IDRomaneio FROM tblCar
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IDCarregamentoBloco, Bloco, Descricao, Quantidade, IDRomaneio FROM dbo.tbl" +
-                "CarregamentoBloco";
+            this._commandCollection[0].CommandText = "SELECT IDCarregamentoBloco, Bloco, Descricao, Quantidade, IDRomaneio, FrutaP, Fru" +
+                "taM, FrutaG, PrecoP, PrecoM, PrecoG, QtdP, QtdM, QtdG FROM dbo.tblCarregamentoBl" +
+                "oco";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -938,7 +1382,7 @@ SELECT IDCarregamentoBloco, Bloco, Descricao, Quantidade, IDRomaneio FROM tblCar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IDCarregamentoBloco, string Original_Bloco, string Original_Descricao, int Original_Quantidade, int Original_IDRomaneio) {
+        public virtual int Delete(int Original_IDCarregamentoBloco, string Original_Bloco, string Original_Descricao, int Original_Quantidade, int Original_IDRomaneio, string Original_FrutaP, string Original_FrutaM, string Original_FrutaG, global::System.Nullable<decimal> Original_PrecoP, global::System.Nullable<decimal> Original_PrecoM, global::System.Nullable<decimal> Original_PrecoG, global::System.Nullable<int> Original_QtdP, global::System.Nullable<int> Original_QtdM, global::System.Nullable<int> Original_QtdG) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IDCarregamentoBloco));
             if ((Original_Bloco == null)) {
                 throw new global::System.ArgumentNullException("Original_Bloco");
@@ -954,6 +1398,78 @@ SELECT IDCarregamentoBloco, Bloco, Descricao, Quantidade, IDRomaneio FROM tblCar
             }
             this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Quantidade));
             this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_IDRomaneio));
+            if ((Original_FrutaP == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_FrutaP));
+            }
+            if ((Original_FrutaM == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_FrutaM));
+            }
+            if ((Original_FrutaG == null)) {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_FrutaG));
+            }
+            if ((Original_PrecoP.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_PrecoP.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PrecoM.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((decimal)(Original_PrecoM.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PrecoG.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((decimal)(Original_PrecoG.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((Original_QtdP.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_QtdP.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            if ((Original_QtdM.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_QtdM.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            if ((Original_QtdG.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_QtdG.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -974,22 +1490,75 @@ SELECT IDCarregamentoBloco, Bloco, Descricao, Quantidade, IDRomaneio FROM tblCar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int IDCarregamentoBloco, string Bloco, string Descricao, int Quantidade, int IDRomaneio) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(IDCarregamentoBloco));
+        public virtual int Insert(string Bloco, string Descricao, int Quantidade, int IDRomaneio, string FrutaP, string FrutaM, string FrutaG, global::System.Nullable<decimal> PrecoP, global::System.Nullable<decimal> PrecoM, global::System.Nullable<decimal> PrecoG, global::System.Nullable<int> QtdP, global::System.Nullable<int> QtdM, global::System.Nullable<int> QtdG) {
             if ((Bloco == null)) {
                 throw new global::System.ArgumentNullException("Bloco");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Bloco));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Bloco));
             }
             if ((Descricao == null)) {
                 throw new global::System.ArgumentNullException("Descricao");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Descricao));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Descricao));
             }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Quantidade));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(IDRomaneio));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Quantidade));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(IDRomaneio));
+            if ((FrutaP == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(FrutaP));
+            }
+            if ((FrutaM == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(FrutaM));
+            }
+            if ((FrutaG == null)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(FrutaG));
+            }
+            if ((PrecoP.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((decimal)(PrecoP.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((PrecoM.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((decimal)(PrecoM.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((PrecoG.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((decimal)(PrecoG.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((QtdP.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(QtdP.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((QtdM.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(QtdM.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((QtdG.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(QtdG.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1010,37 +1579,191 @@ SELECT IDCarregamentoBloco, Bloco, Descricao, Quantidade, IDRomaneio FROM tblCar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int IDCarregamentoBloco, string Bloco, string Descricao, int Quantidade, int IDRomaneio, int Original_IDCarregamentoBloco, string Original_Bloco, string Original_Descricao, int Original_Quantidade, int Original_IDRomaneio) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(IDCarregamentoBloco));
+        public virtual int Update(
+                    string Bloco, 
+                    string Descricao, 
+                    int Quantidade, 
+                    int IDRomaneio, 
+                    string FrutaP, 
+                    string FrutaM, 
+                    string FrutaG, 
+                    global::System.Nullable<decimal> PrecoP, 
+                    global::System.Nullable<decimal> PrecoM, 
+                    global::System.Nullable<decimal> PrecoG, 
+                    global::System.Nullable<int> QtdP, 
+                    global::System.Nullable<int> QtdM, 
+                    global::System.Nullable<int> QtdG, 
+                    int Original_IDCarregamentoBloco, 
+                    string Original_Bloco, 
+                    string Original_Descricao, 
+                    int Original_Quantidade, 
+                    int Original_IDRomaneio, 
+                    string Original_FrutaP, 
+                    string Original_FrutaM, 
+                    string Original_FrutaG, 
+                    global::System.Nullable<decimal> Original_PrecoP, 
+                    global::System.Nullable<decimal> Original_PrecoM, 
+                    global::System.Nullable<decimal> Original_PrecoG, 
+                    global::System.Nullable<int> Original_QtdP, 
+                    global::System.Nullable<int> Original_QtdM, 
+                    global::System.Nullable<int> Original_QtdG, 
+                    int IDCarregamentoBloco) {
             if ((Bloco == null)) {
                 throw new global::System.ArgumentNullException("Bloco");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Bloco));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Bloco));
             }
             if ((Descricao == null)) {
                 throw new global::System.ArgumentNullException("Descricao");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Descricao));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Descricao));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Quantidade));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(IDRomaneio));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_IDCarregamentoBloco));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Quantidade));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(IDRomaneio));
+            if ((FrutaP == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(FrutaP));
+            }
+            if ((FrutaM == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(FrutaM));
+            }
+            if ((FrutaG == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(FrutaG));
+            }
+            if ((PrecoP.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(PrecoP.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((PrecoM.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(PrecoM.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((PrecoG.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(PrecoG.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((QtdP.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(QtdP.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((QtdM.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(QtdM.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((QtdG.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(QtdG.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_IDCarregamentoBloco));
             if ((Original_Bloco == null)) {
                 throw new global::System.ArgumentNullException("Original_Bloco");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Bloco));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Bloco));
             }
             if ((Original_Descricao == null)) {
                 throw new global::System.ArgumentNullException("Original_Descricao");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Descricao));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Descricao));
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Quantidade));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_IDRomaneio));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_Quantidade));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_IDRomaneio));
+            if ((Original_FrutaP == null)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_FrutaP));
+            }
+            if ((Original_FrutaM == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_FrutaM));
+            }
+            if ((Original_FrutaG == null)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_FrutaG));
+            }
+            if ((Original_PrecoP.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((decimal)(Original_PrecoP.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PrecoM.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((decimal)(Original_PrecoM.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+            }
+            if ((Original_PrecoG.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((decimal)(Original_PrecoG.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            if ((Original_QtdP.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_QtdP.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            if ((Original_QtdM.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(Original_QtdM.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            if ((Original_QtdG.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((int)(Original_QtdG.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[36].Value = ((int)(IDCarregamentoBloco));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1061,8 +1784,35 @@ SELECT IDCarregamentoBloco, Bloco, Descricao, Quantidade, IDRomaneio FROM tblCar
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Bloco, string Descricao, int Quantidade, int IDRomaneio, int Original_IDCarregamentoBloco, string Original_Bloco, string Original_Descricao, int Original_Quantidade, int Original_IDRomaneio) {
-            return this.Update(Original_IDCarregamentoBloco, Bloco, Descricao, Quantidade, IDRomaneio, Original_IDCarregamentoBloco, Original_Bloco, Original_Descricao, Original_Quantidade, Original_IDRomaneio);
+        public virtual int Update(
+                    string Bloco, 
+                    string Descricao, 
+                    int Quantidade, 
+                    int IDRomaneio, 
+                    string FrutaP, 
+                    string FrutaM, 
+                    string FrutaG, 
+                    global::System.Nullable<decimal> PrecoP, 
+                    global::System.Nullable<decimal> PrecoM, 
+                    global::System.Nullable<decimal> PrecoG, 
+                    global::System.Nullable<int> QtdP, 
+                    global::System.Nullable<int> QtdM, 
+                    global::System.Nullable<int> QtdG, 
+                    int Original_IDCarregamentoBloco, 
+                    string Original_Bloco, 
+                    string Original_Descricao, 
+                    int Original_Quantidade, 
+                    int Original_IDRomaneio, 
+                    string Original_FrutaP, 
+                    string Original_FrutaM, 
+                    string Original_FrutaG, 
+                    global::System.Nullable<decimal> Original_PrecoP, 
+                    global::System.Nullable<decimal> Original_PrecoM, 
+                    global::System.Nullable<decimal> Original_PrecoG, 
+                    global::System.Nullable<int> Original_QtdP, 
+                    global::System.Nullable<int> Original_QtdM, 
+                    global::System.Nullable<int> Original_QtdG) {
+            return this.Update(Bloco, Descricao, Quantidade, IDRomaneio, FrutaP, FrutaM, FrutaG, PrecoP, PrecoM, PrecoG, QtdP, QtdM, QtdG, Original_IDCarregamentoBloco, Original_Bloco, Original_Descricao, Original_Quantidade, Original_IDRomaneio, Original_FrutaP, Original_FrutaM, Original_FrutaG, Original_PrecoP, Original_PrecoM, Original_PrecoG, Original_QtdP, Original_QtdM, Original_QtdG, Original_IDCarregamentoBloco);
         }
     }
     
