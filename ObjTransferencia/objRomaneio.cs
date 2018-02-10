@@ -28,6 +28,10 @@ namespace ObjTransferencia
         public decimal TaxaNf { get; set; }   
         public string UnidMedida { get; set; }
         public char Status { get; set; }
+        public string Cliente { get; set; }
+        public string Transportador { get; set; }
+        public string Fornecedor { get; set; }
+        public string Fruta { get; set; }
 
         public string objRomaneio { get; set; }
 

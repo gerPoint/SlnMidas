@@ -29,7 +29,6 @@ namespace Negocio
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFornecedor", romaneio.IDFornecedor));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFruta", romaneio.IDFruta));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INQtdFrutas", romaneio.QtdFrutas));
-               // acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDCarregamento", romaneio.IDCarregamento));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INValorFrete", romaneio.ValorFrete));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INAdiantFretMot", romaneio.AdiantFretMot));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INFormaPagamento", romaneio.FormaPagamento));
@@ -40,7 +39,11 @@ namespace Negocio
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INSeguro", romaneio.Seguro));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INUnidMedida", romaneio.UnidMedida));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INStatus", romaneio.Status));
-                
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCliente", romaneio.Cliente));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTransportador", romaneio.Transportador));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INFornecedor", romaneio.Fornecedor));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INFruta", romaneio.Fruta));
+
 
                 //(DIEGO)string IDCliente = acessoDadosSqlServer.ExecutarScalar(CommandType.StoredProcedure, "uspCadastrarCliente").ToString();
                 //return IDCliente;
@@ -80,13 +83,10 @@ namespace Negocio
                         romaneio.IDFornecedor = Convert.ToInt32(linha["IDFornecedor"]);
                         romaneio.IDFruta = Convert.ToInt32(linha["IDFruta"]);
                         romaneio.QtdFrutas= Convert.ToInt32(linha["QtdFrutas"]);                       
-                        //romaneio.IDCarregamento = Convert.ToInt32(linha["IDCarregamento"]);
                         romaneio.ValorFrete = Convert.ToDecimal(linha["ValorFrete"]);
                         romaneio.Seguro = Convert.ToDecimal(linha["Seguro"]);
                         romaneio.AdiantFretMot = Convert.ToDecimal(linha["AdiantFretMot"]);
                         romaneio.DataRomaneio = Convert.ToDateTime(linha["DataRomaneio"]);
-                        //romaneio.DataAlteracao = Convert.ToDateTime(linha["DataAlteracao"]);
-                        //romaneio.DataExclusao = Convert.ToDateTime(linha["DataExclusao"]);
                         romaneio.FormaPagamento = Convert.ToString(linha["FormaPagamento"]);
                         romaneio.CustoCarregamento = Convert.ToDecimal(linha["CustoCarregamento"]);
                         romaneio.ValorComissao = Convert.ToDecimal(linha["ValorComissao"]);
@@ -94,6 +94,10 @@ namespace Negocio
                         romaneio.TaxaNf = Convert.ToDecimal(linha["TaxaNf"]);
                         romaneio.UnidMedida = Convert.ToString(linha["UnidMedida"]);
                         romaneio.Status = Convert.ToChar(linha["Status"]);
+                        romaneio.Cliente = Convert.ToString(linha["Cliente"]);
+                        romaneio.Transportador = Convert.ToString(linha["Transportador"]);
+                        romaneio.Fornecedor = Convert.ToString(linha["Fornecedor"]);
+                        romaneio.Fruta = Convert.ToString(linha["Fruta"]);
 
                         romaneioLista.Add(romaneio);
                     }
@@ -132,13 +136,10 @@ namespace Negocio
                         romaneio.IDFornecedor = Convert.ToInt32(linha["IDFornecedor"]);
                         romaneio.IDFruta = Convert.ToInt32(linha["IDFruta"]);
                         romaneio.QtdFrutas = Convert.ToInt32(linha["QtdFrutas"]);
-                        //romaneio.IDCarregamento = Convert.ToInt32(linha["IDCarregamento"]);
                         romaneio.ValorFrete = Convert.ToDecimal(linha["ValorFrete"]);
                         romaneio.Seguro = Convert.ToDecimal(linha["Seguro"]);
                         romaneio.AdiantFretMot = Convert.ToDecimal(linha["AdiantFretMot"]);
                         romaneio.DataRomaneio = Convert.ToDateTime(linha["DataRomaneio"]);
-                        //romaneio.DataAlteracao = Convert.ToDateTime(linha["DataAlteracao"]);
-                        //romaneio.DataExclusao = Convert.ToDateTime(linha["DataExclusao"]);
                         romaneio.FormaPagamento = Convert.ToString(linha["FormaPagamento"]);
                         romaneio.CustoCarregamento = Convert.ToDecimal(linha["CustoCarregamento"]);
                         romaneio.ValorComissao = Convert.ToDecimal(linha["ValorComissao"]);
@@ -146,6 +147,10 @@ namespace Negocio
                         romaneio.TaxaNf = Convert.ToDecimal(linha["TaxaNf"]);
                         romaneio.UnidMedida = Convert.ToString(linha["UnidMedida"]);
                         romaneio.Status = Convert.ToChar(linha["Status"]);
+                        romaneio.Cliente = Convert.ToString(linha["Cliente"]);
+                        romaneio.Transportador = Convert.ToString(linha["Transportador"]);
+                        romaneio.Fornecedor = Convert.ToString(linha["Fornecedor"]);
+                        romaneio.Fruta = Convert.ToString(linha["Fruta"]);
 
                         romaneioLista.Add(romaneio);
                     }

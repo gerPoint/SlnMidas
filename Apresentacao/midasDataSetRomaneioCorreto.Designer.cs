@@ -291,8 +291,6 @@ namespace Apresentacao {
             
             private global::System.Data.DataColumn columnQtdFrutas;
             
-            private global::System.Data.DataColumn columnIDCarregamento;
-            
             private global::System.Data.DataColumn columnValorFrete;
             
             private global::System.Data.DataColumn columnSeguro;
@@ -318,6 +316,14 @@ namespace Apresentacao {
             private global::System.Data.DataColumn columnDataAlteracao;
             
             private global::System.Data.DataColumn columnDataExclusao;
+            
+            private global::System.Data.DataColumn columnCliente;
+            
+            private global::System.Data.DataColumn columnTransportador;
+            
+            private global::System.Data.DataColumn columnFornecedor;
+            
+            private global::System.Data.DataColumn columnFruta;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -397,14 +403,6 @@ namespace Apresentacao {
             public global::System.Data.DataColumn QtdFrutasColumn {
                 get {
                     return this.columnQtdFrutas;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn IDCarregamentoColumn {
-                get {
-                    return this.columnIDCarregamento;
                 }
             }
             
@@ -514,6 +512,38 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ClienteColumn {
+                get {
+                    return this.columnCliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TransportadorColumn {
+                get {
+                    return this.columnTransportador;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FornecedorColumn {
+                get {
+                    return this.columnFornecedor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FrutaColumn {
+                get {
+                    return this.columnFruta;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -555,7 +585,6 @@ namespace Apresentacao {
                         int IDFornecedor, 
                         int IDFruta, 
                         int QtdFrutas, 
-                        int IDCarregamento, 
                         decimal ValorFrete, 
                         decimal Seguro, 
                         decimal AdiantFretMot, 
@@ -568,7 +597,11 @@ namespace Apresentacao {
                         string Status, 
                         System.DateTime DataRomaneio, 
                         System.DateTime DataAlteracao, 
-                        System.DateTime DataExclusao) {
+                        System.DateTime DataExclusao, 
+                        string Cliente, 
+                        string Transportador, 
+                        string Fornecedor, 
+                        string Fruta) {
                 tblRomaneioRow rowtblRomaneioRow = ((tblRomaneioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -577,7 +610,6 @@ namespace Apresentacao {
                         IDFornecedor,
                         IDFruta,
                         QtdFrutas,
-                        IDCarregamento,
                         ValorFrete,
                         Seguro,
                         AdiantFretMot,
@@ -590,7 +622,11 @@ namespace Apresentacao {
                         Status,
                         DataRomaneio,
                         DataAlteracao,
-                        DataExclusao};
+                        DataExclusao,
+                        Cliente,
+                        Transportador,
+                        Fornecedor,
+                        Fruta};
                 rowtblRomaneioRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblRomaneioRow);
                 return rowtblRomaneioRow;
@@ -626,7 +662,6 @@ namespace Apresentacao {
                 this.columnIDFornecedor = base.Columns["IDFornecedor"];
                 this.columnIDFruta = base.Columns["IDFruta"];
                 this.columnQtdFrutas = base.Columns["QtdFrutas"];
-                this.columnIDCarregamento = base.Columns["IDCarregamento"];
                 this.columnValorFrete = base.Columns["ValorFrete"];
                 this.columnSeguro = base.Columns["Seguro"];
                 this.columnAdiantFretMot = base.Columns["AdiantFretMot"];
@@ -640,6 +675,10 @@ namespace Apresentacao {
                 this.columnDataRomaneio = base.Columns["DataRomaneio"];
                 this.columnDataAlteracao = base.Columns["DataAlteracao"];
                 this.columnDataExclusao = base.Columns["DataExclusao"];
+                this.columnCliente = base.Columns["Cliente"];
+                this.columnTransportador = base.Columns["Transportador"];
+                this.columnFornecedor = base.Columns["Fornecedor"];
+                this.columnFruta = base.Columns["Fruta"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -657,8 +696,6 @@ namespace Apresentacao {
                 base.Columns.Add(this.columnIDFruta);
                 this.columnQtdFrutas = new global::System.Data.DataColumn("QtdFrutas", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQtdFrutas);
-                this.columnIDCarregamento = new global::System.Data.DataColumn("IDCarregamento", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIDCarregamento);
                 this.columnValorFrete = new global::System.Data.DataColumn("ValorFrete", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnValorFrete);
                 this.columnSeguro = new global::System.Data.DataColumn("Seguro", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -685,6 +722,14 @@ namespace Apresentacao {
                 base.Columns.Add(this.columnDataAlteracao);
                 this.columnDataExclusao = new global::System.Data.DataColumn("DataExclusao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDataExclusao);
+                this.columnCliente = new global::System.Data.DataColumn("Cliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCliente);
+                this.columnTransportador = new global::System.Data.DataColumn("Transportador", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransportador);
+                this.columnFornecedor = new global::System.Data.DataColumn("Fornecedor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFornecedor);
+                this.columnFruta = new global::System.Data.DataColumn("Fruta", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFruta);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIDRomaneio}, true));
                 this.columnIDRomaneio.AutoIncrement = true;
@@ -705,6 +750,10 @@ namespace Apresentacao {
                 this.columnStatus.AllowDBNull = false;
                 this.columnStatus.MaxLength = 1;
                 this.columnDataRomaneio.AllowDBNull = false;
+                this.columnCliente.MaxLength = 50;
+                this.columnTransportador.MaxLength = 50;
+                this.columnFornecedor.MaxLength = 50;
+                this.columnFruta.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -913,22 +962,6 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int IDCarregamento {
-                get {
-                    try {
-                        return ((int)(this[this.tabletblRomaneio.IDCarregamentoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'IDCarregamento\' in table \'tblRomaneio\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblRomaneio.IDCarregamentoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public decimal ValorFrete {
                 get {
                     try {
@@ -1117,14 +1150,66 @@ namespace Apresentacao {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsIDCarregamentoNull() {
-                return this.IsNull(this.tabletblRomaneio.IDCarregamentoColumn);
+            public string Cliente {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblRomaneio.ClienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cliente\' in table \'tblRomaneio\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblRomaneio.ClienteColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetIDCarregamentoNull() {
-                this[this.tabletblRomaneio.IDCarregamentoColumn] = global::System.Convert.DBNull;
+            public string Transportador {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblRomaneio.TransportadorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Transportador\' in table \'tblRomaneio\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblRomaneio.TransportadorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Fornecedor {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblRomaneio.FornecedorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fornecedor\' in table \'tblRomaneio\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblRomaneio.FornecedorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Fruta {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblRomaneio.FrutaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Fruta\' in table \'tblRomaneio\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblRomaneio.FrutaColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1233,6 +1318,54 @@ namespace Apresentacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDataExclusaoNull() {
                 this[this.tabletblRomaneio.DataExclusaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsClienteNull() {
+                return this.IsNull(this.tabletblRomaneio.ClienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetClienteNull() {
+                this[this.tabletblRomaneio.ClienteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTransportadorNull() {
+                return this.IsNull(this.tabletblRomaneio.TransportadorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTransportadorNull() {
+                this[this.tabletblRomaneio.TransportadorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFornecedorNull() {
+                return this.IsNull(this.tabletblRomaneio.FornecedorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFornecedorNull() {
+                this[this.tabletblRomaneio.FornecedorColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFrutaNull() {
+                return this.IsNull(this.tabletblRomaneio.FrutaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFrutaNull() {
+                this[this.tabletblRomaneio.FrutaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1401,7 +1534,6 @@ namespace Apresentacao.midasDataSetRomaneioCorretoTableAdapters {
             tableMapping.ColumnMappings.Add("IDFornecedor", "IDFornecedor");
             tableMapping.ColumnMappings.Add("IDFruta", "IDFruta");
             tableMapping.ColumnMappings.Add("QtdFrutas", "QtdFrutas");
-            tableMapping.ColumnMappings.Add("IDCarregamento", "IDCarregamento");
             tableMapping.ColumnMappings.Add("ValorFrete", "ValorFrete");
             tableMapping.ColumnMappings.Add("Seguro", "Seguro");
             tableMapping.ColumnMappings.Add("AdiantFretMot", "AdiantFretMot");
@@ -1415,28 +1547,36 @@ namespace Apresentacao.midasDataSetRomaneioCorretoTableAdapters {
             tableMapping.ColumnMappings.Add("DataRomaneio", "DataRomaneio");
             tableMapping.ColumnMappings.Add("DataAlteracao", "DataAlteracao");
             tableMapping.ColumnMappings.Add("DataExclusao", "DataExclusao");
+            tableMapping.ColumnMappings.Add("Cliente", "Cliente");
+            tableMapping.ColumnMappings.Add("Transportador", "Transportador");
+            tableMapping.ColumnMappings.Add("Fornecedor", "Fornecedor");
+            tableMapping.ColumnMappings.Add("Fruta", "Fruta");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tblRomaneio] WHERE (([IDRomaneio] = @Original_IDRomaneio) AND " +
-                "([IDCliente] = @Original_IDCliente) AND ([IDTransportador] = @Original_IDTranspo" +
-                "rtador) AND ([IDFornecedor] = @Original_IDFornecedor) AND ([IDFruta] = @Original" +
-                "_IDFruta) AND ([QtdFrutas] = @Original_QtdFrutas) AND ((@IsNull_IDCarregamento =" +
-                " 1 AND [IDCarregamento] IS NULL) OR ([IDCarregamento] = @Original_IDCarregamento" +
-                ")) AND ((@IsNull_ValorFrete = 1 AND [ValorFrete] IS NULL) OR ([ValorFrete] = @Or" +
-                "iginal_ValorFrete)) AND ((@IsNull_Seguro = 1 AND [Seguro] IS NULL) OR ([Seguro] " +
-                "= @Original_Seguro)) AND ((@IsNull_AdiantFretMot = 1 AND [AdiantFretMot] IS NULL" +
-                ") OR ([AdiantFretMot] = @Original_AdiantFretMot)) AND ((@IsNull_FormaPagamento =" +
-                " 1 AND [FormaPagamento] IS NULL) OR ([FormaPagamento] = @Original_FormaPagamento" +
-                ")) AND ((@IsNull_CustoCarregamento = 1 AND [CustoCarregamento] IS NULL) OR ([Cus" +
-                "toCarregamento] = @Original_CustoCarregamento)) AND ((@IsNull_ValorComissao = 1 " +
-                "AND [ValorComissao] IS NULL) OR ([ValorComissao] = @Original_ValorComissao)) AND" +
-                " ([ValorTotalRomaneio] = @Original_ValorTotalRomaneio) AND ((@IsNull_TaxaNf = 1 " +
-                "AND [TaxaNf] IS NULL) OR ([TaxaNf] = @Original_TaxaNf)) AND ([UnidMedida] = @Ori" +
-                "ginal_UnidMedida) AND ([Status] = @Original_Status) AND ([DataRomaneio] = @Origi" +
-                "nal_DataRomaneio) AND ((@IsNull_DataAlteracao = 1 AND [DataAlteracao] IS NULL) O" +
-                "R ([DataAlteracao] = @Original_DataAlteracao)) AND ((@IsNull_DataExclusao = 1 AN" +
-                "D [DataExclusao] IS NULL) OR ([DataExclusao] = @Original_DataExclusao)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [tblRomaneio] WHERE (([IDRomaneio] = @Original_IDRomaneio) AND ([IDCl" +
+                "iente] = @Original_IDCliente) AND ([IDTransportador] = @Original_IDTransportador" +
+                ") AND ([IDFornecedor] = @Original_IDFornecedor) AND ([IDFruta] = @Original_IDFru" +
+                "ta) AND ([QtdFrutas] = @Original_QtdFrutas) AND ((@IsNull_ValorFrete = 1 AND [Va" +
+                "lorFrete] IS NULL) OR ([ValorFrete] = @Original_ValorFrete)) AND ((@IsNull_Segur" +
+                "o = 1 AND [Seguro] IS NULL) OR ([Seguro] = @Original_Seguro)) AND ((@IsNull_Adia" +
+                "ntFretMot = 1 AND [AdiantFretMot] IS NULL) OR ([AdiantFretMot] = @Original_Adian" +
+                "tFretMot)) AND ((@IsNull_FormaPagamento = 1 AND [FormaPagamento] IS NULL) OR ([F" +
+                "ormaPagamento] = @Original_FormaPagamento)) AND ((@IsNull_CustoCarregamento = 1 " +
+                "AND [CustoCarregamento] IS NULL) OR ([CustoCarregamento] = @Original_CustoCarreg" +
+                "amento)) AND ((@IsNull_ValorComissao = 1 AND [ValorComissao] IS NULL) OR ([Valor" +
+                "Comissao] = @Original_ValorComissao)) AND ([ValorTotalRomaneio] = @Original_Valo" +
+                "rTotalRomaneio) AND ((@IsNull_TaxaNf = 1 AND [TaxaNf] IS NULL) OR ([TaxaNf] = @O" +
+                "riginal_TaxaNf)) AND ([UnidMedida] = @Original_UnidMedida) AND ([Status] = @Orig" +
+                "inal_Status) AND ([DataRomaneio] = @Original_DataRomaneio) AND ((@IsNull_DataAlt" +
+                "eracao = 1 AND [DataAlteracao] IS NULL) OR ([DataAlteracao] = @Original_DataAlte" +
+                "racao)) AND ((@IsNull_DataExclusao = 1 AND [DataExclusao] IS NULL) OR ([DataExcl" +
+                "usao] = @Original_DataExclusao)) AND ((@IsNull_Cliente = 1 AND [Cliente] IS NULL" +
+                ") OR ([Cliente] = @Original_Cliente)) AND ((@IsNull_Transportador = 1 AND [Trans" +
+                "portador] IS NULL) OR ([Transportador] = @Original_Transportador)) AND ((@IsNull" +
+                "_Fornecedor = 1 AND [Fornecedor] IS NULL) OR ([Fornecedor] = @Original_Fornecedo" +
+                "r)) AND ((@IsNull_Fruta = 1 AND [Fruta] IS NULL) OR ([Fruta] = @Original_Fruta))" +
+                ")";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDRomaneio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDRomaneio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDCliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1444,8 +1584,6 @@ namespace Apresentacao.midasDataSetRomaneioCorretoTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDFornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDFornecedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDFruta", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDFruta", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QtdFrutas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdFrutas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IDCarregamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCarregamento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDCarregamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCarregamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ValorFrete", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ValorFrete", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ValorFrete", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "ValorFrete", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Seguro", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Seguro", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1468,17 +1606,24 @@ namespace Apresentacao.midasDataSetRomaneioCorretoTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DataAlteracao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataAlteracao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DataExclusao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataExclusao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DataExclusao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataExclusao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cliente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Transportador", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Transportador", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Transportador", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Transportador", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fornecedor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fornecedor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fornecedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fruta", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fruta", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fruta", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fruta", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tblRomaneio] ([IDCliente], [IDTransportador], [IDFornecedor], [IDFruta], [QtdFrutas], [IDCarregamento], [ValorFrete], [Seguro], [AdiantFretMot], [FormaPagamento], [CustoCarregamento], [ValorComissao], [ValorTotalRomaneio], [TaxaNf], [UnidMedida], [Status], [DataRomaneio], [DataAlteracao], [DataExclusao]) VALUES (@IDCliente, @IDTransportador, @IDFornecedor, @IDFruta, @QtdFrutas, @IDCarregamento, @ValorFrete, @Seguro, @AdiantFretMot, @FormaPagamento, @CustoCarregamento, @ValorComissao, @ValorTotalRomaneio, @TaxaNf, @UnidMedida, @Status, @DataRomaneio, @DataAlteracao, @DataExclusao);
-SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas, IDCarregamento, ValorFrete, Seguro, AdiantFretMot, FormaPagamento, CustoCarregamento, ValorComissao, ValorTotalRomaneio, TaxaNf, UnidMedida, Status, DataRomaneio, DataAlteracao, DataExclusao FROM tblRomaneio WHERE (IDRomaneio = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [tblRomaneio] ([IDCliente], [IDTransportador], [IDFornecedor], [IDFruta], [QtdFrutas], [ValorFrete], [Seguro], [AdiantFretMot], [FormaPagamento], [CustoCarregamento], [ValorComissao], [ValorTotalRomaneio], [TaxaNf], [UnidMedida], [Status], [DataRomaneio], [DataAlteracao], [DataExclusao], [Cliente], [Transportador], [Fornecedor], [Fruta]) VALUES (@IDCliente, @IDTransportador, @IDFornecedor, @IDFruta, @QtdFrutas, @ValorFrete, @Seguro, @AdiantFretMot, @FormaPagamento, @CustoCarregamento, @ValorComissao, @ValorTotalRomaneio, @TaxaNf, @UnidMedida, @Status, @DataRomaneio, @DataAlteracao, @DataExclusao, @Cliente, @Transportador, @Fornecedor, @Fruta);
+SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas, ValorFrete, Seguro, AdiantFretMot, FormaPagamento, CustoCarregamento, ValorComissao, ValorTotalRomaneio, TaxaNf, UnidMedida, Status, DataRomaneio, DataAlteracao, DataExclusao, Cliente, Transportador, Fornecedor, Fruta FROM tblRomaneio WHERE (IDRomaneio = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDTransportador", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDTransportador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDFornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDFornecedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDFruta", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDFruta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QtdFrutas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdFrutas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCarregamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCarregamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ValorFrete", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "ValorFrete", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Seguro", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Seguro", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdiantFretMot", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "AdiantFretMot", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1492,46 +1637,53 @@ SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas,
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataRomaneio", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataRomaneio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataAlteracao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataAlteracao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataExclusao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataExclusao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cliente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Transportador", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Transportador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fornecedor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fornecedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fruta", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fruta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[tblRomaneio] SET [IDCliente] = @IDCliente, [IDTransportador] = @IDT" +
-                "ransportador, [IDFornecedor] = @IDFornecedor, [IDFruta] = @IDFruta, [QtdFrutas] " +
-                "= @QtdFrutas, [IDCarregamento] = @IDCarregamento, [ValorFrete] = @ValorFrete, [S" +
-                "eguro] = @Seguro, [AdiantFretMot] = @AdiantFretMot, [FormaPagamento] = @FormaPag" +
-                "amento, [CustoCarregamento] = @CustoCarregamento, [ValorComissao] = @ValorComiss" +
-                "ao, [ValorTotalRomaneio] = @ValorTotalRomaneio, [TaxaNf] = @TaxaNf, [UnidMedida]" +
-                " = @UnidMedida, [Status] = @Status, [DataRomaneio] = @DataRomaneio, [DataAlterac" +
-                "ao] = @DataAlteracao, [DataExclusao] = @DataExclusao WHERE (([IDRomaneio] = @Ori" +
-                "ginal_IDRomaneio) AND ([IDCliente] = @Original_IDCliente) AND ([IDTransportador]" +
-                " = @Original_IDTransportador) AND ([IDFornecedor] = @Original_IDFornecedor) AND " +
-                "([IDFruta] = @Original_IDFruta) AND ([QtdFrutas] = @Original_QtdFrutas) AND ((@I" +
-                "sNull_IDCarregamento = 1 AND [IDCarregamento] IS NULL) OR ([IDCarregamento] = @O" +
-                "riginal_IDCarregamento)) AND ((@IsNull_ValorFrete = 1 AND [ValorFrete] IS NULL) " +
-                "OR ([ValorFrete] = @Original_ValorFrete)) AND ((@IsNull_Seguro = 1 AND [Seguro] " +
-                "IS NULL) OR ([Seguro] = @Original_Seguro)) AND ((@IsNull_AdiantFretMot = 1 AND [" +
-                "AdiantFretMot] IS NULL) OR ([AdiantFretMot] = @Original_AdiantFretMot)) AND ((@I" +
-                "sNull_FormaPagamento = 1 AND [FormaPagamento] IS NULL) OR ([FormaPagamento] = @O" +
-                "riginal_FormaPagamento)) AND ((@IsNull_CustoCarregamento = 1 AND [CustoCarregame" +
-                "nto] IS NULL) OR ([CustoCarregamento] = @Original_CustoCarregamento)) AND ((@IsN" +
-                "ull_ValorComissao = 1 AND [ValorComissao] IS NULL) OR ([ValorComissao] = @Origin" +
-                "al_ValorComissao)) AND ([ValorTotalRomaneio] = @Original_ValorTotalRomaneio) AND" +
-                " ((@IsNull_TaxaNf = 1 AND [TaxaNf] IS NULL) OR ([TaxaNf] = @Original_TaxaNf)) AN" +
-                "D ([UnidMedida] = @Original_UnidMedida) AND ([Status] = @Original_Status) AND ([" +
-                "DataRomaneio] = @Original_DataRomaneio) AND ((@IsNull_DataAlteracao = 1 AND [Dat" +
-                "aAlteracao] IS NULL) OR ([DataAlteracao] = @Original_DataAlteracao)) AND ((@IsNu" +
-                "ll_DataExclusao = 1 AND [DataExclusao] IS NULL) OR ([DataExclusao] = @Original_D" +
-                "ataExclusao)));\r\nSELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, ID" +
-                "Fruta, QtdFrutas, IDCarregamento, ValorFrete, Seguro, AdiantFretMot, FormaPagame" +
-                "nto, CustoCarregamento, ValorComissao, ValorTotalRomaneio, TaxaNf, UnidMedida, S" +
-                "tatus, DataRomaneio, DataAlteracao, DataExclusao FROM tblRomaneio WHERE (IDRoman" +
-                "eio = @IDRomaneio)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [tblRomaneio] SET [IDCliente] = @IDCliente, [IDTransportador] = @IDTranspo" +
+                "rtador, [IDFornecedor] = @IDFornecedor, [IDFruta] = @IDFruta, [QtdFrutas] = @Qtd" +
+                "Frutas, [ValorFrete] = @ValorFrete, [Seguro] = @Seguro, [AdiantFretMot] = @Adian" +
+                "tFretMot, [FormaPagamento] = @FormaPagamento, [CustoCarregamento] = @CustoCarreg" +
+                "amento, [ValorComissao] = @ValorComissao, [ValorTotalRomaneio] = @ValorTotalRoma" +
+                "neio, [TaxaNf] = @TaxaNf, [UnidMedida] = @UnidMedida, [Status] = @Status, [DataR" +
+                "omaneio] = @DataRomaneio, [DataAlteracao] = @DataAlteracao, [DataExclusao] = @Da" +
+                "taExclusao, [Cliente] = @Cliente, [Transportador] = @Transportador, [Fornecedor]" +
+                " = @Fornecedor, [Fruta] = @Fruta WHERE (([IDRomaneio] = @Original_IDRomaneio) AN" +
+                "D ([IDCliente] = @Original_IDCliente) AND ([IDTransportador] = @Original_IDTrans" +
+                "portador) AND ([IDFornecedor] = @Original_IDFornecedor) AND ([IDFruta] = @Origin" +
+                "al_IDFruta) AND ([QtdFrutas] = @Original_QtdFrutas) AND ((@IsNull_ValorFrete = 1" +
+                " AND [ValorFrete] IS NULL) OR ([ValorFrete] = @Original_ValorFrete)) AND ((@IsNu" +
+                "ll_Seguro = 1 AND [Seguro] IS NULL) OR ([Seguro] = @Original_Seguro)) AND ((@IsN" +
+                "ull_AdiantFretMot = 1 AND [AdiantFretMot] IS NULL) OR ([AdiantFretMot] = @Origin" +
+                "al_AdiantFretMot)) AND ((@IsNull_FormaPagamento = 1 AND [FormaPagamento] IS NULL" +
+                ") OR ([FormaPagamento] = @Original_FormaPagamento)) AND ((@IsNull_CustoCarregame" +
+                "nto = 1 AND [CustoCarregamento] IS NULL) OR ([CustoCarregamento] = @Original_Cus" +
+                "toCarregamento)) AND ((@IsNull_ValorComissao = 1 AND [ValorComissao] IS NULL) OR" +
+                " ([ValorComissao] = @Original_ValorComissao)) AND ([ValorTotalRomaneio] = @Origi" +
+                "nal_ValorTotalRomaneio) AND ((@IsNull_TaxaNf = 1 AND [TaxaNf] IS NULL) OR ([Taxa" +
+                "Nf] = @Original_TaxaNf)) AND ([UnidMedida] = @Original_UnidMedida) AND ([Status]" +
+                " = @Original_Status) AND ([DataRomaneio] = @Original_DataRomaneio) AND ((@IsNull" +
+                "_DataAlteracao = 1 AND [DataAlteracao] IS NULL) OR ([DataAlteracao] = @Original_" +
+                "DataAlteracao)) AND ((@IsNull_DataExclusao = 1 AND [DataExclusao] IS NULL) OR ([" +
+                "DataExclusao] = @Original_DataExclusao)) AND ((@IsNull_Cliente = 1 AND [Cliente]" +
+                " IS NULL) OR ([Cliente] = @Original_Cliente)) AND ((@IsNull_Transportador = 1 AN" +
+                "D [Transportador] IS NULL) OR ([Transportador] = @Original_Transportador)) AND (" +
+                "(@IsNull_Fornecedor = 1 AND [Fornecedor] IS NULL) OR ([Fornecedor] = @Original_F" +
+                "ornecedor)) AND ((@IsNull_Fruta = 1 AND [Fruta] IS NULL) OR ([Fruta] = @Original" +
+                "_Fruta)));\r\nSELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta" +
+                ", QtdFrutas, ValorFrete, Seguro, AdiantFretMot, FormaPagamento, CustoCarregament" +
+                "o, ValorComissao, ValorTotalRomaneio, TaxaNf, UnidMedida, Status, DataRomaneio, " +
+                "DataAlteracao, DataExclusao, Cliente, Transportador, Fornecedor, Fruta FROM tblR" +
+                "omaneio WHERE (IDRomaneio = @IDRomaneio)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDTransportador", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDTransportador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDFornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDFornecedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDFruta", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDFruta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QtdFrutas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdFrutas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDCarregamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCarregamento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ValorFrete", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "ValorFrete", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Seguro", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "Seguro", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AdiantFretMot", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "AdiantFretMot", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1545,14 +1697,16 @@ SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataRomaneio", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataRomaneio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataAlteracao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataAlteracao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataExclusao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataExclusao", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cliente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Transportador", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Transportador", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fornecedor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fornecedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fruta", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fruta", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDRomaneio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDRomaneio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDCliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDTransportador", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDTransportador", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDFornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDFornecedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDFruta", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDFruta", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QtdFrutas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QtdFrutas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_IDCarregamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCarregamento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IDCarregamento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IDCarregamento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ValorFrete", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ValorFrete", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ValorFrete", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "ValorFrete", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Seguro", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Seguro", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1575,6 +1729,14 @@ SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas,
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DataAlteracao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataAlteracao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DataExclusao", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataExclusao", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DataExclusao", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataExclusao", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Cliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cliente", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cliente", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cliente", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Transportador", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Transportador", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Transportador", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Transportador", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fornecedor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fornecedor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fornecedor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fornecedor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fruta", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fruta", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fruta", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fruta", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IDRomaneio", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IDRomaneio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -1591,7 +1753,9 @@ SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas,
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas, IDCarregamento, ValorFrete, Seguro, AdiantFretMot, FormaPagamento, CustoCarregamento, ValorComissao, ValorTotalRomaneio, TaxaNf, UnidMedida, Status, DataRomaneio, DataAlteracao, DataExclusao FROM dbo.tblRomaneio";
+            this._commandCollection[0].CommandText = @"SELECT        IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas, ValorFrete, Seguro, AdiantFretMot, FormaPagamento, CustoCarregamento, ValorComissao, ValorTotalRomaneio, TaxaNf, UnidMedida, Status, 
+                         DataRomaneio, DataAlteracao, DataExclusao, Cliente, Transportador, Fornecedor, Fruta
+FROM            tblRomaneio";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1659,7 +1823,6 @@ SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas,
                     int Original_IDFornecedor, 
                     int Original_IDFruta, 
                     int Original_QtdFrutas, 
-                    global::System.Nullable<int> Original_IDCarregamento, 
                     global::System.Nullable<decimal> Original_ValorFrete, 
                     global::System.Nullable<decimal> Original_Seguro, 
                     global::System.Nullable<decimal> Original_AdiantFretMot, 
@@ -1672,106 +1835,134 @@ SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas,
                     string Original_Status, 
                     System.DateTime Original_DataRomaneio, 
                     global::System.Nullable<global::System.DateTime> Original_DataAlteracao, 
-                    global::System.Nullable<global::System.DateTime> Original_DataExclusao) {
+                    global::System.Nullable<global::System.DateTime> Original_DataExclusao, 
+                    string Original_Cliente, 
+                    string Original_Transportador, 
+                    string Original_Fornecedor, 
+                    string Original_Fruta) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IDRomaneio));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_IDCliente));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_IDTransportador));
             this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_IDFornecedor));
             this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_IDFruta));
             this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_QtdFrutas));
-            if ((Original_IDCarregamento.HasValue == true)) {
+            if ((Original_ValorFrete.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_IDCarregamento.Value));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((decimal)(Original_ValorFrete.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Original_ValorFrete.HasValue == true)) {
+            if ((Original_Seguro.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((decimal)(Original_ValorFrete.Value));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((decimal)(Original_Seguro.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Original_Seguro.HasValue == true)) {
+            if ((Original_AdiantFretMot.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((decimal)(Original_Seguro.Value));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((decimal)(Original_AdiantFretMot.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Original_AdiantFretMot.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((decimal)(Original_AdiantFretMot.Value));
-            }
-            else {
+            if ((Original_FormaPagamento == null)) {
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((Original_FormaPagamento == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_FormaPagamento));
+            }
+            if ((Original_CustoCarregamento.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((decimal)(Original_CustoCarregamento.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_FormaPagamento));
-            }
-            if ((Original_CustoCarregamento.HasValue == true)) {
+            if ((Original_ValorComissao.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((decimal)(Original_CustoCarregamento.Value));
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((decimal)(Original_ValorComissao.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            if ((Original_ValorComissao.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((decimal)(Original_ValorComissao.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[20].Value = ((decimal)(Original_ValorTotalRomaneio));
+            this.Adapter.DeleteCommand.Parameters[18].Value = ((decimal)(Original_ValorTotalRomaneio));
             if ((Original_TaxaNf.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((decimal)(Original_TaxaNf.Value));
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((decimal)(Original_TaxaNf.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             if ((Original_UnidMedida == null)) {
                 throw new global::System.ArgumentNullException("Original_UnidMedida");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((string)(Original_UnidMedida));
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((string)(Original_UnidMedida));
             }
             if ((Original_Status == null)) {
                 throw new global::System.ArgumentNullException("Original_Status");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_Status));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_Status));
             }
-            this.Adapter.DeleteCommand.Parameters[25].Value = ((System.DateTime)(Original_DataRomaneio));
+            this.Adapter.DeleteCommand.Parameters[23].Value = ((System.DateTime)(Original_DataRomaneio));
             if ((Original_DataAlteracao.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[25].Value = ((System.DateTime)(Original_DataAlteracao.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DataExclusao.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[27].Value = ((System.DateTime)(Original_DataAlteracao.Value));
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((System.DateTime)(Original_DataExclusao.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
-            if ((Original_DataExclusao.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((System.DateTime)(Original_DataExclusao.Value));
-            }
-            else {
+            if ((Original_Cliente == null)) {
                 this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((string)(Original_Cliente));
+            }
+            if ((Original_Transportador == null)) {
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[31].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[31].Value = ((string)(Original_Transportador));
+            }
+            if ((Original_Fornecedor == null)) {
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[33].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[33].Value = ((string)(Original_Fornecedor));
+            }
+            if ((Original_Fruta == null)) {
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[35].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((string)(Original_Fruta));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1799,7 +1990,6 @@ SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas,
                     int IDFornecedor, 
                     int IDFruta, 
                     int QtdFrutas, 
-                    global::System.Nullable<int> IDCarregamento, 
                     global::System.Nullable<decimal> ValorFrete, 
                     global::System.Nullable<decimal> Seguro, 
                     global::System.Nullable<decimal> AdiantFretMot, 
@@ -1812,85 +2002,107 @@ SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas,
                     string Status, 
                     System.DateTime DataRomaneio, 
                     global::System.Nullable<global::System.DateTime> DataAlteracao, 
-                    global::System.Nullable<global::System.DateTime> DataExclusao) {
+                    global::System.Nullable<global::System.DateTime> DataExclusao, 
+                    string Cliente, 
+                    string Transportador, 
+                    string Fornecedor, 
+                    string Fruta) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(IDCliente));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(IDTransportador));
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(IDFornecedor));
             this.Adapter.InsertCommand.Parameters[3].Value = ((int)(IDFruta));
             this.Adapter.InsertCommand.Parameters[4].Value = ((int)(QtdFrutas));
-            if ((IDCarregamento.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(IDCarregamento.Value));
+            if ((ValorFrete.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(ValorFrete.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((ValorFrete.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(ValorFrete.Value));
+            if ((Seguro.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(Seguro.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Seguro.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((decimal)(Seguro.Value));
+            if ((AdiantFretMot.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((decimal)(AdiantFretMot.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((AdiantFretMot.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((decimal)(AdiantFretMot.Value));
-            }
-            else {
+            if ((FormaPagamento == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((FormaPagamento == null)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(FormaPagamento));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(FormaPagamento));
             }
             if ((CustoCarregamento.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((decimal)(CustoCarregamento.Value));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((decimal)(CustoCarregamento.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((ValorComissao.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((decimal)(ValorComissao.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((ValorComissao.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((decimal)(ValorComissao.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[12].Value = ((decimal)(ValorTotalRomaneio));
+            this.Adapter.InsertCommand.Parameters[11].Value = ((decimal)(ValorTotalRomaneio));
             if ((TaxaNf.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((decimal)(TaxaNf.Value));
+                this.Adapter.InsertCommand.Parameters[12].Value = ((decimal)(TaxaNf.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             if ((UnidMedida == null)) {
                 throw new global::System.ArgumentNullException("UnidMedida");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(UnidMedida));
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(UnidMedida));
             }
             if ((Status == null)) {
                 throw new global::System.ArgumentNullException("Status");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(Status));
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(Status));
             }
-            this.Adapter.InsertCommand.Parameters[16].Value = ((System.DateTime)(DataRomaneio));
+            this.Adapter.InsertCommand.Parameters[15].Value = ((System.DateTime)(DataRomaneio));
             if ((DataAlteracao.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((System.DateTime)(DataAlteracao.Value));
+                this.Adapter.InsertCommand.Parameters[16].Value = ((System.DateTime)(DataAlteracao.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((DataExclusao.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[17].Value = ((System.DateTime)(DataExclusao.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            if ((DataExclusao.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[18].Value = ((System.DateTime)(DataExclusao.Value));
+            if ((Cliente == null)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(Cliente));
+            }
+            if ((Transportador == null)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(Transportador));
+            }
+            if ((Fornecedor == null)) {
+                this.Adapter.InsertCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[20].Value = ((string)(Fornecedor));
+            }
+            if ((Fruta == null)) {
+                this.Adapter.InsertCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[21].Value = ((string)(Fruta));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1918,7 +2130,6 @@ SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas,
                     int IDFornecedor, 
                     int IDFruta, 
                     int QtdFrutas, 
-                    global::System.Nullable<int> IDCarregamento, 
                     global::System.Nullable<decimal> ValorFrete, 
                     global::System.Nullable<decimal> Seguro, 
                     global::System.Nullable<decimal> AdiantFretMot, 
@@ -1932,13 +2143,16 @@ SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas,
                     System.DateTime DataRomaneio, 
                     global::System.Nullable<global::System.DateTime> DataAlteracao, 
                     global::System.Nullable<global::System.DateTime> DataExclusao, 
+                    string Cliente, 
+                    string Transportador, 
+                    string Fornecedor, 
+                    string Fruta, 
                     int Original_IDRomaneio, 
                     int Original_IDCliente, 
                     int Original_IDTransportador, 
                     int Original_IDFornecedor, 
                     int Original_IDFruta, 
                     int Original_QtdFrutas, 
-                    global::System.Nullable<int> Original_IDCarregamento, 
                     global::System.Nullable<decimal> Original_ValorFrete, 
                     global::System.Nullable<decimal> Original_Seguro, 
                     global::System.Nullable<decimal> Original_AdiantFretMot, 
@@ -1952,187 +2166,233 @@ SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas,
                     System.DateTime Original_DataRomaneio, 
                     global::System.Nullable<global::System.DateTime> Original_DataAlteracao, 
                     global::System.Nullable<global::System.DateTime> Original_DataExclusao, 
+                    string Original_Cliente, 
+                    string Original_Transportador, 
+                    string Original_Fornecedor, 
+                    string Original_Fruta, 
                     int IDRomaneio) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(IDCliente));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(IDTransportador));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(IDFornecedor));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(IDFruta));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(QtdFrutas));
-            if ((IDCarregamento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(IDCarregamento.Value));
+            if ((ValorFrete.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(ValorFrete.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((ValorFrete.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(ValorFrete.Value));
+            if ((Seguro.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Seguro.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Seguro.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(Seguro.Value));
+            if ((AdiantFretMot.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(AdiantFretMot.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((AdiantFretMot.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(AdiantFretMot.Value));
-            }
-            else {
+            if ((FormaPagamento == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((FormaPagamento == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(FormaPagamento));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(FormaPagamento));
             }
             if ((CustoCarregamento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(CustoCarregamento.Value));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(CustoCarregamento.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((ValorComissao.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(ValorComissao.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((ValorComissao.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(ValorComissao.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((decimal)(ValorTotalRomaneio));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(ValorTotalRomaneio));
             if ((TaxaNf.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((decimal)(TaxaNf.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((decimal)(TaxaNf.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             if ((UnidMedida == null)) {
                 throw new global::System.ArgumentNullException("UnidMedida");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(UnidMedida));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(UnidMedida));
             }
             if ((Status == null)) {
                 throw new global::System.ArgumentNullException("Status");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Status));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Status));
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(DataRomaneio));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(DataRomaneio));
             if ((DataAlteracao.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(DataAlteracao.Value));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(DataAlteracao.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            if ((DataExclusao.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(DataExclusao.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            if ((DataExclusao.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(DataExclusao.Value));
-            }
-            else {
+            if ((Cliente == null)) {
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_IDRomaneio));
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_IDCliente));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_IDTransportador));
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_IDFornecedor));
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_IDFruta));
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_QtdFrutas));
-            if ((Original_IDCarregamento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_IDCarregamento.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Cliente));
+            }
+            if ((Transportador == null)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Transportador));
             }
+            if ((Fornecedor == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Fornecedor));
+            }
+            if ((Fruta == null)) {
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Fruta));
+            }
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_IDRomaneio));
+            this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_IDCliente));
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_IDTransportador));
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_IDFornecedor));
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_IDFruta));
+            this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_QtdFrutas));
             if ((Original_ValorFrete.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((decimal)(Original_ValorFrete.Value));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((decimal)(Original_ValorFrete.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             if ((Original_Seguro.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((decimal)(Original_Seguro.Value));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((decimal)(Original_Seguro.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
             if ((Original_AdiantFretMot.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((decimal)(Original_AdiantFretMot.Value));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((decimal)(Original_AdiantFretMot.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
             if ((Original_FormaPagamento == null)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_FormaPagamento));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_FormaPagamento));
             }
             if ((Original_CustoCarregamento.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((decimal)(Original_CustoCarregamento.Value));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((decimal)(Original_CustoCarregamento.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
             if ((Original_ValorComissao.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((decimal)(Original_ValorComissao.Value));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((decimal)(Original_ValorComissao.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[39].Value = ((decimal)(Original_ValorTotalRomaneio));
+            this.Adapter.UpdateCommand.Parameters[40].Value = ((decimal)(Original_ValorTotalRomaneio));
             if ((Original_TaxaNf.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((decimal)(Original_TaxaNf.Value));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((decimal)(Original_TaxaNf.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
             }
             if ((Original_UnidMedida == null)) {
                 throw new global::System.ArgumentNullException("Original_UnidMedida");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((string)(Original_UnidMedida));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_UnidMedida));
             }
             if ((Original_Status == null)) {
                 throw new global::System.ArgumentNullException("Original_Status");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_Status));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_Status));
             }
-            this.Adapter.UpdateCommand.Parameters[44].Value = ((System.DateTime)(Original_DataRomaneio));
+            this.Adapter.UpdateCommand.Parameters[45].Value = ((System.DateTime)(Original_DataRomaneio));
             if ((Original_DataAlteracao.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((System.DateTime)(Original_DataAlteracao.Value));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((System.DateTime)(Original_DataAlteracao.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[47].Value = global::System.DBNull.Value;
             }
             if ((Original_DataExclusao.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((System.DateTime)(Original_DataExclusao.Value));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((System.DateTime)(Original_DataExclusao.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[49].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[49].Value = ((int)(IDRomaneio));
+            if ((Original_Cliente == null)) {
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((string)(Original_Cliente));
+            }
+            if ((Original_Transportador == null)) {
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[53].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((string)(Original_Transportador));
+            }
+            if ((Original_Fornecedor == null)) {
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(Original_Fornecedor));
+            }
+            if ((Original_Fruta == null)) {
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((string)(Original_Fruta));
+            }
+            this.Adapter.UpdateCommand.Parameters[58].Value = ((int)(IDRomaneio));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2159,7 +2419,6 @@ SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas,
                     int IDFornecedor, 
                     int IDFruta, 
                     int QtdFrutas, 
-                    global::System.Nullable<int> IDCarregamento, 
                     global::System.Nullable<decimal> ValorFrete, 
                     global::System.Nullable<decimal> Seguro, 
                     global::System.Nullable<decimal> AdiantFretMot, 
@@ -2173,13 +2432,16 @@ SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas,
                     System.DateTime DataRomaneio, 
                     global::System.Nullable<global::System.DateTime> DataAlteracao, 
                     global::System.Nullable<global::System.DateTime> DataExclusao, 
+                    string Cliente, 
+                    string Transportador, 
+                    string Fornecedor, 
+                    string Fruta, 
                     int Original_IDRomaneio, 
                     int Original_IDCliente, 
                     int Original_IDTransportador, 
                     int Original_IDFornecedor, 
                     int Original_IDFruta, 
                     int Original_QtdFrutas, 
-                    global::System.Nullable<int> Original_IDCarregamento, 
                     global::System.Nullable<decimal> Original_ValorFrete, 
                     global::System.Nullable<decimal> Original_Seguro, 
                     global::System.Nullable<decimal> Original_AdiantFretMot, 
@@ -2192,8 +2454,12 @@ SELECT IDRomaneio, IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas,
                     string Original_Status, 
                     System.DateTime Original_DataRomaneio, 
                     global::System.Nullable<global::System.DateTime> Original_DataAlteracao, 
-                    global::System.Nullable<global::System.DateTime> Original_DataExclusao) {
-            return this.Update(IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas, IDCarregamento, ValorFrete, Seguro, AdiantFretMot, FormaPagamento, CustoCarregamento, ValorComissao, ValorTotalRomaneio, TaxaNf, UnidMedida, Status, DataRomaneio, DataAlteracao, DataExclusao, Original_IDRomaneio, Original_IDCliente, Original_IDTransportador, Original_IDFornecedor, Original_IDFruta, Original_QtdFrutas, Original_IDCarregamento, Original_ValorFrete, Original_Seguro, Original_AdiantFretMot, Original_FormaPagamento, Original_CustoCarregamento, Original_ValorComissao, Original_ValorTotalRomaneio, Original_TaxaNf, Original_UnidMedida, Original_Status, Original_DataRomaneio, Original_DataAlteracao, Original_DataExclusao, Original_IDRomaneio);
+                    global::System.Nullable<global::System.DateTime> Original_DataExclusao, 
+                    string Original_Cliente, 
+                    string Original_Transportador, 
+                    string Original_Fornecedor, 
+                    string Original_Fruta) {
+            return this.Update(IDCliente, IDTransportador, IDFornecedor, IDFruta, QtdFrutas, ValorFrete, Seguro, AdiantFretMot, FormaPagamento, CustoCarregamento, ValorComissao, ValorTotalRomaneio, TaxaNf, UnidMedida, Status, DataRomaneio, DataAlteracao, DataExclusao, Cliente, Transportador, Fornecedor, Fruta, Original_IDRomaneio, Original_IDCliente, Original_IDTransportador, Original_IDFornecedor, Original_IDFruta, Original_QtdFrutas, Original_ValorFrete, Original_Seguro, Original_AdiantFretMot, Original_FormaPagamento, Original_CustoCarregamento, Original_ValorComissao, Original_ValorTotalRomaneio, Original_TaxaNf, Original_UnidMedida, Original_Status, Original_DataRomaneio, Original_DataAlteracao, Original_DataExclusao, Original_Cliente, Original_Transportador, Original_Fornecedor, Original_Fruta, Original_IDRomaneio);
         }
     }
     

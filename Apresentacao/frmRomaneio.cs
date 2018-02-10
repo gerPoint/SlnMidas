@@ -546,15 +546,20 @@ namespace Apresentacao
             this.objRomaneio.IDFruta = Convert.ToInt32(cpoIDFruta.Text);
             this.objRomaneio.ValorFrete = Convert.ToDecimal(cpoValorFrete.Text);
             this.objRomaneio.AdiantFretMot = Convert.ToDecimal(cpoAdiantFretMot.Text);
-            this.objRomaneio.FormaPagamento = comboBoxFormaPagamento.Text.TrimStart();
+            this.objRomaneio.FormaPagamento = Convert.ToString(comboBoxFormaPagamento.Text);
             this.objRomaneio.CustoCarregamento = Convert.ToDecimal(cpoCustoCarreg.Text);
             this.objRomaneio.ValorComissao = Convert.ToDecimal(cpoValorComissao.Text);
             this.objRomaneio.ValorTotalRomaneio = Convert.ToDecimal(cpoValorTotalRomaneio.Text);
             this.objRomaneio.TaxaNf = Convert.ToDecimal(cpoTaxaNf.Text);
             this.objRomaneio.Seguro = Convert.ToDecimal(cpoSeguro.Text);
-            this.objRomaneio.UnidMedida = comboBoxUnidMedida.Text.TrimStart();
+            this.objRomaneio.UnidMedida = Convert.ToString(comboBoxUnidMedida.Text);
             this.objRomaneio.QtdFrutas = Convert.ToInt32(cpoQtdGeral.Text);
             this.objRomaneio.ValorTotalRomaneio = Convert.ToDecimal(cpoValorTotalRomaneio.Text);
+            this.objRomaneio.Cliente = Convert.ToString(cpoNomeCliente.Text);
+            this.objRomaneio.Transportador = Convert.ToString(cpoNomeTransportador.Text);
+            this.objRomaneio.Fornecedor = Convert.ToString(cpoNomeFornecedor.Text);
+            this.objRomaneio.Fruta = Convert.ToString(cpoNomeFruta.Text);
+
 
 
 
@@ -614,7 +619,6 @@ namespace Apresentacao
                     cpoValorComissao.Enabled = true;
                     cpoValorFrete.Enabled = true;
                     cpoCustoCarreg.Enabled = true;
-                    //cpoAdiantFretMot.Enabled = true;
                     checkBoxAdiantFretMot.Enabled = false;
 
 
@@ -976,22 +980,25 @@ namespace Apresentacao
             {
                 Romaneio romaneio = (dgwRomaneio.SelectedRows[0].DataBoundItem as Romaneio);
                 cpoIDRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[0].Value.ToString();
-                cpoIDCliente.Text = dgwRomaneio.SelectedRows[0].Cells[1].Value.ToString();
-                cpoIDTransportador.Text = dgwRomaneio.SelectedRows[0].Cells[2].Value.ToString();
-                cpoIDFornecedor.Text = dgwRomaneio.SelectedRows[0].Cells[3].Value.ToString();
-                cpoIDFruta.Text = dgwRomaneio.SelectedRows[0].Cells[4].Value.ToString();
-                cpoQtdGeral.Text = dgwRomaneio.SelectedRows[0].Cells[5].Value.ToString();
-                //    cpoIDCarregamento.Text = dgwRomaneio.SelectedRows[0].Cells[3].Value.ToString();
-                cpoValorFrete.Text = dgwRomaneio.SelectedRows[0].Cells[6].Value.ToString();
-                cpoSeguro.Text = dgwRomaneio.SelectedRows[0].Cells[7].Value.ToString();
-                cpoAdiantFretMot.Text = dgwRomaneio.SelectedRows[0].Cells[8].Value.ToString();
-                comboBoxFormaPagamento.Text = dgwRomaneio.SelectedRows[0].Cells[9].Value.ToString();
-                cpoCustoCarreg.Text = dgwRomaneio.SelectedRows[0].Cells[10].Value.ToString();
-                cpoValorComissao.Text = dgwRomaneio.SelectedRows[0].Cells[11].Value.ToString();
-                cpoValorTotalRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[12].Value.ToString();
-                cpoTaxaNf.Text = dgwRomaneio.SelectedRows[0].Cells[13].Value.ToString();
-                comboBoxUnidMedida.Text = dgwRomaneio.SelectedRows[0].Cells[14].Value.ToString();
                 cpoMostraCodRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[0].Value.ToString();
+                cpoNomeCliente.Text = dgwRomaneio.SelectedRows[0].Cells[1].Value.ToString();
+                cpoNomeFornecedor.Text = dgwRomaneio.SelectedRows[0].Cells[2].Value.ToString();
+                cpoNomeTransportador.Text = dgwRomaneio.SelectedRows[0].Cells[3].Value.ToString();
+                cpoNomeFruta.Text = dgwRomaneio.SelectedRows[0].Cells[4].Value.ToString();
+                comboBoxFormaPagamento.Text = dgwRomaneio.SelectedRows[0].Cells[5].Value.ToString();
+                comboBoxUnidMedida.Text = dgwRomaneio.SelectedRows[0].Cells[6].Value.ToString();
+                cpoQtdGeral.Text = dgwRomaneio.SelectedRows[0].Cells[7].Value.ToString();
+                cpoValorFrete.Text = dgwRomaneio.SelectedRows[0].Cells[8].Value.ToString();
+                cpoCustoCarreg.Text = dgwRomaneio.SelectedRows[0].Cells[9].Value.ToString();
+                cpoValorComissao.Text = dgwRomaneio.SelectedRows[0].Cells[10].Value.ToString();
+                cpoAdiantFretMot.Text = dgwRomaneio.SelectedRows[0].Cells[11].Value.ToString();
+                cpoSeguro.Text = dgwRomaneio.SelectedRows[0].Cells[12].Value.ToString();
+                cpoTaxaNf.Text = dgwRomaneio.SelectedRows[0].Cells[13].Value.ToString();
+                cpoValorTotalRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[14].Value.ToString();
+                cpoIDCliente.Text = dgwRomaneio.SelectedRows[0].Cells[19].Value.ToString();
+                cpoIDTransportador.Text = dgwRomaneio.SelectedRows[0].Cells[20].Value.ToString();
+                cpoIDFornecedor.Text = dgwRomaneio.SelectedRows[0].Cells[21].Value.ToString();
+                cpoIDFruta.Text = dgwRomaneio.SelectedRows[0].Cells[22].Value.ToString();
 
 
                 btnSalvar.Enabled = false;
@@ -1013,7 +1020,13 @@ namespace Apresentacao
                 btnChamaTransp.Enabled = false;
                 btnChamaFruta.Enabled = false;
 
+                //---------------------------------------------------------------------------
 
+
+
+
+
+ //---------------------------------------------------------------------------
             }
             catch (Exception)
             {
@@ -1196,6 +1209,56 @@ namespace Apresentacao
 
         private void groupBox3_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void cpoFrutaP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cpoFrutaP.Text != null)
+            {
+                cpoQtdP.Enabled = true;
+                cpoPrecoP.Enabled = true;
+            }
+
+            else
+            {
+                cpoQtdP.Enabled = false;
+                cpoPrecoP.Enabled = false;
+            }
+
+
+
+        }
+
+        private void cpoFrutaM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cpoFrutaM.Text != null)
+            {
+                cpoQtdM.Enabled = true;
+                cpoPrecoM.Enabled = true;
+            }
+
+            if (cpoFrutaM.Text == null)
+            {
+                cpoQtdM.Enabled = false;
+                cpoPrecoM.Enabled = false;
+            }
+            
+        }
+
+        private void cpoFrutaG_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cpoFrutaG.Text != null)
+            {
+                cpoQtdG.Enabled = true;
+                cpoPrecoG.Enabled = true;
+            }
+
+            else
+            {
+                cpoQtdG.Enabled = false;
+                cpoPrecoG.Enabled = false;   
+            }
 
         }
     }
