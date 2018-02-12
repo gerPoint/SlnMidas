@@ -45,9 +45,13 @@
             this.filialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.personalizaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.planoDeFundoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -58,6 +62,7 @@
             this.rToolStripMenuItem,
             this.filialToolStripMenuItem,
             this.usuarioToolStripMenuItem2,
+            this.personalizaçãoToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -194,6 +199,22 @@
             this.usuárioToolStripMenuItem.Text = "Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
+            // personalizaçãoToolStripMenuItem
+            // 
+            this.personalizaçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.planoDeFundoToolStripMenuItem});
+            this.personalizaçãoToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.personalizaçãoToolStripMenuItem.Name = "personalizaçãoToolStripMenuItem";
+            this.personalizaçãoToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.personalizaçãoToolStripMenuItem.Text = "Personalização";
+            // 
+            // planoDeFundoToolStripMenuItem
+            // 
+            this.planoDeFundoToolStripMenuItem.Name = "planoDeFundoToolStripMenuItem";
+            this.planoDeFundoToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.planoDeFundoToolStripMenuItem.Text = "Plano de Fundo";
+            this.planoDeFundoToolStripMenuItem.Click += new System.EventHandler(this.planoDeFundoToolStripMenuItem_Click);
+            // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -210,13 +231,23 @@
             this.sairToolStripMenuItem1.Text = "Sair";
             this.sairToolStripMenuItem1.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1214, 594);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Apresentacao.Properties.Resources.belas_paisagens_no_campo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1214, 620);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Symbol", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.MainMenuStrip = this.menuStrip1;
@@ -230,6 +261,7 @@
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,6 +287,9 @@
         private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formaDePagamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formaDePagamentoToolStripMenuItem1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem personalizaçãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem planoDeFundoToolStripMenuItem;
     }
 }
 

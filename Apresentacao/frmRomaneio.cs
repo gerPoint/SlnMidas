@@ -452,11 +452,22 @@ namespace Apresentacao
                 cpoBloco.Text = row.Bloco;
 
                 this.dgwCarregamento.Rows.RemoveAt(e.RowIndex);
+
+
+                 
+        }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
             }
+
             finally
             {
 
             }
+
+
         }
 
         private void checkBoxAdiantFretMot_CheckedChanged(object sender, EventArgs e)
@@ -1260,6 +1271,24 @@ namespace Apresentacao
                 cpoPrecoG.Enabled = false;   
             }
 
+        }
+
+        private void cpoFrutaP_TextChanged(object sender, EventArgs e)
+        {
+            cpoFrutaP.Text = ConvMaiuscula(cpoFrutaP.Text).ToString();
+            cpoFrutaP.SelectionStart = cpoFrutaP.Text.Length;
+        }
+
+        private void cpoFrutaM_TextChanged(object sender, EventArgs e)
+        {
+            cpoFrutaM.Text = ConvMaiuscula(cpoFrutaM.Text).ToString();
+            cpoFrutaM.SelectionStart = cpoFrutaM.Text.Length;
+        }
+
+        private void cpoFrutaG_TextChanged(object sender, EventArgs e)
+        {
+            cpoFrutaG.Text = ConvMaiuscula(cpoFrutaG.Text).ToString();
+            cpoFrutaG.SelectionStart = cpoFrutaG.Text.Length;
         }
     }
 

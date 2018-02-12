@@ -207,6 +207,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>midasDataSetFruta.xsd</DependentUpon>
     </Compile>
+    <Compile Include="midasDataSetImagem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetImagem.xsd</DependentUpon>
+    </Compile>
     <Compile Include="midasDataSetRomaneio.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -442,6 +447,17 @@
     </None>
     <None Include="midasDataSetFruta.xss">
       <DependentUpon>midasDataSetFruta.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetImagem.xsc">
+      <DependentUpon>midasDataSetImagem.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetImagem.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSetImagem.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSetImagem.xss">
+      <DependentUpon>midasDataSetImagem.xsd</DependentUpon>
     </None>
     <None Include="midasDataSetRomaneio.xsc">
       <DependentUpon>midasDataSetRomaneio.xsd</DependentUpon>

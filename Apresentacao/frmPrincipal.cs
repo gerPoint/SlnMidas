@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Apresentacao
 {
     public partial class frmPrincipal : Form
@@ -16,6 +17,7 @@ namespace Apresentacao
         {
             InitializeComponent();
         }
+
 
         private void romaneioToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -97,13 +99,33 @@ namespace Apresentacao
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void romaneioToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             frmVisualizarRomaneio OutroForm = new frmVisualizarRomaneio();
             OutroForm.ShowDialog();
+        }
+
+
+ 
+        private void planoDeFundoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            pictureBox1.DataBindings.Clear();
+            pictureBox1.DataBindings.Add("Foto",midasDataSetImagem.Tables["tblImagem"], "[0]");
+            //OpenFileDialog TrocarImagem = new OpenFileDialog();
+            //TrocarImagem.Filter = "imagens (*.jpg, *.bmp, *.png, *.gif, *.tiff)|*.jpg; *.bmp; *.png; *.gif; *.tiff)";
+
+            //if (TrocarImagem.ShowDialog() == DialogResult.OK)
+            //{
+
+            //    pictureBox1.ImageLocation = TrocarImagem.FileName;
+
+            //}
+
+
         }
     }
 }
