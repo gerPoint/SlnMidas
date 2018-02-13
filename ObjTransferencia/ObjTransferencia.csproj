@@ -49,6 +49,7 @@
     <Compile Include="objFornecedor.cs" />
     <Compile Include="objFruta.cs" />
     <Compile Include="objFuncionario.cs" />
+    <Compile Include="objImagem.cs" />
     <Compile Include="objLogs.cs" />
     <Compile Include="objRomaneio.cs" />
     <Compile Include="objTransportador.cs" />

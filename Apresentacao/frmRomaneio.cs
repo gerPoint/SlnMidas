@@ -311,12 +311,7 @@ namespace Apresentacao
                     return;
                 }
 
-                //if (cpoPrecoP.Text == "")
-                //{
-                //    MessageBox.Show("Por favor informe a Quantidade! ");
-                //    cpoPrecoP.Focus();
-                //    return;
-                //}
+
                 if (cpoDescricao.Text == "")
                 {
                     MessageBox.Show("Por favor informe a descrição do Bloco! ");
@@ -326,9 +321,9 @@ namespace Apresentacao
 
                 dgwCarregamento.DataSource = null;
 
-//-------------------------------------------COLOCAR UM DÍGITO VAZIO NA STRING E ZERO ONDE FOR VAZIO----------------------
+                //-------------------------------------------COLOCAR UM DÍGITO VAZIO NA STRING E ZERO ONDE FOR VAZIO----------------------
 
-                if (cpoFrutaP.Text =="")
+                if (cpoFrutaP.Text == "")
                 {
                     cpoFrutaP.Text = "-";
                 }
@@ -374,36 +369,91 @@ namespace Apresentacao
                 }
 
 
-
-//-------------------------------------------COLOCAR UM DÍGITO VAZIO NA STRING E ZERO ONDE FOR VAZIO----------------------
-
-                objCarregamentoBloco novoCarregamentoBloco = new objCarregamentoBloco();
-                novoCarregamentoBloco.Bloco = cpoBloco.Text;
-                novoCarregamentoBloco.Descricao = cpoDescricao.Text;
-                novoCarregamentoBloco.IDRomaneio = Convert.ToInt32(cpoIDRomaneio.Text);
-                novoCarregamentoBloco.FrutaP = cpoFrutaP.Text;
-                novoCarregamentoBloco.FrutaM = cpoFrutaM.Text;
-                novoCarregamentoBloco.FrutaG = cpoFrutaG.Text;
-                novoCarregamentoBloco.PrecoP = Convert.ToDecimal(cpoPrecoP.Text);
-                novoCarregamentoBloco.PrecoM = Convert.ToDecimal(cpoPrecoM.Text);
-                novoCarregamentoBloco.PrecoG = Convert.ToDecimal(cpoPrecoG.Text);
-                novoCarregamentoBloco.QtdP = Convert.ToInt32(cpoQtdP.Text);
-                novoCarregamentoBloco.QtdM = Convert.ToInt32(cpoQtdM.Text);
-                novoCarregamentoBloco.QtdG = Convert.ToInt32(cpoQtdG.Text);
+              
 
 
+                dgwCarregamento.Rows.Add(cpoIDRomaneio.Text,cpoIDCarregamento.Text, cpoBloco.Text, cpoDescricao.Text, cpoFrutaP.Text, cpoFrutaM.Text, cpoFrutaG.Text, cpoQtdP.Text, cpoQtdM.Text, cpoQtdG.Text, cpoPrecoTotalP.Text, cpoPrecoTotalM.Text, cpoPrecoTotalG.Text);
+                
+                    Decimal Valor = 0;
+
+                foreach (DataGridViewRow row in dgwCarregamento.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.ColumnIndex == 16)
+                        {
+                            if (cell.FormattedValue != String.Empty)
+                                Valor += Decimal.Parse(cell.Value.ToString());
 
 
-
-                listCarregamento.Add(novoCarregamentoBloco);
-                dgwCarregamento.DataSource = listCarregamento;
-
-                cpoBloco.Clear();
-                cpoDescricao.Clear();
-                cpoPrecoP.Clear();
-
-
+                        }
+                    }
+                }
+                cpoValorTotalRomaneio.Text = Valor.ToString();
             }
+
+
+
+
+                //-------------------------------------------COLOCAR UM DÍGITO VAZIO NA STRING E ZERO ONDE FOR VAZIO----------------------
+
+
+            //objCarregamentoBloco novoCarregamentoBloco = new objCarregamentoBloco();
+            //novoCarregamentoBloco.Bloco = cpoBloco.Text;
+            //novoCarregamentoBloco.Descricao = cpoDescricao.Text;
+            //novoCarregamentoBloco.IDRomaneio = Convert.ToInt32(cpoIDRomaneio.Text);
+            //novoCarregamentoBloco.FrutaP = cpoFrutaP.Text;
+            //novoCarregamentoBloco.FrutaM = cpoFrutaM.Text;
+            //novoCarregamentoBloco.FrutaG = cpoFrutaG.Text;
+            //novoCarregamentoBloco.PrecoP = Convert.ToDecimal(cpoPrecoP.Text);
+            //novoCarregamentoBloco.PrecoM = Convert.ToDecimal(cpoPrecoM.Text);
+            //novoCarregamentoBloco.PrecoG = Convert.ToDecimal(cpoPrecoG.Text);
+            //novoCarregamentoBloco.QtdP = Convert.ToInt32(cpoQtdP.Text);
+            //novoCarregamentoBloco.QtdM = Convert.ToInt32(cpoQtdM.Text);
+            //novoCarregamentoBloco.QtdG = Convert.ToInt32(cpoQtdG.Text);
+
+
+            //listCarregamento.Add(novoCarregamentoBloco);
+            //dgwCarregamento.DataSource = listCarregamento;
+
+
+
+            //cpoBloco.Clear();
+            //cpoDescricao.Clear();
+            //cpoPrecoP.Clear();
+
+
+            //----------------------------------------------------------------------------------------
+
+
+            //objCarregamentoBloco row = (dgwCarregamento.RowTemplate.DataBoundItem as objCarregamentoBloco);
+
+            // Int32 valor1, valor2, valor3;
+            // String resultado;
+            // valor1 = Convert.ToInt32(dgwCarregamento.RowTemplate.Cells[7].Value);
+            // valor2 = Convert.ToInt32(dgwCarregamento.RowTemplate.Cells[8].Value);
+            // valor3 = Convert.ToInt32(dgwCarregamento.RowTemplate.Cells[9].Value);
+
+            // resultado = Convert.ToString(valor1 + valor2 + valor3);
+            // cpoQtdCarregada.Text = Convert.ToString(resultado);
+
+            // //---------------------------------------------------------------------------
+
+            // Decimal valor4, valor5, valor6, resultado2;
+            // valor4 = Convert.ToDecimal(dgwCarregamento.RowTemplate.Cells[10].Value);
+            // valor5 = Convert.ToDecimal(dgwCarregamento.RowTemplate.Cells[11].Value);
+            // valor6 = Convert.ToDecimal(dgwCarregamento.RowTemplate.Cells[12].Value);
+
+            // resultado2 = valor4 + valor5 + valor6;
+            // cpoTotalCarregamento.Text = resultado2.ToString();
+
+
+            //-----------------------------------------------------------------------------------------------
+
+        
+
+
+        
             catch (Exception)
             {
 
@@ -442,30 +492,30 @@ namespace Apresentacao
 
         private void dgwCarregamento_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            try
-            {
+        //    try
+        //    {
 
-                objCarregamentoBloco row = (dgwCarregamento.SelectedRows[0].DataBoundItem as objCarregamentoBloco);
+        //        objCarregamentoBloco row = (dgwCarregamento.SelectedRows[0].DataBoundItem as objCarregamentoBloco);
 
-                cpoDescricao.Text = row.Descricao;
-                cpoPrecoP.Text = row.Quantidade.ToString();
-                cpoBloco.Text = row.Bloco;
+        //        cpoDescricao.Text = row.Descricao;
+        //        cpoPrecoP.Text = row.Quantidade.ToString();
+        //        cpoBloco.Text = row.Bloco;
 
-                this.dgwCarregamento.Rows.RemoveAt(e.RowIndex);
+        //        this.dgwCarregamento.Rows.RemoveAt(e.RowIndex);
 
 
                  
-        }
-            catch (Exception)
-            {
+        //}
+        //    catch (Exception)
+        //    {
 
-                MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
-            }
+        //        MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
+        //    }
 
-            finally
-            {
+        //    finally
+        //    {
 
-            }
+        //    }
 
 
         }
@@ -1290,10 +1340,101 @@ namespace Apresentacao
             cpoFrutaG.Text = ConvMaiuscula(cpoFrutaG.Text).ToString();
             cpoFrutaG.SelectionStart = cpoFrutaG.Text.Length;
         }
+
+        private void cpoQtdP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Este Campo aceita apenas Números inteiros");
+                return;
+            }
+        }
+
+        private void cpoQtdM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Este Campo aceita apenas Números inteiros");
+                return;
+            }
+        }
+
+        private void cpoQtdG_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Este Campo aceita apenas Números inteiros");
+                return;
+            }
+        }
+
+        private void cpoQtdP_TextChanged(object sender, EventArgs e)
+        {
+            if (cpoQtdP.Text == "")
+            {
+                cpoPrecoTotalP.Clear();
+            }
+
+            if (!string.IsNullOrEmpty(cpoQtdP.Text)
+
+                )
+
+                cpoPrecoTotalP.Text = (Convert.ToDecimal(cpoQtdP.Text) * Convert.ToDecimal(cpoPrecoP.Text)).ToString();
+
+
+
+        }
+
+        private void cpoQtdM_TextChanged(object sender, EventArgs e)
+        {
+            if (cpoQtdM.Text == "")
+            {
+                cpoPrecoTotalM.Clear();
+            }
+
+            if (!string.IsNullOrEmpty(cpoQtdM.Text)
+
+                )
+
+                cpoPrecoTotalM.Text = (Convert.ToDecimal(cpoQtdM.Text) * Convert.ToDecimal(cpoPrecoM.Text)).ToString();
+        }
+
+        private void cpoQtdG_TextChanged(object sender, EventArgs e)
+        {
+            if (cpoQtdG.Text == "")
+            {
+                cpoPrecoTotalG.Clear();
+            }
+
+            if (!string.IsNullOrEmpty(cpoQtdG.Text)
+
+                )
+
+                cpoPrecoTotalG.Text = (Convert.ToDecimal(cpoQtdG.Text) * Convert.ToDecimal(cpoPrecoG.Text)).ToString();
+        }
+
+
+
+
+        //-----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+        //--------------------------------------------------------------------------------------------------------
+
+
+    }
+
     }
 
 
-}
+
 
 
 
