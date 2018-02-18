@@ -21,7 +21,10 @@ namespace ObjTransferencia
         public int QtdP { get; set; }
         public int QtdM { get; set; }
         public int QtdG { get; set; }
-
+        public decimal ValorUnitP { get; set; }
+        public decimal ValorUnitM { get; set; }
+        public decimal ValorUnitG { get; set; }
+        public decimal TotalCarreg { get; set; }
 
 
 

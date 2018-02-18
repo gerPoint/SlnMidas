@@ -245,6 +245,7 @@ namespace Apresentacao
             cpoDtInicial.Enabled = false;
 
 
+ //-------- seleção combobox puxando direto da tabela pelo select----------------------------
 
             string comandoSql = "Select IDFormaPagamento, Descricao from tblFormaPagamento";
             string conexao = Settings.Default.strConexao;
@@ -273,7 +274,7 @@ namespace Apresentacao
 
 
 
-
+//-------- seleção combobox puxando direto da tabela pelo select----------------------------
 
         }
 
@@ -306,7 +307,7 @@ namespace Apresentacao
 
                 if (cpoBloco.Text == "")
                 {
-                    MessageBox.Show("Por favor defina o Bloco! ");
+                    MessageBox.Show("Por favor, defina o Bloco! ");
                     cpoBloco.Focus();
                     return;
                 }
@@ -314,7 +315,7 @@ namespace Apresentacao
 
                 if (cpoDescricao.Text == "")
                 {
-                    MessageBox.Show("Por favor informe a descrição do Bloco! ");
+                    MessageBox.Show("Por favor, informe a descrição do Bloco! ");
                     cpoDescricao.Focus();
                     return;
                 }
@@ -369,33 +370,31 @@ namespace Apresentacao
                 }
 
 
-              
 
+                //-----------------------Soma dAS QUANTIDADES  das frutas PEQUENA , MEDIA E GRANDE e também PREÇOS TOTAIS PEQUENO MEDIO E GRANDE-------------------
 
-                dgwCarregamento.Rows.Add(cpoIDRomaneio.Text,cpoIDCarregamento.Text, cpoBloco.Text, cpoDescricao.Text, cpoFrutaP.Text, cpoFrutaM.Text, cpoFrutaG.Text, cpoQtdP.Text, cpoQtdM.Text, cpoQtdG.Text, cpoPrecoTotalP.Text, cpoPrecoTotalM.Text, cpoPrecoTotalG.Text);
-                
-                    Decimal Valor = 0;
-
-                foreach (DataGridViewRow row in dgwCarregamento.Rows)
+                if (cpoQtdP.Text + cpoQtdM.Text + cpoQtdG.Text + cpoPrecoTotalP.Text + cpoPrecoTotalM.Text + cpoPrecoTotalG.Text != "")
                 {
-                    foreach (DataGridViewCell cell in row.Cells)
-                    {
-                        if (cell.ColumnIndex == 16)
-                        {
-                            if (cell.FormattedValue != String.Empty)
-                                Valor += Decimal.Parse(cell.Value.ToString());
-
-
-                        }
-                    }
+                    cpoSomaQtd.Text = (Convert.ToDecimal(cpoQtdP.Text) + Convert.ToDecimal(cpoQtdM.Text) + Convert.ToDecimal(cpoQtdG.Text)).ToString();
+                    cpoSomaPreco.Text = (Convert.ToDecimal(cpoPrecoTotalP.Text) + Convert.ToDecimal(cpoPrecoTotalM.Text) + Convert.ToDecimal(cpoPrecoTotalG.Text)).ToString();
                 }
-                cpoValorTotalRomaneio.Text = Valor.ToString();
+                else
+                {
+                    MessageBox.Show("Por favor, informe a Quantidade da Fruta a ser adicionada! ");
+                    cpoDescricao.Focus();
+                    return;
+                }
+
+
+
+                //-----------------------soma dos valores totais das frutas PEQUENA , MEDIA E GRANDE e também PREÇOS TOTAIS PEQUENO MEDIO E GRANDE-------------------
+
+
+                dgwCarregamento.Rows.Add
+                (cpoIDRomaneio.Text, cpoBloco.Text, cpoDescricao.Text, cpoFrutaP.Text, cpoFrutaM.Text, cpoFrutaG.Text, cpoPrecoP.Text, cpoPrecoM.Text, cpoPrecoG.Text, cpoQtdP.Text, cpoQtdM.Text, cpoQtdG.Text, cpoSomaQtd.Text, cpoPrecoTotalP.Text, cpoPrecoTotalM.Text, cpoPrecoTotalG.Text, cpoSomaPreco.Text,cpoTotalCarregamento.Text, cpoIDCarregamento.Text);
+
+
             }
-
-
-
-
-                //-------------------------------------------COLOCAR UM DÍGITO VAZIO NA STRING E ZERO ONDE FOR VAZIO----------------------
 
 
             //objCarregamentoBloco novoCarregamentoBloco = new objCarregamentoBloco();
@@ -450,10 +449,8 @@ namespace Apresentacao
 
             //-----------------------------------------------------------------------------------------------
 
-        
 
 
-        
             catch (Exception)
             {
 
@@ -492,30 +489,30 @@ namespace Apresentacao
 
         private void dgwCarregamento_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-        //    try
-        //    {
+            //try
+            //{
 
-        //        objCarregamentoBloco row = (dgwCarregamento.SelectedRows[0].DataBoundItem as objCarregamentoBloco);
+            //    objCarregamentoBloco row = (dgwCarregamento.SelectedRows[0].DataBoundItem as objCarregamentoBloco);
 
-        //        cpoDescricao.Text = row.Descricao;
-        //        cpoPrecoP.Text = row.Quantidade.ToString();
-        //        cpoBloco.Text = row.Bloco;
+            //    //cpoDescricao.Text = row.Descricao;
+            //    //cpoPrecoP.Text = row.Quantidade.ToString();
+            //    //cpoBloco.Text = row.Bloco;
 
-        //        this.dgwCarregamento.Rows.RemoveAt(e.RowIndex);
+            //    this.dgwCarregamento.Rows.RemoveAt(e.RowIndex);
 
 
-                 
-        //}
-        //    catch (Exception)
-        //    {
 
-        //        MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
-        //    }
+            //}
+            //catch (Exception)
+            //{
 
-        //    finally
-        //    {
+            //    MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
+            //}
 
-        //    }
+            //finally
+            //{
+
+            //}
 
 
         }
@@ -1129,6 +1126,11 @@ namespace Apresentacao
                 this.objCarreg.PrecoP = Convert.ToDecimal(row.Cells[10].Value);
                 this.objCarreg.PrecoM = Convert.ToDecimal(row.Cells[11].Value);
                 this.objCarreg.PrecoG = Convert.ToDecimal(row.Cells[12].Value);
+                this.objCarreg.ValorUnitP = Convert.ToDecimal(row.Cells[13].Value);
+                this.objCarreg.ValorUnitM = Convert.ToDecimal(row.Cells[14].Value);
+                this.objCarreg.ValorUnitG = Convert.ToDecimal(row.Cells[15].Value);
+                this.objCarreg.TotalCarreg = Convert.ToDecimal(row.Cells[16].Value);
+
 
                 NegCarregamentoBloco negCarreg = new NegCarregamentoBloco();
                 strRetorno = negCarreg.Cadastrar(this.objCarreg);
@@ -1414,6 +1416,77 @@ namespace Apresentacao
                 )
 
                 cpoPrecoTotalG.Text = (Convert.ToDecimal(cpoQtdG.Text) * Convert.ToDecimal(cpoPrecoG.Text)).ToString();
+        }
+
+        private void cpoPrecoP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //troca o '.' por ','.
+            if (e.KeyChar == '.' || e.KeyChar == ',')
+            {
+                e.KeyChar = ',';
+
+                //Verifica se já existe alguma vírgula na string
+                if (cpoPrecoP.Text.Contains(","))
+                    e.Handled = true; // Caso exista, aborte 
+
+            }
+            //aceita apenas números, tecla backspace e virgula.
+            else if (!char.IsNumber(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+     
+
+        }
+
+        private void cpoPrecoM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //troca o '.' por ','.
+            if (e.KeyChar == '.' || e.KeyChar == ',')
+            {
+                e.KeyChar = ',';
+
+                //Verifica se já existe alguma vírgula na string
+                if (cpoPrecoM.Text.Contains(","))
+                    e.Handled = true; // Caso exista, aborte 
+
+            }
+            //aceita apenas números, tecla backspace e virgula.
+            else if (!char.IsNumber(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cpoPrecoG_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //troca o '.' por ','.
+            if (e.KeyChar == '.' || e.KeyChar == ',')
+            {
+                e.KeyChar = ',';
+
+                //Verifica se já existe alguma vírgula na string
+                if (cpoPrecoG.Text.Contains(","))
+                    e.Handled = true; // Caso exista, aborte 
+
+            }
+            //aceita apenas números, tecla backspace e virgula.
+            else if (!char.IsNumber(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cpoSomaQtd_TextChanged(object sender, EventArgs e)
+        {
+
+
+
         }
 
 
