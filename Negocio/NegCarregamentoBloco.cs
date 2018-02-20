@@ -35,6 +35,12 @@ namespace Negocio
                 acessoDados.AdicionarParametro(new SqlParameter("@INPrecoP", blocos.PrecoP));
                 acessoDados.AdicionarParametro(new SqlParameter("@INPrecoM", blocos.PrecoM));
                 acessoDados.AdicionarParametro(new SqlParameter("@INPrecoG", blocos.PrecoG));
+                acessoDados.AdicionarParametro(new SqlParameter("@INValorUnitP", blocos.ValorUnitP));
+                acessoDados.AdicionarParametro(new SqlParameter("@INValorUnitM", blocos.ValorUnitM));
+                acessoDados.AdicionarParametro(new SqlParameter("@INValorUnitG", blocos.ValorUnitG));
+                acessoDados.AdicionarParametro(new SqlParameter("@INTotalBloco", blocos.TotalBloco));
+                acessoDados.AdicionarParametro(new SqlParameter("@INTotalCarreg", blocos.TotalCarreg));
+
 
 
                 string IDCarregamentoBloco = acessoDados.ExecutarScalar("uspCadastrarBlocos", CommandType.StoredProcedure).ToString();

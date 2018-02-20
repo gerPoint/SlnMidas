@@ -24,8 +24,10 @@ namespace ObjTransferencia
         public decimal ValorUnitP { get; set; }
         public decimal ValorUnitM { get; set; }
         public decimal ValorUnitG { get; set; }
+        public decimal TotalBloco { get; set; }
+        
         public decimal TotalCarreg { get; set; }
-
+        
 
 
     }

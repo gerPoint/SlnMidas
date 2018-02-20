@@ -324,20 +324,45 @@ namespace Apresentacao
 
                 //-------------------------------------------COLOCAR UM DÍGITO VAZIO NA STRING E ZERO ONDE FOR VAZIO----------------------
 
+
+
+
                 if (cpoFrutaP.Text == "")
                 {
-                    cpoFrutaP.Text = "-";
+                    cpoFrutaP.Text = " ";
                 }
+
 
                 if (cpoFrutaM.Text == "")
                 {
-                    cpoFrutaM.Text = "-";
+                    cpoFrutaM.Text = " ";
                 }
+
 
                 if (cpoFrutaG.Text == "")
                 {
-                    cpoFrutaG.Text = "-";
+                    cpoFrutaG.Text = " ";
                 }
+
+                if (cpoPrecoP.Text == "")
+                {
+                    cpoPrecoP.Text = "0";
+                }
+
+
+                if (cpoPrecoM.Text == "")
+                {
+                    cpoPrecoM.Text = "0";
+                }
+
+
+                if (cpoPrecoG.Text == "")
+                {
+                    cpoPrecoG.Text = "0";
+                }
+              
+
+
 
                 if (cpoQtdP.Text == "")
                 {
@@ -353,23 +378,7 @@ namespace Apresentacao
                 {
                     cpoQtdG.Text = "0";
                 }
-
-                if (cpoPrecoP.Text == "")
-                {
-                    cpoPrecoP.Text = "0";
-                }
-
-                if (cpoPrecoM.Text == "")
-                {
-                    cpoPrecoM.Text = "0";
-                }
-
-                if (cpoPrecoG.Text == "")
-                {
-                    cpoPrecoG.Text = "0";
-                }
-
-
+ 
 
                 //-----------------------Soma dAS QUANTIDADES  das frutas PEQUENA , MEDIA E GRANDE e também PREÇOS TOTAIS PEQUENO MEDIO E GRANDE-------------------
 
@@ -393,7 +402,7 @@ namespace Apresentacao
                 dgwCarregamento.Rows.Add
                 (cpoIDRomaneio.Text, cpoBloco.Text, cpoDescricao.Text, cpoFrutaP.Text, cpoFrutaM.Text, cpoFrutaG.Text, cpoPrecoP.Text, cpoPrecoM.Text, cpoPrecoG.Text, cpoQtdP.Text, cpoQtdM.Text, cpoQtdG.Text, cpoSomaQtd.Text, cpoPrecoTotalP.Text, cpoPrecoTotalM.Text, cpoPrecoTotalG.Text, cpoSomaPreco.Text,cpoTotalCarregamento.Text, cpoIDCarregamento.Text);
 
-
+                //-------- tem que ser na sequencia de ordem do dataset---------------------
             }
 
 
@@ -460,6 +469,25 @@ namespace Apresentacao
 
                 btnInserir.Click += new EventHandler(btnInserir_Click);
             }
+
+
+            cpoDescricao.Clear();
+            cpoBloco.Clear();
+            cpoFrutaP.Clear();
+            cpoFrutaM.Clear();
+            cpoFrutaG.Clear();
+            cpoPrecoP.Clear();
+            cpoPrecoM.Clear();
+            cpoPrecoG.Clear();
+            cpoQtdP.Clear();
+            cpoQtdM.Clear();
+            cpoQtdG.Clear();
+            cpoPrecoTotalP.Clear();
+            cpoPrecoTotalM.Clear();
+            cpoPrecoTotalG.Clear();
+            cpoSomaPreco.Clear();
+            cpoSomaQtd.Clear();
+
         }
 
         private void btnChamacli_Click(object sender, EventArgs e)
@@ -489,30 +517,51 @@ namespace Apresentacao
 
         private void dgwCarregamento_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //try
-            //{
+            try
+            {
 
-            //    objCarregamentoBloco row = (dgwCarregamento.SelectedRows[0].DataBoundItem as objCarregamentoBloco);
+                objCarregamentoBloco row = (dgwCarregamento.SelectedRows[0].DataBoundItem as objCarregamentoBloco);
 
-            //    //cpoDescricao.Text = row.Descricao;
-            //    //cpoPrecoP.Text = row.Quantidade.ToString();
-            //    //cpoBloco.Text = row.Bloco;
+                cpoIDCarregamento.Text = dgwCarregamento.SelectedRows[0].Cells[0].Value.ToString();
+                cpoBloco.Text = dgwCarregamento.SelectedRows[0].Cells[1].Value.ToString();
+                cpoDescricao.Text = dgwCarregamento.SelectedRows[0].Cells[2].Value.ToString();
+                cpoFrutaP.Text = dgwCarregamento.SelectedRows[0].Cells[3].Value.ToString();
+                cpoFrutaM.Text = dgwCarregamento.SelectedRows[0].Cells[4].Value.ToString();
+                cpoFrutaG.Text = dgwCarregamento.SelectedRows[0].Cells[5].Value.ToString();
+                cpoPrecoP.Text = dgwCarregamento.SelectedRows[0].Cells[6].Value.ToString();                       
+                cpoPrecoM.Text = dgwCarregamento.SelectedRows[0].Cells[7].Value.ToString();
+                cpoPrecoG.Text = dgwCarregamento.SelectedRows[0].Cells[8].Value.ToString();
+                cpoQtdP.Text = dgwCarregamento.SelectedRows[0].Cells[9].Value.ToString();
+                cpoQtdM.Text = dgwCarregamento.SelectedRows[0].Cells[10].Value.ToString();
+                cpoQtdG.Text = dgwCarregamento.SelectedRows[0].Cells[11].Value.ToString();
+                cpoSomaQtd.Text = dgwCarregamento.SelectedRows[0].Cells[12].Value.ToString();
+                cpoPrecoTotalP.Text = dgwCarregamento.SelectedRows[0].Cells[13].Value.ToString();
+                cpoPrecoTotalM.Text = dgwCarregamento.SelectedRows[0].Cells[14].Value.ToString();
+                cpoPrecoTotalG.Text = dgwCarregamento.SelectedRows[0].Cells[15].Value.ToString();
+                cpoSomaPreco.Text = dgwCarregamento.SelectedRows[0].Cells[16].Value.ToString();
+                
+                
+                
 
-            //    this.dgwCarregamento.Rows.RemoveAt(e.RowIndex);
+                this.dgwCarregamento.Rows.RemoveAt(e.RowIndex);
 
 
 
-            //}
-            //catch (Exception)
-            //{
 
-            //    MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
-            //}
+            }
+            catch (Exception ex )
+            {
+                MessageBox.Show("Falha  Falha: " +
+    ex.Message, "Falha", MessageBoxButtons.OK,
+    MessageBoxIcon.Warning);
 
-            //finally
-            //{
+                // MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
+            }
 
-            //}
+            finally
+            {
+
+            }
 
 
         }
@@ -1110,26 +1159,31 @@ namespace Apresentacao
 
             string strRetorno = string.Empty;
 
+           
+
 
             foreach (DataGridViewRow row in dgwCarregamento.Rows)
             {
 
                 this.objCarreg.IDRomaneio = Convert.ToInt32(row.Cells[0].Value);
-                this.objCarreg.Bloco = Convert.ToString(row.Cells[2].Value);
-                this.objCarreg.Descricao = Convert.ToString(row.Cells[3].Value);
-                this.objCarreg.FrutaP = Convert.ToString(row.Cells[4].Value);
-                this.objCarreg.FrutaM = Convert.ToString(row.Cells[5].Value);
-                this.objCarreg.FrutaG = Convert.ToString(row.Cells[6].Value);
-                this.objCarreg.QtdP = Convert.ToInt32(row.Cells[7].Value);
-                this.objCarreg.QtdM = Convert.ToInt32(row.Cells[8].Value);
-                this.objCarreg.QtdG = Convert.ToInt32(row.Cells[9].Value);
-                this.objCarreg.PrecoP = Convert.ToDecimal(row.Cells[10].Value);
-                this.objCarreg.PrecoM = Convert.ToDecimal(row.Cells[11].Value);
-                this.objCarreg.PrecoG = Convert.ToDecimal(row.Cells[12].Value);
-                this.objCarreg.ValorUnitP = Convert.ToDecimal(row.Cells[13].Value);
-                this.objCarreg.ValorUnitM = Convert.ToDecimal(row.Cells[14].Value);
-                this.objCarreg.ValorUnitG = Convert.ToDecimal(row.Cells[15].Value);
-                this.objCarreg.TotalCarreg = Convert.ToDecimal(row.Cells[16].Value);
+                this.objCarreg.Bloco = Convert.ToString(row.Cells[1].Value);
+                this.objCarreg.Descricao = Convert.ToString(row.Cells[2].Value);
+                this.objCarreg.FrutaP = Convert.ToString(row.Cells[3].Value);
+                this.objCarreg.FrutaM = Convert.ToString(row.Cells[4].Value);
+                this.objCarreg.FrutaG = Convert.ToString(row.Cells[5].Value);
+                this.objCarreg.ValorUnitP = Convert.ToDecimal(row.Cells[6].Value);
+                this.objCarreg.ValorUnitM = Convert.ToDecimal(row.Cells[7].Value);
+                this.objCarreg.ValorUnitG = Convert.ToDecimal(row.Cells[8].Value);
+                this.objCarreg.QtdP = Convert.ToInt32(row.Cells[9].Value);
+                this.objCarreg.QtdM = Convert.ToInt32(row.Cells[10].Value);
+                this.objCarreg.QtdG = Convert.ToInt32(row.Cells[11].Value);
+                this.objCarreg.Quantidade = Convert.ToInt32(row.Cells[12].Value);
+                this.objCarreg.PrecoP = Convert.ToDecimal(row.Cells[13].Value);
+                this.objCarreg.PrecoM = Convert.ToDecimal(row.Cells[14].Value);
+                this.objCarreg.PrecoG = Convert.ToDecimal(row.Cells[15].Value);
+                this.objCarreg.TotalBloco = Convert.ToDecimal(row.Cells[16].Value);
+
+               
 
 
                 NegCarregamentoBloco negCarreg = new NegCarregamentoBloco();
@@ -1277,7 +1331,25 @@ namespace Apresentacao
 
         private void cpoFrutaP_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (cpoFrutaP.Text != null)
+
+
+        }
+
+        private void cpoFrutaM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            
+        }
+
+        private void cpoFrutaG_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+
+        }
+
+        private void cpoFrutaP_TextChanged(object sender, EventArgs e)
+        {
+            if (cpoFrutaP.Text != "")
             {
                 cpoQtdP.Enabled = true;
                 cpoPrecoP.Enabled = true;
@@ -1290,28 +1362,33 @@ namespace Apresentacao
             }
 
 
-
+            cpoFrutaP.Text = ConvMaiuscula(cpoFrutaP.Text).ToString();
+            cpoFrutaP.SelectionStart = cpoFrutaP.Text.Length;
         }
 
-        private void cpoFrutaM_KeyPress(object sender, KeyPressEventArgs e)
+        private void cpoFrutaM_TextChanged(object sender, EventArgs e)
         {
-            if (cpoFrutaM.Text != null)
+            if (cpoFrutaM.Text != "")
             {
                 cpoQtdM.Enabled = true;
                 cpoPrecoM.Enabled = true;
             }
 
-            if (cpoFrutaM.Text == null)
+            else
+
             {
                 cpoQtdM.Enabled = false;
                 cpoPrecoM.Enabled = false;
             }
-            
+
+
+            cpoFrutaM.Text = ConvMaiuscula(cpoFrutaM.Text).ToString();
+            cpoFrutaM.SelectionStart = cpoFrutaM.Text.Length;
         }
 
-        private void cpoFrutaG_KeyPress(object sender, KeyPressEventArgs e)
+        private void cpoFrutaG_TextChanged(object sender, EventArgs e)
         {
-            if (cpoFrutaG.Text != null)
+            if (cpoFrutaG.Text != "")
             {
                 cpoQtdG.Enabled = true;
                 cpoPrecoG.Enabled = true;
@@ -1320,25 +1397,10 @@ namespace Apresentacao
             else
             {
                 cpoQtdG.Enabled = false;
-                cpoPrecoG.Enabled = false;   
+                cpoPrecoG.Enabled = false;
             }
 
-        }
 
-        private void cpoFrutaP_TextChanged(object sender, EventArgs e)
-        {
-            cpoFrutaP.Text = ConvMaiuscula(cpoFrutaP.Text).ToString();
-            cpoFrutaP.SelectionStart = cpoFrutaP.Text.Length;
-        }
-
-        private void cpoFrutaM_TextChanged(object sender, EventArgs e)
-        {
-            cpoFrutaM.Text = ConvMaiuscula(cpoFrutaM.Text).ToString();
-            cpoFrutaM.SelectionStart = cpoFrutaM.Text.Length;
-        }
-
-        private void cpoFrutaG_TextChanged(object sender, EventArgs e)
-        {
             cpoFrutaG.Text = ConvMaiuscula(cpoFrutaG.Text).ToString();
             cpoFrutaG.SelectionStart = cpoFrutaG.Text.Length;
         }
@@ -1377,7 +1439,7 @@ namespace Apresentacao
         {
             if (cpoQtdP.Text == "")
             {
-                cpoPrecoTotalP.Clear();
+                cpoPrecoTotalP.Text = "0";
             }
 
             if (!string.IsNullOrEmpty(cpoQtdP.Text)
@@ -1394,7 +1456,7 @@ namespace Apresentacao
         {
             if (cpoQtdM.Text == "")
             {
-                cpoPrecoTotalM.Clear();
+                cpoPrecoTotalM.Text = "0";
             }
 
             if (!string.IsNullOrEmpty(cpoQtdM.Text)
@@ -1408,7 +1470,7 @@ namespace Apresentacao
         {
             if (cpoQtdG.Text == "")
             {
-                cpoPrecoTotalG.Clear();
+                cpoPrecoTotalG.Text = "0";
             }
 
             if (!string.IsNullOrEmpty(cpoQtdG.Text)

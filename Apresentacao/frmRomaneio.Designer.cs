@@ -1884,7 +1884,7 @@
             this.frutaPDataGridViewTextBoxColumn.HeaderText = "Fruta Pequena";
             this.frutaPDataGridViewTextBoxColumn.Name = "frutaPDataGridViewTextBoxColumn";
             this.frutaPDataGridViewTextBoxColumn.ReadOnly = true;
-            this.frutaPDataGridViewTextBoxColumn.Width = 120;
+            this.frutaPDataGridViewTextBoxColumn.Width = 150;
             // 
             // frutaMDataGridViewTextBoxColumn
             // 
@@ -1892,7 +1892,7 @@
             this.frutaMDataGridViewTextBoxColumn.HeaderText = "Fruta Média";
             this.frutaMDataGridViewTextBoxColumn.Name = "frutaMDataGridViewTextBoxColumn";
             this.frutaMDataGridViewTextBoxColumn.ReadOnly = true;
-            this.frutaMDataGridViewTextBoxColumn.Width = 120;
+            this.frutaMDataGridViewTextBoxColumn.Width = 150;
             // 
             // frutaGDataGridViewTextBoxColumn
             // 
@@ -1900,7 +1900,7 @@
             this.frutaGDataGridViewTextBoxColumn.HeaderText = "Fruta Grande";
             this.frutaGDataGridViewTextBoxColumn.Name = "frutaGDataGridViewTextBoxColumn";
             this.frutaGDataGridViewTextBoxColumn.ReadOnly = true;
-            this.frutaGDataGridViewTextBoxColumn.Width = 120;
+            this.frutaGDataGridViewTextBoxColumn.Width = 150;
             // 
             // valorUnitPDataGridViewTextBoxColumn
             // 
