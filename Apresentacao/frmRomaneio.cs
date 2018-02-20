@@ -457,8 +457,7 @@ namespace Apresentacao
 
 
             //-----------------------------------------------------------------------------------------------
-
-
+ 
 
             catch (Exception)
             {
@@ -469,6 +468,28 @@ namespace Apresentacao
 
                 btnInserir.Click += new EventHandler(btnInserir_Click);
             }
+
+
+
+            decimal soma = 0;
+
+            foreach (DataGridViewRow dr in dgwCarregamento.Rows)
+                soma += Convert.ToDecimal(dr.Cells[16].Value);
+            cpoTotalCarregamento.Text = Convert.ToString(soma);
+
+
+
+
+
+            decimal somaQtd = 0;
+
+            foreach (DataGridViewRow dr in dgwCarregamento.Rows)
+                somaQtd += Convert.ToDecimal(dr.Cells[12].Value);
+            cpoQtdCarregada.Text = Convert.ToString(somaQtd);
+
+
+
+
 
 
             cpoDescricao.Clear();
@@ -544,6 +565,27 @@ namespace Apresentacao
                 
 
                 this.dgwCarregamento.Rows.RemoveAt(e.RowIndex);
+
+
+                decimal subtracao = 0;
+
+
+                foreach (DataGridViewRow dr in dgwCarregamento.Rows)
+                    subtracao -= Convert.ToDecimal(dr.Cells[16].Value);
+                cpoTotalCarregamento.Text = Convert.ToString(subtracao);
+                cpoTotalCarregamento.Text = cpoTotalCarregamento.Text.Replace("-", "");// O MÉTODO REPLACE TIRA O SINAL QUE ESTA NA PRIMEIRA ASPAS"" E TROCA PELO VALOR QUE ESTA NA SEGUNDA ASPAS""(OU SEJA ..PEGA A PRIMEIRA E TROCA PELA SEGUNDA)
+
+
+
+                decimal subtracaoQtd = 0;
+
+                foreach (DataGridViewRow dr in dgwCarregamento.Rows)
+                    subtracaoQtd -= Convert.ToDecimal(dr.Cells[12].Value);
+                cpoQtdCarregada.Text = Convert.ToString(subtracaoQtd);
+                cpoQtdCarregada.Text = cpoQtdCarregada.Text.Replace("-", "");// O MÉTODO REPLACE TIRA O SINAL QUE ESTA NA PRIMEIRA ASPAS"" E TROCA PELO VALOR QUE ESTA NA SEGUNDA ASPAS""(OU SEJA ..PEGA A PRIMEIRA E TROCA PELA SEGUNDA)
+
+
+
 
 
 
@@ -1033,6 +1075,26 @@ namespace Apresentacao
                 this.dgwCarregamento.Rows.Remove(this.dgwCarregamento.CurrentRow);
                 this.dgwCarregamento.Refresh();
             }
+
+            decimal subtracao = 0;
+
+
+            foreach (DataGridViewRow dr in dgwCarregamento.Rows)
+                subtracao -= Convert.ToDecimal(dr.Cells[16].Value);
+            cpoTotalCarregamento.Text = Convert.ToString(subtracao);
+            cpoTotalCarregamento.Text = cpoTotalCarregamento.Text.Replace("-", "");// O MÉTODO REPLACE TIRA O SINAL QUE ESTA NA PRIMEIRA ASPAS"" E TROCA PELO VALOR QUE ESTA NA SEGUNDA ASPAS""(OU SEJA ..PEGA A PRIMEIRA E TROCA PELA SEGUNDA)
+
+
+
+            decimal subtracaoQtd = 0;
+
+            foreach (DataGridViewRow dr in dgwCarregamento.Rows)
+                subtracaoQtd -= Convert.ToDecimal(dr.Cells[12].Value);
+            cpoQtdCarregada.Text = Convert.ToString(subtracaoQtd);
+            cpoQtdCarregada.Text = cpoQtdCarregada.Text.Replace("-", "");// O MÉTODO REPLACE TIRA O SINAL QUE ESTA NA PRIMEIRA ASPAS"" E TROCA PELO VALOR QUE ESTA NA SEGUNDA ASPAS""(OU SEJA ..PEGA A PRIMEIRA E TROCA PELA SEGUNDA)
+
+
+
         }
 
         private void comboBoxTpoPesquisa_SelectedIndexChanged(object sender, EventArgs e)

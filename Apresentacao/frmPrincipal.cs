@@ -13,9 +13,18 @@ namespace Apresentacao
 {
     public partial class frmPrincipal : Form
     {
+
+        string pasta_images = "";
+        Image img_fundo;
         public frmPrincipal()
+           
         {
             InitializeComponent();
+
+            pasta_images = Application.StartupPath + @"\images\";
+            img_fundo = Image.FromFile(pasta_images + @"abacaxi.jpg");
+            this.BackgroundImage = img_fundo;
+
         }
 
 
@@ -77,11 +86,6 @@ namespace Apresentacao
             frmTransportador OutroFrm = new frmTransportador();
             OutroFrm.ShowDialog();        }
 
-      //  private void usuarioToolStripMenuItem1_Click(object sender, EventArgs e)
-       // {
-       //    frmUsuario OutroFrm = new frmUsuario();
-        //   OutroFrm.ShowDialog();
-       // }
 
         private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -96,10 +100,10 @@ namespace Apresentacao
             frmFormaPagamento OutroForm = new frmFormaPagamento();
             OutroForm.ShowDialog();
         }
-
+        
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void romaneioToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -112,18 +116,32 @@ namespace Apresentacao
  
         private void planoDeFundoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            //{
+            //    pictureBoxPerfil.ImageLocation = openFileDialog1.FileName;
+            //    pictureBoxPerfil.Load();
+            //    lblCaminho.Text = "Caminho do Arquivo: " + openFileDialog1.FileName;
+            //}
+            //OpenFileDialog TrocarImagem = new OpenFileDialog();
+
+
 
             OpenFileDialog TrocarImagem = new OpenFileDialog();
             TrocarImagem.Filter = "imagens (*.jpg, *.bmp, *.png, *.gif, *.tiff)|*.jpg; *.bmp; *.png; *.gif; *.tiff)";
 
             if (TrocarImagem.ShowDialog() == DialogResult.OK)
             {
-                
-                pictureBox1.ImageLocation = TrocarImagem.FileName;
-           
+
+               pictureBoxPerfil.ImageLocation = TrocarImagem.FileName;
+
 
             }
 
+
+        }
+
+        private void pictureBoxPerfil_Click(object sender, EventArgs e)
+        {
 
         }
     }

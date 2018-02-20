@@ -49,9 +49,11 @@
             this.planoDeFundoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPerfil = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.lblCaminho = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -231,15 +233,29 @@
             this.sairToolStripMenuItem1.Text = "Sair";
             this.sairToolStripMenuItem1.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
             // 
-            // pictureBox1
+            // pictureBoxPerfil
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1214, 594);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxPerfil.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxPerfil.Location = new System.Drawing.Point(0, 26);
+            this.pictureBoxPerfil.Name = "pictureBoxPerfil";
+            this.pictureBoxPerfil.Size = new System.Drawing.Size(1214, 594);
+            this.pictureBoxPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPerfil.TabIndex = 6;
+            this.pictureBoxPerfil.TabStop = false;
+            this.pictureBoxPerfil.Click += new System.EventHandler(this.pictureBoxPerfil_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // lblCaminho
+            // 
+            this.lblCaminho.AutoSize = true;
+            this.lblCaminho.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaminho.Location = new System.Drawing.Point(12, 45);
+            this.lblCaminho.Name = "lblCaminho";
+            this.lblCaminho.Size = new System.Drawing.Size(0, 16);
+            this.lblCaminho.TabIndex = 7;
             // 
             // frmPrincipal
             // 
@@ -247,7 +263,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1214, 620);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblCaminho);
+            this.Controls.Add(this.pictureBoxPerfil);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Symbol", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.MainMenuStrip = this.menuStrip1;
@@ -261,7 +278,7 @@
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,9 +304,11 @@
         private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formaDePagamentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem formaDePagamentoToolStripMenuItem1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxPerfil;
         private System.Windows.Forms.ToolStripMenuItem personalizaçãoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem planoDeFundoToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label lblCaminho;
     }
 }
 
