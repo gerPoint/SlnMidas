@@ -165,6 +165,25 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.dgwCarregamento = new System.Windows.Forms.DataGridView();
+            this.iDRomaneioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frutaPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frutaMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frutaGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorUnitPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorUnitMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorUnitGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precoGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalCarregDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblCarregamentoBlocoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetCarregamentoBlocookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetCarregamentoBlocook = new Apresentacao.midasDataSetCarregamentoBlocook();
@@ -194,25 +213,6 @@
             this.tblCarregamentoBlocoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblCarregamentoBlocoTableAdapter1 = new Apresentacao.midasDataSetCarregamentoBlocookTableAdapters.tblCarregamentoBlocoTableAdapter();
             this.midasDataSetCarregamentoBlocookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.iDRomaneioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frutaPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frutaMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frutaGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorUnitPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorUnitMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorUnitGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precoPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precoMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precoGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalCarregDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPagePrincipal.SuspendLayout();
             this.tabPageRomaneio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblFormaPagamentoBindingSource)).BeginInit();
@@ -1649,9 +1649,7 @@
             // 
             this.dgwCarregamento.AllowUserToAddRows = false;
             this.dgwCarregamento.AllowUserToDeleteRows = false;
-            this.dgwCarregamento.AllowUserToOrderColumns = true;
             this.dgwCarregamento.AllowUserToResizeColumns = false;
-            this.dgwCarregamento.AllowUserToResizeRows = false;
             this.dgwCarregamento.AutoGenerateColumns = false;
             this.dgwCarregamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwCarregamento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1682,6 +1680,151 @@
             this.dgwCarregamento.Size = new System.Drawing.Size(937, 170);
             this.dgwCarregamento.TabIndex = 146;
             this.dgwCarregamento.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwCarregamento_CellMouseDoubleClick);
+            // 
+            // iDRomaneioDataGridViewTextBoxColumn1
+            // 
+            this.iDRomaneioDataGridViewTextBoxColumn1.DataPropertyName = "IDRomaneio";
+            this.iDRomaneioDataGridViewTextBoxColumn1.HeaderText = "Cód. Romaneio";
+            this.iDRomaneioDataGridViewTextBoxColumn1.Name = "iDRomaneioDataGridViewTextBoxColumn1";
+            this.iDRomaneioDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.iDRomaneioDataGridViewTextBoxColumn1.Width = 80;
+            // 
+            // blocoDataGridViewTextBoxColumn
+            // 
+            this.blocoDataGridViewTextBoxColumn.DataPropertyName = "Bloco";
+            this.blocoDataGridViewTextBoxColumn.HeaderText = "Bloco";
+            this.blocoDataGridViewTextBoxColumn.Name = "blocoDataGridViewTextBoxColumn";
+            this.blocoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.blocoDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // descricaoDataGridViewTextBoxColumn
+            // 
+            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
+            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
+            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descricaoDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // frutaPDataGridViewTextBoxColumn
+            // 
+            this.frutaPDataGridViewTextBoxColumn.DataPropertyName = "FrutaP";
+            this.frutaPDataGridViewTextBoxColumn.HeaderText = "Fruta Pequena";
+            this.frutaPDataGridViewTextBoxColumn.Name = "frutaPDataGridViewTextBoxColumn";
+            this.frutaPDataGridViewTextBoxColumn.ReadOnly = true;
+            this.frutaPDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // frutaMDataGridViewTextBoxColumn
+            // 
+            this.frutaMDataGridViewTextBoxColumn.DataPropertyName = "FrutaM";
+            this.frutaMDataGridViewTextBoxColumn.HeaderText = "Fruta Média";
+            this.frutaMDataGridViewTextBoxColumn.Name = "frutaMDataGridViewTextBoxColumn";
+            this.frutaMDataGridViewTextBoxColumn.ReadOnly = true;
+            this.frutaMDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // frutaGDataGridViewTextBoxColumn
+            // 
+            this.frutaGDataGridViewTextBoxColumn.DataPropertyName = "FrutaG";
+            this.frutaGDataGridViewTextBoxColumn.HeaderText = "Fruta Grande";
+            this.frutaGDataGridViewTextBoxColumn.Name = "frutaGDataGridViewTextBoxColumn";
+            this.frutaGDataGridViewTextBoxColumn.ReadOnly = true;
+            this.frutaGDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // valorUnitPDataGridViewTextBoxColumn
+            // 
+            this.valorUnitPDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitP";
+            this.valorUnitPDataGridViewTextBoxColumn.HeaderText = "Valor Unit. F.P";
+            this.valorUnitPDataGridViewTextBoxColumn.Name = "valorUnitPDataGridViewTextBoxColumn";
+            this.valorUnitPDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // valorUnitMDataGridViewTextBoxColumn
+            // 
+            this.valorUnitMDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitM";
+            this.valorUnitMDataGridViewTextBoxColumn.HeaderText = "Valor Unit. F.M";
+            this.valorUnitMDataGridViewTextBoxColumn.Name = "valorUnitMDataGridViewTextBoxColumn";
+            this.valorUnitMDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // valorUnitGDataGridViewTextBoxColumn
+            // 
+            this.valorUnitGDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitG";
+            this.valorUnitGDataGridViewTextBoxColumn.HeaderText = "Valor Unit. F.G";
+            this.valorUnitGDataGridViewTextBoxColumn.Name = "valorUnitGDataGridViewTextBoxColumn";
+            this.valorUnitGDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qtdPDataGridViewTextBoxColumn
+            // 
+            this.qtdPDataGridViewTextBoxColumn.DataPropertyName = "QtdP";
+            this.qtdPDataGridViewTextBoxColumn.HeaderText = "Qtd. F.P";
+            this.qtdPDataGridViewTextBoxColumn.Name = "qtdPDataGridViewTextBoxColumn";
+            this.qtdPDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qtdMDataGridViewTextBoxColumn
+            // 
+            this.qtdMDataGridViewTextBoxColumn.DataPropertyName = "QtdM";
+            this.qtdMDataGridViewTextBoxColumn.HeaderText = "Qtd. F.M";
+            this.qtdMDataGridViewTextBoxColumn.Name = "qtdMDataGridViewTextBoxColumn";
+            this.qtdMDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qtdGDataGridViewTextBoxColumn
+            // 
+            this.qtdGDataGridViewTextBoxColumn.DataPropertyName = "QtdG";
+            this.qtdGDataGridViewTextBoxColumn.HeaderText = "Qtd. F.G";
+            this.qtdGDataGridViewTextBoxColumn.Name = "qtdGDataGridViewTextBoxColumn";
+            this.qtdGDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantidadeDataGridViewTextBoxColumn
+            // 
+            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
+            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Qtd. Carregada";
+            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
+            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.quantidadeDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // precoPDataGridViewTextBoxColumn
+            // 
+            this.precoPDataGridViewTextBoxColumn.DataPropertyName = "PrecoP";
+            this.precoPDataGridViewTextBoxColumn.HeaderText = "Valor Total F.P";
+            this.precoPDataGridViewTextBoxColumn.Name = "precoPDataGridViewTextBoxColumn";
+            this.precoPDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precoPDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // precoMDataGridViewTextBoxColumn
+            // 
+            this.precoMDataGridViewTextBoxColumn.DataPropertyName = "PrecoM";
+            this.precoMDataGridViewTextBoxColumn.HeaderText = "Valor Total F.M ";
+            this.precoMDataGridViewTextBoxColumn.Name = "precoMDataGridViewTextBoxColumn";
+            this.precoMDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precoMDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // precoGDataGridViewTextBoxColumn
+            // 
+            this.precoGDataGridViewTextBoxColumn.DataPropertyName = "PrecoG";
+            this.precoGDataGridViewTextBoxColumn.HeaderText = "Valor Total F.G";
+            this.precoGDataGridViewTextBoxColumn.Name = "precoGDataGridViewTextBoxColumn";
+            this.precoGDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precoGDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // totalBlocoDataGridViewTextBoxColumn
+            // 
+            this.totalBlocoDataGridViewTextBoxColumn.DataPropertyName = "TotalBloco";
+            this.totalBlocoDataGridViewTextBoxColumn.HeaderText = "Total Bloco";
+            this.totalBlocoDataGridViewTextBoxColumn.Name = "totalBlocoDataGridViewTextBoxColumn";
+            this.totalBlocoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // totalCarregDataGridViewTextBoxColumn
+            // 
+            this.totalCarregDataGridViewTextBoxColumn.DataPropertyName = "TotalCarreg";
+            this.totalCarregDataGridViewTextBoxColumn.HeaderText = "Total Carregamento";
+            this.totalCarregDataGridViewTextBoxColumn.Name = "totalCarregDataGridViewTextBoxColumn";
+            this.totalCarregDataGridViewTextBoxColumn.ReadOnly = true;
+            this.totalCarregDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // iDCarregamentoBlocoDataGridViewTextBoxColumn
+            // 
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.DataPropertyName = "IDCarregamentoBloco";
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.HeaderText = "Cód. Carreg.";
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Name = "iDCarregamentoBlocoDataGridViewTextBoxColumn";
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Visible = false;
             // 
             // tblCarregamentoBlocoBindingSource3
             // 
@@ -1853,151 +1996,6 @@
             // 
             this.midasDataSetCarregamentoBlocookBindingSource1.DataSource = this.midasDataSetCarregamentoBlocook;
             this.midasDataSetCarregamentoBlocookBindingSource1.Position = 0;
-            // 
-            // iDRomaneioDataGridViewTextBoxColumn1
-            // 
-            this.iDRomaneioDataGridViewTextBoxColumn1.DataPropertyName = "IDRomaneio";
-            this.iDRomaneioDataGridViewTextBoxColumn1.HeaderText = "Cód. Romaneio";
-            this.iDRomaneioDataGridViewTextBoxColumn1.Name = "iDRomaneioDataGridViewTextBoxColumn1";
-            this.iDRomaneioDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.iDRomaneioDataGridViewTextBoxColumn1.Width = 80;
-            // 
-            // blocoDataGridViewTextBoxColumn
-            // 
-            this.blocoDataGridViewTextBoxColumn.DataPropertyName = "Bloco";
-            this.blocoDataGridViewTextBoxColumn.HeaderText = "Bloco";
-            this.blocoDataGridViewTextBoxColumn.Name = "blocoDataGridViewTextBoxColumn";
-            this.blocoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.blocoDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // descricaoDataGridViewTextBoxColumn
-            // 
-            this.descricaoDataGridViewTextBoxColumn.DataPropertyName = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.HeaderText = "Descricao";
-            this.descricaoDataGridViewTextBoxColumn.Name = "descricaoDataGridViewTextBoxColumn";
-            this.descricaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.descricaoDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // frutaPDataGridViewTextBoxColumn
-            // 
-            this.frutaPDataGridViewTextBoxColumn.DataPropertyName = "FrutaP";
-            this.frutaPDataGridViewTextBoxColumn.HeaderText = "Fruta Pequena";
-            this.frutaPDataGridViewTextBoxColumn.Name = "frutaPDataGridViewTextBoxColumn";
-            this.frutaPDataGridViewTextBoxColumn.ReadOnly = true;
-            this.frutaPDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // frutaMDataGridViewTextBoxColumn
-            // 
-            this.frutaMDataGridViewTextBoxColumn.DataPropertyName = "FrutaM";
-            this.frutaMDataGridViewTextBoxColumn.HeaderText = "Fruta Média";
-            this.frutaMDataGridViewTextBoxColumn.Name = "frutaMDataGridViewTextBoxColumn";
-            this.frutaMDataGridViewTextBoxColumn.ReadOnly = true;
-            this.frutaMDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // frutaGDataGridViewTextBoxColumn
-            // 
-            this.frutaGDataGridViewTextBoxColumn.DataPropertyName = "FrutaG";
-            this.frutaGDataGridViewTextBoxColumn.HeaderText = "Fruta Grande";
-            this.frutaGDataGridViewTextBoxColumn.Name = "frutaGDataGridViewTextBoxColumn";
-            this.frutaGDataGridViewTextBoxColumn.ReadOnly = true;
-            this.frutaGDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // valorUnitPDataGridViewTextBoxColumn
-            // 
-            this.valorUnitPDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitP";
-            this.valorUnitPDataGridViewTextBoxColumn.HeaderText = "Valor Unit. F.P";
-            this.valorUnitPDataGridViewTextBoxColumn.Name = "valorUnitPDataGridViewTextBoxColumn";
-            this.valorUnitPDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // valorUnitMDataGridViewTextBoxColumn
-            // 
-            this.valorUnitMDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitM";
-            this.valorUnitMDataGridViewTextBoxColumn.HeaderText = "Valor Unit. F.M";
-            this.valorUnitMDataGridViewTextBoxColumn.Name = "valorUnitMDataGridViewTextBoxColumn";
-            this.valorUnitMDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // valorUnitGDataGridViewTextBoxColumn
-            // 
-            this.valorUnitGDataGridViewTextBoxColumn.DataPropertyName = "ValorUnitG";
-            this.valorUnitGDataGridViewTextBoxColumn.HeaderText = "Valor Unit. F.G";
-            this.valorUnitGDataGridViewTextBoxColumn.Name = "valorUnitGDataGridViewTextBoxColumn";
-            this.valorUnitGDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qtdPDataGridViewTextBoxColumn
-            // 
-            this.qtdPDataGridViewTextBoxColumn.DataPropertyName = "QtdP";
-            this.qtdPDataGridViewTextBoxColumn.HeaderText = "Qtd. F.P";
-            this.qtdPDataGridViewTextBoxColumn.Name = "qtdPDataGridViewTextBoxColumn";
-            this.qtdPDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qtdMDataGridViewTextBoxColumn
-            // 
-            this.qtdMDataGridViewTextBoxColumn.DataPropertyName = "QtdM";
-            this.qtdMDataGridViewTextBoxColumn.HeaderText = "Qtd. F.M";
-            this.qtdMDataGridViewTextBoxColumn.Name = "qtdMDataGridViewTextBoxColumn";
-            this.qtdMDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qtdGDataGridViewTextBoxColumn
-            // 
-            this.qtdGDataGridViewTextBoxColumn.DataPropertyName = "QtdG";
-            this.qtdGDataGridViewTextBoxColumn.HeaderText = "Qtd. F.G";
-            this.qtdGDataGridViewTextBoxColumn.Name = "qtdGDataGridViewTextBoxColumn";
-            this.qtdGDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantidadeDataGridViewTextBoxColumn
-            // 
-            this.quantidadeDataGridViewTextBoxColumn.DataPropertyName = "Quantidade";
-            this.quantidadeDataGridViewTextBoxColumn.HeaderText = "Qtd. Carregada";
-            this.quantidadeDataGridViewTextBoxColumn.Name = "quantidadeDataGridViewTextBoxColumn";
-            this.quantidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.quantidadeDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // precoPDataGridViewTextBoxColumn
-            // 
-            this.precoPDataGridViewTextBoxColumn.DataPropertyName = "PrecoP";
-            this.precoPDataGridViewTextBoxColumn.HeaderText = "Valor Total F.P";
-            this.precoPDataGridViewTextBoxColumn.Name = "precoPDataGridViewTextBoxColumn";
-            this.precoPDataGridViewTextBoxColumn.ReadOnly = true;
-            this.precoPDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // precoMDataGridViewTextBoxColumn
-            // 
-            this.precoMDataGridViewTextBoxColumn.DataPropertyName = "PrecoM";
-            this.precoMDataGridViewTextBoxColumn.HeaderText = "Valor Total F.M ";
-            this.precoMDataGridViewTextBoxColumn.Name = "precoMDataGridViewTextBoxColumn";
-            this.precoMDataGridViewTextBoxColumn.ReadOnly = true;
-            this.precoMDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // precoGDataGridViewTextBoxColumn
-            // 
-            this.precoGDataGridViewTextBoxColumn.DataPropertyName = "PrecoG";
-            this.precoGDataGridViewTextBoxColumn.HeaderText = "Valor Total F.G";
-            this.precoGDataGridViewTextBoxColumn.Name = "precoGDataGridViewTextBoxColumn";
-            this.precoGDataGridViewTextBoxColumn.ReadOnly = true;
-            this.precoGDataGridViewTextBoxColumn.Width = 110;
-            // 
-            // totalBlocoDataGridViewTextBoxColumn
-            // 
-            this.totalBlocoDataGridViewTextBoxColumn.DataPropertyName = "TotalBloco";
-            this.totalBlocoDataGridViewTextBoxColumn.HeaderText = "Total Bloco";
-            this.totalBlocoDataGridViewTextBoxColumn.Name = "totalBlocoDataGridViewTextBoxColumn";
-            this.totalBlocoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // totalCarregDataGridViewTextBoxColumn
-            // 
-            this.totalCarregDataGridViewTextBoxColumn.DataPropertyName = "TotalCarreg";
-            this.totalCarregDataGridViewTextBoxColumn.HeaderText = "Total Carregamento";
-            this.totalCarregDataGridViewTextBoxColumn.Name = "totalCarregDataGridViewTextBoxColumn";
-            this.totalCarregDataGridViewTextBoxColumn.ReadOnly = true;
-            this.totalCarregDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // iDCarregamentoBlocoDataGridViewTextBoxColumn
-            // 
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.DataPropertyName = "IDCarregamentoBloco";
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.HeaderText = "Cód. Carreg.";
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Name = "iDCarregamentoBlocoDataGridViewTextBoxColumn";
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDCarregamentoBlocoDataGridViewTextBoxColumn.Visible = false;
             // 
             // frmRomaneio
             // 

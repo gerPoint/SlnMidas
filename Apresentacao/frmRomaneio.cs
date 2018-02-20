@@ -593,11 +593,8 @@ namespace Apresentacao
             }
             catch (Exception ex )
             {
-                MessageBox.Show("Falha  Falha: " +
-    ex.Message, "Falha", MessageBoxButtons.OK,
-    MessageBoxIcon.Warning);
 
-                // MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
+                 MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
             }
 
             finally
@@ -980,8 +977,9 @@ namespace Apresentacao
                 valor4 = Convert.ToDecimal(cpoSeguro.Text);
                 valor5 = Convert.ToDecimal(cpoCustoCarreg.Text);
                 valor6 = Convert.ToDecimal(cpoAdiantFretMot.Text);
-                resultado = valor1 + valor2 + valor3 + valor4 + valor5 - valor6;
+                resultado = valor1 + valor2 + valor3 + valor4 + valor5 + valor6;
                 cpoValorTotalRomaneio.Text = resultado.ToString();
+
                 //     cpoValorTotalRomaneio.Text - cpoAdiantFretMot.Text = resultado.ToString()
 
                 cpoSeguro.Enabled = false;
