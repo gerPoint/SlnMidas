@@ -546,6 +546,10 @@
       <DependentUpon>midasDataSetUsuario.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\AcessoDados.AcessoDadosSqlServer.datasource" />
+    <None Include="Properties\DataSources\Apresentacao.midasDataSetCarregamentoBlocookTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\Apresentacao.midasDataSetCarregamentoBlocookTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\Apresentacao.midasDataSetCarregamentoBlocookTableAdapters.tblCarregamentoBlocoTableAdapter.datasource" />
+    <None Include="Properties\DataSources\midasDataSetCarregamentoBlocook.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -638,6 +642,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\editing-pencil_icon-icons.com_68219.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_search_find_image_photo_6099.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_46933.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sloganFull.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slogan.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\romaneio.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\simples.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Romaneiobasico.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Romaneiobasico1.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
