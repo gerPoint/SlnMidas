@@ -140,3 +140,4 @@ C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\zh-Hans\Mic
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\RdlCompile.cache
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\RdlCompile.compiled
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmEmissaoRomaneio.resources

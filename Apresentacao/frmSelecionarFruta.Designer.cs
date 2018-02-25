@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSelecionarFruta));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cpoIDFruta = new System.Windows.Forms.TextBox();
             this.cpoNomeFruta = new System.Windows.Forms.TextBox();
@@ -214,6 +215,7 @@
             this.Controls.Add(this.cpoCaixaPesquisa);
             this.Controls.Add(this.btnPesquisar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSelecionarFruta";

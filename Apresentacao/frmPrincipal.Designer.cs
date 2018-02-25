@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.romaneioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,9 +50,11 @@
             this.planoDeFundoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBoxPerfil = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.lblCaminho = new System.Windows.Forms.Label();
+            this.emissãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.romaneioToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBoxPerfil = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerfil)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +64,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.romaneioToolStripMenuItem,
             this.formaDePagamentoToolStripMenuItem,
+            this.emissãoToolStripMenuItem,
             this.rToolStripMenuItem,
             this.filialToolStripMenuItem,
             this.usuarioToolStripMenuItem2,
@@ -233,17 +237,6 @@
             this.sairToolStripMenuItem1.Text = "Sair";
             this.sairToolStripMenuItem1.Click += new System.EventHandler(this.sairToolStripMenuItem1_Click);
             // 
-            // pictureBoxPerfil
-            // 
-            this.pictureBoxPerfil.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxPerfil.Location = new System.Drawing.Point(0, 26);
-            this.pictureBoxPerfil.Name = "pictureBoxPerfil";
-            this.pictureBoxPerfil.Size = new System.Drawing.Size(1214, 594);
-            this.pictureBoxPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPerfil.TabIndex = 6;
-            this.pictureBoxPerfil.TabStop = false;
-            this.pictureBoxPerfil.Click += new System.EventHandler(this.pictureBoxPerfil_Click);
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -257,6 +250,33 @@
             this.lblCaminho.Size = new System.Drawing.Size(0, 16);
             this.lblCaminho.TabIndex = 7;
             // 
+            // emissãoToolStripMenuItem
+            // 
+            this.emissãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.romaneioToolStripMenuItem3});
+            this.emissãoToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emissãoToolStripMenuItem.Name = "emissãoToolStripMenuItem";
+            this.emissãoToolStripMenuItem.Size = new System.Drawing.Size(74, 22);
+            this.emissãoToolStripMenuItem.Text = "Emissão";
+            // 
+            // romaneioToolStripMenuItem3
+            // 
+            this.romaneioToolStripMenuItem3.Name = "romaneioToolStripMenuItem3";
+            this.romaneioToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.romaneioToolStripMenuItem3.Text = "Romaneio";
+            this.romaneioToolStripMenuItem3.Click += new System.EventHandler(this.romaneioToolStripMenuItem3_Click);
+            // 
+            // pictureBoxPerfil
+            // 
+            this.pictureBoxPerfil.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxPerfil.Location = new System.Drawing.Point(0, 26);
+            this.pictureBoxPerfil.Name = "pictureBoxPerfil";
+            this.pictureBoxPerfil.Size = new System.Drawing.Size(1214, 594);
+            this.pictureBoxPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPerfil.TabIndex = 6;
+            this.pictureBoxPerfil.TabStop = false;
+            this.pictureBoxPerfil.Click += new System.EventHandler(this.pictureBoxPerfil_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
@@ -267,6 +287,7 @@
             this.Controls.Add(this.pictureBoxPerfil);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Symbol", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
@@ -309,6 +330,8 @@
         private System.Windows.Forms.ToolStripMenuItem planoDeFundoToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label lblCaminho;
+        private System.Windows.Forms.ToolStripMenuItem emissãoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem romaneioToolStripMenuItem3;
     }
 }
 

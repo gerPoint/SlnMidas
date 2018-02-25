@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSelecionarTransportador));
             this.cpoIDTransportador = new System.Windows.Forms.TextBox();
             this.cpoNomeTransportador = new System.Windows.Forms.TextBox();
             this.dgwSelTransportador = new System.Windows.Forms.DataGridView();
@@ -258,6 +259,7 @@
             this.Controls.Add(this.cpoCaixaPesquisa);
             this.Controls.Add(this.btnPesquisar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSelecionarTransportador";
