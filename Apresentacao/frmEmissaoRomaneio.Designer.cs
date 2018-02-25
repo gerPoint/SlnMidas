@@ -59,18 +59,6 @@
             this.cpoNomeFornecedor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label11 = new System.Windows.Forms.Label();
-            this.cpoValorTotalRomaneio = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cpoQtdGeral = new System.Windows.Forms.TextBox();
-            this.printDocument = new System.Drawing.Printing.PrintDocument();
-            this.printDialog = new System.Windows.Forms.PrintDialog();
-            this.label18 = new System.Windows.Forms.Label();
-            this.cpoIDRomaneio = new System.Windows.Forms.TextBox();
-            this.pictureBoxTitulo = new System.Windows.Forms.PictureBox();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnVisualizar = new System.Windows.Forms.Button();
             this.iDCarregamentoBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,6 +78,17 @@
             this.precoPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precoGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precoMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.cpoValorTotalRomaneio = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cpoQtdGeral = new System.Windows.Forms.TextBox();
+            this.printDocumentImprimir = new System.Drawing.Printing.PrintDocument();
+            this.printDialogImprimir = new System.Windows.Forms.PrintDialog();
+            this.pictureBoxTitulo = new System.Windows.Forms.PictureBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cpoIDRomaneio = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTitulo)).BeginInit();
@@ -97,50 +96,56 @@
             // 
             // cpoValorComissao
             // 
-            this.cpoValorComissao.Location = new System.Drawing.Point(628, 150);
+            this.cpoValorComissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoValorComissao.Location = new System.Drawing.Point(714, 150);
             this.cpoValorComissao.Name = "cpoValorComissao";
-            this.cpoValorComissao.Size = new System.Drawing.Size(155, 20);
+            this.cpoValorComissao.Size = new System.Drawing.Size(155, 26);
             this.cpoValorComissao.TabIndex = 126;
             // 
             // cpoCustoCarreg
             // 
-            this.cpoCustoCarreg.Location = new System.Drawing.Point(628, 176);
+            this.cpoCustoCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoCustoCarreg.Location = new System.Drawing.Point(714, 176);
             this.cpoCustoCarreg.Name = "cpoCustoCarreg";
-            this.cpoCustoCarreg.Size = new System.Drawing.Size(155, 20);
+            this.cpoCustoCarreg.Size = new System.Drawing.Size(155, 26);
             this.cpoCustoCarreg.TabIndex = 120;
             // 
             // cpoTaxaNf
             // 
-            this.cpoTaxaNf.Location = new System.Drawing.Point(932, 150);
+            this.cpoTaxaNf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoTaxaNf.Location = new System.Drawing.Point(1094, 150);
             this.cpoTaxaNf.Name = "cpoTaxaNf";
-            this.cpoTaxaNf.Size = new System.Drawing.Size(147, 20);
+            this.cpoTaxaNf.Size = new System.Drawing.Size(129, 26);
             this.cpoTaxaNf.TabIndex = 124;
             // 
             // cpoSeguro
             // 
-            this.cpoSeguro.Location = new System.Drawing.Point(932, 175);
+            this.cpoSeguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoSeguro.Location = new System.Drawing.Point(1094, 175);
             this.cpoSeguro.Name = "cpoSeguro";
-            this.cpoSeguro.Size = new System.Drawing.Size(147, 20);
+            this.cpoSeguro.Size = new System.Drawing.Size(129, 26);
             this.cpoSeguro.TabIndex = 125;
             // 
             // cpoAdiantFretMot
             // 
             this.cpoAdiantFretMot.Enabled = false;
-            this.cpoAdiantFretMot.Location = new System.Drawing.Point(932, 98);
+            this.cpoAdiantFretMot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoAdiantFretMot.Location = new System.Drawing.Point(1094, 98);
             this.cpoAdiantFretMot.Name = "cpoAdiantFretMot";
-            this.cpoAdiantFretMot.Size = new System.Drawing.Size(147, 20);
+            this.cpoAdiantFretMot.Size = new System.Drawing.Size(129, 26);
             this.cpoAdiantFretMot.TabIndex = 122;
             // 
             // cpoValorFrete
             // 
-            this.cpoValorFrete.Location = new System.Drawing.Point(932, 124);
+            this.cpoValorFrete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoValorFrete.Location = new System.Drawing.Point(1094, 124);
             this.cpoValorFrete.Name = "cpoValorFrete";
-            this.cpoValorFrete.Size = new System.Drawing.Size(147, 20);
+            this.cpoValorFrete.Size = new System.Drawing.Size(129, 26);
             this.cpoValorFrete.TabIndex = 123;
             // 
             // cpoIDFruta
             // 
-            this.cpoIDFruta.Location = new System.Drawing.Point(456, 176);
+            this.cpoIDFruta.Location = new System.Drawing.Point(482, 176);
             this.cpoIDFruta.Name = "cpoIDFruta";
             this.cpoIDFruta.Size = new System.Drawing.Size(21, 20);
             this.cpoIDFruta.TabIndex = 149;
@@ -149,16 +154,15 @@
             // cpoNomeFruta
             // 
             this.cpoNomeFruta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoNomeFruta.Enabled = false;
-            this.cpoNomeFruta.Location = new System.Drawing.Point(97, 176);
-            this.cpoNomeFruta.Multiline = true;
+            this.cpoNomeFruta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoNomeFruta.Location = new System.Drawing.Point(147, 176);
             this.cpoNomeFruta.Name = "cpoNomeFruta";
-            this.cpoNomeFruta.Size = new System.Drawing.Size(353, 20);
+            this.cpoNomeFruta.Size = new System.Drawing.Size(329, 26);
             this.cpoNomeFruta.TabIndex = 111;
             // 
             // cpoIDFornecedor
             // 
-            this.cpoIDFornecedor.Location = new System.Drawing.Point(457, 124);
+            this.cpoIDFornecedor.Location = new System.Drawing.Point(483, 124);
             this.cpoIDFornecedor.Name = "cpoIDFornecedor";
             this.cpoIDFornecedor.Size = new System.Drawing.Size(21, 20);
             this.cpoIDFornecedor.TabIndex = 147;
@@ -166,7 +170,7 @@
             // 
             // cpoIDTransportador
             // 
-            this.cpoIDTransportador.Location = new System.Drawing.Point(456, 150);
+            this.cpoIDTransportador.Location = new System.Drawing.Point(482, 150);
             this.cpoIDTransportador.Name = "cpoIDTransportador";
             this.cpoIDTransportador.Size = new System.Drawing.Size(21, 20);
             this.cpoIDTransportador.TabIndex = 146;
@@ -174,7 +178,7 @@
             // 
             // cpoIDCliente
             // 
-            this.cpoIDCliente.Location = new System.Drawing.Point(456, 98);
+            this.cpoIDCliente.Location = new System.Drawing.Point(482, 98);
             this.cpoIDCliente.Name = "cpoIDCliente";
             this.cpoIDCliente.Size = new System.Drawing.Size(21, 20);
             this.cpoIDCliente.TabIndex = 145;
@@ -183,71 +187,79 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(514, 178);
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(519, 177);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(103, 13);
+            this.label17.Size = new System.Drawing.Size(188, 24);
             this.label17.TabIndex = 143;
-            this.label17.Text = "Custo Carregamento";
+            this.label17.Text = "Custo Carregamento:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(878, 153);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(1000, 154);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(48, 13);
+            this.label16.Size = new System.Drawing.Size(88, 24);
             this.label16.TabIndex = 142;
-            this.label16.Text = "Taxa NF";
+            this.label16.Text = "Taxa NF:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(564, 154);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(609, 154);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(52, 13);
+            this.label15.Size = new System.Drawing.Size(98, 24);
             this.label15.TabIndex = 141;
-            this.label15.Text = "Comissão";
+            this.label15.Text = "Comissão:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(514, 100);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(509, 101);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(108, 13);
+            this.label14.Size = new System.Drawing.Size(198, 24);
             this.label14.TabIndex = 140;
-            this.label14.Text = "Forma de Pagamento";
+            this.label14.Text = "Forma de Pagamento:";
             // 
             // comboBoxFormaPagamento
             // 
             this.comboBoxFormaPagamento.DisplayMember = "tblFormaPagamento.Descricao";
             this.comboBoxFormaPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFormaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxFormaPagamento.FormattingEnabled = true;
-            this.comboBoxFormaPagamento.Location = new System.Drawing.Point(627, 97);
+            this.comboBoxFormaPagamento.Location = new System.Drawing.Point(714, 97);
             this.comboBoxFormaPagamento.Name = "comboBoxFormaPagamento";
-            this.comboBoxFormaPagamento.Size = new System.Drawing.Size(156, 21);
+            this.comboBoxFormaPagamento.Size = new System.Drawing.Size(155, 28);
             this.comboBoxFormaPagamento.TabIndex = 119;
             this.comboBoxFormaPagamento.ValueMember = "tblFormaPagamento.Descricao";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(884, 178);
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(1011, 178);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.Size = new System.Drawing.Size(77, 24);
             this.label13.TabIndex = 139;
-            this.label13.Text = "Seguro";
+            this.label13.Text = "Seguro:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(894, 127);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(1029, 126);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 13);
+            this.label12.Size = new System.Drawing.Size(59, 24);
             this.label12.TabIndex = 138;
-            this.label12.Text = "Frete";
+            this.label12.Text = "Frete:";
             // 
             // comboBoxUnidMedida
             // 
             this.comboBoxUnidMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUnidMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUnidMedida.FormattingEnabled = true;
             this.comboBoxUnidMedida.Items.AddRange(new object[] {
             "UN",
@@ -258,92 +270,97 @@
             "MT",
             "PC",
             "CM"});
-            this.comboBoxUnidMedida.Location = new System.Drawing.Point(627, 123);
+            this.comboBoxUnidMedida.Location = new System.Drawing.Point(714, 123);
             this.comboBoxUnidMedida.Name = "comboBoxUnidMedida";
-            this.comboBoxUnidMedida.Size = new System.Drawing.Size(156, 21);
+            this.comboBoxUnidMedida.Size = new System.Drawing.Size(155, 28);
             this.comboBoxUnidMedida.TabIndex = 118;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(536, 126);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(553, 127);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 13);
+            this.label10.Size = new System.Drawing.Size(154, 24);
             this.label10.TabIndex = 136;
-            this.label10.Text = "Unid. de Medida";
+            this.label10.Text = "Unid. de Medida:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(55, 179);
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(86, 178);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.Size = new System.Drawing.Size(58, 24);
             this.label8.TabIndex = 134;
-            this.label8.Text = "Fruta";
+            this.label8.Text = "Fruta:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 153);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 152);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 13);
+            this.label7.Size = new System.Drawing.Size(133, 24);
             this.label7.TabIndex = 133;
-            this.label7.Text = "Transportador";
+            this.label7.Text = "Transportador:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(51, 101);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(72, 98);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 13);
+            this.label6.Size = new System.Drawing.Size(73, 24);
             this.label6.TabIndex = 132;
-            this.label6.Text = "Cliente";
+            this.label6.Text = "Cliente:";
             // 
             // cpoNomeTransportador
             // 
             this.cpoNomeTransportador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoNomeTransportador.Enabled = false;
-            this.cpoNomeTransportador.Location = new System.Drawing.Point(97, 150);
+            this.cpoNomeTransportador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoNomeTransportador.Location = new System.Drawing.Point(147, 150);
             this.cpoNomeTransportador.Name = "cpoNomeTransportador";
-            this.cpoNomeTransportador.Size = new System.Drawing.Size(353, 20);
+            this.cpoNomeTransportador.Size = new System.Drawing.Size(329, 26);
             this.cpoNomeTransportador.TabIndex = 110;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 127);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(29, 123);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.Size = new System.Drawing.Size(115, 24);
             this.label5.TabIndex = 129;
-            this.label5.Text = "Fornecedor";
+            this.label5.Text = "Fornecedor:";
             // 
             // cpoNomeCliente
             // 
             this.cpoNomeCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoNomeCliente.Enabled = false;
-            this.cpoNomeCliente.Location = new System.Drawing.Point(97, 98);
-            this.cpoNomeCliente.Multiline = true;
+            this.cpoNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoNomeCliente.Location = new System.Drawing.Point(147, 98);
             this.cpoNomeCliente.Name = "cpoNomeCliente";
-            this.cpoNomeCliente.Size = new System.Drawing.Size(353, 20);
+            this.cpoNomeCliente.Size = new System.Drawing.Size(329, 26);
             this.cpoNomeCliente.TabIndex = 109;
             // 
             // cpoNomeFornecedor
             // 
             this.cpoNomeFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoNomeFornecedor.Enabled = false;
-            this.cpoNomeFornecedor.Location = new System.Drawing.Point(97, 124);
+            this.cpoNomeFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoNomeFornecedor.Location = new System.Drawing.Point(147, 124);
             this.cpoNomeFornecedor.Name = "cpoNomeFornecedor";
-            this.cpoNomeFornecedor.Size = new System.Drawing.Size(353, 20);
+            this.cpoNomeFornecedor.Size = new System.Drawing.Size(329, 26);
             this.cpoNomeFornecedor.TabIndex = 108;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(811, 101);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(881, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 13);
+            this.label1.Size = new System.Drawing.Size(207, 24);
             this.label1.TabIndex = 150;
-            this.label1.Text = "Adiantamento de Frete";
+            this.label1.Text = "Adiantamento de Frete:";
             // 
             // dataGridView1
             // 
@@ -374,117 +391,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1211, 415);
             this.dataGridView1.TabIndex = 151;
-            // 
-            // tblCarregamentoBlocoBindingSource
-            // 
-            this.tblCarregamentoBlocoBindingSource.DataMember = "tblCarregamentoBloco";
-            this.tblCarregamentoBlocoBindingSource.DataSource = typeof(Apresentacao.midasDataSetCarregamentoBlocook);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(981, 652);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 13);
-            this.label11.TabIndex = 155;
-            this.label11.Text = "TOTAL";
-            // 
-            // cpoValorTotalRomaneio
-            // 
-            this.cpoValorTotalRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoValorTotalRomaneio.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(1031, 641);
-            this.cpoValorTotalRomaneio.Multiline = true;
-            this.cpoValorTotalRomaneio.Name = "cpoValorTotalRomaneio";
-            this.cpoValorTotalRomaneio.ReadOnly = true;
-            this.cpoValorTotalRomaneio.Size = new System.Drawing.Size(192, 33);
-            this.cpoValorTotalRomaneio.TabIndex = 152;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(770, 652);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 13);
-            this.label9.TabIndex = 154;
-            this.label9.Text = "Quantidade";
-            // 
-            // cpoQtdGeral
-            // 
-            this.cpoQtdGeral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoQtdGeral.Location = new System.Drawing.Point(838, 650);
-            this.cpoQtdGeral.Name = "cpoQtdGeral";
-            this.cpoQtdGeral.Size = new System.Drawing.Size(105, 20);
-            this.cpoQtdGeral.TabIndex = 153;
-            // 
-            // printDocument
-            // 
-            this.printDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument_PrintPage);
-            // 
-            // printDialog
-            // 
-            this.printDialog.UseEXDialog = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(51, 626);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(193, 16);
-            this.label18.TabIndex = 158;
-            this.label18.Text = "ROMANEIO SELECIONADO";
-            // 
-            // cpoIDRomaneio
-            // 
-            this.cpoIDRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoIDRomaneio.Enabled = false;
-            this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoIDRomaneio.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.cpoIDRomaneio.Location = new System.Drawing.Point(54, 645);
-            this.cpoIDRomaneio.Name = "cpoIDRomaneio";
-            this.cpoIDRomaneio.ReadOnly = true;
-            this.cpoIDRomaneio.Size = new System.Drawing.Size(166, 29);
-            this.cpoIDRomaneio.TabIndex = 157;
-            this.cpoIDRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pictureBoxTitulo
-            // 
-            this.pictureBoxTitulo.Image = global::Apresentacao.Properties.Resources.Romaneiobasico1;
-            this.pictureBoxTitulo.Location = new System.Drawing.Point(496, 3);
-            this.pictureBoxTitulo.Name = "pictureBoxTitulo";
-            this.pictureBoxTitulo.Size = new System.Drawing.Size(242, 62);
-            this.pictureBoxTitulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxTitulo.TabIndex = 156;
-            this.pictureBoxTitulo.TabStop = false;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.Image = global::Apresentacao.Properties.Resources.print_46933;
-            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnImprimir.Location = new System.Drawing.Point(1112, 154);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(111, 43);
-            this.btnImprimir.TabIndex = 127;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
-            // btnVisualizar
-            // 
-            this.btnVisualizar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizar.Image = global::Apresentacao.Properties.Resources.view_search_find_image_photo_6099;
-            this.btnVisualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVisualizar.Location = new System.Drawing.Point(1112, 98);
-            this.btnVisualizar.Name = "btnVisualizar";
-            this.btnVisualizar.Size = new System.Drawing.Size(111, 44);
-            this.btnVisualizar.TabIndex = 128;
-            this.btnVisualizar.Text = "Visualizar";
-            this.btnVisualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVisualizar.UseVisualStyleBackColor = true;
-            this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
             // 
             // iDCarregamentoBlocoDataGridViewTextBoxColumn
             // 
@@ -616,10 +522,112 @@
             this.precoMDataGridViewTextBoxColumn.Name = "precoMDataGridViewTextBoxColumn";
             this.precoMDataGridViewTextBoxColumn.Visible = false;
             // 
+            // tblCarregamentoBlocoBindingSource
+            // 
+            this.tblCarregamentoBlocoBindingSource.DataMember = "tblCarregamentoBloco";
+            this.tblCarregamentoBlocoBindingSource.DataSource = typeof(Apresentacao.midasDataSetCarregamentoBlocook);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(979, 647);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 24);
+            this.label11.TabIndex = 155;
+            this.label11.Text = "TOTAL";
+            // 
+            // cpoValorTotalRomaneio
+            // 
+            this.cpoValorTotalRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoValorTotalRomaneio.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(1057, 641);
+            this.cpoValorTotalRomaneio.Multiline = true;
+            this.cpoValorTotalRomaneio.Name = "cpoValorTotalRomaneio";
+            this.cpoValorTotalRomaneio.ReadOnly = true;
+            this.cpoValorTotalRomaneio.Size = new System.Drawing.Size(166, 33);
+            this.cpoValorTotalRomaneio.TabIndex = 152;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(719, 647);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(113, 24);
+            this.label9.TabIndex = 154;
+            this.label9.Text = "Quantidade:";
+            // 
+            // cpoQtdGeral
+            // 
+            this.cpoQtdGeral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoQtdGeral.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoQtdGeral.Location = new System.Drawing.Point(838, 645);
+            this.cpoQtdGeral.Name = "cpoQtdGeral";
+            this.cpoQtdGeral.Size = new System.Drawing.Size(105, 26);
+            this.cpoQtdGeral.TabIndex = 153;
+            // 
+            // printDocumentImprimir
+            // 
+            this.printDocumentImprimir.DocumentName = "documentImp";
+            this.printDocumentImprimir.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocumentImprimir_PrintPage);
+            // 
+            // printDialogImprimir
+            // 
+            this.printDialogImprimir.Document = this.printDocumentImprimir;
+            this.printDialogImprimir.UseEXDialog = true;
+            // 
+            // pictureBoxTitulo
+            // 
+            this.pictureBoxTitulo.Image = global::Apresentacao.Properties.Resources.Romaneiobasico1;
+            this.pictureBoxTitulo.Location = new System.Drawing.Point(496, 3);
+            this.pictureBoxTitulo.Name = "pictureBoxTitulo";
+            this.pictureBoxTitulo.Size = new System.Drawing.Size(242, 62);
+            this.pictureBoxTitulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxTitulo.TabIndex = 156;
+            this.pictureBoxTitulo.TabStop = false;
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.Image = global::Apresentacao.Properties.Resources.print_46933;
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnImprimir.Location = new System.Drawing.Point(1094, 22);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(111, 43);
+            this.btnImprimir.TabIndex = 127;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(71, 62);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(70, 16);
+            this.label18.TabIndex = 160;
+            this.label18.Text = "Número:";
+            // 
+            // cpoIDRomaneio
+            // 
+            this.cpoIDRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoIDRomaneio.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cpoIDRomaneio.Location = new System.Drawing.Point(147, 54);
+            this.cpoIDRomaneio.Name = "cpoIDRomaneio";
+            this.cpoIDRomaneio.ReadOnly = true;
+            this.cpoIDRomaneio.Size = new System.Drawing.Size(166, 29);
+            this.cpoIDRomaneio.TabIndex = 159;
+            this.cpoIDRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // frmEmissaoRomaneio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1235, 741);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.cpoIDRomaneio);
@@ -631,7 +639,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnImprimir);
-            this.Controls.Add(this.btnVisualizar);
             this.Controls.Add(this.cpoValorComissao);
             this.Controls.Add(this.cpoCustoCarreg);
             this.Controls.Add(this.cpoTaxaNf);
@@ -674,7 +681,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnImprimir;
-        private System.Windows.Forms.Button btnVisualizar;
         private System.Windows.Forms.TextBox cpoValorComissao;
         private System.Windows.Forms.TextBox cpoCustoCarreg;
         private System.Windows.Forms.TextBox cpoTaxaNf;
@@ -709,11 +715,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox cpoQtdGeral;
         private System.Windows.Forms.BindingSource tblCarregamentoBlocoBindingSource;
-        private System.Drawing.Printing.PrintDocument printDocument;
-        private System.Windows.Forms.PrintDialog printDialog;
+        private System.Drawing.Printing.PrintDocument printDocumentImprimir;
+        private System.Windows.Forms.PrintDialog printDialogImprimir;
         private System.Windows.Forms.PictureBox pictureBoxTitulo;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox cpoIDRomaneio;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDCarregamentoBlocoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn blocoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricaoDataGridViewTextBoxColumn;
@@ -733,5 +737,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precoPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoGDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoMDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox cpoIDRomaneio;
     }
 }

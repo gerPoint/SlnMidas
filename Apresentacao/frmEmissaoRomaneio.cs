@@ -23,13 +23,7 @@ namespace Apresentacao
         }
 
 
-
-        private void btnVisualizar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        private void printDocumentImprimir_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawString(cpoNomeCliente.Text, cpoNomeCliente.Font, Brushes.Black, new Point (25,100));
             e.Graphics.DrawImage(pictureBoxTitulo.Image,294,25, pictureBoxTitulo.Width,pictureBoxTitulo.Height);
@@ -37,11 +31,12 @@ namespace Apresentacao
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            if (printDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (printDialogImprimir.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                printDocument.PrinterSettings = printDialog.PrinterSettings;
-                printDocument.Print();
+                printDocumentImprimir.PrinterSettings = printDialogImprimir.PrinterSettings;
+                printDocumentImprimir.Print();
             }
         }
+
     }
 }
