@@ -41,23 +41,23 @@
             this.cpoIDFornecedor = new System.Windows.Forms.TextBox();
             this.cpoIDTransportador = new System.Windows.Forms.TextBox();
             this.cpoIDCliente = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblCustoCarreg = new System.Windows.Forms.Label();
+            this.lblTaxaNf = new System.Windows.Forms.Label();
+            this.lblComissao = new System.Windows.Forms.Label();
+            this.lblFormaPagamento = new System.Windows.Forms.Label();
             this.comboBoxFormaPagamento = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblSeguro = new System.Windows.Forms.Label();
+            this.lblFrete = new System.Windows.Forms.Label();
             this.comboBoxUnidMedida = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblUnidMedida = new System.Windows.Forms.Label();
+            this.lblFruta = new System.Windows.Forms.Label();
+            this.lblTransportador = new System.Windows.Forms.Label();
+            this.lblCliente = new System.Windows.Forms.Label();
             this.cpoNomeTransportador = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblFornecedor = new System.Windows.Forms.Label();
             this.cpoNomeCliente = new System.Windows.Forms.TextBox();
             this.cpoNomeFornecedor = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAdiantFretMot = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iDCarregamentoBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,9 +79,9 @@
             this.precoGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precoMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.cpoValorTotalRomaneio = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblQuantidade = new System.Windows.Forms.Label();
             this.cpoQtdGeral = new System.Windows.Forms.TextBox();
             this.printDocumentImprimir = new System.Drawing.Printing.PrintDocument();
             this.printDialogImprimir = new System.Windows.Forms.PrintDialog();
@@ -96,56 +96,56 @@
             // 
             // cpoValorComissao
             // 
-            this.cpoValorComissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoValorComissao.Location = new System.Drawing.Point(714, 150);
+            this.cpoValorComissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoValorComissao.Location = new System.Drawing.Point(714, 151);
             this.cpoValorComissao.Name = "cpoValorComissao";
-            this.cpoValorComissao.Size = new System.Drawing.Size(155, 26);
+            this.cpoValorComissao.Size = new System.Drawing.Size(163, 23);
             this.cpoValorComissao.TabIndex = 126;
             // 
             // cpoCustoCarreg
             // 
-            this.cpoCustoCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoCustoCarreg.Location = new System.Drawing.Point(714, 176);
+            this.cpoCustoCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoCustoCarreg.Location = new System.Drawing.Point(714, 177);
             this.cpoCustoCarreg.Name = "cpoCustoCarreg";
-            this.cpoCustoCarreg.Size = new System.Drawing.Size(155, 26);
+            this.cpoCustoCarreg.Size = new System.Drawing.Size(163, 23);
             this.cpoCustoCarreg.TabIndex = 120;
             // 
             // cpoTaxaNf
             // 
-            this.cpoTaxaNf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoTaxaNf.Location = new System.Drawing.Point(1094, 150);
+            this.cpoTaxaNf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoTaxaNf.Location = new System.Drawing.Point(1094, 152);
             this.cpoTaxaNf.Name = "cpoTaxaNf";
-            this.cpoTaxaNf.Size = new System.Drawing.Size(129, 26);
+            this.cpoTaxaNf.Size = new System.Drawing.Size(129, 23);
             this.cpoTaxaNf.TabIndex = 124;
             // 
             // cpoSeguro
             // 
-            this.cpoSeguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoSeguro.Location = new System.Drawing.Point(1094, 175);
+            this.cpoSeguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoSeguro.Location = new System.Drawing.Point(1094, 177);
             this.cpoSeguro.Name = "cpoSeguro";
-            this.cpoSeguro.Size = new System.Drawing.Size(129, 26);
+            this.cpoSeguro.Size = new System.Drawing.Size(129, 23);
             this.cpoSeguro.TabIndex = 125;
             // 
             // cpoAdiantFretMot
             // 
             this.cpoAdiantFretMot.Enabled = false;
-            this.cpoAdiantFretMot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoAdiantFretMot.Location = new System.Drawing.Point(1094, 98);
+            this.cpoAdiantFretMot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoAdiantFretMot.Location = new System.Drawing.Point(1094, 100);
             this.cpoAdiantFretMot.Name = "cpoAdiantFretMot";
-            this.cpoAdiantFretMot.Size = new System.Drawing.Size(129, 26);
+            this.cpoAdiantFretMot.Size = new System.Drawing.Size(129, 23);
             this.cpoAdiantFretMot.TabIndex = 122;
             // 
             // cpoValorFrete
             // 
-            this.cpoValorFrete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoValorFrete.Location = new System.Drawing.Point(1094, 124);
+            this.cpoValorFrete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoValorFrete.Location = new System.Drawing.Point(1094, 126);
             this.cpoValorFrete.Name = "cpoValorFrete";
-            this.cpoValorFrete.Size = new System.Drawing.Size(129, 26);
+            this.cpoValorFrete.Size = new System.Drawing.Size(129, 23);
             this.cpoValorFrete.TabIndex = 123;
             // 
             // cpoIDFruta
             // 
-            this.cpoIDFruta.Location = new System.Drawing.Point(482, 176);
+            this.cpoIDFruta.Location = new System.Drawing.Point(468, 178);
             this.cpoIDFruta.Name = "cpoIDFruta";
             this.cpoIDFruta.Size = new System.Drawing.Size(21, 20);
             this.cpoIDFruta.TabIndex = 149;
@@ -154,15 +154,15 @@
             // cpoNomeFruta
             // 
             this.cpoNomeFruta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoNomeFruta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoNomeFruta.Location = new System.Drawing.Point(147, 176);
+            this.cpoNomeFruta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoNomeFruta.Location = new System.Drawing.Point(133, 177);
             this.cpoNomeFruta.Name = "cpoNomeFruta";
-            this.cpoNomeFruta.Size = new System.Drawing.Size(329, 26);
+            this.cpoNomeFruta.Size = new System.Drawing.Size(329, 23);
             this.cpoNomeFruta.TabIndex = 111;
             // 
             // cpoIDFornecedor
             // 
-            this.cpoIDFornecedor.Location = new System.Drawing.Point(483, 124);
+            this.cpoIDFornecedor.Location = new System.Drawing.Point(468, 126);
             this.cpoIDFornecedor.Name = "cpoIDFornecedor";
             this.cpoIDFornecedor.Size = new System.Drawing.Size(21, 20);
             this.cpoIDFornecedor.TabIndex = 147;
@@ -170,7 +170,7 @@
             // 
             // cpoIDTransportador
             // 
-            this.cpoIDTransportador.Location = new System.Drawing.Point(482, 150);
+            this.cpoIDTransportador.Location = new System.Drawing.Point(468, 152);
             this.cpoIDTransportador.Name = "cpoIDTransportador";
             this.cpoIDTransportador.Size = new System.Drawing.Size(21, 20);
             this.cpoIDTransportador.TabIndex = 146;
@@ -178,88 +178,88 @@
             // 
             // cpoIDCliente
             // 
-            this.cpoIDCliente.Location = new System.Drawing.Point(482, 98);
+            this.cpoIDCliente.Location = new System.Drawing.Point(468, 100);
             this.cpoIDCliente.Name = "cpoIDCliente";
             this.cpoIDCliente.Size = new System.Drawing.Size(21, 20);
             this.cpoIDCliente.TabIndex = 145;
             this.cpoIDCliente.Visible = false;
             // 
-            // label17
+            // lblCustoCarreg
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(519, 177);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(188, 24);
-            this.label17.TabIndex = 143;
-            this.label17.Text = "Custo Carregamento:";
+            this.lblCustoCarreg.AutoSize = true;
+            this.lblCustoCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustoCarreg.Location = new System.Drawing.Point(547, 177);
+            this.lblCustoCarreg.Name = "lblCustoCarreg";
+            this.lblCustoCarreg.Size = new System.Drawing.Size(161, 20);
+            this.lblCustoCarreg.TabIndex = 143;
+            this.lblCustoCarreg.Text = "Custo Carregamento:";
             // 
-            // label16
+            // lblTaxaNf
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(1000, 154);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(88, 24);
-            this.label16.TabIndex = 142;
-            this.label16.Text = "Taxa NF:";
+            this.lblTaxaNf.AutoSize = true;
+            this.lblTaxaNf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTaxaNf.Location = new System.Drawing.Point(1016, 154);
+            this.lblTaxaNf.Name = "lblTaxaNf";
+            this.lblTaxaNf.Size = new System.Drawing.Size(72, 20);
+            this.lblTaxaNf.TabIndex = 142;
+            this.lblTaxaNf.Text = "Taxa NF:";
             // 
-            // label15
+            // lblComissao
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(609, 154);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(98, 24);
-            this.label15.TabIndex = 141;
-            this.label15.Text = "Comissão:";
+            this.lblComissao.AutoSize = true;
+            this.lblComissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComissao.Location = new System.Drawing.Point(625, 153);
+            this.lblComissao.Name = "lblComissao";
+            this.lblComissao.Size = new System.Drawing.Size(83, 20);
+            this.lblComissao.TabIndex = 141;
+            this.lblComissao.Text = "Comissão:";
             // 
-            // label14
+            // lblFormaPagamento
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(509, 101);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(198, 24);
-            this.label14.TabIndex = 140;
-            this.label14.Text = "Forma de Pagamento:";
+            this.lblFormaPagamento.AutoSize = true;
+            this.lblFormaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormaPagamento.Location = new System.Drawing.Point(541, 101);
+            this.lblFormaPagamento.Name = "lblFormaPagamento";
+            this.lblFormaPagamento.Size = new System.Drawing.Size(167, 20);
+            this.lblFormaPagamento.TabIndex = 140;
+            this.lblFormaPagamento.Text = "Forma de Pagamento:";
             // 
             // comboBoxFormaPagamento
             // 
             this.comboBoxFormaPagamento.DisplayMember = "tblFormaPagamento.Descricao";
             this.comboBoxFormaPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxFormaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFormaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxFormaPagamento.FormattingEnabled = true;
-            this.comboBoxFormaPagamento.Location = new System.Drawing.Point(714, 97);
+            this.comboBoxFormaPagamento.Location = new System.Drawing.Point(714, 98);
             this.comboBoxFormaPagamento.Name = "comboBoxFormaPagamento";
-            this.comboBoxFormaPagamento.Size = new System.Drawing.Size(155, 28);
+            this.comboBoxFormaPagamento.Size = new System.Drawing.Size(163, 24);
             this.comboBoxFormaPagamento.TabIndex = 119;
             this.comboBoxFormaPagamento.ValueMember = "tblFormaPagamento.Descricao";
             // 
-            // label13
+            // lblSeguro
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(1011, 178);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(77, 24);
-            this.label13.TabIndex = 139;
-            this.label13.Text = "Seguro:";
+            this.lblSeguro.AutoSize = true;
+            this.lblSeguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeguro.Location = new System.Drawing.Point(1023, 179);
+            this.lblSeguro.Name = "lblSeguro";
+            this.lblSeguro.Size = new System.Drawing.Size(65, 20);
+            this.lblSeguro.TabIndex = 139;
+            this.lblSeguro.Text = "Seguro:";
             // 
-            // label12
+            // lblFrete
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1029, 126);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 24);
-            this.label12.TabIndex = 138;
-            this.label12.Text = "Frete:";
+            this.lblFrete.AutoSize = true;
+            this.lblFrete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFrete.Location = new System.Drawing.Point(1037, 127);
+            this.lblFrete.Name = "lblFrete";
+            this.lblFrete.Size = new System.Drawing.Size(51, 20);
+            this.lblFrete.TabIndex = 138;
+            this.lblFrete.Text = "Frete:";
             // 
             // comboBoxUnidMedida
             // 
             this.comboBoxUnidMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxUnidMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxUnidMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUnidMedida.FormattingEnabled = true;
             this.comboBoxUnidMedida.Items.AddRange(new object[] {
             "UN",
@@ -270,97 +270,97 @@
             "MT",
             "PC",
             "CM"});
-            this.comboBoxUnidMedida.Location = new System.Drawing.Point(714, 123);
+            this.comboBoxUnidMedida.Location = new System.Drawing.Point(714, 124);
             this.comboBoxUnidMedida.Name = "comboBoxUnidMedida";
-            this.comboBoxUnidMedida.Size = new System.Drawing.Size(155, 28);
+            this.comboBoxUnidMedida.Size = new System.Drawing.Size(163, 24);
             this.comboBoxUnidMedida.TabIndex = 118;
             // 
-            // label10
+            // lblUnidMedida
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(553, 127);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(154, 24);
-            this.label10.TabIndex = 136;
-            this.label10.Text = "Unid. de Medida:";
+            this.lblUnidMedida.AutoSize = true;
+            this.lblUnidMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnidMedida.Location = new System.Drawing.Point(580, 127);
+            this.lblUnidMedida.Name = "lblUnidMedida";
+            this.lblUnidMedida.Size = new System.Drawing.Size(128, 20);
+            this.lblUnidMedida.TabIndex = 136;
+            this.lblUnidMedida.Text = "Unid. de Medida:";
             // 
-            // label8
+            // lblFruta
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(86, 178);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 24);
-            this.label8.TabIndex = 134;
-            this.label8.Text = "Fruta:";
+            this.lblFruta.AutoSize = true;
+            this.lblFruta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFruta.Location = new System.Drawing.Point(76, 179);
+            this.lblFruta.Name = "lblFruta";
+            this.lblFruta.Size = new System.Drawing.Size(51, 20);
+            this.lblFruta.TabIndex = 134;
+            this.lblFruta.Text = "Fruta:";
             // 
-            // label7
+            // lblTransportador
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 152);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(133, 24);
-            this.label7.TabIndex = 133;
-            this.label7.Text = "Transportador:";
+            this.lblTransportador.AutoSize = true;
+            this.lblTransportador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransportador.Location = new System.Drawing.Point(14, 153);
+            this.lblTransportador.Name = "lblTransportador";
+            this.lblTransportador.Size = new System.Drawing.Size(113, 20);
+            this.lblTransportador.TabIndex = 133;
+            this.lblTransportador.Text = "Transportador:";
             // 
-            // label6
+            // lblCliente
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(72, 98);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 24);
-            this.label6.TabIndex = 132;
-            this.label6.Text = "Cliente:";
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliente.Location = new System.Drawing.Point(65, 101);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(62, 20);
+            this.lblCliente.TabIndex = 132;
+            this.lblCliente.Text = "Cliente:";
             // 
             // cpoNomeTransportador
             // 
             this.cpoNomeTransportador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoNomeTransportador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoNomeTransportador.Location = new System.Drawing.Point(147, 150);
+            this.cpoNomeTransportador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoNomeTransportador.Location = new System.Drawing.Point(133, 151);
             this.cpoNomeTransportador.Name = "cpoNomeTransportador";
-            this.cpoNomeTransportador.Size = new System.Drawing.Size(329, 26);
+            this.cpoNomeTransportador.Size = new System.Drawing.Size(329, 23);
             this.cpoNomeTransportador.TabIndex = 110;
             // 
-            // label5
+            // lblFornecedor
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(29, 123);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 24);
-            this.label5.TabIndex = 129;
-            this.label5.Text = "Fornecedor:";
+            this.lblFornecedor.AutoSize = true;
+            this.lblFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFornecedor.Location = new System.Drawing.Point(32, 127);
+            this.lblFornecedor.Name = "lblFornecedor";
+            this.lblFornecedor.Size = new System.Drawing.Size(95, 20);
+            this.lblFornecedor.TabIndex = 129;
+            this.lblFornecedor.Text = "Fornecedor:";
             // 
             // cpoNomeCliente
             // 
             this.cpoNomeCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoNomeCliente.Location = new System.Drawing.Point(147, 98);
+            this.cpoNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoNomeCliente.Location = new System.Drawing.Point(133, 99);
             this.cpoNomeCliente.Name = "cpoNomeCliente";
-            this.cpoNomeCliente.Size = new System.Drawing.Size(329, 26);
+            this.cpoNomeCliente.Size = new System.Drawing.Size(329, 23);
             this.cpoNomeCliente.TabIndex = 109;
             // 
             // cpoNomeFornecedor
             // 
             this.cpoNomeFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoNomeFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoNomeFornecedor.Location = new System.Drawing.Point(147, 124);
+            this.cpoNomeFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoNomeFornecedor.Location = new System.Drawing.Point(133, 125);
             this.cpoNomeFornecedor.Name = "cpoNomeFornecedor";
-            this.cpoNomeFornecedor.Size = new System.Drawing.Size(329, 26);
+            this.cpoNomeFornecedor.Size = new System.Drawing.Size(329, 23);
             this.cpoNomeFornecedor.TabIndex = 108;
             // 
-            // label1
+            // lblAdiantFretMot
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(881, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 24);
-            this.label1.TabIndex = 150;
-            this.label1.Text = "Adiantamento de Frete:";
+            this.lblAdiantFretMot.AutoSize = true;
+            this.lblAdiantFretMot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdiantFretMot.Location = new System.Drawing.Point(911, 102);
+            this.lblAdiantFretMot.Name = "lblAdiantFretMot";
+            this.lblAdiantFretMot.Size = new System.Drawing.Size(177, 20);
+            this.lblAdiantFretMot.TabIndex = 150;
+            this.lblAdiantFretMot.Text = "Adiantamento de Frete:";
             // 
             // dataGridView1
             // 
@@ -389,7 +389,7 @@
             this.dataGridView1.DataSource = this.tblCarregamentoBlocoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 203);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1211, 415);
+            this.dataGridView1.Size = new System.Drawing.Size(1211, 432);
             this.dataGridView1.TabIndex = 151;
             // 
             // iDCarregamentoBlocoDataGridViewTextBoxColumn
@@ -527,36 +527,36 @@
             this.tblCarregamentoBlocoBindingSource.DataMember = "tblCarregamentoBloco";
             this.tblCarregamentoBlocoBindingSource.DataSource = typeof(Apresentacao.midasDataSetCarregamentoBlocook);
             // 
-            // label11
+            // lblTotal
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(979, 647);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 24);
-            this.label11.TabIndex = 155;
-            this.label11.Text = "TOTAL";
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(979, 647);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(72, 24);
+            this.lblTotal.TabIndex = 155;
+            this.lblTotal.Text = "TOTAL";
             // 
             // cpoValorTotalRomaneio
             // 
             this.cpoValorTotalRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoValorTotalRomaneio.Enabled = false;
             this.cpoValorTotalRomaneio.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(1057, 641);
             this.cpoValorTotalRomaneio.Multiline = true;
             this.cpoValorTotalRomaneio.Name = "cpoValorTotalRomaneio";
-            this.cpoValorTotalRomaneio.ReadOnly = true;
             this.cpoValorTotalRomaneio.Size = new System.Drawing.Size(166, 33);
             this.cpoValorTotalRomaneio.TabIndex = 152;
             // 
-            // label9
+            // lblQuantidade
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(719, 647);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 24);
-            this.label9.TabIndex = 154;
-            this.label9.Text = "Quantidade:";
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantidade.Location = new System.Drawing.Point(719, 647);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(113, 24);
+            this.lblQuantidade.TabIndex = 154;
+            this.lblQuantidade.Text = "Quantidade:";
             // 
             // cpoQtdGeral
             // 
@@ -632,12 +632,12 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.cpoIDRomaneio);
             this.Controls.Add(this.pictureBoxTitulo);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.cpoValorTotalRomaneio);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblQuantidade);
             this.Controls.Add(this.cpoQtdGeral);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAdiantFretMot);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.cpoValorComissao);
             this.Controls.Add(this.cpoCustoCarreg);
@@ -650,20 +650,20 @@
             this.Controls.Add(this.cpoIDFornecedor);
             this.Controls.Add(this.cpoIDTransportador);
             this.Controls.Add(this.cpoIDCliente);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.lblCustoCarreg);
+            this.Controls.Add(this.lblTaxaNf);
+            this.Controls.Add(this.lblComissao);
+            this.Controls.Add(this.lblFormaPagamento);
             this.Controls.Add(this.comboBoxFormaPagamento);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblSeguro);
+            this.Controls.Add(this.lblFrete);
             this.Controls.Add(this.comboBoxUnidMedida);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblUnidMedida);
+            this.Controls.Add(this.lblFruta);
+            this.Controls.Add(this.lblTransportador);
+            this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.cpoNomeTransportador);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblFornecedor);
             this.Controls.Add(this.cpoNomeCliente);
             this.Controls.Add(this.cpoNomeFornecedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -692,27 +692,27 @@
         private System.Windows.Forms.TextBox cpoIDFornecedor;
         private System.Windows.Forms.TextBox cpoIDTransportador;
         private System.Windows.Forms.TextBox cpoIDCliente;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblCustoCarreg;
+        private System.Windows.Forms.Label lblTaxaNf;
+        private System.Windows.Forms.Label lblComissao;
+        private System.Windows.Forms.Label lblFormaPagamento;
         private System.Windows.Forms.ComboBox comboBoxFormaPagamento;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblSeguro;
+        private System.Windows.Forms.Label lblFrete;
         private System.Windows.Forms.ComboBox comboBoxUnidMedida;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblUnidMedida;
+        private System.Windows.Forms.Label lblFruta;
+        private System.Windows.Forms.Label lblTransportador;
+        private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.TextBox cpoNomeTransportador;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblFornecedor;
         private System.Windows.Forms.TextBox cpoNomeCliente;
         private System.Windows.Forms.TextBox cpoNomeFornecedor;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAdiantFretMot;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox cpoValorTotalRomaneio;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblQuantidade;
         private System.Windows.Forms.TextBox cpoQtdGeral;
         private System.Windows.Forms.BindingSource tblCarregamentoBlocoBindingSource;
         private System.Drawing.Printing.PrintDocument printDocumentImprimir;
