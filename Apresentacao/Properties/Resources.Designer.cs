@@ -323,6 +323,16 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap slogan1 {
+            get {
+                object obj = ResourceManager.GetObject("slogan1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sloganFull {
             get {
                 object obj = ResourceManager.GetObject("sloganFull", resourceCulture);
@@ -336,6 +346,16 @@ namespace Apresentacao.Properties {
         internal static System.Drawing.Bitmap stake_truck_18543 {
             get {
                 object obj = ResourceManager.GetObject("stake_truck_18543", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap titulo_com_bordas {
+            get {
+                object obj = ResourceManager.GetObject("titulo_com_bordas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

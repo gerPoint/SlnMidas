@@ -85,10 +85,10 @@
             this.cpoQtdGeral = new System.Windows.Forms.TextBox();
             this.printDocumentImprimir = new System.Drawing.Printing.PrintDocument();
             this.printDialogImprimir = new System.Windows.Forms.PrintDialog();
-            this.pictureBoxTitulo = new System.Windows.Forms.PictureBox();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.cpoIDRomaneio = new System.Windows.Forms.TextBox();
+            this.pictureBoxTitulo = new System.Windows.Forms.PictureBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTitulo)).BeginInit();
@@ -577,12 +577,34 @@
             this.printDialogImprimir.Document = this.printDocumentImprimir;
             this.printDialogImprimir.UseEXDialog = true;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(66, 44);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(70, 16);
+            this.label18.TabIndex = 160;
+            this.label18.Text = "Número:";
+            // 
+            // cpoIDRomaneio
+            // 
+            this.cpoIDRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoIDRomaneio.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cpoIDRomaneio.Location = new System.Drawing.Point(12, 12);
+            this.cpoIDRomaneio.Name = "cpoIDRomaneio";
+            this.cpoIDRomaneio.ReadOnly = true;
+            this.cpoIDRomaneio.Size = new System.Drawing.Size(166, 29);
+            this.cpoIDRomaneio.TabIndex = 159;
+            this.cpoIDRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // pictureBoxTitulo
             // 
-            this.pictureBoxTitulo.Image = global::Apresentacao.Properties.Resources.Romaneiobasico1;
-            this.pictureBoxTitulo.Location = new System.Drawing.Point(496, 3);
+            this.pictureBoxTitulo.Image = global::Apresentacao.Properties.Resources.slogan;
+            this.pictureBoxTitulo.Location = new System.Drawing.Point(225, 3);
             this.pictureBoxTitulo.Name = "pictureBoxTitulo";
-            this.pictureBoxTitulo.Size = new System.Drawing.Size(242, 62);
+            this.pictureBoxTitulo.Size = new System.Drawing.Size(785, 80);
             this.pictureBoxTitulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxTitulo.TabIndex = 156;
             this.pictureBoxTitulo.TabStop = false;
@@ -600,28 +622,6 @@
             this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(71, 62);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(70, 16);
-            this.label18.TabIndex = 160;
-            this.label18.Text = "Número:";
-            // 
-            // cpoIDRomaneio
-            // 
-            this.cpoIDRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoIDRomaneio.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.cpoIDRomaneio.Location = new System.Drawing.Point(147, 54);
-            this.cpoIDRomaneio.Name = "cpoIDRomaneio";
-            this.cpoIDRomaneio.ReadOnly = true;
-            this.cpoIDRomaneio.Size = new System.Drawing.Size(166, 29);
-            this.cpoIDRomaneio.TabIndex = 159;
-            this.cpoIDRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmEmissaoRomaneio
             // 
@@ -668,6 +668,7 @@
             this.Controls.Add(this.cpoNomeFornecedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEmissaoRomaneio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmEmissaoRomaneio";
             this.Load += new System.EventHandler(this.frmEmissaoRomaneio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

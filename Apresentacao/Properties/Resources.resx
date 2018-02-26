@@ -169,8 +169,14 @@
   <data name="Caipira_400x400-e1476553294916" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Caipira_400x400-e1476553294916.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="titulo_com_bordas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\titulo_com_bordas.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Esse sim2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Esse sim2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Romaneiobasico1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Romaneiobasico1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pesquisar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pesquisar.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,7 +208,7 @@
   <data name="document_write_22637" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\document_write_22637.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Romaneiobasico1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Romaneiobasico1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="slogan1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slogan1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
