@@ -59,6 +59,7 @@
             // cpoUnidMedida
             // 
             this.cpoUnidMedida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoUnidMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoUnidMedida.Location = new System.Drawing.Point(533, 304);
             this.cpoUnidMedida.MaxLength = 2;
             this.cpoUnidMedida.Name = "cpoUnidMedida";
@@ -203,6 +204,7 @@
             // cpoNome
             // 
             this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoNome.Location = new System.Drawing.Point(72, 304);
             this.cpoNome.MaxLength = 50;
             this.cpoNome.Name = "cpoNome";
@@ -213,6 +215,7 @@
             // cpoCaixaPesquisa
             // 
             this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCaixaPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCaixaPesquisa.Location = new System.Drawing.Point(34, 26);
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(403, 20);

@@ -136,6 +136,7 @@
             // cpoCaixaPesquisa
             // 
             this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCaixaPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCaixaPesquisa.Location = new System.Drawing.Point(44, 27);
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(643, 20);
@@ -146,6 +147,7 @@
             // cpoNome
             // 
             this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoNome.Location = new System.Drawing.Point(100, 312);
             this.cpoNome.MaxLength = 50;
             this.cpoNome.Name = "cpoNome";
@@ -368,6 +370,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(609, 350);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(21, 13);
@@ -404,6 +407,7 @@
             // cpoEmail
             // 
             this.cpoEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoEmail.Location = new System.Drawing.Point(433, 381);
             this.cpoEmail.MaxLength = 50;
             this.cpoEmail.Name = "cpoEmail";
@@ -414,6 +418,7 @@
             // cpoEndereco
             // 
             this.cpoEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoEndereco.Location = new System.Drawing.Point(100, 348);
             this.cpoEndereco.MaxLength = 50;
             this.cpoEndereco.Name = "cpoEndereco";
@@ -424,6 +429,7 @@
             // cpoCidade
             // 
             this.cpoCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCidade.Location = new System.Drawing.Point(433, 348);
             this.cpoCidade.Name = "cpoCidade";
             this.cpoCidade.Size = new System.Drawing.Size(170, 20);
@@ -433,6 +439,7 @@
             // cpoUf
             // 
             this.cpoUf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoUf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoUf.Location = new System.Drawing.Point(636, 348);
             this.cpoUf.MaxLength = 2;
             this.cpoUf.Name = "cpoUf";
@@ -443,6 +450,7 @@
             // cpoRazaoSocial
             // 
             this.cpoRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoRazaoSocial.Location = new System.Drawing.Point(433, 312);
             this.cpoRazaoSocial.MaxLength = 50;
             this.cpoRazaoSocial.Name = "cpoRazaoSocial";
@@ -501,6 +509,7 @@
             // checkBoxCpf
             // 
             this.checkBoxCpf.AutoSize = true;
+            this.checkBoxCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxCpf.Location = new System.Drawing.Point(723, 351);
             this.checkBoxCpf.Name = "checkBoxCpf";
             this.checkBoxCpf.Size = new System.Drawing.Size(93, 17);
@@ -524,6 +533,7 @@
             // 
             // cpoCnpj
             // 
+            this.cpoCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCnpj.Location = new System.Drawing.Point(723, 312);
             this.cpoCnpj.Mask = "00.000.000/0000-00";
             this.cpoCnpj.Name = "cpoCnpj";
@@ -534,6 +544,7 @@
             // cpoCpf
             // 
             this.cpoCpf.Enabled = false;
+            this.cpoCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCpf.Location = new System.Drawing.Point(723, 380);
             this.cpoCpf.Mask = "000.000.000-00";
             this.cpoCpf.Name = "cpoCpf";
@@ -543,6 +554,7 @@
             // 
             // cpoTelefone
             // 
+            this.cpoTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoTelefone.Location = new System.Drawing.Point(100, 380);
             this.cpoTelefone.Mask = "(99) 000000000";
             this.cpoTelefone.Name = "cpoTelefone";

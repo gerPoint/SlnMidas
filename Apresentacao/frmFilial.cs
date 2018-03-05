@@ -482,6 +482,26 @@ namespace Apresentacao
 
         }
 
+        private void cpoTelefone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void cpoEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cpoCnpj_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void cpoChaveSistema_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         //------------------------------------------------Somente a primeira letra maiuscula de cada palavra--------------------------------------
 
     }

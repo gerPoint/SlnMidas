@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFilial));
             this.cpoRazaoSocial = new System.Windows.Forms.TextBox();
             this.cpoUf = new System.Windows.Forms.TextBox();
@@ -84,6 +86,7 @@
             // cpoRazaoSocial
             // 
             this.cpoRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoRazaoSocial.Location = new System.Drawing.Point(419, 322);
             this.cpoRazaoSocial.MaxLength = 50;
             this.cpoRazaoSocial.Name = "cpoRazaoSocial";
@@ -94,6 +97,7 @@
             // cpoUf
             // 
             this.cpoUf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoUf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoUf.Location = new System.Drawing.Point(622, 358);
             this.cpoUf.MaxLength = 2;
             this.cpoUf.Name = "cpoUf";
@@ -104,6 +108,7 @@
             // cpoCidade
             // 
             this.cpoCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCidade.Location = new System.Drawing.Point(419, 358);
             this.cpoCidade.MaxLength = 50;
             this.cpoCidade.Name = "cpoCidade";
@@ -114,6 +119,7 @@
             // cpoEndereco
             // 
             this.cpoEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoEndereco.Location = new System.Drawing.Point(86, 358);
             this.cpoEndereco.MaxLength = 50;
             this.cpoEndereco.Name = "cpoEndereco";
@@ -124,11 +130,13 @@
             // cpoEmail
             // 
             this.cpoEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoEmail.Location = new System.Drawing.Point(419, 391);
             this.cpoEmail.MaxLength = 50;
             this.cpoEmail.Name = "cpoEmail";
             this.cpoEmail.Size = new System.Drawing.Size(245, 20);
             this.cpoEmail.TabIndex = 11;
+            this.cpoEmail.TextChanged += new System.EventHandler(this.cpoEmail_TextChanged);
             // 
             // label9
             // 
@@ -190,6 +198,14 @@
             this.dgwFilial.AllowUserToDeleteRows = false;
             this.dgwFilial.AllowUserToResizeRows = false;
             this.dgwFilial.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwFilial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwFilial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwFilial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDFilialDataGridViewTextBoxColumn,
@@ -205,6 +221,14 @@
             this.dataCadastroDataGridViewTextBoxColumn,
             this.statusDataGridViewTextBoxColumn});
             this.dgwFilial.DataSource = this.tblFilialBindingSource1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwFilial.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgwFilial.Location = new System.Drawing.Point(30, 74);
             this.dgwFilial.MultiSelect = false;
             this.dgwFilial.Name = "dgwFilial";
@@ -325,6 +349,7 @@
             // cpoFilial
             // 
             this.cpoFilial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoFilial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoFilial.Location = new System.Drawing.Point(86, 322);
             this.cpoFilial.MaxLength = 50;
             this.cpoFilial.Name = "cpoFilial";
@@ -335,6 +360,7 @@
             // cpoCaixaPesquisa
             // 
             this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCaixaPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCaixaPesquisa.Location = new System.Drawing.Point(30, 37);
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(643, 20);
@@ -363,11 +389,13 @@
             // cpoChaveSistema
             // 
             this.cpoChaveSistema.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoChaveSistema.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoChaveSistema.Location = new System.Drawing.Point(362, 431);
             this.cpoChaveSistema.Name = "cpoChaveSistema";
             this.cpoChaveSistema.Size = new System.Drawing.Size(303, 20);
             this.cpoChaveSistema.TabIndex = 130;
             this.cpoChaveSistema.Visible = false;
+            this.cpoChaveSistema.TextChanged += new System.EventHandler(this.cpoChaveSistema_TextChanged);
             // 
             // tblFilialBindingSource
             // 
@@ -471,20 +499,24 @@
             // 
             // cpoTelefone
             // 
+            this.cpoTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoTelefone.Location = new System.Drawing.Point(86, 390);
             this.cpoTelefone.Mask = "(99) 000000000";
             this.cpoTelefone.Name = "cpoTelefone";
             this.cpoTelefone.Size = new System.Drawing.Size(116, 20);
             this.cpoTelefone.TabIndex = 100000;
+            this.cpoTelefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.cpoTelefone_MaskInputRejected);
             this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress_1);
             // 
             // cpoCnpj
             // 
+            this.cpoCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCnpj.Location = new System.Drawing.Point(709, 322);
             this.cpoCnpj.Mask = "00.000.000.0000-00";
             this.cpoCnpj.Name = "cpoCnpj";
             this.cpoCnpj.Size = new System.Drawing.Size(103, 20);
             this.cpoCnpj.TabIndex = 100001;
+            this.cpoCnpj.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.cpoCnpj_MaskInputRejected);
             this.cpoCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCnpj_KeyPress_1);
             // 
             // frmFilial
@@ -518,6 +550,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnPesquisa);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -569,7 +602,6 @@
         private System.Windows.Forms.TextBox cpoIDFilial;
         private System.Windows.Forms.Button btnRetornar;
         private System.Windows.Forms.MaskedTextBox cpoTelefone;
-        private System.Windows.Forms.MaskedTextBox cpoCnpj;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDFilialDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn razaoSocialDataGridViewTextBoxColumn;
@@ -582,5 +614,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn chaveSistemaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.MaskedTextBox cpoCnpj;
     }
 }

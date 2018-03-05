@@ -80,6 +80,7 @@
             // cpoRazaoSocial
             // 
             this.cpoRazaoSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoRazaoSocial.Location = new System.Drawing.Point(418, 320);
             this.cpoRazaoSocial.MaxLength = 50;
             this.cpoRazaoSocial.Name = "cpoRazaoSocial";
@@ -90,6 +91,7 @@
             // cpoUf
             // 
             this.cpoUf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoUf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoUf.Location = new System.Drawing.Point(621, 356);
             this.cpoUf.MaxLength = 2;
             this.cpoUf.Name = "cpoUf";
@@ -100,6 +102,7 @@
             // cpoCidade
             // 
             this.cpoCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCidade.Location = new System.Drawing.Point(418, 356);
             this.cpoCidade.MaxLength = 50;
             this.cpoCidade.Name = "cpoCidade";
@@ -110,6 +113,7 @@
             // cpoEndereco
             // 
             this.cpoEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoEndereco.Location = new System.Drawing.Point(85, 356);
             this.cpoEndereco.MaxLength = 50;
             this.cpoEndereco.Name = "cpoEndereco";
@@ -120,6 +124,7 @@
             // cpoEmail
             // 
             this.cpoEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoEmail.Location = new System.Drawing.Point(418, 389);
             this.cpoEmail.MaxLength = 50;
             this.cpoEmail.Name = "cpoEmail";
@@ -370,6 +375,7 @@
             // cpoNome
             // 
             this.cpoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoNome.Location = new System.Drawing.Point(85, 320);
             this.cpoNome.MaxLength = 50;
             this.cpoNome.Name = "cpoNome";
@@ -380,6 +386,7 @@
             // cpoCaixaPesquisa
             // 
             this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCaixaPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCaixaPesquisa.Location = new System.Drawing.Point(29, 35);
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(643, 20);
@@ -456,6 +463,7 @@
             // 
             // cpoCnpj
             // 
+            this.cpoCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCnpj.Location = new System.Drawing.Point(708, 320);
             this.cpoCnpj.Mask = "00.000.000.0000-00";
             this.cpoCnpj.Name = "cpoCnpj";
@@ -465,6 +473,7 @@
             // 
             // cpoTelefone
             // 
+            this.cpoTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoTelefone.Location = new System.Drawing.Point(85, 388);
             this.cpoTelefone.Mask = "(99) 0000-0000";
             this.cpoTelefone.Name = "cpoTelefone";
@@ -475,6 +484,7 @@
             // cpoCpf
             // 
             this.cpoCpf.Enabled = false;
+            this.cpoCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCpf.Location = new System.Drawing.Point(708, 389);
             this.cpoCpf.Mask = "000.000.000-00";
             this.cpoCpf.Name = "cpoCpf";

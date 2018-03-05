@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRomaneio));
             this.tabPagePrincipal = new System.Windows.Forms.TabControl();
             this.tabPageRomaneio = new System.Windows.Forms.TabPage();
@@ -250,6 +256,7 @@
             // 
             this.tabPagePrincipal.Controls.Add(this.tabPageRomaneio);
             this.tabPagePrincipal.Controls.Add(this.tabPageCarregamento);
+            this.tabPagePrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPagePrincipal.Location = new System.Drawing.Point(1, 2);
             this.tabPagePrincipal.Name = "tabPagePrincipal";
             this.tabPagePrincipal.SelectedIndex = 0;
@@ -361,6 +368,7 @@
             // 
             // cpoValorComissao
             // 
+            this.cpoValorComissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoValorComissao.Location = new System.Drawing.Point(838, 331);
             this.cpoValorComissao.Name = "cpoValorComissao";
             this.cpoValorComissao.Size = new System.Drawing.Size(106, 20);
@@ -369,6 +377,7 @@
             // 
             // cpoCustoCarreg
             // 
+            this.cpoCustoCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCustoCarreg.Location = new System.Drawing.Point(591, 249);
             this.cpoCustoCarreg.Name = "cpoCustoCarreg";
             this.cpoCustoCarreg.Size = new System.Drawing.Size(105, 20);
@@ -377,6 +386,7 @@
             // 
             // cpoTaxaNf
             // 
+            this.cpoTaxaNf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoTaxaNf.Location = new System.Drawing.Point(838, 290);
             this.cpoTaxaNf.Name = "cpoTaxaNf";
             this.cpoTaxaNf.Size = new System.Drawing.Size(106, 20);
@@ -385,6 +395,7 @@
             // 
             // cpoSeguro
             // 
+            this.cpoSeguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoSeguro.Location = new System.Drawing.Point(591, 332);
             this.cpoSeguro.Name = "cpoSeguro";
             this.cpoSeguro.Size = new System.Drawing.Size(105, 20);
@@ -394,6 +405,7 @@
             // cpoAdiantFretMot
             // 
             this.cpoAdiantFretMot.Enabled = false;
+            this.cpoAdiantFretMot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoAdiantFretMot.Location = new System.Drawing.Point(838, 249);
             this.cpoAdiantFretMot.Name = "cpoAdiantFretMot";
             this.cpoAdiantFretMot.Size = new System.Drawing.Size(106, 20);
@@ -403,6 +415,7 @@
             // 
             // cpoValorFrete
             // 
+            this.cpoValorFrete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoValorFrete.Location = new System.Drawing.Point(591, 290);
             this.cpoValorFrete.Name = "cpoValorFrete";
             this.cpoValorFrete.Size = new System.Drawing.Size(105, 20);
@@ -450,6 +463,7 @@
             // 
             this.cpoNomeFruta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNomeFruta.Enabled = false;
+            this.cpoNomeFruta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoNomeFruta.Location = new System.Drawing.Point(591, 136);
             this.cpoNomeFruta.Multiline = true;
             this.cpoNomeFruta.Name = "cpoNomeFruta";
@@ -505,7 +519,7 @@
             // 
             this.cpoIDRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoIDRomaneio.Enabled = false;
-            this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoIDRomaneio.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cpoIDRomaneio.Location = new System.Drawing.Point(255, 394);
             this.cpoIDRomaneio.Multiline = true;
@@ -556,6 +570,7 @@
             this.comboBoxFormaPagamento.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblFormaPagamentoBindingSource, "Descricao", true));
             this.comboBoxFormaPagamento.DisplayMember = "tblFormaPagamento.Descricao";
             this.comboBoxFormaPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFormaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxFormaPagamento.FormattingEnabled = true;
             this.comboBoxFormaPagamento.Location = new System.Drawing.Point(591, 209);
             this.comboBoxFormaPagamento.Name = "comboBoxFormaPagamento";
@@ -604,7 +619,7 @@
             // cpoValorTotalRomaneio
             // 
             this.cpoValorTotalRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoValorTotalRomaneio.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoValorTotalRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(754, 398);
             this.cpoValorTotalRomaneio.Multiline = true;
             this.cpoValorTotalRomaneio.Name = "cpoValorTotalRomaneio";
@@ -618,6 +633,7 @@
             // 
             this.comboBoxUnidMedida.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tblFrutaBindingSource, "UnidMedida", true));
             this.comboBoxUnidMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxUnidMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxUnidMedida.FormattingEnabled = true;
             this.comboBoxUnidMedida.Items.AddRange(new object[] {
             "UN",
@@ -664,6 +680,7 @@
             // cpoQtdGeral
             // 
             this.cpoQtdGeral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoQtdGeral.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoQtdGeral.Location = new System.Drawing.Point(591, 173);
             this.cpoQtdGeral.Name = "cpoQtdGeral";
             this.cpoQtdGeral.Size = new System.Drawing.Size(105, 20);
@@ -734,6 +751,7 @@
             // 
             this.cpoNomeTransportador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNomeTransportador.Enabled = false;
+            this.cpoNomeTransportador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoNomeTransportador.Location = new System.Drawing.Point(592, 97);
             this.cpoNomeTransportador.Name = "cpoNomeTransportador";
             this.cpoNomeTransportador.Size = new System.Drawing.Size(352, 20);
@@ -752,6 +770,7 @@
             // 
             this.cpoNomeCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNomeCliente.Enabled = false;
+            this.cpoNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoNomeCliente.Location = new System.Drawing.Point(591, 21);
             this.cpoNomeCliente.Multiline = true;
             this.cpoNomeCliente.Name = "cpoNomeCliente";
@@ -762,6 +781,7 @@
             // 
             this.cpoNomeFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoNomeFornecedor.Enabled = false;
+            this.cpoNomeFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoNomeFornecedor.Location = new System.Drawing.Point(591, 58);
             this.cpoNomeFornecedor.Name = "cpoNomeFornecedor";
             this.cpoNomeFornecedor.Size = new System.Drawing.Size(353, 20);
@@ -779,6 +799,7 @@
             // comboBoxFilial
             // 
             this.comboBoxFilial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFilial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxFilial.FormattingEnabled = true;
             this.comboBoxFilial.Location = new System.Drawing.Point(60, 18);
             this.comboBoxFilial.Name = "comboBoxFilial";
@@ -837,6 +858,14 @@
             this.dgwRomaneio.AllowUserToDeleteRows = false;
             this.dgwRomaneio.AllowUserToResizeRows = false;
             this.dgwRomaneio.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwRomaneio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgwRomaneio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwRomaneio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDRomaneioDataGridViewTextBoxColumn,
@@ -863,10 +892,26 @@
             this.iDFornecedorDataGridViewTextBoxColumn,
             this.iDFrutaDataGridViewTextBoxColumn});
             this.dgwRomaneio.DataSource = this.tblRomaneioBindingSource1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwRomaneio.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgwRomaneio.Location = new System.Drawing.Point(11, 122);
             this.dgwRomaneio.MultiSelect = false;
             this.dgwRomaneio.Name = "dgwRomaneio";
             this.dgwRomaneio.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwRomaneio.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgwRomaneio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwRomaneio.Size = new System.Drawing.Size(440, 192);
             this.dgwRomaneio.TabIndex = 99999;
@@ -1065,6 +1110,7 @@
             // cpoCodigo
             // 
             this.cpoCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCodigo.Location = new System.Drawing.Point(121, 93);
             this.cpoCodigo.MaxLength = 20;
             this.cpoCodigo.Name = "cpoCodigo";
@@ -1075,6 +1121,7 @@
             // comboBoxTpoPesquisa
             // 
             this.comboBoxTpoPesquisa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTpoPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTpoPesquisa.FormattingEnabled = true;
             this.comboBoxTpoPesquisa.Items.AddRange(new object[] {
             "Data",
@@ -1651,6 +1698,14 @@
             this.dgwCarregamento.AllowUserToDeleteRows = false;
             this.dgwCarregamento.AllowUserToResizeColumns = false;
             this.dgwCarregamento.AutoGenerateColumns = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwCarregamento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgwCarregamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwCarregamento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDRomaneioDataGridViewTextBoxColumn1,
@@ -1673,9 +1728,25 @@
             this.totalCarregDataGridViewTextBoxColumn,
             this.iDCarregamentoBlocoDataGridViewTextBoxColumn});
             this.dgwCarregamento.DataSource = this.tblCarregamentoBlocoBindingSource3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwCarregamento.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgwCarregamento.Location = new System.Drawing.Point(21, 232);
             this.dgwCarregamento.Name = "dgwCarregamento";
             this.dgwCarregamento.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwCarregamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgwCarregamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwCarregamento.Size = new System.Drawing.Size(937, 170);
             this.dgwCarregamento.TabIndex = 146;

@@ -82,6 +82,7 @@
             // cpoParcelamento
             // 
             this.cpoParcelamento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoParcelamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoParcelamento.Location = new System.Drawing.Point(480, 309);
             this.cpoParcelamento.MaxLength = 50;
             this.cpoParcelamento.Name = "cpoParcelamento";
@@ -244,6 +245,7 @@
             // cpoDescricao
             // 
             this.cpoDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoDescricao.Location = new System.Drawing.Point(87, 309);
             this.cpoDescricao.MaxLength = 50;
             this.cpoDescricao.Name = "cpoDescricao";
@@ -254,6 +256,7 @@
             // cpoCaixaPesquisa
             // 
             this.cpoCaixaPesquisa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoCaixaPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCaixaPesquisa.Location = new System.Drawing.Point(29, 31);
             this.cpoCaixaPesquisa.Name = "cpoCaixaPesquisa";
             this.cpoCaixaPesquisa.Size = new System.Drawing.Size(403, 20);
