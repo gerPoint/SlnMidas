@@ -324,11 +324,11 @@
             // 
             this.lblAdiantFretMot.AutoSize = true;
             this.lblAdiantFretMot.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdiantFretMot.Location = new System.Drawing.Point(948, 107);
+            this.lblAdiantFretMot.Location = new System.Drawing.Point(984, 107);
             this.lblAdiantFretMot.Name = "lblAdiantFretMot";
-            this.lblAdiantFretMot.Size = new System.Drawing.Size(133, 17);
+            this.lblAdiantFretMot.Size = new System.Drawing.Size(97, 17);
             this.lblAdiantFretMot.TabIndex = 150;
-            this.lblAdiantFretMot.Text = "Adiantamento de Frete:";
+            this.lblAdiantFretMot.Text = "Adiant. de Frete:";
             // 
             // dataGridView1
             // 

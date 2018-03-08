@@ -165,6 +165,49 @@ namespace Negocio
 
         }
 
+        public string Alterar(Romaneio romaneio)
+
+        {
+            try
+            {
+
+                acessoDadosSqlServer.LimparParametros();
+              //  acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDRomaneio", romaneio.IDRomaneio));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDCliente", romaneio.IDCliente));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDTransportador", romaneio.IDTransportador));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFornecedor", romaneio.IDFornecedor));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFruta", romaneio.IDFruta));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INQtdFrutas", romaneio.QtdFrutas));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INValorFrete", romaneio.ValorFrete));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INAdiantFretMot", romaneio.AdiantFretMot));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INFormaPagamento", romaneio.FormaPagamento));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCustoCarregamento", romaneio.CustoCarregamento));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INValorComissao", romaneio.ValorComissao));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INValorTotalRomaneio", romaneio.ValorTotalRomaneio));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTaxaNf", romaneio.TaxaNf));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INSeguro", romaneio.Seguro));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INUnidMedida", romaneio.UnidMedida));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INStatus", romaneio.Status));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INCliente", romaneio.Cliente));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTransportador", romaneio.Transportador));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INFornecedor", romaneio.Fornecedor));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INFruta", romaneio.Fruta));
+
+
+
+                string codRomaneio = acessoDadosSqlServer.ExecutarScalar("uspAlterarRomaneio", CommandType.StoredProcedure).ToString();
+
+                return codRomaneio;
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("Falha ao alterar Romaneio. Motivo: " + ex.Message);
+
+            }
+
+
+        }
 
 
 

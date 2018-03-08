@@ -519,7 +519,7 @@
             // 
             this.cpoIDRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoIDRomaneio.Enabled = false;
-            this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoIDRomaneio.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cpoIDRomaneio.Location = new System.Drawing.Point(255, 394);
             this.cpoIDRomaneio.Multiline = true;
@@ -619,7 +619,7 @@
             // cpoValorTotalRomaneio
             // 
             this.cpoValorTotalRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoValorTotalRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoValorTotalRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(754, 398);
             this.cpoValorTotalRomaneio.Multiline = true;
             this.cpoValorTotalRomaneio.Name = "cpoValorTotalRomaneio";
@@ -1215,6 +1215,7 @@
             this.btnAlterar.Text = "  Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // tabPageCarregamento
             // 

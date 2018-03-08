@@ -995,6 +995,7 @@ namespace Apresentacao
                 btnChamafor.Enabled = false;
                 btnChamaTransp.Enabled = false;
                 btnChamaFruta.Enabled = false;
+                btnAlterar.Enabled = true;
 
 
                 if (cpoIDRomaneio.Text =="")
@@ -1169,7 +1170,7 @@ namespace Apresentacao
 
 
                 btnSalvar.Enabled = false;
-                btnAlterar.Enabled = true;
+                btnAlterar.Enabled = false;
                 btnExcluir.Enabled = true;
 
 
@@ -1607,6 +1608,125 @@ namespace Apresentacao
         private void cpoSomaQtd_TextChanged(object sender, EventArgs e)
         {
 
+
+
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+
+            if (cpoIDRomaneio.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
+            {
+                MessageBox.Show("Nenhum registro selecionado.");
+                return;
+            }
+
+            try
+            {
+
+                this.objRomaneio.IDRomaneio = Convert.ToInt32(cpoIDRomaneio.Text);
+                this.objRomaneio.IDCliente = Convert.ToInt32(cpoIDCliente.Text);
+                this.objRomaneio.Cliente = cpoNomeCliente.Text.TrimStart();
+                this.objRomaneio.IDFornecedor = Convert.ToInt32(cpoIDFornecedor.Text);
+                this.objRomaneio.Fornecedor = cpoNomeFornecedor.Text.TrimStart();
+                this.objRomaneio.IDTransportador = Convert.ToInt32(cpoIDTransportador.Text);
+                this.objRomaneio.Transportador = cpoNomeTransportador.Text.TrimStart();
+                this.objRomaneio.IDFruta = Convert.ToInt32(cpoIDFruta.Text);
+                this.objRomaneio.Fruta = cpoNomeFruta.Text.TrimStart();
+                this.objRomaneio.QtdFrutas = Convert.ToInt32(cpoQtdGeral.Text);
+               // this.objRomaneio.IDCarregamento = Convert.ToInt32(cpoIDCarregamento.Text);
+                this.objRomaneio.ValorFrete = Convert.ToDecimal(cpoValorFrete.Text);
+                this.objRomaneio.AdiantFretMot = Convert.ToDecimal(cpoAdiantFretMot.Text);
+                this.objRomaneio.Seguro = Convert.ToDecimal(cpoSeguro.Text);
+                this.objRomaneio.FormaPagamento = comboBoxFormaPagamento.Text.TrimStart();
+                this.objRomaneio.CustoCarregamento = Convert.ToDecimal(cpoCustoCarreg.Text);
+                this.objRomaneio.ValorComissao = Convert.ToDecimal(cpoValorComissao.Text);
+                this.objRomaneio.ValorTotalRomaneio = Convert.ToDecimal(cpoValorTotalRomaneio.Text);
+                this.objRomaneio.TaxaNf = Convert.ToDecimal(cpoTaxaNf.Text);
+                this.objRomaneio.UnidMedida = comboBoxUnidMedida.Text.TrimStart();
+
+
+
+                string strRetorno = string.Empty;
+
+                if (cpoNomeCliente.Text == "")
+                {
+                    MessageBox.Show("Defina o Cliente.");
+                    return;
+                }
+
+                if (cpoNomeFornecedor.Text == "")
+                {
+                    MessageBox.Show("Defina o Fornecedor.");
+                    return;
+                }
+
+                if (cpoNomeTransportador.Text == "")
+                {
+                    MessageBox.Show("Defina o Transportador.");
+                    return;
+                }
+
+                if (cpoNomeFruta.Text == "")
+                {
+                    MessageBox.Show("Defina a Fruta.");
+                    return;
+                }
+
+                if (cpoQtdGeral.Text == "")
+                {
+                    MessageBox.Show("Defina a Quantidade.");
+                    return;
+                }
+
+                NegRomaneio negRomaneio = new NegRomaneio();
+                strRetorno = negRomaneio.Alterar(this.objRomaneio);
+
+
+
+                int intCodigo;
+                if (int.TryParse(strRetorno, out intCodigo) == true)
+                {
+                    MessageBox.Show("Registro alterado com sucesso!", "Informação",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dgwRomaneio.DataSource = null;
+                    dgwRomaneio.Update();
+                    dgwRomaneio.Refresh();
+  
+
+                    cpoNomeCliente.Clear();
+                    cpoIDCliente.Clear();
+                    cpoNomeFornecedor.Clear();
+                    cpoIDFornecedor.Clear();
+                    cpoNomeFruta.Clear();
+                    cpoIDFruta.Clear();
+                    cpoIDTransportador.Clear();
+                    cpoNomeTransportador.Clear();
+                    cpoQtdGeral.Clear();
+                    cpoValorFrete.Clear();
+                    cpoAdiantFretMot.Clear();
+                    cpoSeguro.Clear();
+                    cpoTaxaNf.Clear();
+                    cpoCustoCarreg.Clear();
+                    cpoValorComissao.Clear();
+                    cpoValorTotalRomaneio.Clear();
+
+                    btnSalvar.Enabled = false;
+
+
+                    cpoSeguro.Enabled = true;
+                    cpoTaxaNf.Enabled = true;
+                    cpoValorComissao.Enabled = true;
+                    cpoValorFrete.Enabled = true;
+                    cpoCustoCarreg.Enabled = true;
+                    checkBoxAdiantFretMot.Enabled = false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao alterar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
 
         }
