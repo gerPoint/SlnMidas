@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ObjTransferencia
 {
-    public class objCarregamentoBloco
+    public class CarregamentoBloco
     {
         public int IDCarregamentoBloco { get; set; }
         public string Bloco { get; set; }
@@ -33,6 +33,6 @@ namespace ObjTransferencia
     }
 
 
-    public class ListaCarregamentoBloco: List<objCarregamentoBloco> { }
+    public class ListaCarregamentoBloco: List<CarregamentoBloco> { }
 }
 

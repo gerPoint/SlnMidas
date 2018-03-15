@@ -20,7 +20,7 @@ namespace Apresentacao
     {
         //------------------usado para adicionar blocos --------------------
 
-        BindingList<objCarregamentoBloco> listCarregamento = new BindingList<objCarregamentoBloco>();
+        BindingList<CarregamentoBloco> listCarregamento = new BindingList<CarregamentoBloco>();
 
         //------------------usado para adicionar blocos --------------------
 
@@ -31,7 +31,7 @@ namespace Apresentacao
 
         NegCarregamentoBloco negCarreg = new NegCarregamentoBloco();
 
-        objCarregamentoBloco objCarreg = new objCarregamentoBloco();
+        CarregamentoBloco objCarreg = new CarregamentoBloco();
 
 
 
@@ -207,6 +207,61 @@ namespace Apresentacao
             }
 
         }
+
+
+        private void AtualizarGrid3()
+        {
+            try
+            {
+                if (cpoIDRomaneio.Text == string.Empty)
+                {
+                    cpoIDRomaneio.Text = string.Empty;
+                    return;
+                }
+
+                NegCarregamentoBloco objNeCarreg = new NegCarregamentoBloco();
+                ListaCarregamentoBloco objLista;
+                try
+                {
+                    //int cod = int.Parse(CaixaPesquisa.Text);
+                    objLista = objNeCarreg.Consultar(Convert.ToString(cpoIDRomaneio.Text));
+                }
+                catch
+                {
+
+                    objLista = objNeCarreg.Consultar(Convert.ToString(cpoIDRomaneio.Text));
+                }
+
+
+                if (objLista.Count == 0)
+                {
+                    MessageBox.Show("Este Romaneio não possui Blocos Adicionados. Para adição dos mesmos, vá até a aba 'Carregamento' . " , "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                 //   cpoIDRomaneio.Text = string.Empty;
+                    cpoIDRomaneio.Focus();
+                    return;
+                }
+
+                dgwCarregamento.DataSource = null;
+                dgwCarregamento.DataSource = objLista;
+                dgwCarregamento.Update();
+                dgwCarregamento.Refresh();
+              //  cpoIDRomaneio.Text = string.Empty;//-- nao sei se ta certo esta linha
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao consultar Carregamentos. Falha: " +
+                    ex.Message, "Falha", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+
+
+        }
+
+
+
+
+
+
 
 
 
@@ -541,7 +596,7 @@ namespace Apresentacao
             try
             {
 
-                objCarregamentoBloco row = (dgwCarregamento.SelectedRows[0].DataBoundItem as objCarregamentoBloco);
+                CarregamentoBloco row = (dgwCarregamento.SelectedRows[0].DataBoundItem as CarregamentoBloco);
 
                 cpoIDCarregamento.Text = dgwCarregamento.SelectedRows[0].Cells[0].Value.ToString();
                 cpoBloco.Text = dgwCarregamento.SelectedRows[0].Cells[1].Value.ToString();
@@ -1061,6 +1116,9 @@ namespace Apresentacao
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
+
+            BindingList<CarregamentoBloco> listCarregamento = new BindingList<CarregamentoBloco>();
+
             if (dgwCarregamento.Rows.Count < 1)
             {
 
@@ -1168,6 +1226,14 @@ namespace Apresentacao
                 cpoIDFornecedor.Text = dgwRomaneio.SelectedRows[0].Cells[21].Value.ToString();
                 cpoIDFruta.Text = dgwRomaneio.SelectedRows[0].Cells[22].Value.ToString();
 
+               
+                dgwCarregamento.DataSource = null;
+                dgwCarregamento.Update();
+                dgwCarregamento.Refresh();
+
+
+
+                AtualizarGrid3(); //Este método pesquisa os carregamentos vinculados a romaneio que vc selecionar com um clique duplo
 
                 btnSalvar.Enabled = false;
                 btnAlterar.Enabled = false;
@@ -1191,10 +1257,10 @@ namespace Apresentacao
                 //---------------------------------------------------------------------------
 
 
+                
 
 
-
- //---------------------------------------------------------------------------
+                //---------------------------------------------------------------------------
             }
             catch (Exception)
             {

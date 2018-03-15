@@ -378,7 +378,7 @@
             // cpoCustoCarreg
             // 
             this.cpoCustoCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoCustoCarreg.Location = new System.Drawing.Point(591, 249);
+            this.cpoCustoCarreg.Location = new System.Drawing.Point(591, 250);
             this.cpoCustoCarreg.Name = "cpoCustoCarreg";
             this.cpoCustoCarreg.Size = new System.Drawing.Size(105, 20);
             this.cpoCustoCarreg.TabIndex = 15;
@@ -396,7 +396,7 @@
             // cpoSeguro
             // 
             this.cpoSeguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoSeguro.Location = new System.Drawing.Point(591, 332);
+            this.cpoSeguro.Location = new System.Drawing.Point(591, 331);
             this.cpoSeguro.Name = "cpoSeguro";
             this.cpoSeguro.Size = new System.Drawing.Size(105, 20);
             this.cpoSeguro.TabIndex = 20;
@@ -406,7 +406,7 @@
             // 
             this.cpoAdiantFretMot.Enabled = false;
             this.cpoAdiantFretMot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoAdiantFretMot.Location = new System.Drawing.Point(838, 249);
+            this.cpoAdiantFretMot.Location = new System.Drawing.Point(838, 250);
             this.cpoAdiantFretMot.Name = "cpoAdiantFretMot";
             this.cpoAdiantFretMot.Size = new System.Drawing.Size(106, 20);
             this.cpoAdiantFretMot.TabIndex = 17;
@@ -497,11 +497,11 @@
             // checkBoxAdiantFretMot
             // 
             this.checkBoxAdiantFretMot.AutoSize = true;
-            this.checkBoxAdiantFretMot.Location = new System.Drawing.Point(731, 251);
+            this.checkBoxAdiantFretMot.Location = new System.Drawing.Point(704, 253);
             this.checkBoxAdiantFretMot.Name = "checkBoxAdiantFretMot";
-            this.checkBoxAdiantFretMot.Size = new System.Drawing.Size(101, 17);
+            this.checkBoxAdiantFretMot.Size = new System.Drawing.Size(121, 17);
             this.checkBoxAdiantFretMot.TabIndex = 16;
-            this.checkBoxAdiantFretMot.Text = "Adiant. de Frete";
+            this.checkBoxAdiantFretMot.Text = "Adiant. de Frete  R$";
             this.checkBoxAdiantFretMot.UseVisualStyleBackColor = true;
             this.checkBoxAdiantFretMot.CheckedChanged += new System.EventHandler(this.checkBoxAdiantFretMot_CheckedChanged);
             // 
@@ -532,29 +532,29 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(477, 252);
+            this.label17.Location = new System.Drawing.Point(487, 253);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(103, 13);
+            this.label17.Size = new System.Drawing.Size(88, 13);
             this.label17.TabIndex = 93;
-            this.label17.Text = "Custo Carregamento";
+            this.label17.Text = "Custo Carreg. R$";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(774, 293);
+            this.label16.Location = new System.Drawing.Point(757, 293);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(48, 13);
+            this.label16.Size = new System.Drawing.Size(65, 13);
             this.label16.TabIndex = 90;
-            this.label16.Text = "Taxa NF";
+            this.label16.Text = "Taxa NF R$";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(774, 335);
+            this.label15.Location = new System.Drawing.Point(753, 335);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(52, 13);
+            this.label15.Size = new System.Drawing.Size(69, 13);
             this.label15.TabIndex = 88;
-            this.label15.Text = "Comissão";
+            this.label15.Text = "Comissão R$";
             // 
             // label14
             // 
@@ -592,39 +592,39 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(536, 336);
+            this.label13.Location = new System.Drawing.Point(517, 335);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.Size = new System.Drawing.Size(58, 13);
             this.label13.TabIndex = 84;
-            this.label13.Text = "Seguro";
+            this.label13.Text = "Seguro R$";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(546, 294);
+            this.label12.Location = new System.Drawing.Point(527, 293);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 13);
+            this.label12.Size = new System.Drawing.Size(48, 13);
             this.label12.TabIndex = 81;
-            this.label12.Text = "Frete";
+            this.label12.Text = "Frete R$";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(704, 409);
+            this.label11.Location = new System.Drawing.Point(715, 409);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 13);
+            this.label11.Size = new System.Drawing.Size(59, 13);
             this.label11.TabIndex = 80;
-            this.label11.Text = "TOTAL";
+            this.label11.Text = "TOTAL R$";
             // 
             // cpoValorTotalRomaneio
             // 
             this.cpoValorTotalRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoValorTotalRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(754, 398);
+            this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(777, 398);
             this.cpoValorTotalRomaneio.Multiline = true;
             this.cpoValorTotalRomaneio.Name = "cpoValorTotalRomaneio";
             this.cpoValorTotalRomaneio.ReadOnly = true;
-            this.cpoValorTotalRomaneio.Size = new System.Drawing.Size(192, 33);
+            this.cpoValorTotalRomaneio.Size = new System.Drawing.Size(169, 33);
             this.cpoValorTotalRomaneio.TabIndex = 0;
             this.cpoValorTotalRomaneio.TextChanged += new System.EventHandler(this.cpoValorTotalRomaneio_TextChanged);
             this.cpoValorTotalRomaneio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cpoValorTotalRomaneio_KeyDown);
@@ -1494,7 +1494,8 @@
             this.groupBox2.Size = new System.Drawing.Size(325, 112);
             this.groupBox2.TabIndex = 186;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "                   Classificação  Das Frutas             -     Valor Unitário :";
+            this.groupBox2.Text = "                   Classificação  Das Frutas               -     Valor Unitário :" +
+    "";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // cpoPrecoP

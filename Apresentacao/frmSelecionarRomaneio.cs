@@ -224,11 +224,12 @@ namespace Apresentacao
                     MessageBox.Show("Pesquise o Romaneio desejado e selecione-o dando um clique duplo sobre a mesma.");
                     return;
                 }
-                
+
+                this.IDRomaneio = romaneio.IDRomaneio.ToString();
                 this.Nomecliente = romaneio.Cliente;
                 this.NomeFornecedor = romaneio.Fornecedor;
                 this.NomeTransportador = romaneio.Transportador;
-                this.NomeTransportador = romaneio.Fruta;
+                this.NomeFruta = romaneio.Fruta;
                 this.FormaPagamento = romaneio.FormaPagamento;
                 this.UnidMedida = romaneio.UnidMedida;
                 this.QtdGeral = romaneio.QtdFrutas.ToString();
@@ -239,13 +240,6 @@ namespace Apresentacao
                 this.Seguro = romaneio.TaxaNf.ToString();
                 this.TaxaNF = romaneio.TaxaNf.ToString();
                 this.ValorTotalRomaneio = romaneio.ValorTotalRomaneio.ToString();
-
-
-
-
-
-
-
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
