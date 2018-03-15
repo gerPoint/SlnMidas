@@ -141,3 +141,4 @@ C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\zh-Hant\Mic
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\RdlCompile.cache
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\RdlCompile.compiled
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmEmissaoRomaneio.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarRomaneio.resources

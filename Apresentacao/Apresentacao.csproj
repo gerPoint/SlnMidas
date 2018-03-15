@@ -129,6 +129,12 @@
     <Compile Include="frmSelecionarFruta.Designer.cs">
       <DependentUpon>frmSelecionarFruta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSelecionarRomaneio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelecionarRomaneio.Designer.cs">
+      <DependentUpon>frmSelecionarRomaneio.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVisualizarRomaneio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSelecionarFruta.resx">
       <DependentUpon>frmSelecionarFruta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelecionarRomaneio.resx">
+      <DependentUpon>frmSelecionarRomaneio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVisualizarRomaneio.resx">
       <DependentUpon>frmVisualizarRomaneio.cs</DependentUpon>
