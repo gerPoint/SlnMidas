@@ -155,7 +155,7 @@ namespace Apresentacao
                 }
 
 
-                // ESSE DA CERTO
+                // ESSE DA CERTO também
                 //pictureBoxPerfil.ImageLocation = "c:/teste/planodefundo.png";  
                 //pictureBoxPerfil.Load();          
 
