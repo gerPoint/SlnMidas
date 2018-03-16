@@ -1232,8 +1232,8 @@ namespace Apresentacao
                 dgwCarregamento.Refresh();
 
 
-
-                AtualizarGrid3(); //Este método pesquisa os carregamentos vinculados a romaneio que vc selecionar com um clique duplo
+                //Este método pesquisa os carregamentos vinculados ao romaneio que vc selecionar com um clique duplo
+                // AtualizarGrid3(); 
 
                 btnSalvar.Enabled = false;
                 btnAlterar.Enabled = false;

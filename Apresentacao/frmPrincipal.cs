@@ -5,8 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using AcessoDados;
+using Negocio;
+using ObjTransferencia;
+using System.IO;
+
 
 
 namespace Apresentacao
@@ -21,9 +25,9 @@ namespace Apresentacao
         {
             InitializeComponent();
 
-            pasta_images = Application.StartupPath + @"\images\";
-            img_fundo = Image.FromFile(pasta_images + @"abacaxi.jpg");
-            this.BackgroundImage = img_fundo;
+            //pasta_images = Application.StartupPath + @"\images\";
+            //img_fundo = Image.FromFile(pasta_images + @"abacaxi.jpg");
+            //this.BackgroundImage = img_fundo;
 
         }
 
@@ -104,7 +108,57 @@ namespace Apresentacao
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             
-          
+                
+                var Local1 = ("c:/Logo/planodefundo.png");
+                var Local2 = ("c:/Logo/planodefundo.bmp");
+                var Local3 = ("c:/Logo/planodefundo.jpg");
+                var Local4 = ("c:/Logo/planodefundo.gif");
+                var Local5 = ("c:/Logo/planodefundo.tiff");
+
+            FileInfo file1 = new FileInfo(Local1);
+            FileInfo file2 = new FileInfo(Local2);
+            FileInfo file3 = new FileInfo(Local3);
+            FileInfo file4 = new FileInfo(Local4);
+            FileInfo file5 = new FileInfo(Local5);
+
+            if (file1.Exists)
+                {
+                    pictureBoxPerfil.ImageLocation = Local1;
+                    pictureBoxPerfil.Load();
+                }
+
+                if (file2.Exists)
+                {
+                    pictureBoxPerfil.ImageLocation = Local2;
+                    pictureBoxPerfil.Load();
+                }
+
+
+                if (file3.Exists)
+                {
+                    pictureBoxPerfil.ImageLocation = Local3;
+                    pictureBoxPerfil.Load();
+                }
+
+
+                if (file4.Exists)
+                {
+                    pictureBoxPerfil.ImageLocation = Local4;
+                    pictureBoxPerfil.Load();
+                }
+
+
+                if (file5.Exists)
+                {
+                    pictureBoxPerfil.ImageLocation = Local5;
+                    pictureBoxPerfil.Load();
+                }
+
+
+                // ESSE DA CERTO
+                //pictureBoxPerfil.ImageLocation = "c:/teste/planodefundo.png";  
+                //pictureBoxPerfil.Load();          
+
         }
 
         private void romaneioToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -117,15 +171,6 @@ namespace Apresentacao
  
         private void planoDeFundoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            //{
-            //    pictureBoxPerfil.ImageLocation = openFileDialog1.FileName;
-            //    pictureBoxPerfil.Load();
-            //    lblCaminho.Text = "Caminho do Arquivo: " + openFileDialog1.FileName;
-            //}
-            //OpenFileDialog TrocarImagem = new OpenFileDialog();
-
-
 
             OpenFileDialog TrocarImagem = new OpenFileDialog();
             TrocarImagem.Filter = "imagens (*.jpg, *.bmp, *.png, *.gif, *.tiff)|*.jpg; *.bmp; *.png; *.gif; *.tiff)";
@@ -150,6 +195,23 @@ namespace Apresentacao
         {
             frmEmissaoRomaneio outroForm = new frmEmissaoRomaneio();
             outroForm.Show();
+        }
+
+        private void imagemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFundo_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                cpoCaminhoImage.Text = openFileDialog1.FileName;
+                pictureBoxPerfil.ImageLocation = openFileDialog1.FileName;
+
+                pictureBoxPerfil.Load();
+
+            }
         }
     }
 }
