@@ -194,7 +194,7 @@
             this.midasDataSetCarregamentoBlocookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetCarregamentoBlocook = new Apresentacao.midasDataSetCarregamentoBlocook();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnConcluir = new System.Windows.Forms.Button();
+            this.btnFinalizar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
@@ -1240,7 +1240,7 @@
             this.tabPageCarregamento.Controls.Add(this.label26);
             this.tabPageCarregamento.Controls.Add(this.dgwCarregamento);
             this.tabPageCarregamento.Controls.Add(this.pictureBox1);
-            this.tabPageCarregamento.Controls.Add(this.btnConcluir);
+            this.tabPageCarregamento.Controls.Add(this.btnFinalizar);
             this.tabPageCarregamento.Controls.Add(this.btnCancelar);
             this.tabPageCarregamento.Controls.Add(this.btnRemover);
             this.tabPageCarregamento.Controls.Add(this.btnInserir);
@@ -1924,19 +1924,19 @@
             this.pictureBox1.TabIndex = 175;
             this.pictureBox1.TabStop = false;
             // 
-            // btnConcluir
+            // btnFinalizar
             // 
-            this.btnConcluir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConcluir.Image = global::Apresentacao.Properties.Resources.stake_truck_18543;
-            this.btnConcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConcluir.Location = new System.Drawing.Point(843, 482);
-            this.btnConcluir.Name = "btnConcluir";
-            this.btnConcluir.Size = new System.Drawing.Size(115, 48);
-            this.btnConcluir.TabIndex = 43;
-            this.btnConcluir.Text = "Concluir";
-            this.btnConcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConcluir.UseVisualStyleBackColor = true;
-            this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
+            this.btnFinalizar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.Image = global::Apresentacao.Properties.Resources.stake_truck_18543;
+            this.btnFinalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFinalizar.Location = new System.Drawing.Point(843, 482);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(115, 48);
+            this.btnFinalizar.TabIndex = 43;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // btnCancelar
             // 
@@ -2178,7 +2178,7 @@
         private midasDataSetCarregbloco midasDataSetCarregbloco;
         private System.Windows.Forms.BindingSource tblCarregamentoBlocoBindingSource;
         private midasDataSetCarregblocoTableAdapters.tblCarregamentoBlocoTableAdapter tblCarregamentoBlocoTableAdapter;
-        private System.Windows.Forms.Button btnConcluir;
+        private System.Windows.Forms.Button btnFinalizar;
         private System.Windows.Forms.TextBox cpoIDFornecedor;
         private System.Windows.Forms.TextBox cpoIDTransportador;
         private System.Windows.Forms.TextBox cpoIDCliente;

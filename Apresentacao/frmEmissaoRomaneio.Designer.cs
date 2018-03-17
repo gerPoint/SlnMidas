@@ -56,7 +56,7 @@
             this.cpoCliente = new System.Windows.Forms.TextBox();
             this.cpoFornecedor = new System.Windows.Forms.TextBox();
             this.lblAdiantFretMot = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgwEmissaoRomaneio = new System.Windows.Forms.DataGridView();
             this.iDCarregamentoBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,7 +90,7 @@
             this.pictureBoxTitulo = new System.Windows.Forms.PictureBox();
             this.btnConsultaRomaneio = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwEmissaoRomaneio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTitulo)).BeginInit();
             this.SuspendLayout();
@@ -331,11 +331,11 @@
             this.lblAdiantFretMot.TabIndex = 150;
             this.lblAdiantFretMot.Text = "Adiant. de Frete:";
             // 
-            // dataGridView1
+            // dgwEmissaoRomaneio
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgwEmissaoRomaneio.AutoGenerateColumns = false;
+            this.dgwEmissaoRomaneio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwEmissaoRomaneio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDCarregamentoBlocoDataGridViewTextBoxColumn,
             this.blocoDataGridViewTextBoxColumn,
             this.descricaoDataGridViewTextBoxColumn,
@@ -355,11 +355,11 @@
             this.precoPDataGridViewTextBoxColumn,
             this.precoGDataGridViewTextBoxColumn,
             this.precoMDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tblCarregamentoBlocoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 203);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1211, 432);
-            this.dataGridView1.TabIndex = 151;
+            this.dgwEmissaoRomaneio.DataSource = this.tblCarregamentoBlocoBindingSource;
+            this.dgwEmissaoRomaneio.Location = new System.Drawing.Point(12, 203);
+            this.dgwEmissaoRomaneio.Name = "dgwEmissaoRomaneio";
+            this.dgwEmissaoRomaneio.Size = new System.Drawing.Size(1211, 432);
+            this.dgwEmissaoRomaneio.TabIndex = 151;
             // 
             // iDCarregamentoBlocoDataGridViewTextBoxColumn
             // 
@@ -567,6 +567,7 @@
             this.cpoIDRomaneio.Size = new System.Drawing.Size(107, 29);
             this.cpoIDRomaneio.TabIndex = 159;
             this.cpoIDRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cpoIDRomaneio.TextChanged += new System.EventHandler(this.cpoIDRomaneio_TextChanged);
             // 
             // cpoFormaPagamento
             // 
@@ -640,7 +641,7 @@
             this.Controls.Add(this.cpoValorTotalRomaneio);
             this.Controls.Add(this.lblQuantidade);
             this.Controls.Add(this.cpoQtdGeral);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgwEmissaoRomaneio);
             this.Controls.Add(this.lblAdiantFretMot);
             this.Controls.Add(this.cpoValorComissao);
             this.Controls.Add(this.cpoCustoCarreg);
@@ -674,7 +675,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Emissao De Romaneio";
             this.Load += new System.EventHandler(this.frmEmissaoRomaneio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwEmissaoRomaneio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTitulo)).EndInit();
             this.ResumeLayout(false);
@@ -709,7 +710,7 @@
         private System.Windows.Forms.TextBox cpoCliente;
         private System.Windows.Forms.TextBox cpoFornecedor;
         private System.Windows.Forms.Label lblAdiantFretMot;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgwEmissaoRomaneio;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox cpoValorTotalRomaneio;
         private System.Windows.Forms.Label lblQuantidade;

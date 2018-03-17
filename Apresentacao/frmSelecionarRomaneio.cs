@@ -174,6 +174,10 @@ namespace Apresentacao
 
         }
 
+
+
+
+
         private void comboBoxTpoPesquisa_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxTpoPesquisa.Text == "Código")
@@ -241,8 +245,11 @@ namespace Apresentacao
                 this.TaxaNF = romaneio.TaxaNf.ToString();
                 this.ValorTotalRomaneio = romaneio.ValorTotalRomaneio.ToString();
 
+
+
                 this.DialogResult = DialogResult.OK;
                 this.Close();
+
 
 
                 //btnSalvar.Enabled = false;
@@ -266,17 +273,17 @@ namespace Apresentacao
 
                 //---------------------------------------------------------------------------
 
-
-
-
-
-                //---------------------------------------------------------------------------
             }
             catch (Exception)
             {
 
                 MessageBox.Show("Informação: " + "Você clicou fora do intervalo de seleção. Por favor clique devidamente no registro desejado. " + MessageBoxButtons.OK);
             }
+
+
+            //Este método pesquisa os carregamentos vinculados ao romaneio que vc selecionar com um clique duplo
+       
+
         }
     }
 }

@@ -56,7 +56,7 @@ namespace Negocio
         }
 
 
-        public ListaCarregamentoBloco Consultar(string codRomaneio)
+        public ListaCarregamentoBloco ConsultarCarreg(string codRomaneio)
         {
             try
             {

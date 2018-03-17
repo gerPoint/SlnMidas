@@ -54,7 +54,10 @@ namespace Apresentacao
 
         private void frmEmissaoRomaneio_Load(object sender, EventArgs e)
         {
-
+            if (cpoIDRomaneio.Text != null)
+            {
+                
+            }
         }
 
 
@@ -93,6 +96,66 @@ namespace Apresentacao
 
 
 
+
+        private void AtualizarGrid3()
+        {
+            try
+            {
+                if (cpoIDRomaneio.Text == "")
+                {
+                    MessageBox.Show("Por favor, informe o Codigo do Romaneio para pesquisar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cpoIDRomaneio.Text = string.Empty;
+                    cpoIDRomaneio.Focus();
+                    //CaixaPesquisa.DataSource = "";
+                    return;
+                }
+
+                NegCarregamentoBloco objNegCarreg = new NegCarregamentoBloco();
+                ListaCarregamentoBloco objLista;
+                try
+                {
+                    //int cod = int.Parse(CaixaPesquisa.Text);
+                    objLista = objNegCarreg.ConsultarCarreg(cpoIDRomaneio.Text);
+                }
+                catch
+                {
+
+                    objLista = objNegCarreg.ConsultarCarreg(cpoIDRomaneio.Text);
+                }
+
+
+                if (objLista.Count == 0)
+                {
+                    MessageBox.Show("Nenhum registro encontrado.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cpoIDRomaneio.Text = string.Empty;
+                    cpoIDRomaneio.Focus();
+                    return;
+                }
+
+                dgwEmissaoRomaneio.DataSource = null;
+                dgwEmissaoRomaneio.DataSource = objLista;
+                dgwEmissaoRomaneio.Update();
+                dgwEmissaoRomaneio.Refresh();
+                dgwEmissaoRomaneio.Text = string.Empty;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Falha ao consultar Carregamento. Falha: " +
+                    ex.Message, "Falha", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
         private void cpoFormaPagamento_TextChanged(object sender, EventArgs e)
         {
 
@@ -100,9 +163,7 @@ namespace Apresentacao
 
         private void btnConsultaRomaneio_Click(object sender, EventArgs e)
         {
-            //using (fr)
-            //    frmSelecionarRomaneio outroForm = new frmSelecionarRomaneio();
-            //outroForm.ShowDialog();
+
 
             //essa parte que pega os dados de um form e passa para outro
 
@@ -150,6 +211,15 @@ namespace Apresentacao
                 printDialogImprimir.Reset();
             }
 
+        }
+
+        private void cpoIDRomaneio_TextChanged(object sender, EventArgs e)
+        {
+            if (cpoIDRomaneio != null)
+            {
+                AtualizarGrid3();
+            }
+            
         }
     }
 }

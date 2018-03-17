@@ -209,83 +209,8 @@ namespace Apresentacao
         }
 
 
-        private void AtualizarGrid3()
-        {
-            try
-            {
-                if (cpoIDRomaneio.Text == string.Empty)
-                {
-                    cpoIDRomaneio.Text = string.Empty;
-                    return;
-                }
-
-                NegCarregamentoBloco objNeCarreg = new NegCarregamentoBloco();
-                ListaCarregamentoBloco objLista;
-                try
-                {
-                    //int cod = int.Parse(CaixaPesquisa.Text);
-                    objLista = objNeCarreg.Consultar(Convert.ToString(cpoIDRomaneio.Text));
-                }
-                catch
-                {
-
-                    objLista = objNeCarreg.Consultar(Convert.ToString(cpoIDRomaneio.Text));
-                }
-
-
-                if (objLista.Count == 0)
-                {
-                    MessageBox.Show("Este Romaneio não possui Blocos Adicionados. Para adição dos mesmos, vá até a aba 'Carregamento' . " , "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                 //   cpoIDRomaneio.Text = string.Empty;
-                    cpoIDRomaneio.Focus();
-                    return;
-                }
-
-                dgwCarregamento.DataSource = null;
-                dgwCarregamento.DataSource = objLista;
-                dgwCarregamento.Update();
-                dgwCarregamento.Refresh();
-              //  cpoIDRomaneio.Text = string.Empty;//-- nao sei se ta certo esta linha
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Falha ao consultar Carregamentos. Falha: " +
-                    ex.Message, "Falha", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-            }
-
-
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
         private void frmRomaneio_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'midasDataSetCarregBlo.tblCarregamentoBloco' table. You can move, or remove it, as needed.
-            //            this.tblCarregamentoBlocoTableAdapter2.Fill(this.midasDataSetCarregBlo.tblCarregamentoBloco);
-            // TODO: This line of code loads data into the 'midasDataSetCarregamentoBlocook.tblCarregamentoBloco' table. You can move, or remove it, as needed.
-            //            this.tblCarregamentoBlocoTableAdapter1.Fill(this.midasDataSetCarregamentoBlocook.tblCarregamentoBloco);
-            // TODO: This line of code loads data into the 'midasDataSetRomaneioCorreto.tblRomaneio' table. You can move, or remove it, as needed.
-            //esse funfa porra(No caso o de baixo)
-            //this.tblRomaneioTableAdapter1.Fill(this.midasDataSetRomaneioCorreto.tblRomaneio);
-
-            // TODO: This line of code loads data into the 'midasDataSetRomaneio.tblRomaneio' table. You can move, or remove it, as needed.
-            //  this.tblRomaneioTableAdapter.Fill(this.midasDataSetRomaneio.tblRomaneio);
-            // TODO: This line of code loads data into the 'midasDataSetDescFormPgto.tblFormaPagamento' table. You can move, or remove it, as needed.
-            //this.tblFormaPagamentoTableAdapter.Fill(this.midasDataSetDescFormPgto.tblFormaPagamento);
-            // TODO: This line of code loads data into the 'midasDataSetUnidMedida.tblFruta' table. You can move, or remove it, as needed.
-            // this.tblFrutaTableAdapter.Fill(this.midasDataSetUnidMedida.tblFruta);
-            // TODO: This line of code loads data into the 'midasDataSetCarregbloco.tblCarregamentoBloco' table. You can move, or remove it, as needed.
 
 
             tabPagePrincipal.Enabled = true;
@@ -1281,74 +1206,7 @@ namespace Apresentacao
             }
         }
 
-        private void btnConcluir_Click(object sender, EventArgs e)
-        {
 
-            string strRetorno = string.Empty;
-
-           
-
-
-            foreach (DataGridViewRow row in dgwCarregamento.Rows)
-            {
-
-                this.objCarreg.IDRomaneio = Convert.ToInt32(row.Cells[0].Value);
-                this.objCarreg.Bloco = Convert.ToString(row.Cells[1].Value);
-                this.objCarreg.Descricao = Convert.ToString(row.Cells[2].Value);
-                this.objCarreg.FrutaP = Convert.ToString(row.Cells[3].Value);
-                this.objCarreg.FrutaM = Convert.ToString(row.Cells[4].Value);
-                this.objCarreg.FrutaG = Convert.ToString(row.Cells[5].Value);
-                this.objCarreg.ValorUnitP = Convert.ToDecimal(row.Cells[6].Value);
-                this.objCarreg.ValorUnitM = Convert.ToDecimal(row.Cells[7].Value);
-                this.objCarreg.ValorUnitG = Convert.ToDecimal(row.Cells[8].Value);
-                this.objCarreg.QtdP = Convert.ToInt32(row.Cells[9].Value);
-                this.objCarreg.QtdM = Convert.ToInt32(row.Cells[10].Value);
-                this.objCarreg.QtdG = Convert.ToInt32(row.Cells[11].Value);
-                this.objCarreg.Quantidade = Convert.ToInt32(row.Cells[12].Value);
-                this.objCarreg.PrecoP = Convert.ToDecimal(row.Cells[13].Value);
-                this.objCarreg.PrecoM = Convert.ToDecimal(row.Cells[14].Value);
-                this.objCarreg.PrecoG = Convert.ToDecimal(row.Cells[15].Value);
-                this.objCarreg.TotalBloco = Convert.ToDecimal(row.Cells[16].Value);
-
-               
-
-
-                NegCarregamentoBloco negCarreg = new NegCarregamentoBloco();
-                strRetorno = negCarreg.Cadastrar(this.objCarreg);
-
-            }
-
-
-            try
-            {
-
-                int idCarregamentoBloco = Convert.ToInt32(strRetorno);
-
-
-                MessageBox.Show("Registro salvo com sucesso!", "Código: " + idCarregamentoBloco.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                if (this.dgwRomaneio.DataSource != null)
-                {
-                    this.dgwRomaneio.DataSource = null;
-                }
-                else
-                {
-                    this.dgwRomaneio.Rows.Clear();
-
-                }
-            }
-
-
-
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Falha ao salvar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                this.DialogResult = DialogResult.No;
-            }
-
-
-        }
 
         private void btnIgnorarEdicoes_Click(object sender, EventArgs e)
         {
@@ -1369,6 +1227,8 @@ namespace Apresentacao
             cpoSeguro.Clear();
             cpoValorComissao.Clear();
             cpoValorTotalRomaneio.Clear();
+            cpoMostraCodRomaneio.Clear();
+            
 
 
             cpoSeguro.Enabled = true;
@@ -1797,20 +1657,148 @@ namespace Apresentacao
 
         }
 
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+
+            if (dgwCarregamento.RowCount == 0)
+
+            {
+                MessageBox.Show("Nenhum Bloco foi adicionado ao Carregamento.");
+                return;
+            }
 
 
 
-        //-----------------------------------------------------------------------------------------------------------
+            DialogResult confirm = MessageBox.Show("Tem certeza que deseja Finalizar?  Uma vez finalizado não é possível alterar o Carregamento ", "Salvar Carregamento", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (confirm.ToString().ToUpper() == "YES")
+            {
+
+                string strRetorno = string.Empty;
+
+                foreach (DataGridViewRow row in dgwCarregamento.Rows)
+                {
+
+                    this.objCarreg.IDRomaneio = Convert.ToInt32(row.Cells[0].Value);
+                    this.objCarreg.Bloco = Convert.ToString(row.Cells[1].Value);
+                    this.objCarreg.Descricao = Convert.ToString(row.Cells[2].Value);
+                    this.objCarreg.FrutaP = Convert.ToString(row.Cells[3].Value);
+                    this.objCarreg.FrutaM = Convert.ToString(row.Cells[4].Value);
+                    this.objCarreg.FrutaG = Convert.ToString(row.Cells[5].Value);
+                    this.objCarreg.ValorUnitP = Convert.ToDecimal(row.Cells[6].Value);
+                    this.objCarreg.ValorUnitM = Convert.ToDecimal(row.Cells[7].Value);
+                    this.objCarreg.ValorUnitG = Convert.ToDecimal(row.Cells[8].Value);
+                    this.objCarreg.QtdP = Convert.ToInt32(row.Cells[9].Value);
+                    this.objCarreg.QtdM = Convert.ToInt32(row.Cells[10].Value);
+                    this.objCarreg.QtdG = Convert.ToInt32(row.Cells[11].Value);
+                    this.objCarreg.Quantidade = Convert.ToInt32(row.Cells[12].Value);
+                    this.objCarreg.PrecoP = Convert.ToDecimal(row.Cells[13].Value);
+                    this.objCarreg.PrecoM = Convert.ToDecimal(row.Cells[14].Value);
+                    this.objCarreg.PrecoG = Convert.ToDecimal(row.Cells[15].Value);
+                    this.objCarreg.TotalBloco = Convert.ToDecimal(row.Cells[16].Value);
+
+
+
+
+                    NegCarregamentoBloco negCarreg = new NegCarregamentoBloco();
+                    strRetorno = negCarreg.Cadastrar(this.objCarreg);
+
+                }
+
+
+                try
+                {
+
+                    int idCarregamentoBloco = Convert.ToInt32(strRetorno);
+
+
+                    MessageBox.Show("Registro salvo com sucesso!", "Código: " + idCarregamentoBloco.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    if (this.dgwRomaneio.DataSource != null)
+                    {
+                        this.dgwRomaneio.DataSource = null;
+                    }
+                    else
+                    {
+                        this.dgwRomaneio.Rows.Clear();
+
+                    }
+
+
+                    if (this.dgwCarregamento.DataSource != null)
+                    {
+                        this.dgwCarregamento.DataSource = null;
+                    }
+                    else
+                    {
+                        this.dgwCarregamento.Rows.Clear();
+
+                    }
+
+   // limpar campos após Salvar
+
+                    cpoIDRomaneio.Clear();
+                    cpoIDCliente.Clear();
+                    cpoNomeCliente.Clear();
+                    cpoIDFornecedor.Clear();
+                    cpoNomeFornecedor.Clear();
+                    cpoIDTransportador.Clear();
+                    cpoNomeTransportador.Clear();
+                    cpoIDFruta.Clear();
+                    cpoNomeFruta.Clear();
+                    cpoQtdGeral.Clear();
+                    cpoCustoCarreg.Clear();
+                    cpoAdiantFretMot.Clear();
+                    cpoValorFrete.Clear();
+                    cpoTaxaNf.Clear();
+                    cpoSeguro.Clear();
+                    cpoValorComissao.Clear();
+                    cpoValorTotalRomaneio.Clear();
+
+
+                    cpoSeguro.Enabled = true;
+                    cpoTaxaNf.Enabled = true;
+                    cpoValorComissao.Enabled = true;
+                    cpoValorFrete.Enabled = true;
+                    cpoCustoCarreg.Enabled = true;
+                    cpoQtdGeral.Enabled = true;
+                    checkBoxAdiantFretMot.Enabled = true;
+                    comboBoxFormaPagamento.Enabled = true;
+                    comboBoxUnidMedida.Enabled = true;
+                    btnChamacli.Enabled = true;
+                    btnChamafor.Enabled = true;
+                    btnChamaTransp.Enabled = true;
+                    btnChamaFruta.Enabled = true;
+
+
+                    btnAlterar.Enabled = false;
+                    btnExcluir.Enabled = false;
+                    btnSalvar.Enabled = true;
+
+
+
+
+                }
+
+
+
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Falha ao salvar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.DialogResult = DialogResult.No;
+                }
+
+            }
 
 
 
 
 
 
-        //--------------------------------------------------------------------------------------------------------
+             }
 
-
-    }
+         }
 
     }
 
