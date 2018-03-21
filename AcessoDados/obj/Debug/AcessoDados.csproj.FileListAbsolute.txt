@@ -33,4 +33,3 @@ C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\AcessoDados\obj\Debug\AcessoDados.
 C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\AcessoDados\bin\Debug\AcessoDados.dll.config
 C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\AcessoDados\bin\Debug\AcessoDados.dll
 C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\AcessoDados\bin\Debug\AcessoDados.pdb
-C:\Users\Celso Zambotti\Source\Repos\SlnMidas\AcessoDados\obj\Debug\AcessoDados.csprojResolveAssemblyReference.cache

@@ -142,3 +142,10 @@ C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\RdlCompile.
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\RdlCompile.compiled
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmEmissaoRomaneio.resources
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarRomaneio.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmRelatorioTeste.resources
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\EntityFramework.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\EntityFramework.xml
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\EntityFramework.SqlServer.xml

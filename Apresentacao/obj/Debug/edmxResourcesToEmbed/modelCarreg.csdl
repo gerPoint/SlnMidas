@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="midas_tbCarregBloco" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblCarregamentoBloco">
+    <Key>
+      <PropertyRef Name="IDCarregamentoBloco" />
+    </Key>
+    <Property Name="IDCarregamentoBloco" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Bloco" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descricao" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDRomaneio" Type="Int32" Nullable="false" />
+    <Property Name="FrutaP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FrutaM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FrutaG" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PrecoP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrecoM" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PrecoG" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="QtdP" Type="Int32" />
+    <Property Name="QtdM" Type="Int32" />
+    <Property Name="QtdG" Type="Int32" />
+    <Property Name="ValorUnitP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ValorUnitM" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ValorUnitG" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TotalCarreg" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Quantidade" Type="Int32" />
+    <Property Name="TotalBloco" Type="Decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityContainer Name="midasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblCarregamentoBloco" EntityType="Self.tblCarregamentoBloco" />
+  </EntityContainer>
+</Schema>

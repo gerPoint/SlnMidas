@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="midas_tbCarregBloco.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblCarregamentoBloco">
+    <Key>
+      <PropertyRef Name="IDCarregamentoBloco" />
+    </Key>
+    <Property Name="IDCarregamentoBloco" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Bloco" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Descricao" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IDRomaneio" Type="int" Nullable="false" />
+    <Property Name="FrutaP" Type="varchar" MaxLength="50" />
+    <Property Name="FrutaM" Type="varchar" MaxLength="50" />
+    <Property Name="FrutaG" Type="varchar" MaxLength="50" />
+    <Property Name="PrecoP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PrecoM" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PrecoG" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="QtdP" Type="int" />
+    <Property Name="QtdM" Type="int" />
+    <Property Name="QtdG" Type="int" />
+    <Property Name="ValorUnitP" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ValorUnitM" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ValorUnitG" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalCarreg" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Quantidade" Type="int" />
+    <Property Name="TotalBloco" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityContainer Name="midas_tbCarregBlocoStoreContainer">
+    <EntitySet Name="tblCarregamentoBloco" EntityType="Self.tblCarregamentoBloco" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

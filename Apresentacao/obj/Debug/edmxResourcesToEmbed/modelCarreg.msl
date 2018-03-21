@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="midas_tbCarregBlocoStoreContainer" CdmEntityContainer="midasEntities">
+    <EntitySetMapping Name="tblCarregamentoBloco">
+      <EntityTypeMapping TypeName="midas_tbCarregBloco.tblCarregamentoBloco">
+        <MappingFragment StoreEntitySet="tblCarregamentoBloco">
+          <ScalarProperty Name="IDCarregamentoBloco" ColumnName="IDCarregamentoBloco" />
+          <ScalarProperty Name="Bloco" ColumnName="Bloco" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="IDRomaneio" ColumnName="IDRomaneio" />
+          <ScalarProperty Name="FrutaP" ColumnName="FrutaP" />
+          <ScalarProperty Name="FrutaM" ColumnName="FrutaM" />
+          <ScalarProperty Name="FrutaG" ColumnName="FrutaG" />
+          <ScalarProperty Name="PrecoP" ColumnName="PrecoP" />
+          <ScalarProperty Name="PrecoM" ColumnName="PrecoM" />
+          <ScalarProperty Name="PrecoG" ColumnName="PrecoG" />
+          <ScalarProperty Name="QtdP" ColumnName="QtdP" />
+          <ScalarProperty Name="QtdM" ColumnName="QtdM" />
+          <ScalarProperty Name="QtdG" ColumnName="QtdG" />
+          <ScalarProperty Name="ValorUnitP" ColumnName="ValorUnitP" />
+          <ScalarProperty Name="ValorUnitM" ColumnName="ValorUnitM" />
+          <ScalarProperty Name="ValorUnitG" ColumnName="ValorUnitG" />
+          <ScalarProperty Name="TotalCarreg" ColumnName="TotalCarreg" />
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+          <ScalarProperty Name="TotalBloco" ColumnName="TotalBloco" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

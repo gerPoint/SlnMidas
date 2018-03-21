@@ -1651,7 +1651,7 @@ namespace Apresentacao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Falha ao alterar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Falha ao Alterar registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
 
@@ -1664,6 +1664,13 @@ namespace Apresentacao
 
             {
                 MessageBox.Show("Nenhum Bloco foi adicionado ao Carregamento.");
+                return;
+            }
+
+            if (cpoQtdCarregada.Text != cpoQtdGeral.Text)
+
+            {
+                MessageBox.Show("Quantidade Adicionada Não é Equivalente à Quantidade Total Descrita no Romaneio.");
                 return;
             }
 
@@ -1754,6 +1761,8 @@ namespace Apresentacao
                     cpoSeguro.Clear();
                     cpoValorComissao.Clear();
                     cpoValorTotalRomaneio.Clear();
+                    cpoQtdCarregada.Clear();
+                    cpoTotalCarregamento.Clear();
 
 
                     cpoSeguro.Enabled = true;
