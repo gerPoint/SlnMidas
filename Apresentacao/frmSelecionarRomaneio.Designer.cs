@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cpoDtFinal = new System.Windows.Forms.DateTimePicker();
             this.cpoDtInicial = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
@@ -87,9 +87,13 @@
             this.cpoIDTransportador = new System.Windows.Forms.TextBox();
             this.cpoIDFornecedor = new System.Windows.Forms.TextBox();
             this.cpoIDCliente = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dgwSelRomaneio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRomaneioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioCorreto)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cpoDtFinal
@@ -187,14 +191,14 @@
             this.dgwSelRomaneio.AllowUserToDeleteRows = false;
             this.dgwSelRomaneio.AllowUserToResizeRows = false;
             this.dgwSelRomaneio.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwSelRomaneio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwSelRomaneio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgwSelRomaneio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwSelRomaneio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDRomaneioDataGridViewTextBoxColumn,
@@ -221,26 +225,26 @@
             this.iDFornecedorDataGridViewTextBoxColumn,
             this.iDFrutaDataGridViewTextBoxColumn});
             this.dgwSelRomaneio.DataSource = this.tblRomaneioBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgwSelRomaneio.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwSelRomaneio.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgwSelRomaneio.Location = new System.Drawing.Point(12, 114);
             this.dgwSelRomaneio.MultiSelect = false;
             this.dgwSelRomaneio.Name = "dgwSelRomaneio";
             this.dgwSelRomaneio.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgwSelRomaneio.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgwSelRomaneio.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgwSelRomaneio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwSelRomaneio.Size = new System.Drawing.Size(430, 138);
             this.dgwSelRomaneio.TabIndex = 100010;
@@ -428,7 +432,7 @@
             // 
             // cpoIDRomaneio
             // 
-            this.cpoIDRomaneio.Location = new System.Drawing.Point(3, 258);
+            this.cpoIDRomaneio.Location = new System.Drawing.Point(11, 280);
             this.cpoIDRomaneio.Name = "cpoIDRomaneio";
             this.cpoIDRomaneio.Size = new System.Drawing.Size(14, 20);
             this.cpoIDRomaneio.TabIndex = 100011;
@@ -436,7 +440,7 @@
             // 
             // cpoNomeCliente
             // 
-            this.cpoNomeCliente.Location = new System.Drawing.Point(24, 258);
+            this.cpoNomeCliente.Location = new System.Drawing.Point(32, 280);
             this.cpoNomeCliente.Name = "cpoNomeCliente";
             this.cpoNomeCliente.Size = new System.Drawing.Size(14, 20);
             this.cpoNomeCliente.TabIndex = 100012;
@@ -444,7 +448,7 @@
             // 
             // cpoNomeTransportador
             // 
-            this.cpoNomeTransportador.Location = new System.Drawing.Point(65, 258);
+            this.cpoNomeTransportador.Location = new System.Drawing.Point(73, 280);
             this.cpoNomeTransportador.Name = "cpoNomeTransportador";
             this.cpoNomeTransportador.Size = new System.Drawing.Size(14, 20);
             this.cpoNomeTransportador.TabIndex = 100014;
@@ -452,7 +456,7 @@
             // 
             // cpoNomeFornecedor
             // 
-            this.cpoNomeFornecedor.Location = new System.Drawing.Point(44, 258);
+            this.cpoNomeFornecedor.Location = new System.Drawing.Point(52, 280);
             this.cpoNomeFornecedor.Name = "cpoNomeFornecedor";
             this.cpoNomeFornecedor.Size = new System.Drawing.Size(14, 20);
             this.cpoNomeFornecedor.TabIndex = 100013;
@@ -460,7 +464,7 @@
             // 
             // cpoQtdGeral
             // 
-            this.cpoQtdGeral.Location = new System.Drawing.Point(148, 258);
+            this.cpoQtdGeral.Location = new System.Drawing.Point(156, 280);
             this.cpoQtdGeral.Name = "cpoQtdGeral";
             this.cpoQtdGeral.Size = new System.Drawing.Size(14, 20);
             this.cpoQtdGeral.TabIndex = 100018;
@@ -468,7 +472,7 @@
             // 
             // cpoUnidMedida
             // 
-            this.cpoUnidMedida.Location = new System.Drawing.Point(127, 258);
+            this.cpoUnidMedida.Location = new System.Drawing.Point(135, 280);
             this.cpoUnidMedida.Name = "cpoUnidMedida";
             this.cpoUnidMedida.Size = new System.Drawing.Size(14, 20);
             this.cpoUnidMedida.TabIndex = 100017;
@@ -476,7 +480,7 @@
             // 
             // cpoFormaPagamento
             // 
-            this.cpoFormaPagamento.Location = new System.Drawing.Point(107, 258);
+            this.cpoFormaPagamento.Location = new System.Drawing.Point(115, 280);
             this.cpoFormaPagamento.Name = "cpoFormaPagamento";
             this.cpoFormaPagamento.Size = new System.Drawing.Size(14, 20);
             this.cpoFormaPagamento.TabIndex = 100016;
@@ -484,7 +488,7 @@
             // 
             // cpoNomeFruta
             // 
-            this.cpoNomeFruta.Location = new System.Drawing.Point(86, 258);
+            this.cpoNomeFruta.Location = new System.Drawing.Point(94, 280);
             this.cpoNomeFruta.Name = "cpoNomeFruta";
             this.cpoNomeFruta.Size = new System.Drawing.Size(14, 20);
             this.cpoNomeFruta.TabIndex = 100015;
@@ -492,7 +496,7 @@
             // 
             // cpoValorTotalRomaneio
             // 
-            this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(297, 258);
+            this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(305, 280);
             this.cpoValorTotalRomaneio.Name = "cpoValorTotalRomaneio";
             this.cpoValorTotalRomaneio.Size = new System.Drawing.Size(14, 20);
             this.cpoValorTotalRomaneio.TabIndex = 100025;
@@ -500,7 +504,7 @@
             // 
             // cpoTaxaNf
             // 
-            this.cpoTaxaNf.Location = new System.Drawing.Point(277, 258);
+            this.cpoTaxaNf.Location = new System.Drawing.Point(285, 280);
             this.cpoTaxaNf.Name = "cpoTaxaNf";
             this.cpoTaxaNf.Size = new System.Drawing.Size(14, 20);
             this.cpoTaxaNf.TabIndex = 100024;
@@ -508,7 +512,7 @@
             // 
             // cpoSeguro
             // 
-            this.cpoSeguro.Location = new System.Drawing.Point(256, 258);
+            this.cpoSeguro.Location = new System.Drawing.Point(264, 280);
             this.cpoSeguro.Name = "cpoSeguro";
             this.cpoSeguro.Size = new System.Drawing.Size(14, 20);
             this.cpoSeguro.TabIndex = 100023;
@@ -516,7 +520,7 @@
             // 
             // cpoAdiantFretMot
             // 
-            this.cpoAdiantFretMot.Location = new System.Drawing.Point(235, 258);
+            this.cpoAdiantFretMot.Location = new System.Drawing.Point(243, 280);
             this.cpoAdiantFretMot.Name = "cpoAdiantFretMot";
             this.cpoAdiantFretMot.Size = new System.Drawing.Size(14, 20);
             this.cpoAdiantFretMot.TabIndex = 100022;
@@ -524,7 +528,7 @@
             // 
             // cpoValorComissao
             // 
-            this.cpoValorComissao.Location = new System.Drawing.Point(214, 258);
+            this.cpoValorComissao.Location = new System.Drawing.Point(222, 280);
             this.cpoValorComissao.Name = "cpoValorComissao";
             this.cpoValorComissao.Size = new System.Drawing.Size(14, 20);
             this.cpoValorComissao.TabIndex = 100021;
@@ -532,7 +536,7 @@
             // 
             // cpoCustoCarreg
             // 
-            this.cpoCustoCarreg.Location = new System.Drawing.Point(194, 258);
+            this.cpoCustoCarreg.Location = new System.Drawing.Point(202, 280);
             this.cpoCustoCarreg.Name = "cpoCustoCarreg";
             this.cpoCustoCarreg.Size = new System.Drawing.Size(14, 20);
             this.cpoCustoCarreg.TabIndex = 100020;
@@ -540,7 +544,7 @@
             // 
             // cpoValorFrete
             // 
-            this.cpoValorFrete.Location = new System.Drawing.Point(173, 258);
+            this.cpoValorFrete.Location = new System.Drawing.Point(181, 280);
             this.cpoValorFrete.Name = "cpoValorFrete";
             this.cpoValorFrete.Size = new System.Drawing.Size(14, 20);
             this.cpoValorFrete.TabIndex = 100019;
@@ -548,7 +552,7 @@
             // 
             // cpoIDFruta
             // 
-            this.cpoIDFruta.Location = new System.Drawing.Point(408, 258);
+            this.cpoIDFruta.Location = new System.Drawing.Point(416, 280);
             this.cpoIDFruta.Name = "cpoIDFruta";
             this.cpoIDFruta.Size = new System.Drawing.Size(14, 20);
             this.cpoIDFruta.TabIndex = 100029;
@@ -556,7 +560,7 @@
             // 
             // cpoIDTransportador
             // 
-            this.cpoIDTransportador.Location = new System.Drawing.Point(388, 258);
+            this.cpoIDTransportador.Location = new System.Drawing.Point(396, 280);
             this.cpoIDTransportador.Name = "cpoIDTransportador";
             this.cpoIDTransportador.Size = new System.Drawing.Size(14, 20);
             this.cpoIDTransportador.TabIndex = 100028;
@@ -564,7 +568,7 @@
             // 
             // cpoIDFornecedor
             // 
-            this.cpoIDFornecedor.Location = new System.Drawing.Point(367, 258);
+            this.cpoIDFornecedor.Location = new System.Drawing.Point(375, 280);
             this.cpoIDFornecedor.Name = "cpoIDFornecedor";
             this.cpoIDFornecedor.Size = new System.Drawing.Size(14, 20);
             this.cpoIDFornecedor.TabIndex = 100027;
@@ -572,17 +576,39 @@
             // 
             // cpoIDCliente
             // 
-            this.cpoIDCliente.Location = new System.Drawing.Point(346, 258);
+            this.cpoIDCliente.Location = new System.Drawing.Point(354, 280);
             this.cpoIDCliente.Name = "cpoIDCliente";
             this.cpoIDCliente.Size = new System.Drawing.Size(14, 20);
             this.cpoIDCliente.TabIndex = 100026;
             this.cpoIDCliente.Visible = false;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.progressBar1);
+            this.panel1.Location = new System.Drawing.Point(94, 142);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(227, 56);
+            this.panel1.TabIndex = 100031;
+            this.panel1.Visible = false;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(10, 15);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(204, 23);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar1.TabIndex = 0;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // frmSelecionarRomaneio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 272);
+            this.ClientSize = new System.Drawing.Size(454, 302);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.cpoIDFruta);
             this.Controls.Add(this.cpoIDTransportador);
             this.Controls.Add(this.cpoIDFornecedor);
@@ -621,6 +647,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgwSelRomaneio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRomaneioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioCorreto)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -683,5 +710,8 @@
         private System.Windows.Forms.TextBox cpoIDTransportador;
         private System.Windows.Forms.TextBox cpoIDFornecedor;
         private System.Windows.Forms.TextBox cpoIDCliente;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

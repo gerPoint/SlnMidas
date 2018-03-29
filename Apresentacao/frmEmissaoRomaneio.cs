@@ -12,8 +12,13 @@ using ObjTransferencia;
 using System.Data.SqlClient;
 using Apresentacao.Properties;
 using System.IO;
+using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using Microsoft.Reporting.WebForms;
 using System.Diagnostics;
+using System.Drawing.Printing;
+
+
 
 namespace Apresentacao
 {
@@ -23,6 +28,8 @@ namespace Apresentacao
         {
             InitializeComponent();
         }
+
+        List<CarregamentoBloco> listCarreg = new List<CarregamentoBloco>();
         //----------------------------------------------------------------------------
         //public frmEmissaoRomaneio(/*string texto1 , string texto2 , string texto3, string texto4, string texto5, string texto6, string texto7, string texto8, string texto9, string texto10, string texto11, string texto12, string texto13, string texto14, string texto15*/)
         //{
@@ -58,11 +65,15 @@ namespace Apresentacao
         private void frmEmissaoRomaneio_Load(object sender, EventArgs e)
         {
 
+
+
         }
 
 
         private void printDocumentImprimir_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
+
+
             e.Graphics.DrawString("---------------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(20, 112));
             e.Graphics.DrawString("---------------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(20, 142));
             e.Graphics.DrawString("---------------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(20, 172));
@@ -94,32 +105,20 @@ namespace Apresentacao
             e.Graphics.DrawString(lblSeguro.Text, lblSeguro.Font, Brushes.Black, new Point(677, 190));
             e.Graphics.DrawString(cpoSeguro.Text, cpoSeguro.Font, Brushes.Black, new Point(725, 190));
 
-            //  teste meu  funciona tb ---------------------------------------
 
-            //Bitmap bm = new Bitmap(this.dgwEmissaoRomaneio.Width, this.dgwEmissaoRomaneio.Height);
-            // Bitmap bm = new Bitmap(this.dgwEmissaoRomaneio.Width, this.dgwEmissaoRomaneio.Height);
-            //dgwEmissaoRomaneio.DrawToBitmap(bm, new Rectangle(0, 203, this.dgwEmissaoRomaneio.Width, this.dgwEmissaoRomaneio.Height));
-            //e.Graphics.DrawImage(bm,0 , 0);
+            //e.Graphics.DrawString(dgwEmissaoRomaneio.Rows[0].Cells[1].Value.ToString(), Font, Brushes.Black, 25, 220);
+            //e.Graphics.DrawString(dgwEmissaoRomaneio.Rows[0].Cells[2].Value.ToString(), Font, Brushes.Black, 75, 220);
+            //e.Graphics.DrawString(dgwEmissaoRomaneio.Rows[0].Cells[3].Value.ToString(), Font, Brushes.Black, 130, 220);
 
 
-            List<CarregamentoBloco> listCarreg = new List<CarregamentoBloco>();
-            
-            foreach (var i in listCarreg)
-            {
-              //  using (dgwEmissaoRomaneio)
-                e.Graphics.DrawString(i.Bloco = dgwEmissaoRomaneio.Rows[0].Cells[0].Value.ToString(), new Font("Courier New", 10, FontStyle.Regular), Brushes.Black, new Point(20, 220));
-
-            }
-
-
-
-
-            //teste meu ---------------------------------------
-
+            e.Graphics.DrawString("Bloco", DataGridView.DefaultFont, Brushes.Black, new Rectangle(100, 200, 200, 100));
+            e.Graphics.DrawString(dgwEmissaoRomaneio.Rows[0].Cells[3].Value.ToString(), DataGridView.DefaultFont, Brushes.Black, new Rectangle(100, 200, 200, 100));
+           
 
         }
 
 
+    
 
 
         private void AtualizarGrid3()
@@ -170,13 +169,10 @@ namespace Apresentacao
                     MessageBoxIcon.Warning);
             }
 
+         
+
 
         }
-
-
-
-
-
 
 
 
@@ -244,7 +240,7 @@ namespace Apresentacao
             if (cpoIDRomaneio != null)
             {
                 AtualizarGrid3();
-   
+              
             }
            
         }

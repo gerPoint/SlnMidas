@@ -38,7 +38,7 @@ namespace Apresentacao
 
 
         // -------------------------------------------------USADO PARA PEGAR DADOS DE UM FORM E PASSAR PARA OUTRO--------------------------------------------------------------------------
-       
+
 
         // -------------------------------------------------USADO PARA PEGAR DADOS DE UM FORM E PASSAR PARA OUTRO--------------------------------------------------------------------------
 
@@ -46,10 +46,12 @@ namespace Apresentacao
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            if (comboBoxTpoPesquisa.Text == "Código")
+
+            if (comboBoxTpoPesquisa.Text == "Código") 
             {
                 AtualizarGrid();
             }
+
             else
             {
                 AtualizarGrid2();
@@ -284,6 +286,26 @@ namespace Apresentacao
             //Este método pesquisa os carregamentos vinculados ao romaneio que vc selecionar com um clique duplo
        
 
+        }
+
+        private void progressBarSelRom_Click(object sender, EventArgs e)
+        {
+ 
+            
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //object[] args = (object[]) e.Argument;
+
+            //if (args[0].Equals("Texto"))
+            //{
+            //    AtualizarGrid();
+            //}
+            //else if (args[0].Equals("Data"))
+            //{
+            //    AtualizarGrid2();
+            //}
         }
     }
 }

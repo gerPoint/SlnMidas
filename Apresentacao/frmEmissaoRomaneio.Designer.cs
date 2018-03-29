@@ -57,21 +57,6 @@
             this.cpoFornecedor = new System.Windows.Forms.TextBox();
             this.lblAdiantFretMot = new System.Windows.Forms.Label();
             this.dgwEmissaoRomaneio = new System.Windows.Forms.DataGridView();
-            this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.cpoValorTotalRomaneio = new System.Windows.Forms.TextBox();
-            this.lblQuantidade = new System.Windows.Forms.Label();
-            this.cpoQtdGeral = new System.Windows.Forms.TextBox();
-            this.printDocumentImprimir = new System.Drawing.Printing.PrintDocument();
-            this.printDialogImprimir = new System.Windows.Forms.PrintDialog();
-            this.label18 = new System.Windows.Forms.Label();
-            this.cpoIDRomaneio = new System.Windows.Forms.TextBox();
-            this.cpoFormaPagamento = new System.Windows.Forms.TextBox();
-            this.cpoUnidMedida = new System.Windows.Forms.TextBox();
-            this.pictureBoxTitulo = new System.Windows.Forms.PictureBox();
-            this.btnConsultaRomaneio = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnGerar = new System.Windows.Forms.Button();
             this.iDCarregamentoBlocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,6 +76,21 @@
             this.precoPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precoGDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precoMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.cpoValorTotalRomaneio = new System.Windows.Forms.TextBox();
+            this.lblQuantidade = new System.Windows.Forms.Label();
+            this.cpoQtdGeral = new System.Windows.Forms.TextBox();
+            this.printDocumentImprimir = new System.Drawing.Printing.PrintDocument();
+            this.printDialogImprimir = new System.Windows.Forms.PrintDialog();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cpoIDRomaneio = new System.Windows.Forms.TextBox();
+            this.cpoFormaPagamento = new System.Windows.Forms.TextBox();
+            this.cpoUnidMedida = new System.Windows.Forms.TextBox();
+            this.pictureBoxTitulo = new System.Windows.Forms.PictureBox();
+            this.btnConsultaRomaneio = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.btnGerar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwEmissaoRomaneio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTitulo)).BeginInit();
@@ -373,150 +373,6 @@
             this.dgwEmissaoRomaneio.Size = new System.Drawing.Size(1146, 428);
             this.dgwEmissaoRomaneio.TabIndex = 151;
             // 
-            // tblCarregamentoBlocoBindingSource
-            // 
-            this.tblCarregamentoBlocoBindingSource.DataMember = "tblCarregamentoBloco";
-            this.tblCarregamentoBlocoBindingSource.DataSource = typeof(Apresentacao.midasDataSetCarregamentoBlocook);
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(831, 645);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(74, 29);
-            this.lblTotal.TabIndex = 155;
-            this.lblTotal.Text = "Total:";
-            // 
-            // cpoValorTotalRomaneio
-            // 
-            this.cpoValorTotalRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoValorTotalRomaneio.Enabled = false;
-            this.cpoValorTotalRomaneio.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(911, 641);
-            this.cpoValorTotalRomaneio.Multiline = true;
-            this.cpoValorTotalRomaneio.Name = "cpoValorTotalRomaneio";
-            this.cpoValorTotalRomaneio.Size = new System.Drawing.Size(166, 33);
-            this.cpoValorTotalRomaneio.TabIndex = 152;
-            // 
-            // lblQuantidade
-            // 
-            this.lblQuantidade.AutoSize = true;
-            this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantidade.Location = new System.Drawing.Point(587, 650);
-            this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(113, 24);
-            this.lblQuantidade.TabIndex = 154;
-            this.lblQuantidade.Text = "Quantidade:";
-            // 
-            // cpoQtdGeral
-            // 
-            this.cpoQtdGeral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoQtdGeral.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoQtdGeral.Location = new System.Drawing.Point(706, 648);
-            this.cpoQtdGeral.Name = "cpoQtdGeral";
-            this.cpoQtdGeral.Size = new System.Drawing.Size(105, 26);
-            this.cpoQtdGeral.TabIndex = 153;
-            // 
-            // printDocumentImprimir
-            // 
-            this.printDocumentImprimir.DocumentName = "documentImp";
-            this.printDocumentImprimir.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocumentImprimir_PrintPage);
-            // 
-            // printDialogImprimir
-            // 
-            this.printDialogImprimir.Document = this.printDocumentImprimir;
-            this.printDialogImprimir.UseEXDialog = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(18, 76);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(65, 16);
-            this.label18.TabIndex = 160;
-            this.label18.Text = "Romaneio:";
-            // 
-            // cpoIDRomaneio
-            // 
-            this.cpoIDRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoIDRomaneio.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.cpoIDRomaneio.Location = new System.Drawing.Point(117, 68);
-            this.cpoIDRomaneio.Name = "cpoIDRomaneio";
-            this.cpoIDRomaneio.ReadOnly = true;
-            this.cpoIDRomaneio.Size = new System.Drawing.Size(107, 29);
-            this.cpoIDRomaneio.TabIndex = 159;
-            this.cpoIDRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cpoIDRomaneio.TextChanged += new System.EventHandler(this.cpoIDRomaneio_TextChanged);
-            // 
-            // cpoFormaPagamento
-            // 
-            this.cpoFormaPagamento.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoFormaPagamento.Location = new System.Drawing.Point(701, 103);
-            this.cpoFormaPagamento.Name = "cpoFormaPagamento";
-            this.cpoFormaPagamento.Size = new System.Drawing.Size(204, 22);
-            this.cpoFormaPagamento.TabIndex = 162;
-            this.cpoFormaPagamento.TextChanged += new System.EventHandler(this.cpoFormaPagamento_TextChanged);
-            // 
-            // cpoUnidMedida
-            // 
-            this.cpoUnidMedida.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoUnidMedida.Location = new System.Drawing.Point(701, 128);
-            this.cpoUnidMedida.Name = "cpoUnidMedida";
-            this.cpoUnidMedida.Size = new System.Drawing.Size(204, 22);
-            this.cpoUnidMedida.TabIndex = 161;
-            // 
-            // pictureBoxTitulo
-            // 
-            this.pictureBoxTitulo.Image = global::Apresentacao.Properties.Resources.slogan;
-            this.pictureBoxTitulo.Location = new System.Drawing.Point(211, 3);
-            this.pictureBoxTitulo.Name = "pictureBoxTitulo";
-            this.pictureBoxTitulo.Size = new System.Drawing.Size(766, 80);
-            this.pictureBoxTitulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxTitulo.TabIndex = 156;
-            this.pictureBoxTitulo.TabStop = false;
-            // 
-            // btnConsultaRomaneio
-            // 
-            this.btnConsultaRomaneio.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultaRomaneio.Image = global::Apresentacao.Properties.Resources.pesquisar;
-            this.btnConsultaRomaneio.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnConsultaRomaneio.Location = new System.Drawing.Point(1056, 3);
-            this.btnConsultaRomaneio.Name = "btnConsultaRomaneio";
-            this.btnConsultaRomaneio.Size = new System.Drawing.Size(111, 43);
-            this.btnConsultaRomaneio.TabIndex = 167;
-            this.btnConsultaRomaneio.Text = "Pesquisar";
-            this.btnConsultaRomaneio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultaRomaneio.UseVisualStyleBackColor = true;
-            this.btnConsultaRomaneio.Click += new System.EventHandler(this.btnConsultaRomaneio_Click);
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.Image = global::Apresentacao.Properties.Resources.print_46933;
-            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnImprimir.Location = new System.Drawing.Point(1056, 56);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(111, 43);
-            this.btnImprimir.TabIndex = 166;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
-            // 
-            // btnGerar
-            // 
-            this.btnGerar.Location = new System.Drawing.Point(262, 27);
-            this.btnGerar.Name = "btnGerar";
-            this.btnGerar.Size = new System.Drawing.Size(75, 32);
-            this.btnGerar.TabIndex = 168;
-            this.btnGerar.Text = "Gerar";
-            this.btnGerar.UseVisualStyleBackColor = true;
-            this.btnGerar.Visible = false;
-            this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
-            // 
             // iDCarregamentoBlocoDataGridViewTextBoxColumn
             // 
             this.iDCarregamentoBlocoDataGridViewTextBoxColumn.DataPropertyName = "IDCarregamentoBloco";
@@ -667,6 +523,150 @@
             this.precoMDataGridViewTextBoxColumn.ReadOnly = true;
             this.precoMDataGridViewTextBoxColumn.Visible = false;
             // 
+            // tblCarregamentoBlocoBindingSource
+            // 
+            this.tblCarregamentoBlocoBindingSource.DataMember = "tblCarregamentoBloco";
+            this.tblCarregamentoBlocoBindingSource.DataSource = typeof(Apresentacao.midasDataSetCarregamentoBlocook);
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(831, 645);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(74, 29);
+            this.lblTotal.TabIndex = 155;
+            this.lblTotal.Text = "Total:";
+            // 
+            // cpoValorTotalRomaneio
+            // 
+            this.cpoValorTotalRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoValorTotalRomaneio.Enabled = false;
+            this.cpoValorTotalRomaneio.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(911, 641);
+            this.cpoValorTotalRomaneio.Multiline = true;
+            this.cpoValorTotalRomaneio.Name = "cpoValorTotalRomaneio";
+            this.cpoValorTotalRomaneio.Size = new System.Drawing.Size(166, 33);
+            this.cpoValorTotalRomaneio.TabIndex = 152;
+            // 
+            // lblQuantidade
+            // 
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantidade.Location = new System.Drawing.Point(587, 650);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(113, 24);
+            this.lblQuantidade.TabIndex = 154;
+            this.lblQuantidade.Text = "Quantidade:";
+            // 
+            // cpoQtdGeral
+            // 
+            this.cpoQtdGeral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoQtdGeral.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoQtdGeral.Location = new System.Drawing.Point(706, 648);
+            this.cpoQtdGeral.Name = "cpoQtdGeral";
+            this.cpoQtdGeral.Size = new System.Drawing.Size(105, 26);
+            this.cpoQtdGeral.TabIndex = 153;
+            // 
+            // printDocumentImprimir
+            // 
+            this.printDocumentImprimir.DocumentName = "documentImp";
+            this.printDocumentImprimir.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocumentImprimir_PrintPage);
+            // 
+            // printDialogImprimir
+            // 
+            this.printDialogImprimir.Document = this.printDocumentImprimir;
+            this.printDialogImprimir.UseEXDialog = true;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(18, 76);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(65, 16);
+            this.label18.TabIndex = 160;
+            this.label18.Text = "Romaneio:";
+            // 
+            // cpoIDRomaneio
+            // 
+            this.cpoIDRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoIDRomaneio.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cpoIDRomaneio.Location = new System.Drawing.Point(117, 68);
+            this.cpoIDRomaneio.Name = "cpoIDRomaneio";
+            this.cpoIDRomaneio.ReadOnly = true;
+            this.cpoIDRomaneio.Size = new System.Drawing.Size(107, 29);
+            this.cpoIDRomaneio.TabIndex = 159;
+            this.cpoIDRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cpoIDRomaneio.TextChanged += new System.EventHandler(this.cpoIDRomaneio_TextChanged);
+            // 
+            // cpoFormaPagamento
+            // 
+            this.cpoFormaPagamento.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoFormaPagamento.Location = new System.Drawing.Point(701, 103);
+            this.cpoFormaPagamento.Name = "cpoFormaPagamento";
+            this.cpoFormaPagamento.Size = new System.Drawing.Size(204, 22);
+            this.cpoFormaPagamento.TabIndex = 162;
+            this.cpoFormaPagamento.TextChanged += new System.EventHandler(this.cpoFormaPagamento_TextChanged);
+            // 
+            // cpoUnidMedida
+            // 
+            this.cpoUnidMedida.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoUnidMedida.Location = new System.Drawing.Point(701, 128);
+            this.cpoUnidMedida.Name = "cpoUnidMedida";
+            this.cpoUnidMedida.Size = new System.Drawing.Size(204, 22);
+            this.cpoUnidMedida.TabIndex = 161;
+            // 
+            // pictureBoxTitulo
+            // 
+            this.pictureBoxTitulo.Image = global::Apresentacao.Properties.Resources.slogan;
+            this.pictureBoxTitulo.Location = new System.Drawing.Point(211, 3);
+            this.pictureBoxTitulo.Name = "pictureBoxTitulo";
+            this.pictureBoxTitulo.Size = new System.Drawing.Size(766, 80);
+            this.pictureBoxTitulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxTitulo.TabIndex = 156;
+            this.pictureBoxTitulo.TabStop = false;
+            // 
+            // btnConsultaRomaneio
+            // 
+            this.btnConsultaRomaneio.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultaRomaneio.Image = global::Apresentacao.Properties.Resources.pesquisar;
+            this.btnConsultaRomaneio.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConsultaRomaneio.Location = new System.Drawing.Point(1056, 3);
+            this.btnConsultaRomaneio.Name = "btnConsultaRomaneio";
+            this.btnConsultaRomaneio.Size = new System.Drawing.Size(111, 43);
+            this.btnConsultaRomaneio.TabIndex = 167;
+            this.btnConsultaRomaneio.Text = "Pesquisar";
+            this.btnConsultaRomaneio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultaRomaneio.UseVisualStyleBackColor = true;
+            this.btnConsultaRomaneio.Click += new System.EventHandler(this.btnConsultaRomaneio_Click);
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimir.Image = global::Apresentacao.Properties.Resources.print_46933;
+            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnImprimir.Location = new System.Drawing.Point(1056, 56);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(111, 43);
+            this.btnImprimir.TabIndex = 166;
+            this.btnImprimir.Text = "Imprimir";
+            this.btnImprimir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
+            // 
+            // btnGerar
+            // 
+            this.btnGerar.Location = new System.Drawing.Point(262, 27);
+            this.btnGerar.Name = "btnGerar";
+            this.btnGerar.Size = new System.Drawing.Size(75, 32);
+            this.btnGerar.TabIndex = 168;
+            this.btnGerar.Text = "Gerar";
+            this.btnGerar.UseVisualStyleBackColor = true;
+            this.btnGerar.Visible = false;
+            this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
+            // 
             // frmEmissaoRomaneio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -712,6 +712,7 @@
             this.Controls.Add(this.lblFornecedor);
             this.Controls.Add(this.cpoCliente);
             this.Controls.Add(this.cpoFornecedor);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

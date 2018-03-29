@@ -18,8 +18,7 @@ namespace Apresentacao
     public partial class frmPrincipal : Form
     {
 
-        string pasta_images = "";
-        Image img_fundo;
+       
         public frmPrincipal()
            
         {

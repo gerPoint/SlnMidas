@@ -23,3 +23,7 @@ C:\Users\Celso Zambotti\Source\Repos\SlnMidas\ValidacaoCpf_Cnpj\bin\Debug\pt\Mic
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\ValidacaoCpf_Cnpj\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\ValidacaoCpf_Cnpj\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\ValidacaoCpf_Cnpj\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\ValidacaoCpf_Cnpj\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\ValidacaoCpf_Cnpj\bin\Debug\EntityFramework.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\ValidacaoCpf_Cnpj\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\ValidacaoCpf_Cnpj\bin\Debug\EntityFramework.xml
