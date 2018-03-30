@@ -664,6 +664,10 @@
       <Project>{0ffa750e-ef73-4664-acdd-361a86b54d1f}</Project>
       <Name>ObjTransferencia</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SlnMidas.Relatorio\SlnMidas.Relatorio.csproj">
+      <Project>{ab7a9637-86ff-43fe-8760-281223436dee}</Project>
+      <Name>SlnMidas.Relatorio</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bigstock-closeup-of-a-young-farmer-obse-121893422.jpg" />

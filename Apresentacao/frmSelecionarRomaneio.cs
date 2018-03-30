@@ -93,7 +93,7 @@ namespace Apresentacao
                     cpoCodigo.Focus();
                     return;
                 }
-
+                
                 dgwSelRomaneio.DataSource = null;
                 dgwSelRomaneio.DataSource = objLista;
                 dgwSelRomaneio.Update();

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using SlnMidas.Relatorio;
 using AcessoDados;
 using Negocio;
 using ObjTransferencia;
@@ -29,6 +30,7 @@ namespace Apresentacao
             InitializeComponent();
         }
 
+        Relatorio rel = new Relatorio();
         List<CarregamentoBloco> listCarreg = new List<CarregamentoBloco>();
         //----------------------------------------------------------------------------
         //public frmEmissaoRomaneio(/*string texto1 , string texto2 , string texto3, string texto4, string texto5, string texto6, string texto7, string texto8, string texto9, string texto10, string texto11, string texto12, string texto13, string texto14, string texto15*/)
@@ -221,16 +223,41 @@ namespace Apresentacao
 
 
         }
+        void setarParametros()
+        {
+            
+            rel.CaminhoRelatorio = "SlnMidas.Relatorio.RLDC.REL001.rdlc";
+            rel.AdicionarParametro("NomeSistema", "BIRA MADEIRAS");
+            rel.AdicionarParametro("NomeModulo", "RELATÓRIO");
+            rel.AdicionarParametro("NumeroRelatorio", "003");
+            rel.AdicionarParametro("Titulo", "FORNECEDORES");
+            rel.AdicionarParametro("SubTitulo", "Relatório Fornecedores");
 
+        }
         private void btnImprimir_Click(object sender, EventArgs e)
         {
 
-            if (printDialogImprimir.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            //if (printDialogImprimir.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            //{
+            //    printDocumentImprimir.PrinterSettings = printDialogImprimir.PrinterSettings;
+            //    printDocumentImprimir.Print();
+            //    printDialogImprimir.Reset();
+
+            //}
+            try
             {
-                printDocumentImprimir.PrinterSettings = printDialogImprimir.PrinterSettings;
-                printDocumentImprimir.Print();
-                printDialogImprimir.Reset();
-                
+
+                while (backgroundWorker1.IsBusy) { Application.DoEvents(); }
+                object[] args = new object[2];
+                args[0] = "ImprimirRelatorio";
+                args[1] = Convert.ToInt32(cpoIDRomaneio.Text);
+                backgroundWorker1.RunWorkerAsync(args);
+                while (backgroundWorker1.IsBusy) { Application.DoEvents(); }
+            }
+            catch (Exception)
+            {
+
+                throw;
             }
 
         }
@@ -335,6 +362,20 @@ namespace Apresentacao
         private void lblAdiantFretMot_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            DataSet ds;
+            object[] args = (object[])e.Argument;
+            if (args[0].Equals("ImprimirRelatorio"))
+            {
+                ds = negRomaneio.RelRomaneio((int)args[1]);
+                this.rel.DataTable1 = ds.Tables[0];
+                this.rel.DataTable2 = ds.Tables[1];
+                setarParametros();
+                rel.Imprimir();
+            }
         }
     }
 }

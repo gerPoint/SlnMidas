@@ -1,0 +1,9 @@
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\SlnMidas.Relatorio\obj\Debug\RdlCompile.cache
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\SlnMidas.Relatorio\obj\Debug\RdlCompile.compiled
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\SlnMidas.Relatorio\bin\Debug\SlnMidas.Relatorio.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\SlnMidas.Relatorio\bin\Debug\SlnMidas.Relatorio.pdb
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\SlnMidas.Relatorio\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\SlnMidas.Relatorio\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\SlnMidas.Relatorio\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\SlnMidas.Relatorio\obj\Debug\SlnMidas.Relatorio.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\SlnMidas.Relatorio\obj\Debug\SlnMidas.Relatorio.pdb

@@ -60,6 +60,23 @@ namespace Negocio
 
         }
 
+        public DataSet RelRomaneio(int Codigo)
+        {
+            try
+            {
+                acessoDadosSqlServer.LimparParametros();
+                acessoDadosSqlServer.AdicionarParametro( new SqlParameter("@INIntIDRomaneio", Codigo));
+
+                using (DataSet dtbRgistros = acessoDadosSqlServer.GetDataTables("uspConsultarRomaneioNOVO", CommandType.StoredProcedure))
+                {
+                    return dtbRgistros;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Não foi possivel executar comando no banco de dados.\nMotivo: " + ex.Message);
+            }
+        }
         public RomaneioLista ConsultarCodigo(int Codigo)
         {
             try

@@ -91,6 +91,7 @@
             this.btnConsultaRomaneio = new System.Windows.Forms.Button();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnGerar = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dgwEmissaoRomaneio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTitulo)).BeginInit();
@@ -667,12 +668,16 @@
             this.btnGerar.Visible = false;
             this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // frmEmissaoRomaneio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1189, 740);
+            this.ClientSize = new System.Drawing.Size(1189, 701);
             this.Controls.Add(this.btnGerar);
             this.Controls.Add(this.btnConsultaRomaneio);
             this.Controls.Add(this.btnImprimir);
@@ -790,5 +795,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precoPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoGDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoMDataGridViewTextBoxColumn;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

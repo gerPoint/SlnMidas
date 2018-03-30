@@ -25,16 +25,6 @@ C:\Users\diego\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.dll
 C:\Users\diego\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.pdb
 C:\Users\Lucas\Source\Repos\SlnMidas\Negocio\bin\Debug\Negocio.dll.config
 C:\Users\diego\Source\Repos\SlnMidas\Negocio\bin\Debug\Negocio.dll.config
-C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\Negocio.dll.config
-C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\Negocio.dll
-C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\Negocio.pdb
-C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\AcessoDados.dll
-C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\ObjTransferencia.dll
-C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\AcessoDados.pdb
-C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\ObjTransferencia.pdb
-C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
-C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.dll
-C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.pdb
 C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Negocio\bin\Debug\Negocio.dll.config
 C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Negocio\bin\Debug\Negocio.dll
 C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Negocio\bin\Debug\Negocio.pdb
@@ -45,5 +35,15 @@ C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Negocio\bin\Debug\ObjTransferencia
 C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Negocio\obj\Debug\Negocio.dll
 C:\Users\diego\Source\Repos\SlnMidas\SlnMidas\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\Negocio.dll.config
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\Negocio.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\AcessoDados.dll
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\itextsharp.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\ObjTransferencia.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\AcessoDados.pdb
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\ObjTransferencia.pdb
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\itextsharp.xml
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.dll
+C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.pdb

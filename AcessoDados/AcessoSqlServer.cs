@@ -126,7 +126,25 @@ namespace AcessoDados
                     ex.Message);
             }
         }
+        public DataSet GetDataTables(string comandoSql, CommandType tipoComando)
+        {
+            using (SqlConnection sqlConnection = ObterConexao())
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = sqlConnection.CreateCommand();
+                sqlCommand.CommandText = comandoSql;
+                sqlCommand.CommandType = tipoComando;
+                sqlCommand.CommandTimeout = 7200;
+                SetarParametros(sqlCommand);
 
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+
+                DataSet dataSet = new DataSet();
+                sqlDataAdapter.Fill(dataSet);
+
+                return dataSet;
+            }
+        }
         public DataTable GetDataTable(string strComando, CommandType cmdType)
         {
             try
