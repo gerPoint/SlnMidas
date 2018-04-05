@@ -226,12 +226,13 @@ namespace Apresentacao
         void setarParametros()
         {
             
-            rel.CaminhoRelatorio = "SlnMidas.Relatorio.RLDC.REL001.rdlc";
-            rel.AdicionarParametro("NomeSistema", "BIRA MADEIRAS");
-            rel.AdicionarParametro("NomeModulo", "RELATÓRIO");
-            rel.AdicionarParametro("NumeroRelatorio", "003");
-            rel.AdicionarParametro("Titulo", "FORNECEDORES");
-            rel.AdicionarParametro("SubTitulo", "Relatório Fornecedores");
+            rel.CaminhoRelatorio = "SlnMidas.Relatorio.RLDC.REL001Teste.rdlc";
+           // rel.CaminhoRelatorio = "SlnMidas.Relatorio.RLDC.ModeloA4PaisagemTeste.rdlc";
+            //rel.AdicionarParametro("NomeSistema", "BIRA MADEIRAS");
+            //rel.AdicionarParametro("NomeModulo", "RELATÓRIO");
+            //  rel.AdicionarParametro("NumeroRelatorio", "003");
+            // rel.AdicionarParametro("Titulo", "FORNECEDORES");
+            //rel.AdicionarParametro("SubTitulo", "Relatório Fornecedores");
 
         }
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -274,7 +275,7 @@ namespace Apresentacao
 
         private void btnGerar_Click(object sender, EventArgs e)
         {
-  
+
 
             ReportViewer reportViewer = new ReportViewer();
             reportViewer.ProcessingMode = ProcessingMode.Local;
@@ -297,9 +298,9 @@ namespace Apresentacao
             listReportParameter.Add(new ReportParameter("TaxaNf", cpoTaxaNf.Text));
             listReportParameter.Add(new ReportParameter("Seguro", cpoSeguro.Text));
             listReportParameter.Add(new ReportParameter("QuantidadeTot", cpoQtdGeral.Text));
-            listReportParameter.Add(new ReportParameter("ValorTotalRomaneio", cpoValorTotalRomaneio.Text)); 
+            listReportParameter.Add(new ReportParameter("ValorTotalRomaneio", cpoValorTotalRomaneio.Text));
 
-           // CarregamentoBloco CarregBloc = (dgwEmissaoRomaneio.SelectedRows[0].DataBoundItem as CarregamentoBloco);
+            // CarregamentoBloco CarregBloc = (dgwEmissaoRomaneio.SelectedRows[0].DataBoundItem as CarregamentoBloco);
             //listReportParameter.Add(new ReportParameter ("IDCarregamentoBloco", dgwEmissaoRomaneio.RowsDefaultCellStyle));
             //listReportParameter.Add(new ReportParameter("Bloco", dgwEmissaoRomaneio.SelectedRows[0].Cells[1].Value.ToString()));
             //listReportParameter.Add(new ReportParameter("Descricao", dgwEmissaoRomaneio.SelectedRows[0].Cells[1].Value.ToString()));

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="midasDataSetRom" targetNamespace="http://tempuri.org/midasDataSetRom.xsd" xmlns:mstns="http://tempuri.org/midasDataSetRom.xsd" xmlns="http://tempuri.org/midasDataSetRom.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="midasRelat" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="midasRelat (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SlnMidas.Relatorio.Properties.Settings.GlobalReference.Default.midasRelat" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tblRomaneioTableAdapter" GeneratorDataComponentClassName="tblRomaneioTableAdapter" Name="tblRomaneio" UserDataComponentName="tblRomaneioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="midasRelat (Settings)" DbObjectName="midas.dbo.tblRomaneio" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT QtdFrutas, IDCarregamentoBloco, ValorFrete, Seguro, AdiantFretMot, FormaPagamento, CustoCarregamento, ValorComissao, ValorTotalRomaneio, TaxaNf, Cliente, Transportador, Fornecedor, Fruta FROM dbo.tblRomaneio</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="QtdFrutas" DataSetColumn="QtdFrutas" />
+              <Mapping SourceColumn="IDCarregamentoBloco" DataSetColumn="IDCarregamentoBloco" />
+              <Mapping SourceColumn="ValorFrete" DataSetColumn="ValorFrete" />
+              <Mapping SourceColumn="Seguro" DataSetColumn="Seguro" />
+              <Mapping SourceColumn="AdiantFretMot" DataSetColumn="AdiantFretMot" />
+              <Mapping SourceColumn="FormaPagamento" DataSetColumn="FormaPagamento" />
+              <Mapping SourceColumn="CustoCarregamento" DataSetColumn="CustoCarregamento" />
+              <Mapping SourceColumn="ValorComissao" DataSetColumn="ValorComissao" />
+              <Mapping SourceColumn="ValorTotalRomaneio" DataSetColumn="ValorTotalRomaneio" />
+              <Mapping SourceColumn="TaxaNf" DataSetColumn="TaxaNf" />
+              <Mapping SourceColumn="Cliente" DataSetColumn="Cliente" />
+              <Mapping SourceColumn="Transportador" DataSetColumn="Transportador" />
+              <Mapping SourceColumn="Fornecedor" DataSetColumn="Fornecedor" />
+              <Mapping SourceColumn="Fruta" DataSetColumn="Fruta" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="midasDataSetRom" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="midasDataSetRom" msprop:Generator_UserDSName="midasDataSetRom">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblRomaneio" msprop:Generator_TableClassName="tblRomaneioDataTable" msprop:Generator_TableVarName="tabletblRomaneio" msprop:Generator_TablePropName="tblRomaneio" msprop:Generator_RowDeletingName="tblRomaneioRowDeleting" msprop:Generator_RowChangingName="tblRomaneioRowChanging" msprop:Generator_RowEvHandlerName="tblRomaneioRowChangeEventHandler" msprop:Generator_RowDeletedName="tblRomaneioRowDeleted" msprop:Generator_UserTableName="tblRomaneio" msprop:Generator_RowChangedName="tblRomaneioRowChanged" msprop:Generator_RowEvArgName="tblRomaneioRowChangeEvent" msprop:Generator_RowClassName="tblRomaneioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="QtdFrutas" msprop:Generator_ColumnVarNameInTable="columnQtdFrutas" msprop:Generator_ColumnPropNameInRow="QtdFrutas" msprop:Generator_ColumnPropNameInTable="QtdFrutasColumn" msprop:Generator_UserColumnName="QtdFrutas" type="xs:int" />
+              <xs:element name="IDCarregamentoBloco" msprop:Generator_ColumnVarNameInTable="columnIDCarregamentoBloco" msprop:Generator_ColumnPropNameInRow="IDCarregamentoBloco" msprop:Generator_ColumnPropNameInTable="IDCarregamentoBlocoColumn" msprop:Generator_UserColumnName="IDCarregamentoBloco" type="xs:int" minOccurs="0" />
+              <xs:element name="ValorFrete" msprop:Generator_ColumnVarNameInTable="columnValorFrete" msprop:Generator_ColumnPropNameInRow="ValorFrete" msprop:Generator_ColumnPropNameInTable="ValorFreteColumn" msprop:Generator_UserColumnName="ValorFrete" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Seguro" msprop:Generator_ColumnVarNameInTable="columnSeguro" msprop:Generator_ColumnPropNameInRow="Seguro" msprop:Generator_ColumnPropNameInTable="SeguroColumn" msprop:Generator_UserColumnName="Seguro" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AdiantFretMot" msprop:Generator_ColumnVarNameInTable="columnAdiantFretMot" msprop:Generator_ColumnPropNameInRow="AdiantFretMot" msprop:Generator_ColumnPropNameInTable="AdiantFretMotColumn" msprop:Generator_UserColumnName="AdiantFretMot" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FormaPagamento" msprop:Generator_ColumnVarNameInTable="columnFormaPagamento" msprop:Generator_ColumnPropNameInRow="FormaPagamento" msprop:Generator_ColumnPropNameInTable="FormaPagamentoColumn" msprop:Generator_UserColumnName="FormaPagamento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CustoCarregamento" msprop:Generator_ColumnVarNameInTable="columnCustoCarregamento" msprop:Generator_ColumnPropNameInRow="CustoCarregamento" msprop:Generator_ColumnPropNameInTable="CustoCarregamentoColumn" msprop:Generator_UserColumnName="CustoCarregamento" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ValorComissao" msprop:Generator_ColumnVarNameInTable="columnValorComissao" msprop:Generator_ColumnPropNameInRow="ValorComissao" msprop:Generator_ColumnPropNameInTable="ValorComissaoColumn" msprop:Generator_UserColumnName="ValorComissao" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ValorTotalRomaneio" msprop:Generator_ColumnVarNameInTable="columnValorTotalRomaneio" msprop:Generator_ColumnPropNameInRow="ValorTotalRomaneio" msprop:Generator_ColumnPropNameInTable="ValorTotalRomaneioColumn" msprop:Generator_UserColumnName="ValorTotalRomaneio" type="xs:decimal" />
+              <xs:element name="TaxaNf" msprop:Generator_ColumnVarNameInTable="columnTaxaNf" msprop:Generator_ColumnPropNameInRow="TaxaNf" msprop:Generator_ColumnPropNameInTable="TaxaNfColumn" msprop:Generator_UserColumnName="TaxaNf" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Cliente" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Transportador" msprop:Generator_ColumnVarNameInTable="columnTransportador" msprop:Generator_ColumnPropNameInRow="Transportador" msprop:Generator_ColumnPropNameInTable="TransportadorColumn" msprop:Generator_UserColumnName="Transportador" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fornecedor" msprop:Generator_ColumnVarNameInTable="columnFornecedor" msprop:Generator_ColumnPropNameInRow="Fornecedor" msprop:Generator_ColumnPropNameInTable="FornecedorColumn" msprop:Generator_UserColumnName="Fornecedor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Fruta" msprop:Generator_ColumnVarNameInTable="columnFruta" msprop:Generator_ColumnPropNameInRow="Fruta" msprop:Generator_ColumnPropNameInTable="FrutaColumn" msprop:Generator_UserColumnName="Fruta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

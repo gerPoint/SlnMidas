@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="midasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="uspConsultarRomaneioNOVO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="INIntIDRomaneio" Type="int" Mode="In" />
+          <Parameter Name="INDataRomaneioInicio" Type="datetime" Mode="In" />
+          <Parameter Name="INDataRomaneioFim" Type="datetime" Mode="In" />
+        </Function>
+        <EntityContainer Name="midasModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="midasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="midasEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="uspConsultarRomaneioNOVO" ReturnType="Collection(midasModel.uspConsultarRomaneioNOVO_Result)">
+            <Parameter Name="INIntIDRomaneio" Mode="In" Type="Int32" />
+            <Parameter Name="INDataRomaneioInicio" Mode="In" Type="DateTime" />
+            <Parameter Name="INDataRomaneioFim" Mode="In" Type="DateTime" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="uspConsultarRomaneioNOVO_Result">
+          <Property Type="Int32" Name="IDRomaneio" Nullable="false" />
+          <Property Type="Int32" Name="IDCliente" Nullable="false" />
+          <Property Type="Int32" Name="IDTransportador" Nullable="false" />
+          <Property Type="Int32" Name="IDFornecedor" Nullable="false" />
+          <Property Type="Int32" Name="IDFruta" Nullable="false" />
+          <Property Type="Int32" Name="QtdFrutas" Nullable="false" />
+          <Property Type="Int32" Name="IDCarregamentoBloco" Nullable="true" />
+          <Property Type="Decimal" Name="ValorFrete" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Seguro" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="AdiantFretMot" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="DataRomaneio" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="DataAlteracao" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="DataExclusao" Nullable="true" Precision="23" />
+          <Property Type="String" Name="FormaPagamento" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="CustoCarregamento" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="ValorComissao" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="ValorTotalRomaneio" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="TaxaNf" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="UnidMedida" Nullable="false" MaxLength="2" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Cliente" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Transportador" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Fornecedor" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Fruta" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="midasModelStoreContainer" CdmEntityContainer="midasEntities" >
+          <FunctionImportMapping FunctionImportName="uspConsultarRomaneioNOVO" FunctionName="midasModel.Store.uspConsultarRomaneioNOVO">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="midasModel.uspConsultarRomaneioNOVO_Result">
+                <ScalarProperty Name="IDRomaneio" ColumnName="IDRomaneio" />
+                <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+                <ScalarProperty Name="IDTransportador" ColumnName="IDTransportador" />
+                <ScalarProperty Name="IDFornecedor" ColumnName="IDFornecedor" />
+                <ScalarProperty Name="IDFruta" ColumnName="IDFruta" />
+                <ScalarProperty Name="QtdFrutas" ColumnName="QtdFrutas" />
+                <ScalarProperty Name="IDCarregamentoBloco" ColumnName="IDCarregamentoBloco" />
+                <ScalarProperty Name="ValorFrete" ColumnName="ValorFrete" />
+                <ScalarProperty Name="Seguro" ColumnName="Seguro" />
+                <ScalarProperty Name="AdiantFretMot" ColumnName="AdiantFretMot" />
+                <ScalarProperty Name="DataRomaneio" ColumnName="DataRomaneio" />
+                <ScalarProperty Name="DataAlteracao" ColumnName="DataAlteracao" />
+                <ScalarProperty Name="DataExclusao" ColumnName="DataExclusao" />
+                <ScalarProperty Name="FormaPagamento" ColumnName="FormaPagamento" />
+                <ScalarProperty Name="CustoCarregamento" ColumnName="CustoCarregamento" />
+                <ScalarProperty Name="ValorComissao" ColumnName="ValorComissao" />
+                <ScalarProperty Name="ValorTotalRomaneio" ColumnName="ValorTotalRomaneio" />
+                <ScalarProperty Name="TaxaNf" ColumnName="TaxaNf" />
+                <ScalarProperty Name="UnidMedida" ColumnName="UnidMedida" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+                <ScalarProperty Name="Transportador" ColumnName="Transportador" />
+                <ScalarProperty Name="Fornecedor" ColumnName="Fornecedor" />
+                <ScalarProperty Name="Fruta" ColumnName="Fruta" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="midasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="midasEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="uspConsultarRomaneioNOVO" ReturnType="Collection(midasModel.uspConsultarRomaneioNOVO_Result)">
+      <Parameter Name="INIntIDRomaneio" Mode="In" Type="Int32" />
+      <Parameter Name="INDataRomaneioInicio" Mode="In" Type="DateTime" />
+      <Parameter Name="INDataRomaneioFim" Mode="In" Type="DateTime" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="uspConsultarRomaneioNOVO_Result">
+    <Property Type="Int32" Name="IDRomaneio" Nullable="false" />
+    <Property Type="Int32" Name="IDCliente" Nullable="false" />
+    <Property Type="Int32" Name="IDTransportador" Nullable="false" />
+    <Property Type="Int32" Name="IDFornecedor" Nullable="false" />
+    <Property Type="Int32" Name="IDFruta" Nullable="false" />
+    <Property Type="Int32" Name="QtdFrutas" Nullable="false" />
+    <Property Type="Int32" Name="IDCarregamentoBloco" Nullable="true" />
+    <Property Type="Decimal" Name="ValorFrete" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Seguro" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="AdiantFretMot" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="DataRomaneio" Nullable="false" Precision="23" />
+    <Property Type="DateTime" Name="DataAlteracao" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DataExclusao" Nullable="true" Precision="23" />
+    <Property Type="String" Name="FormaPagamento" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="CustoCarregamento" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ValorComissao" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="ValorTotalRomaneio" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="TaxaNf" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="UnidMedida" Nullable="false" MaxLength="2" />
+    <Property Type="String" Name="Status" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="Cliente" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Transportador" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Fornecedor" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Fruta" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

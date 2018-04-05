@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="midasModelStoreContainer" CdmEntityContainer="midasEntities">
+    <FunctionImportMapping FunctionImportName="uspConsultarRomaneioNOVO" FunctionName="midasModel.Store.uspConsultarRomaneioNOVO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="midasModel.uspConsultarRomaneioNOVO_Result">
+          <ScalarProperty Name="IDRomaneio" ColumnName="IDRomaneio" />
+          <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+          <ScalarProperty Name="IDTransportador" ColumnName="IDTransportador" />
+          <ScalarProperty Name="IDFornecedor" ColumnName="IDFornecedor" />
+          <ScalarProperty Name="IDFruta" ColumnName="IDFruta" />
+          <ScalarProperty Name="QtdFrutas" ColumnName="QtdFrutas" />
+          <ScalarProperty Name="IDCarregamentoBloco" ColumnName="IDCarregamentoBloco" />
+          <ScalarProperty Name="ValorFrete" ColumnName="ValorFrete" />
+          <ScalarProperty Name="Seguro" ColumnName="Seguro" />
+          <ScalarProperty Name="AdiantFretMot" ColumnName="AdiantFretMot" />
+          <ScalarProperty Name="DataRomaneio" ColumnName="DataRomaneio" />
+          <ScalarProperty Name="DataAlteracao" ColumnName="DataAlteracao" />
+          <ScalarProperty Name="DataExclusao" ColumnName="DataExclusao" />
+          <ScalarProperty Name="FormaPagamento" ColumnName="FormaPagamento" />
+          <ScalarProperty Name="CustoCarregamento" ColumnName="CustoCarregamento" />
+          <ScalarProperty Name="ValorComissao" ColumnName="ValorComissao" />
+          <ScalarProperty Name="ValorTotalRomaneio" ColumnName="ValorTotalRomaneio" />
+          <ScalarProperty Name="TaxaNf" ColumnName="TaxaNf" />
+          <ScalarProperty Name="UnidMedida" ColumnName="UnidMedida" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+          <ScalarProperty Name="Transportador" ColumnName="Transportador" />
+          <ScalarProperty Name="Fornecedor" ColumnName="Fornecedor" />
+          <ScalarProperty Name="Fruta" ColumnName="Fruta" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
