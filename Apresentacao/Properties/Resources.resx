@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="midasCarregamento" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\midasCarregamento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="slogan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\slogan.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,6 +151,9 @@
   <data name="delete_4219" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_4219.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Skip-forward256_25033 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skip-forward256_25033 (1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="belas-paisagens-no-campo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\belas-paisagens-no-campo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,14 +166,26 @@
   <data name="simples" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\simples.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="broom_5182" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\broom_5182.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-apagador-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-apagador-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Caipira_400x400-e1476553294916" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Caipira_400x400-e1476553294916.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slogan1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\slogan1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="titulo_com_bordas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\titulo_com_bordas.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Esse sim2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Esse sim2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="document_write_22637" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\document_write_22637.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Romaneiobasico1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Romaneiobasico1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,6 +205,9 @@
   <data name="editing-pencil_icon-icons.com_68219" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\editing-pencil_icon-icons.com_68219.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rightarrow18_78485" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rightarrow18_78485.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Plus_36851" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Plus_36851.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,10 +220,10 @@
   <data name="bigstock-closeup-of-a-young-farmer-obse-121893422" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bigstock-closeup-of-a-young-farmer-obse-121893422.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="document_write_22637" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\document_write_22637.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="midasCarregamento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\midasCarregamento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="slogan1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\slogan1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-apagador-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-apagador-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -307,5 +307,24 @@ namespace Apresentacao
             //    AtualizarGrid2();
             //}
         }
+
+        private void cpoCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //if (e.KeyChar == 13)
+
+            // //   this.AtualizarGrid();
+
+
+
+            //if (comboBoxTpoPesquisa.Text == "Código")
+            //{
+            //    AtualizarGrid();
+            //}
+
+            //else
+            //{
+            //    AtualizarGrid2();
+            //}
+        }
     }
 }

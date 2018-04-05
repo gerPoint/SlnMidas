@@ -66,7 +66,7 @@ namespace Apresentacao
 
         private void frmEmissaoRomaneio_Load(object sender, EventArgs e)
         {
-
+            dgwEmissaoRomaneio.DataSource = null;
 
 
         }
@@ -130,8 +130,7 @@ namespace Apresentacao
                 if (cpoIDRomaneio.Text == "")
                 {
                     MessageBox.Show("Por favor, informe o Codigo do Romaneio para pesquisar.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    cpoIDRomaneio.Text = string.Empty;
-                    cpoIDRomaneio.Focus();
+                    //cpoIDRomaneio.Text = string.Empty;
                     //CaixaPesquisa.DataSource = "";
                     return;
                 }
@@ -152,9 +151,8 @@ namespace Apresentacao
 
                 if (objLista.Count == 0)
                 {
-                    MessageBox.Show("Nenhum registro encontrado.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    cpoIDRomaneio.Text = string.Empty;
-                    cpoIDRomaneio.Focus();
+                    MessageBox.Show("Nenhum carregamento encontrado.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                   // cpoIDRomaneio.Text = string.Empty;
                     return;
                 }
 
@@ -238,13 +236,11 @@ namespace Apresentacao
         private void btnImprimir_Click(object sender, EventArgs e)
         {
 
-            //if (printDialogImprimir.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            //{
-            //    printDocumentImprimir.PrinterSettings = printDialogImprimir.PrinterSettings;
-            //    printDocumentImprimir.Print();
-            //    printDialogImprimir.Reset();
-
-            //}
+            if (dgwEmissaoRomaneio.DataSource == null)
+            {
+                MessageBox.Show("Este Romaneio Não possui carregamento(s).", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             try
             {
 

@@ -749,6 +749,11 @@
       <DependentUpon>modelCarreg.edmx</DependentUpon>
       <LastGenOutput>modelCarreg.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8-apagador-32.png" />
+    <None Include="Resources\icons8-apagador-64.png" />
+    <None Include="Resources\broom_5182.ico" />
+    <None Include="Resources\rightarrow18_78485.ico" />
+    <None Include="Resources\Skip-forward256_25033 %281%29.ico" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

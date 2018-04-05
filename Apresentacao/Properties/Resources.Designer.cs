@@ -93,6 +93,16 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap broom_5182 {
+            get {
+                object obj = ResourceManager.GetObject("broom_5182", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Caipira_400x400_e1476553294916 {
             get {
                 object obj = ResourceManager.GetObject("Caipira_400x400-e1476553294916", resourceCulture);
@@ -166,6 +176,26 @@ namespace Apresentacao.Properties {
         internal static System.Drawing.Bitmap favicon__1_ {
             get {
                 object obj = ResourceManager.GetObject("favicon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_apagador_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-apagador-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_apagador_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-apagador-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +293,16 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rightarrow18_78485 {
+            get {
+                object obj = ResourceManager.GetObject("rightarrow18_78485", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap romaneio {
             get {
                 object obj = ResourceManager.GetObject("romaneio", resourceCulture);
@@ -306,6 +346,16 @@ namespace Apresentacao.Properties {
         internal static System.Drawing.Bitmap simples {
             get {
                 object obj = ResourceManager.GetObject("simples", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Skip_forward256_25033__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Skip-forward256_25033 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

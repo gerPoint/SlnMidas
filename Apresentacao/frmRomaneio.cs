@@ -309,19 +309,22 @@ namespace Apresentacao
 
                 if (cpoFrutaP.Text == "")
                 {
-                    cpoFrutaP.Text = " ";
+                    cpoFrutaP.Text = "";
+
                 }
 
 
                 if (cpoFrutaM.Text == "")
                 {
-                    cpoFrutaM.Text = " ";
+                    cpoFrutaM.Text = "";
+
                 }
 
 
                 if (cpoFrutaG.Text == "")
                 {
-                    cpoFrutaG.Text = " ";
+                    cpoFrutaG.Text = "";
+
                 }
 
                 if (cpoPrecoP.Text == "")
@@ -386,55 +389,7 @@ namespace Apresentacao
             }
 
 
-            //objCarregamentoBloco novoCarregamentoBloco = new objCarregamentoBloco();
-            //novoCarregamentoBloco.Bloco = cpoBloco.Text;
-            //novoCarregamentoBloco.Descricao = cpoDescricao.Text;
-            //novoCarregamentoBloco.IDRomaneio = Convert.ToInt32(cpoIDRomaneio.Text);
-            //novoCarregamentoBloco.FrutaP = cpoFrutaP.Text;
-            //novoCarregamentoBloco.FrutaM = cpoFrutaM.Text;
-            //novoCarregamentoBloco.FrutaG = cpoFrutaG.Text;
-            //novoCarregamentoBloco.PrecoP = Convert.ToDecimal(cpoPrecoP.Text);
-            //novoCarregamentoBloco.PrecoM = Convert.ToDecimal(cpoPrecoM.Text);
-            //novoCarregamentoBloco.PrecoG = Convert.ToDecimal(cpoPrecoG.Text);
-            //novoCarregamentoBloco.QtdP = Convert.ToInt32(cpoQtdP.Text);
-            //novoCarregamentoBloco.QtdM = Convert.ToInt32(cpoQtdM.Text);
-            //novoCarregamentoBloco.QtdG = Convert.ToInt32(cpoQtdG.Text);
-
-
-            //listCarregamento.Add(novoCarregamentoBloco);
-            //dgwCarregamento.DataSource = listCarregamento;
-
-
-
-            //cpoBloco.Clear();
-            //cpoDescricao.Clear();
-            //cpoPrecoP.Clear();
-
-
-            //----------------------------------------------------------------------------------------
-
-
-            //objCarregamentoBloco row = (dgwCarregamento.RowTemplate.DataBoundItem as objCarregamentoBloco);
-
-            // Int32 valor1, valor2, valor3;
-            // String resultado;
-            // valor1 = Convert.ToInt32(dgwCarregamento.RowTemplate.Cells[7].Value);
-            // valor2 = Convert.ToInt32(dgwCarregamento.RowTemplate.Cells[8].Value);
-            // valor3 = Convert.ToInt32(dgwCarregamento.RowTemplate.Cells[9].Value);
-
-            // resultado = Convert.ToString(valor1 + valor2 + valor3);
-            // cpoQtdCarregada.Text = Convert.ToString(resultado);
-
-            // //---------------------------------------------------------------------------
-
-            // Decimal valor4, valor5, valor6, resultado2;
-            // valor4 = Convert.ToDecimal(dgwCarregamento.RowTemplate.Cells[10].Value);
-            // valor5 = Convert.ToDecimal(dgwCarregamento.RowTemplate.Cells[11].Value);
-            // valor6 = Convert.ToDecimal(dgwCarregamento.RowTemplate.Cells[12].Value);
-
-            // resultado2 = valor4 + valor5 + valor6;
-            // cpoTotalCarregamento.Text = resultado2.ToString();
-
+      
 
             //-----------------------------------------------------------------------------------------------
  
@@ -489,6 +444,31 @@ namespace Apresentacao
             cpoSomaPreco.Clear();
             cpoSomaQtd.Clear();
 
+
+
+
+            cpoPrecoP.Enabled = true;
+            cpoQtdP.Enabled = true;
+            cpoFrutaP.Enabled = true;
+            cpoPrecoTotalP.Clear();
+            cpoPrecoTotalP.Enabled = false;
+
+            cpoPrecoM.Enabled = true;
+            cpoQtdM.Enabled = true;
+            cpoFrutaM.Enabled = true;
+            cpoPrecoTotalM.Clear();
+            cpoPrecoTotalM.Enabled = false;
+
+            cpoPrecoG.Enabled = true;
+            cpoQtdG.Enabled = true;
+            cpoFrutaG.Enabled = true;
+            cpoPrecoTotalG.Clear();
+            cpoPrecoTotalG.Enabled = false;
+
+            cpoBloco.Enabled = true;
+            cpoDescricao.Enabled = true;
+
+            btnInserir.Enabled = false;
         }
 
         private void btnChamacli_Click(object sender, EventArgs e)
@@ -567,7 +547,23 @@ namespace Apresentacao
 
 
 
+                cpoPrecoP.Enabled = true;
+                cpoQtdP.Enabled = true;
+                cpoFrutaP.Enabled = true;
+                cpoPrecoTotalP.Clear();
+                cpoPrecoTotalP.Enabled = false;
 
+                cpoPrecoM.Enabled = true;
+                cpoQtdM.Enabled = true;
+                cpoFrutaM.Enabled = true;
+                cpoPrecoTotalM.Clear();
+                cpoPrecoTotalM.Enabled = false;
+
+                cpoPrecoG.Enabled = true;
+                cpoQtdG.Enabled = true;
+                cpoFrutaG.Enabled = true;
+                cpoPrecoTotalG.Clear();
+                cpoPrecoTotalG.Enabled = false;
 
 
             }
@@ -811,16 +807,22 @@ namespace Apresentacao
 
         private void cpoAdiantFretMot_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            //troca o '.' por ','.
+            if (e.KeyChar == '.' || e.KeyChar == ',')
+            {
+                e.KeyChar = ',';
+
+                //Verifica se já existe alguma vírgula na string
+                if (cpoAdiantFretMot.Text.Contains(","))
+                    e.Handled = true; // Caso exista, aborte 
+
+            }
+            //aceita apenas números, tecla backspace e virgula.
+            else if (!char.IsNumber(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
             {
                 e.Handled = true;
-                MessageBox.Show("Este campo aceita somente números e virgula");
             }
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente uma virgula");
-            }
+
         }
 
 
@@ -831,76 +833,100 @@ namespace Apresentacao
 
         private void cpoValorFrete_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            //troca o '.' por ','.
+            if (e.KeyChar == '.' || e.KeyChar == ',')
             {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente números e virgula");
+                e.KeyChar = ',';
+
+                //Verifica se já existe alguma vírgula na string
+                if (cpoValorFrete.Text.Contains(","))
+                    e.Handled = true; // Caso exista, aborte 
+
             }
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            //aceita apenas números, tecla backspace e virgula.
+            else if (!char.IsNumber(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
             {
                 e.Handled = true;
-                MessageBox.Show("Este campo aceita somente uma virgula");
             }
         }
 
         private void cpoSeguro_KeyPress_1(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            //troca o '.' por ','.
+            if (e.KeyChar == '.' || e.KeyChar == ',')
             {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente números e virgula");
+                e.KeyChar = ',';
+
+                //Verifica se já existe alguma vírgula na string
+                if (cpoSeguro.Text.Contains(","))
+                    e.Handled = true; // Caso exista, aborte 
+
             }
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            //aceita apenas números, tecla backspace e virgula.
+            else if (!char.IsNumber(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
             {
                 e.Handled = true;
-                MessageBox.Show("Este campo aceita somente uma virgula");
             }
         }
 
         private void cpoTaxaNf_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            //troca o '.' por ','.
+            if (e.KeyChar == '.' || e.KeyChar == ',')
             {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente números e virgula");
+                e.KeyChar = ',';
+
+                //Verifica se já existe alguma vírgula na string
+                if (cpoTaxaNf.Text.Contains(","))
+                    e.Handled = true; // Caso exista, aborte 
+
             }
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            //aceita apenas números, tecla backspace e virgula.
+            else if (!char.IsNumber(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
             {
                 e.Handled = true;
-                MessageBox.Show("Este campo aceita somente uma virgula");
             }
         }
 
         private void cpoCustoCarreg_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            //troca o '.' por ','.
+            if (e.KeyChar == '.' || e.KeyChar == ',')
+            {
+                e.KeyChar = ',';
 
+                //Verifica se já existe alguma vírgula na string
+                if (cpoCustoCarreg.Text.Contains(","))
+                    e.Handled = true; // Caso exista, aborte 
+
+            }
+            //aceita apenas números, tecla backspace e virgula.
+            else if (!char.IsNumber(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
             {
                 e.Handled = true;
-                MessageBox.Show("Este campo aceita somente números e virgula");
             }
 
 
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente uma virgula");
-            }
 
 
         }
 
         private void cpoValorComissao_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            //troca o '.' por ','.
+            if (e.KeyChar == '.' || e.KeyChar == ',')
             {
-                e.Handled = true;
-                MessageBox.Show("Este campo aceita somente números e virgula");
+                e.KeyChar = ',';
+
+                //Verifica se já existe alguma vírgula na string
+                if (cpoValorComissao.Text.Contains(","))
+                    e.Handled = true; // Caso exista, aborte 
+
             }
-            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            //aceita apenas números, tecla backspace e virgula.
+            else if (!char.IsNumber(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
             {
                 e.Handled = true;
-                MessageBox.Show("Este campo aceita somente uma virgula");
             }
         }
 
@@ -1042,12 +1068,19 @@ namespace Apresentacao
         private void btnRemover_Click(object sender, EventArgs e)
         {
 
+            //if (dgwCarregamento.RowCount <= 0)
+            //{
+            //    btnRemover.Enabled = false;
+            //}
+   
+
+
             BindingList<CarregamentoBloco> listCarregamento = new BindingList<CarregamentoBloco>();
 
             if (dgwCarregamento.Rows.Count < 1)
             {
 
-                MessageBox.Show("Nenhum registro selecionado. Selecione um registro para efetuar a exclusão.");
+                MessageBox.Show("Não há Blocos inseridos no Grid.");
 
             }
 
@@ -1336,17 +1369,21 @@ namespace Apresentacao
 
         private void cpoFrutaP_TextChanged(object sender, EventArgs e)
         {
-            if (cpoFrutaP.Text != "")
-            {
-                cpoQtdP.Enabled = true;
-                cpoPrecoP.Enabled = true;
-            }
+            //if (cpoFrutaP.Text != "")
+            //{
+            //    cpoQtdP.Enabled = true;
+            //    cpoPrecoP.Enabled = true;
+            //}
 
-            else
-            {
-                cpoQtdP.Enabled = false;
-                cpoPrecoP.Enabled = false;
-            }
+            //else
+            //{
+            //    cpoQtdP.Enabled = false;
+            //    cpoPrecoP.Enabled = false;
+            //    cpoPrecoP.Text = "";
+            //    cpoPrecoTotalP.Text = "";
+            //    cpoQtdP.Text = "";
+
+            //}
 
 
             cpoFrutaP.Text = ConvMaiuscula(cpoFrutaP.Text).ToString();
@@ -1355,18 +1392,21 @@ namespace Apresentacao
 
         private void cpoFrutaM_TextChanged(object sender, EventArgs e)
         {
-            if (cpoFrutaM.Text != "")
-            {
-                cpoQtdM.Enabled = true;
-                cpoPrecoM.Enabled = true;
-            }
+            //if (cpoFrutaM.Text != "")
+            //{
+            //    cpoQtdM.Enabled = true;
+            //    cpoPrecoM.Enabled = true;
+            //}
 
-            else
+            //else
 
-            {
-                cpoQtdM.Enabled = false;
-                cpoPrecoM.Enabled = false;
-            }
+            //{
+            //    cpoQtdM.Enabled = false;
+            //    cpoPrecoM.Enabled = false;
+            //    cpoPrecoM.Text = "";
+            //    cpoPrecoTotalM.Text = "";
+            //    cpoQtdM.Text = "";
+            //}
 
 
             cpoFrutaM.Text = ConvMaiuscula(cpoFrutaM.Text).ToString();
@@ -1375,17 +1415,20 @@ namespace Apresentacao
 
         private void cpoFrutaG_TextChanged(object sender, EventArgs e)
         {
-            if (cpoFrutaG.Text != "")
-            {
-                cpoQtdG.Enabled = true;
-                cpoPrecoG.Enabled = true;
-            }
+            //if (cpoFrutaG.Text != "")
+            //{
+            //    cpoQtdG.Enabled = true;
+            //    cpoPrecoG.Enabled = true;
+            //}
 
-            else
-            {
-                cpoQtdG.Enabled = false;
-                cpoPrecoG.Enabled = false;
-            }
+            //else
+            //{
+            //    cpoQtdG.Enabled = false;
+            //    cpoPrecoG.Enabled = false;
+            //    cpoPrecoG.Text = "";
+            //    cpoPrecoTotalG.Text = "";
+            //    cpoQtdG.Text = "";
+            //}
 
 
             cpoFrutaG.Text = ConvMaiuscula(cpoFrutaG.Text).ToString();
@@ -1424,47 +1467,17 @@ namespace Apresentacao
 
         private void cpoQtdP_TextChanged(object sender, EventArgs e)
         {
-            if (cpoQtdP.Text == "")
-            {
-                cpoPrecoTotalP.Text = "0";
-            }
-
-            if (!string.IsNullOrEmpty(cpoQtdP.Text)
-
-                )
-
-                cpoPrecoTotalP.Text = (Convert.ToDecimal(cpoQtdP.Text) * Convert.ToDecimal(cpoPrecoP.Text)).ToString();
-
-
-
+          
         }
 
         private void cpoQtdM_TextChanged(object sender, EventArgs e)
         {
-            if (cpoQtdM.Text == "")
-            {
-                cpoPrecoTotalM.Text = "0";
-            }
-
-            if (!string.IsNullOrEmpty(cpoQtdM.Text)
-
-                )
-
-                cpoPrecoTotalM.Text = (Convert.ToDecimal(cpoQtdM.Text) * Convert.ToDecimal(cpoPrecoM.Text)).ToString();
+          
         }
 
         private void cpoQtdG_TextChanged(object sender, EventArgs e)
         {
-            if (cpoQtdG.Text == "")
-            {
-                cpoPrecoTotalG.Text = "0";
-            }
-
-            if (!string.IsNullOrEmpty(cpoQtdG.Text)
-
-                )
-
-                cpoPrecoTotalG.Text = (Convert.ToDecimal(cpoQtdG.Text) * Convert.ToDecimal(cpoPrecoG.Text)).ToString();
+            
         }
 
         private void cpoPrecoP_KeyPress(object sender, KeyPressEventArgs e)
@@ -1484,7 +1497,6 @@ namespace Apresentacao
             {
                 e.Handled = true;
             }
-     
 
         }
 
@@ -1505,6 +1517,8 @@ namespace Apresentacao
             {
                 e.Handled = true;
             }
+
+
         }
 
         private void cpoPrecoG_KeyPress(object sender, KeyPressEventArgs e)
@@ -1524,6 +1538,7 @@ namespace Apresentacao
             {
                 e.Handled = true;
             }
+
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -1807,7 +1822,124 @@ namespace Apresentacao
 
              }
 
-         }
+        private void cpoPrecoP_TextChanged(object sender, EventArgs e)
+        {
+            if (cpoPrecoP.Text == "")
+            {
+                cpoPrecoTotalP.Text = "";
+
+            }
+        }
+
+        private void cpoPrecoM_TextChanged(object sender, EventArgs e)
+        {
+            if (cpoPrecoM.Text == "")
+            {
+                cpoPrecoTotalM.Text = "";
+
+            }
+        }
+
+        private void cpoPrecoG_TextChanged(object sender, EventArgs e)
+        {
+            if (cpoPrecoG.Text == "")
+            {
+                cpoPrecoTotalG.Text = "";
+
+            }
+        }
+
+        private void btnValidar_Click(object sender, EventArgs e)
+        {
+            if (cpoQtdP.Text == "")
+            {
+                cpoPrecoTotalP.Text = "0";
+            }
+
+            if (!string.IsNullOrEmpty(cpoQtdP.Text))
+
+                cpoPrecoTotalP.Text = (Convert.ToDecimal(cpoQtdP.Text) * Convert.ToDecimal(cpoPrecoP.Text)).ToString();
+
+//----------------------------------------------------------------------
+
+
+            if (cpoQtdM.Text == "")
+            {
+                cpoPrecoTotalM.Text = "0";
+            }
+
+            if (!string.IsNullOrEmpty(cpoQtdM.Text))
+
+                cpoPrecoTotalM.Text = (Convert.ToDecimal(cpoQtdM.Text) * Convert.ToDecimal(cpoPrecoM.Text)).ToString();
+
+//--------------------------------------------------
+            if (cpoQtdG.Text == "")
+            {
+                cpoPrecoTotalG.Text = "0";
+            }
+
+            if (!string.IsNullOrEmpty(cpoQtdG.Text))
+
+                cpoPrecoTotalG.Text = (Convert.ToDecimal(cpoQtdG.Text) * Convert.ToDecimal(cpoPrecoG.Text)).ToString();
+
+            //----------------------------------------------
+
+            cpoPrecoP.Enabled = false;
+            cpoQtdP.Enabled = false;
+            cpoFrutaP.Enabled = false;
+
+            cpoPrecoM.Enabled = false;
+            cpoQtdM.Enabled = false;
+            cpoFrutaM.Enabled = false;
+
+            cpoPrecoG.Enabled = false;
+            cpoQtdG.Enabled = false;
+            cpoFrutaG.Enabled = false;
+
+
+            cpoBloco.Enabled = false;
+            cpoDescricao.Enabled = false;
+
+
+            btnInserir.Enabled = true;
+
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            cpoBloco.Clear();
+            cpoDescricao.Clear();
+            cpoFrutaP.Clear();
+            cpoFrutaM.Clear();
+            cpoFrutaG.Clear();
+            cpoQtdP.Clear();
+            cpoQtdM.Clear();
+            cpoQtdG.Clear();
+            cpoPrecoTotalP.Clear();
+            cpoPrecoTotalM.Clear();
+            cpoPrecoTotalG.Clear();
+            cpoPrecoP.Clear();
+            cpoPrecoM.Clear();
+            cpoPrecoG.Clear();
+            cpoSomaQtd.Clear();
+            cpoSomaPreco.Clear();
+
+
+            cpoBloco.Enabled = true;
+            cpoDescricao.Enabled = true;
+            cpoFrutaP.Enabled = true;
+            cpoFrutaM.Enabled = true;
+            cpoFrutaG.Enabled = true;
+            cpoPrecoP.Enabled = true;
+            cpoPrecoM.Enabled = true;
+            cpoPrecoG.Enabled = true;
+            cpoQtdP.Enabled = true;
+            cpoQtdM.Enabled = true;
+            cpoQtdG.Enabled = true;
+
+        }
+    }
 
     }
 
