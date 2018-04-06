@@ -38,6 +38,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRomaneio));
             this.tabPagePrincipal = new System.Windows.Forms.TabControl();
             this.tabPageRomaneio = new System.Windows.Forms.TabPage();
+            this.btnIgnorarEdicoes = new System.Windows.Forms.Button();
+            this.btnRevisarValores = new System.Windows.Forms.Button();
+            this.btnTotalizar = new System.Windows.Forms.Button();
             this.cpoValorComissao = new System.Windows.Forms.TextBox();
             this.cpoCustoCarreg = new System.Windows.Forms.TextBox();
             this.cpoTaxaNf = new System.Windows.Forms.TextBox();
@@ -114,12 +117,19 @@
             this.iDFrutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblRomaneioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetRomaneioCorreto = new Apresentacao.midasDataSetRomaneioCorreto();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.cpoCodigo = new System.Windows.Forms.TextBox();
             this.comboBoxTpoPesquisa = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCCancelar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.tabPageCarregamento = new System.Windows.Forms.TabPage();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnValidar = new System.Windows.Forms.Button();
             this.label40 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.cpoSomaPreco = new System.Windows.Forms.TextBox();
@@ -185,6 +195,11 @@
             this.tblCarregamentoBlocoBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetCarregamentoBlocookBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetCarregamentoBlocook = new Apresentacao.midasDataSetCarregamentoBlocook();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.btnInserir = new System.Windows.Forms.Button();
             this.tblCarregamentoBlocoBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetCarregBlo = new Apresentacao.midasDataSetCarregBlo();
             this.tblCarregamentoBlocoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -203,21 +218,6 @@
             this.tblCarregamentoBlocoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblCarregamentoBlocoTableAdapter1 = new Apresentacao.midasDataSetCarregamentoBlocookTableAdapters.tblCarregamentoBlocoTableAdapter();
             this.midasDataSetCarregamentoBlocookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.btnIgnorarEdicoes = new System.Windows.Forms.Button();
-            this.btnRevisarValores = new System.Windows.Forms.Button();
-            this.btnTotalizar = new System.Windows.Forms.Button();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnCCancelar = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnValidar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnFinalizar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnRemover = new System.Windows.Forms.Button();
-            this.btnInserir = new System.Windows.Forms.Button();
             this.midasDataSetRomaneioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblRomaneioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetRomaneioBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -238,6 +238,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregamentoBlocookBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregamentoBlocook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregBlo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).BeginInit();
@@ -248,7 +249,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregBloBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregamentoBlocookBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRomaneioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioBindingSource)).BeginInit();
@@ -325,6 +325,49 @@
             this.tabPageRomaneio.Size = new System.Drawing.Size(975, 537);
             this.tabPageRomaneio.TabIndex = 0;
             this.tabPageRomaneio.Text = "Romaneio";
+            // 
+            // btnIgnorarEdicoes
+            // 
+            this.btnIgnorarEdicoes.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIgnorarEdicoes.Image = global::Apresentacao.Properties.Resources.icons8_apagador_32;
+            this.btnIgnorarEdicoes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnIgnorarEdicoes.Location = new System.Drawing.Point(19, 476);
+            this.btnIgnorarEdicoes.Name = "btnIgnorarEdicoes";
+            this.btnIgnorarEdicoes.Size = new System.Drawing.Size(104, 44);
+            this.btnIgnorarEdicoes.TabIndex = 106;
+            this.btnIgnorarEdicoes.Text = "Limpar Campos";
+            this.btnIgnorarEdicoes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIgnorarEdicoes.UseVisualStyleBackColor = true;
+            this.btnIgnorarEdicoes.Click += new System.EventHandler(this.btnIgnorarEdicoes_Click);
+            // 
+            // btnRevisarValores
+            // 
+            this.btnRevisarValores.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRevisarValores.Image = global::Apresentacao.Properties.Resources.editing_pencil_icon_icons_com_68219;
+            this.btnRevisarValores.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRevisarValores.Location = new System.Drawing.Point(464, 394);
+            this.btnRevisarValores.Name = "btnRevisarValores";
+            this.btnRevisarValores.Size = new System.Drawing.Size(105, 43);
+            this.btnRevisarValores.TabIndex = 22;
+            this.btnRevisarValores.Text = "Revisar Valores";
+            this.btnRevisarValores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRevisarValores.UseVisualStyleBackColor = true;
+            this.btnRevisarValores.Click += new System.EventHandler(this.btnRevisarValores_Click);
+            // 
+            // btnTotalizar
+            // 
+            this.btnTotalizar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnTotalizar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTotalizar.Image = global::Apresentacao.Properties.Resources.dollar_symbol_icon_icons_com_70753;
+            this.btnTotalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTotalizar.Location = new System.Drawing.Point(592, 394);
+            this.btnTotalizar.Name = "btnTotalizar";
+            this.btnTotalizar.Size = new System.Drawing.Size(104, 44);
+            this.btnTotalizar.TabIndex = 23;
+            this.btnTotalizar.Text = "Totalizar";
+            this.btnTotalizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTotalizar.UseVisualStyleBackColor = true;
+            this.btnTotalizar.Click += new System.EventHandler(this.btnTotalizar_Click);
             // 
             // cpoValorComissao
             // 
@@ -1054,6 +1097,19 @@
             this.midasDataSetRomaneioCorreto.DataSetName = "midasDataSetRomaneioCorreto";
             this.midasDataSetRomaneioCorreto.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Image = global::Apresentacao.Properties.Resources.pesquisar;
+            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPesquisar.Location = new System.Drawing.Point(343, 26);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(95, 59);
+            this.btnPesquisar.TabIndex = 7;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
             // cpoCodigo
             // 
             this.cpoCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1106,6 +1162,64 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Código :";
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Enabled = false;
+            this.btnExcluir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Image = global::Apresentacao.Properties.Resources.delete_4219;
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluir.Location = new System.Drawing.Point(592, 476);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(104, 44);
+            this.btnExcluir.TabIndex = 26;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Enabled = false;
+            this.btnSalvar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Image = global::Apresentacao.Properties.Resources.saveall_1204;
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvar.Location = new System.Drawing.Point(844, 476);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(102, 44);
+            this.btnSalvar.TabIndex = 28;
+            this.btnSalvar.Text = "   Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnCCancelar
+            // 
+            this.btnCCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
+            this.btnCCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCCancelar.Location = new System.Drawing.Point(718, 476);
+            this.btnCCancelar.Name = "btnCCancelar";
+            this.btnCCancelar.Size = new System.Drawing.Size(104, 44);
+            this.btnCCancelar.TabIndex = 27;
+            this.btnCCancelar.Text = "Cancelar";
+            this.btnCCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCCancelar.UseVisualStyleBackColor = true;
+            this.btnCCancelar.Click += new System.EventHandler(this.btnCCancelar_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Enabled = false;
+            this.btnAlterar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.Image = global::Apresentacao.Properties.Resources.document_write_22637;
+            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAlterar.Location = new System.Drawing.Point(464, 476);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(105, 44);
+            this.btnAlterar.TabIndex = 25;
+            this.btnAlterar.Text = "  Alterar";
+            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
             // tabPageCarregamento
             // 
             this.tabPageCarregamento.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -1142,6 +1256,36 @@
             this.tabPageCarregamento.TabIndex = 1;
             this.tabPageCarregamento.Text = "Carregamento";
             this.tabPageCarregamento.Click += new System.EventHandler(this.tabPageCarregamento_Click);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLimpar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Image = global::Apresentacao.Properties.Resources.icons8_apagador_32;
+            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpar.Location = new System.Drawing.Point(21, 413);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(96, 49);
+            this.btnLimpar.TabIndex = 197;
+            this.btnLimpar.Text = "Limpar Campos";
+            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // btnValidar
+            // 
+            this.btnValidar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnValidar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValidar.Image = global::Apresentacao.Properties.Resources.rightarrow18_78485;
+            this.btnValidar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnValidar.Location = new System.Drawing.Point(21, 187);
+            this.btnValidar.Name = "btnValidar";
+            this.btnValidar.Size = new System.Drawing.Size(96, 39);
+            this.btnValidar.TabIndex = 196;
+            this.btnValidar.Text = "Validar";
+            this.btnValidar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnValidar.UseVisualStyleBackColor = false;
+            this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
             // 
             // label40
             // 
@@ -1318,7 +1462,6 @@
             // cpoQtdP
             // 
             this.cpoQtdP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoQtdP.Enabled = false;
             this.cpoQtdP.Location = new System.Drawing.Point(49, 23);
             this.cpoQtdP.Name = "cpoQtdP";
             this.cpoQtdP.Size = new System.Drawing.Size(64, 20);
@@ -1338,7 +1481,6 @@
             // cpoQtdG
             // 
             this.cpoQtdG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoQtdG.Enabled = false;
             this.cpoQtdG.Location = new System.Drawing.Point(49, 81);
             this.cpoQtdG.Name = "cpoQtdG";
             this.cpoQtdG.Size = new System.Drawing.Size(64, 20);
@@ -1349,7 +1491,6 @@
             // cpoQtdM
             // 
             this.cpoQtdM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoQtdM.Enabled = false;
             this.cpoQtdM.Location = new System.Drawing.Point(49, 52);
             this.cpoQtdM.Name = "cpoQtdM";
             this.cpoQtdM.Size = new System.Drawing.Size(64, 20);
@@ -1392,7 +1533,6 @@
             // cpoPrecoP
             // 
             this.cpoPrecoP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoPrecoP.Enabled = false;
             this.cpoPrecoP.Location = new System.Drawing.Point(250, 23);
             this.cpoPrecoP.Name = "cpoPrecoP";
             this.cpoPrecoP.Size = new System.Drawing.Size(66, 20);
@@ -1441,7 +1581,6 @@
             // cpoPrecoG
             // 
             this.cpoPrecoG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoPrecoG.Enabled = false;
             this.cpoPrecoG.Location = new System.Drawing.Point(250, 81);
             this.cpoPrecoG.Name = "cpoPrecoG";
             this.cpoPrecoG.Size = new System.Drawing.Size(66, 20);
@@ -1489,7 +1628,6 @@
             // cpoPrecoM
             // 
             this.cpoPrecoM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoPrecoM.Enabled = false;
             this.cpoPrecoM.Location = new System.Drawing.Point(250, 52);
             this.cpoPrecoM.Name = "cpoPrecoM";
             this.cpoPrecoM.Size = new System.Drawing.Size(66, 20);
@@ -1808,6 +1946,75 @@
             this.midasDataSetCarregamentoBlocook.DataSetName = "midasDataSetCarregamentoBlocook";
             this.midasDataSetCarregamentoBlocook.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Apresentacao.Properties.Resources.Esse_sim2;
+            this.pictureBox1.Location = new System.Drawing.Point(607, 61);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(351, 165);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 175;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.Image = global::Apresentacao.Properties.Resources.stake_truck_18543;
+            this.btnFinalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFinalizar.Location = new System.Drawing.Point(843, 482);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(115, 48);
+            this.btnFinalizar.TabIndex = 43;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.Location = new System.Drawing.Point(691, 482);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(115, 48);
+            this.btnCancelar.TabIndex = 42;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRemover.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemover.Image = global::Apresentacao.Properties.Resources.Minus_36877__1_;
+            this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemover.Location = new System.Drawing.Point(271, 187);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(103, 39);
+            this.btnRemover.TabIndex = 41;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemover.UseVisualStyleBackColor = false;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            // 
+            // btnInserir
+            // 
+            this.btnInserir.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnInserir.Enabled = false;
+            this.btnInserir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInserir.Image = global::Apresentacao.Properties.Resources.Plus_36851;
+            this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInserir.Location = new System.Drawing.Point(144, 187);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(101, 39);
+            this.btnInserir.TabIndex = 40;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInserir.UseVisualStyleBackColor = false;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            // 
             // tblCarregamentoBlocoBindingSource2
             // 
             this.tblCarregamentoBlocoBindingSource2.DataMember = "tblCarregamentoBloco";
@@ -1892,219 +2099,6 @@
             this.midasDataSetCarregamentoBlocookBindingSource1.DataSource = this.midasDataSetCarregamentoBlocook;
             this.midasDataSetCarregamentoBlocookBindingSource1.Position = 0;
             // 
-            // btnIgnorarEdicoes
-            // 
-            this.btnIgnorarEdicoes.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIgnorarEdicoes.Image = global::Apresentacao.Properties.Resources.icons8_apagador_32;
-            this.btnIgnorarEdicoes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnIgnorarEdicoes.Location = new System.Drawing.Point(19, 476);
-            this.btnIgnorarEdicoes.Name = "btnIgnorarEdicoes";
-            this.btnIgnorarEdicoes.Size = new System.Drawing.Size(104, 44);
-            this.btnIgnorarEdicoes.TabIndex = 106;
-            this.btnIgnorarEdicoes.Text = "Limpar Campos";
-            this.btnIgnorarEdicoes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIgnorarEdicoes.UseVisualStyleBackColor = true;
-            this.btnIgnorarEdicoes.Click += new System.EventHandler(this.btnIgnorarEdicoes_Click);
-            // 
-            // btnRevisarValores
-            // 
-            this.btnRevisarValores.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRevisarValores.Image = global::Apresentacao.Properties.Resources.editing_pencil_icon_icons_com_68219;
-            this.btnRevisarValores.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRevisarValores.Location = new System.Drawing.Point(464, 394);
-            this.btnRevisarValores.Name = "btnRevisarValores";
-            this.btnRevisarValores.Size = new System.Drawing.Size(105, 43);
-            this.btnRevisarValores.TabIndex = 22;
-            this.btnRevisarValores.Text = "Revisar Valores";
-            this.btnRevisarValores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRevisarValores.UseVisualStyleBackColor = true;
-            this.btnRevisarValores.Click += new System.EventHandler(this.btnRevisarValores_Click);
-            // 
-            // btnTotalizar
-            // 
-            this.btnTotalizar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnTotalizar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTotalizar.Image = global::Apresentacao.Properties.Resources.dollar_symbol_icon_icons_com_70753;
-            this.btnTotalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTotalizar.Location = new System.Drawing.Point(592, 394);
-            this.btnTotalizar.Name = "btnTotalizar";
-            this.btnTotalizar.Size = new System.Drawing.Size(104, 44);
-            this.btnTotalizar.TabIndex = 23;
-            this.btnTotalizar.Text = "Totalizar";
-            this.btnTotalizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTotalizar.UseVisualStyleBackColor = true;
-            this.btnTotalizar.Click += new System.EventHandler(this.btnTotalizar_Click);
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Image = global::Apresentacao.Properties.Resources.pesquisar;
-            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPesquisar.Location = new System.Drawing.Point(343, 26);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(95, 59);
-            this.btnPesquisar.TabIndex = 7;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Enabled = false;
-            this.btnExcluir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Image = global::Apresentacao.Properties.Resources.delete_4219;
-            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcluir.Location = new System.Drawing.Point(592, 476);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(104, 44);
-            this.btnExcluir.TabIndex = 26;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Enabled = false;
-            this.btnSalvar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Image = global::Apresentacao.Properties.Resources.saveall_1204;
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvar.Location = new System.Drawing.Point(844, 476);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(102, 44);
-            this.btnSalvar.TabIndex = 28;
-            this.btnSalvar.Text = "   Salvar";
-            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // btnCCancelar
-            // 
-            this.btnCCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
-            this.btnCCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCCancelar.Location = new System.Drawing.Point(718, 476);
-            this.btnCCancelar.Name = "btnCCancelar";
-            this.btnCCancelar.Size = new System.Drawing.Size(104, 44);
-            this.btnCCancelar.TabIndex = 27;
-            this.btnCCancelar.Text = "Cancelar";
-            this.btnCCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCCancelar.UseVisualStyleBackColor = true;
-            this.btnCCancelar.Click += new System.EventHandler(this.btnCCancelar_Click);
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Enabled = false;
-            this.btnAlterar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Image = global::Apresentacao.Properties.Resources.document_write_22637;
-            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAlterar.Location = new System.Drawing.Point(464, 476);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(105, 44);
-            this.btnAlterar.TabIndex = 25;
-            this.btnAlterar.Text = "  Alterar";
-            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnLimpar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpar.Image = global::Apresentacao.Properties.Resources.icons8_apagador_32;
-            this.btnLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpar.Location = new System.Drawing.Point(21, 413);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(96, 49);
-            this.btnLimpar.TabIndex = 197;
-            this.btnLimpar.Text = "Limpar Campos";
-            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpar.UseVisualStyleBackColor = false;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // btnValidar
-            // 
-            this.btnValidar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnValidar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnValidar.Image = global::Apresentacao.Properties.Resources.rightarrow18_78485;
-            this.btnValidar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnValidar.Location = new System.Drawing.Point(21, 187);
-            this.btnValidar.Name = "btnValidar";
-            this.btnValidar.Size = new System.Drawing.Size(96, 39);
-            this.btnValidar.TabIndex = 196;
-            this.btnValidar.Text = "Validar";
-            this.btnValidar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnValidar.UseVisualStyleBackColor = false;
-            this.btnValidar.Click += new System.EventHandler(this.btnValidar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Apresentacao.Properties.Resources.Esse_sim2;
-            this.pictureBox1.Location = new System.Drawing.Point(607, 61);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(351, 165);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 175;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Image = global::Apresentacao.Properties.Resources.stake_truck_18543;
-            this.btnFinalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFinalizar.Location = new System.Drawing.Point(843, 482);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(115, 48);
-            this.btnFinalizar.TabIndex = 43;
-            this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFinalizar.UseVisualStyleBackColor = true;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Image = global::Apresentacao.Properties.Resources.cancel_stop_exit_1583;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(691, 482);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(115, 48);
-            this.btnCancelar.TabIndex = 42;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnRemover
-            // 
-            this.btnRemover.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRemover.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.Image = global::Apresentacao.Properties.Resources.Minus_36877__1_;
-            this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRemover.Location = new System.Drawing.Point(271, 187);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(103, 39);
-            this.btnRemover.TabIndex = 41;
-            this.btnRemover.Text = "Remover";
-            this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemover.UseVisualStyleBackColor = false;
-            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
-            // 
-            // btnInserir
-            // 
-            this.btnInserir.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnInserir.Enabled = false;
-            this.btnInserir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserir.Image = global::Apresentacao.Properties.Resources.Plus_36851;
-            this.btnInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInserir.Location = new System.Drawing.Point(144, 187);
-            this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(101, 39);
-            this.btnInserir.TabIndex = 40;
-            this.btnInserir.Text = "Inserir";
-            this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInserir.UseVisualStyleBackColor = false;
-            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
-            // 
             // tblRomaneioBindingSource
             // 
             this.tblRomaneioBindingSource.DataMember = "tblRomaneio";
@@ -2145,6 +2139,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregamentoBlocookBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregamentoBlocook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregBlo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).EndInit();
@@ -2155,7 +2150,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregBloBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetCarregamentoBlocookBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRomaneioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioBindingSource)).EndInit();

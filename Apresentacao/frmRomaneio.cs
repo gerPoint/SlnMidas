@@ -1851,6 +1851,14 @@ namespace Apresentacao
 
         private void btnValidar_Click(object sender, EventArgs e)
         {
+            //if (cpoQtdP.Text + cpoQtdM.Text + cpoQtdG.Text == "")
+            //{
+            //    MessageBox.Show(" É necessário conter ao menos uma quantidade de Frutas adicionada para o Bloco.");
+            //    return;
+            //}
+
+
+
             if (cpoQtdP.Text == "")
             {
                 cpoPrecoTotalP.Text = "0";
