@@ -1856,9 +1856,6 @@ namespace Apresentacao
             //    MessageBox.Show(" É necessário conter ao menos uma quantidade de Frutas adicionada para o Bloco.");
             //    return;
             //}
-
-
-
             if (cpoQtdP.Text == "")
             {
                 cpoPrecoTotalP.Text = "0";
@@ -1892,6 +1889,24 @@ namespace Apresentacao
 
             //----------------------------------------------
 
+            if (cpoPrecoTotalP.Text != "0")
+            {
+                btnInserir.Enabled = true;
+            }
+
+
+            if (cpoPrecoTotalM.Text != "0")
+            {
+                btnInserir.Enabled = true;
+            }
+
+
+            if (cpoPrecoTotalG.Text != "0")
+            {
+                btnInserir.Enabled = true;
+            }
+
+
             cpoPrecoP.Enabled = false;
             cpoQtdP.Enabled = false;
             cpoFrutaP.Enabled = false;
@@ -1908,8 +1923,6 @@ namespace Apresentacao
             cpoBloco.Enabled = false;
             cpoDescricao.Enabled = false;
 
-
-            btnInserir.Enabled = true;
 
 
         }

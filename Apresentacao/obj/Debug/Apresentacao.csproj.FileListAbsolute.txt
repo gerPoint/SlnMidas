@@ -151,3 +151,31 @@ C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentaca
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.pdb
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\SlnMidas.Relatorio.dll
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Apresentacao\bin\Debug\SlnMidas.Relatorio.pdb
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\EntityFramework.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\SlnMidas.Relatorio.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\SlnMidas.Relatorio.pdb
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\EntityFramework.xml
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Microsoft.ReportViewer.WebForms.xml
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmEmissaoRomaneio.resources
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmFormaPagamento.resources
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmRelatorioTeste.resources
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarCliente.resources
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarFornecedor.resources
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarFruta.resources
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarRomaneio.resources
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmVisualizarRomaneio.resources
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarTransportador.resources

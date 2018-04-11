@@ -47,3 +47,5 @@ C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\bin\Debug\itextsharp.xml
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.dll
 C:\Users\Celso Zambotti\Source\Repos\SlnMidas\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Lucas\Source\Repos\SlnMidas\Negocio\bin\Debug\itextsharp.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Negocio\bin\Debug\itextsharp.xml

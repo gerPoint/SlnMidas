@@ -259,10 +259,10 @@
             this.tabPagePrincipal.Controls.Add(this.tabPageRomaneio);
             this.tabPagePrincipal.Controls.Add(this.tabPageCarregamento);
             this.tabPagePrincipal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPagePrincipal.Location = new System.Drawing.Point(1, 2);
+            this.tabPagePrincipal.Location = new System.Drawing.Point(1, -1);
             this.tabPagePrincipal.Name = "tabPagePrincipal";
             this.tabPagePrincipal.SelectedIndex = 0;
-            this.tabPagePrincipal.Size = new System.Drawing.Size(983, 563);
+            this.tabPagePrincipal.Size = new System.Drawing.Size(986, 570);
             this.tabPagePrincipal.TabIndex = 1;
             // 
             // tabPageRomaneio
@@ -322,7 +322,7 @@
             this.tabPageRomaneio.Location = new System.Drawing.Point(4, 22);
             this.tabPageRomaneio.Name = "tabPageRomaneio";
             this.tabPageRomaneio.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRomaneio.Size = new System.Drawing.Size(975, 537);
+            this.tabPageRomaneio.Size = new System.Drawing.Size(978, 544);
             this.tabPageRomaneio.TabIndex = 0;
             this.tabPageRomaneio.Text = "Romaneio";
             // 
@@ -371,6 +371,7 @@
             // 
             // cpoValorComissao
             // 
+            this.cpoValorComissao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoValorComissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoValorComissao.Location = new System.Drawing.Point(838, 331);
             this.cpoValorComissao.Name = "cpoValorComissao";
@@ -380,6 +381,7 @@
             // 
             // cpoCustoCarreg
             // 
+            this.cpoCustoCarreg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCustoCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCustoCarreg.Location = new System.Drawing.Point(591, 250);
             this.cpoCustoCarreg.Name = "cpoCustoCarreg";
@@ -389,6 +391,7 @@
             // 
             // cpoTaxaNf
             // 
+            this.cpoTaxaNf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoTaxaNf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoTaxaNf.Location = new System.Drawing.Point(838, 290);
             this.cpoTaxaNf.Name = "cpoTaxaNf";
@@ -398,6 +401,7 @@
             // 
             // cpoSeguro
             // 
+            this.cpoSeguro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoSeguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoSeguro.Location = new System.Drawing.Point(591, 331);
             this.cpoSeguro.Name = "cpoSeguro";
@@ -407,6 +411,7 @@
             // 
             // cpoAdiantFretMot
             // 
+            this.cpoAdiantFretMot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoAdiantFretMot.Enabled = false;
             this.cpoAdiantFretMot.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoAdiantFretMot.Location = new System.Drawing.Point(838, 250);
@@ -418,6 +423,7 @@
             // 
             // cpoValorFrete
             // 
+            this.cpoValorFrete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoValorFrete.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoValorFrete.Location = new System.Drawing.Point(591, 290);
             this.cpoValorFrete.Name = "cpoValorFrete";
@@ -1252,7 +1258,7 @@
             this.tabPageCarregamento.Location = new System.Drawing.Point(4, 22);
             this.tabPageCarregamento.Name = "tabPageCarregamento";
             this.tabPageCarregamento.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCarregamento.Size = new System.Drawing.Size(975, 537);
+            this.tabPageCarregamento.Size = new System.Drawing.Size(978, 544);
             this.tabPageCarregamento.TabIndex = 1;
             this.tabPageCarregamento.Text = "Carregamento";
             this.tabPageCarregamento.Click += new System.EventHandler(this.tabPageCarregamento_Click);

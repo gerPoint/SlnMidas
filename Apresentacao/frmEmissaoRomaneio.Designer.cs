@@ -116,33 +116,33 @@
             // cpoTaxaNf
             // 
             this.cpoTaxaNf.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoTaxaNf.Location = new System.Drawing.Point(1032, 154);
+            this.cpoTaxaNf.Location = new System.Drawing.Point(1029, 154);
             this.cpoTaxaNf.Name = "cpoTaxaNf";
-            this.cpoTaxaNf.Size = new System.Drawing.Size(135, 22);
+            this.cpoTaxaNf.Size = new System.Drawing.Size(138, 22);
             this.cpoTaxaNf.TabIndex = 124;
             // 
             // cpoSeguro
             // 
             this.cpoSeguro.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoSeguro.Location = new System.Drawing.Point(1032, 179);
+            this.cpoSeguro.Location = new System.Drawing.Point(1029, 179);
             this.cpoSeguro.Name = "cpoSeguro";
-            this.cpoSeguro.Size = new System.Drawing.Size(135, 22);
+            this.cpoSeguro.Size = new System.Drawing.Size(138, 22);
             this.cpoSeguro.TabIndex = 125;
             // 
             // cpoAdiantFretMot
             // 
             this.cpoAdiantFretMot.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoAdiantFretMot.Location = new System.Drawing.Point(1032, 105);
+            this.cpoAdiantFretMot.Location = new System.Drawing.Point(1029, 105);
             this.cpoAdiantFretMot.Name = "cpoAdiantFretMot";
-            this.cpoAdiantFretMot.Size = new System.Drawing.Size(135, 22);
+            this.cpoAdiantFretMot.Size = new System.Drawing.Size(138, 22);
             this.cpoAdiantFretMot.TabIndex = 122;
             // 
             // cpoValorFrete
             // 
             this.cpoValorFrete.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoValorFrete.Location = new System.Drawing.Point(1032, 129);
+            this.cpoValorFrete.Location = new System.Drawing.Point(1029, 129);
             this.cpoValorFrete.Name = "cpoValorFrete";
-            this.cpoValorFrete.Size = new System.Drawing.Size(135, 22);
+            this.cpoValorFrete.Size = new System.Drawing.Size(138, 22);
             this.cpoValorFrete.TabIndex = 123;
             // 
             // cpoIDFruta
@@ -157,9 +157,9 @@
             // 
             this.cpoFruta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoFruta.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoFruta.Location = new System.Drawing.Point(117, 179);
+            this.cpoFruta.Location = new System.Drawing.Point(125, 179);
             this.cpoFruta.Name = "cpoFruta";
-            this.cpoFruta.Size = new System.Drawing.Size(410, 22);
+            this.cpoFruta.Size = new System.Drawing.Size(414, 22);
             this.cpoFruta.TabIndex = 111;
             // 
             // cpoIDFornecedor
@@ -189,100 +189,100 @@
             // lblCustoCarreg
             // 
             this.lblCustoCarreg.AutoSize = true;
-            this.lblCustoCarreg.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustoCarreg.Location = new System.Drawing.Point(572, 180);
+            this.lblCustoCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustoCarreg.Location = new System.Drawing.Point(545, 181);
             this.lblCustoCarreg.Name = "lblCustoCarreg";
-            this.lblCustoCarreg.Size = new System.Drawing.Size(123, 17);
+            this.lblCustoCarreg.Size = new System.Drawing.Size(142, 15);
             this.lblCustoCarreg.TabIndex = 143;
             this.lblCustoCarreg.Text = "Custo Carregamento:";
             // 
             // lblTaxaNf
             // 
             this.lblTaxaNf.AutoSize = true;
-            this.lblTaxaNf.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTaxaNf.Location = new System.Drawing.Point(929, 156);
+            this.lblTaxaNf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTaxaNf.Location = new System.Drawing.Point(911, 156);
             this.lblTaxaNf.Name = "lblTaxaNf";
-            this.lblTaxaNf.Size = new System.Drawing.Size(55, 17);
+            this.lblTaxaNf.Size = new System.Drawing.Size(64, 15);
             this.lblTaxaNf.TabIndex = 142;
             this.lblTaxaNf.Text = "Taxa NF:";
             // 
             // lblComissao
             // 
             this.lblComissao.AutoSize = true;
-            this.lblComissao.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComissao.Location = new System.Drawing.Point(572, 156);
+            this.lblComissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComissao.Location = new System.Drawing.Point(545, 157);
             this.lblComissao.Name = "lblComissao";
-            this.lblComissao.Size = new System.Drawing.Size(65, 17);
+            this.lblComissao.Size = new System.Drawing.Size(74, 15);
             this.lblComissao.TabIndex = 141;
             this.lblComissao.Text = "Comissão:";
             // 
             // lblFormaPagamento
             // 
             this.lblFormaPagamento.AutoSize = true;
-            this.lblFormaPagamento.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormaPagamento.Location = new System.Drawing.Point(572, 105);
+            this.lblFormaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormaPagamento.Location = new System.Drawing.Point(545, 106);
             this.lblFormaPagamento.Name = "lblFormaPagamento";
-            this.lblFormaPagamento.Size = new System.Drawing.Size(123, 17);
+            this.lblFormaPagamento.Size = new System.Drawing.Size(149, 15);
             this.lblFormaPagamento.TabIndex = 140;
             this.lblFormaPagamento.Text = "Forma de Pagamento:";
             // 
             // lblSeguro
             // 
             this.lblSeguro.AutoSize = true;
-            this.lblSeguro.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeguro.Location = new System.Drawing.Point(929, 180);
+            this.lblSeguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeguro.Location = new System.Drawing.Point(911, 180);
             this.lblSeguro.Name = "lblSeguro";
-            this.lblSeguro.Size = new System.Drawing.Size(51, 17);
+            this.lblSeguro.Size = new System.Drawing.Size(57, 15);
             this.lblSeguro.TabIndex = 139;
             this.lblSeguro.Text = "Seguro:";
             // 
             // lblFrete
             // 
             this.lblFrete.AutoSize = true;
-            this.lblFrete.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFrete.Location = new System.Drawing.Point(929, 131);
+            this.lblFrete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFrete.Location = new System.Drawing.Point(911, 131);
             this.lblFrete.Name = "lblFrete";
-            this.lblFrete.Size = new System.Drawing.Size(39, 17);
+            this.lblFrete.Size = new System.Drawing.Size(44, 15);
             this.lblFrete.TabIndex = 138;
             this.lblFrete.Text = "Frete:";
             // 
             // lblUnidMedida
             // 
             this.lblUnidMedida.AutoSize = true;
-            this.lblUnidMedida.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnidMedida.Location = new System.Drawing.Point(572, 130);
+            this.lblUnidMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnidMedida.Location = new System.Drawing.Point(545, 131);
             this.lblUnidMedida.Name = "lblUnidMedida";
-            this.lblUnidMedida.Size = new System.Drawing.Size(98, 17);
+            this.lblUnidMedida.Size = new System.Drawing.Size(117, 15);
             this.lblUnidMedida.TabIndex = 136;
             this.lblUnidMedida.Text = "Unid. de Medida:";
             // 
             // lblFruta
             // 
             this.lblFruta.AutoSize = true;
-            this.lblFruta.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFruta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFruta.Location = new System.Drawing.Point(18, 181);
             this.lblFruta.Name = "lblFruta";
-            this.lblFruta.Size = new System.Drawing.Size(40, 17);
+            this.lblFruta.Size = new System.Drawing.Size(44, 15);
             this.lblFruta.TabIndex = 134;
             this.lblFruta.Text = "Fruta:";
             // 
             // lblTransportador
             // 
             this.lblTransportador.AutoSize = true;
-            this.lblTransportador.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransportador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTransportador.Location = new System.Drawing.Point(18, 156);
             this.lblTransportador.Name = "lblTransportador";
-            this.lblTransportador.Size = new System.Drawing.Size(88, 17);
+            this.lblTransportador.Size = new System.Drawing.Size(101, 15);
             this.lblTransportador.TabIndex = 133;
             this.lblTransportador.Text = "Transportador:";
             // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCliente.Location = new System.Drawing.Point(18, 105);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(50, 17);
+            this.lblCliente.Size = new System.Drawing.Size(56, 15);
             this.lblCliente.TabIndex = 132;
             this.lblCliente.Text = "Cliente:";
             // 
@@ -290,18 +290,18 @@
             // 
             this.cpoTransportador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoTransportador.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoTransportador.Location = new System.Drawing.Point(117, 154);
+            this.cpoTransportador.Location = new System.Drawing.Point(125, 154);
             this.cpoTransportador.Name = "cpoTransportador";
-            this.cpoTransportador.Size = new System.Drawing.Size(410, 22);
+            this.cpoTransportador.Size = new System.Drawing.Size(414, 22);
             this.cpoTransportador.TabIndex = 110;
             // 
             // lblFornecedor
             // 
             this.lblFornecedor.AutoSize = true;
-            this.lblFornecedor.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFornecedor.Location = new System.Drawing.Point(18, 130);
             this.lblFornecedor.Name = "lblFornecedor";
-            this.lblFornecedor.Size = new System.Drawing.Size(73, 17);
+            this.lblFornecedor.Size = new System.Drawing.Size(84, 15);
             this.lblFornecedor.TabIndex = 129;
             this.lblFornecedor.Text = "Fornecedor:";
             // 
@@ -309,27 +309,27 @@
             // 
             this.cpoCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCliente.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoCliente.Location = new System.Drawing.Point(117, 103);
+            this.cpoCliente.Location = new System.Drawing.Point(125, 103);
             this.cpoCliente.Name = "cpoCliente";
-            this.cpoCliente.Size = new System.Drawing.Size(410, 22);
+            this.cpoCliente.Size = new System.Drawing.Size(414, 22);
             this.cpoCliente.TabIndex = 109;
             // 
             // cpoFornecedor
             // 
             this.cpoFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoFornecedor.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoFornecedor.Location = new System.Drawing.Point(117, 128);
+            this.cpoFornecedor.Location = new System.Drawing.Point(125, 128);
             this.cpoFornecedor.Name = "cpoFornecedor";
-            this.cpoFornecedor.Size = new System.Drawing.Size(410, 22);
+            this.cpoFornecedor.Size = new System.Drawing.Size(414, 22);
             this.cpoFornecedor.TabIndex = 108;
             // 
             // lblAdiantFretMot
             // 
             this.lblAdiantFretMot.AutoSize = true;
-            this.lblAdiantFretMot.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdiantFretMot.Location = new System.Drawing.Point(929, 107);
+            this.lblAdiantFretMot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdiantFretMot.Location = new System.Drawing.Point(911, 107);
             this.lblAdiantFretMot.Name = "lblAdiantFretMot";
-            this.lblAdiantFretMot.Size = new System.Drawing.Size(97, 17);
+            this.lblAdiantFretMot.Size = new System.Drawing.Size(112, 15);
             this.lblAdiantFretMot.TabIndex = 150;
             this.lblAdiantFretMot.Text = "Adiant. de Frete:";
             this.lblAdiantFretMot.Click += new System.EventHandler(this.lblAdiantFretMot_Click);
@@ -582,10 +582,10 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(18, 76);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(65, 16);
+            this.label18.Size = new System.Drawing.Size(77, 15);
             this.label18.TabIndex = 160;
             this.label18.Text = "Romaneio:";
             // 
@@ -594,7 +594,7 @@
             this.cpoIDRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoIDRomaneio.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.cpoIDRomaneio.Location = new System.Drawing.Point(117, 68);
+            this.cpoIDRomaneio.Location = new System.Drawing.Point(125, 68);
             this.cpoIDRomaneio.Name = "cpoIDRomaneio";
             this.cpoIDRomaneio.ReadOnly = true;
             this.cpoIDRomaneio.Size = new System.Drawing.Size(107, 29);
