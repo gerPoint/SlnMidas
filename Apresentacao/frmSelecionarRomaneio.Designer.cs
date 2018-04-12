@@ -43,29 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.dgwSelRomaneio = new System.Windows.Forms.DataGridView();
-            this.iDRomaneioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.transportadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.formaPagamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidMedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdFrutasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorFreteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.custoCarregamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorComissaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adiantFretMotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.seguroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.taxaNfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorTotalRomaneioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataRomaneioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataAlteracaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataExclusaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDTransportadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDFrutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblRomaneioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetRomaneioCorreto = new Apresentacao.midasDataSetRomaneioCorreto();
             this.tblRomaneioTableAdapter = new Apresentacao.midasDataSetRomaneioCorretoTableAdapters.tblRomaneioTableAdapter();
@@ -89,6 +66,29 @@
             this.cpoIDFornecedor = new System.Windows.Forms.TextBox();
             this.cpoIDTransportador = new System.Windows.Forms.TextBox();
             this.cpoIDFruta = new System.Windows.Forms.TextBox();
+            this.iDRomaneioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transportadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.formaPagamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidMedidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.qtdFrutasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorFreteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.custoCarregamentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorComissaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adiantFretMotDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.seguroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taxaNfDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorTotalRomaneioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataRomaneioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataAlteracaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataExclusaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDTransportadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDFornecedorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDFrutaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgwSelRomaneio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblRomaneioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetRomaneioCorreto)).BeginInit();
@@ -247,173 +247,8 @@
             this.dgwSelRomaneio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwSelRomaneio.Size = new System.Drawing.Size(430, 138);
             this.dgwSelRomaneio.TabIndex = 100010;
+            this.dgwSelRomaneio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwSelRomaneio_CellContentClick);
             this.dgwSelRomaneio.DoubleClick += new System.EventHandler(this.dgwRomaneio_DoubleClick);
-            // 
-            // iDRomaneioDataGridViewTextBoxColumn
-            // 
-            this.iDRomaneioDataGridViewTextBoxColumn.DataPropertyName = "IDRomaneio";
-            this.iDRomaneioDataGridViewTextBoxColumn.HeaderText = "Cód. Romaneio";
-            this.iDRomaneioDataGridViewTextBoxColumn.Name = "iDRomaneioDataGridViewTextBoxColumn";
-            this.iDRomaneioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // clienteDataGridViewTextBoxColumn
-            // 
-            this.clienteDataGridViewTextBoxColumn.DataPropertyName = "Cliente";
-            this.clienteDataGridViewTextBoxColumn.HeaderText = "Cliente";
-            this.clienteDataGridViewTextBoxColumn.Name = "clienteDataGridViewTextBoxColumn";
-            this.clienteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fornecedorDataGridViewTextBoxColumn
-            // 
-            this.fornecedorDataGridViewTextBoxColumn.DataPropertyName = "Fornecedor";
-            this.fornecedorDataGridViewTextBoxColumn.HeaderText = "Fornecedor";
-            this.fornecedorDataGridViewTextBoxColumn.Name = "fornecedorDataGridViewTextBoxColumn";
-            this.fornecedorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // transportadorDataGridViewTextBoxColumn
-            // 
-            this.transportadorDataGridViewTextBoxColumn.DataPropertyName = "Transportador";
-            this.transportadorDataGridViewTextBoxColumn.HeaderText = "Transportador";
-            this.transportadorDataGridViewTextBoxColumn.Name = "transportadorDataGridViewTextBoxColumn";
-            this.transportadorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // frutaDataGridViewTextBoxColumn
-            // 
-            this.frutaDataGridViewTextBoxColumn.DataPropertyName = "Fruta";
-            this.frutaDataGridViewTextBoxColumn.HeaderText = "Fruta";
-            this.frutaDataGridViewTextBoxColumn.Name = "frutaDataGridViewTextBoxColumn";
-            this.frutaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // formaPagamentoDataGridViewTextBoxColumn
-            // 
-            this.formaPagamentoDataGridViewTextBoxColumn.DataPropertyName = "FormaPagamento";
-            this.formaPagamentoDataGridViewTextBoxColumn.HeaderText = "Forma de Pagamento";
-            this.formaPagamentoDataGridViewTextBoxColumn.Name = "formaPagamentoDataGridViewTextBoxColumn";
-            this.formaPagamentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // unidMedidaDataGridViewTextBoxColumn
-            // 
-            this.unidMedidaDataGridViewTextBoxColumn.DataPropertyName = "UnidMedida";
-            this.unidMedidaDataGridViewTextBoxColumn.HeaderText = "Unid. de Medida";
-            this.unidMedidaDataGridViewTextBoxColumn.Name = "unidMedidaDataGridViewTextBoxColumn";
-            this.unidMedidaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // qtdFrutasDataGridViewTextBoxColumn
-            // 
-            this.qtdFrutasDataGridViewTextBoxColumn.DataPropertyName = "QtdFrutas";
-            this.qtdFrutasDataGridViewTextBoxColumn.HeaderText = "Quantidade";
-            this.qtdFrutasDataGridViewTextBoxColumn.Name = "qtdFrutasDataGridViewTextBoxColumn";
-            this.qtdFrutasDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // valorFreteDataGridViewTextBoxColumn
-            // 
-            this.valorFreteDataGridViewTextBoxColumn.DataPropertyName = "ValorFrete";
-            this.valorFreteDataGridViewTextBoxColumn.HeaderText = "Valor Frete";
-            this.valorFreteDataGridViewTextBoxColumn.Name = "valorFreteDataGridViewTextBoxColumn";
-            this.valorFreteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // custoCarregamentoDataGridViewTextBoxColumn
-            // 
-            this.custoCarregamentoDataGridViewTextBoxColumn.DataPropertyName = "CustoCarregamento";
-            this.custoCarregamentoDataGridViewTextBoxColumn.HeaderText = "Custo Carregamento";
-            this.custoCarregamentoDataGridViewTextBoxColumn.Name = "custoCarregamentoDataGridViewTextBoxColumn";
-            this.custoCarregamentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // valorComissaoDataGridViewTextBoxColumn
-            // 
-            this.valorComissaoDataGridViewTextBoxColumn.DataPropertyName = "ValorComissao";
-            this.valorComissaoDataGridViewTextBoxColumn.HeaderText = "Comissao";
-            this.valorComissaoDataGridViewTextBoxColumn.Name = "valorComissaoDataGridViewTextBoxColumn";
-            this.valorComissaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adiantFretMotDataGridViewTextBoxColumn
-            // 
-            this.adiantFretMotDataGridViewTextBoxColumn.DataPropertyName = "AdiantFretMot";
-            this.adiantFretMotDataGridViewTextBoxColumn.HeaderText = "Adiant. de Frete";
-            this.adiantFretMotDataGridViewTextBoxColumn.Name = "adiantFretMotDataGridViewTextBoxColumn";
-            this.adiantFretMotDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // seguroDataGridViewTextBoxColumn
-            // 
-            this.seguroDataGridViewTextBoxColumn.DataPropertyName = "Seguro";
-            this.seguroDataGridViewTextBoxColumn.HeaderText = "Seguro";
-            this.seguroDataGridViewTextBoxColumn.Name = "seguroDataGridViewTextBoxColumn";
-            this.seguroDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // taxaNfDataGridViewTextBoxColumn
-            // 
-            this.taxaNfDataGridViewTextBoxColumn.DataPropertyName = "TaxaNf";
-            this.taxaNfDataGridViewTextBoxColumn.HeaderText = "Taxa Nf";
-            this.taxaNfDataGridViewTextBoxColumn.Name = "taxaNfDataGridViewTextBoxColumn";
-            this.taxaNfDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // valorTotalRomaneioDataGridViewTextBoxColumn
-            // 
-            this.valorTotalRomaneioDataGridViewTextBoxColumn.DataPropertyName = "ValorTotalRomaneio";
-            this.valorTotalRomaneioDataGridViewTextBoxColumn.HeaderText = "Valor Total Romaneio";
-            this.valorTotalRomaneioDataGridViewTextBoxColumn.Name = "valorTotalRomaneioDataGridViewTextBoxColumn";
-            this.valorTotalRomaneioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataRomaneioDataGridViewTextBoxColumn
-            // 
-            this.dataRomaneioDataGridViewTextBoxColumn.DataPropertyName = "DataRomaneio";
-            this.dataRomaneioDataGridViewTextBoxColumn.HeaderText = "DataRomaneio";
-            this.dataRomaneioDataGridViewTextBoxColumn.Name = "dataRomaneioDataGridViewTextBoxColumn";
-            this.dataRomaneioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataAlteracaoDataGridViewTextBoxColumn
-            // 
-            this.dataAlteracaoDataGridViewTextBoxColumn.DataPropertyName = "DataAlteracao";
-            this.dataAlteracaoDataGridViewTextBoxColumn.HeaderText = "DataAlteracao";
-            this.dataAlteracaoDataGridViewTextBoxColumn.Name = "dataAlteracaoDataGridViewTextBoxColumn";
-            this.dataAlteracaoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataExclusaoDataGridViewTextBoxColumn
-            // 
-            this.dataExclusaoDataGridViewTextBoxColumn.DataPropertyName = "DataExclusao";
-            this.dataExclusaoDataGridViewTextBoxColumn.HeaderText = "DataExclusao";
-            this.dataExclusaoDataGridViewTextBoxColumn.Name = "dataExclusaoDataGridViewTextBoxColumn";
-            this.dataExclusaoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dataExclusaoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // iDClienteDataGridViewTextBoxColumn
-            // 
-            this.iDClienteDataGridViewTextBoxColumn.DataPropertyName = "IDCliente";
-            this.iDClienteDataGridViewTextBoxColumn.HeaderText = "IDCliente";
-            this.iDClienteDataGridViewTextBoxColumn.Name = "iDClienteDataGridViewTextBoxColumn";
-            this.iDClienteDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDClienteDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // iDTransportadorDataGridViewTextBoxColumn
-            // 
-            this.iDTransportadorDataGridViewTextBoxColumn.DataPropertyName = "IDTransportador";
-            this.iDTransportadorDataGridViewTextBoxColumn.HeaderText = "IDTransportador";
-            this.iDTransportadorDataGridViewTextBoxColumn.Name = "iDTransportadorDataGridViewTextBoxColumn";
-            this.iDTransportadorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDTransportadorDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // iDFornecedorDataGridViewTextBoxColumn
-            // 
-            this.iDFornecedorDataGridViewTextBoxColumn.DataPropertyName = "IDFornecedor";
-            this.iDFornecedorDataGridViewTextBoxColumn.HeaderText = "IDFornecedor";
-            this.iDFornecedorDataGridViewTextBoxColumn.Name = "iDFornecedorDataGridViewTextBoxColumn";
-            this.iDFornecedorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDFornecedorDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // iDFrutaDataGridViewTextBoxColumn
-            // 
-            this.iDFrutaDataGridViewTextBoxColumn.DataPropertyName = "IDFruta";
-            this.iDFrutaDataGridViewTextBoxColumn.HeaderText = "IDFruta";
-            this.iDFrutaDataGridViewTextBoxColumn.Name = "iDFrutaDataGridViewTextBoxColumn";
-            this.iDFrutaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDFrutaDataGridViewTextBoxColumn.Visible = false;
             // 
             // tblRomaneioBindingSource
             // 
@@ -585,6 +420,173 @@
             this.cpoIDFruta.TabIndex = 100029;
             this.cpoIDFruta.Visible = false;
             // 
+            // iDRomaneioDataGridViewTextBoxColumn
+            // 
+            this.iDRomaneioDataGridViewTextBoxColumn.DataPropertyName = "IDRomaneio";
+            this.iDRomaneioDataGridViewTextBoxColumn.HeaderText = "Cód. Romaneio";
+            this.iDRomaneioDataGridViewTextBoxColumn.Name = "iDRomaneioDataGridViewTextBoxColumn";
+            this.iDRomaneioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // clienteDataGridViewTextBoxColumn
+            // 
+            this.clienteDataGridViewTextBoxColumn.DataPropertyName = "Cliente";
+            this.clienteDataGridViewTextBoxColumn.HeaderText = "Cliente";
+            this.clienteDataGridViewTextBoxColumn.Name = "clienteDataGridViewTextBoxColumn";
+            this.clienteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fornecedorDataGridViewTextBoxColumn
+            // 
+            this.fornecedorDataGridViewTextBoxColumn.DataPropertyName = "Fornecedor";
+            this.fornecedorDataGridViewTextBoxColumn.HeaderText = "Fornecedor";
+            this.fornecedorDataGridViewTextBoxColumn.Name = "fornecedorDataGridViewTextBoxColumn";
+            this.fornecedorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // transportadorDataGridViewTextBoxColumn
+            // 
+            this.transportadorDataGridViewTextBoxColumn.DataPropertyName = "Transportador";
+            this.transportadorDataGridViewTextBoxColumn.HeaderText = "Transportador";
+            this.transportadorDataGridViewTextBoxColumn.Name = "transportadorDataGridViewTextBoxColumn";
+            this.transportadorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // frutaDataGridViewTextBoxColumn
+            // 
+            this.frutaDataGridViewTextBoxColumn.DataPropertyName = "Fruta";
+            this.frutaDataGridViewTextBoxColumn.HeaderText = "Fruta";
+            this.frutaDataGridViewTextBoxColumn.Name = "frutaDataGridViewTextBoxColumn";
+            this.frutaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // formaPagamentoDataGridViewTextBoxColumn
+            // 
+            this.formaPagamentoDataGridViewTextBoxColumn.DataPropertyName = "FormaPagamento";
+            this.formaPagamentoDataGridViewTextBoxColumn.HeaderText = "Forma de Pagamento";
+            this.formaPagamentoDataGridViewTextBoxColumn.Name = "formaPagamentoDataGridViewTextBoxColumn";
+            this.formaPagamentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // unidMedidaDataGridViewTextBoxColumn
+            // 
+            this.unidMedidaDataGridViewTextBoxColumn.DataPropertyName = "UnidMedida";
+            this.unidMedidaDataGridViewTextBoxColumn.HeaderText = "Unid. de Medida";
+            this.unidMedidaDataGridViewTextBoxColumn.Name = "unidMedidaDataGridViewTextBoxColumn";
+            this.unidMedidaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // qtdFrutasDataGridViewTextBoxColumn
+            // 
+            this.qtdFrutasDataGridViewTextBoxColumn.DataPropertyName = "QtdFrutas";
+            this.qtdFrutasDataGridViewTextBoxColumn.HeaderText = "Quantidade";
+            this.qtdFrutasDataGridViewTextBoxColumn.Name = "qtdFrutasDataGridViewTextBoxColumn";
+            this.qtdFrutasDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // valorFreteDataGridViewTextBoxColumn
+            // 
+            this.valorFreteDataGridViewTextBoxColumn.DataPropertyName = "ValorFrete";
+            this.valorFreteDataGridViewTextBoxColumn.HeaderText = "Valor Frete";
+            this.valorFreteDataGridViewTextBoxColumn.Name = "valorFreteDataGridViewTextBoxColumn";
+            this.valorFreteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // custoCarregamentoDataGridViewTextBoxColumn
+            // 
+            this.custoCarregamentoDataGridViewTextBoxColumn.DataPropertyName = "CustoCarregamento";
+            this.custoCarregamentoDataGridViewTextBoxColumn.HeaderText = "Custo Carregamento";
+            this.custoCarregamentoDataGridViewTextBoxColumn.Name = "custoCarregamentoDataGridViewTextBoxColumn";
+            this.custoCarregamentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // valorComissaoDataGridViewTextBoxColumn
+            // 
+            this.valorComissaoDataGridViewTextBoxColumn.DataPropertyName = "ValorComissao";
+            this.valorComissaoDataGridViewTextBoxColumn.HeaderText = "Comissao";
+            this.valorComissaoDataGridViewTextBoxColumn.Name = "valorComissaoDataGridViewTextBoxColumn";
+            this.valorComissaoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adiantFretMotDataGridViewTextBoxColumn
+            // 
+            this.adiantFretMotDataGridViewTextBoxColumn.DataPropertyName = "AdiantFretMot";
+            this.adiantFretMotDataGridViewTextBoxColumn.HeaderText = "Adiant. de Frete";
+            this.adiantFretMotDataGridViewTextBoxColumn.Name = "adiantFretMotDataGridViewTextBoxColumn";
+            this.adiantFretMotDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // seguroDataGridViewTextBoxColumn
+            // 
+            this.seguroDataGridViewTextBoxColumn.DataPropertyName = "Seguro";
+            this.seguroDataGridViewTextBoxColumn.HeaderText = "Seguro";
+            this.seguroDataGridViewTextBoxColumn.Name = "seguroDataGridViewTextBoxColumn";
+            this.seguroDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // taxaNfDataGridViewTextBoxColumn
+            // 
+            this.taxaNfDataGridViewTextBoxColumn.DataPropertyName = "TaxaNf";
+            this.taxaNfDataGridViewTextBoxColumn.HeaderText = "Taxa Nf";
+            this.taxaNfDataGridViewTextBoxColumn.Name = "taxaNfDataGridViewTextBoxColumn";
+            this.taxaNfDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // valorTotalRomaneioDataGridViewTextBoxColumn
+            // 
+            this.valorTotalRomaneioDataGridViewTextBoxColumn.DataPropertyName = "ValorTotalRomaneio";
+            this.valorTotalRomaneioDataGridViewTextBoxColumn.HeaderText = "Valor Total Romaneio";
+            this.valorTotalRomaneioDataGridViewTextBoxColumn.Name = "valorTotalRomaneioDataGridViewTextBoxColumn";
+            this.valorTotalRomaneioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataRomaneioDataGridViewTextBoxColumn
+            // 
+            this.dataRomaneioDataGridViewTextBoxColumn.DataPropertyName = "DataRomaneio";
+            this.dataRomaneioDataGridViewTextBoxColumn.HeaderText = "DataRomaneio";
+            this.dataRomaneioDataGridViewTextBoxColumn.Name = "dataRomaneioDataGridViewTextBoxColumn";
+            this.dataRomaneioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataAlteracaoDataGridViewTextBoxColumn
+            // 
+            this.dataAlteracaoDataGridViewTextBoxColumn.DataPropertyName = "DataAlteracao";
+            this.dataAlteracaoDataGridViewTextBoxColumn.HeaderText = "DataAlteracao";
+            this.dataAlteracaoDataGridViewTextBoxColumn.Name = "dataAlteracaoDataGridViewTextBoxColumn";
+            this.dataAlteracaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataAlteracaoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dataExclusaoDataGridViewTextBoxColumn
+            // 
+            this.dataExclusaoDataGridViewTextBoxColumn.DataPropertyName = "DataExclusao";
+            this.dataExclusaoDataGridViewTextBoxColumn.HeaderText = "DataExclusao";
+            this.dataExclusaoDataGridViewTextBoxColumn.Name = "dataExclusaoDataGridViewTextBoxColumn";
+            this.dataExclusaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataExclusaoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // iDClienteDataGridViewTextBoxColumn
+            // 
+            this.iDClienteDataGridViewTextBoxColumn.DataPropertyName = "IDCliente";
+            this.iDClienteDataGridViewTextBoxColumn.HeaderText = "IDCliente";
+            this.iDClienteDataGridViewTextBoxColumn.Name = "iDClienteDataGridViewTextBoxColumn";
+            this.iDClienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDClienteDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // iDTransportadorDataGridViewTextBoxColumn
+            // 
+            this.iDTransportadorDataGridViewTextBoxColumn.DataPropertyName = "IDTransportador";
+            this.iDTransportadorDataGridViewTextBoxColumn.HeaderText = "IDTransportador";
+            this.iDTransportadorDataGridViewTextBoxColumn.Name = "iDTransportadorDataGridViewTextBoxColumn";
+            this.iDTransportadorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDTransportadorDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // iDFornecedorDataGridViewTextBoxColumn
+            // 
+            this.iDFornecedorDataGridViewTextBoxColumn.DataPropertyName = "IDFornecedor";
+            this.iDFornecedorDataGridViewTextBoxColumn.HeaderText = "IDFornecedor";
+            this.iDFornecedorDataGridViewTextBoxColumn.Name = "iDFornecedorDataGridViewTextBoxColumn";
+            this.iDFornecedorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDFornecedorDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // iDFrutaDataGridViewTextBoxColumn
+            // 
+            this.iDFrutaDataGridViewTextBoxColumn.DataPropertyName = "IDFruta";
+            this.iDFrutaDataGridViewTextBoxColumn.HeaderText = "IDFruta";
+            this.iDFrutaDataGridViewTextBoxColumn.Name = "iDFrutaDataGridViewTextBoxColumn";
+            this.iDFrutaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDFrutaDataGridViewTextBoxColumn.Visible = false;
+            // 
             // frmSelecionarRomaneio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -649,6 +651,26 @@
         private midasDataSetRomaneioCorreto midasDataSetRomaneioCorreto;
         private System.Windows.Forms.BindingSource tblRomaneioBindingSource;
         private midasDataSetRomaneioCorretoTableAdapters.tblRomaneioTableAdapter tblRomaneioTableAdapter;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TextBox cpoIDRomaneio;
+        private System.Windows.Forms.TextBox cpoNomeCliente;
+        private System.Windows.Forms.TextBox cpoNomeFornecedor;
+        private System.Windows.Forms.TextBox cpoNomeTransportador;
+        private System.Windows.Forms.TextBox cpoNomeFruta;
+        private System.Windows.Forms.TextBox cpoFormaPagamento;
+        private System.Windows.Forms.TextBox cpoUnidMedida;
+        private System.Windows.Forms.TextBox cpoQtdGeral;
+        private System.Windows.Forms.TextBox cpoValorFrete;
+        private System.Windows.Forms.TextBox cpoCustoCarreg;
+        private System.Windows.Forms.TextBox cpoValorComissao;
+        private System.Windows.Forms.TextBox cpoAdiantFretMot;
+        private System.Windows.Forms.TextBox cpoSeguro;
+        private System.Windows.Forms.TextBox cpoTaxaNf;
+        private System.Windows.Forms.TextBox cpoValorTotalRomaneio;
+        private System.Windows.Forms.TextBox cpoIDCliente;
+        private System.Windows.Forms.TextBox cpoIDFornecedor;
+        private System.Windows.Forms.TextBox cpoIDTransportador;
+        private System.Windows.Forms.TextBox cpoIDFruta;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDRomaneioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn clienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fornecedorDataGridViewTextBoxColumn;
@@ -672,25 +694,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iDTransportadorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDFornecedorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDFrutaDataGridViewTextBoxColumn;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.TextBox cpoIDRomaneio;
-        private System.Windows.Forms.TextBox cpoNomeCliente;
-        private System.Windows.Forms.TextBox cpoNomeFornecedor;
-        private System.Windows.Forms.TextBox cpoNomeTransportador;
-        private System.Windows.Forms.TextBox cpoNomeFruta;
-        private System.Windows.Forms.TextBox cpoFormaPagamento;
-        private System.Windows.Forms.TextBox cpoUnidMedida;
-        private System.Windows.Forms.TextBox cpoQtdGeral;
-        private System.Windows.Forms.TextBox cpoValorFrete;
-        private System.Windows.Forms.TextBox cpoCustoCarreg;
-        private System.Windows.Forms.TextBox cpoValorComissao;
-        private System.Windows.Forms.TextBox cpoAdiantFretMot;
-        private System.Windows.Forms.TextBox cpoSeguro;
-        private System.Windows.Forms.TextBox cpoTaxaNf;
-        private System.Windows.Forms.TextBox cpoValorTotalRomaneio;
-        private System.Windows.Forms.TextBox cpoIDCliente;
-        private System.Windows.Forms.TextBox cpoIDFornecedor;
-        private System.Windows.Forms.TextBox cpoIDTransportador;
-        private System.Windows.Forms.TextBox cpoIDFruta;
     }
 }

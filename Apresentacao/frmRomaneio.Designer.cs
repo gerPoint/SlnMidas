@@ -1174,13 +1174,14 @@
             this.btnExcluir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Image = global::Apresentacao.Properties.Resources.delete_4219;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcluir.Location = new System.Drawing.Point(592, 476);
+            this.btnExcluir.Location = new System.Drawing.Point(592, 477);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(104, 44);
             this.btnExcluir.TabIndex = 26;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSalvar
             // 

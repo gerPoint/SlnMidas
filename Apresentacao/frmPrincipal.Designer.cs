@@ -182,6 +182,7 @@
             this.rToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.romaneioToolStripMenuItem2,
             this.carregamentosToolStripMenuItem});
+            this.rToolStripMenuItem.Enabled = false;
             this.rToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rToolStripMenuItem.Name = "rToolStripMenuItem";
             this.rToolStripMenuItem.Size = new System.Drawing.Size(86, 22);
@@ -202,6 +203,7 @@
             // 
             // filialToolStripMenuItem
             // 
+            this.filialToolStripMenuItem.Enabled = false;
             this.filialToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filialToolStripMenuItem.Name = "filialToolStripMenuItem";
             this.filialToolStripMenuItem.Size = new System.Drawing.Size(58, 22);
@@ -227,6 +229,7 @@
             // 
             this.personalizaçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.planoDeFundoToolStripMenuItem});
+            this.personalizaçãoToolStripMenuItem.Enabled = false;
             this.personalizaçãoToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.personalizaçãoToolStripMenuItem.Name = "personalizaçãoToolStripMenuItem";
             this.personalizaçãoToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
@@ -262,7 +265,7 @@
             // lblCaminho
             // 
             this.lblCaminho.AutoSize = true;
-            this.lblCaminho.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaminho.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCaminho.Location = new System.Drawing.Point(12, 45);
             this.lblCaminho.Name = "lblCaminho";
             this.lblCaminho.Size = new System.Drawing.Size(0, 16);

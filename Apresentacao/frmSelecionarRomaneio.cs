@@ -326,5 +326,10 @@ namespace Apresentacao
                     AtualizarGrid2();
                 }
         }
+
+        private void dgwSelRomaneio_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

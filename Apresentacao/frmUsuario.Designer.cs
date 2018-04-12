@@ -454,7 +454,6 @@
             // cpoCpf
             // 
             this.cpoCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoCpf.Enabled = false;
             this.cpoCpf.Location = new System.Drawing.Point(650, 391);
             this.cpoCpf.Mask = "000.000.000-00";
             this.cpoCpf.Name = "cpoCpf";
@@ -475,7 +474,6 @@
             // cpoRg
             // 
             this.cpoRg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoRg.Enabled = false;
             this.cpoRg.Location = new System.Drawing.Point(467, 391);
             this.cpoRg.Mask = "00.000.000-0";
             this.cpoRg.Name = "cpoRg";
