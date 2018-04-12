@@ -273,28 +273,28 @@ namespace Apresentacao
         {
 
 
-            ReportViewer reportViewer = new ReportViewer();
-            reportViewer.ProcessingMode = ProcessingMode.Local;
-            reportViewer.LocalReport.ReportEmbeddedResource = "Apresentacao.RelatórioFinalRomaneio.rdlc"; //caminho para encontra o relatório (no caso esta dentro de apresentacao) 
+            //ReportViewer reportViewer = new ReportViewer();
+            //reportViewer.ProcessingMode = ProcessingMode.Local;
+            //reportViewer.LocalReport.ReportEmbeddedResource = "Apresentacao.RelatórioFinalRomaneio.rdlc"; //caminho para encontra o relatório (no caso esta dentro de apresentacao) 
 
-            //(parametros)para pegar da tela e mandar para o relatório
+            ////(parametros)para pegar da tela e mandar para o relatório
 
-            List<ReportParameter> listReportParameter = new List<ReportParameter>();
-            listReportParameter.Add(new ReportParameter("CodRomaneio", cpoIDRomaneio.Text));
-            listReportParameter.Add(new ReportParameter("Cliente", cpoCliente.Text));
-            listReportParameter.Add(new ReportParameter("Fornecedor", cpoFornecedor.Text));
-            listReportParameter.Add(new ReportParameter("Transportador", cpoTransportador.Text));
-            listReportParameter.Add(new ReportParameter("Fruta", cpoFruta.Text));
-            listReportParameter.Add(new ReportParameter("FormaPagamento", cpoFormaPagamento.Text));
-            listReportParameter.Add(new ReportParameter("UnidMedida", cpoUnidMedida.Text));
-            listReportParameter.Add(new ReportParameter("Comissao", cpoValorComissao.Text));
-            listReportParameter.Add(new ReportParameter("CustoCarreg", cpoCustoCarreg.Text));
-            listReportParameter.Add(new ReportParameter("AdiantFretMot", cpoAdiantFretMot.Text));
-            listReportParameter.Add(new ReportParameter("Frete", cpoValorFrete.Text));
-            listReportParameter.Add(new ReportParameter("TaxaNf", cpoTaxaNf.Text));
-            listReportParameter.Add(new ReportParameter("Seguro", cpoSeguro.Text));
-            listReportParameter.Add(new ReportParameter("QuantidadeTot", cpoQtdGeral.Text));
-            listReportParameter.Add(new ReportParameter("ValorTotalRomaneio", cpoValorTotalRomaneio.Text));
+            //List<ReportParameter> listReportParameter = new List<ReportParameter>();
+            //listReportParameter.Add(new ReportParameter("CodRomaneio", cpoIDRomaneio.Text));
+            //listReportParameter.Add(new ReportParameter("Cliente", cpoCliente.Text));
+            //listReportParameter.Add(new ReportParameter("Fornecedor", cpoFornecedor.Text));
+            //listReportParameter.Add(new ReportParameter("Transportador", cpoTransportador.Text));
+            //listReportParameter.Add(new ReportParameter("Fruta", cpoFruta.Text));
+            //listReportParameter.Add(new ReportParameter("FormaPagamento", cpoFormaPagamento.Text));
+            //listReportParameter.Add(new ReportParameter("UnidMedida", cpoUnidMedida.Text));
+            //listReportParameter.Add(new ReportParameter("Comissao", cpoValorComissao.Text));
+            //listReportParameter.Add(new ReportParameter("CustoCarreg", cpoCustoCarreg.Text));
+            //listReportParameter.Add(new ReportParameter("AdiantFretMot", cpoAdiantFretMot.Text));
+            //listReportParameter.Add(new ReportParameter("Frete", cpoValorFrete.Text));
+            //listReportParameter.Add(new ReportParameter("TaxaNf", cpoTaxaNf.Text));
+            //listReportParameter.Add(new ReportParameter("Seguro", cpoSeguro.Text));
+            //listReportParameter.Add(new ReportParameter("QuantidadeTot", cpoQtdGeral.Text));
+            //listReportParameter.Add(new ReportParameter("ValorTotalRomaneio", cpoValorTotalRomaneio.Text));
 
             // CarregamentoBloco CarregBloc = (dgwEmissaoRomaneio.SelectedRows[0].DataBoundItem as CarregamentoBloco);
             //listReportParameter.Add(new ReportParameter ("IDCarregamentoBloco", dgwEmissaoRomaneio.RowsDefaultCellStyle));
@@ -313,41 +313,38 @@ namespace Apresentacao
 
 
 
-            reportViewer.LocalReport.SetParameters(listReportParameter);
+            //reportViewer.LocalReport.SetParameters(listReportParameter);
 
             //datatable
 
 
 
+            
+          //  Warning[] warnings;
+          //  string[] streamids;
+          //  string mimeType;
+          //  string encoding;
+          //  string extension;
 
-
-
-
-            Warning[] warnings;
-            string[] streamids;
-            string mimeType;
-            string encoding;
-            string extension;
-
-            byte[] bytePDF = reportViewer.LocalReport.Render("Pdf", null, out mimeType, out encoding, out extension, out streamids, out warnings);
-          //  byte[] byteExcel = reportViewer.LocalReport.Render("Xls", null, out mimeType, out encoding, out extension, out streamids, out warnings);
+          //  byte[] bytePDF = reportViewer.LocalReport.Render("Pdf", null, out mimeType, out encoding, out extension, out streamids, out warnings);
+          ////  byte[] byteExcel = reportViewer.LocalReport.Render("Xls", null, out mimeType, out encoding, out extension, out streamids, out warnings);
 
          
-            FileStream fileStreamPDF = null;
-           // FileStream fileStreamXLS = null;
+          //  FileStream fileStreamPDF = null;
+          // // FileStream fileStreamXLS = null;
 
-            string nomeArquivoPDF = Path.GetTempPath() // este metodo pega o arquivo na pasta "temp' do windows 
-                + " RomaneioGerado"//nome que será salvo o arquivo na pasta temp
-                + DateTime.Now.ToString("dd_MM_yyyy-HH_mm_ss")  //Data e Hora que o arquivo foi salvo - colocamos isso pra nao dar erro dizendo que ja existe arquivo com este nome 
-                + ".pdf";  //extensao do arquivo - tem que por
+          //  string nomeArquivoPDF = Path.GetTempPath() // este metodo pega o arquivo na pasta "temp' do windows 
+          //      + " RomaneioGerado"//nome que será salvo o arquivo na pasta temp
+          //      + DateTime.Now.ToString("dd_MM_yyyy-HH_mm_ss")  //Data e Hora que o arquivo foi salvo - colocamos isso pra nao dar erro dizendo que ja existe arquivo com este nome 
+          //      + ".pdf";  //extensao do arquivo - tem que por
 
-            // string nomeArquivoExcel = Path.GetTempPath() + " RomaneioGerado" + DateTime.Now.ToString("dd_MM_yyyy-HH_mm_ss") + ".xls";
+          //  // string nomeArquivoExcel = Path.GetTempPath() + " RomaneioGerado" + DateTime.Now.ToString("dd_MM_yyyy-HH_mm_ss") + ".xls";
 
-            fileStreamPDF = new FileStream(nomeArquivoPDF, FileMode.Create);// este modo que faz a criacao do arquivo
-            fileStreamPDF.Write(bytePDF, 0, bytePDF.Length);
-            fileStreamPDF.Close();
+          //  fileStreamPDF = new FileStream(nomeArquivoPDF, FileMode.Create);// este modo que faz a criacao do arquivo
+          //  fileStreamPDF.Write(bytePDF, 0, bytePDF.Length);
+          //  fileStreamPDF.Close();
 
-            Process.Start(nomeArquivoPDF);//abre o arquivo que foi salvo na pasta temp
+          //  Process.Start(nomeArquivoPDF);//abre o arquivo que foi salvo na pasta temp
 
         }
 
@@ -373,6 +370,11 @@ namespace Apresentacao
                 setarParametros();
                 rel.Imprimir();
             }
+        }
+
+        private void pictureBoxTitulo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

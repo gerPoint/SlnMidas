@@ -430,6 +430,7 @@
             // 
             // cpoTelefone
             // 
+            this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoTelefone.Location = new System.Drawing.Point(95, 352);
             this.cpoTelefone.Mask = "(99) 000000000";
             this.cpoTelefone.Name = "cpoTelefone";

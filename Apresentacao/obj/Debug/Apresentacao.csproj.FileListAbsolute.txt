@@ -159,7 +159,6 @@ C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Microsoft.SqlServer.
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\SlnMidas.Relatorio.pdb
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\EntityFramework.xml
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Microsoft.ReportViewer.WebForms.xml
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
@@ -179,3 +178,9 @@ C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSele
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarRomaneio.resources
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmVisualizarRomaneio.resources
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmSelecionarTransportador.resources
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.csproj.Apresentacao.exe.config
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\RdlCompile.cache
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\RdlCompile.compiled

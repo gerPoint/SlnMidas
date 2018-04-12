@@ -1651,6 +1651,9 @@ namespace Apresentacao
                     cpoCustoCarreg.Clear();
                     cpoValorComissao.Clear();
                     cpoValorTotalRomaneio.Clear();
+                    comboBoxFormaPagamento.Text = "";
+                    comboBoxUnidMedida.Text = "";
+
 
                     btnSalvar.Enabled = false;
 

@@ -189,7 +189,7 @@ namespace Negocio
             {
 
                 acessoDadosSqlServer.LimparParametros();
-              //  acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDRomaneio", romaneio.IDRomaneio));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDRomaneio", romaneio.IDRomaneio));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDCliente", romaneio.IDCliente));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDTransportador", romaneio.IDTransportador));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDFornecedor", romaneio.IDFornecedor));

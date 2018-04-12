@@ -26,3 +26,5 @@ C:\Users\Lucas\Source\Repos\SlnMidas\SlnMidas.Relatorio\bin\Debug\Microsoft.Repo
 C:\Users\Lucas\Source\Repos\SlnMidas\SlnMidas.Relatorio\obj\Debug\SlnMidas.Relatorio.csprojResolveAssemblyReference.cache
 C:\Users\Lucas\Source\Repos\SlnMidas\SlnMidas.Relatorio\obj\Debug\SlnMidas.Relatorio.dll
 C:\Users\Lucas\Source\Repos\SlnMidas\SlnMidas.Relatorio\obj\Debug\SlnMidas.Relatorio.pdb
+C:\Users\Lucas\Source\Repos\SlnMidas\SlnMidas.Relatorio\obj\Debug\RdlCompile.cache
+C:\Users\Lucas\Source\Repos\SlnMidas\SlnMidas.Relatorio\obj\Debug\RdlCompile.compiled

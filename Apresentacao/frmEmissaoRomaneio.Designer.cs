@@ -628,9 +628,11 @@
             this.pictureBoxTitulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxTitulo.TabIndex = 156;
             this.pictureBoxTitulo.TabStop = false;
+            this.pictureBoxTitulo.Click += new System.EventHandler(this.pictureBoxTitulo_Click);
             // 
             // btnConsultaRomaneio
             // 
+            this.btnConsultaRomaneio.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnConsultaRomaneio.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultaRomaneio.Image = global::Apresentacao.Properties.Resources.pesquisar;
             this.btnConsultaRomaneio.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -718,6 +720,7 @@
             this.Controls.Add(this.cpoCliente);
             this.Controls.Add(this.cpoFornecedor);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;

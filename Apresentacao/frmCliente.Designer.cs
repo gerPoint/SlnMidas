@@ -533,16 +533,19 @@
             // 
             // cpoCnpj
             // 
+            this.cpoCnpj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCnpj.Location = new System.Drawing.Point(723, 312);
             this.cpoCnpj.Mask = "00.000.000/0000-00";
             this.cpoCnpj.Name = "cpoCnpj";
             this.cpoCnpj.Size = new System.Drawing.Size(103, 20);
             this.cpoCnpj.TabIndex = 6;
+            this.cpoCnpj.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.cpoCnpj_MaskInputRejected);
             this.cpoCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCnpj_KeyPress_1);
             // 
             // cpoCpf
             // 
+            this.cpoCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCpf.Enabled = false;
             this.cpoCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCpf.Location = new System.Drawing.Point(723, 380);
@@ -550,16 +553,19 @@
             this.cpoCpf.Name = "cpoCpf";
             this.cpoCpf.Size = new System.Drawing.Size(103, 20);
             this.cpoCpf.TabIndex = 13;
+            this.cpoCpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.cpoCpf_MaskInputRejected);
             this.cpoCpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoCpf_KeyPress_1);
             // 
             // cpoTelefone
             // 
+            this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoTelefone.Location = new System.Drawing.Point(100, 380);
             this.cpoTelefone.Mask = "(99) 000000000";
             this.cpoTelefone.Name = "cpoTelefone";
             this.cpoTelefone.Size = new System.Drawing.Size(116, 20);
             this.cpoTelefone.TabIndex = 11;
+            this.cpoTelefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.cpoTelefone_MaskInputRejected);
             this.cpoTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoTelefone_KeyPress_1);
             // 
             // frmCliente

@@ -310,21 +310,21 @@ namespace Apresentacao
 
         private void cpoCodigo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (e.KeyChar == 13)
+            if (e.KeyChar == 13)
 
-            // //   this.AtualizarGrid();
+                //   this.AtualizarGrid();
 
 
 
-            //if (comboBoxTpoPesquisa.Text == "Código")
-            //{
-            //    AtualizarGrid();
-            //}
+                if (comboBoxTpoPesquisa.Text == "Código")
+                {
+                    AtualizarGrid();
+                }
 
-            //else
-            //{
-            //    AtualizarGrid2();
-            //}
+                else
+                {
+                    AtualizarGrid2();
+                }
         }
     }
 }

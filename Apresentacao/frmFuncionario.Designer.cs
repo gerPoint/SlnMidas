@@ -437,6 +437,7 @@
             // 
             // cpoTelefone
             // 
+            this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoTelefone.Location = new System.Drawing.Point(97, 382);
             this.cpoTelefone.Mask = "(99) 0000-0000";
@@ -447,6 +448,7 @@
             // 
             // cpoCpf
             // 
+            this.cpoCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoCpf.Location = new System.Drawing.Point(665, 382);
             this.cpoCpf.Mask = "000.000.000-00";
@@ -457,6 +459,7 @@
             // 
             // cpoRg
             // 
+            this.cpoRg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoRg.Location = new System.Drawing.Point(475, 382);
             this.cpoRg.Mask = "00.000.000-0";

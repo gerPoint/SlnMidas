@@ -453,6 +453,7 @@
             // 
             // cpoCpf
             // 
+            this.cpoCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCpf.Enabled = false;
             this.cpoCpf.Location = new System.Drawing.Point(650, 391);
             this.cpoCpf.Mask = "000.000.000-00";
@@ -463,6 +464,7 @@
             // 
             // cpoTelefone
             // 
+            this.cpoTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoTelefone.Location = new System.Drawing.Point(88, 427);
             this.cpoTelefone.Mask = "(99) 0000-0000";
             this.cpoTelefone.Name = "cpoTelefone";
@@ -472,6 +474,7 @@
             // 
             // cpoRg
             // 
+            this.cpoRg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoRg.Enabled = false;
             this.cpoRg.Location = new System.Drawing.Point(467, 391);
             this.cpoRg.Mask = "00.000.000-0";
