@@ -1747,6 +1747,8 @@ namespace Apresentacao
 
 
                     MessageBox.Show("Registro salvo com sucesso!", "Código: " + idCarregamentoBloco.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cpoQtdCarregada.Clear();
+                    cpoTotalCarregamento.Clear();
 
                     if (this.dgwRomaneio.DataSource != null)
                     {
@@ -1774,13 +1776,21 @@ namespace Apresentacao
 
                     DialogResult desejaimprimir = MessageBox.Show("Deseja Imprimir o Romaneio Agora?  ", "Imprimir Carregamento", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
-                    if (confirm.ToString().ToUpper() == "YES")
+                    if (desejaimprimir.ToString().ToUpper() == "YES")
                     {
 
                         frmEmissaoRomaneio outroform = new frmEmissaoRomaneio();
                         outroform.ShowDialog();
                         // limpar campos após Salvar
                     }
+
+                    else
+                    {
+
+                        return;
+                    }
+
+
 
                     cpoIDRomaneio.Clear();
                     cpoIDCliente.Clear();
@@ -1801,7 +1811,7 @@ namespace Apresentacao
                     cpoValorTotalRomaneio.Clear();
                     cpoQtdCarregada.Clear();
                     cpoTotalCarregamento.Clear();
-
+                    cpoMostraCodRomaneio.Clear();
 
                     cpoSeguro.Enabled = true;
                     cpoTaxaNf.Enabled = true;

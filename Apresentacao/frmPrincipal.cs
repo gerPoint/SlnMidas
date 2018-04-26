@@ -193,7 +193,7 @@ namespace Apresentacao
         private void romaneioToolStripMenuItem3_Click(object sender, EventArgs e)
         {
             frmEmissaoRomaneio outroForm = new frmEmissaoRomaneio();
-            outroForm.Show();
+            outroForm.ShowDialog();
         }
 
         private void imagemToolStripMenuItem_Click(object sender, EventArgs e)
@@ -211,6 +211,11 @@ namespace Apresentacao
                 pictureBoxPerfil.Load();
 
             }
+        }
+
+        private void emissãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

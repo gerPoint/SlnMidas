@@ -73,6 +73,16 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_login_manager_icon {
+            get {
+                object obj = ResourceManager.GetObject("App-login-manager-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap belas_paisagens_no_campo {
             get {
                 object obj = ResourceManager.GetObject("belas-paisagens-no-campo", resourceCulture);
@@ -86,6 +96,16 @@ namespace Apresentacao.Properties {
         internal static System.Drawing.Bitmap bigstock_closeup_of_a_young_farmer_obse_121893422 {
             get {
                 object obj = ResourceManager.GetObject("bigstock-closeup-of-a-young-farmer-obse-121893422", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blocked_offline_icon {
+            get {
+                object obj = ResourceManager.GetObject("blocked-offline-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,6 +183,16 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ekisho_Deep_Ocean_Locked_icon {
+            get {
+                object obj = ResourceManager.GetObject("Ekisho-Deep-Ocean-Locked-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Esse_sim2 {
             get {
                 object obj = ResourceManager.GetObject("Esse sim2", resourceCulture);
@@ -196,6 +226,26 @@ namespace Apresentacao.Properties {
         internal static System.Drawing.Bitmap icons8_apagador_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-apagador-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_icon {
+            get {
+                object obj = ResourceManager.GetObject("Login-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Login-icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +336,16 @@ namespace Apresentacao.Properties {
         internal static System.Drawing.Bitmap restart_back_left_arrow_6022 {
             get {
                 object obj = ResourceManager.GetObject("restart_back_left_arrow_6022", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restrito {
+            get {
+                object obj = ResourceManager.GetObject("restrito", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -403,9 +463,29 @@ namespace Apresentacao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Status_locked_icon {
+            get {
+                object obj = ResourceManager.GetObject("Status-locked-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap titulo_com_bordas {
             get {
                 object obj = ResourceManager.GetObject("titulo_com_bordas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

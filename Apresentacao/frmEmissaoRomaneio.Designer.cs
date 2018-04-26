@@ -371,7 +371,7 @@
             this.dgwEmissaoRomaneio.ReadOnly = true;
             this.dgwEmissaoRomaneio.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgwEmissaoRomaneio.RowHeadersVisible = false;
-            this.dgwEmissaoRomaneio.Size = new System.Drawing.Size(1146, 428);
+            this.dgwEmissaoRomaneio.Size = new System.Drawing.Size(1146, 286);
             this.dgwEmissaoRomaneio.TabIndex = 151;
             // 
             // iDCarregamentoBlocoDataGridViewTextBoxColumn
@@ -532,29 +532,27 @@
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(831, 645);
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(958, 510);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(74, 29);
+            this.lblTotal.Size = new System.Drawing.Size(83, 25);
             this.lblTotal.TabIndex = 155;
-            this.lblTotal.Text = "Total:";
+            this.lblTotal.Text = "$ Total :";
             // 
             // cpoValorTotalRomaneio
             // 
             this.cpoValorTotalRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoValorTotalRomaneio.Enabled = false;
-            this.cpoValorTotalRomaneio.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(911, 641);
-            this.cpoValorTotalRomaneio.Multiline = true;
+            this.cpoValorTotalRomaneio.Font = new System.Drawing.Font("Oxygen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoValorTotalRomaneio.Location = new System.Drawing.Point(1047, 508);
             this.cpoValorTotalRomaneio.Name = "cpoValorTotalRomaneio";
-            this.cpoValorTotalRomaneio.Size = new System.Drawing.Size(166, 33);
+            this.cpoValorTotalRomaneio.Size = new System.Drawing.Size(120, 28);
             this.cpoValorTotalRomaneio.TabIndex = 152;
             // 
             // lblQuantidade
             // 
             this.lblQuantidade.AutoSize = true;
             this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantidade.Location = new System.Drawing.Point(587, 650);
+            this.lblQuantidade.Location = new System.Drawing.Point(705, 510);
             this.lblQuantidade.Name = "lblQuantidade";
             this.lblQuantidade.Size = new System.Drawing.Size(113, 24);
             this.lblQuantidade.TabIndex = 154;
@@ -563,10 +561,10 @@
             // cpoQtdGeral
             // 
             this.cpoQtdGeral.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoQtdGeral.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoQtdGeral.Location = new System.Drawing.Point(706, 648);
+            this.cpoQtdGeral.Font = new System.Drawing.Font("Oxygen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoQtdGeral.Location = new System.Drawing.Point(824, 508);
             this.cpoQtdGeral.Name = "cpoQtdGeral";
-            this.cpoQtdGeral.Size = new System.Drawing.Size(105, 26);
+            this.cpoQtdGeral.Size = new System.Drawing.Size(105, 28);
             this.cpoQtdGeral.TabIndex = 153;
             // 
             // printDocumentImprimir
@@ -591,13 +589,14 @@
             // 
             // cpoIDRomaneio
             // 
+            this.cpoIDRomaneio.BackColor = System.Drawing.Color.White;
             this.cpoIDRomaneio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoIDRomaneio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cpoIDRomaneio.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cpoIDRomaneio.Location = new System.Drawing.Point(125, 68);
             this.cpoIDRomaneio.Name = "cpoIDRomaneio";
             this.cpoIDRomaneio.ReadOnly = true;
-            this.cpoIDRomaneio.Size = new System.Drawing.Size(107, 29);
+            this.cpoIDRomaneio.Size = new System.Drawing.Size(101, 29);
             this.cpoIDRomaneio.TabIndex = 159;
             this.cpoIDRomaneio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cpoIDRomaneio.TextChanged += new System.EventHandler(this.cpoIDRomaneio_TextChanged);
@@ -676,10 +675,9 @@
             // 
             // frmEmissaoRomaneio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1189, 701);
+            this.ClientSize = new System.Drawing.Size(1189, 553);
             this.Controls.Add(this.btnGerar);
             this.Controls.Add(this.btnConsultaRomaneio);
             this.Controls.Add(this.btnImprimir);

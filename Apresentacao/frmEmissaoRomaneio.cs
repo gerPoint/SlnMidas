@@ -27,7 +27,9 @@ namespace Apresentacao
     {
         public frmEmissaoRomaneio()
         {
+
             InitializeComponent();
+
         }
 
         Relatorio rel = new Relatorio();

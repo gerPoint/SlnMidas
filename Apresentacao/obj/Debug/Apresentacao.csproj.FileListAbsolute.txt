@@ -184,3 +184,4 @@ C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\bin\Debug\Microsoft.ReportView
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.csproj.Apresentacao.exe.config
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\RdlCompile.cache
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\RdlCompile.compiled
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Aplicacao.frmLogin.resources
