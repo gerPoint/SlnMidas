@@ -174,7 +174,7 @@
             // romaneioToolStripMenuItem3
             // 
             this.romaneioToolStripMenuItem3.Name = "romaneioToolStripMenuItem3";
-            this.romaneioToolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
+            this.romaneioToolStripMenuItem3.Size = new System.Drawing.Size(142, 22);
             this.romaneioToolStripMenuItem3.Text = "Romaneio";
             this.romaneioToolStripMenuItem3.Click += new System.EventHandler(this.romaneioToolStripMenuItem3_Click);
             // 
@@ -185,8 +185,8 @@
             this.carregamentosToolStripMenuItem});
             this.rToolStripMenuItem.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rToolStripMenuItem.Name = "rToolStripMenuItem";
-            this.rToolStripMenuItem.Size = new System.Drawing.Size(86, 22);
-            this.rToolStripMenuItem.Text = "Relatórios";
+            this.rToolStripMenuItem.Size = new System.Drawing.Size(23, 22);
+            this.rToolStripMenuItem.Text = " ";
             // 
             // romaneioToolStripMenuItem2
             // 

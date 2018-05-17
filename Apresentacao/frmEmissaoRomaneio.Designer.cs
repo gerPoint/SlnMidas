@@ -533,11 +533,11 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(958, 510);
+            this.lblTotal.Location = new System.Drawing.Point(945, 511);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(83, 25);
+            this.lblTotal.Size = new System.Drawing.Size(96, 25);
             this.lblTotal.TabIndex = 155;
-            this.lblTotal.Text = "$ Total :";
+            this.lblTotal.Text = "R$ Total :";
             // 
             // cpoValorTotalRomaneio
             // 
@@ -552,7 +552,7 @@
             // 
             this.lblQuantidade.AutoSize = true;
             this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantidade.Location = new System.Drawing.Point(705, 510);
+            this.lblQuantidade.Location = new System.Drawing.Point(705, 512);
             this.lblQuantidade.Name = "lblQuantidade";
             this.lblQuantidade.Size = new System.Drawing.Size(113, 24);
             this.lblQuantidade.TabIndex = 154;

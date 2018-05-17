@@ -247,7 +247,7 @@
             this.dgwSelRomaneio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwSelRomaneio.Size = new System.Drawing.Size(430, 138);
             this.dgwSelRomaneio.TabIndex = 100010;
-            this.dgwSelRomaneio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwSelRomaneio_CellContentClick);
+//            this.dgwSelRomaneio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwSelRomaneio_CellContentClick);
             this.dgwSelRomaneio.DoubleClick += new System.EventHandler(this.dgwRomaneio_DoubleClick);
             // 
             // tblRomaneioBindingSource

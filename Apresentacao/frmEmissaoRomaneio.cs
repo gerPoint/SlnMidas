@@ -195,6 +195,7 @@ namespace Apresentacao
                 using (frmSelecionarRomaneio outroForm = new frmSelecionarRomaneio())
                 {
                     if (outroForm.ShowDialog() == DialogResult.OK)
+               //     if (outroForm.ShowDialog() == DialogResult.OK)
                     {
                         cpoIDRomaneio.Text = outroForm.IDRomaneio;
                         cpoCliente.Text = outroForm.Nomecliente;
@@ -212,6 +213,8 @@ namespace Apresentacao
                         cpoTaxaNf.Text = outroForm.TaxaNF;
                         cpoValorTotalRomaneio.Text = outroForm.ValorTotalRomaneio;
 
+
+                        
                     }
                 }
             }

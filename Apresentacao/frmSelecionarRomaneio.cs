@@ -250,8 +250,8 @@ namespace Apresentacao
 
 
                 this.DialogResult = DialogResult.OK;
+                //this.Hide();
                 this.Close();
-
 
 
                 //btnSalvar.Enabled = false;
@@ -288,11 +288,7 @@ namespace Apresentacao
 
         }
 
-        private void progressBarSelRom_Click(object sender, EventArgs e)
-        {
- 
-            
-        }
+
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -327,9 +323,6 @@ namespace Apresentacao
                 }
         }
 
-        private void dgwSelRomaneio_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
     }
 }
