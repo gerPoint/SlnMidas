@@ -73,8 +73,7 @@ namespace Apresentacao
 
         private void frutaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFruta OutroForm = new frmFruta();
-            OutroForm.ShowDialog();
+
 
         }
 
@@ -216,6 +215,18 @@ namespace Apresentacao
         private void emissãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frutaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmFruta OutroForm = new frmFruta();
+            OutroForm.ShowDialog();
+        }
+
+        private void classificaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmClassificacaoFruta OutroForm = new frmClassificacaoFruta();
+            OutroForm.ShowDialog();
         }
     }
 }

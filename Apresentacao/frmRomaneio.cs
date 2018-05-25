@@ -224,8 +224,8 @@ namespace Apresentacao
             cpoDtFinal.Enabled = false;
             cpoDtInicial.Enabled = false;
 
-
- //-------- seleção combobox puxando direto da tabela pelo select----------------------------
+           
+            //-------- seleção combobox puxando direto da tabela pelo select----------------------------
 
             string comandoSql = "Select IDFormaPagamento, Descricao from tblFormaPagamento";
             string conexao = Settings.Default.strConexao;
@@ -237,26 +237,57 @@ namespace Apresentacao
             comboBoxFormaPagamento.DataSource = dataTableFormaPagamento;
             comboBoxFormaPagamento.ValueMember = "IDFormaPagamento";
             comboBoxFormaPagamento.DisplayMember = "Descricao";
-            comboBoxFormaPagamento.SelectedItem = "";
             comboBoxFormaPagamento.Refresh();
+            //comboBoxFormaPagamento.SelectedIndex = 0;
+            
 
-            comandoSql = "select IDFilial, RazaoSocial from tblFilial";
-            SqlDataAdapter sqlDataAdapterFilial = new SqlDataAdapter(comandoSql, conexao);
+
+            string comandoSql2 = "select IDFilial, RazaoSocial from tblFilial";
+            SqlDataAdapter sqlDataAdapterFilial = new SqlDataAdapter(comandoSql2, conexao);
             DataTable dataTableFilial = new DataTable();
             dataTableFilial.Clear();
             sqlDataAdapterFilial.Fill(dataTableFilial);
             comboBoxFilial.DataSource = dataTableFilial;
             comboBoxFilial.ValueMember = "IDFilial";
             comboBoxFilial.DisplayMember = "RazaoSocial";
-            comboBoxFilial.SelectedItem = "";
             comboBoxFilial.Refresh();
+            comboBoxFilial.SelectedIndex = 0;
 
 
 
+            string comandoSql3 = "Select IDClassificacao, Classificacao from tblClassificacaoFruta";
+            SqlDataAdapter sqlDataAdapterClassificacaoFruta = new SqlDataAdapter(comandoSql3, conexao);
+            DataTable dataTableClassificacaoFruta = new DataTable();
+            dataTableClassificacaoFruta.Clear();
+            sqlDataAdapterClassificacaoFruta.Fill(dataTableClassificacaoFruta);
+            cpoFrutaP.DataSource = dataTableClassificacaoFruta;
 
-//-------- seleção combobox puxando direto da tabela pelo select----------------------------
+            cpoFrutaP.ValueMember = "IDClassificacao";
+            cpoFrutaP.DisplayMember = "Classificacao";
+            cpoFrutaP.Refresh();
+            cpoFrutaP.SelectedIndex = 0;
+
+
+            cpoFrutaM.DataSource = dataTableClassificacaoFruta;            
+            cpoFrutaM.ValueMember = "IDClassificacao";
+            cpoFrutaM.DisplayMember = "Classificacao";
+            cpoFrutaM.Refresh();
+            cpoFrutaM.SelectedIndex = 0;
+
+
+            cpoFrutaG.DataSource = dataTableClassificacaoFruta;
+            cpoFrutaG.ValueMember = "IDClassificacao";
+            cpoFrutaG.DisplayMember = "Classificacao";
+            cpoFrutaG.Refresh();
+            cpoFrutaG.SelectedIndex = 0;
+
+
+
+            //-------- seleção combobox puxando direto da tabela pelo select----------------------------
+
 
         }
+
 
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -429,9 +460,9 @@ namespace Apresentacao
 
             cpoDescricao.Clear();
             cpoBloco.Clear();
-            cpoFrutaP.Clear();
-            cpoFrutaM.Clear();
-            cpoFrutaG.Clear();
+       //     cpoFrutaP.Clear();
+        //    cpoFrutaM.Clear();
+        //    cpoFrutaG.Clear();
             cpoPrecoP.Clear();
             cpoPrecoM.Clear();
             cpoPrecoG.Clear();
@@ -1964,9 +1995,9 @@ namespace Apresentacao
         {
             cpoBloco.Clear();
             cpoDescricao.Clear();
-            cpoFrutaP.Clear();
-            cpoFrutaM.Clear();
-            cpoFrutaG.Clear();
+            //cpoFrutaP.Clear();
+            //cpoFrutaM.Clear();
+           // cpoFrutaG = ('');
             cpoQtdP.Clear();
             cpoQtdM.Clear();
             cpoQtdG.Clear();
@@ -2093,6 +2124,16 @@ namespace Apresentacao
             {
                 MessageBox.Show("Falha ao excluir registro. Falha: " + ex.Message, "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+        }
+
+        private void comboBoxFilial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBoxFilial_MouseClick(object sender, MouseEventArgs e)
+        {
 
         }
     }

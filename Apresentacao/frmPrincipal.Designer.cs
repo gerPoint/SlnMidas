@@ -35,6 +35,8 @@
             this.filialToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fornecedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.frutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frutaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.classificaçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.romaneioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.transportadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -119,10 +121,27 @@
             // 
             // frutaToolStripMenuItem
             // 
+            this.frutaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.frutaToolStripMenuItem1,
+            this.classificaçãoToolStripMenuItem});
             this.frutaToolStripMenuItem.Name = "frutaToolStripMenuItem";
             this.frutaToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.frutaToolStripMenuItem.Text = "Fruta";
             this.frutaToolStripMenuItem.Click += new System.EventHandler(this.frutaToolStripMenuItem_Click);
+            // 
+            // frutaToolStripMenuItem1
+            // 
+            this.frutaToolStripMenuItem1.Name = "frutaToolStripMenuItem1";
+            this.frutaToolStripMenuItem1.Size = new System.Drawing.Size(160, 22);
+            this.frutaToolStripMenuItem1.Text = "Fruta";
+            this.frutaToolStripMenuItem1.Click += new System.EventHandler(this.frutaToolStripMenuItem1_Click);
+            // 
+            // classificaçãoToolStripMenuItem
+            // 
+            this.classificaçãoToolStripMenuItem.Name = "classificaçãoToolStripMenuItem";
+            this.classificaçãoToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.classificaçãoToolStripMenuItem.Text = "Classificação";
+            this.classificaçãoToolStripMenuItem.Click += new System.EventHandler(this.classificaçãoToolStripMenuItem_Click);
             // 
             // funcionarioToolStripMenuItem
             // 
@@ -362,6 +381,8 @@
         private System.Windows.Forms.ToolStripMenuItem romaneioToolStripMenuItem3;
         private System.Windows.Forms.TextBox cpoCaminhoImage;
         private System.Windows.Forms.Button btnFundo;
+        private System.Windows.Forms.ToolStripMenuItem frutaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem classificaçãoToolStripMenuItem;
     }
 }
 

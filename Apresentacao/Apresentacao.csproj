@@ -85,6 +85,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetRomaneioView.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmClassificacaoFruta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassificacaoFruta.Designer.cs">
+      <DependentUpon>frmClassificacaoFruta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>midasDataSetCarregbloco.xsd</DependentUpon>
     </Compile>
+    <Compile Include="midasDataSetClassificFruta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>midasDataSetClassificFruta.xsd</DependentUpon>
+    </Compile>
     <Compile Include="midasDataSetCliente.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -319,6 +330,9 @@
     <Compile Include="tblCarregamentoBloco.cs">
       <DependentUpon>modelCarreg.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmClassificacaoFruta.resx">
+      <DependentUpon>frmClassificacaoFruta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCliente.resx">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -441,6 +455,17 @@
     </None>
     <None Include="midasDataSetCarregbloco.xss">
       <DependentUpon>midasDataSetCarregbloco.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetClassificFruta.xsc">
+      <DependentUpon>midasDataSetClassificFruta.xsd</DependentUpon>
+    </None>
+    <None Include="midasDataSetClassificFruta.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>midasDataSetClassificFruta.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="midasDataSetClassificFruta.xss">
+      <DependentUpon>midasDataSetClassificFruta.xsd</DependentUpon>
     </None>
     <None Include="midasDataSetCliente.xsc">
       <DependentUpon>midasDataSetCliente.xsd</DependentUpon>

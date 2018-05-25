@@ -185,3 +185,4 @@ C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.csproj.
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\RdlCompile.cache
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\RdlCompile.compiled
 C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Aplicacao.frmLogin.resources
+C:\Users\Lucas\Source\Repos\SlnMidas\Apresentacao\obj\Debug\Apresentacao.frmClassificacaoFruta.resources

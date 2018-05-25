@@ -153,13 +153,10 @@
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cpoPrecoP = new System.Windows.Forms.TextBox();
-            this.cpoFrutaG = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.cpoFrutaM = new System.Windows.Forms.TextBox();
             this.cpoPrecoG = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.cpoFrutaP = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.cpoPrecoM = new System.Windows.Forms.TextBox();
@@ -221,6 +218,9 @@
             this.midasDataSetRomaneioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tblRomaneioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.midasDataSetRomaneioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cpoFrutaP = new System.Windows.Forms.ComboBox();
+            this.cpoFrutaM = new System.Windows.Forms.ComboBox();
+            this.cpoFrutaG = new System.Windows.Forms.ComboBox();
             this.tabPagePrincipal.SuspendLayout();
             this.tabPageRomaneio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tblFormaPagamentoBindingSource)).BeginInit();
@@ -814,6 +814,8 @@
             this.comboBoxFilial.Name = "comboBoxFilial";
             this.comboBoxFilial.Size = new System.Drawing.Size(413, 21);
             this.comboBoxFilial.TabIndex = 2;
+            this.comboBoxFilial.SelectedIndexChanged += new System.EventHandler(this.comboBoxFilial_SelectedIndexChanged);
+            this.comboBoxFilial.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBoxFilial_MouseClick);
             // 
             // groupBox1
             // 
@@ -1273,7 +1275,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(21, 413);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(96, 49);
-            this.btnLimpar.TabIndex = 197;
+            this.btnLimpar.TabIndex = 18;
             this.btnLimpar.Text = "Limpar Campos";
             this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpar.UseVisualStyleBackColor = false;
@@ -1288,7 +1290,7 @@
             this.btnValidar.Location = new System.Drawing.Point(21, 187);
             this.btnValidar.Name = "btnValidar";
             this.btnValidar.Size = new System.Drawing.Size(96, 39);
-            this.btnValidar.TabIndex = 196;
+            this.btnValidar.TabIndex = 15;
             this.btnValidar.Text = "Validar";
             this.btnValidar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnValidar.UseVisualStyleBackColor = false;
@@ -1437,7 +1439,7 @@
             this.cpoPrecoTotalP.Location = new System.Drawing.Point(176, 23);
             this.cpoPrecoTotalP.Name = "cpoPrecoTotalP";
             this.cpoPrecoTotalP.Size = new System.Drawing.Size(76, 20);
-            this.cpoPrecoTotalP.TabIndex = 204;
+            this.cpoPrecoTotalP.TabIndex = 6;
             // 
             // cpoPrecoTotalG
             // 
@@ -1446,7 +1448,7 @@
             this.cpoPrecoTotalG.Location = new System.Drawing.Point(176, 81);
             this.cpoPrecoTotalG.Name = "cpoPrecoTotalG";
             this.cpoPrecoTotalG.Size = new System.Drawing.Size(76, 20);
-            this.cpoPrecoTotalG.TabIndex = 206;
+            this.cpoPrecoTotalG.TabIndex = 14;
             // 
             // cpoPrecoTotalM
             // 
@@ -1455,7 +1457,7 @@
             this.cpoPrecoTotalM.Location = new System.Drawing.Point(176, 52);
             this.cpoPrecoTotalM.Name = "cpoPrecoTotalM";
             this.cpoPrecoTotalM.Size = new System.Drawing.Size(76, 20);
-            this.cpoPrecoTotalM.TabIndex = 205;
+            this.cpoPrecoTotalM.TabIndex = 10;
             // 
             // label30
             // 
@@ -1472,7 +1474,7 @@
             this.cpoQtdP.Location = new System.Drawing.Point(49, 23);
             this.cpoQtdP.Name = "cpoQtdP";
             this.cpoQtdP.Size = new System.Drawing.Size(64, 20);
-            this.cpoQtdP.TabIndex = 33;
+            this.cpoQtdP.TabIndex = 5;
             this.cpoQtdP.TextChanged += new System.EventHandler(this.cpoQtdP_TextChanged);
             this.cpoQtdP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoQtdP_KeyPress);
             // 
@@ -1491,7 +1493,7 @@
             this.cpoQtdG.Location = new System.Drawing.Point(49, 81);
             this.cpoQtdG.Name = "cpoQtdG";
             this.cpoQtdG.Size = new System.Drawing.Size(64, 20);
-            this.cpoQtdG.TabIndex = 39;
+            this.cpoQtdG.TabIndex = 13;
             this.cpoQtdG.TextChanged += new System.EventHandler(this.cpoQtdG_TextChanged);
             this.cpoQtdG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoQtdG_KeyPress);
             // 
@@ -1501,7 +1503,7 @@
             this.cpoQtdM.Location = new System.Drawing.Point(49, 52);
             this.cpoQtdM.Name = "cpoQtdM";
             this.cpoQtdM.Size = new System.Drawing.Size(64, 20);
-            this.cpoQtdM.TabIndex = 36;
+            this.cpoQtdM.TabIndex = 9;
             this.cpoQtdM.TextChanged += new System.EventHandler(this.cpoQtdM_TextChanged);
             this.cpoQtdM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoQtdM_KeyPress);
             // 
@@ -1516,14 +1518,14 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.cpoPrecoP);
             this.groupBox2.Controls.Add(this.cpoFrutaG);
+            this.groupBox2.Controls.Add(this.cpoFrutaM);
+            this.groupBox2.Controls.Add(this.cpoFrutaP);
+            this.groupBox2.Controls.Add(this.cpoPrecoP);
             this.groupBox2.Controls.Add(this.label35);
             this.groupBox2.Controls.Add(this.label33);
-            this.groupBox2.Controls.Add(this.cpoFrutaM);
             this.groupBox2.Controls.Add(this.cpoPrecoG);
             this.groupBox2.Controls.Add(this.label28);
-            this.groupBox2.Controls.Add(this.cpoFrutaP);
             this.groupBox2.Controls.Add(this.label34);
             this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Controls.Add(this.cpoPrecoM);
@@ -1543,19 +1545,9 @@
             this.cpoPrecoP.Location = new System.Drawing.Point(250, 23);
             this.cpoPrecoP.Name = "cpoPrecoP";
             this.cpoPrecoP.Size = new System.Drawing.Size(66, 20);
-            this.cpoPrecoP.TabIndex = 32;
+            this.cpoPrecoP.TabIndex = 4;
             this.cpoPrecoP.TextChanged += new System.EventHandler(this.cpoPrecoP_TextChanged);
             this.cpoPrecoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoPrecoP_KeyPress);
-            // 
-            // cpoFrutaG
-            // 
-            this.cpoFrutaG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoFrutaG.Location = new System.Drawing.Point(67, 81);
-            this.cpoFrutaG.Name = "cpoFrutaG";
-            this.cpoFrutaG.Size = new System.Drawing.Size(149, 20);
-            this.cpoFrutaG.TabIndex = 37;
-            this.cpoFrutaG.TextChanged += new System.EventHandler(this.cpoFrutaG_TextChanged);
-            this.cpoFrutaG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoFrutaG_KeyPress);
             // 
             // label35
             // 
@@ -1575,23 +1567,13 @@
             this.label33.TabIndex = 199;
             this.label33.Text = "Grande :";
             // 
-            // cpoFrutaM
-            // 
-            this.cpoFrutaM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoFrutaM.Location = new System.Drawing.Point(67, 52);
-            this.cpoFrutaM.Name = "cpoFrutaM";
-            this.cpoFrutaM.Size = new System.Drawing.Size(149, 20);
-            this.cpoFrutaM.TabIndex = 34;
-            this.cpoFrutaM.TextChanged += new System.EventHandler(this.cpoFrutaM_TextChanged);
-            this.cpoFrutaM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoFrutaM_KeyPress);
-            // 
             // cpoPrecoG
             // 
             this.cpoPrecoG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoPrecoG.Location = new System.Drawing.Point(250, 81);
             this.cpoPrecoG.Name = "cpoPrecoG";
             this.cpoPrecoG.Size = new System.Drawing.Size(66, 20);
-            this.cpoPrecoG.TabIndex = 38;
+            this.cpoPrecoG.TabIndex = 12;
             this.cpoPrecoG.TextChanged += new System.EventHandler(this.cpoPrecoG_TextChanged);
             this.cpoPrecoG.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoPrecoG_KeyPress);
             // 
@@ -1603,16 +1585,6 @@
             this.label28.Size = new System.Drawing.Size(42, 13);
             this.label28.TabIndex = 194;
             this.label28.Text = "Média :";
-            // 
-            // cpoFrutaP
-            // 
-            this.cpoFrutaP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoFrutaP.Location = new System.Drawing.Point(67, 23);
-            this.cpoFrutaP.Name = "cpoFrutaP";
-            this.cpoFrutaP.Size = new System.Drawing.Size(150, 20);
-            this.cpoFrutaP.TabIndex = 31;
-            this.cpoFrutaP.TextChanged += new System.EventHandler(this.cpoFrutaP_TextChanged);
-            this.cpoFrutaP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoFrutaP_KeyPress);
             // 
             // label34
             // 
@@ -1638,7 +1610,7 @@
             this.cpoPrecoM.Location = new System.Drawing.Point(250, 52);
             this.cpoPrecoM.Name = "cpoPrecoM";
             this.cpoPrecoM.Size = new System.Drawing.Size(66, 20);
-            this.cpoPrecoM.TabIndex = 35;
+            this.cpoPrecoM.TabIndex = 8;
             this.cpoPrecoM.TextChanged += new System.EventHandler(this.cpoPrecoM_TextChanged);
             this.cpoPrecoM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cpoPrecoM_KeyPress);
             // 
@@ -1703,7 +1675,7 @@
             this.cpoDescricao.Location = new System.Drawing.Point(79, 43);
             this.cpoDescricao.Name = "cpoDescricao";
             this.cpoDescricao.Size = new System.Drawing.Size(280, 20);
-            this.cpoDescricao.TabIndex = 30;
+            this.cpoDescricao.TabIndex = 2;
             this.cpoDescricao.TextChanged += new System.EventHandler(this.cpoDescricao_TextChanged);
             // 
             // cpoBloco
@@ -1712,7 +1684,7 @@
             this.cpoBloco.Location = new System.Drawing.Point(79, 17);
             this.cpoBloco.Name = "cpoBloco";
             this.cpoBloco.Size = new System.Drawing.Size(280, 20);
-            this.cpoBloco.TabIndex = 29;
+            this.cpoBloco.TabIndex = 1;
             this.cpoBloco.TextChanged += new System.EventHandler(this.cpoBloco_TextChanged);
             // 
             // label25
@@ -1971,7 +1943,7 @@
             this.btnFinalizar.Location = new System.Drawing.Point(843, 482);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(115, 48);
-            this.btnFinalizar.TabIndex = 43;
+            this.btnFinalizar.TabIndex = 20;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFinalizar.UseVisualStyleBackColor = true;
@@ -1985,7 +1957,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(691, 482);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(115, 48);
-            this.btnCancelar.TabIndex = 42;
+            this.btnCancelar.TabIndex = 19;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -2000,7 +1972,7 @@
             this.btnRemover.Location = new System.Drawing.Point(271, 187);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(103, 39);
-            this.btnRemover.TabIndex = 41;
+            this.btnRemover.TabIndex = 17;
             this.btnRemover.Text = "Remover";
             this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemover.UseVisualStyleBackColor = false;
@@ -2016,7 +1988,7 @@
             this.btnInserir.Location = new System.Drawing.Point(144, 187);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(101, 39);
-            this.btnInserir.TabIndex = 40;
+            this.btnInserir.TabIndex = 16;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInserir.UseVisualStyleBackColor = false;
@@ -2109,6 +2081,33 @@
             // tblRomaneioBindingSource
             // 
             this.tblRomaneioBindingSource.DataMember = "tblRomaneio";
+            // 
+            // cpoFrutaP
+            // 
+            this.cpoFrutaP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cpoFrutaP.FormattingEnabled = true;
+            this.cpoFrutaP.Location = new System.Drawing.Point(67, 22);
+            this.cpoFrutaP.Name = "cpoFrutaP";
+            this.cpoFrutaP.Size = new System.Drawing.Size(149, 21);
+            this.cpoFrutaP.TabIndex = 200;
+            // 
+            // cpoFrutaM
+            // 
+            this.cpoFrutaM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cpoFrutaM.FormattingEnabled = true;
+            this.cpoFrutaM.Location = new System.Drawing.Point(67, 51);
+            this.cpoFrutaM.Name = "cpoFrutaM";
+            this.cpoFrutaM.Size = new System.Drawing.Size(149, 21);
+            this.cpoFrutaM.TabIndex = 201;
+            // 
+            // cpoFrutaG
+            // 
+            this.cpoFrutaG.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cpoFrutaG.FormattingEnabled = true;
+            this.cpoFrutaG.Location = new System.Drawing.Point(67, 80);
+            this.cpoFrutaG.Name = "cpoFrutaG";
+            this.cpoFrutaG.Size = new System.Drawing.Size(149, 21);
+            this.cpoFrutaG.TabIndex = 202;
             // 
             // frmRomaneio
             // 
@@ -2275,18 +2274,15 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox cpoQtdP;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox cpoFrutaP;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.TextBox cpoPrecoG;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.TextBox cpoPrecoM;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox cpoFrutaG;
         private System.Windows.Forms.TextBox cpoQtdG;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox cpoFrutaM;
         private System.Windows.Forms.TextBox cpoQtdM;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
@@ -2353,5 +2349,8 @@
         private System.Windows.Forms.Button btnValidar;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnCCancelar;
+        private System.Windows.Forms.ComboBox cpoFrutaG;
+        private System.Windows.Forms.ComboBox cpoFrutaM;
+        private System.Windows.Forms.ComboBox cpoFrutaP;
     }
 }
