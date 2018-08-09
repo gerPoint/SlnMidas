@@ -33,6 +33,13 @@
             this.cpoIDTransportador = new System.Windows.Forms.TextBox();
             this.cpoNomeTransportador = new System.Windows.Forms.TextBox();
             this.dgwSelTransportador = new System.Windows.Forms.DataGridView();
+            this.tblTransportadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.midasDataSetTransportador = new Apresentacao.midasDataSetTransportador();
+            this.cpoCaixaPesquisa = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.lblAjuda = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.iDTransportadorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.veiculoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,13 +50,8 @@
             this.dataCadastroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.enderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ufDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tblTransportadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.midasDataSetTransportador = new Apresentacao.midasDataSetTransportador();
-            this.cpoCaixaPesquisa = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnPesquisar = new System.Windows.Forms.Button();
-            this.lblAjuda = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.cpoVeiculo = new System.Windows.Forms.TextBox();
+            this.cpoPlaca = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwSelTransportador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblTransportadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.midasDataSetTransportador)).BeginInit();
@@ -102,86 +104,6 @@
             this.dgwSelTransportador.Size = new System.Drawing.Size(739, 220);
             this.dgwSelTransportador.TabIndex = 99999;
             this.dgwSelTransportador.DoubleClick += new System.EventHandler(this.dgwSelTransportador_DoubleClick);
-            // 
-            // iDTransportadorDataGridViewTextBoxColumn
-            // 
-            this.iDTransportadorDataGridViewTextBoxColumn.DataPropertyName = "IDTransportador";
-            this.iDTransportadorDataGridViewTextBoxColumn.HeaderText = "Código";
-            this.iDTransportadorDataGridViewTextBoxColumn.Name = "iDTransportadorDataGridViewTextBoxColumn";
-            this.iDTransportadorDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDTransportadorDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomeDataGridViewTextBoxColumn.Width = 350;
-            // 
-            // veiculoDataGridViewTextBoxColumn
-            // 
-            this.veiculoDataGridViewTextBoxColumn.DataPropertyName = "Veiculo";
-            this.veiculoDataGridViewTextBoxColumn.HeaderText = "Veiculo";
-            this.veiculoDataGridViewTextBoxColumn.Name = "veiculoDataGridViewTextBoxColumn";
-            this.veiculoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.veiculoDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // placaDataGridViewTextBoxColumn
-            // 
-            this.placaDataGridViewTextBoxColumn.DataPropertyName = "Placa";
-            this.placaDataGridViewTextBoxColumn.HeaderText = "Placa";
-            this.placaDataGridViewTextBoxColumn.Name = "placaDataGridViewTextBoxColumn";
-            this.placaDataGridViewTextBoxColumn.ReadOnly = true;
-            this.placaDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // telefoneDataGridViewTextBoxColumn
-            // 
-            this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "Telefone";
-            this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
-            this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
-            this.telefoneDataGridViewTextBoxColumn.ReadOnly = true;
-            this.telefoneDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cidadeDataGridViewTextBoxColumn
-            // 
-            this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "Cidade";
-            this.cidadeDataGridViewTextBoxColumn.HeaderText = "Cidade";
-            this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
-            this.cidadeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cidadeDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.statusDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dataCadastroDataGridViewTextBoxColumn
-            // 
-            this.dataCadastroDataGridViewTextBoxColumn.DataPropertyName = "DataCadastro";
-            this.dataCadastroDataGridViewTextBoxColumn.HeaderText = "DataCadastro";
-            this.dataCadastroDataGridViewTextBoxColumn.Name = "dataCadastroDataGridViewTextBoxColumn";
-            this.dataCadastroDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dataCadastroDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // enderecoDataGridViewTextBoxColumn
-            // 
-            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
-            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
-            this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.enderecoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // ufDataGridViewTextBoxColumn
-            // 
-            this.ufDataGridViewTextBoxColumn.DataPropertyName = "Uf";
-            this.ufDataGridViewTextBoxColumn.HeaderText = "Uf";
-            this.ufDataGridViewTextBoxColumn.Name = "ufDataGridViewTextBoxColumn";
-            this.ufDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ufDataGridViewTextBoxColumn.Visible = false;
             // 
             // tblTransportadorBindingSource
             // 
@@ -246,11 +168,113 @@
             this.toolTip1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // iDTransportadorDataGridViewTextBoxColumn
+            // 
+            this.iDTransportadorDataGridViewTextBoxColumn.DataPropertyName = "IDTransportador";
+            this.iDTransportadorDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.iDTransportadorDataGridViewTextBoxColumn.Name = "iDTransportadorDataGridViewTextBoxColumn";
+            this.iDTransportadorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDTransportadorDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomeDataGridViewTextBoxColumn.Width = 280;
+            // 
+            // veiculoDataGridViewTextBoxColumn
+            // 
+            this.veiculoDataGridViewTextBoxColumn.DataPropertyName = "Veiculo";
+            this.veiculoDataGridViewTextBoxColumn.HeaderText = "Veiculo";
+            this.veiculoDataGridViewTextBoxColumn.Name = "veiculoDataGridViewTextBoxColumn";
+            this.veiculoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.veiculoDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // placaDataGridViewTextBoxColumn
+            // 
+            this.placaDataGridViewTextBoxColumn.DataPropertyName = "Placa";
+            this.placaDataGridViewTextBoxColumn.HeaderText = "Placa";
+            this.placaDataGridViewTextBoxColumn.Name = "placaDataGridViewTextBoxColumn";
+            this.placaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.placaDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // telefoneDataGridViewTextBoxColumn
+            // 
+            this.telefoneDataGridViewTextBoxColumn.DataPropertyName = "Telefone";
+            this.telefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
+            this.telefoneDataGridViewTextBoxColumn.Name = "telefoneDataGridViewTextBoxColumn";
+            this.telefoneDataGridViewTextBoxColumn.ReadOnly = true;
+            this.telefoneDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cidadeDataGridViewTextBoxColumn
+            // 
+            this.cidadeDataGridViewTextBoxColumn.DataPropertyName = "Cidade";
+            this.cidadeDataGridViewTextBoxColumn.HeaderText = "Cidade";
+            this.cidadeDataGridViewTextBoxColumn.Name = "cidadeDataGridViewTextBoxColumn";
+            this.cidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cidadeDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "Status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.statusDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dataCadastroDataGridViewTextBoxColumn
+            // 
+            this.dataCadastroDataGridViewTextBoxColumn.DataPropertyName = "DataCadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.HeaderText = "DataCadastro";
+            this.dataCadastroDataGridViewTextBoxColumn.Name = "dataCadastroDataGridViewTextBoxColumn";
+            this.dataCadastroDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataCadastroDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // enderecoDataGridViewTextBoxColumn
+            // 
+            this.enderecoDataGridViewTextBoxColumn.DataPropertyName = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.HeaderText = "Endereco";
+            this.enderecoDataGridViewTextBoxColumn.Name = "enderecoDataGridViewTextBoxColumn";
+            this.enderecoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.enderecoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // ufDataGridViewTextBoxColumn
+            // 
+            this.ufDataGridViewTextBoxColumn.DataPropertyName = "Uf";
+            this.ufDataGridViewTextBoxColumn.HeaderText = "Uf";
+            this.ufDataGridViewTextBoxColumn.Name = "ufDataGridViewTextBoxColumn";
+            this.ufDataGridViewTextBoxColumn.ReadOnly = true;
+            this.ufDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cpoVeiculo
+            // 
+            this.cpoVeiculo.Enabled = false;
+            this.cpoVeiculo.Location = new System.Drawing.Point(361, 312);
+            this.cpoVeiculo.Name = "cpoVeiculo";
+            this.cpoVeiculo.ReadOnly = true;
+            this.cpoVeiculo.Size = new System.Drawing.Size(114, 20);
+            this.cpoVeiculo.TabIndex = 100000;
+            this.cpoVeiculo.Visible = false;
+            // 
+            // cpoPlaca
+            // 
+            this.cpoPlaca.Enabled = false;
+            this.cpoPlaca.Location = new System.Drawing.Point(527, 312);
+            this.cpoPlaca.Name = "cpoPlaca";
+            this.cpoPlaca.ReadOnly = true;
+            this.cpoPlaca.Size = new System.Drawing.Size(114, 20);
+            this.cpoPlaca.TabIndex = 100001;
+            this.cpoPlaca.Visible = false;
+            // 
             // frmSelecionarTransportador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 346);
+            this.ClientSize = new System.Drawing.Size(791, 347);
+            this.Controls.Add(this.cpoPlaca);
+            this.Controls.Add(this.cpoVeiculo);
             this.Controls.Add(this.lblAjuda);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.cpoIDTransportador);
@@ -282,6 +306,10 @@
         private System.Windows.Forms.DataGridView dgwSelTransportador;
         private System.Windows.Forms.TextBox cpoCaixaPesquisa;
         private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.BindingSource tblTransportadorBindingSource;
+        private midasDataSetTransportador midasDataSetTransportador;
+        private System.Windows.Forms.Label lblAjuda;
+        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDTransportadorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn veiculoDataGridViewTextBoxColumn;
@@ -292,9 +320,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataCadastroDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enderecoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ufDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource tblTransportadorBindingSource;
-        private midasDataSetTransportador midasDataSetTransportador;
-        private System.Windows.Forms.Label lblAjuda;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TextBox cpoVeiculo;
+        private System.Windows.Forms.TextBox cpoPlaca;
     }
 }

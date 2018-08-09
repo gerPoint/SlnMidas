@@ -43,6 +43,8 @@ namespace Negocio
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTransportador", romaneio.Transportador));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INFornecedor", romaneio.Fornecedor));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INFruta", romaneio.Fruta));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INPlaca", romaneio.Placa));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INVeiculo", romaneio.Veiculo));
 
 
                 //(DIEGO)string IDCliente = acessoDadosSqlServer.ExecutarScalar(CommandType.StoredProcedure, "uspCadastrarCliente").ToString();
@@ -86,7 +88,6 @@ namespace Negocio
                 //(DIEGO) acessoDadosSqlServer.AdicionarParametro("@INNome", strNome);
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INIDRomaneio", Codigo));
 
-                // using (DataTable dataTable = acessoDadosSqlServer.ExecutarScalar(CommandType.StoredProcedure, "uspConsultarCliente")) 
                 using (DataTable dataTable = acessoDadosSqlServer.GetDataTable("uspConsultarRomaneioCodigo", CommandType.StoredProcedure))
                 {
 
@@ -115,6 +116,8 @@ namespace Negocio
                         romaneio.Transportador = Convert.ToString(linha["Transportador"]);
                         romaneio.Fornecedor = Convert.ToString(linha["Fornecedor"]);
                         romaneio.Fruta = Convert.ToString(linha["Fruta"]);
+                        romaneio.Placa = Convert.ToString(linha["Placa"]);
+                        romaneio.Veiculo = Convert.ToString(linha["Veiculo"]);
 
                         romaneioLista.Add(romaneio);
                     }
@@ -168,6 +171,8 @@ namespace Negocio
                         romaneio.Transportador = Convert.ToString(linha["Transportador"]);
                         romaneio.Fornecedor = Convert.ToString(linha["Fornecedor"]);
                         romaneio.Fruta = Convert.ToString(linha["Fruta"]);
+                        romaneio.Placa = Convert.ToString(linha["Placa"]);
+                        romaneio.Veiculo = Convert.ToString(linha["Veiculo"]);
 
                         romaneioLista.Add(romaneio);
                     }
@@ -209,6 +214,8 @@ namespace Negocio
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTransportador", romaneio.Transportador));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INFornecedor", romaneio.Fornecedor));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INFruta", romaneio.Fruta));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INPlaca", romaneio.Placa));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INVeiculo", romaneio.Veiculo));
 
 
 
@@ -255,6 +262,8 @@ namespace Negocio
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INTransportador", romaneio.Transportador));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INFornecedor", romaneio.Fornecedor));
                 acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INFruta", romaneio.Fruta));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INPlaca", romaneio.Placa));
+                acessoDadosSqlServer.AdicionarParametro(new SqlParameter("@INVeiculo", romaneio.Veiculo));
 
 
 

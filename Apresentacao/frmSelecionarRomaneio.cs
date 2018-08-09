@@ -29,6 +29,9 @@ namespace Apresentacao
         public string Seguro { get; set; }
         public string TaxaNF { get; set; }
         public string ValorTotalRomaneio { get; set; }
+        public string Placa { get; set; }
+        public string Veiculo { get; set; }
+     
 
 
         public frmSelecionarRomaneio()
@@ -117,8 +120,6 @@ namespace Apresentacao
             // TODO: This line of code loads data into the 'midasDataSetRomaneio.tblRomaneio' table. You can move, or remove it, as needed.
             // this.tblRomaneioTableAdapter.Fill(this.midasDataSetRomaneioCorreto.tblRomaneio);
 
-
-
             comboBoxTpoPesquisa.Text = "Código";
             cpoDtFinal.Enabled = false;
             cpoDtInicial.Enabled = false;
@@ -178,8 +179,6 @@ namespace Apresentacao
 
 
 
-
-
         private void comboBoxTpoPesquisa_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxTpoPesquisa.Text == "Código")
@@ -210,15 +209,17 @@ namespace Apresentacao
                 cpoNomeTransportador.Text = dgwSelRomaneio.SelectedRows[0].Cells[3].Value.ToString();
                 cpoNomeFruta.Text = dgwSelRomaneio.SelectedRows[0].Cells[4].Value.ToString();
                 cpoFormaPagamento.Text = dgwSelRomaneio.SelectedRows[0].Cells[5].Value.ToString();
-                cpoUnidMedida.Text = dgwSelRomaneio.SelectedRows[0].Cells[6].Value.ToString();
-                cpoQtdGeral.Text = dgwSelRomaneio.SelectedRows[0].Cells[7].Value.ToString();
-                cpoValorFrete.Text = dgwSelRomaneio.SelectedRows[0].Cells[8].Value.ToString();
-                cpoCustoCarreg.Text = dgwSelRomaneio.SelectedRows[0].Cells[9].Value.ToString();
-                cpoValorComissao.Text = dgwSelRomaneio.SelectedRows[0].Cells[10].Value.ToString();
-                cpoAdiantFretMot.Text = dgwSelRomaneio.SelectedRows[0].Cells[11].Value.ToString();
-                cpoSeguro.Text = dgwSelRomaneio.SelectedRows[0].Cells[12].Value.ToString();
-                cpoTaxaNf.Text = dgwSelRomaneio.SelectedRows[0].Cells[13].Value.ToString();
-                cpoValorTotalRomaneio.Text = dgwSelRomaneio.SelectedRows[0].Cells[14].Value.ToString();
+                cpoVeiculo.Text = dgwSelRomaneio.SelectedRows[0].Cells[6].Value.ToString();
+                cpoPlaca.Text = dgwSelRomaneio.SelectedRows[0].Cells[7].Value.ToString();
+                cpoUnidMedida.Text = dgwSelRomaneio.SelectedRows[0].Cells[8].Value.ToString();
+                cpoQtdGeral.Text = dgwSelRomaneio.SelectedRows[0].Cells[9].Value.ToString();
+                cpoValorFrete.Text = dgwSelRomaneio.SelectedRows[0].Cells[10].Value.ToString();
+                cpoCustoCarreg.Text = dgwSelRomaneio.SelectedRows[0].Cells[11].Value.ToString();
+                cpoValorComissao.Text = dgwSelRomaneio.SelectedRows[0].Cells[12].Value.ToString();
+                cpoAdiantFretMot.Text = dgwSelRomaneio.SelectedRows[0].Cells[13].Value.ToString();
+                cpoSeguro.Text = dgwSelRomaneio.SelectedRows[0].Cells[14].Value.ToString();
+                cpoTaxaNf.Text = dgwSelRomaneio.SelectedRows[0].Cells[15].Value.ToString();
+                cpoValorTotalRomaneio.Text = dgwSelRomaneio.SelectedRows[0].Cells[16].Value.ToString();
                 cpoIDCliente.Text = dgwSelRomaneio.SelectedRows[0].Cells[19].Value.ToString();
                 cpoIDTransportador.Text = dgwSelRomaneio.SelectedRows[0].Cells[20].Value.ToString();
                 cpoIDFornecedor.Text = dgwSelRomaneio.SelectedRows[0].Cells[21].Value.ToString();
@@ -237,6 +238,8 @@ namespace Apresentacao
                 this.NomeTransportador = romaneio.Transportador;
                 this.NomeFruta = romaneio.Fruta;
                 this.FormaPagamento = romaneio.FormaPagamento;
+                this.Veiculo = romaneio.Veiculo;
+                this.Placa = romaneio.Placa;              
                 this.UnidMedida = romaneio.UnidMedida;
                 this.QtdGeral = romaneio.QtdFrutas.ToString();
                 this.ValorFrete = romaneio.ValorFrete.ToString();
@@ -250,8 +253,8 @@ namespace Apresentacao
 
 
                 this.DialogResult = DialogResult.OK;
-                //this.Hide();
-                this.Close();
+
+                //this.Close();
 
 
                 //btnSalvar.Enabled = false;

@@ -212,9 +212,12 @@ namespace Apresentacao
                         cpoSeguro.Text = outroForm.Seguro;
                         cpoTaxaNf.Text = outroForm.TaxaNF;
                         cpoValorTotalRomaneio.Text = outroForm.ValorTotalRomaneio;
+                        cpoVeiculo.Text = outroForm.Veiculo;
+                        cpoPlaca.Text = outroForm.Placa;
 
 
-                        
+
+
                     }
                 }
             }
@@ -374,6 +377,7 @@ namespace Apresentacao
                 this.rel.DataTable2 = ds.Tables[1];
                 setarParametros();
                 rel.Imprimir();
+                
             }
         }
 

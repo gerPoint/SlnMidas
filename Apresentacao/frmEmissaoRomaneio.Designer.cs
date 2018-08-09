@@ -36,8 +36,6 @@
             this.cpoSeguro = new System.Windows.Forms.TextBox();
             this.cpoAdiantFretMot = new System.Windows.Forms.TextBox();
             this.cpoValorFrete = new System.Windows.Forms.TextBox();
-            this.cpoIDFruta = new System.Windows.Forms.TextBox();
-            this.cpoFruta = new System.Windows.Forms.TextBox();
             this.cpoIDFornecedor = new System.Windows.Forms.TextBox();
             this.cpoIDTransportador = new System.Windows.Forms.TextBox();
             this.cpoIDCliente = new System.Windows.Forms.TextBox();
@@ -48,7 +46,6 @@
             this.lblSeguro = new System.Windows.Forms.Label();
             this.lblFrete = new System.Windows.Forms.Label();
             this.lblUnidMedida = new System.Windows.Forms.Label();
-            this.lblFruta = new System.Windows.Forms.Label();
             this.lblTransportador = new System.Windows.Forms.Label();
             this.lblCliente = new System.Windows.Forms.Label();
             this.cpoTransportador = new System.Windows.Forms.TextBox();
@@ -87,11 +84,18 @@
             this.cpoIDRomaneio = new System.Windows.Forms.TextBox();
             this.cpoFormaPagamento = new System.Windows.Forms.TextBox();
             this.cpoUnidMedida = new System.Windows.Forms.TextBox();
-            this.pictureBoxTitulo = new System.Windows.Forms.PictureBox();
-            this.btnConsultaRomaneio = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.btnGerar = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnConsultaRomaneio = new System.Windows.Forms.Button();
+            this.btnImprimir = new System.Windows.Forms.Button();
+            this.pictureBoxTitulo = new System.Windows.Forms.PictureBox();
+            this.cpoIDFruta = new System.Windows.Forms.TextBox();
+            this.cpoFruta = new System.Windows.Forms.TextBox();
+            this.lblFruta = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cpoVeiculo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cpoPlaca = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwEmissaoRomaneio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarregamentoBlocoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxTitulo)).BeginInit();
@@ -99,68 +103,57 @@
             // 
             // cpoValorComissao
             // 
+            this.cpoValorComissao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoValorComissao.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoValorComissao.Location = new System.Drawing.Point(701, 154);
+            this.cpoValorComissao.Location = new System.Drawing.Point(701, 181);
             this.cpoValorComissao.Name = "cpoValorComissao";
             this.cpoValorComissao.Size = new System.Drawing.Size(204, 22);
             this.cpoValorComissao.TabIndex = 126;
             // 
             // cpoCustoCarreg
             // 
+            this.cpoCustoCarreg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoCustoCarreg.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoCustoCarreg.Location = new System.Drawing.Point(701, 179);
+            this.cpoCustoCarreg.Location = new System.Drawing.Point(701, 206);
             this.cpoCustoCarreg.Name = "cpoCustoCarreg";
             this.cpoCustoCarreg.Size = new System.Drawing.Size(204, 22);
             this.cpoCustoCarreg.TabIndex = 120;
             // 
             // cpoTaxaNf
             // 
+            this.cpoTaxaNf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoTaxaNf.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoTaxaNf.Location = new System.Drawing.Point(1029, 154);
+            this.cpoTaxaNf.Location = new System.Drawing.Point(1029, 181);
             this.cpoTaxaNf.Name = "cpoTaxaNf";
             this.cpoTaxaNf.Size = new System.Drawing.Size(138, 22);
             this.cpoTaxaNf.TabIndex = 124;
             // 
             // cpoSeguro
             // 
+            this.cpoSeguro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoSeguro.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoSeguro.Location = new System.Drawing.Point(1029, 179);
+            this.cpoSeguro.Location = new System.Drawing.Point(1029, 206);
             this.cpoSeguro.Name = "cpoSeguro";
             this.cpoSeguro.Size = new System.Drawing.Size(138, 22);
             this.cpoSeguro.TabIndex = 125;
             // 
             // cpoAdiantFretMot
             // 
+            this.cpoAdiantFretMot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoAdiantFretMot.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoAdiantFretMot.Location = new System.Drawing.Point(1029, 105);
+            this.cpoAdiantFretMot.Location = new System.Drawing.Point(1029, 132);
             this.cpoAdiantFretMot.Name = "cpoAdiantFretMot";
             this.cpoAdiantFretMot.Size = new System.Drawing.Size(138, 22);
             this.cpoAdiantFretMot.TabIndex = 122;
             // 
             // cpoValorFrete
             // 
+            this.cpoValorFrete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoValorFrete.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoValorFrete.Location = new System.Drawing.Point(1029, 129);
+            this.cpoValorFrete.Location = new System.Drawing.Point(1029, 156);
             this.cpoValorFrete.Name = "cpoValorFrete";
             this.cpoValorFrete.Size = new System.Drawing.Size(138, 22);
             this.cpoValorFrete.TabIndex = 123;
-            // 
-            // cpoIDFruta
-            // 
-            this.cpoIDFruta.Location = new System.Drawing.Point(545, 180);
-            this.cpoIDFruta.Name = "cpoIDFruta";
-            this.cpoIDFruta.Size = new System.Drawing.Size(21, 20);
-            this.cpoIDFruta.TabIndex = 149;
-            this.cpoIDFruta.Visible = false;
-            // 
-            // cpoFruta
-            // 
-            this.cpoFruta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cpoFruta.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoFruta.Location = new System.Drawing.Point(125, 179);
-            this.cpoFruta.Name = "cpoFruta";
-            this.cpoFruta.Size = new System.Drawing.Size(414, 22);
-            this.cpoFruta.TabIndex = 111;
             // 
             // cpoIDFornecedor
             // 
@@ -190,7 +183,7 @@
             // 
             this.lblCustoCarreg.AutoSize = true;
             this.lblCustoCarreg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustoCarreg.Location = new System.Drawing.Point(545, 181);
+            this.lblCustoCarreg.Location = new System.Drawing.Point(545, 208);
             this.lblCustoCarreg.Name = "lblCustoCarreg";
             this.lblCustoCarreg.Size = new System.Drawing.Size(142, 15);
             this.lblCustoCarreg.TabIndex = 143;
@@ -200,7 +193,7 @@
             // 
             this.lblTaxaNf.AutoSize = true;
             this.lblTaxaNf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTaxaNf.Location = new System.Drawing.Point(911, 156);
+            this.lblTaxaNf.Location = new System.Drawing.Point(911, 183);
             this.lblTaxaNf.Name = "lblTaxaNf";
             this.lblTaxaNf.Size = new System.Drawing.Size(64, 15);
             this.lblTaxaNf.TabIndex = 142;
@@ -210,7 +203,7 @@
             // 
             this.lblComissao.AutoSize = true;
             this.lblComissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComissao.Location = new System.Drawing.Point(545, 157);
+            this.lblComissao.Location = new System.Drawing.Point(545, 184);
             this.lblComissao.Name = "lblComissao";
             this.lblComissao.Size = new System.Drawing.Size(74, 15);
             this.lblComissao.TabIndex = 141;
@@ -220,7 +213,7 @@
             // 
             this.lblFormaPagamento.AutoSize = true;
             this.lblFormaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormaPagamento.Location = new System.Drawing.Point(545, 106);
+            this.lblFormaPagamento.Location = new System.Drawing.Point(545, 133);
             this.lblFormaPagamento.Name = "lblFormaPagamento";
             this.lblFormaPagamento.Size = new System.Drawing.Size(149, 15);
             this.lblFormaPagamento.TabIndex = 140;
@@ -230,7 +223,7 @@
             // 
             this.lblSeguro.AutoSize = true;
             this.lblSeguro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeguro.Location = new System.Drawing.Point(911, 180);
+            this.lblSeguro.Location = new System.Drawing.Point(911, 207);
             this.lblSeguro.Name = "lblSeguro";
             this.lblSeguro.Size = new System.Drawing.Size(57, 15);
             this.lblSeguro.TabIndex = 139;
@@ -240,7 +233,7 @@
             // 
             this.lblFrete.AutoSize = true;
             this.lblFrete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFrete.Location = new System.Drawing.Point(911, 131);
+            this.lblFrete.Location = new System.Drawing.Point(911, 158);
             this.lblFrete.Name = "lblFrete";
             this.lblFrete.Size = new System.Drawing.Size(44, 15);
             this.lblFrete.TabIndex = 138;
@@ -250,21 +243,11 @@
             // 
             this.lblUnidMedida.AutoSize = true;
             this.lblUnidMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnidMedida.Location = new System.Drawing.Point(545, 131);
+            this.lblUnidMedida.Location = new System.Drawing.Point(545, 158);
             this.lblUnidMedida.Name = "lblUnidMedida";
             this.lblUnidMedida.Size = new System.Drawing.Size(117, 15);
             this.lblUnidMedida.TabIndex = 136;
             this.lblUnidMedida.Text = "Unid. de Medida:";
-            // 
-            // lblFruta
-            // 
-            this.lblFruta.AutoSize = true;
-            this.lblFruta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFruta.Location = new System.Drawing.Point(18, 181);
-            this.lblFruta.Name = "lblFruta";
-            this.lblFruta.Size = new System.Drawing.Size(44, 15);
-            this.lblFruta.TabIndex = 134;
-            this.lblFruta.Text = "Fruta:";
             // 
             // lblTransportador
             // 
@@ -327,7 +310,7 @@
             // 
             this.lblAdiantFretMot.AutoSize = true;
             this.lblAdiantFretMot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdiantFretMot.Location = new System.Drawing.Point(911, 107);
+            this.lblAdiantFretMot.Location = new System.Drawing.Point(911, 134);
             this.lblAdiantFretMot.Name = "lblAdiantFretMot";
             this.lblAdiantFretMot.Size = new System.Drawing.Size(112, 15);
             this.lblAdiantFretMot.TabIndex = 150;
@@ -365,13 +348,13 @@
             this.precoGDataGridViewTextBoxColumn,
             this.precoMDataGridViewTextBoxColumn});
             this.dgwEmissaoRomaneio.DataSource = this.tblCarregamentoBlocoBindingSource;
-            this.dgwEmissaoRomaneio.Location = new System.Drawing.Point(21, 207);
+            this.dgwEmissaoRomaneio.Location = new System.Drawing.Point(21, 240);
             this.dgwEmissaoRomaneio.MultiSelect = false;
             this.dgwEmissaoRomaneio.Name = "dgwEmissaoRomaneio";
             this.dgwEmissaoRomaneio.ReadOnly = true;
             this.dgwEmissaoRomaneio.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgwEmissaoRomaneio.RowHeadersVisible = false;
-            this.dgwEmissaoRomaneio.Size = new System.Drawing.Size(1146, 286);
+            this.dgwEmissaoRomaneio.Size = new System.Drawing.Size(1146, 253);
             this.dgwEmissaoRomaneio.TabIndex = 151;
             // 
             // iDCarregamentoBlocoDataGridViewTextBoxColumn
@@ -603,8 +586,9 @@
             // 
             // cpoFormaPagamento
             // 
+            this.cpoFormaPagamento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoFormaPagamento.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoFormaPagamento.Location = new System.Drawing.Point(701, 103);
+            this.cpoFormaPagamento.Location = new System.Drawing.Point(701, 130);
             this.cpoFormaPagamento.Name = "cpoFormaPagamento";
             this.cpoFormaPagamento.Size = new System.Drawing.Size(204, 22);
             this.cpoFormaPagamento.TabIndex = 162;
@@ -612,22 +596,27 @@
             // 
             // cpoUnidMedida
             // 
+            this.cpoUnidMedida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cpoUnidMedida.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cpoUnidMedida.Location = new System.Drawing.Point(701, 128);
+            this.cpoUnidMedida.Location = new System.Drawing.Point(701, 155);
             this.cpoUnidMedida.Name = "cpoUnidMedida";
             this.cpoUnidMedida.Size = new System.Drawing.Size(204, 22);
             this.cpoUnidMedida.TabIndex = 161;
             // 
-            // pictureBoxTitulo
+            // btnGerar
             // 
-            this.pictureBoxTitulo.Image = global::Apresentacao.Properties.Resources.slogan;
-            this.pictureBoxTitulo.Location = new System.Drawing.Point(211, 3);
-            this.pictureBoxTitulo.Name = "pictureBoxTitulo";
-            this.pictureBoxTitulo.Size = new System.Drawing.Size(766, 80);
-            this.pictureBoxTitulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxTitulo.TabIndex = 156;
-            this.pictureBoxTitulo.TabStop = false;
-            this.pictureBoxTitulo.Click += new System.EventHandler(this.pictureBoxTitulo_Click);
+            this.btnGerar.Location = new System.Drawing.Point(262, 27);
+            this.btnGerar.Name = "btnGerar";
+            this.btnGerar.Size = new System.Drawing.Size(75, 32);
+            this.btnGerar.TabIndex = 168;
+            this.btnGerar.Text = "Gerar";
+            this.btnGerar.UseVisualStyleBackColor = true;
+            this.btnGerar.Visible = false;
+            this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // btnConsultaRomaneio
             // 
@@ -658,26 +647,94 @@
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
-            // btnGerar
+            // pictureBoxTitulo
             // 
-            this.btnGerar.Location = new System.Drawing.Point(262, 27);
-            this.btnGerar.Name = "btnGerar";
-            this.btnGerar.Size = new System.Drawing.Size(75, 32);
-            this.btnGerar.TabIndex = 168;
-            this.btnGerar.Text = "Gerar";
-            this.btnGerar.UseVisualStyleBackColor = true;
-            this.btnGerar.Visible = false;
-            this.btnGerar.Click += new System.EventHandler(this.btnGerar_Click);
+            this.pictureBoxTitulo.Image = global::Apresentacao.Properties.Resources.Capturar;
+            this.pictureBoxTitulo.Location = new System.Drawing.Point(474, 3);
+            this.pictureBoxTitulo.Name = "pictureBoxTitulo";
+            this.pictureBoxTitulo.Size = new System.Drawing.Size(291, 80);
+            this.pictureBoxTitulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxTitulo.TabIndex = 156;
+            this.pictureBoxTitulo.TabStop = false;
+            this.pictureBoxTitulo.Click += new System.EventHandler(this.pictureBoxTitulo_Click);
             // 
-            // backgroundWorker1
+            // cpoIDFruta
             // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.cpoIDFruta.Location = new System.Drawing.Point(914, 102);
+            this.cpoIDFruta.Name = "cpoIDFruta";
+            this.cpoIDFruta.Size = new System.Drawing.Size(21, 20);
+            this.cpoIDFruta.TabIndex = 171;
+            this.cpoIDFruta.Visible = false;
+            // 
+            // cpoFruta
+            // 
+            this.cpoFruta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoFruta.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoFruta.Location = new System.Drawing.Point(700, 102);
+            this.cpoFruta.Name = "cpoFruta";
+            this.cpoFruta.Size = new System.Drawing.Size(205, 22);
+            this.cpoFruta.TabIndex = 169;
+            // 
+            // lblFruta
+            // 
+            this.lblFruta.AutoSize = true;
+            this.lblFruta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFruta.Location = new System.Drawing.Point(545, 105);
+            this.lblFruta.Name = "lblFruta";
+            this.lblFruta.Size = new System.Drawing.Size(44, 15);
+            this.lblFruta.TabIndex = 170;
+            this.lblFruta.Text = "Fruta:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(18, 183);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 15);
+            this.label1.TabIndex = 173;
+            this.label1.Text = "Veículo:";
+            // 
+            // cpoVeiculo
+            // 
+            this.cpoVeiculo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoVeiculo.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoVeiculo.Location = new System.Drawing.Point(125, 181);
+            this.cpoVeiculo.Name = "cpoVeiculo";
+            this.cpoVeiculo.Size = new System.Drawing.Size(414, 22);
+            this.cpoVeiculo.TabIndex = 172;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 209);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 15);
+            this.label2.TabIndex = 175;
+            this.label2.Text = "Placa:";
+            // 
+            // cpoPlaca
+            // 
+            this.cpoPlaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.cpoPlaca.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cpoPlaca.Location = new System.Drawing.Point(125, 207);
+            this.cpoPlaca.Name = "cpoPlaca";
+            this.cpoPlaca.Size = new System.Drawing.Size(414, 22);
+            this.cpoPlaca.TabIndex = 174;
             // 
             // frmEmissaoRomaneio
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1189, 553);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cpoPlaca);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cpoVeiculo);
+            this.Controls.Add(this.cpoIDFruta);
+            this.Controls.Add(this.cpoFruta);
+            this.Controls.Add(this.lblFruta);
             this.Controls.Add(this.btnGerar);
             this.Controls.Add(this.btnConsultaRomaneio);
             this.Controls.Add(this.btnImprimir);
@@ -698,8 +755,6 @@
             this.Controls.Add(this.cpoSeguro);
             this.Controls.Add(this.cpoAdiantFretMot);
             this.Controls.Add(this.cpoValorFrete);
-            this.Controls.Add(this.cpoIDFruta);
-            this.Controls.Add(this.cpoFruta);
             this.Controls.Add(this.cpoIDFornecedor);
             this.Controls.Add(this.cpoIDTransportador);
             this.Controls.Add(this.cpoIDCliente);
@@ -710,7 +765,6 @@
             this.Controls.Add(this.lblSeguro);
             this.Controls.Add(this.lblFrete);
             this.Controls.Add(this.lblUnidMedida);
-            this.Controls.Add(this.lblFruta);
             this.Controls.Add(this.lblTransportador);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.cpoTransportador);
@@ -741,8 +795,6 @@
         private System.Windows.Forms.TextBox cpoSeguro;
         private System.Windows.Forms.TextBox cpoAdiantFretMot;
         private System.Windows.Forms.TextBox cpoValorFrete;
-        private System.Windows.Forms.TextBox cpoIDFruta;
-        private System.Windows.Forms.TextBox cpoFruta;
         private System.Windows.Forms.TextBox cpoIDFornecedor;
         private System.Windows.Forms.TextBox cpoIDTransportador;
         private System.Windows.Forms.TextBox cpoIDCliente;
@@ -753,7 +805,6 @@
         private System.Windows.Forms.Label lblSeguro;
         private System.Windows.Forms.Label lblFrete;
         private System.Windows.Forms.Label lblUnidMedida;
-        private System.Windows.Forms.Label lblFruta;
         private System.Windows.Forms.Label lblTransportador;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.TextBox cpoTransportador;
@@ -797,5 +848,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precoGDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoMDataGridViewTextBoxColumn;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TextBox cpoIDFruta;
+        private System.Windows.Forms.TextBox cpoFruta;
+        private System.Windows.Forms.Label lblFruta;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox cpoVeiculo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox cpoPlaca;
     }
 }

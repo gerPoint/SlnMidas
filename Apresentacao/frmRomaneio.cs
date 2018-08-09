@@ -74,6 +74,18 @@ namespace Apresentacao
             set { cpoNomeTransportador.Text = value; }
         }
 
+        public String NomeVeiculo
+        {
+            get { return cpoVeiculo.Text; }
+            set { cpoVeiculo.Text = value; }
+        }
+
+        public String NomePlaca
+        {
+            get { return cpoPlaca.Text; }
+            set { cpoPlaca.Text = value; }
+        }
+
         public String IDTransportador
         {
             get { return cpoIDTransportador.Text; }
@@ -99,9 +111,6 @@ namespace Apresentacao
         //-----------------------------TEM QUE TER ESSAS STRINGS NO FORM QUE MANDA OS DADOS E NO FORM QUE RECEBE ------------------------------
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
-
-
 
         }
 
@@ -224,68 +233,13 @@ namespace Apresentacao
             cpoDtFinal.Enabled = false;
             cpoDtInicial.Enabled = false;
 
-           
-            //-------- seleção combobox puxando direto da tabela pelo select----------------------------
-
-            string comandoSql = "Select IDFormaPagamento, Descricao from tblFormaPagamento";
-            string conexao = Settings.Default.strConexao;
-
-            SqlDataAdapter sqlDataAdapterFormaPagamento = new SqlDataAdapter(comandoSql, conexao);
-            DataTable dataTableFormaPagamento = new DataTable();
-            dataTableFormaPagamento.Clear();
-            sqlDataAdapterFormaPagamento.Fill(dataTableFormaPagamento);
-            comboBoxFormaPagamento.DataSource = dataTableFormaPagamento;
-            comboBoxFormaPagamento.ValueMember = "IDFormaPagamento";
-            comboBoxFormaPagamento.DisplayMember = "Descricao";
-            comboBoxFormaPagamento.Refresh();
-            //comboBoxFormaPagamento.SelectedIndex = 0;
-            
-
-
-            string comandoSql2 = "select IDFilial, RazaoSocial from tblFilial";
-            SqlDataAdapter sqlDataAdapterFilial = new SqlDataAdapter(comandoSql2, conexao);
-            DataTable dataTableFilial = new DataTable();
-            dataTableFilial.Clear();
-            sqlDataAdapterFilial.Fill(dataTableFilial);
-            comboBoxFilial.DataSource = dataTableFilial;
-            comboBoxFilial.ValueMember = "IDFilial";
-            comboBoxFilial.DisplayMember = "RazaoSocial";
-            comboBoxFilial.Refresh();
             comboBoxFilial.SelectedIndex = 0;
-
-
-
-            string comandoSql3 = "Select IDClassificacao, Classificacao from tblClassificacaoFruta";
-            SqlDataAdapter sqlDataAdapterClassificacaoFruta = new SqlDataAdapter(comandoSql3, conexao);
-            DataTable dataTableClassificacaoFruta = new DataTable();
-            dataTableClassificacaoFruta.Clear();
-            sqlDataAdapterClassificacaoFruta.Fill(dataTableClassificacaoFruta);
-            cpoFrutaP.DataSource = dataTableClassificacaoFruta;
-
-            cpoFrutaP.ValueMember = "IDClassificacao";
-            cpoFrutaP.DisplayMember = "Classificacao";
-            cpoFrutaP.Refresh();
+            comboBoxFormaPagamento.SelectedIndex = 0;
             cpoFrutaP.SelectedIndex = 0;
-
-
-            cpoFrutaM.DataSource = dataTableClassificacaoFruta;            
-            cpoFrutaM.ValueMember = "IDClassificacao";
-            cpoFrutaM.DisplayMember = "Classificacao";
-            cpoFrutaM.Refresh();
             cpoFrutaM.SelectedIndex = 0;
-
-
-            cpoFrutaG.DataSource = dataTableClassificacaoFruta;
-            cpoFrutaG.ValueMember = "IDClassificacao";
-            cpoFrutaG.DisplayMember = "Classificacao";
-            cpoFrutaG.Refresh();
             cpoFrutaG.SelectedIndex = 0;
 
-
-
-            //-------- seleção combobox puxando direto da tabela pelo select----------------------------
-
-
+           
         }
 
 
@@ -525,6 +479,8 @@ namespace Apresentacao
             OutroForm.ShowDialog();
             cpoNomeTransportador.Text = OutroForm.NomeTransportador;
             cpoIDTransportador.Text = OutroForm.IDTransportador;
+            cpoVeiculo.Text = OutroForm.Veiculo;
+            cpoPlaca.Text = OutroForm.Placa;
         }
 
         private void dgwCarregamento_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -712,6 +668,8 @@ namespace Apresentacao
             this.objRomaneio.Transportador = Convert.ToString(cpoNomeTransportador.Text);
             this.objRomaneio.Fornecedor = Convert.ToString(cpoNomeFornecedor.Text);
             this.objRomaneio.Fruta = Convert.ToString(cpoNomeFruta.Text);
+            this.objRomaneio.Veiculo = Convert.ToString(cpoVeiculo.Text);
+            this.objRomaneio.Placa = Convert.ToString(cpoPlaca.Text);
 
 
 
@@ -763,6 +721,8 @@ namespace Apresentacao
                     cpoCustoCarreg.Clear();
                     cpoValorComissao.Clear();
                     cpoValorTotalRomaneio.Clear();
+                    cpoVeiculo.Clear();
+                    cpoPlaca.Clear();
 
                     btnSalvar.Enabled = false;
 
@@ -1193,27 +1153,47 @@ namespace Apresentacao
         {
             try
             {
+                string comandoSql = "Select IDFormaPagamento, Descricao from tblFormaPagamento";
+                string conexao = Settings.Default.strConexao;
+
+                SqlDataAdapter sqlDataAdapterFormaPagamento = new SqlDataAdapter(comandoSql, conexao);
+                DataTable dataTableFormaPagamento = new DataTable();
+                dataTableFormaPagamento.Clear();
+                sqlDataAdapterFormaPagamento.Fill(dataTableFormaPagamento);
+                comboBoxFormaPagamento.DataSource = dataTableFormaPagamento;
+                comboBoxFormaPagamento.ValueMember = "IDFormaPagamento";
+                comboBoxFormaPagamento.DisplayMember = "Descricao";
+                comboBoxFormaPagamento.Refresh();
+                comboBoxFormaPagamento.SelectedIndex = 0;
+
+                //----- este trecho acima é apenas para o campo forma de pagamento pegar o valor no double click---
+
+
+
                 Romaneio romaneio = (dgwRomaneio.SelectedRows[0].DataBoundItem as Romaneio);
                 cpoIDRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[0].Value.ToString();
                 cpoMostraCodRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[0].Value.ToString();
                 cpoNomeCliente.Text = dgwRomaneio.SelectedRows[0].Cells[1].Value.ToString();
                 cpoNomeFornecedor.Text = dgwRomaneio.SelectedRows[0].Cells[2].Value.ToString();
                 cpoNomeTransportador.Text = dgwRomaneio.SelectedRows[0].Cells[3].Value.ToString();
-                cpoNomeFruta.Text = dgwRomaneio.SelectedRows[0].Cells[4].Value.ToString();
-                comboBoxFormaPagamento.Text = dgwRomaneio.SelectedRows[0].Cells[5].Value.ToString();
-                comboBoxUnidMedida.Text = dgwRomaneio.SelectedRows[0].Cells[6].Value.ToString();
+                cpoPlaca.Text = dgwRomaneio.SelectedRows[0].Cells[4].Value.ToString();
+                cpoVeiculo.Text = dgwRomaneio.SelectedRows[0].Cells[5].Value.ToString();
+                cpoNomeFruta.Text = dgwRomaneio.SelectedRows[0].Cells[6].Value.ToString();
                 cpoQtdGeral.Text = dgwRomaneio.SelectedRows[0].Cells[7].Value.ToString();
-                cpoValorFrete.Text = dgwRomaneio.SelectedRows[0].Cells[8].Value.ToString();
-                cpoCustoCarreg.Text = dgwRomaneio.SelectedRows[0].Cells[9].Value.ToString();
-                cpoValorComissao.Text = dgwRomaneio.SelectedRows[0].Cells[10].Value.ToString();
-                cpoAdiantFretMot.Text = dgwRomaneio.SelectedRows[0].Cells[11].Value.ToString();
-                cpoSeguro.Text = dgwRomaneio.SelectedRows[0].Cells[12].Value.ToString();
+                comboBoxFormaPagamento.Text = dgwRomaneio.SelectedRows[0].Cells[8].Value.ToString();
+                cpoValorFrete.Text = dgwRomaneio.SelectedRows[0].Cells[9].Value.ToString();
+                cpoAdiantFretMot.Text = dgwRomaneio.SelectedRows[0].Cells[10].Value.ToString();
+                cpoSeguro.Text = dgwRomaneio.SelectedRows[0].Cells[11].Value.ToString();
+                comboBoxUnidMedida.Text = dgwRomaneio.SelectedRows[0].Cells[12].Value.ToString();
                 cpoTaxaNf.Text = dgwRomaneio.SelectedRows[0].Cells[13].Value.ToString();
-                cpoValorTotalRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[14].Value.ToString();
-                cpoIDCliente.Text = dgwRomaneio.SelectedRows[0].Cells[19].Value.ToString();
-                cpoIDTransportador.Text = dgwRomaneio.SelectedRows[0].Cells[20].Value.ToString();
-                cpoIDFornecedor.Text = dgwRomaneio.SelectedRows[0].Cells[21].Value.ToString();
-                cpoIDFruta.Text = dgwRomaneio.SelectedRows[0].Cells[22].Value.ToString();
+                cpoCustoCarreg.Text = dgwRomaneio.SelectedRows[0].Cells[14].Value.ToString();
+                cpoValorComissao.Text = dgwRomaneio.SelectedRows[0].Cells[15].Value.ToString();                               
+                cpoValorTotalRomaneio.Text = dgwRomaneio.SelectedRows[0].Cells[16].Value.ToString();
+
+                cpoIDCliente.Text = dgwRomaneio.SelectedRows[0].Cells[21].Value.ToString();
+                cpoIDTransportador.Text = dgwRomaneio.SelectedRows[0].Cells[22].Value.ToString();
+                cpoIDFornecedor.Text = dgwRomaneio.SelectedRows[0].Cells[23].Value.ToString();
+                cpoIDFruta.Text = dgwRomaneio.SelectedRows[0].Cells[24].Value.ToString();
 
                
                 dgwCarregamento.DataSource = null;
@@ -1292,6 +1272,8 @@ namespace Apresentacao
             cpoValorComissao.Clear();
             cpoValorTotalRomaneio.Clear();
             cpoMostraCodRomaneio.Clear();
+            cpoPlaca.Clear();
+            cpoVeiculo.Clear();
             
 
 
@@ -1313,6 +1295,13 @@ namespace Apresentacao
             btnAlterar.Enabled = false;
             btnExcluir.Enabled = false;
             btnSalvar.Enabled = true;
+
+
+            //comboBoxFilial.SelectedIndex = 0;
+            //comboBoxFormaPagamento.SelectedIndex = 0;
+            //cpoFrutaP.SelectedIndex = 0;
+            //cpoFrutaM.SelectedIndex = 0;
+            //cpoFrutaG.SelectedIndex = 0;
 
             //-------------------------limpar registros no DATAGRID VIEW----------------------------------
 
@@ -1606,7 +1595,6 @@ namespace Apresentacao
                 this.objRomaneio.IDFruta = Convert.ToInt32(cpoIDFruta.Text);
                 this.objRomaneio.Fruta = cpoNomeFruta.Text.TrimStart();
                 this.objRomaneio.QtdFrutas = Convert.ToInt32(cpoQtdGeral.Text);
-               // this.objRomaneio.IDCarregamento = Convert.ToInt32(cpoIDCarregamento.Text);
                 this.objRomaneio.ValorFrete = Convert.ToDecimal(cpoValorFrete.Text);
                 this.objRomaneio.AdiantFretMot = Convert.ToDecimal(cpoAdiantFretMot.Text);
                 this.objRomaneio.Seguro = Convert.ToDecimal(cpoSeguro.Text);
@@ -1616,6 +1604,8 @@ namespace Apresentacao
                 this.objRomaneio.ValorTotalRomaneio = Convert.ToDecimal(cpoValorTotalRomaneio.Text);
                 this.objRomaneio.TaxaNf = Convert.ToDecimal(cpoTaxaNf.Text);
                 this.objRomaneio.UnidMedida = comboBoxUnidMedida.Text.TrimStart();
+                this.objRomaneio.Veiculo = cpoVeiculo.Text.TrimStart();
+                this.objRomaneio.Placa = cpoPlaca.Text.TrimStart();
 
 
 
@@ -1683,6 +1673,8 @@ namespace Apresentacao
                     cpoValorComissao.Clear();
                     cpoValorTotalRomaneio.Clear();
                     cpoMostraCodRomaneio.Clear();
+                    cpoPlaca.Clear();
+                    cpoVeiculo.Clear();
 
 
 
@@ -1951,7 +1943,7 @@ namespace Apresentacao
 
                 cpoPrecoTotalG.Text = (Convert.ToDecimal(cpoQtdG.Text) * Convert.ToDecimal(cpoPrecoG.Text)).ToString();
 
-            //----------------------------------------------
+//----------------------------------------------
 
             if (cpoPrecoTotalP.Text != "0")
             {
@@ -2133,6 +2125,116 @@ namespace Apresentacao
         }
 
         private void comboBoxFilial_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void comboBoxFilial_Click(object sender, EventArgs e)
+        {
+         
+            string conexao = Settings.Default.strConexao;
+            string comandoSql2 = "select IDFilial, RazaoSocial from tblFilial";
+            SqlDataAdapter sqlDataAdapterFilial = new SqlDataAdapter(comandoSql2, conexao);
+            DataTable dataTableFilial = new DataTable();
+            dataTableFilial.Clear();
+            sqlDataAdapterFilial.Fill(dataTableFilial);
+            comboBoxFilial.DataSource = dataTableFilial;
+            comboBoxFilial.ValueMember = "IDFilial";
+            comboBoxFilial.DisplayMember = "RazaoSocial";
+            comboBoxFilial.Refresh();
+            comboBoxFilial.SelectedIndex = 0;
+        }
+
+        private void comboBoxFormaPagamento_Click(object sender, EventArgs e)
+        {
+            string comandoSql = "Select IDFormaPagamento, Descricao from tblFormaPagamento";
+            string conexao = Settings.Default.strConexao;
+
+            SqlDataAdapter sqlDataAdapterFormaPagamento = new SqlDataAdapter(comandoSql, conexao);
+            DataTable dataTableFormaPagamento = new DataTable();
+            dataTableFormaPagamento.Clear();
+            sqlDataAdapterFormaPagamento.Fill(dataTableFormaPagamento);
+            comboBoxFormaPagamento.DataSource = dataTableFormaPagamento;
+            comboBoxFormaPagamento.ValueMember = "IDFormaPagamento";
+            comboBoxFormaPagamento.DisplayMember = "Descricao";
+            comboBoxFormaPagamento.Refresh();
+            comboBoxFormaPagamento.SelectedIndex = 0;
+        }
+
+        private void cpoFrutaP_Click(object sender, EventArgs e)
+        {
+            string comandoSql3 = "Select IDClassificacao, Classificacao from tblClassificacaoFruta";
+            string conexao = Settings.Default.strConexao;
+            SqlDataAdapter sqlDataAdapterClassificacaoFruta = new SqlDataAdapter(comandoSql3, conexao);
+            DataTable dataTableClassificacaoFruta = new DataTable();
+            dataTableClassificacaoFruta.Clear();
+            sqlDataAdapterClassificacaoFruta.Fill(dataTableClassificacaoFruta);
+            cpoFrutaP.DataSource = dataTableClassificacaoFruta;
+
+            cpoFrutaP.ValueMember = "IDClassificacao";
+            cpoFrutaP.DisplayMember = "Classificacao";
+            cpoFrutaP.Refresh();
+            cpoFrutaP.SelectedIndex = 0;
+        }
+
+        private void cpoFrutaM_Click(object sender, EventArgs e)
+        {
+            string comandoSql3 = "Select IDClassificacao, Classificacao from tblClassificacaoFruta";
+            string conexao = Settings.Default.strConexao;
+            SqlDataAdapter sqlDataAdapterClassificacaoFruta = new SqlDataAdapter(comandoSql3, conexao);
+            DataTable dataTableClassificacaoFruta = new DataTable();
+            dataTableClassificacaoFruta.Clear();
+            sqlDataAdapterClassificacaoFruta.Fill(dataTableClassificacaoFruta);
+            cpoFrutaM.DataSource = dataTableClassificacaoFruta;
+            cpoFrutaM.ValueMember = "IDClassificacao";
+            cpoFrutaM.DisplayMember = "Classificacao";
+            cpoFrutaM.Refresh();
+            cpoFrutaM.SelectedIndex = 0;
+        }
+
+        private void cpoFrutaG_Click(object sender, EventArgs e)
+        {
+
+            string comandoSql3 = "Select IDClassificacao, Classificacao from tblClassificacaoFruta";
+            string conexao = Settings.Default.strConexao;
+            SqlDataAdapter sqlDataAdapterClassificacaoFruta = new SqlDataAdapter(comandoSql3, conexao);
+            DataTable dataTableClassificacaoFruta = new DataTable();
+            dataTableClassificacaoFruta.Clear();
+            sqlDataAdapterClassificacaoFruta.Fill(dataTableClassificacaoFruta);
+            cpoFrutaG.DataSource = dataTableClassificacaoFruta;
+            cpoFrutaG.ValueMember = "IDClassificacao";
+            cpoFrutaG.DisplayMember = "Classificacao";
+            cpoFrutaG.Refresh();
+            cpoFrutaG.SelectedIndex = 0;
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label46_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxUnidMedida_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cpoQtdGeral_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -35,6 +35,8 @@ namespace SlnMidas.Relatorio
         public DataTable DataTable14 = null;
         public DataTable DataTable15 = null;
 
+        
+
         #region Tipo Relatorio
 
         public enum TipoRelatorioEnum
@@ -154,6 +156,7 @@ namespace SlnMidas.Relatorio
                 objReportViewer = new ReportViewer();
                 objReportViewer.ProcessingMode = ProcessingMode.Local;
 
+
                 //Setar o local onde está o relatório
                 if (string.IsNullOrEmpty(this.CaminhoRelatorio))
                 {
@@ -163,9 +166,13 @@ namespace SlnMidas.Relatorio
 
                 objReportViewer.LocalReport.ReportEmbeddedResource = CaminhoRelatorio;
 
+                
+
                 //Adicionar parâmetros
                 if (this.Parametros.Count > 0)
-                    objReportViewer.LocalReport.SetParameters(this.Parametros);
+                    objReportViewer.LocalReport.SetParameters(this.Parametros);             
+
+   
 
                 //Adicionar os DataTables
                 if (this.DataTable1 != null)

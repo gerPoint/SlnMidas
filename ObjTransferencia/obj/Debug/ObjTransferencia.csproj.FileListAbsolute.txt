@@ -7,7 +7,6 @@ C:\PrjMidas\SlnMidas\ObjTransferencia\obj\Debug\ObjTransferencia.dll
 C:\PrjMidas\SlnMidas\ObjTransferencia\obj\Debug\ObjTransferencia.pdb
 C:\Users\Lucas\Source\Repos\SlnMidas\ObjTransferencia\bin\Debug\ObjTransferencia.dll
 C:\Users\Lucas\Source\Repos\SlnMidas\ObjTransferencia\bin\Debug\ObjTransferencia.pdb
-C:\Users\Lucas\Source\Repos\SlnMidas\ObjTransferencia\obj\Debug\ObjTransferencia.csprojResolveAssemblyReference.cache
 C:\Users\Lucas\Source\Repos\SlnMidas\ObjTransferencia\obj\Debug\ObjTransferencia.dll
 C:\Users\Lucas\Source\Repos\SlnMidas\ObjTransferencia\obj\Debug\ObjTransferencia.pdb
 C:\Users\diego\Source\Repos\SlnMidas\ObjTransferencia\obj\Debug\ObjTransferencia.csprojResolveAssemblyReference.cache

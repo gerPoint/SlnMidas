@@ -37,6 +37,18 @@ namespace Apresentacao
             set { cpoIDTransportador.Text = value; }
         }
 
+        public String Veiculo
+        {
+            get { return cpoVeiculo.Text; }
+            set { cpoVeiculo.Text = value; }
+        }
+
+        public String Placa
+        {
+            get { return cpoPlaca.Text; }
+            set { cpoPlaca.Text = value; }
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -49,6 +61,9 @@ namespace Apresentacao
                 Transportador transportador = (dgwSelTransportador.SelectedRows[0].DataBoundItem as Transportador);
                 cpoIDTransportador.Text = dgwSelTransportador.SelectedRows[0].Cells[0].Value.ToString();
                 cpoNomeTransportador.Text = dgwSelTransportador.SelectedRows[0].Cells[1].Value.ToString();
+                cpoVeiculo.Text = dgwSelTransportador.SelectedRows[0].Cells[2].Value.ToString();
+                cpoPlaca.Text = dgwSelTransportador.SelectedRows[0].Cells[3].Value.ToString();
+
 
 
                 if (cpoIDTransportador.Text == "") //verifica se o campo id está vazio --tanto pro alterar quanto pro excluir a gente só vai usar o (id) 
@@ -57,8 +72,11 @@ namespace Apresentacao
                     return;
                 }
 
-                cpoIDTransportador.Text = transportador.Nome;
                 cpoIDTransportador.Text = transportador.IDTransportador.ToString();
+                cpoNomeTransportador.Text = transportador.Nome;
+                cpoVeiculo.Text = transportador.Veiculo;
+                cpoPlaca.Text = transportador.Placa;
+
                 this.Close();
 
             }

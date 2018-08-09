@@ -32,6 +32,8 @@ namespace ObjTransferencia
         public string Transportador { get; set; }
         public string Fornecedor { get; set; }
         public string Fruta { get; set; }
+        public string Placa { get; set; }
+        public string Veiculo { get; set; }
 
         public string objRomaneio { get; set; }
 
